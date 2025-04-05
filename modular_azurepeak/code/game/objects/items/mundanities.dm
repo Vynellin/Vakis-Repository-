@@ -126,7 +126,7 @@
 			user.add_stress(/datum/stressevent/puzzle_impossible)
 			finished_ckeys += ckey
 			playsound(src.loc, 'sound/foley/doors/lockrattle.ogg', 75, TRUE)
-			to_chat(user, span_notice("As I pop open \the [src], I feel a tingling wave run from my head to my feet. A piece of an azure crystal tumbles out. When I grab it, it's gone- and I suddenly feel invigorated."))
+			to_chat(user, span_notice("As I pop open \the [src], I feel a tingling wave run from my head to my feet. A piece of an solar crystal tumbles out. When I grab it, it's gone- and I suddenly feel invigorated."))
 			user.STAINT += rand(1,5)
 			user.STASTR += rand(1,5)
 			user.STASPD += rand(1,5)

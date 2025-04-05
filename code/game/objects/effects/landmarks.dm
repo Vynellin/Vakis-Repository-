@@ -345,7 +345,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerr
-	name = "Prisoner (Azure Keep)"
+	name = "Prisoner (Solaris Keep)"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerb

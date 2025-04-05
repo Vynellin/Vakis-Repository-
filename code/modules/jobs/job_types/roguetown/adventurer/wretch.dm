@@ -104,7 +104,7 @@
 		my_crime = "crimes against the Crown"
 	var/bounty_total
 	bounty_total = rand(151, 250)
-	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Azuria")
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Solaria")
 
 
 /datum/advclass/wretch/outlaw
@@ -172,7 +172,7 @@
 		my_crime = "crimes against the Crown"
 	var/bounty_total
 	bounty_total = rand(151, 250)
-	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Azuria")
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Solaria")
 
 /datum/advclass/wretch/poacher
 	name = "Poacher"
@@ -244,7 +244,7 @@
 		my_crime = "crimes against the Crown"
 	var/bounty_total
 	bounty_total = rand(151, 250)
-	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Azuria")
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Solaria")
 
 /datum/advclass/wretch/heretic
 	name = "Heretic"
@@ -447,4 +447,4 @@
 		my_crime = "crimes against the Crown"
 	var/bounty_total
 	bounty_total = rand(151, 250)
-	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Azuria")
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Solaria")

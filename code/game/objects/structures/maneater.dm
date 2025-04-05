@@ -168,7 +168,7 @@
 		if(istype(AM, /mob/living))
 			var/mob/living/L = AM
 			if(!aggroed)
-				if(HAS_TRAIT(L, TRAIT_AZURENATIVE))
+				if(HAS_TRAIT(L, TRAIT_SOLARISNATIVE))
 					return
 				if(L.m_intent != MOVE_INTENT_RUN)
 					return

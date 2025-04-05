@@ -1959,7 +1959,7 @@
 /area/rogue/indoors/town)
 "aQb" = (
 /obj/structure/fluff/signage{
-	name = "AZURE PEAK - NORTH"
+	name = "SOLARIS - NORTH"
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
@@ -4064,7 +4064,7 @@
 /area/rogue/under/town/basement/keep)
 "bJP" = (
 /obj/structure/fluff/signage{
-	name = "AZURE PEAK - EAST"
+	name = "SOLARIS - EAST"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
@@ -18419,7 +18419,7 @@
 /area/rogue/indoors/town/bath)
 "hJB" = (
 /obj/structure/fluff/signage{
-	name = "AZURE PEAK - EAST"
+	name = "SOLARIS - EAST"
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/mountains)
@@ -33767,7 +33767,7 @@
 /area/rogue/indoors/town/magician)
 "nXK" = (
 /obj/structure/fluff/walldeco/goblet{
-	name = "Azurian Pints Inn and Bath"
+	name = "Solarian Pints Inn and Bath"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/decap/stepbelow)
@@ -34370,7 +34370,7 @@
 /area/rogue/indoors/town/manor)
 "okN" = (
 /obj/structure/fluff/walldeco/goblet{
-	name = "Azurian Pints Inn and Bath"
+	name = "Solarian Pints Inn and Bath"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/tavern)
@@ -56057,7 +56057,7 @@
 /area/rogue/outdoors/woods)
 "xkL" = (
 /obj/structure/fluff/signage{
-	name = "AZURE PEAK - NORTH"
+	name = "SOLARIS - NORTH"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
