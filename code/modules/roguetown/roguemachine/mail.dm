@@ -5,7 +5,6 @@
 	icon_state = "mail"
 	density = FALSE
 	blade_dulling = DULLING_BASH
-	pixel_y = 32
 	var/coin_loaded = FALSE
 	var/ournum
 	var/mailtag
@@ -205,13 +204,7 @@
 	SSroguemachine.hermailers -= src
 	return ..()
 
-/obj/structure/roguemachine/mail/r
-	pixel_y = 0
-	pixel_x = 32
-
-/obj/structure/roguemachine/mail/l
-	pixel_y = 0
-	pixel_x = -32
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/mail, 32)
 
 /obj/structure/roguemachine/mail/update_icon()
 	cut_overlays()
@@ -253,13 +246,14 @@
 	name = "MASTER OF MAILS"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "mailspecial"
-	pixel_y = 32
 	max_integrity = 0
 	density = FALSE
 	blade_dulling = DULLING_BASH
 	anchored = TRUE
 	w_class = WEIGHT_CLASS_GIGANTIC
 	var/new_mail
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/item/roguemachine/mastermail, 32)
 
 /obj/item/roguemachine/mastermail/update_icon()
 	cut_overlays()
@@ -274,12 +268,12 @@
 	AddComponent(/datum/component/storage/concrete/roguetown/mailmaster)
 
 /obj/item/roguemachine/mastermail/attack_hand(mob/user)
-	var/datum/component/storage/CP = GetComponent(/datum/component/storage)
-	if(CP)
+	var/datum/component/storage/our_storage = GetComponent(/datum/component/storage)
+	if(our_storage)
 		if(new_mail)
 			new_mail = FALSE
 			update_icon()
-		CP.rmb_show(user)
+		our_storage.rmb_show(user)
 		return TRUE
 
 /obj/item/roguemachine/mastermail/Initialize()

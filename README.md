@@ -1,6 +1,10 @@
 
-## Wiki
-The wiki is currently being worked on at [here](https://azurepeak.miraheze.org/wiki/Main_Page).
+## Solaris Ridge
+This is the codebase for Solaris Ridge; a medieval codebase within the wider Space Station 13 ecosystem.
 
-## Discord
-Come say hi on the [discord](https://discord.gg/NCFXUAgCPT), it is where the community is the most active.
+## LICENSE
+The TGS DMAPI is licensed as a subproject under the MIT license.
+
+See the footer of code/__DEFINES/tgs.dm and code/modules/tgs/LICENSE for the MIT license.
+
+All assets including icons and sound are under a Creative Commons 3.0 BY-SA license unless otherwise indicated.

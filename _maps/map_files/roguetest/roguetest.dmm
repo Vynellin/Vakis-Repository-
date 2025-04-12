@@ -1041,11 +1041,11 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/vault)
 "cG" = (
-/obj/structure/roguemachine/mail,
+/obj/structure/roguemachine/mail/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "cH" = (
-/obj/item/roguemachine/mastermail,
+/obj/item/roguemachine/mastermail/directional/north,
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors)
 "cI" = (
@@ -1053,7 +1053,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "cJ" = (
-/obj/structure/roguemachine/atm,
+/obj/structure/roguemachine/atm/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors)
 "cK" = (
@@ -1061,7 +1061,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "cL" = (
-/obj/structure/roguemachine/atm,
+/obj/structure/roguemachine/atm/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "cM" = (
@@ -1081,7 +1081,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors)
 "cQ" = (
-/obj/structure/roguemachine/scomm,
+/obj/structure/roguemachine/scomm/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
 "cR" = (

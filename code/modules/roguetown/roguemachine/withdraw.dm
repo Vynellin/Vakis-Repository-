@@ -5,9 +5,10 @@
 	icon_state = "submit"
 	density = FALSE
 	blade_dulling = DULLING_BASH
-	pixel_y = 32
 	var/stockpile_index = 1
 	var/datum/withdraw_tab/withdraw_tab = null
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/withdraw, 32)
 
 /obj/structure/roguemachine/withdraw/Initialize()
 	. = ..()

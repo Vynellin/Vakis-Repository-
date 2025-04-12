@@ -8,7 +8,6 @@
 	density = FALSE
 	blade_dulling = DULLING_BASH
 	max_integrity = 0
-	pixel_y = 32
 	flags_1 = HEAR_1
 	anchored = TRUE
 	var/next_decree = 0
@@ -35,13 +34,7 @@
 		if(WEST)
 			pixel_x = -32
 
-/obj/structure/roguemachine/scomm/r
-	pixel_y = 0
-	pixel_x = 32
-
-/obj/structure/roguemachine/scomm/l
-	pixel_y = 0
-	pixel_x = -32
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/scomm, 32)
 
 /obj/structure/roguemachine/scomm/examine(mob/user)
 	. = ..()

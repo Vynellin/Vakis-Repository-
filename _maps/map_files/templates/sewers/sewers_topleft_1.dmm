@@ -167,11 +167,11 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "L" = (
-/obj/machinery/light/rogue/torchholder/r,
+/obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "N" = (
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "O" = (

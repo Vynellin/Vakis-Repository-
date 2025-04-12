@@ -1,7 +1,7 @@
 ########################################
 #
-# HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA
+# SERVER BLACKLIST
 #
 ########################################
 
-zuperned
+#unit0016
