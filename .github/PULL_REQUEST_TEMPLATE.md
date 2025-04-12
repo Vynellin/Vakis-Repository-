@@ -8,4 +8,4 @@
 
 ## Why It's Good For The Game
 
-<!-- Argue for the merits of your changes and how they benefit the game, especially if they are controversial. If you can't, then it probably isn't good for the game in the first place. -->
+<!-- Argue for the merits of your changes and how they benefit the game, especially if they are controversial. If you can't manage it concisely, then it probably isn't good for the game in the first place. -->
