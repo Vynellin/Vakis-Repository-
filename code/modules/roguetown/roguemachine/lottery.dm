@@ -4,7 +4,6 @@
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "lottery"
 	density = FALSE
-	pixel_y = 32
 	light_outer_range = 5
 	light_color = "#1b7bf1"
 	var/gamblingprice = 0
@@ -22,6 +21,7 @@
 	var/probpenalty = 2
 	var/oldtithe = 0
 
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 
 /obj/structure/roguemachine/lottery_roguetown/attack_hand(mob/living/user) //empty hand
 

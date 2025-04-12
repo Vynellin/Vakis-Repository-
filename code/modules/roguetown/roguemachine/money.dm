@@ -4,10 +4,9 @@ GLOBAL_VAR(moneymaster)
 	name = "machine"
 	desc = ""
 	icon = 'icons/roguetown/misc/machines.dmi'
-	icon_state = "money1"
+	icon_state = "money1" // SOLARIS NOTE: not in the DMI? As far as I can see?
 	density = FALSE
 	blade_dulling = DULLING_BASH
-	pixel_y = 32
 	var/budget = 0
 	var/izmaster = FALSE
 	anchored = TRUE
@@ -57,23 +56,7 @@ GLOBAL_VAR(moneymaster)
 	icon_state = "money[rand(1,2)]"
 	update_icon()
 
-/obj/structure/roguemachine/money/r
-	pixel_y = 0
-	pixel_x = 32
-
-/obj/structure/roguemachine/money/r/Initialize()
-	. = ..()
-	icon_state = "money1"
-	update_icon()
-
-/obj/structure/roguemachine/money/l
-	pixel_y = 0
-	pixel_x = -32
-
-/obj/structure/roguemachine/money/l/Initialize()
-	. = ..()
-	icon_state = "money2"
-	update_icon()
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/money, 32)
 
 /obj/structure/roguemachine/money/attack_hand(mob/living/user)
 	. = ..()
@@ -206,7 +189,7 @@ GLOBAL_VAR(moneymaster)
 	name = "janus twins"
 	desc = "They may hold money for you."
 	icon_state = "twins"
-	icon = 'icons/roguetown/misc/64x64.dmi'
+	icon = 'icons/roguetown/misc/64x64.dmi' // SOLARIS NOTE: ditto
 	budget = 0
 	pixel_x = -16
 	izmaster = TRUE

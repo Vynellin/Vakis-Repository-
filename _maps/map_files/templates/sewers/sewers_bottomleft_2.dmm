@@ -19,7 +19,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "l" = (
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "m" = (
@@ -56,7 +56,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "x" = (
-/obj/structure/roguemachine/scomm/r,
+/obj/structure/roguemachine/scomm/directional/east,
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/under/town/sewer)
 "z" = (
@@ -68,7 +68,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "D" = (
-/obj/machinery/light/rogue/torchholder/c,
+/obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "E" = (
@@ -79,7 +79,7 @@
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/under/town/sewer)
 "H" = (
-/obj/structure/fluff/wallclock/r,
+/obj/structure/fluff/wallclock/directional/east,
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/rogue/under/town/sewer)
 "I" = (

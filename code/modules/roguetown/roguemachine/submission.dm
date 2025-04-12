@@ -9,7 +9,8 @@ var/global/feeding_hole_reset_timer
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "feedinghole"
 	density = FALSE
-	pixel_y = 32
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/feedinghole, 32)
 
 /obj/structure/feedinghole/attackby(obj/item/P, mob/user, params)
 	if(ishuman(user))

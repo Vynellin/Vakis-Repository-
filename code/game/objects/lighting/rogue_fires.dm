@@ -115,7 +115,6 @@
 	base_state = "wallcandle"
 	crossfire = FALSE
 	cookonme = FALSE
-	pixel_y = 32
 	soundloop = null
 
 /obj/machinery/light/rogue/wallfire/candle/OnCrafted(dirin)
@@ -139,34 +138,20 @@
 		return TRUE //fires that are on always have this interaction with lmb unless its a torch
 	. = ..()
 
-/obj/machinery/light/rogue/wallfire/candle/r
-	pixel_y = 0
-	pixel_x = 32
-/obj/machinery/light/rogue/wallfire/candle/l
-	pixel_y = 0
-	pixel_x = -32
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/rogue/wallfire/candle, 32)
 
 /obj/machinery/light/rogue/wallfire/candle/blue
 	bulb_colour = "#7b60f3"
 	icon_state = "wallcandleb1"
 	base_state = "wallcandleb"
 
-/obj/machinery/light/rogue/wallfire/candle/blue/r
-	pixel_y = 0
-	pixel_x = 32
-/obj/machinery/light/rogue/wallfire/candle/blue/l
-	pixel_y = 0
-	pixel_x = -32
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/rogue/wallfire/candle/blue, 32)
 
 /obj/machinery/light/rogue/wallfire/candle/weak
 	light_power = 0.9
 	light_outer_range =  6
-/obj/machinery/light/rogue/wallfire/candle/weak/l
-	pixel_x = -32
-	pixel_y = 0
-/obj/machinery/light/rogue/wallfire/candle/weak/r
-	pixel_x = 32
-	pixel_y = 0
+
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/rogue/wallfire/candle/weak, 32)
 
 /obj/machinery/light/rogue/torchholder
 	name = "sconce"
@@ -180,14 +165,10 @@
 	plane = GAME_PLANE_UPPER
 	cookonme = FALSE
 
-/obj/machinery/light/rogue/torchholder/c
-	pixel_y = 32
+MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/rogue/torchholder, 0)
 
-/obj/machinery/light/rogue/torchholder/r
-	dir = WEST
-
-/obj/machinery/light/rogue/torchholder/l
-	dir = EAST
+/obj/machinery/light/rogue/torchholder/directional/north
+	pixel_y = 32 /// SOLARIS NOTE: hack workaround for now; I'm not dedicating too much time to this
 
 /obj/machinery/light/rogue/torchholder/fire_act(added, maxstacks)
 	if(torchy)
@@ -210,9 +191,6 @@
 	. = ..()
 
 /obj/machinery/light/rogue/torchholder/OnCrafted(dirin, user)
-	if(dirin == NORTH)
-		pixel_y = 32
-	dirin = turn(dirin, 180)
 	QDEL_NULL(torchy)
 	on = FALSE
 	set_light(0)

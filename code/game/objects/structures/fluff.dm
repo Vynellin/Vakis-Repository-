@@ -537,7 +537,6 @@
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = 'sound/combat/hits/onglass/glasshit.ogg'
 	var/broke = FALSE
-	pixel_y = 32
 
 /obj/structure/fluff/wallclock/Destroy()
 	if(soundloop)
@@ -550,7 +549,7 @@
 		var/day = "... actually, WHAT dae is it?"
 		switch(GLOB.dayspassed)
 			if(1)
-				day = "Moon's dae."
+				day = "Moon's dae." // SOLARIS NOTE: Lorepass; adjust these
 			if(2)
 				day = "Tiw's dae."
 			if(3)
@@ -583,12 +582,8 @@
 		attacked_sound = list('sound/combat/hits/onwood/woodimpact (1).ogg','sound/combat/hits/onwood/woodimpact (2).ogg')
 	..()
 
-/obj/structure/fluff/wallclock/l
-	pixel_y = 0
-	pixel_x = -32
-/obj/structure/fluff/wallclock/r
-	pixel_y = 0
-	pixel_x = 32
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fluff/wallclock, 32)
+
 //vampire
 /obj/structure/fluff/wallclock/vampire
 	name = "ancient clock"
@@ -601,14 +596,8 @@
 	blade_dulling = DULLING_BASHCHOP
 	max_integrity = 100
 	integrity_failure = 0.5
-	pixel_y = 32
 
-/obj/structure/fluff/wallclock/vampire/l
-	pixel_y = 0
-	pixel_x = -32
-/obj/structure/fluff/wallclock/vampire/r
-	pixel_y = 0
-	pixel_x = 32
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fluff/wallclock/vampire, 32)
 
 /obj/structure/fluff/signage
 	name = "sign"

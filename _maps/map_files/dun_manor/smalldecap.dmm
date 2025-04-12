@@ -206,7 +206,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains)
 "cU" = (
-/obj/machinery/light/rogue/wallfire/candle/blue,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "de" = (
@@ -372,7 +372,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains)
 "ez" = (
-/obj/machinery/light/rogue/wallfire/candle/l,
+/obj/machinery/light/rogue/wallfire/candle/directional/west,
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
@@ -402,7 +402,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "eO" = (
-/obj/machinery/light/rogue/torchholder/r,
+/obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "eP" = (
@@ -607,7 +607,7 @@
 /obj/effect/decal/wood/herringbone2{
 	dir = 1
 	},
-/obj/machinery/light/rogue/torchholder/l{
+/obj/machinery/light/rogue/torchholder/directional/west{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -641,7 +641,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "ie" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/machinery/light/rogue/wallfire/candle/blue/l,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
 /turf/open/floor/rogue/tile{
 	icon_state = "chess"
 	},
@@ -833,7 +833,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "le" = (
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "lg" = (
@@ -936,7 +936,7 @@
 /area/rogue/under/cave/goblinfort)
 "lT" = (
 /obj/effect/decal/remains/human,
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "lY" = (
@@ -1105,7 +1105,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "om" = (
 /mob/living/carbon/human/species/skeleton/npc,
-/obj/machinery/light/rogue/wallfire/candle/blue,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "oo" = (
@@ -1125,7 +1125,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "oy" = (
-/obj/machinery/light/rogue/wallfire/candle/blue/l,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "oC" = (
@@ -1256,7 +1256,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/decap)
 "qI" = (
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "qK" = (
@@ -1431,7 +1431,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "tg" = (
-/obj/structure/fluff/wallclock,
+/obj/structure/fluff/wallclock/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "tn" = (
@@ -1616,7 +1616,7 @@
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "vx" = (
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "vz" = (
@@ -1738,7 +1738,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "wF" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/machinery/light/rogue/wallfire/candle/blue/r,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/tile{
 	icon_state = "chess"
@@ -1787,7 +1787,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/goblinfort)
 "xB" = (
-/obj/machinery/light/rogue/torchholder/r,
+/obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "xC" = (
@@ -1901,7 +1901,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/goblinfort)
 "yw" = (
-/obj/machinery/light/rogue/torchholder/r,
+/obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "yy" = (
@@ -2003,7 +2003,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains)
 "zP" = (
-/obj/structure/fluff/wallclock,
+/obj/structure/fluff/wallclock/directional/north,
 /turf/open/floor/carpet/red,
 /area/rogue/under/cave/undeadmanor)
 "zT" = (
@@ -2092,7 +2092,7 @@
 /turf/closed/wall/mineral/rogue/decostone,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "AX" = (
-/obj/machinery/light/rogue/torchholder/c,
+/obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "AY" = (
@@ -2463,7 +2463,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains)
 "FD" = (
-/obj/machinery/light/rogue/wallfire/candle/blue/r,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "FF" = (
@@ -2582,7 +2582,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "Hh" = (
-/obj/machinery/light/rogue/wallfire/candle/blue,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /turf/open/floor/carpet/red,
 /area/rogue/under/cave/undeadmanor)
 "Hm" = (
@@ -2873,7 +2873,7 @@
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "Kq" = (
-/obj/machinery/light/rogue/wallfire/candle,
+/obj/machinery/light/rogue/wallfire/candle/directional/north,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "Ku" = (
@@ -3263,7 +3263,7 @@
 "Qx" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
-/obj/machinery/light/rogue/wallfire/candle/blue/r,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "QD" = (
@@ -3337,7 +3337,7 @@
 	pixel_y = 0
 	},
 /obj/item/scomstone/bad,
-/obj/machinery/light/rogue/wallfire/candle/blue/r,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "Rl" = (
@@ -3475,7 +3475,7 @@
 	},
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "Tj" = (
-/obj/machinery/light/rogue/torchholder/r,
+/obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
 "To" = (
@@ -3512,7 +3512,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/scarymaze)
 "TE" = (
-/obj/structure/fluff/wallclock/r,
+/obj/structure/fluff/wallclock/directional/east,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "TG" = (
@@ -3652,7 +3652,7 @@
 /turf/open/floor/rogue/metal,
 /area/rogue/outdoors/mountains/decap)
 "VK" = (
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "VQ" = (
@@ -3773,7 +3773,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "Xk" = (
-/obj/machinery/light/rogue/torchholder/l,
+/obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "Xo" = (
@@ -3885,12 +3885,12 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "YS" = (
 /obj/structure/chair/wood/rogue,
-/obj/machinery/light/rogue/wallfire/candle/blue/l,
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "YY" = (
 /obj/structure/table/wood,
-/obj/structure/fluff/wallclock,
+/obj/structure/fluff/wallclock/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/undeadmanor)
 "YZ" = (
