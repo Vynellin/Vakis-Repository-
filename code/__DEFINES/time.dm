@@ -7,6 +7,12 @@
 ///Returns the time that has passed since the game started
 #define STATION_TIME_PASSED(...) (world.time - SSticker.round_start_time)
 
+/// Define that just has the current in-universe year for use in whatever context you might want to display that in. (For example, 2025 -> 85 given a 1940 year offset)
+#define CURRENT_IC_YEAR (GLOB.year_integer - STATION_YEAR_OFFSET)
+
+/// In-universe, Solaris was initial set in the 81st year of the dawn era, hence this number for determining the year-offset for the in-game year.
+#define STATION_YEAR_OFFSET 1940
+
 #define JANUARY		1
 #define FEBRUARY	2
 #define MARCH		3

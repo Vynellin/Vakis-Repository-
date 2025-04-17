@@ -1,3 +1,4 @@
+The Wheel turns the Axle.
 Yours is a fate few share.
 Time shifts; even where it will never set.
 ...Was standing in a clearing. There were snowflakes all around...
@@ -5,3 +6,6 @@ Know well that you step on hallowed ground.
 Sun's grasp upon all.
 Wonder now the gifts of life.
 Towers, Walls and Doors...
+It is the year %currenticyear%, of the Dawn Era - and all's well.
+Rasura protects.
+Rumor berests Sunmarch. It's only what we thrive within.
