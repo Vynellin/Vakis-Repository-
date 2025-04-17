@@ -298,7 +298,7 @@
 		intercepttext += "<hr>"
 		intercepttext += report
 
-	priority_announce("A summary has been copied and printed to all communications consoles.", "Enemy communication intercepted. Security level elevated.", 'sound/blank.ogg')
+	message_admins("FUCK: Currently running a standard SS13 gamemode. Was this intentional? If not; this is most likely a config issue!")
 
 
 // This is a frequency selection system. You may imagine it like a raffle where each player can have some number of tickets. The more tickets you have the more likely you are to
