@@ -6,6 +6,9 @@ import sys
 reading = False
 
 FORBID_INCLUDE = [
+    # Should not be included outside of local testing
+    r'code/testing.dm',
+
     # Included by _unit_test.dm
     r'code/modules/unit_tests/[!_]*.dm',
 
@@ -15,8 +18,13 @@ FORBID_INCLUDE = [
     # Included as part of OD lints
     r'code/__pragmas.dm',
 
-    # Not code
+    # Not actually code
     r'code/__DEFINES/_readme.dm',
+    r'code/modules/lighting/__lighting_docs.dm',
+
+    # Unfinished
+    r'code/modules/mob/dead/new_player/misc.dm', # mostly duplicate code, needs a pass over it
+    r'code/modules/cargo/packsrogue/rawmat.dm',
 ]
 
 lines = []
@@ -96,5 +104,5 @@ sorted_lines = sorted(lines, key = functools.cmp_to_key(compare_lines))
 for (index, line) in enumerate(lines):
     if sorted_lines[index] != line:
         print(f"The include at line {index + offset} is out of order ({line}, expected {sorted_lines[index]})")
-        print(f"::error file=tgstation.dme,line={index+offset},title=DME Validator::The include at line {index + offset} is out of order ({line}, expected {sorted_lines[index]})")
+        print(f"::error file=roguetown.dme,line={index+offset},title=DME Validator::The include at line {index + offset} is out of order ({line}, expected {sorted_lines[index]})")
         sys.exit(1)
