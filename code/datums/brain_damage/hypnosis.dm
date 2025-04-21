@@ -4,7 +4,7 @@
 	scan_desc = ""
 	gain_text = ""
 	lose_text = ""
-	resilience = TRAUMA_RESILIENCE_SURGERY
+	resilience = TRAUMA_RESILIENCE_SURGER
 
 	var/hypnotic_phrase = ""
 	var/regex/target_phrase
