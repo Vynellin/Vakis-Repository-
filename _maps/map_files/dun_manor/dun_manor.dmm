@@ -11195,7 +11195,6 @@
 /area/rogue/indoors/town/manor)
 "hVY" = (
 /obj/structure/bookcase,
-/obj/item/book/rogue/xylix,
 /obj/item/book/rogue/robber,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
@@ -11315,7 +11314,6 @@
 /area/rogue/under/town/sewer)
 "hYy" = (
 /obj/structure/table/wood,
-/obj/item/book/rogue/xylix,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "hYC" = (

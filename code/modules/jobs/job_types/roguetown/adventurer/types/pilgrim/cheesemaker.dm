@@ -41,7 +41,6 @@
 		/obj/item/reagent_containers/powder/salt = 3,
 		/obj/item/reagent_containers/food/snacks/rogue/cheddar = 2,
 		/obj/item/natural/cloth = 2,
-		/obj/item/book/rogue/yeoldecookingmanual = 1,
 		)
 	r_hand = /obj/item/flashlight/flare/torch
 	H.change_stat("intelligence", 2)

@@ -55,7 +55,6 @@
 				/obj/item/reagent_containers/food/snacks/butter = 1,
 				/obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1,
 				/obj/item/reagent_containers/food/snacks/rogue/handpie = 1,
-				/obj/item/book/rogue/yeoldecookingmanual = 1,
 				)
 		if("Truffles")
 			backpack_contents = list(
@@ -70,7 +69,6 @@
 				/obj/item/reagent_containers/food/snacks/butter = 1,
 				/obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1,
 				/obj/item/reagent_containers/food/snacks/rogue/handpie = 1,
-				/obj/item/book/rogue/yeoldecookingmanual = 1,
 				)
 		if("Bacon")
 			backpack_contents = list(
@@ -85,5 +83,4 @@
 				/obj/item/reagent_containers/food/snacks/butter = 1,
 				/obj/item/reagent_containers/food/snacks/rogue/meat/salami = 1,
 				/obj/item/reagent_containers/food/snacks/rogue/handpie = 1,
-				/obj/item/book/rogue/yeoldecookingmanual = 1,
 				)

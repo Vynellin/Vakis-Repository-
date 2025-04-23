@@ -7878,7 +7878,6 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors)
 "hnl" = (
-/obj/item/book/rogue/xylix,
 /turf/open/water/cleanshallow,
 /area/rogue/under/cave)
 "hnC" = (

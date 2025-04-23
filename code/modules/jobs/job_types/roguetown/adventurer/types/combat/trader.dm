@@ -161,7 +161,7 @@
 			beltl = /obj/item/flashlight/flare/torch/lantern
 			beltr = /obj/item/rogueweapon/huntingknife/idagger
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
-			backpack_contents = list(/obj/item/paper/scroll = 3, /obj/item/book/rogue/knowledge1 = 1, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 1, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 1, /obj/item/natural/feather = 1, /obj/item/roguegem/amethyst = 1)
+			backpack_contents = list(/obj/item/paper/scroll = 3, /obj/item/reagent_containers/glass/bottle/rogue/manapot = 1, /obj/item/reagent_containers/glass/bottle/rogue/strongmanapot = 1, /obj/item/natural/feather = 1, /obj/item/roguegem/amethyst = 1)
 			H.change_stat("intelligence", 3)
 			H.change_stat("perception", 1)
 			H.change_stat("speed", 1)
