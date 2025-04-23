@@ -81,8 +81,6 @@
 				groupplaying = FALSE
 		if(!groupplaying)
 			var/list/options = song_list.Copy()
-			if(user.mind && user.mind.get_skill_level(/datum/skill/misc/music) >= 4)
-				options["Upload New Song"] = "upload"
 			
 			var/choice = input(user, "Which song?", "Music", name) as null|anything in options
 			if(!choice || !user)
@@ -91,35 +89,6 @@
 			if(playing || !(src in user.held_items) || user.get_inactive_held_item())
 				return
 				
-			if(choice == "Upload New Song")
-				if(lastfilechange && world.time < lastfilechange + 3 MINUTES)
-					say("NOT YET!")
-					return
-				playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-				var/infile = input(user, "CHOOSE A NEW SONG", src) as null|file
-
-				if(!infile)
-					return
-				if(playing || !(src in user.held_items) || user.get_inactive_held_item())
-					return
-
-				var/filename = "[infile]"
-				var/file_ext = lowertext(copytext(filename, -4))
-				var/file_size = length(infile)
-
-				if(file_ext != ".ogg")
-					to_chat(user, span_warning("SONG MUST BE AN OGG."))
-					return
-				if(file_size > 6485760)
-					to_chat(user, span_warning("TOO BIG. 6 MEGS OR LESS."))
-					return
-				lastfilechange = world.time
-				fcopy(infile,"data/jukeboxuploads/[user.ckey]/[filename]")
-				curfile = file("data/jukeboxuploads/[user.ckey]/[filename]")
-				var/songname = input(user, "Name your song:", "Song Name") as text|null
-				if(songname)
-					song_list[songname] = curfile
-				return
 			curfile = song_list[choice]
 			if(!user || playing || !(src in user.held_items))
 				return

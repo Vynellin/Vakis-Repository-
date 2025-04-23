@@ -374,6 +374,5 @@
 	. = ..()
 	update_icon()
 //	held_items[/obj/item/reagent_containers/glass/bottle/rogue/wine] = list("PRICE" = rand(23,33),"NAME" = "vino")
-//	held_items[/obj/item/dmusicbox] = list("PRICE" = rand(444,777),"NAME" = "Music Box")
 
 #undef UPGRADE_NOTAX
