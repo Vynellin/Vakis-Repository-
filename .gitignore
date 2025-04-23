@@ -221,8 +221,6 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 /config/*
 !/config/example/
 
-/config/jukebox_music/sounds/*
-!/config/jukebox_music/sounds/exclude
 /config/title_music/sounds/*
 !/config/title_music/sounds/exclude
 !/config/title_music/sounds/title1.ogg

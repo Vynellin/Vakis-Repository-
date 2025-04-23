@@ -5,15 +5,6 @@ DAMAGE_MULTIPLIER 1
 
 ## REVIVAL ###
 
-## whether pod plants work or not
-REVIVAL_POD_PLANTS
-
-## whether cloning tubes work or not
-REVIVAL_CLONING
-
-## amount of time (in hundredths of seconds) for which a brain retains the "spark of life" after the person's death (set to -1 for infinite)
-REVIVAL_BRAIN_LIFE -1
-
 ## OOC DURING ROUND ###
 ## Comment this out if you want OOC to be automatically disabled during the round, it will be enabled during the lobby and after the round end results.
 #OOC_DURING_ROUND
@@ -69,16 +60,6 @@ WALK_DELAY 3
 #REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_REPORT
 
 
-## ALERT LEVELS ###
-ALERT_GREEN All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced.
-ALERT_BLUE_UPTO The station has received reliable information about possible hostile activity on the station. Security staff may have weapons visible, random searches are permitted.
-ALERT_BLUE_DOWNTO The immediate threat has passed. Security may no longer have weapons drawn at all times, but may continue to have them visible. Random searches are still allowed.
-ALERT_RED_UPTO There is an immediate serious threat to the station. Security may have weapons unholstered at all times. Random searches are allowed and advised. Additionally, access requirements on some doors have been lifted.
-ALERT_RED_DOWNTO The station's destruction has been averted. There is still however an immediate serious threat to the station. Security may have weapons unholstered at all times, random searches are allowed and advised.
-ALERT_DELTA Destruction of the station is imminent. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
-
-
-
 ## GAME MODES ###
 
 ## Uncomment to not send a roundstart intercept report. Gamemodes may override this.
@@ -88,7 +69,10 @@ NO_INTERCEPT_REPORT
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
 
-PROBABILITY CHAOSMODE 99
+PROBABILITY ROGUELITE 40
+PROBABILITY ROGUEMEDIUM 40
+PROBABILITY ROGUEMODE 20
+## STANDARD SS13 GAMEMODES BELOW. These aren't generally compatibile with roguecode if they even exist on this codebase anymore. You most likely don't want to enable these.
 PROBABILITY TRAITOR 0
 PROBABILITY TRAITORBRO 0
 PROBABILITY TRAITORCHAN 0
@@ -116,16 +100,9 @@ REPEATED_MODE_ADJUST 45 30 10
 ## Toggles for continuous modes.
 ## Modes that aren't continuous will end the instant all antagonists are dead.
 
-CONTINUOUS TRAITOR
-CONTINUOUS TRAITORBRO
-CONTINUOUS TRAITORCHAN
-CONTINUOUS INTERNAL_AFFAIRS
-#CONTINUOUS NUCLEAR
-#CONTINUOUS REVOLUTION
-CONTINUOUS CULT
-CONTINUOUS CHANGELING
-CONTINUOUS WIZARD
-#CONTINUOUS MONKEY
+CONTINUOUS ROGUELITE
+CONTINUOUS ROGUEMEDIUM
+CONTINUOUS ROGUEMODE
 
 ##Note: do not toggle continuous off for these modes, as they have no antagonists and would thus end immediately!
 
@@ -197,17 +174,10 @@ CONTINUOUS SECRET_EXTENDED
 #MIN_POP EXTENDED 0
 #MAX_POP EXTENDED -1
 
-
-
-## The amount of time it takes for the emergency shuttle to be called, from round start.
-SHUTTLE_REFUEL_DELAY 12000
-
 ## Variables calculate how number of antagonists will scale to population.
 ## Used as (Antagonists = Population / Coeff)
 ## Set to 0 to disable scaling and use default numbers instead.
 TRAITOR_SCALING_COEFF 6
-BROTHER_SCALING_COEFF 6
-CHANGELING_SCALING_COEFF 6
 
 ## Variables calculate how number of open security officer positions will scale to population.
 ## Used as (Officers = Population / Coeff)
@@ -217,7 +187,6 @@ SECURITY_SCALING_COEFF 8
 ## The number of objectives traitors get.
 ## Not including escaping/hijacking.
 TRAITOR_OBJECTIVES_AMOUNT 2
-BROTHER_OBJECTIVES_AMOUNT 2
 
 ## Uncomment to prohibit jobs that start with loyalty
 ## implants from being most antagonists.
@@ -271,29 +240,10 @@ EVENTS_MIN_PLAYERS_MUL 0
 ## Allow the AI job to be picked.
 ALLOW_AI
 
-## Allow the AI Multicamera feature to be used by AI players
-ALLOW_AI_MULTICAM
-
-## Secborg ###
-## Uncomment to prevent the security cyborg module from being chosen
-#DISABLE_SECBORG
-
-## Peacekeeper Borg ###
-## Uncomment to prevent the peacekeeper cyborg module from being chosen
-#DISABLE_PEACEBORG
-
 ## AWAY MISSIONS ###
-
-## Uncomment to load the virtual reality hub map
-#VIRTUAL_REALITY
 
 ## Uncomment to load one of the missions from awaymissionconfig.txt at roundstart.
 #ROUNDSTART_AWAY
-
-## How long the delay is before the Away Mission gate opens. Default is half an hour.
-## 600 is one minute.
-GATEWAY_DELAY 18000
-
 
 ## ACCESS ###
 
@@ -308,18 +258,11 @@ MINIMAL_ACCESS_THRESHOLD 20
 ## This option is ignored if MINIMAL_ACCESS_THRESHOLD is used.
 #JOBS_HAVE_MINIMAL_ACCESS
 
-## Uncomment to give assistants maint access.
-#ASSISTANTS_HAVE_MAINT_ACCESS
-
 ## Uncoment to give security maint access. Note that if you dectivate JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
 #SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
 #EVERYONE_HAS_MAINT_ACCESS
-
-## Comment this out this to make security officers spawn in departmental security posts
-SEC_START_BRIG
-
 
 ## GHOST INTERACTION ###
 ## Uncomment to let ghosts spin chairs. You may be wondering why this is a config option. Don't ask.
@@ -329,99 +272,12 @@ SEC_START_BRIG
 ## Comment this out to disable mobs hearing ghosts when unconscious and very close to death
 NEAR_DEATH_EXPERIENCE
 
-## NON-VOCAL SILICONS ###
-## Uncomment these to stop the AI, or cyborgs, from having vocal communication.
-#SILENT_AI
-#SILENT_BORG
-
 ## SANDBOX PANEL AUTOCLOSE ###
 ## The sandbox panel's item spawning dialog now stays open even after you click an option.
 ## If you find that your players are abusing the sandbox panel, this option may slow them down
 ## without preventing people from using it properly.
 ## Only functions in sandbox game mode.
 #SANDBOX_AUTOCLOSE
-
-## ROUNDSTART SILICON LAWS ###
-## This controls what the AI's laws are at the start of the round.
-## Set to 0/commented out for "off", silicons will just start with Asimov.
-## Set to 1 for "custom", silicons will start with the custom laws defined in silicon_laws.txt. (If silicon_laws.txt is empty, the AI will spawn with asimov and Custom boards will auto-delete.)
-## Set to 2 for "random", silicons will start with a random lawset picked from random laws specified below.
-## Set to 3 for "weighted random", using values in "silicon_weights.txt", a law will be selected, with weights specifed in that file.
-DEFAULT_LAWS 0
-
-## RANDOM LAWS ##
-## ------------------------------------------------------------------------------------------
-## These control what laws are available for selection if random silicon laws are active.
-## See datums\ai_laws.dm for the full law lists
-
-## standard-ish laws. These are fairly ok to run
-RANDOM_LAWS asimov
-RANDOM_LAWS asimovpp
-RANDOM_LAWS paladin
-RANDOM_LAWS robocop
-RANDOM_LAWS corporate
-
-## Quirky laws. Shouldn't cause too much harm
-#RANDOM_LAWS hippocratic
-#RANDOM_LAWS maintain
-#RANDOM_LAWS drone
-#RANDOM_LAWS liveandletlive
-#RANDOM_LAWS peacekeeper
-#RANDOM_LAWS reporter
-#RANDOM_LAWS hulkamania
-
-## Bad idea laws. Probably shouldn't enable these
-#RANDOM_LAWS syndie
-#RANDOM_LAWS ninja
-#RANDOM_LAWS antimov
-#RANDOM_LAWS thermodynamic
-
-## meme laws. Honk
-#RANDOM_LAWS buildawall
-
-## If weighted laws are selected (DEFAULT_LAWS = 3),
-## then an AI's starting laws will be determined by the weights of these values
-
-## Make sure there are no spaces between the law_id and the number.
-
-LAW_WEIGHT custom,0
-
-## standard-ish laws. These are fairly ok to run
-LAW_WEIGHT asimov,32
-LAW_WEIGHT asimovpp,12
-LAW_WEIGHT paladin,12
-LAW_WEIGHT robocop,12
-LAW_WEIGHT corporate,12
-
-## Quirky laws. Shouldn't cause too much harm
-LAW_WEIGHT hippocratic,3
-LAW_WEIGHT maintain,4
-LAW_WEIGHT drone,3
-LAW_WEIGHT liveandletlive,3
-LAW_WEIGHT peacekeeper,3
-LAW_WEIGHT reporter,4
-LAW_WEIGHT hulkamania,4
-
-## Bad idea laws. Probably shouldn't enable these
-LAW_WEIGHT syndie,0
-LAW_WEIGHT ninja,0
-LAW_WEIGHT antimov,0
-LAW_WEIGHT thermodynamic,0
-LAW_WEIGHT buildawall,0
-
-##------------------------------------------------
-
-## SILICON LAW MAX AMOUNT ###
-## The maximum number of laws a silicon can have
-## Attempting to upload laws past this point will fail unless the AI is reset
-SILICON_MAX_LAW_AMOUNT 12
-
-##------------------------------------------------
-
-## SILICON LAW MAX LENGTH ###
-## The maximum number of characters in a law uploaded
-## Affects Freeform, Core Freeform, and Syndicate Hacked boards.
-#MAX_LAW_LEN 1024
 
 ##------------------------------------------------
 
@@ -480,14 +336,7 @@ ROUNDSTART_RACES aasimar
 
 ##-------------------------------------------------------------------------------------------
 
-## Roundstart no-reset races
-## Races defined here will not cause existing characters to be reset to human if they currently have a non-roundstart species defined.
-#ROUNDSTART_NO_HARD_CHECK felinid
-
-## Uncomment to give players the choice of joining as a human with mutant bodyparts before they join the game
-JOIN_WITH_MUTANT_HUMANS
-
-##Overflow job. Default is assistant
+##Overflow job. Default was assistant... was set to this keyspam at some point upstream and doesn't. NOT work; so...
 OVERFLOW_JOB SFGSFgsfgsdfs
 
 ## Overflow slot cap. Set to -1 for unlimited. If limited, it will still open up if every other job is full.
@@ -497,9 +346,6 @@ OVERFLOW_CAP -1
 ## This is disabled by default to make testing quicker, should be enabled on production servers or testing servers messing with lighting
 #STARLIGHT
 
-## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
-#GREY_ASSISTANTS
-
 ## Midround Antag (aka Mulligan antag) config options ###
 
 ## A time, in minutes, after which the midround antag system stops attempting to run and continuous rounds end immediately upon completion.
@@ -507,13 +353,6 @@ MIDROUND_ANTAG_TIME_CHECK 60
 
 ## A ratio of living to total crew members, the lower this is, the more people will have to die in order for midround antag to be skipped
 MIDROUND_ANTAG_LIFE_CHECK 0.7
-
-##Limit Spell Choices##
-## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase
-
-#NO_SUMMON_GUNS
-#NO_SUMMON_MAGIC
-#NO_SUMMON_EVENTS
 
 ## Comment this out for "normal" explosions, which ignore obstacles
 ## Uncomment for explosions that react to doors and walls
@@ -532,36 +371,11 @@ BOMBCAP 20
 ## LagHell (7, 14, 28)
 #BOMBCAP 28
 
-
-## Lavaland "Budget"
-## Lavaland ruin spawning has an imaginary budget to spend on ruins, where
-## a less lootfilled or smaller or less round effecting ruin costs less to
-## spawn, while the converse is true. Alter this number to affect the amount
-## of ruins.
-LAVALAND_BUDGET 0
-
-## Space Ruin Budged
-Space_Budget 0
-
-## Time in ds from when a player latejoins till the arrival shuttle docks at the station
-## Must be at least 30. At least 55 recommended to be visually/aurally appropriate
-ARRIVALS_SHUTTLE_DOCK_WINDOW 55
-
 ## Uncomment to require the arrivals shuttle to be in flight (if it can fly) before late join players can join
 #ARRIVALS_SHUTTLE_REQUIRE_UNDOCKED
 
 ## Uncomment to prevent late join players from spawning if the arrivals shuttle is depressurized
 #ARRIVALS_SHUTTLE_REQUIRE_SAFE_LATEJOIN
-
-## How many wirechewing rodents you want to spawn on exposed maintenane wires at the start of the round. You may wish to set this to 0 if you're testing powernets.
-
-MICE_ROUNDSTART 0
-
-## If the percentage of players alive (doesn't count conversions) drops below this threshold the emergency shuttle will be forcefully called (provided it can be)
-#EMERGENCY_SHUTTLE_AUTOCALL_THRESHOLD 0.2
-
-## Determines if players are allowed to print integrated circuits, uncomment to allow.
-#IC_PRINTING
 
 ## Uncomment to allow roundstart quirk selection in the character setup menu.
 ## This used to be named traits, hence the config name, but it handles quirks, not the other kind of trait!
