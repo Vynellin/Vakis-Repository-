@@ -26,11 +26,6 @@
 	cost = 30
 	contains = list(/obj/item/reagent_containers/powder/spice)
 
-/datum/supply_pack/rogue/luxury/mbox
-	name = "Music Box"
-	cost = 500
-	contains = list(/obj/item/dmusicbox)
-
 /datum/supply_pack/rogue/luxury/flute
 	name = "Flute"
 	cost = 10
