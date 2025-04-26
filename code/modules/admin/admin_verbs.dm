@@ -110,6 +110,7 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/discord_id_manipulation, /* No Discord implementation? */
 	/datum/admins/proc/sleep_view,
 	/datum/admins/proc/wake_view,
+	/client/proc/add_whitelist,
 	)
 GLOBAL_LIST_INIT(admin_verbs_ban, list(
 	/client/proc/unban_panel,
@@ -118,7 +119,8 @@ GLOBAL_LIST_INIT(admin_verbs_ban, list(
 	/client/proc/check_pq,
 	/client/proc/adjust_pq,
 	/client/proc/getcurrentlogs,
-	/client/proc/getserverlogs
+	/client/proc/getserverlogs,
+//	/datum/admins/proc/revoke_whitelist
 	))
 GLOBAL_PROTECT(admin_verbs_ban)
 GLOBAL_LIST_INIT(admin_verbs_sounds, list(
