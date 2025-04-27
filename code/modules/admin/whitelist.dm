@@ -125,13 +125,17 @@ GLOBAL_PROTECT(whitelist)
 
 
 /datum/tgs_chat_command/add_whitelist/Run(datum/tgs_chat_user/sender, params)
+	if(!CONFIG_GET(flag/usewhitelist))
+		return new /datum/tgs_message_content("This feature only works if the whitelist is enabled!")
+
 	if(!CONFIG_GET(flag/sql_enabled))
 		return new /datum/tgs_message_content("This feature requires a SQL database!")
 
-	GLOB.whitelist |= ckey(params)
+	var/ckey_to_whitelist = ckey(params)
 
 	var/datum/DBQuery/query_add_whitelist = SSdbcore.NewQuery(
-		"INSERT INTO [format_table_name("whitelist")] (ckey) VALUES(:ckey)"
+		"INSERT INTO [format_table_name("whitelist")] (ckey) VALUES(:ckey) ON DUPLICATE KEY UPDATE revoked = 0",
+		list("ckey" = ckey_to_whitelist)
 	)
 
 	if(!query_add_whitelist.Execute())
@@ -139,9 +143,12 @@ GLOBAL_PROTECT(whitelist)
 		return new /datum/tgs_message_content("A SQL error occurred during this operation, report this ASAP.")
 
 	qdel(query_add_whitelist)
-	log_admin("[sender.friendly_name] has added [params] to the whitelist.")
-	message_admins("[sender.friendly_name] has added [params] to the whitelist.")
-	return new /datum/tgs_message_content("[params] has been added to the whitelist.")
+
+	GLOB.whitelist[ckey_to_whitelist] = TRUE
+
+	log_admin("[sender.friendly_name] has added [ckey_to_whitelist] to the whitelist.")
+	message_admins("[sender.friendly_name] has added [ckey_to_whitelist] to the whitelist.")
+	return new /datum/tgs_message_content("[ckey_to_whitelist] has been added to the whitelist.")
 
 
 #undef WHITELISTFILE
