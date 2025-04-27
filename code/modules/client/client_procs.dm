@@ -122,9 +122,9 @@ GLOBAL_LIST_EMPTY(respawncounts)
 		view_rogue_manifest()
 		return
 
-	// Schizohelp
-	if(href_list["schizohelp"])
-		answer_schizohelp(locate(href_list["schizohelp"]))
+	// Mentorhelp
+	if(href_list["mentorhelp"])
+		answer_mentorhelp(locate(href_list["mentorhelp"]))
 		return
 
 	switch(href_list["_src_"])

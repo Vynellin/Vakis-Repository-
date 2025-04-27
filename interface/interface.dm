@@ -63,7 +63,7 @@
 	if(mob)
 		var/msg = input("Submit your question to the Voices:", "Mentorhelp Input") as text|null
 		if(msg)
-			mob.schizohelp(msg)
+			mob.mentorhelp(msg)
 	else
 		to_chat(src, span_danger("You can't currently use Mentorhelp in the main menu."))
 

@@ -168,9 +168,9 @@
 	greet_text = span_cult("THEY'RE COMING FOR ME")
 	weight = 100
 
-/datum/special_trait/schizo_ambience
-	name = "Shizophrenic"
-	greet_text = span_suicide("MY TUMOR gives me sight BEYOND THE VEIL!")
+/datum/special_trait/creepy_ambience
+	name = "Unsettled"
+	greet_text = span_suicide("Something feels particularly wrong.")
 	weight = 100
 
 /datum/special_trait/arsonist

@@ -726,7 +726,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 	dat += "</td>"
 	dat += "<td width='33%' align='right'>"
-	dat += "<b>Be voice:</b> <a href='?_src_=prefs;preference=schizo_voice'>[(toggles & SCHIZO_VOICE) ? "Enabled":"Disabled"]</a>"
+	dat += "<b>Be Mentor:</b> <a href='?_src_=prefs;preference=mentor_help'>[(toggles & BE_MENTOR) ? "Enabled":"Disabled"]</a>"
 	dat += "</td>"
 	dat += "</tr>"
 	dat += "</table>"
@@ -2223,9 +2223,9 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					widescreenpref = !widescreenpref
 					user.client.change_view(CONFIG_GET(string/default_view))
 
-				if("schizo_voice")
-					toggles ^= SCHIZO_VOICE
-					if(toggles & SCHIZO_VOICE)
+				if("BE_MENTOR")
+					toggles ^= BE_MENTOR
+					if(toggles & BE_MENTOR)
 						to_chat(user, "<span class='warning'>You are now a voice.\n\
 										As a voice, you will receive meditations from players asking about game mechanics!\n\
 										Good voices will be rewarded with PQ for answering meditations, while bad ones are punished at the discretion of The Management.</span>")
