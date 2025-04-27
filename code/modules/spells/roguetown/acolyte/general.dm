@@ -34,7 +34,7 @@
 			if(/datum/patron/old_god)
 				message_out = span_info("A strange stirring feeling pours from [target]!")
 				message_self = span_info("Sentimental thoughts drive away my pains!")
-			if(/datum/patron/divine/astrata)
+			if(/datum/patron/divine/aeternus)
 				message_out = span_info("A wreath of gentle light passes over [target]!")
 				message_self = ("I'm bathed in holy light!")
 				// during the day, heal 1 more (basic as fuck)
@@ -42,7 +42,7 @@
 					conditional_buff = TRUE
 					situational_bonus = 2
 				// Day is 1/4th as long as night. Noc priests get a bonus for four times as long and during peak conflict hours, thus Astratans should have more powerful heals
-			if(/datum/patron/divine/noc)
+			if(/datum/patron/divine/zira)
 				message_out = span_info("A shroud of soft moonlight falls upon [target]!")
 				message_self = span_notice("I'm shrouded in gentle moonlight!")
 				// during the night, heal 1 more (i wish this was more interesting but they're twins so whatever)
@@ -62,14 +62,14 @@
 				// Healing before the oaken avatar of Dendor in the Druid Grove (exceptionally rare otherwise) supercharges their healing
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
-			if(/datum/patron/divine/abyssor)
+			if(/datum/patron/divine/cinella)
 				message_out = span_info("A mist of salt-scented vapour settles on [target]!")
 				message_self = span_notice("I'm invigorated by healing vapours!")
 				// if our target is standing in water, heal a flat amount extra
 				if (istype(get_turf(target), /turf/open/water))
 					conditional_buff = TRUE
 					situational_bonus = 1.5
-			if(/datum/patron/divine/ravox)
+			if(/datum/patron/divine/carthus)
 				message_out = span_info("An air of righteous defiance rises near [target]!")
 				message_self = span_notice("I'm filled with an urge to fight on!")
 				situational_bonus = 0
@@ -77,7 +77,7 @@
 				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
 					situational_bonus = min(situational_bonus + 0.1, 2)
 				conditional_buff = TRUE
-			if(/datum/patron/divine/necra)
+			if(/datum/patron/divine/tsoridys)
 				message_out = span_info("A sense of quiet respite radiates from [target]!")
 				message_self = span_notice("I feel the Undermaiden's gaze turn from me for now!")
 				if (iscarbon(target))

@@ -25,7 +25,7 @@
 	name = "Acolyte"
 	jobtype = /datum/job/roguetown/monk
 
-	allowed_patrons = list(/datum/patron/divine/pestra, /datum/patron/divine/astrata, /datum/patron/divine/eora, /datum/patron/divine/noc, /datum/patron/divine/necra, /datum/patron/divine/abyssor, /datum/patron/divine/malum, /datum/patron/divine/ravox, /datum/patron/divine/xylix) // The whole Ten. Probably could delete this now, actually.
+	allowed_patrons = list(/datum/patron/divine/pestra, /datum/patron/divine/aeternus, /datum/patron/divine/eora, /datum/patron/divine/zira, /datum/patron/divine/tsoridys, /datum/patron/divine/cinella, /datum/patron/divine/malum, /datum/patron/divine/carthus, /datum/patron/divine/xylix) // The whole Ten. Probably could delete this now, actually.
 
 
 /datum/outfit/job/roguetown/monk/pre_equip(mob/living/carbon/human/H)
@@ -36,20 +36,20 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/ritechalk)
 	switch(H.patron?.type)
-		if(/datum/patron/divine/astrata)
+		if(/datum/patron/divine/aeternus)
 			head = /obj/item/clothing/head/roguetown/roguehood/astrata
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-		if(/datum/patron/divine/noc)
+		if(/datum/patron/divine/zira)
 			head = /obj/item/clothing/head/roguetown/nochood
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 			wrists = /obj/item/clothing/wrists/roguetown/nocwrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/noc
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-		if(/datum/patron/divine/abyssor) // the deep calls!
+		if(/datum/patron/divine/cinella) // the deep calls!
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			pants = /obj/item/clothing/under/roguetown/tights
@@ -60,7 +60,7 @@
 			head = /obj/item/clothing/head/roguetown/dendormask
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
-		if(/datum/patron/divine/necra)
+		if(/datum/patron/divine/tsoridys)
 			head = /obj/item/clothing/head/roguetown/necrahood
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 			shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -87,7 +87,7 @@
 			pants = /obj/item/clothing/under/roguetown/trou
 			cloak = /obj/item/clothing/cloak/templar/malumite
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
-		if(/datum/patron/divine/ravox)
+		if(/datum/patron/divine/carthus)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/templar/ravox
@@ -151,12 +151,12 @@
 		H.change_stat("endurance", 2)
 		H.change_stat("speed", 1)
 		H.cmode_music = 'sound/music/combat_holy.ogg'
-		if(H.patron?.type == /datum/patron/divine/necra)
+		if(H.patron?.type == /datum/patron/divine/tsoridys)
 			ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_SOUL_EXAMINE, TRAIT_GENERIC)
 		if(H.patron?.type == /datum/patron/divine/eora)
 			ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/divine/abyssor)
+		if(H.patron?.type == /datum/patron/divine/cinella)
 			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 3, TRUE)
 			ADD_TRAIT(H, TRAIT_WATERBREATHING, TRAIT_GENERIC)
 

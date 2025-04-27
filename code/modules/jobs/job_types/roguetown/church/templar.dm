@@ -52,16 +52,16 @@
 	neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron?.type)
-		if(/datum/patron/divine/astrata)
+		if(/datum/patron/divine/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 			cloak = /obj/item/clothing/cloak/tabard/crusader/astrata
-		if(/datum/patron/divine/abyssor)
+		if(/datum/patron/divine/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			cloak = /obj/item/clothing/cloak/abyssortabard
 		if(/datum/patron/divine/dendor)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
-		if(/datum/patron/divine/necra)
+		if(/datum/patron/divine/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 			cloak = /obj/item/clothing/cloak/templar/necran
 		if(/datum/patron/divine/pestra)
@@ -70,10 +70,10 @@
 		if(/datum/patron/divine/eora) //Eora content from stonekeep
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/divine/noc)
+		if(/datum/patron/divine/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/divine/ravox)
+		if(/datum/patron/divine/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
 		if(/datum/patron/divine/malum)
@@ -141,7 +141,7 @@
 	switch(H.patron?.type)
 		if(/datum/patron/divine/eora)
 			weapons += "Close Caress"
-		if(/datum/patron/divine/abyssor)
+		if(/datum/patron/divine/cinella)
 			weapons += "Barotrauma"
 
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -166,11 +166,11 @@
 	wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron?.type)
-		if(/datum/patron/divine/astrata)
+		if(/datum/patron/divine/aeternus)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
 			cloak = /obj/item/clothing/cloak/templar/astratan
-		if(/datum/patron/divine/abyssor)
+		if(/datum/patron/divine/cinella)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
 			cloak = /obj/item/clothing/cloak/abyssortabard
@@ -178,7 +178,7 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
-		if(/datum/patron/divine/necra)
+		if(/datum/patron/divine/tsoridys)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/necra
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/necran
 			cloak = /obj/item/clothing/cloak/templar/necran
@@ -190,11 +190,11 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/divine/noc)
+		if(/datum/patron/divine/zira)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/noc
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/divine/ravox)
+		if(/datum/patron/divine/carthus)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
@@ -255,11 +255,11 @@
 	. = ..()
 	var/weapons = list("Bastard Sword","Flail","Mace","Battle Axe")
 	switch(H.patron?.type)
-		if(/datum/patron/divine/astrata) //Unique patron weapons, more can be added here if wanted.
+		if(/datum/patron/divine/aeternus) //Unique patron weapons, more can be added here if wanted.
 			weapons += "Solar Judgement"
-		if(/datum/patron/divine/noc)
+		if(/datum/patron/divine/zira)
 			weapons += "Moonlight Khopesh"
-		if(/datum/patron/divine/necra)
+		if(/datum/patron/divine/tsoridys)
 			weapons += "Swift End"
 		if(/datum/patron/divine/pestra)
 			weapons += "Plaguebringer Sickles"
@@ -269,7 +269,7 @@
 			weapons += "Summer Scythe"
 		if(/datum/patron/divine/xylix)
 			weapons += "Cackle Lash"
-		if(/datum/patron/divine/ravox)
+		if(/datum/patron/divine/carthus)
 			weapons += "Duel Settler"
 		if(/datum/patron/divine/eora)
 			weapons += "The Heartstring"

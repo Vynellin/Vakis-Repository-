@@ -67,19 +67,19 @@
 				if(/datum/patron/old_god)
 					cloak = /obj/item/clothing/cloak/psydontabard
 					head = /obj/item/clothing/head/roguetown/roguehood/psydon
-				if(/datum/patron/divine/astrata)
+				if(/datum/patron/divine/aeternus)
 					head = /obj/item/clothing/head/roguetown/roguehood/astrata
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-				if(/datum/patron/divine/noc)
+				if(/datum/patron/divine/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
-				if(/datum/patron/divine/abyssor)
+				if(/datum/patron/divine/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
 				if(/datum/patron/divine/dendor)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
-				if(/datum/patron/divine/necra)
+				if(/datum/patron/divine/tsoridys)
 					head = /obj/item/clothing/head/roguetown/necrahood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
 				if (/datum/patron/divine/malum)
@@ -129,19 +129,19 @@
 					armor = /obj/item/clothing/suit/roguetown/armor/plate/half/fluted
 					cloak = /obj/item/clothing/cloak/psydontabard
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm
-				if(/datum/patron/divine/astrata)
+				if(/datum/patron/divine/aeternus)
 					cloak = /obj/item/clothing/cloak/templar/astrata
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
-				if(/datum/patron/divine/noc)
+				if(/datum/patron/divine/zira)
 					cloak = /obj/item/clothing/cloak/templar/noc
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
-				if(/datum/patron/divine/abyssor)
+				if(/datum/patron/divine/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 				if(/datum/patron/divine/dendor)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
-				if(/datum/patron/divine/necra)
+				if(/datum/patron/divine/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/necra
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
 				if (/datum/patron/divine/malum)
@@ -150,7 +150,7 @@
 				if (/datum/patron/divine/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
-				if (/datum/patron/divine/ravox)
+				if (/datum/patron/divine/carthus)
 					cloak = /obj/item/clothing/cloak/templar/ravox
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 				if (/datum/patron/divine/xylix)
@@ -218,21 +218,21 @@
 			switch(H.patron?.type)
 				if(/datum/patron/old_god)
 					cloak = /obj/item/clothing/cloak/templar/psydon
-				if(/datum/patron/divine/astrata)
+				if(/datum/patron/divine/aeternus)
 					cloak = /obj/item/clothing/cloak/templar/astrata
-				if(/datum/patron/divine/noc)
+				if(/datum/patron/divine/zira)
 					cloak = /obj/item/clothing/cloak/templar/noc
-				if(/datum/patron/divine/abyssor)
+				if(/datum/patron/divine/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
 				if(/datum/patron/divine/dendor)
 					cloak = /obj/item/clothing/cloak/templar/dendor
-				if(/datum/patron/divine/necra)
+				if(/datum/patron/divine/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/necra
 				if (/datum/patron/divine/malum)
 					cloak = /obj/item/clothing/cloak/templar/malum
 				if (/datum/patron/divine/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
-				if (/datum/patron/divine/ravox)
+				if (/datum/patron/divine/carthus)
 					cloak = /obj/item/clothing/cloak/templar/ravox
 				if (/datum/patron/divine/xylix)
 					cloak = /obj/item/clothing/cloak/templar/xylix
@@ -288,20 +288,20 @@
 				if(/datum/patron/old_god)
 					cloak = /obj/item/clothing/cloak/psydontabard
 					head = /obj/item/clothing/head/roguetown/roguehood/psydon
-				if(/datum/patron/divine/astrata)
+				if(/datum/patron/divine/aeternus)
 					head = /obj/item/clothing/head/roguetown/roguehood/astrata
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-				if(/datum/patron/divine/noc)
+				if(/datum/patron/divine/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
-				if(/datum/patron/divine/abyssor)
+				if(/datum/patron/divine/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
 				if(/datum/patron/divine/dendor)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 					H.cmode_music = 'sound/music/combat_druid.ogg'
-				if(/datum/patron/divine/necra)
+				if(/datum/patron/divine/tsoridys)
 					head = /obj/item/clothing/head/roguetown/necrahood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
 				if (/datum/patron/divine/malum)
@@ -324,19 +324,19 @@
 	switch(H.patron?.type)
 		if(/datum/patron/old_god)
 			neck = /obj/item/clothing/neck/roguetown/psicross
-		if(/datum/patron/divine/astrata)
+		if(/datum/patron/divine/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
-		if(/datum/patron/divine/noc)
+		if(/datum/patron/divine/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
-		if(/datum/patron/divine/abyssor)
+		if(/datum/patron/divine/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 		if(/datum/patron/divine/dendor)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
-		if(/datum/patron/divine/necra)
+		if(/datum/patron/divine/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 		if(/datum/patron/divine/pestra)
 			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
-		if(/datum/patron/divine/ravox)
+		if(/datum/patron/divine/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 		if(/datum/patron/divine/malum)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum

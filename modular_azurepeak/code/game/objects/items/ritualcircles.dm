@@ -22,7 +22,7 @@
 	var/solarrites = list("Guiding Light") // This is important - This is the var which stores every ritual option available to a ritualist - Ideally, we'd have like, 3 for each God. Right now, just 1.
 
 /obj/structure/ritualcircle/astrata/attack_hand(mob/living/user) 
-	if((user.patron?.type) != /datum/patron/divine/astrata)
+	if((user.patron?.type) != /datum/patron/divine/aeternus)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -70,7 +70,7 @@
 	var/lunarrites = list("Moonlight Dance") // list for more to be added later
 
 /obj/structure/ritualcircle/noc/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/divine/noc)
+	if((user.patron?.type) != /datum/patron/divine/zira)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -213,7 +213,7 @@
 	var/deathrites = list("Undermaiden's Bargain")
 
 /obj/structure/ritualcircle/necra/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/divine/necra)
+	if((user.patron?.type) != /datum/patron/divine/tsoridys)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))

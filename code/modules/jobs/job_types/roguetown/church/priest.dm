@@ -26,7 +26,7 @@
 	virtue_restrictions = list(/datum/virtue/utility/noble)
 
 /datum/outfit/job/roguetown/priest
-	allowed_patrons = list(/datum/patron/divine/astrata)
+	allowed_patrons = list(/datum/patron/divine/aeternus)
 
 /datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
 	..()
