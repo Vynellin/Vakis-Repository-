@@ -83,7 +83,7 @@ CREATE TABLE `ban` (
   `a_ckey` VARCHAR(32) NOT NULL,
   `a_ip` INT(10) UNSIGNED NOT NULL,
   `a_computerid` VARCHAR(32) NOT NULL,
-  `who` VARCHAR(2048) NOT NULL,
+  `who` VARCHAR(4096) NOT NULL,
   `adminwho` VARCHAR(2048) NOT NULL,
   `edits` TEXT NULL DEFAULT NULL,
   `unbanned_datetime` DATETIME NULL DEFAULT NULL,

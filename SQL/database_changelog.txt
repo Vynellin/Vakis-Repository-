@@ -10,7 +10,8 @@ In any query remember to add a prefix to the table names if you use one.
 
 -----------------------------------------------------
 Version 5.11, 26 April 2025, by GoldenAlpharex
-Added a new table for whitelist purposes. Also added a `discord_reported` column to the `ban` table.
+Added a new table for whitelist purposes. Also added a `discord_reported` column to the `ban` table, and increased the `who` column's string size to
+4096, up from 2048, to avoid the issues when there's very high server population and the "who" is more than 2048 characters long.
 
 ```sql
 DROP TABLE IF EXISTS `whitelist`;
@@ -26,6 +27,7 @@ CREATE TABLE `whitelist` (
 ```sql
 ALTER TABLE `ban` 
 ADD COLUMN `discord_reported` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0';
+MODIFY COLUMN `who` VARCHAR(4096) NOT NULL;
 ```
 
 -----------------------------------------------------
