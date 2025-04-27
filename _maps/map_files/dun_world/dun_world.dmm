@@ -1953,7 +1953,7 @@
 /area/rogue/indoors/town)
 "aQb" = (
 /obj/structure/fluff/signage{
-	name = "SOLARIS - NORTH"
+	name = "SOLARIS RIDGE - NORTH"
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
@@ -4065,7 +4065,7 @@
 /area/rogue/under/town/basement/keep)
 "bJP" = (
 /obj/structure/fluff/signage{
-	name = "SOLARIS - EAST"
+	name = "SOLARIS RIDGE - EAST"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
@@ -18407,7 +18407,7 @@
 /area/rogue/indoors/town/bath)
 "hJB" = (
 /obj/structure/fluff/signage{
-	name = "SOLARIS - EAST"
+	name = "SOLARIS RIDGE - EAST"
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/mountains)
@@ -56015,7 +56015,7 @@
 /area/rogue/outdoors/woods)
 "xkL" = (
 /obj/structure/fluff/signage{
-	name = "SOLARIS - NORTH"
+	name = "SOLARIS RIDGE - NORTH"
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)

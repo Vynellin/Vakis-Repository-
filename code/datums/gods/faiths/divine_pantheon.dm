@@ -1,8 +1,5 @@
 /datum/faith/divine
 	name = "Divine Pantheon"
-	desc = "The TEN, children of PSYDON. The most accepted religion in Solaris. born from Psydon sending the Comet Syon to defeat the rampaging Archdevil and splitting him into Ten. \n \n\
-		The <b>Holy See</b>, recently rocked by a violent schism, controls diosces across the world.\
-		The splinter church, the <b>Holy Ecclesial</b>, recognize the heretical 'Ascendants' - better known as INHUMEN GODS- as True Divinity. \
-		But it is only through faith of the TRUE DIVINE that hope can be found in this world."
-	worshippers = "Citizens of Solaris, conservative religious-folk, many commonfolk."
+	desc = "Please note the gods are under heavy rework at the moment; and all present here will no longer exist shortly."
+	worshippers = "Citizens of Solaris Ridge, conservative religious-folk, many commonfolk."
 	godhead = /datum/patron/divine/astrata
