@@ -94,12 +94,11 @@
 		"TSORIDYS WATCH ME ON THIS DAY!",
 	)
 
-/*
 /datum/patron/divine/xylix
-	name = "Xylix"
-	domain = "God of Trickery, Freedom and Inspiration"
-	desc = "The Laughing God, both famous and infamous for his sway over the forces of luck. Xylix is known for the inspiration of many a bards lyric. Speaks through his gift to man; the Tarot deck."
-	worshippers = "Gamblers, Bards, Artists, and the Silver-Tongued"
+	name = "Placeholder"
+	domain = "God of Primordial Magic"
+	desc = "Placeholder"
+	worshippers = "Placeholder"
 	mob_traits = list(TRAIT_XYLIX)
 	t1 = /obj/effect/proc_holder/spell/invoked/wheel
 	t2 = /obj/effect/proc_holder/spell/invoked/mockery
@@ -115,7 +114,6 @@
 		"MALUM IS MY MUSE!",
 		"EORA BRINGS US TOGETHER!",
 	)
-*/
 
 /*
 /datum/patron/divine/pestra
