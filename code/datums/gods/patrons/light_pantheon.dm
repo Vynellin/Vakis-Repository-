@@ -165,5 +165,3 @@
 		"HER BEAUTY IS EVEN IN THIS TORMENT!",
 		"I LOVE YOU, EVEN AS YOU TRESPASS AGAINST ME!",
 	)
-
-// Primordial Magic, Chaos
