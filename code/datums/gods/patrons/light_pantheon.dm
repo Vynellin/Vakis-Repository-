@@ -1,9 +1,9 @@
-/datum/patron/divine
+/datum/patron/light
 	name = null
 	associated_faith = /datum/faith/divine
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
-/datum/patron/divine/aeternus
+/datum/patron/light/aeternus
 	name = "Aeturnus"
 	domain = "God of the Sun"
 	desc = "Placeholder"
@@ -18,7 +18,7 @@
 		"I SERVE THE GLORY OF THE SUN!",
 	)
 
-/datum/patron/divine/zira
+/datum/patron/light/zira
 	name = "Zira"
 	domain = "Goddess of the Moon"
 	desc = "Placeholder"
@@ -32,7 +32,7 @@
 		"I SEEK THE MYSTERIES OF THE MOON!",
 	)
 
-/datum/patron/divine/dendor
+/datum/patron/light/dendor
 	name = "Placeholder Name"
 	domain = "God of Life and Nature"
 	desc = "Placeholder"
@@ -48,7 +48,7 @@
 		"I ANSWER THE CALL OF THE WILD!",
 	)
 
-/datum/patron/divine/cinella
+/datum/patron/light/cinella
 	name = "Cinella"
 	domain = "Goddess of the Seas"
 	desc = "Placeholder"
@@ -63,7 +63,7 @@
 		"I AM DRAWN BY THE PULL OF THE TIDE!",
 	)
 	
-/datum/patron/divine/carthus
+/datum/patron/light/carthus
 	name = "Carthus"
 	domain = "God of War, Ambition, and Rule"
 	desc = "Placeholder"
@@ -78,7 +78,7 @@
 		"THROUGH PERSISTENCE, GLORY!",
 	)
 
-/datum/patron/divine/tsoridys
+/datum/patron/light/tsoridys
 	name = "Tsoridys"
 	domain = "God of Death, Time, and Entropy"
 	desc = "Placeholder"
@@ -94,7 +94,7 @@
 		"TSORIDYS WATCH ME ON THIS DAY!",
 	)
 
-/datum/patron/divine/xylix
+/datum/patron/light/xylix
 	name = "Placeholder"
 	domain = "God of Primordial Magic"
 	desc = "Placeholder"
@@ -114,7 +114,7 @@
 		"EORA BRINGS US TOGETHER!",
 	)
 
-/datum/patron/divine/malum
+/datum/patron/light/malum
 	name = "Placeholder Name"
 	domain = "God of Technology"
 	desc = "Placeholder"
@@ -131,7 +131,7 @@
 		"I AM AN INSTRUMENT OF CREATION!",
 	)
 
-/datum/patron/divine/eora
+/datum/patron/light/eora
 	name = "Placeholder Name"
 	domain = "Goddess of Love, Music and Harmony"
 	desc = "Placeholder"

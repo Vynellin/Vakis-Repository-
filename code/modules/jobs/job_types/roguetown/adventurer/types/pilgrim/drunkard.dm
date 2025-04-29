@@ -36,5 +36,5 @@
 		H.change_stat("constitution", 1)
 		H.change_stat("strength", 1)
 		H.change_stat("fortune", 2)
-		if(H.patron.type == /datum/patron/divine/xylix)
+		if(H.patron.type == /datum/patron/light/xylix)
 			ADD_TRAIT(H, TRAIT_CRACKHEAD, TRAIT_GENERIC)

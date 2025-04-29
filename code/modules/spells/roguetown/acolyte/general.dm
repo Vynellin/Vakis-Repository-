@@ -34,7 +34,7 @@
 			if(/datum/patron/old_god)
 				message_out = span_info("A strange stirring feeling pours from [target]!")
 				message_self = span_info("Sentimental thoughts drive away my pains!")
-			if(/datum/patron/divine/aeternus)
+			if(/datum/patron/light/aeternus)
 				message_out = span_info("A wreath of gentle light passes over [target]!")
 				message_self = ("I'm bathed in holy light!")
 				// during the day, heal 1 more (basic as fuck)
@@ -42,13 +42,13 @@
 					conditional_buff = TRUE
 					situational_bonus = 2
 				// Day is 1/4th as long as night. Noc priests get a bonus for four times as long and during peak conflict hours, thus Astratans should have more powerful heals
-			if(/datum/patron/divine/zira)
+			if(/datum/patron/light/zira)
 				message_out = span_info("A shroud of soft moonlight falls upon [target]!")
 				message_self = span_notice("I'm shrouded in gentle moonlight!")
 				// during the night, heal 1 more (i wish this was more interesting but they're twins so whatever)
 				if (GLOB.tod == "night")
 					conditional_buff = TRUE
-			if(/datum/patron/divine/dendor)
+			if(/datum/patron/light/dendor)
 				message_out = span_info("A rush of primal energy spirals about [target]!")
 				message_self = span_notice("I'm infused with primal energies!")
 				var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
@@ -62,14 +62,14 @@
 				// Healing before the oaken avatar of Dendor in the Druid Grove (exceptionally rare otherwise) supercharges their healing
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
-			if(/datum/patron/divine/cinella)
+			if(/datum/patron/light/cinella)
 				message_out = span_info("A mist of salt-scented vapour settles on [target]!")
 				message_self = span_notice("I'm invigorated by healing vapours!")
 				// if our target is standing in water, heal a flat amount extra
 				if (istype(get_turf(target), /turf/open/water))
 					conditional_buff = TRUE
 					situational_bonus = 1.5
-			if(/datum/patron/divine/carthus)
+			if(/datum/patron/light/carthus)
 				message_out = span_info("An air of righteous defiance rises near [target]!")
 				message_self = span_notice("I'm filled with an urge to fight on!")
 				situational_bonus = 0
@@ -77,7 +77,7 @@
 				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
 					situational_bonus = min(situational_bonus + 0.1, 2)
 				conditional_buff = TRUE
-			if(/datum/patron/divine/tsoridys)
+			if(/datum/patron/light/tsoridys)
 				message_out = span_info("A sense of quiet respite radiates from [target]!")
 				message_self = span_notice("I feel the Undermaiden's gaze turn from me for now!")
 				if (iscarbon(target))
@@ -86,14 +86,14 @@
 					if (C.health <= (C.maxHealth * 0.25))
 						conditional_buff = TRUE
 						situational_bonus = 2.5
-			if(/datum/patron/divine/xylix)
+			if(/datum/patron/light/xylix)
 				message_out = span_info("A fugue seems to manifest briefly across [target]!")
 				message_self = span_notice("My wounds vanish as if they had never been there! ")
 				// half of the time, heal a little (or a lot) more - flip the coin
 				if (prob(50))
 					conditional_buff = TRUE
 					situational_bonus = rand(1, 2.5)
-			if(/datum/patron/divine/malum)
+			if(/datum/patron/light/malum)
 				message_out = span_info("A tempering heat is discharged out of [target]!")
 				message_self = span_info("I feel the heat of a forge soothing my pains!")
 				var/list/firey_stuff = list(/obj/machinery/light/rogue/torchholder, /obj/machinery/light/rogue/campfire, /obj/machinery/light/rogue/hearth, /obj/machinery/light/rogue/wallfire, /obj/machinery/light/rogue/wallfire/candle, /obj/machinery/light/rogue/forge)
@@ -104,7 +104,7 @@
 						situational_bonus = min(situational_bonus + 0.5, 2.5)
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
-			if(/datum/patron/divine/eora)
+			if(/datum/patron/light/eora)
 				message_out = span_info("An emanance of love blossoms around [target]!")
 				message_self = span_notice("I'm filled with the restorative warmth of love!")
 				// if they're wearing an eoran bud (or are a pacifist), pretty much double the healing. if we're also wearing a bud at any point or a pacifist from any other source, apply another +15 bonus

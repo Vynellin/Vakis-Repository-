@@ -805,7 +805,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 						SSParticleWeather?.run_weather(/datum/particle_weather/blood_rain_storm)
 						addomen(OMEN_SUNSTEAL)
 						for(var/mob/living/carbon/human/astrater in GLOB.human_list)
-							if(!istype(astrater.patron, /datum/patron/divine/aeternus) || !length(astrater.mind?.antag_datums))
+							if(!istype(astrater.patron, /datum/patron/light/aeternus) || !length(astrater.mind?.antag_datums))
 								continue
 							to_chat(astrater, span_userdanger("You feel the pain of [astrater.patron.name]!"))
 							astrater.emote_scream()

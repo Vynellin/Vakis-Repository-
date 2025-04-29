@@ -52,31 +52,31 @@
 	neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron?.type)
-		if(/datum/patron/divine/aeternus)
+		if(/datum/patron/light/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 			cloak = /obj/item/clothing/cloak/tabard/crusader/astrata
-		if(/datum/patron/divine/cinella)
+		if(/datum/patron/light/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			cloak = /obj/item/clothing/cloak/abyssortabard
-		if(/datum/patron/divine/dendor)
+		if(/datum/patron/light/dendor)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
-		if(/datum/patron/divine/tsoridys)
+		if(/datum/patron/light/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 			cloak = /obj/item/clothing/cloak/templar/necran
-		if(/datum/patron/divine/eora) //Eora content from stonekeep
+		if(/datum/patron/light/eora) //Eora content from stonekeep
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/divine/zira)
+		if(/datum/patron/light/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/divine/carthus)
+		if(/datum/patron/light/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
-		if(/datum/patron/divine/malum)
+		if(/datum/patron/light/malum)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 			cloak = /obj/item/clothing/cloak/templar/malumite
-		if(/datum/patron/divine/malum)
+		if(/datum/patron/light/malum)
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/astrata,
@@ -107,7 +107,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/divine/malum)
+		if(H.patron?.type == /datum/patron/light/malum)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
@@ -130,9 +130,9 @@
 	. = ..()
 	var/weapons = list("Katar")
 	switch(H.patron?.type)
-		if(/datum/patron/divine/eora)
+		if(/datum/patron/light/eora)
 			weapons += "Close Caress"
-		if(/datum/patron/divine/cinella)
+		if(/datum/patron/light/cinella)
 			weapons += "Barotrauma"
 
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -157,35 +157,35 @@
 	wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron?.type)
-		if(/datum/patron/divine/aeternus)
+		if(/datum/patron/light/aeternus)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
 			cloak = /obj/item/clothing/cloak/templar/astratan
-		if(/datum/patron/divine/cinella)
+		if(/datum/patron/light/cinella)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
 			cloak = /obj/item/clothing/cloak/abyssortabard
-		if(/datum/patron/divine/dendor)
+		if(/datum/patron/light/dendor)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
-		if(/datum/patron/divine/tsoridys)
+		if(/datum/patron/light/tsoridys)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/necra
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/necran
 			cloak = /obj/item/clothing/cloak/templar/necran
-		if(/datum/patron/divine/eora) //Eora content from stonekeep
+		if(/datum/patron/light/eora) //Eora content from stonekeep
 			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/divine/zira)
+		if(/datum/patron/light/zira)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/noc
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/divine/carthus)
+		if(/datum/patron/light/carthus)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
-		if(/datum/patron/divine/malum)
+		if(/datum/patron/light/malum)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/malum
 			cloak = /obj/item/clothing/cloak/templar/malumite
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
@@ -214,7 +214,7 @@
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/divine/malum)
+		if(H.patron?.type == /datum/patron/light/malum)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)
@@ -237,21 +237,21 @@
 	. = ..()
 	var/weapons = list("Bastard Sword","Flail","Mace","Battle Axe")
 	switch(H.patron?.type)
-		if(/datum/patron/divine/aeternus) //Unique patron weapons, more can be added here if wanted.
+		if(/datum/patron/light/aeternus) //Unique patron weapons, more can be added here if wanted.
 			weapons += "Solar Judgement"
-		if(/datum/patron/divine/zira)
+		if(/datum/patron/light/zira)
 			weapons += "Moonlight Khopesh"
-		if(/datum/patron/divine/tsoridys)
+		if(/datum/patron/light/tsoridys)
 			weapons += "Swift End"
-		if(/datum/patron/divine/malum)
+		if(/datum/patron/light/malum)
 			weapons += "Forgefiend"
-		if(/datum/patron/divine/dendor)
+		if(/datum/patron/light/dendor)
 			weapons += "Summer Scythe"
-		if(/datum/patron/divine/xylix)
+		if(/datum/patron/light/xylix)
 			weapons += "Cackle Lash"
-		if(/datum/patron/divine/carthus)
+		if(/datum/patron/light/carthus)
 			weapons += "Duel Settler"
-		if(/datum/patron/divine/eora)
+		if(/datum/patron/light/eora)
 			weapons += "The Heartstring"
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)

@@ -60,21 +60,21 @@
 			if (CLERIC_REQ_4)
 				our_faith.passive_devotion_gain += 1
 	switch(recipient.patron?.type)
-		if(/datum/patron/divine/aeternus)
+		if(/datum/patron/light/aeternus)
 			recipient.mind?.special_items["Astrata Psycross"] = /obj/item/clothing/neck/roguetown/psicross/astrata
-		if(/datum/patron/divine/cinella)
+		if(/datum/patron/light/cinella)
 			recipient.mind?.special_items["Abyssor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/abyssor
-		if(/datum/patron/divine/dendor)
+		if(/datum/patron/light/dendor)
 			recipient.mind?.special_items["Dendor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/dendor
-		if(/datum/patron/divine/tsoridys)
+		if(/datum/patron/light/tsoridys)
 			recipient.mind?.special_items["Necra Psycross"] = /obj/item/clothing/neck/roguetown/psicross/necra
-		if(/datum/patron/divine/eora) 
+		if(/datum/patron/light/eora) 
 			recipient.mind?.special_items["Eora Psycross"] = /obj/item/clothing/neck/roguetown/psicross/eora
-		if(/datum/patron/divine/zira)
+		if(/datum/patron/light/zira)
 			recipient.mind?.special_items["Noc Psycross"] = /obj/item/clothing/neck/roguetown/psicross/noc
-		if(/datum/patron/divine/carthus)
+		if(/datum/patron/light/carthus)
 			recipient.mind?.special_items["Ravox Psycross"] =/obj/item/clothing/neck/roguetown/psicross/ravox
-		if(/datum/patron/divine/malum)
+		if(/datum/patron/light/malum)
 			recipient.mind?.special_items["Malum Psycross"] = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/old_god)
 			recipient.mind?.special_items["Psydon Psycross"] = /obj/item/clothing/neck/roguetown/psicross

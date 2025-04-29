@@ -1,6 +1,6 @@
 /datum/patron/inhumen
 	name = null
-	associated_faith = /datum/faith/inhumen
+	associated_faith = /datum/faith/order
 	undead_hater = FALSE
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 	confess_lines = list(

@@ -17,23 +17,23 @@
 			ritechoices+="Rune of ZIZO" 
 		if(/datum/patron/inhumen/matthios)
 			ritechoices+="Rune of Transaction" 
-		if(/datum/patron/divine/aeternus)
+		if(/datum/patron/light/aeternus)
 			ritechoices+="Rune of Sun"
-		if(/datum/patron/divine/zira)
+		if(/datum/patron/light/zira)
 			ritechoices+="Rune of Moon"
-		if(/datum/patron/divine/dendor)
+		if(/datum/patron/light/dendor)
 			ritechoices+="Rune of Beasts"
-		if(/datum/patron/divine/malum)
+		if(/datum/patron/light/malum)
 			ritechoices+="Rune of Forge"
-		if(/datum/patron/divine/xylix)
+		if(/datum/patron/light/xylix)
 			ritechoices+="Rune of Trickery"
-		if(/datum/patron/divine/tsoridys)
+		if(/datum/patron/light/tsoridys)
 			ritechoices+="Rune of Death"
-		if(/datum/patron/divine/eora)
+		if(/datum/patron/light/eora)
 			ritechoices+="Rune of Love"
-		if(/datum/patron/divine/carthus)
+		if(/datum/patron/light/carthus)
 			ritechoices+="Rune of War"
-		if(/datum/patron/divine/cinella)
+		if(/datum/patron/light/cinella)
 			ritechoices+="Rune of Storm"
 
 	var/runeselection = input(user, "Which rune shall I inscribe?", src) as null|anything in ritechoices
