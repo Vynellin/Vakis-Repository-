@@ -32,7 +32,7 @@
 	/obj/item/rogueweapon/surgery/retractor,
 	/obj/item/rogueweapon/surgery/bonesetter,
 	/obj/item/rogueweapon/surgery/cautery,
-	/obj/item/needle/pestra //Gets the special needle!
+	/obj/item/needle/infinite //Gets the special needle!
 	)
 
 /obj/item/storage/belt/rogue/pouch/medicine

@@ -110,29 +110,9 @@
 		"RAVOX IS JUSTICE!",
 		"ALL SOULS FIND THEIR WAY TO NECRA!",
 		"HAHAHAHA! AHAHAHA! HAHAHAHA!",
-		"PESTRA SOOTHES ALL ILLS!",
 		"MALUM IS MY MUSE!",
 		"EORA BRINGS US TOGETHER!",
 	)
-
-/*
-/datum/patron/divine/pestra
-	name = "Pestra"
-	domain = "Goddess of Decay, Disease and Medicine"
-	desc = "Goddess that blessed many a saint with healing hands, Pestra taught man the arts of medicine and its benefits."
-	worshippers = "The Sick, Phyicians, Apothecaries"
-	mob_traits = list(TRAIT_EMPATH, TRAIT_ROT_EATER)
-	t0 = /obj/effect/proc_holder/spell/invoked/diagnose
-	t1 = /obj/effect/proc_holder/spell/invoked/lesser_heal
-	t2 = /obj/effect/proc_holder/spell/invoked/heal
-	t3 = /obj/effect/proc_holder/spell/invoked/attach_bodypart
-	t4 = /obj/effect/proc_holder/spell/invoked/cure_rot
-	confess_lines = list(
-		"PESTRA SOOTHES ALL ILLS!",
-		"DECAY IS A CONTINUATION OF LIFE!",
-		"MY AFFLICTION IS MY TESTAMENT!",
-	)
-*/
 
 /datum/patron/divine/malum
 	name = "Placeholder Name"

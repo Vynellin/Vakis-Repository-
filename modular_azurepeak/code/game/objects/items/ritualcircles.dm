@@ -106,55 +106,6 @@
 	name = "Rune of the Warrior"
 	desc = "A Holy Rune of Ravox"
 
-/obj/structure/ritualcircle/pestra
-	name = "Rune of Plague"
-	desc = "A Holy Rune of Pestra"
-	icon_state = "pestra_chalky"
-	var/plaguerites = list("Flylord's Triage")
-
-
-/obj/structure/ritualcircle/pestra/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/divine/pestra)
-		to_chat(user,span_smallred("I don't know the proper rites for this..."))
-		return
-	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
-		to_chat(user,span_smallred("I don't know the proper rites for this..."))
-		return
-	if(user.has_status_effect(/datum/status_effect/debuff/ritesexpended))
-		to_chat(user,span_smallred("I have performed enough rituals for the day... I must rest before communing more."))
-		return
-	var/riteselection = input(user, "Rituals of Plague", src) as null|anything in plaguerites
-	switch(riteselection) // put ur rite selection here
-		if("Flylord's Triage")
-			if(do_after(user, 50))
-				user.say("Buboes, phlegm, blood and guts!!")
-				if(do_after(user, 50))
-					user.say("Boils, bogeys, rots and pus!!")
-					if(do_after(user, 50))
-						user.say("Blisters, fevers, weeping sores!!")
-						to_chat(user,span_danger("You feel something crawling up your throat, humming and scratching..."))
-						if(do_after(user, 30))
-							icon_state = "pestra_active"
-							user.say("From your wounds, the fester pours!!")
-							to_chat(user,span_cultsmall("My devotion to the Plague Queen allowing, her servants crawl up from my throat. Come now, father fly..."))
-							loc.visible_message(span_warning("[user] opens their mouth, disgorging a great swarm of flies!"))
-							playsound(loc, 'sound/misc/fliesloop.ogg', 100, FALSE, -1)
-							flylordstriage(src)
-							user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
-							spawn(120)
-								icon_state = "pestra_chalky"
-
-/obj/structure/ritualcircle/pestra/proc/flylordstriage(src)
-	var/ritualtargets = view(0, loc)
-	for(var/mob/living/carbon/human/target in ritualtargets)
-		to_chat(target,span_userdanger("You feel them crawling into your wounds and pores. Their horrific hum rings through your ears as they do their work!"))
-		target.flash_fullscreen("redflash3")
-		target.emote("agony")
-		target.Stun(200)
-		target.Knockdown(200)
-		to_chat(target, span_userdanger("UNIMAGINABLE PAIN!"))
-		target.apply_status_effect(/datum/status_effect/buff/flylordstriage)
-
 /obj/structure/ritualcircle/dendor
 	name = "Rune of Beasts"
 	desc = "A Holy Rune of Dendor"

@@ -18497,8 +18497,6 @@
 /area/rogue/indoors/town/physician)
 "mWR" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
 /obj/item/clothing/neck/roguetown/psicross/noc,
 /obj/item/clothing/neck/roguetown/psicross/noc,
 /obj/item/clothing/neck/roguetown/psicross/necra,
@@ -26535,8 +26533,6 @@
 /obj/item/clothing/cloak/templar/malumite,
 /obj/item/clothing/cloak/templar/astratan,
 /obj/item/clothing/cloak/templar/astratan,
-/obj/item/clothing/cloak/templar/pestran,
-/obj/item/clothing/cloak/templar/pestran,
 /obj/item/clothing/cloak/templar/necran,
 /obj/item/clothing/cloak/templar/necran,
 /obj/item/clothing/cloak/templar/eoran,

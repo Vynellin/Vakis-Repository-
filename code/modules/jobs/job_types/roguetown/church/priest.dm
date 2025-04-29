@@ -42,7 +42,7 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/priest
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
-		/obj/item/needle/pestra = 1,
+		/obj/item/needle/infinite = 1,
 		/obj/item/natural/worms/leech/cheele = 1, //little buddy
 		/obj/item/ritechalk,
 	)

@@ -5954,7 +5954,6 @@
 /area/rogue/indoors/cave)
 "MR" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},

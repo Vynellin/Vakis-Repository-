@@ -64,9 +64,6 @@
 		if(/datum/patron/divine/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 			cloak = /obj/item/clothing/cloak/templar/necran
-		if(/datum/patron/divine/pestra)
-			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
-			cloak = /obj/item/clothing/cloak/templar/pestran
 		if(/datum/patron/divine/eora) //Eora content from stonekeep
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
@@ -87,7 +84,6 @@
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/necra,
-			/obj/item/clothing/neck/roguetown/psicross/pestra,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
 			/obj/item/clothing/neck/roguetown/psicross/malum,
 			/obj/item/clothing/neck/roguetown/psicross/eora,
@@ -111,11 +107,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/divine/pestra)
-			H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 1, TRUE)
-			ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 		if(H.patron?.type == /datum/patron/divine/malum)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
@@ -182,10 +173,6 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/necra
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/necran
 			cloak = /obj/item/clothing/cloak/templar/necran
-		if(/datum/patron/divine/pestra)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/pestra
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/pestran
-			cloak = /obj/item/clothing/cloak/templar/pestran
 		if(/datum/patron/divine/eora) //Eora content from stonekeep
 			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
@@ -227,11 +214,6 @@
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/divine/pestra)
-			H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 1, TRUE)
-			ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 		if(H.patron?.type == /datum/patron/divine/malum)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
@@ -261,8 +243,6 @@
 			weapons += "Moonlight Khopesh"
 		if(/datum/patron/divine/tsoridys)
 			weapons += "Swift End"
-		if(/datum/patron/divine/pestra)
-			weapons += "Plaguebringer Sickles"
 		if(/datum/patron/divine/malum)
 			weapons += "Forgefiend"
 		if(/datum/patron/divine/dendor)
@@ -296,10 +276,6 @@
 		if("Swift End")
 			H.put_in_hands(new /obj/item/rogueweapon/flail/sflail/necraflail(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
-		if("Plaguebringer Sickles")
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/steel/pestrasickle(H), TRUE)
-			H.put_in_hands(new /obj/item/rogueweapon/huntingknife/idagger/steel/pestrasickle(H), TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE) // actually makes them usable for the templar.
 		if("Forgefiend")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/long/malumflamm(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)

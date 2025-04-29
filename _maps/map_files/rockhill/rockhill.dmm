@@ -1603,8 +1603,6 @@
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
-/obj/item/clothing/neck/roguetown/psicross/pestra,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church/chapel)
 "aIh" = (

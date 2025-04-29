@@ -6,7 +6,7 @@
 
 /datum/statpack/agile/hardy
 	name = "Hardy"
-	desc = "Uniquely Pestran fortitude affords you the means to shrug off illnesses and poisons that others might not."
+	desc = "Your \"unique\" fortitude affords you the means to shrug off illnesses and poisons that others might not."
 	stat_array = list(STAT_CONSTITUTION = 2, STAT_ENDURANCE = 1, STAT_STRENGTH = -1, STAT_SPEED = -1)
 
 /datum/statpack/agile/tricky

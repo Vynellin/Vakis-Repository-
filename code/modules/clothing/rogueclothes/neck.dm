@@ -286,11 +286,6 @@
 	desc = ""
 	icon_state = "necra"
 
-/obj/item/clothing/neck/roguetown/psicross/pestra
-	name = "amulet of Pestra"
-	desc = ""
-	icon_state = "pestra"
-
 /obj/item/clothing/neck/roguetown/psicross/ravox
 	name = "amulet of Ravox"
 	desc = ""

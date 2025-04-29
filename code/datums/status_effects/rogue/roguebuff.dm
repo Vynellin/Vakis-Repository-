@@ -556,52 +556,6 @@
 	REMOVE_TRAIT(owner, TRAIT_DARKVISION, MAGIC_TRAIT)
 
 
-
-
-/atom/movable/screen/alert/status_effect/buff/flylordstriage
-	name = "Flylord's Triage"
-	desc = "Pestra's servants crawl through my pores and wounds!"
-	icon_state = "buff"
-
-/datum/status_effect/buff/flylordstriage
-	id = "healing"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/healing
-	duration = 20 SECONDS
-	var/healing_on_tick = 40
-
-/datum/status_effect/buff/flylordstriage/tick()
-	playsound(owner, 'sound/misc/fliesloop.ogg', 100, FALSE, -1)
-	owner.flash_fullscreen("redflash3")
-	owner.emote("agony")
-	new /obj/effect/temp_visual/flies(get_turf(owner))
-	var/list/wCount = owner.get_wounds()
-	if(owner.blood_volume < BLOOD_VOLUME_NORMAL)
-		owner.blood_volume = min(owner.blood_volume+100, BLOOD_VOLUME_NORMAL)
-	if(wCount.len > 0)
-		owner.heal_wounds(healing_on_tick)
-		owner.update_damage_overlays()
-	owner.adjustBruteLoss(-healing_on_tick, 0)
-	owner.adjustFireLoss(-healing_on_tick, 0)
-	owner.adjustOxyLoss(-healing_on_tick, 0)
-	owner.adjustToxLoss(-healing_on_tick, 0)
-	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing_on_tick)
-	owner.adjustCloneLoss(-healing_on_tick, 0)
-
-/obj/effect/temp_visual/flies
-	name = "Flylord's triage"
-	icon_state = "flies"
-	duration = 15
-	plane = GAME_PLANE_UPPER
-	layer = ABOVE_ALL_MOB_LAYER
-	icon = 'icons/roguetown/mob/rotten.dmi'
-	icon_state = "rotten"
-
-
-/datum/status_effect/buff/flylordstriage/on_remove()
-	to_chat(owner,span_userdanger("It's finally over..."))
-
-
-
 /atom/movable/screen/alert/status_effect/buff/undermaidenbargain
 	name = "Undermaiden's Bargain"
 	desc = "A horrible deal was struck in my name..."

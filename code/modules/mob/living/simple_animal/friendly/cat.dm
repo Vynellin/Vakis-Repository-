@@ -1,7 +1,7 @@
 //Cat
 /mob/living/simple_animal/pet/cat
 	name = "cat"
-	desc = "A nuisance and a valued, pest-killing companion. Also symbols of the benevolent side of Saint Pestra for their enmity with vermin."
+	desc = "A nuisance and a valued, pest-killing companion."
 	icon = 'icons/mob/pets.dmi'
 	icon_state = "cat2"
 	icon_living = "cat2"

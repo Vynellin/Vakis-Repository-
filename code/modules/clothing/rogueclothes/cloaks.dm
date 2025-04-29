@@ -286,10 +286,6 @@
 	color = "#222223"
 	detail_color = "#CACBC5"
 
-/obj/item/clothing/cloak/tabard/crusader/pestra
-	color = CLOTHING_WHITE
-	detail_color = CLOTHING_GREEN
-
 /obj/item/clothing/cloak/tabard/crusader/noc
 	color = "#2C2231"
 	detail_color = "#9AB0B0"
@@ -1372,20 +1368,6 @@
 	name = "eora tabard"
 	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Eora on it."
 	icon_state = "tabard_eora"
-	alternate_worn_layer = TABARD_LAYER
-	body_parts_covered = CHEST|GROIN
-	boobed = TRUE
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleevetype = "shirt"
-	nodismemsleeves = TRUE
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	flags_inv = HIDECROTCH|HIDEBOOB
-
-/obj/item/clothing/cloak/templar/pestra
-	name = "pestra tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Pestra on it."
-	icon_state = "tabard_pestra"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
 	boobed = TRUE

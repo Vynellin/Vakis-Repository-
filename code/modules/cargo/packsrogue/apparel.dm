@@ -74,12 +74,6 @@
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/ravox,)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonpestra
-	name = "Pestran Amulet"
-	cost = 10
-	contains = list(
-					/obj/item/clothing/neck/roguetown/psicross/pestra,)
-
 /datum/supply_pack/rogue/apparel/crosses/divinepantheonnecra
 	name = "Necran Amulet"
 	cost = 10

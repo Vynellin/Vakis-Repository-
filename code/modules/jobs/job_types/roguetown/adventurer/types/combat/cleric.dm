@@ -156,9 +156,6 @@
 				if (/datum/patron/divine/xylix)
 					cloak = /obj/item/clothing/cloak/templar/xylix
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-				if (/datum/patron/divine/pestra)
-					cloak = /obj/item/clothing/cloak/templar/pestra
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/pestran
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
@@ -236,8 +233,6 @@
 					cloak = /obj/item/clothing/cloak/templar/ravox
 				if (/datum/patron/divine/xylix)
 					cloak = /obj/item/clothing/cloak/templar/xylix
-				if (/datum/patron/divine/pestra)
-					cloak = /obj/item/clothing/cloak/templar/pestra
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
 			var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman")
@@ -334,8 +329,6 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 		if(/datum/patron/divine/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
-		if(/datum/patron/divine/pestra)
-			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
 		if(/datum/patron/divine/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 		if(/datum/patron/divine/malum)
@@ -355,7 +348,6 @@
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/necra,
-			/obj/item/clothing/neck/roguetown/psicross/pestra,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
 			/obj/item/clothing/neck/roguetown/psicross/malum,
 			/obj/item/clothing/neck/roguetown/psicross/eora

@@ -93,12 +93,6 @@
 				if (prob(50))
 					conditional_buff = TRUE
 					situational_bonus = rand(1, 2.5)
-			if(/datum/patron/divine/pestra)
-				message_out = span_info("An aura of clinical care encompasses [target]!")
-				message_self = span_notice("I'm sewn back together by sacred medicine!")
-				// pestra always heals a little more toxin damage and restores a bit more blood
-				target.adjustToxLoss(-situational_bonus)
-				target.blood_volume += BLOOD_VOLUME_SURVIVE/2
 			if(/datum/patron/divine/malum)
 				message_out = span_info("A tempering heat is discharged out of [target]!")
 				message_self = span_info("I feel the heat of a forge soothing my pains!")

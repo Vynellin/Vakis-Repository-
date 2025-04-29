@@ -5921,8 +5921,6 @@
 /area/rogue/outdoors/mountains/decap)
 "czt" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
 /obj/item/clothing/neck/roguetown/psicross/noc,
 /obj/item/clothing/neck/roguetown/psicross/noc,
 /obj/item/clothing/neck/roguetown/psicross/necra,
@@ -19967,7 +19965,6 @@
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "ipy" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -26938,8 +26935,6 @@
 /obj/item/clothing/cloak/templar/malumite,
 /obj/item/clothing/cloak/templar/astratan,
 /obj/item/clothing/cloak/templar/astratan,
-/obj/item/clothing/cloak/templar/pestran,
-/obj/item/clothing/cloak/templar/pestran,
 /obj/item/clothing/cloak/templar/necran,
 /obj/item/clothing/cloak/templar/necran,
 /turf/open/floor/rogue/ruinedwood{

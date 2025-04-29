@@ -218,14 +218,6 @@
 	max_integrity = 200
 	icon_state = "gsdagger"
 
-
-/obj/item/rogueweapon/huntingknife/idagger/steel/pestrasickle
-	name ="plaguebringer sickle"
-	desc = "A wicked edge brings feculent delights."
-	icon_state = "pestrasickle"
-	max_integrity = 200
-
-
 /obj/item/rogueweapon/huntingknife/idagger/dtace
 	name = "'De Tace'"
 	desc = "The right hand of the right hand, this narrow length of steel serves as a quick solution to petty greviences."
