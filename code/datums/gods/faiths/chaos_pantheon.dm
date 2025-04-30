@@ -4,4 +4,4 @@
 		Zira's flock have lost sight of this in their pursuit of stability - Cinella's flux, in the waves of the sea, shall guide us \
 		towards a better tomorrow - no matter how many tribulations along the way."
 	worshippers = "Scholars, Dreamers, Commonfolk."
-	godhead = /datum/patron/old_god
+	godhead = /datum/patron/chaos/cinella
