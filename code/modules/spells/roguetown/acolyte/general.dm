@@ -143,15 +143,6 @@
 				if (HAS_TRAIT(target, TRAIT_COMMIE))
 					conditional_buff = TRUE
 					situational_bonus = 2.5
-			if(/datum/patron/inhumen/baotha)
-				message_out = span_info("Hedonistic impulses and emotions throb all about from [target].")
-				message_self = span_notice("An intoxicating rush of narcotic delight wipes away my pains!")
-				// i wanted to do something with pain here but it doesn't seem like pain is actually parameterized anywhere so... better necra it is - if they're below 50% health, they get 25 extra healing
-				if (iscarbon(target))
-					var/mob/living/carbon/C = target
-					if (C.health <= (C.maxHealth * 0.5))
-						conditional_buff = TRUE
-						situational_bonus = 2.5
 			if(/datum/patron/godless)
 				message_out = span_info("Without any particular cause or reason, [target] is healed!")
 				message_self = span_notice("My wounds close without cause.")

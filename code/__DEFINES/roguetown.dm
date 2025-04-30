@@ -152,9 +152,9 @@
 
 #define ALL_DIVINE_PATRONS list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/dendor, /datum/patron/light/cinella, /datum/patron/light/carthus, /datum/patron/light/tsoridys, /datum/patron/light/xylix, /datum/patron/light/malum, /datum/patron/light/eora)
 
-#define ALL_INHUMEN_PATRONS list(/datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios, /datum/patron/inhumen/baotha)
+#define ALL_INHUMEN_PATRONS list(/datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios)
 
-#define ALL_PATRONS  list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/dendor, /datum/patron/light/cinella, /datum/patron/light/carthus, /datum/patron/light/tsoridys, /datum/patron/light/xylix, /datum/patron/light/malum, /datum/patron/light/eora, /datum/patron/old_god, /datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios, /datum/patron/inhumen/baotha)
+#define ALL_PATRONS  list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/dendor, /datum/patron/light/cinella, /datum/patron/light/carthus, /datum/patron/light/tsoridys, /datum/patron/light/xylix, /datum/patron/light/malum, /datum/patron/light/eora, /datum/patron/old_god, /datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios)
 
 #define PLATEHIT "plate"
 #define CHAINHIT "chain"
