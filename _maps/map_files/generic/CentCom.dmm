@@ -1591,9 +1591,6 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "kJ" = (
-/obj/structure/roguemachine/Hoardmaster{
-	pixel_x = -16
-	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/banditcamp)
 "kR" = (
