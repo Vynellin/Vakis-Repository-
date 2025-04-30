@@ -149,23 +149,6 @@
 	grid_width = 64
 	grid_height = 32
 
-/obj/item/clothing/gloves/roguetown/plate/matthios
-	name = "gilded gauntlets"
-	desc = "Many a man his life hath sold,"
-	icon_state = "matthiosgloves"
-	max_integrity = 500
-
-/obj/item/clothing/gloves/roguetown/plate/matthios/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/gloves/roguetown/plate/matthios/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-
 /obj/item/clothing/gloves/roguetown/grenzelgloves
 	name = "grenzelhoft gloves"
 	desc = ""

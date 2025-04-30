@@ -85,8 +85,6 @@
 		if(HAS_TRAIT(src, TRAIT_WITCH))
 			if(HAS_TRAIT(user, TRAIT_NOBLE) || HAS_TRAIT(user, TRAIT_INQUISITION) || HAS_TRAIT(user, TRAIT_WITCH))
 				. += span_warning("A witch! Their presence brings an unsettling aura.")
-			else if(HAS_TRAIT(user, TRAIT_COMMIE))
-				. += span_notice("A practitioner of the old ways.")
 			else
 				. += span_notice("Something about them seems... different.")
 
@@ -149,12 +147,6 @@
 			if(has_flaw(/datum/charflaw/addiction/sadist) && user.has_flaw(/datum/charflaw/masochist))
 				. += span_secradio("[m1] looking with eyes filled with a desire to inflict pain. So exciting.")
 
-		var/villain_text = get_villain_text(user)
-		if(villain_text)
-			. += villain_text
-		var/heretic_text = get_heretic_text(user)
-		if(heretic_text)
-			. += span_notice(heretic_text)
 		var/inquisition_text = get_inquisition_text(user)
 		if(inquisition_text)
 			. +=span_notice(inquisition_text)
@@ -179,11 +171,6 @@
 					. += span_redtext("[m1] repugnant!")
 				if (THEY_THEM, THEY_THEM_F, IT_ITS)
 					. += span_redtext("[m1] repulsive!")
-
-	if(user != src && HAS_TRAIT(user, TRAIT_MATTHIOS_EYES))
-		var/atom/item = get_most_expensive()
-		if(item)
-			. += span_notice("You get the feeling [m2] most valuable possession is \a [item].")
 
 	var/is_stupid = FALSE
 	var/is_smart = FALSE
@@ -783,37 +770,6 @@
 	if(dat.len)
 		return dat.Join()
 
-/// Returns patron-related examine text for the mob, if any. Can return null.
-/mob/living/proc/get_heretic_text(mob/examiner)
-	var/heretic_text
-	var/seer
-
-	if(HAS_TRAIT(src,TRAIT_DECEIVING_MEEKNESS))
-		return null
-
-	if(HAS_TRAIT(examiner, TRAIT_HERETIC_SEER))
-		seer = TRUE
-	
-	if(HAS_TRAIT(src, TRAIT_COMMIE))
-		if(seer)
-			heretic_text += "Matthiosan."
-			if(HAS_TRAIT(examiner, TRAIT_COMMIE))
-				heretic_text += " To share with. To take with. For all, and us."
-		else if(HAS_TRAIT(examiner, TRAIT_COMMIE))
-			heretic_text += "Comrade!"
-	
-	return heretic_text
-
-/// Same as get_heretic_text, but returns a simple symbol depending on the type of heretic!
-/mob/living/proc/get_heretic_symbol(mob/examiner)
-	var/heretic_text
-	if(HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
-		return
-	if(HAS_TRAIT(src, TRAIT_COMMIE) && HAS_TRAIT(examiner, TRAIT_COMMIE))
-		heretic_text += "♠"
-	
-	return heretic_text
-
 
 // Used for Inquisition tags
 /mob/living/proc/get_inquisition_text(mob/examiner)
@@ -822,22 +778,3 @@
 		inquisition_text += "Fellow Member of the Inquisition"
 
 	return inquisition_text
-
-/// Returns antagonist-related examine text for the mob, if any. Can return null.
-/mob/living/proc/get_villain_text(mob/examiner)
-	var/villain_text
-	if(mind)
-		if(mind.special_role == "Bandit")
-			if(HAS_TRAIT(examiner, TRAIT_COMMIE))
-				villain_text = span_notice("Free man!")
-			/*else
-				villain_text = span_userdanger("BANDIT!")*/
-		if(mind.special_role == "Vampire Lord")
-			var/datum/antagonist/vampirelord/VD = mind.has_antag_datum(/datum/antagonist/vampirelord)
-			if(VD) 
-				if(!VD.disguised)
-					villain_text += span_userdanger("A MONSTER!")
-		if(mind.assigned_role == "Lunatic")
-			villain_text += span_userdanger("LUNATIC!")
-
-	return villain_text

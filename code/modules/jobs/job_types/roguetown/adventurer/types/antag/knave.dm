@@ -1,6 +1,6 @@
 /datum/advclass/knave //sneaky bastards - ranged classes of two flavors archers and rogues
 	name = "Knave"
-	tutorial = "Not all followers of Matthios take by force. Thieves, poachers, and ne'er-do-wells of all forms steal from others from the shadows, long gone before their marks realize their misfortune."
+	tutorial = "Thieves, poachers, and ne'er-do-wells of all forms steal from others from the shadows, long gone before their marks realize their misfortune."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/bandit/knave
@@ -38,7 +38,6 @@
 	mask = /obj/item/clothing/mask/rogue/facemask/steel
 	neck = /obj/item/clothing/neck/roguetown/coif
 	armor = /obj/item/clothing/suit/roguetown/armor/leather
-	id = /obj/item/mattcoin
 	H.change_stat("strength", 1)
 	H.change_stat("constitution", 1)
 	H.change_stat("endurance", 1)

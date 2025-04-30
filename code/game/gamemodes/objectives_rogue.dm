@@ -1,23 +1,3 @@
-/datum/objective/bandit
-	name = "bandit"
-	explanation_text = "Feed valuables to the idol."
-
-/datum/objective/bandit/check_completion()
-	if(SSticker.mode)
-		var/datum/game_mode/chaosmode/C = SSticker.mode
-		if(C.banditcontrib >= C.banditgoal)
-			return TRUE
-
-/datum/objective/bandit/update_explanation_text()
-	..()
-	if(SSticker.mode)
-		var/datum/game_mode/chaosmode/C = SSticker.mode
-		if(C)
-			explanation_text = "Feed [C.banditgoal] mammon to an idol of greed."
-		else
-			explanation_text = "The statuette no longer hungers. You are free, for the time being..."
-
-
 /datum/objective/delf
 	name = "delf"
 	explanation_text = "Feed honeys to the mother."
