@@ -55,10 +55,10 @@
 		if(/datum/patron/light/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 			cloak = /obj/item/clothing/cloak/tabard/crusader/astrata
-		if(/datum/patron/light/cinella)
+		if(/datum/patron/chaos/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			cloak = /obj/item/clothing/cloak/abyssortabard
-		if(/datum/patron/light/dendor)
+		if(/datum/patron/chaos/dendor)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/order/tsoridys)
@@ -132,7 +132,7 @@
 	switch(H.patron?.type)
 		if(/datum/patron/order/eora)
 			weapons += "Close Caress"
-		if(/datum/patron/light/cinella)
+		if(/datum/patron/chaos/cinella)
 			weapons += "Barotrauma"
 
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -161,11 +161,11 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
 			cloak = /obj/item/clothing/cloak/templar/astratan
-		if(/datum/patron/light/cinella)
+		if(/datum/patron/chaos/cinella)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
 			cloak = /obj/item/clothing/cloak/abyssortabard
-		if(/datum/patron/light/dendor)
+		if(/datum/patron/chaos/dendor)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
@@ -189,9 +189,6 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/malum
 			cloak = /obj/item/clothing/cloak/templar/malumite
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
-		if(/datum/patron/old_god)
-			wrists = /obj/item/clothing/neck/roguetown/psicross
-			cloak = /obj/item/clothing/cloak/tabard/crusader/psydon
 	backr = /obj/item/rogueweapon/shield/tower/metal
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
@@ -245,9 +242,9 @@
 			weapons += "Swift End"
 		if(/datum/patron/order/malum)
 			weapons += "Forgefiend"
-		if(/datum/patron/light/dendor)
+		if(/datum/patron/chaos/dendor)
 			weapons += "Summer Scythe"
-		if(/datum/patron/light/xylix)
+		if(/datum/patron/chaos/xylix)
 			weapons += "Cackle Lash"
 		if(/datum/patron/order/carthus)
 			weapons += "Duel Settler"

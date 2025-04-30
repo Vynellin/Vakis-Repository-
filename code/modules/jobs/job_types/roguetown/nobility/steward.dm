@@ -7,7 +7,7 @@
 	spawn_positions = 1
 
 	allowed_races = RACES_NO_CONSTRUCT
-	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/zira, /datum/patron/light/dendor, /datum/patron/light/cinella, /datum/patron/order/carthus, /datum/patron/order/tsoridys, /datum/patron/light/xylix, /datum/patron/order/malum, /datum/patron/order/eora, /datum/patron/old_god, /datum/patron/order/zizo, /datum/patron/order/graggar)
+	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/zira, /datum/patron/chaos/dendor, /datum/patron/chaos/cinella, /datum/patron/order/carthus, /datum/patron/order/tsoridys, /datum/patron/chaos/xylix, /datum/patron/order/malum, /datum/patron/order/eora, /datum/patron/old_god, /datum/patron/order/zizo, /datum/patron/order/graggar)
 	allowed_sexes = list(MALE, FEMALE)
 	display_order = JDO_STEWARD
 	tutorial = "Coin, Coin, Coin! Oh beautiful coin: You're addicted to it, and you hold the position as the Grand Duke's personal treasurer of both coin and information. You know the power silver and gold has on a man's mortal soul, and you know just what lengths they'll go to in order to get even more. Keep your festering economy alive- for it is the only thing you can weigh any trust into anymore."

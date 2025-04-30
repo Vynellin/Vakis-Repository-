@@ -62,9 +62,9 @@
 	switch(recipient.patron?.type)
 		if(/datum/patron/light/aeternus)
 			recipient.mind?.special_items["Astrata Psycross"] = /obj/item/clothing/neck/roguetown/psicross/astrata
-		if(/datum/patron/light/cinella)
+		if(/datum/patron/chaos/cinella)
 			recipient.mind?.special_items["Abyssor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/abyssor
-		if(/datum/patron/light/dendor)
+		if(/datum/patron/chaos/dendor)
 			recipient.mind?.special_items["Dendor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/dendor
 		if(/datum/patron/order/tsoridys)
 			recipient.mind?.special_items["Necra Psycross"] = /obj/item/clothing/neck/roguetown/psicross/necra
@@ -76,8 +76,6 @@
 			recipient.mind?.special_items["Ravox Psycross"] =/obj/item/clothing/neck/roguetown/psicross/ravox
 		if(/datum/patron/order/malum)
 			recipient.mind?.special_items["Malum Psycross"] = /obj/item/clothing/neck/roguetown/psicross/malum
-		if(/datum/patron/old_god)
-			recipient.mind?.special_items["Psydon Psycross"] = /obj/item/clothing/neck/roguetown/psicross
 
 /datum/virtue/combat/duelist
 	name = "Duelist Apprentice"

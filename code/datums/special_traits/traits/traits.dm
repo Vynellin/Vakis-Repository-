@@ -315,7 +315,7 @@
 	name = "Fortune's Grace"
 	greet_text = span_notice("Xylix favor me, I am extremely lucky.")
 	req_text = "Have Xylix as your Patron"
-	allowed_patrons = list(/datum/patron/light/xylix)
+	allowed_patrons = list(/datum/patron/chaos/xylix)
 	weight = 7
 
 /datum/special_trait/lucky/on_apply(mob/living/carbon/human/character, silent)

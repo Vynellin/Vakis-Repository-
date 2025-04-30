@@ -16,9 +16,6 @@
 		if(istype(target.patron, /datum/patron/order))
 			target.apply_status_effect(/datum/status_effect/buff/call_to_slaughter)	//Buffs inhumens
 			return
-		if(istype(target.patron, /datum/patron/old_god))
-			to_chat(target, span_danger("You feel a surge of cold wash over you; leaving your body as quick as it hit.."))	//No effect on Psydonians!
-			return
 		if(!user.faction_check_mob(target))
 			continue
 		if(target.mob_biotypes & MOB_UNDEAD)

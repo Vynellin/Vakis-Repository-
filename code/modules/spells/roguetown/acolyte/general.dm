@@ -31,9 +31,6 @@
 		var/message_self
 		//this if chain is stupid, replace with variables on /datum/patron when possible?
 		switch(user.patron.type)
-			if(/datum/patron/old_god)
-				message_out = span_info("A strange stirring feeling pours from [target]!")
-				message_self = span_info("Sentimental thoughts drive away my pains!")
 			if(/datum/patron/light/aeternus)
 				message_out = span_info("A wreath of gentle light passes over [target]!")
 				message_self = ("I'm bathed in holy light!")
@@ -48,7 +45,7 @@
 				// during the night, heal 1 more (i wish this was more interesting but they're twins so whatever)
 				if (GLOB.tod == "night")
 					conditional_buff = TRUE
-			if(/datum/patron/light/dendor)
+			if(/datum/patron/chaos/dendor)
 				message_out = span_info("A rush of primal energy spirals about [target]!")
 				message_self = span_notice("I'm infused with primal energies!")
 				var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
@@ -62,7 +59,7 @@
 				// Healing before the oaken avatar of Dendor in the Druid Grove (exceptionally rare otherwise) supercharges their healing
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
-			if(/datum/patron/light/cinella)
+			if(/datum/patron/chaos/cinella)
 				message_out = span_info("A mist of salt-scented vapour settles on [target]!")
 				message_self = span_notice("I'm invigorated by healing vapours!")
 				// if our target is standing in water, heal a flat amount extra
@@ -86,7 +83,7 @@
 					if (C.health <= (C.maxHealth * 0.25))
 						conditional_buff = TRUE
 						situational_bonus = 2.5
-			if(/datum/patron/light/xylix)
+			if(/datum/patron/chaos/xylix)
 				message_out = span_info("A fugue seems to manifest briefly across [target]!")
 				message_self = span_notice("My wounds vanish as if they had never been there! ")
 				// half of the time, heal a little (or a lot) more - flip the coin

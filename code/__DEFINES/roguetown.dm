@@ -153,21 +153,20 @@
 	)
 
 #define ALL_CHAOS_PATRONS list(\
-	/datum/patron/light/dendor, \
-	/datum/patron/light/cinella, \
-	/datum/patron/light/xylix, \
+	/datum/patron/chaos/dendor, \
+	/datum/patron/chaos/cinella, \
+	/datum/patron/chaos/xylix, \
 	)
 
 #define ALL_PATRONS  list(\
 	/datum/patron/light/aeternus, \
-	/datum/patron/order/zira, \
-	/datum/patron/light/dendor, \
-	/datum/patron/light/cinella, \
-	/datum/patron/order/carthus, \
 	/datum/patron/order/tsoridys, \
-	/datum/patron/light/xylix, \
 	/datum/patron/order/malum, \
+	/datum/patron/order/carthus, \
 	/datum/patron/order/eora, \
+	/datum/patron/chaos/dendor, \
+	/datum/patron/chaos/cinella, \
+	/datum/patron/chaos/xylix, \
 	)
 
 #define PLATEHIT "plate"

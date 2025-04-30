@@ -20,7 +20,7 @@
 	..()
 
 	// Add druidic skill for Dendor followers
-	if(istype(H.patron, /datum/patron/light/dendor))
+	if(istype(H.patron, /datum/patron/chaos/dendor))
 		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE)
 		to_chat(H, span_notice("As a follower of Dendor, you have innate knowledge of druidic magic."))
 
@@ -64,19 +64,16 @@
 				if("MY BARE HANDS!!!")
 					ADD_TRAIT(H, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					cloak = /obj/item/clothing/cloak/psydontabard
-					head = /obj/item/clothing/head/roguetown/roguehood/psydon
 				if(/datum/patron/light/aeternus)
 					head = /obj/item/clothing/head/roguetown/roguehood/astrata
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 				if(/datum/patron/order/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
-				if(/datum/patron/light/cinella)
+				if(/datum/patron/chaos/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-				if(/datum/patron/light/dendor)
+				if(/datum/patron/chaos/dendor)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 				if(/datum/patron/order/tsoridys)
@@ -125,20 +122,16 @@
 			H.cmode_music = 'sound/music/combat_holy.ogg'
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					armor = /obj/item/clothing/suit/roguetown/armor/plate/half/fluted
-					cloak = /obj/item/clothing/cloak/psydontabard
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm
 				if(/datum/patron/light/aeternus)
 					cloak = /obj/item/clothing/cloak/templar/astrata
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
 				if(/datum/patron/order/zira)
 					cloak = /obj/item/clothing/cloak/templar/noc
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
-				if(/datum/patron/light/cinella)
+				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-				if(/datum/patron/light/dendor)
+				if(/datum/patron/chaos/dendor)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 				if(/datum/patron/order/tsoridys)
@@ -153,7 +146,7 @@
 				if (/datum/patron/order/carthus)
 					cloak = /obj/item/clothing/cloak/templar/ravox
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
-				if (/datum/patron/light/xylix)
+				if (/datum/patron/chaos/xylix)
 					cloak = /obj/item/clothing/cloak/templar/xylix
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 				else
@@ -213,15 +206,13 @@
 			H.change_stat("speed", 2)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					cloak = /obj/item/clothing/cloak/templar/psydon
 				if(/datum/patron/light/aeternus)
 					cloak = /obj/item/clothing/cloak/templar/astrata
 				if(/datum/patron/order/zira)
 					cloak = /obj/item/clothing/cloak/templar/noc
-				if(/datum/patron/light/cinella)
+				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
-				if(/datum/patron/light/dendor)
+				if(/datum/patron/chaos/dendor)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 				if(/datum/patron/order/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/necra
@@ -231,7 +222,7 @@
 					cloak = /obj/item/clothing/cloak/templar/eora
 				if (/datum/patron/order/carthus)
 					cloak = /obj/item/clothing/cloak/templar/ravox
-				if (/datum/patron/light/xylix)
+				if (/datum/patron/chaos/xylix)
 					cloak = /obj/item/clothing/cloak/templar/xylix
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
@@ -280,19 +271,16 @@
 			H.change_stat("perception", 2)
 			H.change_stat("speed", 1)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					cloak = /obj/item/clothing/cloak/psydontabard
-					head = /obj/item/clothing/head/roguetown/roguehood/psydon
 				if(/datum/patron/light/aeternus)
 					head = /obj/item/clothing/head/roguetown/roguehood/astrata
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 				if(/datum/patron/order/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
-				if(/datum/patron/light/cinella)
+				if(/datum/patron/chaos/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-				if(/datum/patron/light/dendor)
+				if(/datum/patron/chaos/dendor)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 					H.cmode_music = 'sound/music/combat_druid.ogg'
@@ -313,15 +301,13 @@
 			START_PROCESSING(SSobj, C)
 
 	switch(H.patron?.type)
-		if(/datum/patron/old_god)
-			neck = /obj/item/clothing/neck/roguetown/psicross
 		if(/datum/patron/light/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
 		if(/datum/patron/order/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
-		if(/datum/patron/light/cinella)
+		if(/datum/patron/chaos/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
-		if(/datum/patron/light/dendor)
+		if(/datum/patron/chaos/dendor)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 		if(/datum/patron/order/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
@@ -331,7 +317,7 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/order/eora)
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
-		if(/datum/patron/light/xylix) // Random pricross for Xylix
+		if(/datum/patron/chaos/xylix) // Random pricross for Xylix
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/astrata,

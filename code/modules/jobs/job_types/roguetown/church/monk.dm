@@ -25,7 +25,7 @@
 	name = "Acolyte"
 	jobtype = /datum/job/roguetown/monk
 
-	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/eora, /datum/patron/order/zira, /datum/patron/order/tsoridys, /datum/patron/light/cinella, /datum/patron/order/malum, /datum/patron/order/carthus, /datum/patron/light/xylix) // The whole Ten. Probably could delete this now, actually.
+	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/eora, /datum/patron/order/zira, /datum/patron/order/tsoridys, /datum/patron/chaos/cinella, /datum/patron/order/malum, /datum/patron/order/carthus, /datum/patron/chaos/xylix) // The whole Ten. Probably could delete this now, actually.
 
 
 /datum/outfit/job/roguetown/monk/pre_equip(mob/living/carbon/human/H)
@@ -49,14 +49,14 @@
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/noc
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-		if(/datum/patron/light/cinella) // the deep calls!
+		if(/datum/patron/chaos/cinella) // the deep calls!
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			pants = /obj/item/clothing/under/roguetown/tights
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
 			head = /obj/item/clothing/head/roguetown/roguehood/abyssor		
-		if(/datum/patron/light/dendor) //Dendorites all busted. Play Druid.
+		if(/datum/patron/chaos/dendor) //Dendorites all busted. Play Druid.
 			head = /obj/item/clothing/head/roguetown/dendormask
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
@@ -89,7 +89,7 @@
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/white
-		if(/datum/patron/light/xylix)
+		if(/datum/patron/chaos/xylix)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/templar/xylix
@@ -145,7 +145,7 @@
 			ADD_TRAIT(H, TRAIT_SOUL_EXAMINE, TRAIT_GENERIC)
 		if(H.patron?.type == /datum/patron/order/eora)
 			ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/light/cinella)
+		if(H.patron?.type == /datum/patron/chaos/cinella)
 			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 3, TRUE)
 			ADD_TRAIT(H, TRAIT_WATERBREATHING, TRAIT_GENERIC)
 
