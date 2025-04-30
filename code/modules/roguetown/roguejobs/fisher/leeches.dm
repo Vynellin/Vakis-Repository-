@@ -213,7 +213,6 @@
 		"dumb" = 2,
 		"demonic" = 1,
 		"graggoid" = 1,
-		"zizoid" = 1,
 	)
 	var/static/list/all_descs = list(
 		"What a disgusting creature." = 10,

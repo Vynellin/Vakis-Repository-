@@ -66,7 +66,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 				return TRUE
 		else
 			if(!SSvote.mode && SSticker.autovote)
-				SSvote.initiate_vote("endround", pick("Psydon", "Zizo"))
+				SSvote.initiate_vote("endround", pick("Psydon"))
 
 	if(headrebdecree)
 		return TRUE

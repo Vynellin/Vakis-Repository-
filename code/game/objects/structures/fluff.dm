@@ -810,13 +810,13 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fluff/wallclock/vampire, 32)
 	M.Scale(0.7,0.7)
 	src.transform = M
 
-/obj/structure/fluff/statue/femalestatue/zizo
+/obj/structure/fluff/statue/femalestatue/bared
 	icon = 'icons/roguetown/misc/ay.dmi'
 	icon_state = "4"
 	pixel_x = -32
 	pixel_y = -16
 
-/obj/structure/fluff/statue/femalestatue/zizo/Initialize()
+/obj/structure/fluff/statue/femalestatue/bared/Initialize()
 	. = ..()
 	var/matrix/M = new
 	M.Scale(0.7,0.7)

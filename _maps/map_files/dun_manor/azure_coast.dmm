@@ -6192,7 +6192,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/cave)
 "Ox" = (
-/obj/structure/fluff/statue/femalestatue/zizo{
+/obj/structure/fluff/statue/femalestatue/bared{
 	name = "savior";
 	desc = "An inscription reads: She who split that which was one into that which is many.";
 	pixel_x = -20;

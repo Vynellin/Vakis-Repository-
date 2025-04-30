@@ -709,23 +709,6 @@
 		return
 	qdel(src)
 
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo
-	name = "darksteel fullplate"
-	desc = "Full plate. Called forth from the edge of what should be known. In Her name."
-	icon_state = "zizoplate"
-	max_integrity = 700
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-
 /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
 	name = "fullplate bikini"
 	desc = "Full plate in bikini form, full package and full exposure."

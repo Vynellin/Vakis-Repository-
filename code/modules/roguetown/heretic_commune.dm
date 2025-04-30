@@ -20,7 +20,7 @@
 		verbs -= /mob/living/carbon/human/verb/bad_omen
 		return
 		
-	if(!HAS_TRAIT(src, TRAIT_COMMIE) && !HAS_TRAIT(src, TRAIT_CABAL) && !HAS_TRAIT(src, TRAIT_HORDE))
+	if(!HAS_TRAIT(src, TRAIT_COMMIE) && !HAS_TRAIT(src, TRAIT_HORDE))
 		to_chat(src, span_warning("You have no heretical allegiances to commune with!"))
 		verbs -= /mob/living/carbon/human/verb/commune
 		return
@@ -33,9 +33,6 @@
 	if(HAS_TRAIT(src, TRAIT_COMMIE))
 		echo_message = "raises a fist and mutters revolutionary phrases"
 		span_class = "bloody"
-	else if(HAS_TRAIT(src, TRAIT_CABAL))
-		echo_message = "whispers arcane words into the void"
-		span_class = "revennotice"
 	else if(HAS_TRAIT(src, TRAIT_HORDE))
 		echo_message = "growls primal utterances to unseen forces"
 		span_class = "danger"
@@ -60,7 +57,7 @@
 	for(var/mob/living/carbon/human/heretic in GLOB.player_list)
 		if(!heretic.client || heretic == src)
 			continue
-		if(HAS_TRAIT(heretic, TRAIT_COMMIE) || HAS_TRAIT(heretic, TRAIT_CABAL) || HAS_TRAIT(heretic, TRAIT_HORDE))
+		if(HAS_TRAIT(heretic, TRAIT_COMMIE) || HAS_TRAIT(heretic, TRAIT_HORDE))
 			to_chat(heretic, "<span class='[span_class]'><b>\[Commune\]</b></span>")
 			to_chat(heretic, "<span class='[span_class]' style='font-size: 125%;'><b>[nickname]:</b> [msg]</span>")
 
@@ -102,8 +99,6 @@
 	// Determine the viewer's heretic type
 	if(HAS_TRAIT(src, TRAIT_COMMIE))
 		my_trait = TRAIT_COMMIE
-	else if(HAS_TRAIT(src, TRAIT_CABAL))
-		my_trait = TRAIT_CABAL
 	else if(HAS_TRAIT(src, TRAIT_HORDE))
 		my_trait = TRAIT_HORDE
 	else
@@ -146,7 +141,7 @@
 		verbs -= /mob/living/carbon/human/verb/bad_omen
 		return
 
-	if(!HAS_TRAIT(src, TRAIT_COMMIE) && !HAS_TRAIT(src, TRAIT_CABAL) && !HAS_TRAIT(src, TRAIT_HORDE))
+	if(!HAS_TRAIT(src, TRAIT_COMMIE) && !HAS_TRAIT(src, TRAIT_HORDE))
 		to_chat(src, span_warning("You have no heretical knowledge of dark chants!"))
 		verbs -= /mob/living/carbon/human/verb/bad_omen
 		return
@@ -166,9 +161,9 @@
 	for(var/mob/living/carbon/human/H in view(3, src))
 		if(H == src || !H.chanting)
 			continue
-		if(!H.mind || (!HAS_TRAIT(H, TRAIT_COMMIE) && !HAS_TRAIT(H, TRAIT_CABAL) && !HAS_TRAIT(H, TRAIT_HORDE)))
+		if(!H.mind || (!HAS_TRAIT(H, TRAIT_COMMIE) && !HAS_TRAIT(H, TRAIT_HORDE)))
 			continue
-			
+
 		trigger_omen(src, H)
 		return
 		

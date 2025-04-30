@@ -54,6 +54,7 @@
 	max_integrity = 200 
 	integrity_failure = 0.5
 
+/// SOLARIS NOTE: Longterm these should be redone to actually reflect our religious lore. I'm leaving them as-is rn because I can't sprite for shit
 /obj/structure/roguewindow/stained/silver
 	icon_state = "stained-silver"
 	base_state = "stained-silver"

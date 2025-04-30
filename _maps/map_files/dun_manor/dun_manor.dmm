@@ -12201,7 +12201,7 @@
 	},
 /area/rogue/indoors/town/physician)
 "iJJ" = (
-/obj/structure/fluff/statue/femalestatue/zizo{
+/obj/structure/fluff/statue/femalestatue/bared{
 	desc = "An ancient statue depicting an elven woman.";
 	name = "Ancient Statue";
 	pixel_y = 0

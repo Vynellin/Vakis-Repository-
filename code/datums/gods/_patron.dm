@@ -42,12 +42,8 @@ GLOBAL_LIST_EMPTY(preference_patrons)
 		ADD_TRAIT(pious, trait, "[type]")
 	if(HAS_TRAIT(pious, TRAIT_XYLIX))
 		pious.grant_language(/datum/language/thievescant)
-	if (HAS_TRAIT(pious, TRAIT_CABAL))
-		pious.faction |= "cabal"
 
 /datum/patron/proc/on_loss(mob/living/pious)
-	if (HAS_TRAIT(pious, TRAIT_CABAL))
-		pious.faction -= "cabal"
 	if(HAS_TRAIT(pious, TRAIT_XYLIX))
 		pious.remove_language(/datum/language/thievescant)
 	for(var/trait in mob_traits)

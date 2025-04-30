@@ -216,21 +216,6 @@
 	icon_state = "malumflamberge"
 	max_integrity = 200
 
-/obj/item/rogueweapon/sword/long/zizo
-	name = "darksteel longsword"
-	desc = "A wicked and red blade. Called forth from the edge of what should be known. In Her name."
-	force = 30
-	force_wielded = 35
-	icon_state = "zizosword"
-
-/obj/item/rogueweapon/sword/long/zizo/pickup(mob/living/user)
-	if(!HAS_TRAIT(user, TRAIT_CABAL))
-		to_chat(user, "<font color='purple'>UNWORTHY HANDS TOUCH THE SWORD, CEASE OR BE PUNISHED</font>")
-		user.adjust_fire_stacks(5)
-		user.IgniteMob()
-		user.Stun(40)
-	..()
-
 
 /obj/item/rogueweapon/sword/long/heirloom
 	force = 20

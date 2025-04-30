@@ -90,7 +90,6 @@
 
 // ASCENDANT CULTIST TRAITS (all of them recognize each other)
 #define TRAIT_COMMIE "Blessing of Matthios" //recognized by bandits as an ally
-#define TRAIT_CABAL "Of the Cabal" //Zizo cultists recognize each other too
 #define TRAIT_HORDE "Anointed" //Graggarites also recognize each other
 #define TRAIT_MATTHIOS_EYES	"Eyes of Matthios" //Examine to see the most expensive item someone has (Replaces shitty-appraisal)
 
@@ -219,7 +218,6 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_XYLIX = span_info("I know how to speak in code that only fellow tricksters can understand."),
 	TRAIT_APRICITY = span_info("Astrata's light blesses and rejuvenates me, allowing me to regain my stamina quicker during the dae."),
 	TRAIT_SHARPER_BLADES = span_info("My blades go dull slower, ensuring they stay sharp longer."),
-	TRAIT_CABAL = span_info("In secret, I have studied the ways of Her ascension, and know of others of the Cabal."),
 	TRAIT_HORDE = span_info("BY BLOOD AND BONE, I AM OF GRAGGAR'S ANOINTED! I FEEL THE STRENGTH IN OTHERS WHO ARE THE SAME."),
 	TRAIT_FORTITUDE = span_info("The typical drain I feel from day to day life is lessened, my athleticism greater."),
 	TRAIT_GUIDANCE = span_info("The arcyne aides me in battle."),
@@ -533,7 +531,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /*/mob/living/proc/on_trait_gain(trait, source)
 	SEND_SIGNAL(src, COMSIG_TRAIT_GAIN, trait, source)
 	switch(trait)
-		if(TRAIT_COMMIE, TRAIT_CABAL, TRAIT_HORDE)
+		if(TRAIT_COMMIE, TRAIT_HORDE)
 			if(ishuman(src))
 				var/mob/living/carbon/human/H = src
 				H.update_heretic_commune()
@@ -541,7 +539,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /mob/living/proc/on_trait_loss(trait, source)
 	SEND_SIGNAL(src, COMSIG_TRAIT_LOSS, trait, source)
 	switch(trait)
-		if(TRAIT_COMMIE, TRAIT_CABAL, TRAIT_HORDE)
+		if(TRAIT_COMMIE, TRAIT_HORDE)
 			if(ishuman(src))
 				var/mob/living/carbon/human/H = src
 				H.update_heretic_commune()*/

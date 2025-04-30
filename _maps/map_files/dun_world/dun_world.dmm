@@ -21056,7 +21056,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
 "iLO" = (
-/obj/structure/fluff/statue/femalestatue/zizo{
+/obj/structure/fluff/statue/femalestatue/bared{
 	name = "savior";
 	desc = "An inscription reads: She who split that which was one into that which is many.";
 	pixel_x = -20;
@@ -34440,7 +34440,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement)
 "ont" = (
-/obj/structure/fluff/statue/femalestatue/zizo{
+/obj/structure/fluff/statue/femalestatue/bared{
 	desc = "An ancient statue depicting an elven woman.";
 	name = "Ancient Statue";
 	pixel_y = 0
