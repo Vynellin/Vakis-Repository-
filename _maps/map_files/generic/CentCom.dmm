@@ -1897,10 +1897,6 @@
 	icon_state = "largetable";
 	dir = 1
 	},
-/obj/item/mattcoin,
-/obj/item/mattcoin,
-/obj/item/mattcoin,
-/obj/item/mattcoin,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/banditcamp)
 "vI" = (
