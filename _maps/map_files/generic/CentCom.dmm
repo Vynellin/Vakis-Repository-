@@ -2829,7 +2829,6 @@
 /area/rogue/indoors)
 "WW" = (
 /obj/structure/rack/rogue,
-/obj/item/coveter,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/banditcamp)
 "Xi" = (
