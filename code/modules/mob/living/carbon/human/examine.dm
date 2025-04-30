@@ -85,7 +85,7 @@
 		if(HAS_TRAIT(src, TRAIT_WITCH))
 			if(HAS_TRAIT(user, TRAIT_NOBLE) || HAS_TRAIT(user, TRAIT_INQUISITION) || HAS_TRAIT(user, TRAIT_WITCH))
 				. += span_warning("A witch! Their presence brings an unsettling aura.")
-			else if(HAS_TRAIT(user, TRAIT_COMMIE) || HAS_TRAIT(user, TRAIT_HORDE))
+			else if(HAS_TRAIT(user, TRAIT_COMMIE))
 				. += span_notice("A practitioner of the old ways.")
 			else
 				. += span_notice("Something about them seems... different.")
@@ -801,13 +801,6 @@
 				heretic_text += " To share with. To take with. For all, and us."
 		else if(HAS_TRAIT(examiner, TRAIT_COMMIE))
 			heretic_text += "Comrade!"
-	else if((HAS_TRAIT(src, TRAIT_HORDE)))
-		if(seer)
-			heretic_text += "Hardened by Graggar's Rituals."
-			if(HAS_TRAIT(examiner, TRAIT_HORDE))
-				heretic_text += " Mine were a glorious memory."
-		else if(HAS_TRAIT(examiner, TRAIT_HORDE))
-			heretic_text += "Anointed!"
 	
 	return heretic_text
 
@@ -817,8 +810,6 @@
 	if(HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
 		return
 	if(HAS_TRAIT(src, TRAIT_COMMIE) && HAS_TRAIT(examiner, TRAIT_COMMIE))
-		heretic_text += "♠"
-	else if(HAS_TRAIT(src, TRAIT_HORDE) && HAS_TRAIT(examiner, TRAIT_HORDE))
 		heretic_text += "♠"
 	
 	return heretic_text

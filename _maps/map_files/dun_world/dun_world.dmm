@@ -24789,7 +24789,7 @@
 /area/rogue/under/underdark)
 "knj" = (
 /obj/structure/wonder{
-	name = "graggarite altar"
+	name = "altar"
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)

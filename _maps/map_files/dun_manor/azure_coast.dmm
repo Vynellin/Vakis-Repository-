@@ -3663,7 +3663,7 @@
 /area/rogue/indoors/cave)
 "xQ" = (
 /obj/structure/wonder{
-	name = "graggarite altar"
+	name = "altar"
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)

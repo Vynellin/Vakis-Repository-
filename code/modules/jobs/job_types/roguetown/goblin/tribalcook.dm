@@ -7,7 +7,6 @@
 	spawn_positions = 0
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list()
-	allowed_patrons = list(/datum/patron/order/graggar)
 	tutorial = "Cook, farm, butcher. Make king happy with apple pies! Don't forget about your brothers."
 
 
