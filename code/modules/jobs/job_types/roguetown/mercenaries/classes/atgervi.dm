@@ -8,7 +8,7 @@
 	traits_applied = list(TRAIT_OUTLANDER)
 
 /datum/outfit/job/roguetown/mercenary/atgervi
-	allowed_patrons = ALL_INHUMEN_PATRONS
+	allowed_patrons = ALL_ORDER_PATRONS
 
 /datum/outfit/job/roguetown/mercenary/atgervi/pre_equip(mob/living/carbon/human/H)
 	..()

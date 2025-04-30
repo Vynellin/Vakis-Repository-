@@ -7,7 +7,7 @@
 	spawn_positions = 6
 
 	allowed_races = RACES_ALL_KINDS
-	allowed_patrons = ALL_DIVINE_PATRONS 
+	allowed_patrons = ALL_CHAOS_PATRONS 
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/job/roguetown/monk
 	tutorial = "Chores, some more chores- Even more chores.. Oh how the life of a humble acolyte is exhausting… You have faith, but even you know you gave up a life of adventure for that of the security in the Church. Assist the Priest in their daily tasks, maybe today will be the day something interesting happens."
@@ -25,7 +25,7 @@
 	name = "Acolyte"
 	jobtype = /datum/job/roguetown/monk
 
-	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/light/eora, /datum/patron/light/zira, /datum/patron/light/tsoridys, /datum/patron/light/cinella, /datum/patron/light/malum, /datum/patron/light/carthus, /datum/patron/light/xylix) // The whole Ten. Probably could delete this now, actually.
+	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/eora, /datum/patron/order/zira, /datum/patron/order/tsoridys, /datum/patron/light/cinella, /datum/patron/order/malum, /datum/patron/order/carthus, /datum/patron/light/xylix) // The whole Ten. Probably could delete this now, actually.
 
 
 /datum/outfit/job/roguetown/monk/pre_equip(mob/living/carbon/human/H)
@@ -42,7 +42,7 @@
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-		if(/datum/patron/light/zira)
+		if(/datum/patron/order/zira)
 			head = /obj/item/clothing/head/roguetown/nochood
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 			wrists = /obj/item/clothing/wrists/roguetown/nocwrappings
@@ -60,7 +60,7 @@
 			head = /obj/item/clothing/head/roguetown/dendormask
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
-		if(/datum/patron/light/tsoridys)
+		if(/datum/patron/order/tsoridys)
 			head = /obj/item/clothing/head/roguetown/necrahood
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 			shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -68,13 +68,13 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/necra
 			shirt = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
 			cloak = /obj/item/clothing/cloak/raincloak/mortus
-		if(/datum/patron/light/eora) //Eora content from Stonekeep
+		if(/datum/patron/order/eora) //Eora content from Stonekeep
 			head = /obj/item/clothing/head/roguetown/eoramask
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/light/malum)
+		if(/datum/patron/order/malum)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 			shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -82,7 +82,7 @@
 			pants = /obj/item/clothing/under/roguetown/trou
 			cloak = /obj/item/clothing/cloak/templar/malumite
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
-		if(/datum/patron/light/carthus)
+		if(/datum/patron/order/carthus)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/templar/ravox
@@ -123,7 +123,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/light/malum)
+		if(H.patron?.type == /datum/patron/order/malum)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)
@@ -140,10 +140,10 @@
 		H.change_stat("endurance", 2)
 		H.change_stat("speed", 1)
 		H.cmode_music = 'sound/music/combat_holy.ogg'
-		if(H.patron?.type == /datum/patron/light/tsoridys)
+		if(H.patron?.type == /datum/patron/order/tsoridys)
 			ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_SOUL_EXAMINE, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/light/eora)
+		if(H.patron?.type == /datum/patron/order/eora)
 			ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 		if(H.patron?.type == /datum/patron/light/cinella)
 			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 3, TRUE)

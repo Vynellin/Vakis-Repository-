@@ -66,15 +66,15 @@
 			recipient.mind?.special_items["Abyssor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/abyssor
 		if(/datum/patron/light/dendor)
 			recipient.mind?.special_items["Dendor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/dendor
-		if(/datum/patron/light/tsoridys)
+		if(/datum/patron/order/tsoridys)
 			recipient.mind?.special_items["Necra Psycross"] = /obj/item/clothing/neck/roguetown/psicross/necra
-		if(/datum/patron/light/eora) 
+		if(/datum/patron/order/eora) 
 			recipient.mind?.special_items["Eora Psycross"] = /obj/item/clothing/neck/roguetown/psicross/eora
-		if(/datum/patron/light/zira)
+		if(/datum/patron/order/zira)
 			recipient.mind?.special_items["Noc Psycross"] = /obj/item/clothing/neck/roguetown/psicross/noc
-		if(/datum/patron/light/carthus)
+		if(/datum/patron/order/carthus)
 			recipient.mind?.special_items["Ravox Psycross"] =/obj/item/clothing/neck/roguetown/psicross/ravox
-		if(/datum/patron/light/malum)
+		if(/datum/patron/order/malum)
 			recipient.mind?.special_items["Malum Psycross"] = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/old_god)
 			recipient.mind?.special_items["Psydon Psycross"] = /obj/item/clothing/neck/roguetown/psicross

@@ -144,17 +144,31 @@
 	/datum/species/demihuman,\
 	/datum/species/construct/metal,\
 )
-#define ALL_CLERIC_PATRONS list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/dendor, /datum/patron/light/tsoridys, /datum/patron/light/carthus, /datum/patron/light/malum, /datum/patron/light/eora) // Currently unused.
 
-#define ALL_PALADIN_PATRONS list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/cinella, /datum/patron/light/dendor, /datum/patron/light/tsoridys, /datum/patron/light/carthus, /datum/patron/light/malum, /datum/patron/light/eora, /datum/patron/light/xylix, /datum/patron/old_god) // Currently unused.
+#define ALL_ORDER_PATRONS list(/datum/patron/order/zira, \
+	/datum/patron/order/tsoridys, \
+	/datum/patron/order/malum, \
+	/datum/patron/order/carthus, \
+	/datum/patron/order/eora, \
+	)
 
-#define ALL_ACOLYTE_PATRONS list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/dendor, /datum/patron/light/carthus, /datum/patron/light/eora, /datum/patron/light/xylix, /datum/patron/light/tsoridys, /datum/patron/light/cinella, /datum/patron/light/malum) // Currently unused.
+#define ALL_CHAOS_PATRONS list(\
+	/datum/patron/light/dendor, \
+	/datum/patron/light/cinella, \
+	/datum/patron/light/xylix, \
+	)
 
-#define ALL_DIVINE_PATRONS list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/dendor, /datum/patron/light/cinella, /datum/patron/light/carthus, /datum/patron/light/tsoridys, /datum/patron/light/xylix, /datum/patron/light/malum, /datum/patron/light/eora)
-
-#define ALL_INHUMEN_PATRONS list(/datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios)
-
-#define ALL_PATRONS  list(/datum/patron/light/aeternus, /datum/patron/light/zira, /datum/patron/light/dendor, /datum/patron/light/cinella, /datum/patron/light/carthus, /datum/patron/light/tsoridys, /datum/patron/light/xylix, /datum/patron/light/malum, /datum/patron/light/eora, /datum/patron/old_god, /datum/patron/inhumen/zizo, /datum/patron/inhumen/graggar, /datum/patron/inhumen/matthios)
+#define ALL_PATRONS  list(\
+	/datum/patron/light/aeternus, \
+	/datum/patron/order/zira, \
+	/datum/patron/light/dendor, \
+	/datum/patron/light/cinella, \
+	/datum/patron/order/carthus, \
+	/datum/patron/order/tsoridys, \
+	/datum/patron/light/xylix, \
+	/datum/patron/order/malum, \
+	/datum/patron/order/eora, \
+	)
 
 #define PLATEHIT "plate"
 #define CHAINHIT "chain"

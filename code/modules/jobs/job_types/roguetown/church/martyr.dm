@@ -118,7 +118,7 @@
 			if(ishuman(M))
 				var/mob/living/carbon/human/H
 				var/type = H.patron?.type
-				if(istype(type, /datum/patron/inhumen))
+				if(istype(type, /datum/patron/order))
 					H.electrocution_animation(20)
 
 //This gives a countdown to the user, it's pretty hacky
@@ -325,7 +325,7 @@
 		M.lightning_flashing = TRUE
 		M.update_sight()
 		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living/carbon, reset_lightning)), 2)
-		if(istype(M.patron, /datum/patron/inhumen))
+		if(istype(M.patron, /datum/patron/order))
 			var/turf/T = get_step(get_step(M, NORTH), NORTH)
 			T.Beam(M, icon_state="lightning[rand(1,12)]", time = 5)
 			M.visible_message(span_warning("[M] gets struck down by the Ten!"), span_warning("The Ten curse you! You stood too close to one of their devout!"))
@@ -426,7 +426,7 @@
 	tutorial = "Martyrs are hand-picked among the most devout of the Holy See. They are given one of the See's cherished relics to protect the Church, and to inspire hope and lead by example of grace, kindness and vicious intolerance to any who do not share the belief of the Ten. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = ALL_CHAOS_PATRONS
 	outfit = /datum/outfit/job/roguetown/martyr
 	min_pq = 10 //Cus it's a Martyr of the Ten. Get it.
 	max_pq = null
@@ -536,7 +536,7 @@
 		else if (H.job in GLOB.church_positions)
 			to_chat(user, span_warning("You feel a jolt of holy energies just for a split second, and then the sword slips from your grasp! You are not devout enough."))
 			return FALSE
-		else if(istype(H.patron, /datum/patron/inhumen)) 
+		else if(istype(H.patron, /datum/patron/order)) 
 			var/datum/component/martyrweapon/marty = GetComponent(/datum/component/martyrweapon)
 			to_chat(user, span_warning("YOU FOOL! IT IS ANATHEMA TO YOU! GET AWAY!"))
 			H.Stun(40)

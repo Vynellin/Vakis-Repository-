@@ -42,7 +42,7 @@
 					conditional_buff = TRUE
 					situational_bonus = 2
 				// Day is 1/4th as long as night. Noc priests get a bonus for four times as long and during peak conflict hours, thus Astratans should have more powerful heals
-			if(/datum/patron/light/zira)
+			if(/datum/patron/order/zira)
 				message_out = span_info("A shroud of soft moonlight falls upon [target]!")
 				message_self = span_notice("I'm shrouded in gentle moonlight!")
 				// during the night, heal 1 more (i wish this was more interesting but they're twins so whatever)
@@ -69,7 +69,7 @@
 				if (istype(get_turf(target), /turf/open/water))
 					conditional_buff = TRUE
 					situational_bonus = 1.5
-			if(/datum/patron/light/carthus)
+			if(/datum/patron/order/carthus)
 				message_out = span_info("An air of righteous defiance rises near [target]!")
 				message_self = span_notice("I'm filled with an urge to fight on!")
 				situational_bonus = 0
@@ -77,7 +77,7 @@
 				for (var/obj/effect/decal/cleanable/blood/O in oview(5, target))
 					situational_bonus = min(situational_bonus + 0.1, 2)
 				conditional_buff = TRUE
-			if(/datum/patron/light/tsoridys)
+			if(/datum/patron/order/tsoridys)
 				message_out = span_info("A sense of quiet respite radiates from [target]!")
 				message_self = span_notice("I feel the Undermaiden's gaze turn from me for now!")
 				if (iscarbon(target))
@@ -93,7 +93,7 @@
 				if (prob(50))
 					conditional_buff = TRUE
 					situational_bonus = rand(1, 2.5)
-			if(/datum/patron/light/malum)
+			if(/datum/patron/order/malum)
 				message_out = span_info("A tempering heat is discharged out of [target]!")
 				message_self = span_info("I feel the heat of a forge soothing my pains!")
 				var/list/firey_stuff = list(/obj/machinery/light/rogue/torchholder, /obj/machinery/light/rogue/campfire, /obj/machinery/light/rogue/hearth, /obj/machinery/light/rogue/wallfire, /obj/machinery/light/rogue/wallfire/candle, /obj/machinery/light/rogue/forge)
@@ -104,7 +104,7 @@
 						situational_bonus = min(situational_bonus + 0.5, 2.5)
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
-			if(/datum/patron/light/eora)
+			if(/datum/patron/order/eora)
 				message_out = span_info("An emanance of love blossoms around [target]!")
 				message_self = span_notice("I'm filled with the restorative warmth of love!")
 				// if they're wearing an eoran bud (or are a pacifist), pretty much double the healing. if we're also wearing a bud at any point or a pacifist from any other source, apply another +15 bonus
@@ -115,34 +115,6 @@
 				if (HAS_TRAIT(user, TRAIT_PACIFISM))
 					conditional_buff = TRUE
 					situational_bonus += 1.5
-			if(/datum/patron/inhumen/zizo)
-				message_out = span_info("Vital energies are sapped towards [target]!")
-				message_self = span_notice("The life around me pales as I am restored!")
-				// set up a ritual pile of bones (or just cast near a stack of bones whatever) around us for massive bonuses, cap at 50 for 75 healing total (wowie)
-				situational_bonus = 0
-				for (var/obj/item/natural/bone/O in oview(5, user))
-					situational_bonus += (0.5)
-				for (var/obj/item/natural/bundle/bone/S in oview(5, user))
-					situational_bonus += (S.amount * 0.5)
-				if (situational_bonus > 0)
-					conditional_buff = TRUE
-					situational_bonus = min(situational_bonus, 5)
-			if(/datum/patron/inhumen/graggar)
-				message_out = span_info("Foul fumes billow outward as [target] is restored!")
-				message_self = span_notice("A noxious scent burns my nostrils, but I feel better!")
-				// if you've got lingering toxin damage, you get healed more, but your bonus healing doesn't affect toxin
-				var/toxloss = target.getToxLoss()
-				if (toxloss >= 10)
-					conditional_buff = TRUE
-					situational_bonus = 2.5
-					target.adjustToxLoss(situational_bonus) // remember we do a global toxloss adjust down below so this is okay
-			if(/datum/patron/inhumen/matthios)
-				message_out = span_info("A wreath of... strange light passes over [target]?")
-				message_self = span_notice("I'm bathed in a... strange holy light?")
-				// COMRADES! WE MUST BAND TOGETHER!
-				if (HAS_TRAIT(target, TRAIT_COMMIE))
-					conditional_buff = TRUE
-					situational_bonus = 2.5
 			if(/datum/patron/godless)
 				message_out = span_info("Without any particular cause or reason, [target] is healed!")
 				message_self = span_notice("My wounds close without cause.")

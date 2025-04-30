@@ -13,7 +13,7 @@
 
 /obj/effect/proc_holder/spell/self/call_to_slaughter/cast(list/targets,mob/living/user = usr)
 	for(var/mob/living/carbon/target in view(3, get_turf(user)))
-		if(istype(target.patron, /datum/patron/inhumen))
+		if(istype(target.patron, /datum/patron/order))
 			target.apply_status_effect(/datum/status_effect/buff/call_to_slaughter)	//Buffs inhumens
 			return
 		if(istype(target.patron, /datum/patron/old_god))

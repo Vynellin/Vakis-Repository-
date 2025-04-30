@@ -1,56 +1,81 @@
-/datum/patron/inhumen
+/datum/patron/order
 	name = null
 	associated_faith = /datum/faith/order
-	undead_hater = FALSE
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
+
+/datum/patron/order/zira
+	name = "Zira"
+	domain = "Goddess of the Moon"
+	desc = "Placeholder"
+	worshippers = "Placeholder"
+	mob_traits = list(TRAIT_NIGHT_OWL, TRAIT_NOCSIGHT)
+	t1 = /obj/effect/proc_holder/spell/invoked/blindness/miracle
+	t2 = /obj/effect/proc_holder/spell/invoked/invisibility/miracle
 	confess_lines = list(
-		"PSYDON IS THE DEMIURGE!",
-		"THE TEN ARE WORTHLESS COWARDS!",
-		"THE TEN ARE DECEIVERS!",
+		"IN ZIRA'S GAZE!",
+		"ZIRA HOLDS ALL!",
+		"I SEEK THE MYSTERIES OF THE MOON!",
 	)
 
-/datum/patron/inhumen/zizo
-	name = "Zizo"
-	domain = "Advancement, Hubris, Left Hand Magicks"
-	desc = "Snow Elf turned God- banished by the Ten for spreading unholy magicks and forbidden sciences. Her craft taught mortals to bend the natural world to their will, but destroyed the Snow Elf race.."
-	worshippers = "Necromancers, Warlocks, and the Undead"
-	mob_traits = list(TRAIT_CABAL)
-	t1 = /obj/effect/proc_holder/spell/invoked/projectile/profane/miracle
-	t2 = /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/miracle
-	t3 = /obj/effect/proc_holder/spell/invoked/rituos/miracle
+/datum/patron/order/tsoridys
+	name = "Tsoridys"
+	domain = "God of Death, Time, and Entropy"
+	desc = "Placeholder"
+	worshippers = "Placeholder"
+	mob_traits = list(TRAIT_SOUL_EXAMINE, TRAIT_NOSTINK)	//No stink is generic but they deal with dead bodies so.. makes sense, I suppose?
+	t1 = /obj/effect/proc_holder/spell/invoked/avert
+	t2 = /obj/effect/proc_holder/spell/targeted/abrogation
+	t3 = /obj/effect/proc_holder/spell/targeted/churn
+	extra_spell = /obj/effect/proc_holder/spell/targeted/soulspeak
 	confess_lines = list(
-		"PRAISE ZIZO!",
-		"LONG LIVE ZIZO!",
-		"ZIZO IS QUEEN!",
+		"ALL SOULS FIND THEIR WAY TO TSORIDYS' GRACE!",
+		"I FEAR NOT THE GRASP OF DEATH!",
+		"TSORIDYS WATCH ME ON THIS DAY!",
 	)
 
-/datum/patron/inhumen/graggar
-	name = "Graggar"
-	domain = "God of Conquest, War, Murder, Pillaging"
-	desc = "Orc turned deity, said by the Holy Ecclesial to have been blessed by Ravox himself. He took his blessings to rampage and tear down the Old Ten. Though some Graggarites might care for 'honor', most do not- what matters are results, and victory at any cost."
-	worshippers = "Prisoners, Murderers and the Cruel"
-	mob_traits = list(TRAIT_HORDE, TRAIT_ORGAN_EATER)
-	t1 = /obj/effect/proc_holder/spell/self/call_to_slaughter
-	t2 = /obj/effect/proc_holder/spell/invoked/projectile/blood_net
-	t3 = /obj/effect/proc_holder/spell/invoked/revel_in_slaughter
+/datum/patron/order/malum
+	name = "Placeholder Name"
+	domain = "God of Technology"
+	desc = "Placeholder"
+	worshippers = "Placeholder"
+	mob_traits = list(TRAIT_FORGEBLESSED, TRAIT_BETTER_SLEEP)
+	t1 = /obj/effect/proc_holder/spell/invoked/vigorousexchange
+	t2 = /obj/effect/proc_holder/spell/invoked/heatmetal
+	t3 = /obj/effect/proc_holder/spell/invoked/hammerfall
+	t4 = /obj/effect/proc_holder/spell/invoked/craftercovenant
+	extra_spell = /obj/effect/proc_holder/spell/invoked/malum_flame_rogue
 	confess_lines = list(
-		"GRAGGAR IS THE BEAST I WORSHIP!",
-		"THROUGH VIOLENCE, DIVINITY!",
-		"THE GOD OF CONQUEST DEMANDS BLOOD!",
+		"MALUM IS MY MUSE!",
+		"TRUE VALUE IS IN THE TOIL!",
+		"I AM AN INSTRUMENT OF CREATION!",
 	)
 
-/datum/patron/inhumen/matthios
-	name = "Matthios"
-	domain = "God of Robbery, Redistribution of Wealth, and Commerce"
-	desc = "The Man who stole fire from the Underworld and gave it in exchange for worship; the first Transaction, cutting a hole in the firmament and flooding ontological reality with the fact of Wealth. Take from the wealthy, give to the worthless, empower."
-	worshippers = "Highwaymen, Robbers, Downtrodden Peasants, Merchants"
-	mob_traits = list(TRAIT_COMMIE, TRAIT_MATTHIOS_EYES)
-	t0 = /obj/effect/proc_holder/spell/invoked/appraise
-	t1 = /obj/effect/proc_holder/spell/invoked/transact
-	t2 = /obj/effect/proc_holder/spell/invoked/equalize
-	t3 = /obj/effect/proc_holder/spell/invoked/churnwealthy
+/datum/patron/order/carthus
+	name = "Carthus"
+	domain = "God of War, Ambition, and Rule"
+	desc = "Placeholder"
+	worshippers = "Placeholder"
+	mob_traits = list(TRAIT_SHARPER_BLADES, TRAIT_JUSTICARSIGHT)
+	t1 = /obj/effect/proc_holder/spell/self/divine_strike
+	t2 = /obj/effect/proc_holder/spell/self/call_to_arms
+	t3 = /obj/effect/proc_holder/spell/invoked/persistence
 	confess_lines = list(
-		"MATTHIOS STEALS FROM THE WORTHLESS!",
-		"MATTHIOS IS JUSTICE!",
-		"MATTHIOS IS MY LORD!",
+		"CARTHUS IS JUSTICE!",
+		"THROUGH STRIFE, GRACE!",
+		"THROUGH PERSISTENCE, GLORY!",
+	)
+
+/datum/patron/order/eora
+	name = "Placeholder Name"
+	domain = "Goddess of Love, Music and Harmony"
+	desc = "Placeholder"
+	worshippers = "Placeholder"
+	mob_traits = list(TRAIT_EMPATH, TRAIT_EXTEROCEPTION)
+	t1 = /obj/effect/proc_holder/spell/invoked/bud
+	t2 = /obj/effect/proc_holder/spell/invoked/eoracurse
+	t3 = null
+	confess_lines = list(
+		"EORA BRINGS US TOGETHER!",
+		"HER BEAUTY IS EVEN IN THIS TORMENT!",
+		"I LOVE YOU, EVEN AS YOU TRESPASS AGAINST ME!",
 	)

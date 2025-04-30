@@ -7,7 +7,7 @@
 	tutorial = "Templars are warriors who have forsaken wealth and title in lieu of service to the church, due to either zealotry or a past shame. They guard the church and its priest while keeping a watchful eye against heresy and nite-creechers. Within troubled dreams, they wonder if the blood they shed makes them holy or stained."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = ALL_CHAOS_PATRONS
 	outfit = /datum/outfit/job/roguetown/templar
 	min_pq = 3 //Deus vult, but only according to the proper escalation rules
 	max_pq = null
@@ -24,7 +24,7 @@
 
 /datum/outfit/job/roguetown/templar
 	has_loadout = TRUE
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = ALL_CHAOS_PATRONS
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltr = /obj/item/storage/keyring/churchie
@@ -61,22 +61,22 @@
 		if(/datum/patron/light/dendor)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
-		if(/datum/patron/light/tsoridys)
+		if(/datum/patron/order/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 			cloak = /obj/item/clothing/cloak/templar/necran
-		if(/datum/patron/light/eora) //Eora content from stonekeep
+		if(/datum/patron/order/eora) //Eora content from stonekeep
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/light/zira)
+		if(/datum/patron/order/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/light/carthus)
+		if(/datum/patron/order/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
-		if(/datum/patron/light/malum)
+		if(/datum/patron/order/malum)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 			cloak = /obj/item/clothing/cloak/templar/malumite
-		if(/datum/patron/light/malum)
+		if(/datum/patron/order/malum)
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/astrata,
@@ -107,7 +107,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/light/malum)
+		if(H.patron?.type == /datum/patron/order/malum)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
@@ -130,7 +130,7 @@
 	. = ..()
 	var/weapons = list("Katar")
 	switch(H.patron?.type)
-		if(/datum/patron/light/eora)
+		if(/datum/patron/order/eora)
 			weapons += "Close Caress"
 		if(/datum/patron/light/cinella)
 			weapons += "Barotrauma"
@@ -169,23 +169,23 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
-		if(/datum/patron/light/tsoridys)
+		if(/datum/patron/order/tsoridys)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/necra
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/necran
 			cloak = /obj/item/clothing/cloak/templar/necran
-		if(/datum/patron/light/eora) //Eora content from stonekeep
+		if(/datum/patron/order/eora) //Eora content from stonekeep
 			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/light/zira)
+		if(/datum/patron/order/zira)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/noc
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/light/carthus)
+		if(/datum/patron/order/carthus)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
-		if(/datum/patron/light/malum)
+		if(/datum/patron/order/malum)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/malum
 			cloak = /obj/item/clothing/cloak/templar/malumite
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
@@ -214,7 +214,7 @@
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/light/malum)
+		if(H.patron?.type == /datum/patron/order/malum)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)
@@ -239,19 +239,19 @@
 	switch(H.patron?.type)
 		if(/datum/patron/light/aeternus) //Unique patron weapons, more can be added here if wanted.
 			weapons += "Solar Judgement"
-		if(/datum/patron/light/zira)
+		if(/datum/patron/order/zira)
 			weapons += "Moonlight Khopesh"
-		if(/datum/patron/light/tsoridys)
+		if(/datum/patron/order/tsoridys)
 			weapons += "Swift End"
-		if(/datum/patron/light/malum)
+		if(/datum/patron/order/malum)
 			weapons += "Forgefiend"
 		if(/datum/patron/light/dendor)
 			weapons += "Summer Scythe"
 		if(/datum/patron/light/xylix)
 			weapons += "Cackle Lash"
-		if(/datum/patron/light/carthus)
+		if(/datum/patron/order/carthus)
 			weapons += "Duel Settler"
-		if(/datum/patron/light/eora)
+		if(/datum/patron/order/eora)
 			weapons += "The Heartstring"
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)

@@ -18,19 +18,7 @@
 		"I SERVE THE GLORY OF THE SUN!",
 	)
 
-/datum/patron/light/zira
-	name = "Zira"
-	domain = "Goddess of the Moon"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_NIGHT_OWL, TRAIT_NOCSIGHT)
-	t1 = /obj/effect/proc_holder/spell/invoked/blindness/miracle
-	t2 = /obj/effect/proc_holder/spell/invoked/invisibility/miracle
-	confess_lines = list(
-		"IN ZIRA'S GAZE!",
-		"ZIRA HOLDS ALL!",
-		"I SEEK THE MYSTERIES OF THE MOON!",
-	)
+/// all below will be chaos in a bit i gotta work on order rn
 
 /datum/patron/light/dendor
 	name = "Placeholder Name"
@@ -62,37 +50,6 @@
 		"THE OCEAN'S FURY IS CINELLA'S WILL!",
 		"I AM DRAWN BY THE PULL OF THE TIDE!",
 	)
-	
-/datum/patron/light/carthus
-	name = "Carthus"
-	domain = "God of War, Ambition, and Rule"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_SHARPER_BLADES, TRAIT_JUSTICARSIGHT)
-	t1 = /obj/effect/proc_holder/spell/self/divine_strike
-	t2 = /obj/effect/proc_holder/spell/self/call_to_arms
-	t3 = /obj/effect/proc_holder/spell/invoked/persistence
-	confess_lines = list(
-		"CARTHUS IS JUSTICE!",
-		"THROUGH STRIFE, GRACE!",
-		"THROUGH PERSISTENCE, GLORY!",
-	)
-
-/datum/patron/light/tsoridys
-	name = "Tsoridys"
-	domain = "God of Death, Time, and Entropy"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_SOUL_EXAMINE, TRAIT_NOSTINK)	//No stink is generic but they deal with dead bodies so.. makes sense, I suppose?
-	t1 = /obj/effect/proc_holder/spell/invoked/avert
-	t2 = /obj/effect/proc_holder/spell/targeted/abrogation
-	t3 = /obj/effect/proc_holder/spell/targeted/churn
-	extra_spell = /obj/effect/proc_holder/spell/targeted/soulspeak
-	confess_lines = list(
-		"ALL SOULS FIND THEIR WAY TO TSORIDYS' GRACE!",
-		"I FEAR NOT THE GRASP OF DEATH!",
-		"TSORIDYS WATCH ME ON THIS DAY!",
-	)
 
 /datum/patron/light/xylix
 	name = "Placeholder"
@@ -112,36 +69,4 @@
 		"HAHAHAHA! AHAHAHA! HAHAHAHA!",
 		"MALUM IS MY MUSE!",
 		"EORA BRINGS US TOGETHER!",
-	)
-
-/datum/patron/light/malum
-	name = "Placeholder Name"
-	domain = "God of Technology"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_FORGEBLESSED, TRAIT_BETTER_SLEEP)
-	t1 = /obj/effect/proc_holder/spell/invoked/vigorousexchange
-	t2 = /obj/effect/proc_holder/spell/invoked/heatmetal
-	t3 = /obj/effect/proc_holder/spell/invoked/hammerfall
-	t4 = /obj/effect/proc_holder/spell/invoked/craftercovenant
-	extra_spell = /obj/effect/proc_holder/spell/invoked/malum_flame_rogue
-	confess_lines = list(
-		"MALUM IS MY MUSE!",
-		"TRUE VALUE IS IN THE TOIL!",
-		"I AM AN INSTRUMENT OF CREATION!",
-	)
-
-/datum/patron/light/eora
-	name = "Placeholder Name"
-	domain = "Goddess of Love, Music and Harmony"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_EMPATH, TRAIT_EXTEROCEPTION)
-	t1 = /obj/effect/proc_holder/spell/invoked/bud
-	t2 = /obj/effect/proc_holder/spell/invoked/eoracurse
-	t3 = null
-	confess_lines = list(
-		"EORA BRINGS US TOGETHER!",
-		"HER BEAUTY IS EVEN IN THIS TORMENT!",
-		"I LOVE YOU, EVEN AS YOU TRESPASS AGAINST ME!",
 	)

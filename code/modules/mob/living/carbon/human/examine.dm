@@ -539,12 +539,7 @@
 				else
 					msg += span_bloody("[m1] [bleed_wording]!")
 		else
-			if(isliving(user))
-				var/mob/living/M = user
-				if(M.patron.type == /datum/patron/inhumen/graggar)
-					msg += span_bloody("[m1] shedding lyfe's blood, exposing weakness!")
-				else
-					msg += span_bloody("[m1] letting out the red stuff!")
+			msg += span_bloody("[m1] letting out the red stuff!")
 
 	// Missing limbs
 	var/missing_head = FALSE

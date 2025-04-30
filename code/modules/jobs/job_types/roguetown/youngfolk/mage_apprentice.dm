@@ -73,9 +73,6 @@
 		H.change_stat("intelligence", 2)
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 1)
-		switch(H.patron?.type)
-			if(/datum/patron/inhumen/zizo)
-				H.cmode_music = 'sound/music/combat_cult.ogg'
 		
 /datum/advclass/wapprentice/alchemist
 	name = "Alchemist Associate"
@@ -111,9 +108,6 @@
 		H.change_stat("intelligence", 2)
 		H.change_stat("perception", 2)
 		ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
-		switch(H.patron?.type)
-			if(/datum/patron/inhumen/zizo)
-				H.cmode_music = 'sound/music/combat_cult.ogg'
 		
 /datum/advclass/wapprentice/apprentice
 	name = "Magicians Apprentice"
@@ -140,6 +134,3 @@
 			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.change_stat("speed", -1)
 			H.change_stat("intelligence", 1)
-		switch(H.patron?.type)
-			if(/datum/patron/inhumen/zizo)
-				H.cmode_music = 'sound/music/combat_cult.ogg'

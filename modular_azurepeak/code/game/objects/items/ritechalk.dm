@@ -13,25 +13,21 @@
 
 	var/ritechoices = list()
 	switch (user.patron?.type)
-		if(/datum/patron/inhumen/zizo)
-			ritechoices+="Rune of ZIZO" 
-		if(/datum/patron/inhumen/matthios)
-			ritechoices+="Rune of Transaction" 
 		if(/datum/patron/light/aeternus)
 			ritechoices+="Rune of Sun"
-		if(/datum/patron/light/zira)
+		if(/datum/patron/order/zira)
 			ritechoices+="Rune of Moon"
 		if(/datum/patron/light/dendor)
 			ritechoices+="Rune of Beasts"
-		if(/datum/patron/light/malum)
+		if(/datum/patron/order/malum)
 			ritechoices+="Rune of Forge"
 		if(/datum/patron/light/xylix)
 			ritechoices+="Rune of Trickery"
-		if(/datum/patron/light/tsoridys)
+		if(/datum/patron/order/tsoridys)
 			ritechoices+="Rune of Death"
-		if(/datum/patron/light/eora)
+		if(/datum/patron/order/eora)
 			ritechoices+="Rune of Love"
-		if(/datum/patron/light/carthus)
+		if(/datum/patron/order/carthus)
 			ritechoices+="Rune of War"
 		if(/datum/patron/light/cinella)
 			ritechoices+="Rune of Storm"
@@ -84,13 +80,3 @@
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
 				new /obj/structure/ritualcircle/abyssor(step_turf)
-		if("Rune of ZIZO")
-			to_chat(user,span_cultsmall("I begin inscribing the rune of Her Knowledge..."))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/zizo(step_turf)
-		if("Rune of Transaction")
-			to_chat(user,span_cultsmall("I begin inscribing the rune of His Transactions"))
-			if(do_after(user, 30, src))
-				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/matthios(step_turf)
