@@ -3662,9 +3662,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/cave)
 "xQ" = (
-/obj/structure/wonder{
-	name = "altar"
-	},
+/obj/structure/wonder,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
 "xS" = (

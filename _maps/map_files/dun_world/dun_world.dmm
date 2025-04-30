@@ -24788,9 +24788,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/under/underdark)
 "knj" = (
-/obj/structure/wonder{
-	name = "altar"
-	},
+/obj/structure/wonder,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
 "knk" = (
