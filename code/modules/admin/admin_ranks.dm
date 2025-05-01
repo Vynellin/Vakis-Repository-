@@ -110,19 +110,9 @@ GLOBAL_PROTECT(protected_ranks)
 			if(3)
 				can_edit_rights |= flag
 
-/proc/sync_ranks_with_db()
-	set waitfor = FALSE
 
-	if(IsAdminAdvancedProcCall())
-		to_chat(usr, span_adminprefix("Admin rank DB Sync blocked: Advanced ProcCall detected."))
-		return
-
-	var/list/sql_ranks = list()
-	for(var/datum/admin_rank/R in GLOB.protected_ranks)
-		sql_ranks += list(list("rank" = R.name, "flags" = R.include_rights, "exclude_flags" = R.exclude_rights, "can_edit_flags" = R.can_edit_rights))
-	SSdbcore.MassInsert(format_table_name("admin_ranks"), sql_ranks, duplicate_key = TRUE)
-
-//load our rank - > rights associations
+/// Loads admin ranks.
+///	Return a list containing the backup data if they were loaded from the database backup json
 /proc/load_admin_ranks(dbfail, no_update)
 	if(IsAdminAdvancedProcCall())
 		to_chat(usr, span_adminprefix("Admin Reload blocked: Advanced ProcCall detected."))
@@ -145,7 +135,7 @@ GLOBAL_PROTECT(protected_ranks)
 		GLOB.admin_ranks += R
 		GLOB.protected_ranks += R
 		previous_rank = R
-	if(!CONFIG_GET(flag/admin_legacy_system) || dbfail)
+	if(!CONFIG_GET(flag/admin_legacy_system) && !dbfail)
 		if(CONFIG_GET(flag/load_legacy_ranks_only))
 			if(!no_update)
 				sync_ranks_with_db()
@@ -154,14 +144,14 @@ GLOBAL_PROTECT(protected_ranks)
 			if(!query_load_admin_ranks.Execute())
 				message_admins("Error loading admin ranks from database. Loading from backup.")
 				log_sql("Error loading admin ranks from database. Loading from backup.")
-				dbfail = 1
+				dbfail = TRUE
 			else
 				while(query_load_admin_ranks.NextRow())
 					var/skip
 					var/rank_name = query_load_admin_ranks.item[1]
 					for(var/datum/admin_rank/R in GLOB.admin_ranks)
 						if(R.name == rank_name) //this rank was already loaded from txt override
-							skip = 1
+							skip = TRUE
 							break
 					if(!skip)
 						var/rank_flags = text2num(query_load_admin_ranks.item[2])
@@ -201,12 +191,15 @@ GLOBAL_PROTECT(protected_ranks)
 	testing(msg)
 	#endif
 
+
+/// (Re)Loads the admin list.
+/// returns TRUE if database admins had to be loaded from the backup json
 /proc/load_admins(no_update)
 	var/dbfail
 	if(!CONFIG_GET(flag/admin_legacy_system) && !SSdbcore.Connect())
 		message_admins("Failed to connect to database while loading admins. Loading from backup.")
 		log_sql("Failed to connect to database while loading admins. Loading from backup.")
-		dbfail = 1
+		dbfail = TRUE
 	//clear the datums references
 	GLOB.admin_datums.Cut()
 	for(var/client/C in GLOB.admins)
@@ -233,7 +226,7 @@ GLOBAL_PROTECT(protected_ranks)
 		if(!query_load_admins.Execute())
 			message_admins("Error loading admins from database. Loading from backup.")
 			log_sql("Error loading admins from database. Loading from backup.")
-			dbfail = 1
+			dbfail = TRUE
 		else
 			while(query_load_admins.NextRow())
 				var/admin_ckey = ckey(query_load_admins.item[1])
@@ -241,12 +234,16 @@ GLOBAL_PROTECT(protected_ranks)
 				var/skip
 				if(rank_names[admin_rank] == null)
 					message_admins("[admin_ckey] loaded with invalid admin rank [admin_rank].")
-					skip = 1
+					skip = TRUE
 				if(GLOB.admin_datums[admin_ckey] || GLOB.deadmins[admin_ckey])
-					skip = 1
+					skip = TRUE
 				if(!skip)
 					new /datum/admins(rank_names[admin_rank], admin_ckey)
 		qdel(query_load_admins)
+		if (!no_update)
+			save_admin_backup()
+			sync_admins_with_db()
+
 	//load admins from backup file
 	if(dbfail)
 		if(!backup_file_json)
@@ -274,6 +271,105 @@ GLOBAL_PROTECT(protected_ranks)
 	testing(msg)
 	#endif
 	return dbfail
+
+
+/proc/sync_ranks_with_db()
+	set waitfor = FALSE
+
+	if(IsAdminAdvancedProcCall())
+		to_chat(usr, "<span class='admin prefix'>Admin rank DB Sync blocked: Advanced ProcCall detected.</span>")
+		return
+
+	var/list/sql_ranks = list()
+	for(var/datum/admin_rank/R as anything in GLOB.protected_ranks)
+		sql_ranks += list(list("rank" = R.name, "flags" = R.include_rights, "exclude_flags" = R.exclude_rights, "can_edit_flags" = R.can_edit_rights))
+	SSdbcore.MassInsert(format_table_name("admin_ranks"), sql_ranks, duplicate_key = TRUE)
+	update_everything_flag_in_db()
+
+
+/proc/update_everything_flag_in_db()
+	for(var/datum/admin_rank/R as anything in GLOB.admin_ranks)
+		var/list/flags = list()
+		if(R.include_rights == R_EVERYTHING)
+			flags += "flags"
+		if(R.exclude_rights == R_EVERYTHING)
+			flags += "exclude_flags"
+		if(R.can_edit_rights == R_EVERYTHING)
+			flags += "can_edit_flags"
+		if(!flags.len)
+			continue
+		var/flags_to_check = flags.Join(" != [R_EVERYTHING] AND ") + " != [R_EVERYTHING]"
+		var/datum/DBQuery/query_check_everything_ranks = SSdbcore.NewQuery(
+			"SELECT flags, exclude_flags, can_edit_flags FROM [format_table_name("admin_ranks")] WHERE rank = :rank AND ([flags_to_check])",
+			list("rank" = R.name)
+		)
+		if(!query_check_everything_ranks.Execute())
+			qdel(query_check_everything_ranks)
+			return
+		if(query_check_everything_ranks.NextRow()) //no row is returned if the rank already has the correct flag value
+			var/flags_to_update = flags.Join(" = [R_EVERYTHING], ") + " = [R_EVERYTHING]"
+			var/datum/DBQuery/query_update_everything_ranks = SSdbcore.NewQuery(
+				"UPDATE [format_table_name("admin_ranks")] SET [flags_to_update] WHERE rank = :rank",
+				list("rank" = R.name)
+			)
+			if(!query_update_everything_ranks.Execute())
+				qdel(query_update_everything_ranks)
+				return
+			qdel(query_update_everything_ranks)
+		qdel(query_check_everything_ranks)
+
+
+/proc/sync_admins_with_db()
+	if(IsAdminAdvancedProcCall())
+		to_chat(usr, "<span class='admin prefix'>Admin rank DB Sync blocked: Advanced ProcCall detected.</span>")
+		return
+
+	if(CONFIG_GET(flag/admin_legacy_system) || !SSdbcore.IsConnected()) //we're already using legacy system so there's nothing to save
+		return
+	sync_ranks_with_db()
+	var/list/sql_admins = list()
+	for(var/holder_ckey in GLOB.protected_admins)
+		var/datum/admins/holder = GLOB.protected_admins[holder_ckey]
+		sql_admins += list(list("ckey" = holder.target, "rank" = holder.rank.name))
+	SSdbcore.MassInsert(format_table_name("admin"), sql_admins, duplicate_key = TRUE)
+	var/datum/DBQuery/query_admin_rank_update = SSdbcore.NewQuery("UPDATE [format_table_name("player")] AS p INNER JOIN [format_table_name("admin")] AS a ON p.ckey = a.ckey SET p.lastadminrank = a.rank")
+	query_admin_rank_update.Execute()
+	qdel(query_admin_rank_update)
+
+
+/proc/save_admin_backup()
+	if(IsAdminAdvancedProcCall())
+		to_chat(usr, "<span class='admin prefix'>Admin rank DB Sync blocked: Advanced ProcCall detected.</span>")
+		return
+
+	if(CONFIG_GET(flag/admin_legacy_system)) //we're already using legacy system so there's nothing to save
+		return
+
+	//json format backup file generation stored per server
+	var/json_file = file("data/admins_backup.json")
+	var/list/file_data = list(
+		"ranks" = list(),
+		"admins" = list()
+	)
+	for(var/datum/admin_rank/R as anything in GLOB.admin_ranks)
+		file_data["ranks"]["[R.name]"] = list()
+		file_data["ranks"]["[R.name]"]["include rights"] = R.include_rights
+		file_data["ranks"]["[R.name]"]["exclude rights"] = R.exclude_rights
+		file_data["ranks"]["[R.name]"]["can edit rights"] = R.can_edit_rights
+
+	for(var/admin_ckey in GLOB.admin_datums + GLOB.deadmins)
+		var/datum/admins/admin = GLOB.admin_datums[admin_ckey]
+
+		if(!admin)
+			admin = GLOB.deadmins[admin_ckey]
+			if (!admin)
+				continue
+
+		file_data["admins"][admin_ckey] = admin.rank.name
+
+	fdel(json_file)
+	WRITE_FILE(json_file, json_encode(file_data, JSON_PRETTY_PRINT))
+
 
 #ifdef TESTING
 /client/verb/changerank(newrank in GLOB.admin_ranks)

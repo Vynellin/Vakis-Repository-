@@ -1,8 +1,10 @@
 {
     "recommendations": [
-        "gbasood.byond-dm-language-support",
         "platymuus.dm-langclient",
         "EditorConfig.EditorConfig",
-        "dbaeumer.vscode-eslint"
+        "dbaeumer.vscode-eslint",
+		"stylemistake.auto-comment-blocks",
+		"Donkie.vscode-tgstation-test-adapter",
+		"anturk.dmi-editor"
     ]
 }

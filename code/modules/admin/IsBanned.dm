@@ -45,7 +45,7 @@ GLOBAL_VAR(last_connection)
 					addclientmessage(ckey,span_adminnotice("I have been allowed to bypass the whitelist"))
 			else
 				log_access("Failed Login: [key] - Not on whitelist")
-				return list("reason"="whitelist", "desc" = "\nBecome whitelisted! discord.gg/NCFXUAgCPT")
+				return list("reason"="whitelist", "desc" = "\nThis server requires you to be whitelisted in order to be allowed to play. To join our community, check out our Discord! To gain full access to our Discord, read the rules and open an Access Request from the #application-instructions channel under the \"Landing Zone\" category in the Discord server linked here: <a href='https://discord.gg/novasector'>https://discord.gg/novasector</a>")
 /*
 #ifdef MATURESERVER
 	if(!check_whitelist(ckey))
