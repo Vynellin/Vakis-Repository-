@@ -498,7 +498,7 @@
 #define BLESSINGOFSUN_FILTER "sun_glow"
 /atom/movable/screen/alert/status_effect/buff/guidinglight
 	name = "Guiding Light"
-	desc = "Astrata's gaze follows me, lighting the path!"
+	desc = "Aeternus' gaze follows me, lighting the path!"
 	icon_state = "stressvg"
 
 /datum/status_effect/buff/guidinglight // Hey did u follow us from ritualcircles? Cool, okay this stuff is pretty simple yeah? Most ritual circles use some sort of status effects to get their effects ez.

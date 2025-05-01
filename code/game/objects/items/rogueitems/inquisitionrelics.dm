@@ -120,7 +120,7 @@
 	var/effect_color
 	var/pulse = 0
 	var/ticks_to_apply = 10
-	var/astratanlines =list("'HER LIGHT HAS LEFT ME! WHERE AM I?!'", "'SHATTER THIS CONTRAPTION, SO I MAY FEEL HER WARMTH ONE LAST TIME!'", "'I am royal.. Why did they do this to me...?'")
+	var/aeternianlines =list("'HIS LIGHT HAS LEFT ME! WHERE AM I?!'", "'SHATTER THIS CONTRAPTION, SO I MAY FEEL HIS WARMTH ONE LAST TIME!'", "'I am royal.. Why did they do this to me...?'")
 	var/noclines =list("'Colder than moonlight...'", "'No wisdom can reach me here...'", "'Please help me, I miss the stars...'")
 	var/necralines =list("'They snatched me from her grasp, for eternal torment...'", "'Necra! Please! I am so tired! Release me!'", "'I am lost, lost in a sea of stolen ends.'")
 	var/abyssorlines =list("'I cannot feel the coast's breeze...'", "'We churn tighter here than schooling fish...'", "'Free me, please, so I may return to the sea...'")
@@ -150,7 +150,7 @@
 				switch(H.patron?.type)
 					if(/datum/patron/light/aeternus)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
-						to_chat(H, (span_cultsmall(pick(astratanlines))))
+						to_chat(H, (span_cultsmall(pick(aeternianlines))))
 						H.add_stress(/datum/stressevent/soulchurner)
 					if(/datum/patron/order/zira)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))

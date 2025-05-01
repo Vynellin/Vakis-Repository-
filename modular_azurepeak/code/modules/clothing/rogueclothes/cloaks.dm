@@ -1,9 +1,9 @@
-/obj/item/clothing/cloak/templar/astratan
+/obj/item/clothing/cloak/templar/aeternian
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	alternate_worn_layer = TABARD_LAYER
 	boobed = FALSE
-	name = "astratan tabard"
-	desc = "The washed out golds of an asratan crusader adorn these fine robes."
+	name = "aeternian tabard"
+	desc = "The washed out golds of an aeternian crusader adorn these fine robes."
 	icon_state = "astratatabard"
 
 /obj/item/clothing/cloak/templar/malumite

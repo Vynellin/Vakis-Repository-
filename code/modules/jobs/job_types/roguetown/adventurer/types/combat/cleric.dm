@@ -124,7 +124,7 @@
 			switch(H.patron?.type)
 				if(/datum/patron/light/aeternus)
 					cloak = /obj/item/clothing/cloak/templar/astrata
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
 				if(/datum/patron/order/zira)
 					cloak = /obj/item/clothing/cloak/templar/noc
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm

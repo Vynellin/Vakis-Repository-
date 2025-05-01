@@ -174,24 +174,6 @@
 	title = "bible"
 	dat = "gott.json"
 
-/obj/item/book/rogue/bibble/read(mob/user)
-	if(!open)
-		to_chat(user, span_info("Open me first."))
-		return FALSE
-	if(!user.client || !user.hud_used)
-		return
-	if(!user.hud_used.reads)
-		return
-	if(!user.can_read(src))
-		return
-	if(in_range(user, src) || isobserver(user))
-		user.changeNext_move(CLICK_CD_MELEE)
-		var/m
-		var/list/verses = world.file2list("strings/bibble.txt")
-		m = pick(verses)
-		if(m)
-			user.say(m)
-
 /obj/item/book/rogue/bibble/attack(mob/living/M, mob/user)
 	if(user.mind && user.mind.assigned_role == "Priest")
 		if(!user.can_read(src))

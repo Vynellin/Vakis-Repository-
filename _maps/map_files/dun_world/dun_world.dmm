@@ -26931,8 +26931,8 @@
 /obj/item/clothing/suit/roguetown/shirt/undershirt/priest,
 /obj/item/clothing/cloak/templar/malumite,
 /obj/item/clothing/cloak/templar/malumite,
-/obj/item/clothing/cloak/templar/astratan,
-/obj/item/clothing/cloak/templar/astratan,
+/obj/item/clothing/cloak/templar/aeternian,
+/obj/item/clothing/cloak/templar/aeternian,
 /obj/item/clothing/cloak/templar/necran,
 /obj/item/clothing/cloak/templar/necran,
 /turf/open/floor/rogue/ruinedwood{
@@ -43806,7 +43806,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/church/chapel)
 "siB" = (
-/obj/structure/fluff/statue/astrata,
+/obj/structure/fluff/statue/aeternus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/orcdungeon)
 "siD" = (
@@ -52392,7 +52392,7 @@
 /turf/open/floor/rogue/grassred,
 /area/rogue/indoors/shelter/woods)
 "vII" = (
-/obj/structure/fluff/statue/astrata/gold,
+/obj/structure/fluff/statue/aeternus/gold,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement/keep)
 "vJh" = (
@@ -52917,7 +52917,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach/forest)
 "vUY" = (
-/obj/structure/fluff/statue/astrata,
+/obj/structure/fluff/statue/aeternus,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town/church/chapel)
 "vUZ" = (

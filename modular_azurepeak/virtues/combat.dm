@@ -61,7 +61,7 @@
 				our_faith.passive_devotion_gain += 1
 	switch(recipient.patron?.type)
 		if(/datum/patron/light/aeternus)
-			recipient.mind?.special_items["Astrata Psycross"] = /obj/item/clothing/neck/roguetown/psicross/astrata
+			recipient.mind?.special_items["Aeternus Psycross"] = /obj/item/clothing/neck/roguetown/psicross/astrata
 		if(/datum/patron/chaos/cinella)
 			recipient.mind?.special_items["Abyssor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/abyssor
 		if(/datum/patron/chaos/dendor)
@@ -174,7 +174,7 @@
 	name = "Rotcured"
 	desc = "I was once afflicted with the accursed rot, and was cured. It has left me changed: my limbs are weaker, but I feel no pain and have no need to breathe..."
 	custom_text = "Colors your body a distinct, sickly green."
-	// below is functionally equivalent to dying and being resurrected via astrata T4 - yep, this is what it gives you.
+	// below is functionally equivalent to dying and being resurrected via aeternus T4 - yep, this is what it gives you.
 	added_traits = list(TRAIT_EASYDISMEMBER, TRAIT_NOPAIN, TRAIT_NOPAINSTUN, TRAIT_NOBREATH, TRAIT_TOXIMMUNE, TRAIT_ZOMBIE_IMMUNE, TRAIT_ROTMAN)
 
 /datum/virtue/combat/rotcured/apply_to_human(mob/living/carbon/human/recipient)

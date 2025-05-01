@@ -457,10 +457,10 @@
 	slot_flags = ITEM_SLOT_BACK //Too big for hip
 
 
-/obj/item/rogueweapon/sword/long/exe/astrata
-	name = "solar judge"
-	desc = "This wicked executioner's blade calls for order."
-	icon_state = "astratasword"
+/obj/item/rogueweapon/sword/long/exe/aeternus
+	name = "solus wicker"
+	desc = "This blade, wide and gilded - sits in honor of Aeternus."
+	icon_state = "aeternussword"
 	max_integrity = 200
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/axe/chop)
@@ -1005,11 +1005,16 @@
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/chop)
 	icon_state = "eclipsum"
 	name = "eclipsum sword"
-	desc = "A mutual effort of Noc and Astrata's followers, this blade was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether dae or nite."
+	desc = "A mutual effort of Noc and Aeternus' followers, this blade was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether dae or nite."
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 	smelt_bar_num = 2
 	max_integrity = 999
+
+/obj/item/rogueweapon/sword/long/holysee/Initialize()
+	. = ..()
+	if(SSevents.holidays && SSevents.holidays[APRIL_FOOLS])
+		name = "\improper planet buster" /// What a coincidence; I've a sword to Brandish, Two!
 
 /obj/item/rogueweapon/sword/long/holysee/getonmobprop(tag)
 	. = ..()

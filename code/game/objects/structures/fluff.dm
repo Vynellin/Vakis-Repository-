@@ -748,16 +748,16 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/fluff/wallclock/vampire, 32)
 /obj/structure/fluff/statue/knight
 	icon_state = "knightstatue_l"
 
-/obj/structure/fluff/statue/astrata
-	name = "astrata statue"
-	desc = "A stone statue of the sun Goddess Astrata. Bless."
-	icon_state = "astrata"
+/obj/structure/fluff/statue/aeternus
+	name = "aeternus statue"
+	desc = "A stone statue of the sun God Aeternus. Bless."
+	icon_state = "aeternus" // could do with a resprite but giving big naturals to aeternus would be based... much to think about
 	icon = 'icons/roguetown/misc/tallandwide.dmi'
 
-/obj/structure/fluff/statue/astrata/gold
-	name = "ornamental astrata statue"
-	desc = "An ornamental stone statue of the sun Goddess Astrata, decorated with golden jewelry. Bless."
-	icon_state = "astrata_bling"
+/obj/structure/fluff/statue/aeternus/gold
+	name = "ornamental aeternus statue"
+	desc = "An ornamental stone statue of the sun God Aeternus, decorated with golden jewelry. Bless."
+	icon_state = "aeternus_bling"
 
 /obj/structure/fluff/statue/knight/r
 	icon_state = "knightstatue_r"

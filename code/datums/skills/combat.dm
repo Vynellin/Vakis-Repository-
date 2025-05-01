@@ -21,6 +21,7 @@
 	dreams = list(
 		"...your heavy blade swings in a wide arc, cleaving through the air with a roar. Each landed strike hits with bone shattering force. Your opponent's shield crumples under the weight, and your blade finds its mark - crushing through armor, flesh, and will alike...",
 		"...a shining length of ivory steel. A token. A symbol. More than just a weapon. Blood runs thick in the wash-bin. Sparks fly from the grindstone. You maintain the blade and it maintains your honour...",
+		"...a terrible beast unfurls from the echo of man as you point your blade further within the crumbling chamber, the dorpel that led you here crumbling to dust in it's visage - another madman off the rails...",
 		"...the rapier dances in your hand, a whisper of steel cutting through the air. Every thrust is precise, every parry and riposte flowing in perfect rhythm, simply awaiting the moment to seal your their fate with a single, fatal strike..."
 	)
 
@@ -100,7 +101,7 @@
 	desc = "Increases your chance to bypass your opponent's parry by 20% with shields, and your chance to bypass dodge by 10%."
 	dreams = list(
 	"...a terrible lizard unleashes a torrent of fire upon you. Yet, you stand firm, a living bastion, unyielding and stalwart...",
-	"...the half-moon crest upon your shield shines even in the bright of Astrata's day. You catch a gleam on it, and reflexively pull it upwards. An arrow bounces off..."
+	"...the half-moon crest upon your shield shines even in the bright of Aeternus. You catch a gleam on it, and reflexively pull it upwards. An arrow bounces off..."
 	)
 
 /datum/skill/combat/slings

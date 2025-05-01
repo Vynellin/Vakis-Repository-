@@ -26531,8 +26531,8 @@
 /obj/item/clothing/suit/roguetown/shirt/undershirt/priest,
 /obj/item/clothing/cloak/templar/malumite,
 /obj/item/clothing/cloak/templar/malumite,
-/obj/item/clothing/cloak/templar/astratan,
-/obj/item/clothing/cloak/templar/astratan,
+/obj/item/clothing/cloak/templar/aeternian,
+/obj/item/clothing/cloak/templar/aeternian,
 /obj/item/clothing/cloak/templar/necran,
 /obj/item/clothing/cloak/templar/necran,
 /obj/item/clothing/cloak/templar/eoran,
@@ -26679,7 +26679,7 @@
 /turf/open/water/pond,
 /area/rogue/outdoors/mountains)
 "sEG" = (
-/obj/structure/fluff/statue/astrata,
+/obj/structure/fluff/statue/aeternus,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town/church/chapel)
 "sEN" = (
@@ -30886,7 +30886,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
 "vMo" = (
-/obj/structure/fluff/statue/astrata/gold,
+/obj/structure/fluff/statue/aeternus/gold,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement/keep)
 "vMx" = (

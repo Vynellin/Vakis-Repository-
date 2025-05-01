@@ -4395,7 +4395,7 @@
 /obj/machinery/light/rogue/firebowl/church{
 	pixel_x = -4
 	},
-/obj/structure/fluff/statue/astrata/gold{
+/obj/structure/fluff/statue/aeternus/gold{
 	pixel_x = 15
 	},
 /turf/open/floor/rogue/church,
@@ -5318,7 +5318,7 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/church)
 "eBQ" = (
-/obj/structure/fluff/statue/astrata,
+/obj/structure/fluff/statue/aeternus,
 /turf/open/floor/rogue/churchrough,
 /area/rogue/indoors/town/church/chapel)
 "eBU" = (

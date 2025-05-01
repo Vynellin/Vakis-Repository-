@@ -43,7 +43,7 @@
 	t1 = /obj/effect/proc_holder/spell/invoked/wheel
 	t2 = /obj/effect/proc_holder/spell/invoked/mockery
 	confess_lines = list(
-		"ASTRATA IS MY LIGHT!",
+		"AETERNUS' LIGHT!",
 		"NOC IS NIGHT!",
 		"DENDOR PROVIDES!",
 		"ABYSSOR COMMANDS THE WAVES!",
