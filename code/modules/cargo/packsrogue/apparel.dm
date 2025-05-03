@@ -49,8 +49,8 @@
 	cost = 150
 	contains = list(/obj/item/clothing/neck/roguetown/psicross/silver)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonastrata
-	name = "Astratan Amulet"
+/datum/supply_pack/rogue/apparel/crosses/divinepantheonaeternus
+	name = "Aeternian Amulet"
 	cost = 10
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/aeternus,

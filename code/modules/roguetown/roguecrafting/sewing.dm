@@ -258,7 +258,7 @@
 
 /datum/crafting_recipe/roguetown/sewing/astrata
 	name = "tabard, astrata (1 fibers, 3 cloth)"
-	result = list(/obj/item/clothing/cloak/templar/astrata)
+	result = list(/obj/item/clothing/cloak/templar/aeternus)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3

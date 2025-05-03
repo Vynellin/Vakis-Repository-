@@ -123,7 +123,7 @@
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 			switch(H.patron?.type)
 				if(/datum/patron/light/aeternus)
-					cloak = /obj/item/clothing/cloak/templar/astrata
+					cloak = /obj/item/clothing/cloak/templar/aeternus
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
 				if(/datum/patron/order/zira)
 					cloak = /obj/item/clothing/cloak/templar/noc
@@ -207,7 +207,7 @@
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
 			switch(H.patron?.type)
 				if(/datum/patron/light/aeternus)
-					cloak = /obj/item/clothing/cloak/templar/astrata
+					cloak = /obj/item/clothing/cloak/templar/aeternus
 				if(/datum/patron/order/zira)
 					cloak = /obj/item/clothing/cloak/templar/noc
 				if(/datum/patron/chaos/cinella)

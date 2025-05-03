@@ -15258,7 +15258,7 @@
 /area/rogue/outdoors/rtfield)
 "pAS" = (
 /obj/structure/closet/crate/chest/crafted,
-/obj/item/clothing/cloak/tabard/crusader/astrata,
+/obj/item/clothing/cloak/tabard/crusader/aeternus,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
