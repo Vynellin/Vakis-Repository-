@@ -18505,8 +18505,8 @@
 /obj/item/clothing/neck/roguetown/psicross/eora,
 /obj/item/clothing/neck/roguetown/psicross/dendor,
 /obj/item/clothing/neck/roguetown/psicross/dendor,
-/obj/item/clothing/neck/roguetown/psicross/astrata,
-/obj/item/clothing/neck/roguetown/psicross/astrata,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
 /obj/item/clothing/neck/roguetown/psicross/ravox,
 /obj/item/clothing/neck/roguetown/psicross/ravox,
 /obj/item/clothing/neck/roguetown/psicross/malum,
@@ -27463,8 +27463,8 @@
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/item/clothing/suit/roguetown/shirt/robe/astrata,
 /obj/item/clothing/suit/roguetown/shirt/robe/astrata,
-/obj/item/clothing/head/roguetown/roguehood/astrata,
-/obj/item/clothing/head/roguetown/roguehood/astrata,
+/obj/item/clothing/head/roguetown/roguehood/aeternus,
+/obj/item/clothing/head/roguetown/roguehood/aeternus,
 /obj/structure/fluff/walldeco/psybanner{
 	pixel_y = 29
 	},

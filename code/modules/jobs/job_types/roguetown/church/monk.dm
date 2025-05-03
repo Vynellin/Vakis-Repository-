@@ -37,8 +37,8 @@
 	backpack_contents = list(/obj/item/ritechalk)
 	switch(H.patron?.type)
 		if(/datum/patron/light/aeternus)
-			head = /obj/item/clothing/head/roguetown/roguehood/astrata
-			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
+			head = /obj/item/clothing/head/roguetown/roguehood/aeternus
+			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
@@ -98,7 +98,7 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
-			/obj/item/clothing/neck/roguetown/psicross/astrata,
+			/obj/item/clothing/neck/roguetown/psicross/aeternus,
 			/obj/item/clothing/neck/roguetown/psicross/noc,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
@@ -110,8 +110,8 @@
 			)
 			neck = pick(psicross_options) // Random psicross, as cleric.
 		else
-			head = /obj/item/clothing/head/roguetown/roguehood/astrata
-			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
+			head = /obj/item/clothing/head/roguetown/roguehood/aeternus
+			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata

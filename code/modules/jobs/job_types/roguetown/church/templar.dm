@@ -49,11 +49,11 @@
 
 /datum/outfit/job/roguetown/templar/monk/pre_equip(mob/living/carbon/human/H)
 	..()
-	neck = /obj/item/clothing/neck/roguetown/psicross/astrata
+	neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron?.type)
 		if(/datum/patron/light/aeternus)
-			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
+			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			cloak = /obj/item/clothing/cloak/tabard/crusader/astrata
 		if(/datum/patron/chaos/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
@@ -79,7 +79,7 @@
 		if(/datum/patron/order/malum)
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
-			/obj/item/clothing/neck/roguetown/psicross/astrata,
+			/obj/item/clothing/neck/roguetown/psicross/aeternus,
 			/obj/item/clothing/neck/roguetown/psicross/noc,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
@@ -154,11 +154,11 @@
 /datum/outfit/job/roguetown/templar/crusader/pre_equip(mob/living/carbon/human/H)
 	..()
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-	wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
+	wrists = /obj/item/clothing/neck/roguetown/psicross/aeternus
 	cloak = /obj/item/clothing/cloak/tabard/crusader/tief
 	switch(H.patron?.type)
 		if(/datum/patron/light/aeternus)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/astrata
+			wrists = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
 			cloak = /obj/item/clothing/cloak/templar/aeternian
 		if(/datum/patron/chaos/cinella)

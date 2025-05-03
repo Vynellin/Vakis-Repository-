@@ -261,8 +261,8 @@
 	grid_width = 32
 	grid_height = 32
 
-/obj/item/clothing/neck/roguetown/psicross/astrata
-	name = "amulet of Astrata"
+/obj/item/clothing/neck/roguetown/psicross/aeternus
+	name = "amulet of Aeternus"
 	desc = ""
 	icon_state = "astrata"
 

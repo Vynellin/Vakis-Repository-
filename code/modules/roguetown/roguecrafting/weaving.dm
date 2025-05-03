@@ -73,7 +73,7 @@
 
 /datum/crafting_recipe/roguetown/weaving/astratahood
 	name = "solar hood (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/head/roguetown/roguehood/astrata)
+	result = list(/obj/item/clothing/head/roguetown/roguehood/aeternus)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3

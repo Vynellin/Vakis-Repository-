@@ -53,7 +53,7 @@
 	name = "Astratan Amulet"
 	cost = 10
 	contains = list(
-					/obj/item/clothing/neck/roguetown/psicross/astrata,
+					/obj/item/clothing/neck/roguetown/psicross/aeternus,
 				)
 
 /datum/supply_pack/rogue/apparel/crosses/divinepantheonmalum

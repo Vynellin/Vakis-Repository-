@@ -104,9 +104,9 @@
 	item_state = "heavyhood"
 	icon_state = "heavyhood"
 
-/obj/item/clothing/head/roguetown/roguehood/astrata
+/obj/item/clothing/head/roguetown/roguehood/aeternus
 	name = "sun hood"
-	desc = "A hood worn by those who favor Astrata. Praise the firstborn sun!"
+	desc = "A hood worn by those who favor Aeternus. Praise the firstborn sun!"
 	color = null
 	icon_state = "astratahood"
 	item_state = "astratahood"

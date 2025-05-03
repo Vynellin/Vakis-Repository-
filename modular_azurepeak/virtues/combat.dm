@@ -61,7 +61,7 @@
 				our_faith.passive_devotion_gain += 1
 	switch(recipient.patron?.type)
 		if(/datum/patron/light/aeternus)
-			recipient.mind?.special_items["Aeternus Psycross"] = /obj/item/clothing/neck/roguetown/psicross/astrata
+			recipient.mind?.special_items["Aeternus Psycross"] = /obj/item/clothing/neck/roguetown/psicross/aeternus
 		if(/datum/patron/chaos/cinella)
 			recipient.mind?.special_items["Abyssor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/abyssor
 		if(/datum/patron/chaos/dendor)

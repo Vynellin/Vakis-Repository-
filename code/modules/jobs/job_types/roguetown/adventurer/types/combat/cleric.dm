@@ -65,7 +65,7 @@
 					ADD_TRAIT(H, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 			switch(H.patron?.type)
 				if(/datum/patron/light/aeternus)
-					head = /obj/item/clothing/head/roguetown/roguehood/astrata
+					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 				if(/datum/patron/order/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
@@ -272,7 +272,7 @@
 			H.change_stat("speed", 1)
 			switch(H.patron?.type)
 				if(/datum/patron/light/aeternus)
-					head = /obj/item/clothing/head/roguetown/roguehood/astrata
+					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 				if(/datum/patron/order/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
@@ -302,7 +302,7 @@
 
 	switch(H.patron?.type)
 		if(/datum/patron/light/aeternus)
-			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
+			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 		if(/datum/patron/order/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 		if(/datum/patron/chaos/cinella)
@@ -320,7 +320,7 @@
 		if(/datum/patron/chaos/xylix) // Random pricross for Xylix
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
-			/obj/item/clothing/neck/roguetown/psicross/astrata,
+			/obj/item/clothing/neck/roguetown/psicross/aeternus,
 			/obj/item/clothing/neck/roguetown/psicross/noc,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
