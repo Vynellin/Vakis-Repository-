@@ -17,11 +17,11 @@
 			ritechoices+="Rune of Sun"
 		if(/datum/patron/order/zira)
 			ritechoices+="Rune of Moon"
-		if(/datum/patron/chaos/dendor)
+		if(/datum/patron/chaos/tamari)
 			ritechoices+="Rune of Beasts"
-		if(/datum/patron/order/malum)
+		if(/datum/patron/order/nunos)
 			ritechoices+="Rune of Forge"
-		if(/datum/patron/chaos/xylix)
+		if(/datum/patron/chaos/kasmidian)
 			ritechoices+="Rune of Trickery"
 		if(/datum/patron/order/tsoridys)
 			ritechoices+="Rune of Death"

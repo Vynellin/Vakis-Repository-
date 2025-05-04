@@ -33,9 +33,9 @@
 		"TSORIDYS WATCH ME ON THIS DAY!",
 	)
 
-/datum/patron/order/malum
-	name = "Placeholder Name"
-	domain = "God of Technology"
+/datum/patron/order/nunos
+	name = "Nunos"
+	domain = "Contested God of Toil"
 	desc = "Placeholder"
 	worshippers = "Placeholder"
 	mob_traits = list(TRAIT_FORGEBLESSED, TRAIT_BETTER_SLEEP)
@@ -45,7 +45,7 @@
 	t4 = /obj/effect/proc_holder/spell/invoked/craftercovenant
 	extra_spell = /obj/effect/proc_holder/spell/invoked/malum_flame_rogue
 	confess_lines = list(
-		"MALUM IS MY MUSE!",
+		"MY WORK IS MY LIFE!",
 		"TRUE VALUE IS IN THE TOIL!",
 		"I AM AN INSTRUMENT OF CREATION!",
 	)

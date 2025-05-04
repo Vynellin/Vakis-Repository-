@@ -45,7 +45,7 @@
 				// during the night, heal 1 more (i wish this was more interesting but they're twins so whatever)
 				if (GLOB.tod == "night")
 					conditional_buff = TRUE
-			if(/datum/patron/chaos/dendor)
+			if(/datum/patron/chaos/tamari)
 				message_out = span_info("A rush of primal energy spirals about [target]!")
 				message_self = span_notice("I'm infused with primal energies!")
 				var/list/natural_stuff = list(/obj/structure/flora/roguegrass, /obj/structure/flora/roguetree, /obj/structure/flora/rogueshroom, /obj/structure/soil, /obj/structure/flora/newtree, /obj/structure/flora/tree, /obj/structure/glowshroom)
@@ -83,14 +83,14 @@
 					if (C.health <= (C.maxHealth * 0.25))
 						conditional_buff = TRUE
 						situational_bonus = 2.5
-			if(/datum/patron/chaos/xylix)
+			if(/datum/patron/chaos/kasmidian)
 				message_out = span_info("A fugue seems to manifest briefly across [target]!")
 				message_self = span_notice("My wounds vanish as if they had never been there! ")
 				// half of the time, heal a little (or a lot) more - flip the coin
 				if (prob(50))
 					conditional_buff = TRUE
 					situational_bonus = rand(1, 2.5)
-			if(/datum/patron/order/malum)
+			if(/datum/patron/order/nunos)
 				message_out = span_info("A tempering heat is discharged out of [target]!")
 				message_self = span_info("I feel the heat of a forge soothing my pains!")
 				var/list/firey_stuff = list(/obj/machinery/light/rogue/torchholder, /obj/machinery/light/rogue/campfire, /obj/machinery/light/rogue/hearth, /obj/machinery/light/rogue/wallfire, /obj/machinery/light/rogue/wallfire/candle, /obj/machinery/light/rogue/forge)

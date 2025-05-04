@@ -105,17 +105,17 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 			if(3)
 				text_to_show = "DAWN OF THE THIRD DAY\nCERTAINTY'S FLIP" // Tsoridys
 			if(4)
-				text_to_show = "DAWN OF THE FOURTH DAY\nINNOVATION'S HOPE" // SOLARIS PLACEHOLDER : /datum/patron/order/malum
+				text_to_show = "DAWN OF THE FOURTH DAY\nINNOVATION'S HOPE" // Nunos
 			if(5)
 				text_to_show = "DAWN OF THE FIFTH DAY\nAMBITION'S LIGHT" // Carthus
 			if(6)
 				text_to_show = "DAWN OF THE SIXTH DAY\nLOVE'S SIGHT" // SOLARIS PLACHEOLDER : /datum/patron/order/eora
 			if(7)
-				text_to_show = "DAWN OF THE SEVENTH DAY\nNATURE'S BOON" // SOLARIS PALCEHOLDER : /datum/patron/chaos/dendor
+				text_to_show = "DAWN OF THE SEVENTH DAY\nNATURE'S BOON" // Tamari
 			if(8)
 				text_to_show = "DAWN OF THE EIGHTH DAY\nSEA'S WAVE" // Cinella
 			if(9)
-				text_to_show = "DAWN OF THE NINTH DAY\nRIFT'S WATCH" // SOLARIS PALCEHOLDER : /datum/patron/chaos/xylix
+				text_to_show = "DAWN OF THE NINTH DAY\nRIFT'S WATCH" // Kasmidian
 		if(!text_to_show)
 			return
 		if(text_to_show in mind.areas_entered)

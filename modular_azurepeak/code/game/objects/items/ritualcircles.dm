@@ -113,7 +113,7 @@
 	var/bestialrites = list("Rite of the Lesser Wolf")
 
 /obj/structure/ritualcircle/dendor/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/chaos/dendor)
+	if((user.patron?.type) != /datum/patron/chaos/tamari)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))

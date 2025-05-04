@@ -58,7 +58,7 @@
 		if(/datum/patron/chaos/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			cloak = /obj/item/clothing/cloak/abyssortabard
-		if(/datum/patron/chaos/dendor)
+		if(/datum/patron/chaos/tamari)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/order/tsoridys)
@@ -73,10 +73,10 @@
 		if(/datum/patron/order/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
-		if(/datum/patron/order/malum)
+		if(/datum/patron/order/nunos)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 			cloak = /obj/item/clothing/cloak/templar/malumite
-		if(/datum/patron/order/malum)
+		if(/datum/patron/order/nunos)
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
@@ -107,7 +107,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/order/malum)
+		if(H.patron?.type == /datum/patron/order/nunos)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
@@ -165,7 +165,7 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
 			cloak = /obj/item/clothing/cloak/abyssortabard
-		if(/datum/patron/chaos/dendor)
+		if(/datum/patron/chaos/tamari)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
@@ -185,7 +185,7 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
-		if(/datum/patron/order/malum)
+		if(/datum/patron/order/nunos)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/malum
 			cloak = /obj/item/clothing/cloak/templar/malumite
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
@@ -211,7 +211,7 @@
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/order/malum)
+		if(H.patron?.type == /datum/patron/order/nunos)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)
@@ -240,11 +240,11 @@
 			weapons += "Moonlight Khopesh"
 		if(/datum/patron/order/tsoridys)
 			weapons += "Swift End"
-		if(/datum/patron/order/malum)
+		if(/datum/patron/order/nunos)
 			weapons += "Forgefiend"
-		if(/datum/patron/chaos/dendor)
+		if(/datum/patron/chaos/tamari)
 			weapons += "Summer Scythe"
-		if(/datum/patron/chaos/xylix)
+		if(/datum/patron/chaos/kasmidian)
 			weapons += "Cackle Lash"
 		if(/datum/patron/order/carthus)
 			weapons += "Duel Settler"

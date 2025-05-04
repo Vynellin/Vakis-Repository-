@@ -147,26 +147,26 @@
 
 #define ALL_ORDER_PATRONS list(/datum/patron/order/zira, \
 	/datum/patron/order/tsoridys, \
-	/datum/patron/order/malum, \
+	/datum/patron/order/nunos, \
 	/datum/patron/order/carthus, \
 	/datum/patron/order/eora, \
 	)
 
 #define ALL_CHAOS_PATRONS list(\
-	/datum/patron/chaos/dendor, \
+	/datum/patron/chaos/tamari, \
 	/datum/patron/chaos/cinella, \
-	/datum/patron/chaos/xylix, \
+	/datum/patron/chaos/kasmidian, \
 	)
 
 #define ALL_PATRONS  list(\
 	/datum/patron/light/aeternus, \
 	/datum/patron/order/tsoridys, \
-	/datum/patron/order/malum, \
+	/datum/patron/order/nunos, \
 	/datum/patron/order/carthus, \
 	/datum/patron/order/eora, \
-	/datum/patron/chaos/dendor, \
+	/datum/patron/chaos/tamari, \
 	/datum/patron/chaos/cinella, \
-	/datum/patron/chaos/xylix, \
+	/datum/patron/chaos/kasmidian, \
 	)
 
 #define PLATEHIT "plate"

@@ -25,7 +25,7 @@
 	name = "Acolyte"
 	jobtype = /datum/job/roguetown/monk
 
-	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/eora, /datum/patron/order/zira, /datum/patron/order/tsoridys, /datum/patron/chaos/cinella, /datum/patron/order/malum, /datum/patron/order/carthus, /datum/patron/chaos/xylix) // The whole Ten. Probably could delete this now, actually.
+	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/eora, /datum/patron/order/zira, /datum/patron/order/tsoridys, /datum/patron/chaos/cinella, /datum/patron/order/nunos, /datum/patron/order/carthus, /datum/patron/chaos/kasmidian) // The whole Ten. Probably could delete this now, actually.
 
 
 /datum/outfit/job/roguetown/monk/pre_equip(mob/living/carbon/human/H)
@@ -56,7 +56,7 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
 			head = /obj/item/clothing/head/roguetown/roguehood/abyssor		
-		if(/datum/patron/chaos/dendor) //Dendorites all busted. Play Druid.
+		if(/datum/patron/chaos/tamari) //Dendorites all busted. Play Druid.
 			head = /obj/item/clothing/head/roguetown/dendormask
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
@@ -74,7 +74,7 @@
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
-		if(/datum/patron/order/malum)
+		if(/datum/patron/order/nunos)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 			shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -89,7 +89,7 @@
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/white
-		if(/datum/patron/chaos/xylix)
+		if(/datum/patron/chaos/kasmidian)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/templar/xylix
@@ -123,7 +123,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/order/malum)
+		if(H.patron?.type == /datum/patron/order/nunos)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)

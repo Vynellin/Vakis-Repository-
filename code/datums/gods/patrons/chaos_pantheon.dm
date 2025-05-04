@@ -3,8 +3,8 @@
 	associated_faith = /datum/faith/chaos
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
-/datum/patron/chaos/dendor
-	name = "Placeholder Name"
+/datum/patron/chaos/tamari
+	name = "Tamari"
 	domain = "God of Life and Nature"
 	desc = "Placeholder"
 	worshippers = "Placeholder"
@@ -34,8 +34,8 @@
 		"I AM DRAWN BY THE PULL OF THE TIDE!",
 	)
 
-/datum/patron/chaos/xylix
-	name = "Placeholder"
+/datum/patron/chaos/kasmidian
+	name = "Kasmidian"
 	domain = "God of Primordial Magic"
 	desc = "Placeholder"
 	worshippers = "Placeholder"

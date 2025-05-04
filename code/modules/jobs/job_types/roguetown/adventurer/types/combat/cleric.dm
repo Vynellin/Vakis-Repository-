@@ -20,7 +20,7 @@
 	..()
 
 	// Add druidic skill for Dendor followers
-	if(istype(H.patron, /datum/patron/chaos/dendor))
+	if(istype(H.patron, /datum/patron/chaos/tamari))
 		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE)
 		to_chat(H, span_notice("As a follower of Dendor, you have innate knowledge of druidic magic."))
 
@@ -73,13 +73,13 @@
 				if(/datum/patron/chaos/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-				if(/datum/patron/chaos/dendor)
+				if(/datum/patron/chaos/tamari)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 				if(/datum/patron/order/tsoridys)
 					head = /obj/item/clothing/head/roguetown/necrahood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
-				if (/datum/patron/order/malum)
+				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
 					cloak = /obj/item/clothing/cloak/templar/malumite
 				if (/datum/patron/order/eora)
@@ -131,13 +131,13 @@
 				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-				if(/datum/patron/chaos/dendor)
+				if(/datum/patron/chaos/tamari)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 				if(/datum/patron/order/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/necra
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
-				if (/datum/patron/order/malum)
+				if (/datum/patron/order/nunos)
 					cloak = /obj/item/clothing/cloak/templar/malum
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
 				if (/datum/patron/order/eora)
@@ -146,7 +146,7 @@
 				if (/datum/patron/order/carthus)
 					cloak = /obj/item/clothing/cloak/templar/ravox
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
-				if (/datum/patron/chaos/xylix)
+				if (/datum/patron/chaos/kasmidian)
 					cloak = /obj/item/clothing/cloak/templar/xylix
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 				else
@@ -212,17 +212,17 @@
 					cloak = /obj/item/clothing/cloak/templar/noc
 				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
-				if(/datum/patron/chaos/dendor)
+				if(/datum/patron/chaos/tamari)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 				if(/datum/patron/order/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/necra
-				if (/datum/patron/order/malum)
+				if (/datum/patron/order/nunos)
 					cloak = /obj/item/clothing/cloak/templar/malum
 				if (/datum/patron/order/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
 				if (/datum/patron/order/carthus)
 					cloak = /obj/item/clothing/cloak/templar/ravox
-				if (/datum/patron/chaos/xylix)
+				if (/datum/patron/chaos/kasmidian)
 					cloak = /obj/item/clothing/cloak/templar/xylix
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
@@ -280,14 +280,14 @@
 				if(/datum/patron/chaos/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-				if(/datum/patron/chaos/dendor)
+				if(/datum/patron/chaos/tamari)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 					H.cmode_music = 'sound/music/combat_druid.ogg'
 				if(/datum/patron/order/tsoridys)
 					head = /obj/item/clothing/head/roguetown/necrahood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
-				if (/datum/patron/order/malum)
+				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
 					cloak = /obj/item/clothing/cloak/templar/malumite
 				if (/datum/patron/order/eora)
@@ -307,17 +307,17 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/noc
 		if(/datum/patron/chaos/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
-		if(/datum/patron/chaos/dendor)
+		if(/datum/patron/chaos/tamari)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 		if(/datum/patron/order/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/necra
 		if(/datum/patron/order/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-		if(/datum/patron/order/malum)
+		if(/datum/patron/order/nunos)
 			neck = /obj/item/clothing/neck/roguetown/psicross/malum
 		if(/datum/patron/order/eora)
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
-		if(/datum/patron/chaos/xylix) // Random pricross for Xylix
+		if(/datum/patron/chaos/kasmidian) // Random pricross for Xylix
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
