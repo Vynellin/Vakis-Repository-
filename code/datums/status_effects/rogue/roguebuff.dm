@@ -507,7 +507,7 @@
 	duration = 30 MINUTES // Lasts for 30 minutes, roughly an ingame day. This should be the gold standard for rituals, unless its some particularly powerul effect or one-time effect(Flylord's triage)
 	status_type = STATUS_EFFECT_REFRESH
 	effectedstats = list("perception" = 2) // This is for basic stat effects, I would consider these a 'little topping' and not what you should rlly aim for for rituals. Ideally we have cool flavor boons, rather than combat stims.
-	examine_text = "SUBJECTPRONOUN walks with Her Light!"
+	examine_text = "SUBJECTPRONOUN walks with his light!"
 	var/list/mobs_affected
 	var/obj/effect/dummy/lighting_obj/moblight/mob_light_obj
 	var/outline_colour = "#ffffff"
