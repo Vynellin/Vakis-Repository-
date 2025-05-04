@@ -7,21 +7,14 @@ SUBSYSTEM_DEF(nightshift)
 	priority = 1
 	var/current_tod = null
 
-	var/nightshift_active = FALSE
-	var/nightshift_start_time = 576000	//4pm	//702000=7:30 PM, station time
-	var/nightshift_dawn_start = 288000		//198000=    530am
-	var/nightshift_day_start = 360000		//270000=    730am
-	var/nightshift_dusk_start = 504000		//630000=    530pm
-
-	/* Default STONEKEEP config.
+	/// All of this is extremely poorly documented. I'm not entirely sure it operates on deciseconds; or.. or WHAT; honestly.
+	/// Here's what I can tell you: 
+	/// 1hr = 36000
+	/// 30m = 18000
 	var/nightshift_start_time = 756000	//9:00 PM - 2100 hrs
 	var/nightshift_dawn_start = 216000	//6:00 AM - 0600 hrs
 	var/nightshift_day_start = 324000	//9:00 AM - 0900 hrs
 	var/nightshift_dusk_start = 648000	//6:00 PM - 1800 hrs
-	*/
-
-	//1hr = 36000
-	//30m = 18000
 
 	var/nightshift_first_check = 2 SECONDS
 
