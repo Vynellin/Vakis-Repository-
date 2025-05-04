@@ -396,11 +396,11 @@
 	createditem_num = 1
 	craftdiff = 2
 
-/datum/anvil_recipe/armor/steel/astratahelm
-	name = "Astrata Helmet (+1 Steel)"
+/datum/anvil_recipe/armor/steel/aeternushelm
+	name = "Aeternus Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/astratahelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/aeternushelm
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/steel/abyssorhelm

@@ -1076,7 +1076,7 @@
 		"Madroot Red"="#AD4545",
 		"Marigold Orange"="#E2A844",
 		"Politely, Yuck"="#685542",
-		"Astrata's Yellow"="#FFFD8D",
+		"Aeternus' Yellow"="#FFFD8D",
 		"Bog Green"="#375B48",
 		"Seafoam Green"="#49938B",
 		"Woad Blue"="#395480",
@@ -1102,9 +1102,9 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/head/roguetown/helmet/heavy/astratahelm
-	name = "astrata helmet"
-	desc = "Headwear commonly worn by Templars in service to Astrata. The firstborn child's light will forever shine on within its crest."
+/obj/item/clothing/head/roguetown/helmet/heavy/aeternushelm
+	name = "aeternus helmet"
+	desc = "Headwear commonly worn by Templars in service to Aeternus. The dawn era's very beginning echoes within it's crest."
 	icon_state = "astratahelm"
 	item_state = "astratahelm"
 	emote_environment = 3

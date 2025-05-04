@@ -66,7 +66,7 @@
 			switch(H.patron?.type)
 				if(/datum/patron/light/aeternus)
 					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
 				if(/datum/patron/order/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
@@ -273,7 +273,7 @@
 			switch(H.patron?.type)
 				if(/datum/patron/light/aeternus)
 					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
 				if(/datum/patron/order/zira)
 					head =  /obj/item/clothing/head/roguetown/nochood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc

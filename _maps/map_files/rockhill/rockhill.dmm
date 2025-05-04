@@ -23341,8 +23341,8 @@
 /area/rogue/under/cavewet/bogcaves)
 "ylQ" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/suit/roguetown/shirt/robe/astrata,
-/obj/item/clothing/suit/roguetown/shirt/robe/astrata,
+/obj/item/clothing/suit/roguetown/shirt/robe/aeternus,
+/obj/item/clothing/suit/roguetown/shirt/robe/aeternus,
 /obj/item/clothing/head/roguetown/roguehood/aeternus,
 /obj/item/clothing/head/roguetown/roguehood/aeternus,
 /obj/item/clothing/suit/roguetown/shirt/robe/necra,

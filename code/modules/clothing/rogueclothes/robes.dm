@@ -14,7 +14,7 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	experimental_inhand = FALSE
 
-/obj/item/clothing/suit/roguetown/shirt/robe/astrata
+/obj/item/clothing/suit/roguetown/shirt/robe/aeternus
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 	name = "sun robe"
 	desc = ""

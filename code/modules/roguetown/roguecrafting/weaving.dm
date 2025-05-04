@@ -47,9 +47,9 @@
 	craftdiff = 1
 	sellprice = 30
 
-/datum/crafting_recipe/roguetown/weaving/astratarobe
-	name = "astrata robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/astrata)
+/datum/crafting_recipe/roguetown/weaving/aeternus
+	name = "aeternus robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/aeternus)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
@@ -71,7 +71,7 @@
 	craftdiff = 3
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/astratahood
+/datum/crafting_recipe/roguetown/weaving/aeternushood
 	name = "solar hood (2 cloth, 1 silk)"
 	result = list(/obj/item/clothing/head/roguetown/roguehood/aeternus)
 	reqs = list(/obj/item/natural/cloth = 2,

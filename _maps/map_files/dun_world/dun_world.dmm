@@ -42363,8 +42363,8 @@
 "rAo" = (
 /obj/effect/decal/cobbleedge,
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/astrata,
-/obj/item/clothing/suit/roguetown/shirt/robe/astrata,
+/obj/item/clothing/suit/roguetown/shirt/robe/aeternus,
+/obj/item/clothing/suit/roguetown/shirt/robe/aeternus,
 /obj/item/clothing/head/roguetown/roguehood/aeternus,
 /obj/item/clothing/head/roguetown/roguehood/aeternus,
 /obj/structure/fluff/walldeco/psybanner{
