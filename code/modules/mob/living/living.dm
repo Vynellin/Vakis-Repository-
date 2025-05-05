@@ -1769,7 +1769,7 @@
 			if(M.mob_timers[MT_INVISIBILITY] > world.time) // Check if the mob is affected by the invisibility spell
 				if(mind?.get_skill_level(/datum/skill/misc/tracking) <= SKILL_LEVEL_EXPERT)	//Master or Legendary from this point
 					continue
-			if(M.mind)	//We find the biggest value and use that, to account for mages / Nocites / sneaky people all at once
+			if(M.mind)	//We find the biggest value and use that, to account for mages / Zirites / sneaky people all at once
 				var/target_sneak = M.mind?.get_skill_level(/datum/skill/misc/sneaking)
 				var/target_holy = M.mind?.get_skill_level(/datum/skill/magic/holy)
 				var/target_arcyne = M.mind?.get_skill_level(/datum/skill/magic/arcane)

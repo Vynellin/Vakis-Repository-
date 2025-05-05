@@ -18,8 +18,8 @@
 	desc = ""
 	icon_state = "drunk"
 
-/atom/movable/screen/alert/status_effect/buff/drunknoc
-	name = "Noc-Shine Strength"
+/atom/movable/screen/alert/status_effect/buff/drunkmoonshine
+	name = "Moonshine Strength"
 	desc = ""
 	icon_state = "drunk"
 
@@ -29,9 +29,9 @@
 	effectedstats = list("intelligence" = 5)
 	duration = 2 MINUTES
 
-/datum/status_effect/buff/nocshine
-	id = "nocshine"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/drunknoc
+/datum/status_effect/buff/moonshine
+	id = "moonshine"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/drunkmoonshine
 	effectedstats = list("strength" = 1, "endurance" = 1)
 	duration = 2 MINUTES
 
@@ -540,7 +540,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/moonlightdance
 	name = "Moonlight Dance"
-	desc = "Noc's stony touch lay upon my mind, bringing me wisdom."
+	desc = "Zira's stony touch lay upon my mind, bringing me wisdom."
 	icon_state = "moonlightdance"
 
 

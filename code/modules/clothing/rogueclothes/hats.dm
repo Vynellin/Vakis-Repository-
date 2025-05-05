@@ -1225,9 +1225,9 @@
 			pic2.color = get_altdetail_color()
 		add_overlay(pic2)
 
-/obj/item/clothing/head/roguetown/helmet/heavy/nochelm
-	name = "noc helmet"
-	desc = "Headwear commonly worn by Templars in service to Noc. Without the night there can be no day, without Noc there can be no light in the dark hours."
+/obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
+	name = "Zira helmet"
+	desc = "Headwear commonly worn by Templars in service to Zira. Without the night there can be no day, without Zira there can be no light in the dark hours."
 	icon_state = "nochelm"
 	item_state = "nochelm"
 	emote_environment = 3

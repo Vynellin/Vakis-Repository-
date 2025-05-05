@@ -55,7 +55,7 @@
 	cost = 150
 	contains = list(/obj/structure/fermenting_barrel/murkwine)
 
-/datum/supply_pack/rogue/bulk/nocshine
+/datum/supply_pack/rogue/bulk/moonshine
 	name = "Barrel of Moonlight Noc Shine"
 	cost = 150
-	contains = list(/obj/structure/fermenting_barrel/nocshine)
+	contains = list(/obj/structure/fermenting_barrel/moonshine)

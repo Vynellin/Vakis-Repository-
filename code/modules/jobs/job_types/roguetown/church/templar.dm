@@ -179,7 +179,7 @@
 			cloak = /obj/item/clothing/cloak/templar/eoran
 		if(/datum/patron/order/zira)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/zira
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
 		if(/datum/patron/order/carthus)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox

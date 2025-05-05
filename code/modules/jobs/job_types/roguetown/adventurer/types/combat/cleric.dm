@@ -127,7 +127,7 @@
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
 				if(/datum/patron/order/zira)
 					cloak = /obj/item/clothing/cloak/templar/zira
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
