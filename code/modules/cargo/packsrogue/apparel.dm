@@ -74,11 +74,11 @@
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/ravox,)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonnecra
-	name = "Necran Amulet"
+/datum/supply_pack/rogue/apparel/crosses/divinepantheontsoridys
+	name = "Tsoridian Amulet"
 	cost = 10
 	contains = list(
-					/obj/item/clothing/neck/roguetown/psicross/necra,)
+					/obj/item/clothing/neck/roguetown/psicross/tsoridys,)
 
 /datum/supply_pack/rogue/apparel/crosses/divinepantheondendor
 	name = "Dendor Amulet"
@@ -93,7 +93,7 @@
 					/obj/item/clothing/neck/roguetown/psicross/abyssor,)
 
 /datum/supply_pack/rogue/apparel/crosses/divinepantheonnoc
-	name = "Zira Amulet"
+	name = "Ziran Amulet"
 	cost = 10
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/zira,)

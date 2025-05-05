@@ -75,7 +75,7 @@
 			if(isvampire)
 				vamp_prob -= 59
 			if(prob(vamp_prob))
-				L.visible_message("<span class='warning'>[L] has been churned by Necra's grip!", "<span class='danger'>I've been churned by Necra's grip!")
+				L.visible_message("<span class='warning'>[L] has been churned by Tsoridys' grip!", "<span class='danger'>I've been churned by Tsoridys' grip!")
 				explosion(get_turf(L), light_impact_range = 1, flame_range = 1, smoke = FALSE)
 				L.Stun(50)
 			else

@@ -103,17 +103,17 @@
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/necrarobe
-	name = "necra robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/necra)
+/datum/crafting_recipe/roguetown/weaving/tsoridysrobe
+	name = "tsoridys robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/necrahood
-	name = "necra hood (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/head/roguetown/necrahood)
+/datum/crafting_recipe/roguetown/weaving/tsoridyshood
+	name = "tsoridys hood (2 cloth, 1 silk)"
+	result = list(/obj/item/clothing/head/roguetown/tsoridyshood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3

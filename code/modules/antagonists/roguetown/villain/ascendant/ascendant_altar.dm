@@ -12,7 +12,7 @@ GLOBAL_LIST_INIT(psydon_pool, list(
 
 //doing it this way came to me in a dream. find out which items ASCENDANT will be getting today
 GLOBAL_LIST_INIT(capstone_pool, list(
-	/obj/item/rogueore/coal, //= "minecraft item",
+	/obj/item/rogueore/coal,
 	/obj/item/rogueore/gold,
 	/obj/item/rogueore/iron
 ))

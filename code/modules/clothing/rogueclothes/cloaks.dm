@@ -282,7 +282,7 @@
 	color = "#4B5637"
 	detail_color = "#3D1D1C"
 
-/obj/item/clothing/cloak/tabard/crusader/necra
+/obj/item/clothing/cloak/tabard/crusader/tsoridys
 	color = "#222223"
 	detail_color = "#CACBC5"
 
@@ -1233,9 +1233,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/necra
-	name = "necra tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Necra on it."
+/obj/item/clothing/cloak/templar/tsoridys
+	name = "tsoridys tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Tsoridys on it."
 	icon_state = "tabard_necra"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN

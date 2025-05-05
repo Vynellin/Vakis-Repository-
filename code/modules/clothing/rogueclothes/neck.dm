@@ -281,8 +281,8 @@
 	desc = ""
 	icon_state = "dendor"
 
-/obj/item/clothing/neck/roguetown/psicross/necra
-	name = "amulet of Necra"
+/obj/item/clothing/neck/roguetown/psicross/tsoridys
+	name = "amulet of Tsoridys"
 	desc = ""
 	icon_state = "necra"
 

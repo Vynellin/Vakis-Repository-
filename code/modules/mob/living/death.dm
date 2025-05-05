@@ -125,7 +125,7 @@
 
 	set_typing_indicator(FALSE)
 
-	// AZURE EDIT BEGIN: necra acolyte/priest deathsight trait
+	// AZURE EDIT BEGIN: tsoridys acolyte/priest deathsight trait
 	// this was a player that just died, so do the honors
 	if (client)
 		if (!gibbed)

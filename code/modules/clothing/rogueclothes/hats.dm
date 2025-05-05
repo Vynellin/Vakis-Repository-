@@ -129,7 +129,7 @@
 	dynamic_hair_suffix = ""
 	sewrepair = TRUE
 
-/obj/item/clothing/head/roguetown/necrahood
+/obj/item/clothing/head/roguetown/tsoridyshood
 	name = "death shroud"
 	color = null
 	icon_state = "necrahood"
@@ -153,9 +153,9 @@
 	toggle_icon_state = TRUE
 	max_integrity = 100
 
-/obj/item/clothing/head/roguetown/necramask
+/obj/item/clothing/head/roguetown/tsoridysmask
 	name = "death mask"
-	desc = "A hood with a decorated jaw bone at the chin,normally worn by some followers of Necra as a form of devotion"
+	desc = "A hood with a decorated jaw bone at the chin,normally worn by some followers of Tsoridys as a form of devotion."
 	color = null
 	icon_state = "deathface"
 	item_state = "deathface"
@@ -1237,9 +1237,9 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
-	name = "necra helmet"
-	desc = "Headwear commonly worn by Templars in service to Necra. Let its skeletal features remind you of the only thing which is guaranteed in life. You will die."
+/obj/item/clothing/head/roguetown/helmet/heavy/tsoridyshelm
+	name = "tsoridys helmet"
+	desc = "Headwear commonly worn by Templars in service to Tsoridys. Let its skeletal features remind you of the only thing which is guaranteed in life. You will die."
 	icon_state = "necrahelm"
 	item_state = "necrahelm"
 	emote_environment = 3

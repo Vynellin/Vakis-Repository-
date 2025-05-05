@@ -213,9 +213,9 @@
 	reqs = list(/obj/item/natural/cloth = 2)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/sewing/necramask
+/datum/crafting_recipe/roguetown/sewing/tsoridysmask
 	name = "death mask (1 fibers, 2 cloth, 1 bone)"
-	result = list(/obj/item/clothing/head/roguetown/necramask)
+	result = list(/obj/item/clothing/head/roguetown/tsoridysmask)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1,
 				/obj/item/natural/bone = 1)
@@ -277,9 +277,9 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/necra
-	name = "tabard, necra (1 fibers, 3 cloth)"
-	result = list(/obj/item/clothing/cloak/templar/necra)
+/datum/crafting_recipe/roguetown/sewing/tsoridys
+	name = "tabard, tsoridys (1 fibers, 3 cloth)"
+	result = list(/obj/item/clothing/cloak/templar/tsoridys)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3

@@ -4705,7 +4705,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/beach)
 "EP" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/orcdungeon)
 "ES" = (
@@ -6337,7 +6337,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/mazedungeon)
 "Pz" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/structure/table/wood/fancy/black,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/mazedungeon)

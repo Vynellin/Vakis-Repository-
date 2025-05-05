@@ -3447,10 +3447,10 @@
 /area/rogue/under/cave/licharena)
 "bvL" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/necra,
-/obj/item/clothing/suit/roguetown/shirt/robe/necra,
-/obj/item/clothing/head/roguetown/necrahood,
-/obj/item/clothing/head/roguetown/necrahood,
+/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys,
+/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys,
+/obj/item/clothing/head/roguetown/tsoridyshood,
+/obj/item/clothing/head/roguetown/tsoridyshood,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -5923,8 +5923,8 @@
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/neck/roguetown/psicross/zira,
 /obj/item/clothing/neck/roguetown/psicross/zira,
-/obj/item/clothing/neck/roguetown/psicross/necra,
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/item/clothing/neck/roguetown/psicross/eora,
 /obj/item/clothing/neck/roguetown/psicross/eora,
 /obj/item/clothing/neck/roguetown/psicross/dendor,
@@ -6795,7 +6795,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains)
 "cRk" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/structure/table/wood/fancy/black,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/mazedungeon)
@@ -8658,7 +8658,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/under/cave/dukecourt)
 "dIa" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/structure/table/church,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/scarymaze)
@@ -26933,8 +26933,8 @@
 /obj/item/clothing/cloak/templar/malumite,
 /obj/item/clothing/cloak/templar/aeternian,
 /obj/item/clothing/cloak/templar/aeternian,
-/obj/item/clothing/cloak/templar/necran,
-/obj/item/clothing/cloak/templar/necran,
+/obj/item/clothing/cloak/templar/tsoridian,
+/obj/item/clothing/cloak/templar/tsoridian,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -57251,7 +57251,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "xMU" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/orcdungeon)
 "xNi" = (

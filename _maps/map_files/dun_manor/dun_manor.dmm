@@ -10286,10 +10286,10 @@
 /area/rogue/indoors/town/tavern)
 "hkz" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/necra,
-/obj/item/clothing/suit/roguetown/shirt/robe/necra,
-/obj/item/clothing/head/roguetown/necrahood,
-/obj/item/clothing/head/roguetown/necrahood,
+/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys,
+/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys,
+/obj/item/clothing/head/roguetown/tsoridyshood,
+/obj/item/clothing/head/roguetown/tsoridyshood,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -18499,8 +18499,8 @@
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/neck/roguetown/psicross/zira,
 /obj/item/clothing/neck/roguetown/psicross/zira,
-/obj/item/clothing/neck/roguetown/psicross/necra,
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/item/clothing/neck/roguetown/psicross/eora,
 /obj/item/clothing/neck/roguetown/psicross/eora,
 /obj/item/clothing/neck/roguetown/psicross/dendor,
@@ -26533,8 +26533,8 @@
 /obj/item/clothing/cloak/templar/malumite,
 /obj/item/clothing/cloak/templar/aeternian,
 /obj/item/clothing/cloak/templar/aeternian,
-/obj/item/clothing/cloak/templar/necran,
-/obj/item/clothing/cloak/templar/necran,
+/obj/item/clothing/cloak/templar/tsoridian,
+/obj/item/clothing/cloak/templar/tsoridian,
 /obj/item/clothing/cloak/templar/eoran,
 /obj/item/clothing/cloak/templar/eoran,
 /obj/item/clothing/cloak/templar/eoran,

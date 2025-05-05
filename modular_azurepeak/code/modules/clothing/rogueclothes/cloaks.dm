@@ -14,11 +14,11 @@
 	desc = "Light blacks and greys, with a tinge of red, the everlasting fire of Malum's iron hammer as it strikes."
 	icon_state = "malumtabard"
 
-/obj/item/clothing/cloak/templar/necran
+/obj/item/clothing/cloak/templar/tsoridian
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	alternate_worn_layer = TABARD_LAYER
 	boobed = FALSE
-	name = "necran tabard"
+	name = "tsoridian tabard"
 	desc = "Deep dark blacks, swallowing all light as if the night itself."
 	icon_state = "necratabard"
 

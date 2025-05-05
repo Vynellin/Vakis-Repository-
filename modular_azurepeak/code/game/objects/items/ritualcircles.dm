@@ -157,13 +157,13 @@
 	name = "Rune of Storm"
 	desc = "A Holy Rune of Abyssor"
 
-/obj/structure/ritualcircle/necra
+/obj/structure/ritualcircle/tsoridys
 	name = "Rune of Death"
-	desc = "A Holy Rune of Necra"
+	desc = "A Holy Rune of Tsoridys"
 	icon_state = "necra_chalky"
 	var/deathrites = list("Undermaiden's Bargain")
 
-/obj/structure/ritualcircle/necra/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/tsoridys/attack_hand(mob/living/user)
 	if((user.patron?.type) != /datum/patron/order/tsoridys)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
@@ -195,7 +195,7 @@
 						spawn(120)
 							icon_state = "necra_chalky"
 
-/obj/structure/ritualcircle/necra/proc/undermaidenbargain(src)
+/obj/structure/ritualcircle/tsoridys/proc/undermaidenbargain(src)
 	var/ritualtargets = view(7, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
 		target.apply_status_effect(/datum/status_effect/buff/undermaidenbargain)

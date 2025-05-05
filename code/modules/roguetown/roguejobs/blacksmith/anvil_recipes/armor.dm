@@ -410,11 +410,11 @@
 	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
 	craftdiff = 3
 
-/datum/anvil_recipe/armor/steel/necrahelm
-	name = "Necra Helmet (+1 Steel)"
+/datum/anvil_recipe/armor/steel/tsoridyshelm
+	name = "Tsoridys Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridyshelm
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/steel/zirahelm

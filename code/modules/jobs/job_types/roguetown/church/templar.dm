@@ -62,8 +62,8 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/order/tsoridys)
-			neck = /obj/item/clothing/neck/roguetown/psicross/necra
-			cloak = /obj/item/clothing/cloak/templar/necran
+			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
+			cloak = /obj/item/clothing/cloak/templar/tsoridian
 		if(/datum/patron/order/eora) //Eora content from stonekeep
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
@@ -83,7 +83,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/zira,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
-			/obj/item/clothing/neck/roguetown/psicross/necra,
+			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
 			/obj/item/clothing/neck/roguetown/psicross/malum,
 			/obj/item/clothing/neck/roguetown/psicross/eora,
@@ -170,9 +170,9 @@
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/order/tsoridys)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/necra
+			wrists = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridian
-			cloak = /obj/item/clothing/cloak/templar/necran
+			cloak = /obj/item/clothing/cloak/templar/tsoridian
 		if(/datum/patron/order/eora) //Eora content from stonekeep
 			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
@@ -271,7 +271,7 @@
 			H.put_in_hands(new /obj/item/rogueweapon/sword/sabre/nockhopesh(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		if("Swift End")
-			H.put_in_hands(new /obj/item/rogueweapon/flail/sflail/necraflail(H), TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/flail/sflail/tsoridysflail(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 		if("Forgefiend")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/long/malumflamm(H), TRUE)

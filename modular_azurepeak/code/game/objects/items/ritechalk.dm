@@ -64,7 +64,7 @@
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her Embrace..."))
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/necra(step_turf)
+				new /obj/structure/ritualcircle/tsoridys(step_turf)
 		if("Rune of Love")
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her Love..."))
 			if(do_after(user, 30, src))

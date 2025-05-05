@@ -77,8 +77,8 @@
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 				if(/datum/patron/order/tsoridys)
-					head = /obj/item/clothing/head/roguetown/necrahood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
+					head = /obj/item/clothing/head/roguetown/tsoridyshood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
 					cloak = /obj/item/clothing/cloak/templar/malumite
@@ -135,8 +135,8 @@
 					cloak = /obj/item/clothing/cloak/templar/dendor
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 				if(/datum/patron/order/tsoridys)
-					cloak = /obj/item/clothing/cloak/templar/necra
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
+					cloak = /obj/item/clothing/cloak/templar/tsoridys
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridyshelm
 				if (/datum/patron/order/nunos)
 					cloak = /obj/item/clothing/cloak/templar/malum
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
@@ -215,7 +215,7 @@
 				if(/datum/patron/chaos/tamari)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 				if(/datum/patron/order/tsoridys)
-					cloak = /obj/item/clothing/cloak/templar/necra
+					cloak = /obj/item/clothing/cloak/templar/tsoridys
 				if (/datum/patron/order/nunos)
 					cloak = /obj/item/clothing/cloak/templar/malum
 				if (/datum/patron/order/eora)
@@ -285,8 +285,8 @@
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 					H.cmode_music = 'sound/music/combat_druid.ogg'
 				if(/datum/patron/order/tsoridys)
-					head = /obj/item/clothing/head/roguetown/necrahood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
+					head = /obj/item/clothing/head/roguetown/tsoridyshood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
 					cloak = /obj/item/clothing/cloak/templar/malumite
@@ -310,7 +310,7 @@
 		if(/datum/patron/chaos/tamari)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 		if(/datum/patron/order/tsoridys)
-			neck = /obj/item/clothing/neck/roguetown/psicross/necra
+			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 		if(/datum/patron/order/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 		if(/datum/patron/order/nunos)
@@ -324,7 +324,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/zira,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
-			/obj/item/clothing/neck/roguetown/psicross/necra,
+			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
 			/obj/item/clothing/neck/roguetown/psicross/malum,
 			/obj/item/clothing/neck/roguetown/psicross/eora

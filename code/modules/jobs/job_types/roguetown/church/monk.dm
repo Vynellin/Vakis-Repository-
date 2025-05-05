@@ -61,11 +61,11 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 		if(/datum/patron/order/tsoridys)
-			head = /obj/item/clothing/head/roguetown/necrahood
-			neck = /obj/item/clothing/neck/roguetown/psicross/necra
+			head = /obj/item/clothing/head/roguetown/tsoridyshood
+			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			pants = /obj/item/clothing/under/roguetown/trou/leather/mourning
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/necra
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 			shirt = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
 			cloak = /obj/item/clothing/cloak/raincloak/mortus
 		if(/datum/patron/order/eora) //Eora content from Stonekeep
@@ -102,7 +102,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/zira,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
-			/obj/item/clothing/neck/roguetown/psicross/necra,
+			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
 			/obj/item/clothing/neck/roguetown/psicross/malum,
 			/obj/item/clothing/neck/roguetown/psicross/eora,
