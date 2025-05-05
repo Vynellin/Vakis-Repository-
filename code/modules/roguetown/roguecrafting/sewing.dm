@@ -195,9 +195,9 @@
 	reqs = list(/obj/item/natural/cloth = 2)
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/sewing/nocwrappings
+/datum/crafting_recipe/roguetown/sewing/zirawrappings
 	name = "moon wrappings (2 cloth)"
-	result = list(/obj/item/clothing/wrists/roguetown/nocwrappings)
+	result = list(/obj/item/clothing/wrists/roguetown/zirawrappings)
 	reqs = list(/obj/item/natural/cloth = 2)
 	craftdiff = 2
 

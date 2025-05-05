@@ -13937,10 +13937,10 @@
 "ogC" = (
 /obj/structure/rack/rogue/shelf/big,
 /obj/structure/rack/rogue/shelf,
-/obj/item/clothing/suit/roguetown/shirt/robe/noc{
+/obj/item/clothing/suit/roguetown/shirt/robe/zira{
 	pixel_y = 12
 	},
-/obj/item/clothing/head/roguetown/nochood{
+/obj/item/clothing/head/roguetown/zirahood{
 	pixel_y = 36
 	},
 /turf/open/floor/rogue/hexstone,

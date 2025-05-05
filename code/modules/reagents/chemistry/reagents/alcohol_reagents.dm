@@ -2220,7 +2220,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	
 
 
-/datum/reagent/consumable/ethanol/beer/moonshine // wait, no, NOCSHINE
+/datum/reagent/consumable/ethanol/beer/moonshine // i'm not calling it zirashine
 	name = "moonshine"
 	boozepwr = 70  // YEEEEEHAAAWWWWWW
 	taste_description = "what might be my throat melting and nose hair burning"

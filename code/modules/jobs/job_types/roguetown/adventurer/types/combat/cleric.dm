@@ -68,8 +68,8 @@
 					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
 				if(/datum/patron/order/zira)
-					head =  /obj/item/clothing/head/roguetown/nochood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
+					head =  /obj/item/clothing/head/roguetown/zirahood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/zira
 				if(/datum/patron/chaos/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
@@ -275,8 +275,8 @@
 					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
 				if(/datum/patron/order/zira)
-					head =  /obj/item/clothing/head/roguetown/nochood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
+					head =  /obj/item/clothing/head/roguetown/zirahood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/zira
 				if(/datum/patron/chaos/cinella)
 					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor

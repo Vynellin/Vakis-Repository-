@@ -43,11 +43,11 @@
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
 		if(/datum/patron/order/zira)
-			head = /obj/item/clothing/head/roguetown/nochood
+			head = /obj/item/clothing/head/roguetown/zirahood
 			neck = /obj/item/clothing/neck/roguetown/psicross/zira
-			wrists = /obj/item/clothing/wrists/roguetown/nocwrappings
+			wrists = /obj/item/clothing/wrists/roguetown/zirawrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/noc
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/zira
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
 		if(/datum/patron/chaos/cinella) // the deep calls!
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
