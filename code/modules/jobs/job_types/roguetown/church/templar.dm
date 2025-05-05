@@ -171,7 +171,7 @@
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/order/tsoridys)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/necra
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/necran
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridian
 			cloak = /obj/item/clothing/cloak/templar/necran
 		if(/datum/patron/order/eora) //Eora content from stonekeep
 			wrists = /obj/item/clothing/neck/roguetown/psicross/eora

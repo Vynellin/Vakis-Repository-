@@ -20,9 +20,9 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/clothing/head/roguetown/helmet/heavy/necran
-	name = "necran helmet"
-	desc = "The darkest of blacks, this hooded helm is reminiscent of an executioner's head, striking fear into those who look upon it that they too may soon face the undermaiden."
+/obj/item/clothing/head/roguetown/helmet/heavy/tsoridian
+	name = "tsoridian helmet"
+	desc = "The darkest of blacks, this hooded helm is reminiscent of an executioner's hood."
 	icon_state = "necranhelm"
 	item_state = "necranhelm"
 	emote_environment = 3
