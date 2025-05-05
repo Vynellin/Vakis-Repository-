@@ -63,13 +63,13 @@
 // If you want to review a more complicated one, Undermaiden's Bargain is probs the most complicated of the starting set. - Have fun! - Onutsio 🏳️‍⚧️
 
 
-/obj/structure/ritualcircle/noc
+/obj/structure/ritualcircle/zira
 	name = "Rune of the Moon"
 	icon_state = "noc_chalky"
-	desc = "A Holy Rune of Noc"
+	desc = "A Holy Rune of Zira"
 	var/lunarrites = list("Moonlight Dance") // list for more to be added later
 
-/obj/structure/ritualcircle/noc/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/zira/attack_hand(mob/living/user)
 	if((user.patron?.type) != /datum/patron/order/zira)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
@@ -83,17 +83,17 @@
 	switch(riteselection) // put ur rite selection here
 		if("Moonlight Dance")
 			if(do_after(user, 50))
-				user.say("I beseech the he-form of the Twinned God!!")
+				user.say("I beseech the goddess of twilight's end!!")
 				if(do_after(user, 50))
-					user.say("To bring Wisdom to a world of naught!!")
+					user.say("Bring now, upon me, your light and refraction!!")
 					if(do_after(user, 50))
-						user.say("Place your gaze upon me, oh wise one!!")
-						to_chat(user,span_cultsmall("The waning half of the Twin-God carries but one eye. With some effort, it can be drawn upon supplicants."))
+						user.say("Place your gaze upon me, oh hallowed one!!")
+						to_chat(user,span_cultsmall("I feel the chill of the night creep against me... her gaze now affixed upon me."))
 						playsound(loc, 'sound/magic/holyshield.ogg', 80, FALSE, -1)
 						moonlightdance(src)
 						user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
 
-/obj/structure/ritualcircle/noc/proc/moonlightdance(src)
+/obj/structure/ritualcircle/zira/proc/moonlightdance(src)
 	var/ritualtargets = view(7, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
 		target.apply_status_effect(/datum/status_effect/buff/moonlightdance)

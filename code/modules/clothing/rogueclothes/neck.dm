@@ -266,8 +266,8 @@
 	desc = ""
 	icon_state = "astrata"
 
-/obj/item/clothing/neck/roguetown/psicross/noc
-	name = "amulet of Noc"
+/obj/item/clothing/neck/roguetown/psicross/zira
+	name = "amulet of Zira"
 	desc = ""
 	icon_state = "noc"
 

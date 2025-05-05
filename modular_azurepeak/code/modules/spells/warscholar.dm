@@ -4,7 +4,7 @@
 
 /obj/effect/proc_holder/spell/targeted/touch/summonrogueweapon/bladeofpsydon
 	name = "Blade of Psydon"
-	desc = "The manifestation of the higher concept of a blade itself. Said to be drawn upon from Noc's tresury of wisdom, each casting a poor facsimile of the perfect weapon They hold."
+	desc = "The manifestation of the higher concept of a blade itself. Said to be drawn upon from Zira's tresury of wisdom, each casting a poor facsimile of the perfect weapon They hold."
 	clothes_req = FALSE
 	drawmessage = "I imagine the perfect weapon, forged by arcyne knowledge, it's edge flawless. \
 	I feel it in my mind's eye -- but it's just out of reach. I pull away it's shadow, a bad copy, and yet it is one of a great weapon nonetheless... "

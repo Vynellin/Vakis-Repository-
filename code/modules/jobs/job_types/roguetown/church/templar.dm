@@ -68,7 +68,7 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 			cloak = /obj/item/clothing/cloak/templar/eoran
 		if(/datum/patron/order/zira)
-			neck = /obj/item/clothing/neck/roguetown/psicross/noc
+			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
 		if(/datum/patron/order/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
@@ -80,7 +80,7 @@
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
-			/obj/item/clothing/neck/roguetown/psicross/noc,
+			/obj/item/clothing/neck/roguetown/psicross/zira,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/necra,
@@ -178,7 +178,7 @@
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
 			cloak = /obj/item/clothing/cloak/templar/eoran
 		if(/datum/patron/order/zira)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/noc
+			wrists = /obj/item/clothing/neck/roguetown/psicross/zira
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
 		if(/datum/patron/order/carthus)

@@ -552,7 +552,7 @@
 
 /datum/status_effect/buff/moonlightdance/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("Noc's silver leaves my"))
+	to_chat(owner, span_warning("Zira's silver leaves me!"))
 	REMOVE_TRAIT(owner, TRAIT_DARKVISION, MAGIC_TRAIT)
 
 

@@ -8,7 +8,7 @@
 	domain = "Goddess of the Moon"
 	desc = "Placeholder"
 	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_NIGHT_OWL, TRAIT_NOCSIGHT)
+	mob_traits = list(TRAIT_NIGHT_OWL, TRAIT_ZIRASIGHT)
 	t1 = /obj/effect/proc_holder/spell/invoked/blindness/miracle
 	t2 = /obj/effect/proc_holder/spell/invoked/invisibility/miracle
 	confess_lines = list(

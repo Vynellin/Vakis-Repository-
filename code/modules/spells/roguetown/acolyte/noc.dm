@@ -1,4 +1,4 @@
-// Noc Spells
+// Zira Spells
 /obj/effect/proc_holder/spell/invoked/blindness
 	name = "Blindness"
 	desc = "Direct a mote of living darkness to temporarily blind another."
@@ -20,7 +20,7 @@
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	chargedrain = 0
 	chargetime = 0
-	invocation = "Noc blinds thee of thy sins!"
+	invocation = "Zira blinds thee of thy sins!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	associated_skill = /datum/skill/magic/holy
 	devotion_cost = 15

@@ -14,8 +14,8 @@
 	t3 = /obj/effect/proc_holder/spell/targeted/conjure_glowshroom
 	t4 = /obj/effect/proc_holder/spell/self/howl/call_of_the_moon
 	confess_lines = list(
-		"DENDOR PROVIDES!",
-		"THE TREEFATHER BRINGS BOUNTY!",
+		"TAMARI GIFTS US!",
+		"NATURE'S WILDS CALL TO ME!",
 		"I ANSWER THE CALL OF THE WILD!",
 	)
 
@@ -43,13 +43,7 @@
 	t1 = /obj/effect/proc_holder/spell/invoked/wheel
 	t2 = /obj/effect/proc_holder/spell/invoked/mockery
 	confess_lines = list(
-		"AETERNUS' LIGHT!",
-		"NOC IS NIGHT!",
-		"DENDOR PROVIDES!",
-		"ABYSSOR COMMANDS THE WAVES!",
-		"RAVOX IS JUSTICE!",
-		"ALL SOULS FIND THEIR WAY TO NECRA!",
-		"HAHAHAHA! AHAHAHA! HAHAHAHA!",
-		"MALUM IS MY MUSE!",
-		"EORA BRINGS US TOGETHER!",
+		"I SEEK KNOWLEDGE OF THE ARCANE!",
+		"IN KASMIDIAN'S WAKE!",
+		"I SEEK MASTERY OF THE ELEMENTS!!",
 	)

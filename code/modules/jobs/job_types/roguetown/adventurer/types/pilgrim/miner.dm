@@ -50,4 +50,4 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 2)
 		H.change_stat("fortune", 2)
-		ADD_TRAIT(H, TRAIT_NOCSIGHT, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_ZIRASIGHT, TRAIT_GENERIC)

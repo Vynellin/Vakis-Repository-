@@ -38,7 +38,7 @@
 				if (GLOB.tod == "day")
 					conditional_buff = TRUE
 					situational_bonus = 2
-				// Day is 1/4th as long as night. Noc priests get a bonus for four times as long and during peak conflict hours, thus Aeternians should have more powerful heals
+				// While day and night share timings, most antagonists and those 'uncouth' operate at night -- thusly religious healing should wane at the hour.
 			if(/datum/patron/order/zira)
 				message_out = span_info("A shroud of soft moonlight falls upon [target]!")
 				message_self = span_notice("I'm shrouded in gentle moonlight!")

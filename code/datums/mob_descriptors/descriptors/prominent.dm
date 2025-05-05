@@ -56,15 +56,6 @@
 	name = "Custom #2"
 	custom_index = 2
 
-/datum/mob_descriptor/prominent/hunched_over
-	name = "Hunched Over"
-	verbage = "is"
-
-/datum/mob_descriptor/prominent/crooked_nose
-	name = "Crooked Nose"
-	verbage = "%HAVE%"
-	prefix = "a"
-
 /datum/mob_descriptor/prominent/drooling
 	name = "Drooling"
 	verbage = "is"

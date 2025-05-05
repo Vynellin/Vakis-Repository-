@@ -5921,8 +5921,8 @@
 /area/rogue/outdoors/mountains/decap)
 "czt" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/neck/roguetown/psicross/noc,
-/obj/item/clothing/neck/roguetown/psicross/noc,
+/obj/item/clothing/neck/roguetown/psicross/zira,
+/obj/item/clothing/neck/roguetown/psicross/zira,
 /obj/item/clothing/neck/roguetown/psicross/necra,
 /obj/item/clothing/neck/roguetown/psicross/necra,
 /obj/item/clothing/neck/roguetown/psicross/eora,
@@ -11415,7 +11415,7 @@
 /area/rogue/under/town/basement)
 "eMu" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/noc,
+/obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/cave/mazedungeon)
 "eMv" = (
@@ -57140,7 +57140,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach/forest)
 "xIY" = (
-/obj/item/clothing/neck/roguetown/psicross/noc,
+/obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "xJq" = (

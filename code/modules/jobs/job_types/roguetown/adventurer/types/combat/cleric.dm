@@ -126,7 +126,7 @@
 					cloak = /obj/item/clothing/cloak/templar/aeternus
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
 				if(/datum/patron/order/zira)
-					cloak = /obj/item/clothing/cloak/templar/noc
+					cloak = /obj/item/clothing/cloak/templar/zira
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
 				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
@@ -209,7 +209,7 @@
 				if(/datum/patron/light/aeternus)
 					cloak = /obj/item/clothing/cloak/templar/aeternus
 				if(/datum/patron/order/zira)
-					cloak = /obj/item/clothing/cloak/templar/noc
+					cloak = /obj/item/clothing/cloak/templar/zira
 				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/abyssor
 				if(/datum/patron/chaos/tamari)
@@ -304,7 +304,7 @@
 		if(/datum/patron/light/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 		if(/datum/patron/order/zira)
-			neck = /obj/item/clothing/neck/roguetown/psicross/noc
+			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 		if(/datum/patron/chaos/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
 		if(/datum/patron/chaos/tamari)
@@ -321,7 +321,7 @@
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
-			/obj/item/clothing/neck/roguetown/psicross/noc,
+			/obj/item/clothing/neck/roguetown/psicross/zira,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/necra,

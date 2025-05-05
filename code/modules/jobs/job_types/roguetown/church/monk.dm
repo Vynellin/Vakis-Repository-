@@ -44,7 +44,7 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
 		if(/datum/patron/order/zira)
 			head = /obj/item/clothing/head/roguetown/nochood
-			neck = /obj/item/clothing/neck/roguetown/psicross/noc
+			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 			wrists = /obj/item/clothing/wrists/roguetown/nocwrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/noc
@@ -99,7 +99,7 @@
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
-			/obj/item/clothing/neck/roguetown/psicross/noc,
+			/obj/item/clothing/neck/roguetown/psicross/zira,
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/necra,

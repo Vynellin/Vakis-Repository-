@@ -1205,9 +1205,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/noc
-	name = "noc tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Noc on it."
+/obj/item/clothing/cloak/templar/zira
+	name = "zira tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Zira on it."
 	icon_state = "tabard_noc"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN

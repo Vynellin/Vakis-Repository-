@@ -757,7 +757,7 @@
 		sight |= (SEE_TURFS|SEE_MOBS|SEE_OBJS)
 		see_in_dark = max(see_in_dark, 8)
 
-	if(HAS_TRAIT(src, TRAIT_NOCSIGHT))
+	if(HAS_TRAIT(src, TRAIT_ZIRASIGHT))
 		lighting_alpha = min(lighting_alpha, LIGHTING_PLANE_ALPHA_NOCVISION)
 		see_in_dark = max(see_in_dark, 8)
 
