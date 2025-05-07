@@ -24,8 +24,8 @@
 	domain = "Goddess of the Seas"
 	desc = "Placeholder"
 	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_ABYSSOR_SWIM, TRAIT_SEA_DRINKER)
-	t1 = /obj/effect/proc_holder/spell/invoked/abyssor_bends
+	mob_traits = list(TRAIT_CINELLA_SWIM, TRAIT_SEA_DRINKER)
+	t1 = /obj/effect/proc_holder/spell/invoked/cinella_bends
 	t2 = /obj/effect/proc_holder/spell/invoked/abyssheal
 	t3 = /obj/effect/proc_holder/spell/invoked/call_mossback
 	confess_lines = list(

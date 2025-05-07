@@ -513,7 +513,7 @@
 /*	.................   Plated fryfish   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "Cinella's bounty, make sure to eat the eyes!"
 	icon_state = "carpcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'

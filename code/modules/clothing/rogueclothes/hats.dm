@@ -138,9 +138,9 @@
 	dynamic_hair_suffix = ""
 	sewrepair = TRUE
 
-/obj/item/clothing/head/roguetown/roguehood/abyssor
+/obj/item/clothing/head/roguetown/roguehood/cinella
 	name = "depths hood"
-	desc = "A hood worn by the followers of Abyssor, with a unique, coral-shaped mask. How do they even see out of this?"
+	desc = "A hood worn by the followers of Cinella, with a unique, coral-shaped mask. How do they even see out of this?"
 	color = null
 	icon_state = "abyssorhood"
 	item_state = "abyssorhood"
@@ -1256,9 +1256,9 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
-	name = "abyssorite helmet"
-	desc = "A helmet commonly worn by Templars in service to Abyssor. It evokes imagery of the sea with a menacing crustacean visage."
+/obj/item/clothing/head/roguetown/helmet/heavy/cinellagreathelm
+	name = "cinnelian helmet"
+	desc = "A helmet commonly worn by Templars in service to Cinella. It evokes imagery of the sea with a menacing crustacean visage."
 	icon_state = "abyssorgreathelm"
 	item_state = "abyssorgreathelm"
 	emote_environment = 3

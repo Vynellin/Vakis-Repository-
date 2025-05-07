@@ -33,9 +33,9 @@
 	var/picked
 	var/overarmor = TRUE
 
-/obj/item/clothing/cloak/abyssortabard
-	name = "abyssorite tabard"
-	desc = "A tabard worn by Abyssorite devouts."
+/obj/item/clothing/cloak/cinellatabard
+	name = "cinellian tabard"
+	desc = "A tabard worn by Cinellian devouts."
 	color = null
 	icon_state = "abyssortabard"
 	item_state = "abyssortabard"
@@ -47,7 +47,7 @@
 	flags_inv = HIDECROTCH|HIDEBOOB
 	var/overarmor = TRUE
 
-/obj/item/clothing/cloak/abyssortabard/MiddleClick(mob/user)
+/obj/item/clothing/cloak/cinellatabard/MiddleClick(mob/user)
 	overarmor = !overarmor
 	to_chat(user, span_info("I [overarmor ? "wear the tabard over my armor" : "wear the tabard under my armor"]."))
 	if(overarmor)
@@ -274,7 +274,7 @@
 	color = CLOTHING_RED
 	detail_color = CLOTHING_YELLOW
 
-/obj/item/clothing/cloak/tabard/crusader/abyssor
+/obj/item/clothing/cloak/tabard/crusader/cinella
 	color = "#373f69"
 	detail_color = "#974305"
 
@@ -1247,9 +1247,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/abyssor
-	name = "abyssor tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Abyssor on it."
+/obj/item/clothing/cloak/templar/cinella
+	name = "cinella tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Cinella on it."
 	icon_state = "tabard_abyssor"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1262,7 +1262,7 @@
 	flags_inv = HIDECROTCH|HIDEBOOB
 
 /obj/item/clothing/cloak/templar/nunos
-	name = " tabard"
+	name = "nunos tabard"
 	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Nunos on it."
 	icon_state = "tabard_malum"
 	alternate_worn_layer = TABARD_LAYER

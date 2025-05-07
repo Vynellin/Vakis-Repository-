@@ -86,11 +86,11 @@
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/dendor,)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonabyssor
-	name = "Abyssor Amulet"
+/datum/supply_pack/rogue/apparel/crosses/divinepantheoncinella
+	name = "Cinella Amulet"
 	cost = 10
 	contains = list(
-					/obj/item/clothing/neck/roguetown/psicross/abyssor,)
+					/obj/item/clothing/neck/roguetown/psicross/cinella,)
 
 /datum/supply_pack/rogue/apparel/crosses/orderpantheonzira
 	name = "Ziran Amulet"

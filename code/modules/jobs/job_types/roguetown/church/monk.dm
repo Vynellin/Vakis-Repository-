@@ -53,9 +53,9 @@
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			pants = /obj/item/clothing/under/roguetown/tights
-			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-			head = /obj/item/clothing/head/roguetown/roguehood/abyssor		
+			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
+			head = /obj/item/clothing/head/roguetown/roguehood/cinella		
 		if(/datum/patron/chaos/tamari) //Dendorites all busted. Play Druid.
 			head = /obj/item/clothing/head/roguetown/dendormask
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
@@ -100,7 +100,7 @@
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
 			/obj/item/clothing/neck/roguetown/psicross/zira,
-			/obj/item/clothing/neck/roguetown/psicross/abyssor,
+			/obj/item/clothing/neck/roguetown/psicross/cinella,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/carthus,

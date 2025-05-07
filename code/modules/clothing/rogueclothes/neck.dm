@@ -271,8 +271,8 @@
 	desc = ""
 	icon_state = "noc"
 
-/obj/item/clothing/neck/roguetown/psicross/abyssor
-	name = "amulet of Abyssor"
+/obj/item/clothing/neck/roguetown/psicross/cinella
+	name = "amulet of Cinella"
 	desc = ""
 	icon_state = "abyssor"
 

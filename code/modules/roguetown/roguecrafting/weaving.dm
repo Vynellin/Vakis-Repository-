@@ -55,17 +55,17 @@
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/abyssorrobe
-	name = "abyssor robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/abyssor)
+/datum/crafting_recipe/roguetown/weaving/cinellarobe
+	name = "cinella robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/cinella)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/abyssorhood
-	name = "abyssor hood (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/head/roguetown/roguehood/abyssor)
+/datum/crafting_recipe/roguetown/weaving/cinellahood
+	name = "cinella hood (2 cloth, 1 silk)"
+	result = list(/obj/item/clothing/head/roguetown/roguehood/cinella)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3

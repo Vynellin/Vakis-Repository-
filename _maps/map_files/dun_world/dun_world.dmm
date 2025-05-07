@@ -5935,8 +5935,8 @@
 /obj/item/clothing/neck/roguetown/psicross/carthus,
 /obj/item/clothing/neck/roguetown/psicross/nunos,
 /obj/item/clothing/neck/roguetown/psicross/nunos,
-/obj/item/clothing/neck/roguetown/psicross/abyssor,
-/obj/item/clothing/neck/roguetown/psicross/abyssor,
+/obj/item/clothing/neck/roguetown/psicross/cinella,
+/obj/item/clothing/neck/roguetown/psicross/cinella,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -15475,10 +15475,10 @@
 /area/rogue/under/town/basement)
 "gwQ" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/abyssor,
-/obj/item/clothing/suit/roguetown/shirt/robe/abyssor,
-/obj/item/clothing/head/roguetown/roguehood/abyssor,
-/obj/item/clothing/head/roguetown/roguehood/abyssor,
+/obj/item/clothing/suit/roguetown/shirt/robe/cinella,
+/obj/item/clothing/suit/roguetown/shirt/robe/cinella,
+/obj/item/clothing/head/roguetown/roguehood/cinella,
+/obj/item/clothing/head/roguetown/roguehood/cinella,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -27846,7 +27846,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/tavern)
 "lCr" = (
-/obj/item/clothing/neck/roguetown/psicross/abyssor,
+/obj/item/clothing/neck/roguetown/psicross/cinella,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "lCt" = (

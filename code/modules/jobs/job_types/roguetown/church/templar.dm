@@ -56,8 +56,8 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			cloak = /obj/item/clothing/cloak/tabard/crusader/aeternus
 		if(/datum/patron/chaos/cinella)
-			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
-			cloak = /obj/item/clothing/cloak/abyssortabard
+			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
+			cloak = /obj/item/clothing/cloak/cinellatabard
 		if(/datum/patron/chaos/tamari)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
@@ -81,7 +81,7 @@
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
 			/obj/item/clothing/neck/roguetown/psicross/zira,
-			/obj/item/clothing/neck/roguetown/psicross/abyssor,
+			/obj/item/clothing/neck/roguetown/psicross/cinella,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/carthus,
@@ -142,7 +142,7 @@
 		if("Close Caress")
 			H.put_in_hands(new /obj/item/rogueweapon/knuckles/eora(H), TRUE)
 		if("Barotrauma")
-			H.put_in_hands(new /obj/item/rogueweapon/katar/abyssor(H), TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/katar/cinella(H), TRUE)
 
 /datum/advclass/templar/crusader
 	name = "Templar"
@@ -162,9 +162,9 @@
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
 			cloak = /obj/item/clothing/cloak/templar/aeternian
 		if(/datum/patron/chaos/cinella)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/abyssor
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
-			cloak = /obj/item/clothing/cloak/abyssortabard
+			wrists = /obj/item/clothing/neck/roguetown/psicross/cinella
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/cinellagreathelm
+			cloak = /obj/item/clothing/cloak/cinellatabard
 		if(/datum/patron/chaos/tamari)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm

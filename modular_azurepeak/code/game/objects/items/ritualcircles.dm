@@ -153,9 +153,9 @@
 	name = "Rune of Forge"
 	desc = "A Holy Rune of Nunos"
 
-/obj/structure/ritualcircle/abyssor
+/obj/structure/ritualcircle/cinella
 	name = "Rune of Storm"
-	desc = "A Holy Rune of Abyssor"
+	desc = "A Holy Rune of Cinella"
 
 /obj/structure/ritualcircle/tsoridys
 	name = "Rune of Death"

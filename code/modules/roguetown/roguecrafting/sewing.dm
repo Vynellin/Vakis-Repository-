@@ -242,9 +242,9 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/abyssortemplartabard
-	name = "tabard, abyssorite templar (1 fibers, 3 cloth)"
-	result = list(/obj/item/clothing/cloak/abyssortabard)
+/datum/crafting_recipe/roguetown/sewing/cinellatemplartabard
+	name = "tabard, cinellian templar (1 fibers, 3 cloth)"
+	result = list(/obj/item/clothing/cloak/cinellatabard)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
@@ -284,9 +284,9 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/abyssor
-	name = "tabard, abyssor (1 fibers, 3 cloth)"
-	result = list(/obj/item/clothing/cloak/templar/abyssor)
+/datum/crafting_recipe/roguetown/sewing/cinella
+	name = "tabard, cinella (1 fibers, 3 cloth)"
+	result = list(/obj/item/clothing/cloak/templar/cinella)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3

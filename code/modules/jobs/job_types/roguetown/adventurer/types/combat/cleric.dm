@@ -71,8 +71,8 @@
 					head =  /obj/item/clothing/head/roguetown/zirahood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/zira
 				if(/datum/patron/chaos/cinella)
-					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
+					head = /obj/item/clothing/head/roguetown/roguehood/cinella
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
 				if(/datum/patron/chaos/tamari)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
@@ -129,7 +129,7 @@
 					cloak = /obj/item/clothing/cloak/templar/zira
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 				if(/datum/patron/chaos/cinella)
-					cloak = /obj/item/clothing/cloak/templar/abyssor
+					cloak = /obj/item/clothing/cloak/templar/cinella
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 				if(/datum/patron/chaos/tamari)
 					cloak = /obj/item/clothing/cloak/templar/dendor
@@ -211,7 +211,7 @@
 				if(/datum/patron/order/zira)
 					cloak = /obj/item/clothing/cloak/templar/zira
 				if(/datum/patron/chaos/cinella)
-					cloak = /obj/item/clothing/cloak/templar/abyssor
+					cloak = /obj/item/clothing/cloak/templar/cinella
 				if(/datum/patron/chaos/tamari)
 					cloak = /obj/item/clothing/cloak/templar/dendor
 				if(/datum/patron/order/tsoridys)
@@ -278,8 +278,8 @@
 					head =  /obj/item/clothing/head/roguetown/zirahood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/zira
 				if(/datum/patron/chaos/cinella)
-					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
+					head = /obj/item/clothing/head/roguetown/roguehood/cinella
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
 				if(/datum/patron/chaos/tamari)
 					head = /obj/item/clothing/head/roguetown/dendormask
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
@@ -306,7 +306,7 @@
 		if(/datum/patron/order/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 		if(/datum/patron/chaos/cinella)
-			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
+			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
 		if(/datum/patron/chaos/tamari)
 			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
 		if(/datum/patron/order/tsoridys)
@@ -322,7 +322,7 @@
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
 			/obj/item/clothing/neck/roguetown/psicross/zira,
-			/obj/item/clothing/neck/roguetown/psicross/abyssor,
+			/obj/item/clothing/neck/roguetown/psicross/cinella,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/carthus,

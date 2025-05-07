@@ -150,10 +150,10 @@
 		if ("bog", "dense bog")
 			locale = "a wretched, fetid bog"
 		if ("coast", "coastforest")
-			locale = "somewhere betwixt Abyssor's realm and Dendor's bounty"
+			locale = "somewhere betwixt Cinella's realm and Dendor's bounty"
 		if ("indoors", "shop", "physician", "outdoors", "roofs", "manor", "wizard's tower", "garrison", "dungeon cell", "baths", "tavern")
-			locale = "the city of Solaris and all its bustling souls"
+			locale = "the city of Solaris Ridhe and all its bustling souls"
 		if ("church")
-			locale = "a hallowed place, sworn to the Ten" // special bit for the church since it's sacred ground
+			locale = "a hallowed place, sworn to the Nine" // special bit for the church since it's sacred ground
 	
 	return locale
