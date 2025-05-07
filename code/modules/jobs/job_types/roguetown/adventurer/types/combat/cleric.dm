@@ -144,7 +144,7 @@
 					cloak = /obj/item/clothing/cloak/templar/eora
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
 				if (/datum/patron/order/carthus)
-					cloak = /obj/item/clothing/cloak/templar/ravox
+					cloak = /obj/item/clothing/cloak/templar/carthus
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 				if (/datum/patron/chaos/kasmidian)
 					cloak = /obj/item/clothing/cloak/templar/xylix
@@ -221,7 +221,7 @@
 				if (/datum/patron/order/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
 				if (/datum/patron/order/carthus)
-					cloak = /obj/item/clothing/cloak/templar/ravox
+					cloak = /obj/item/clothing/cloak/templar/carthus
 				if (/datum/patron/chaos/kasmidian)
 					cloak = /obj/item/clothing/cloak/templar/xylix
 				else
@@ -312,7 +312,7 @@
 		if(/datum/patron/order/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 		if(/datum/patron/order/carthus)
-			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
+			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
 		if(/datum/patron/order/nunos)
 			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
 		if(/datum/patron/order/eora)
@@ -325,7 +325,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
-			/obj/item/clothing/neck/roguetown/psicross/ravox,
+			/obj/item/clothing/neck/roguetown/psicross/carthus,
 			/obj/item/clothing/neck/roguetown/psicross/nunos,
 			/obj/item/clothing/neck/roguetown/psicross/eora
 			)

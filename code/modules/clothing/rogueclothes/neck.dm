@@ -286,8 +286,8 @@
 	desc = ""
 	icon_state = "necra"
 
-/obj/item/clothing/neck/roguetown/psicross/ravox
-	name = "amulet of Ravox"
+/obj/item/clothing/neck/roguetown/psicross/carthus
+	name = "amulet of Carthus"
 	desc = ""
 	icon_state = "ravox"
 

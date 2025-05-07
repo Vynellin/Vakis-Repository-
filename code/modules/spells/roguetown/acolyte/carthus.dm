@@ -13,7 +13,7 @@
 	associated_skill = /datum/skill/magic/holy
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/timestop.ogg'
-	invocation = "By Ravox, stand and fight!"
+	invocation = "By Carthus, stand and fight!"
 	invocation_type = "shout"
 	antimagic_allowed = TRUE
 	miracle = TRUE
@@ -60,7 +60,7 @@
 	if(!isliving(target))
 		return
 	var/mob/living/living_target = target
-	living_target.apply_status_effect(/datum/status_effect/debuff/ravox_burden)
+	living_target.apply_status_effect(/datum/status_effect/debuff/carthus_burden)
 	living_target.visible_message(span_warning("The strike from [user]'s weapon causes [living_target] to go stiff!"), vision_distance = COMBAT_MESSAGE_RANGE)
 	qdel(src)
 
@@ -71,7 +71,7 @@
 		return
 	if(!istype(M.used_intent, INTENT_HARM))
 		return
-	H.apply_status_effect(/datum/status_effect/debuff/ravox_burden)
+	H.apply_status_effect(/datum/status_effect/debuff/carthus_burden)
 	H.visible_message(span_warning("The strike from [M]'s fist causes [H] to go stiff!"), vision_distance = COMBAT_MESSAGE_RANGE)
 	qdel(src)
 
@@ -112,7 +112,7 @@
 	warnie = "sydwarning"
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/timestop.ogg'
-	invocation = "Ravox deems your persistence worthy!"
+	invocation = "Carthus deems your persistence worthy!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
@@ -131,7 +131,7 @@
 				phy.pain_mod *= 1.5
 				addtimer(VARSET_CALLBACK(phy, bleed_mod, phy.bleed_mod /= 1.5), 19 SECONDS)
 				addtimer(VARSET_CALLBACK(phy, pain_mod, phy.pain_mod /= 1.5), 19 SECONDS)
-				human_target.visible_message(span_danger("[target]'s wounds become inflammed as their vitality is sapped away!"), span_userdanger("Ravox inflammes my wounds and weakens my body!"))
+				human_target.visible_message(span_danger("[target]'s wounds become inflammed as their vitality is sapped away!"), span_userdanger("Carthus inflammes my wounds and weakens my body!"))
 				return ..()
 			return FALSE
 
@@ -140,7 +140,7 @@
 		for(var/obj/effect/decal/cleanable/blood/O in oview(5, target))
 			situational_bonus = min(situational_bonus + 0.015, 1)
 		if(situational_bonus > 0.25)
-			to_chat(user, "Channeling Ravox's power is easier in these conditions!")
+			to_chat(user, "Channeling Carthus' power is easier in these conditions!")
 
 		if(iscarbon(target))
 			var/mob/living/carbon/C = target

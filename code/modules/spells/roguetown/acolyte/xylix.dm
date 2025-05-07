@@ -71,7 +71,7 @@
 			if(12)
 				user.say("Looks as if thou art PSY-DONE! No? Too soon? Alright.", forced = "spell")
 			if(13)
-				user.say("Ravox bring justice to your useless mentor, ser!", forced = "spell")
+				user.say("Carthus bring justice to your useless mentor, ser!", forced = "spell")
 
 /datum/status_effect/debuff/viciousmockery
 	id = "viciousmockery"

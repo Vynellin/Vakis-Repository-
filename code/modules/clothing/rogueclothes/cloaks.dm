@@ -266,7 +266,7 @@
 	color = "#9B7538"
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/tabard/crusader/ravox
+/obj/item/clothing/cloak/tabard/crusader/carthus
 	color = CLOTHING_RED
 	detail_color = CLOTHING_BLACK
 
@@ -1378,9 +1378,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/ravox
-	name = "ravox tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Ravox on it."
+/obj/item/clothing/cloak/templar/carthus
+	name = "carthus tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Carthus on it."
 	icon_state = "tabard_ravox"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN

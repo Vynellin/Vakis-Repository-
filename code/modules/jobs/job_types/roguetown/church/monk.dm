@@ -84,14 +84,14 @@
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
 		if(/datum/patron/order/carthus)
 			head = /obj/item/clothing/head/roguetown/roguehood
-			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-			cloak = /obj/item/clothing/cloak/templar/ravox
+			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
+			cloak = /obj/item/clothing/cloak/templar/carthus
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/white
 		if(/datum/patron/chaos/kasmidian)
 			head = /obj/item/clothing/head/roguetown/roguehood
-			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
+			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
 			cloak = /obj/item/clothing/cloak/templar/xylix
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
@@ -103,7 +103,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
-			/obj/item/clothing/neck/roguetown/psicross/ravox,
+			/obj/item/clothing/neck/roguetown/psicross/carthus,
 			/obj/item/clothing/neck/roguetown/psicross/nunos,
 			/obj/item/clothing/neck/roguetown/psicross/eora,
 			/obj/item/clothing/neck/roguetown/psicross/wood

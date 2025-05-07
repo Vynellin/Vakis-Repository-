@@ -68,11 +68,11 @@
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/eora,)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonravox
-	name = "Ravox Amulet"
+/datum/supply_pack/rogue/apparel/crosses/divinepantheoncarthus
+	name = "Carthus Amulet"
 	cost = 10
 	contains = list(
-					/obj/item/clothing/neck/roguetown/psicross/ravox,)
+					/obj/item/clothing/neck/roguetown/psicross/carthus,)
 
 /datum/supply_pack/rogue/apparel/crosses/orderpantheontsoridys
 	name = "Tsoridian Amulet"

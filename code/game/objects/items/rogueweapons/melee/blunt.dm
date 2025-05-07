@@ -337,9 +337,9 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/rogueweapon/mace/goden/steel/ravox
+/obj/item/rogueweapon/mace/goden/steel/carthus
 	name = "duel settler"
-	desc = "The tenets of ravoxian duels are enscribed upon the head of this maul."
+	desc = "The tenets of carthian duels are enscribed upon the head of this maul."
 	icon_state = "ravoxhammer"
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash)
 

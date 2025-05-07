@@ -102,9 +102,9 @@
 	name = "Rune of Trickery"
 	desc = "A Holy Rune of Xylix"
 
-/obj/structure/ritualcircle/ravox
+/obj/structure/ritualcircle/carthus
 	name = "Rune of the Warrior"
-	desc = "A Holy Rune of Ravox"
+	desc = "A Holy Rune of Carthus"
 
 /obj/structure/ritualcircle/dendor
 	name = "Rune of Beasts"

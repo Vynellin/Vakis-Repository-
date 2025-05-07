@@ -1,6 +1,6 @@
 /obj/structure/roguemachine/bounty
 	name = "EXCIDIUM"
-	desc = "Created by a fanatical sect of devout followers of Ravox, this machine sets bounties."
+	desc = "Created by a fanatical sect of devout followers of Carthus, this machine sets bounties."
 	icon = 'icons/roguetown/topadd/statue1.dmi'
 	icon_state = "baldguy"
 	density = FALSE

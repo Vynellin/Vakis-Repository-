@@ -1617,7 +1617,7 @@
 /area/rogue/under/cave/dukecourt)
 "jV" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "jW" = (

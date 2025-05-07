@@ -71,8 +71,8 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
 		if(/datum/patron/order/carthus)
-			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
+			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
+			cloak = /obj/item/clothing/cloak/tabard/crusader/carthus
 		if(/datum/patron/order/nunos)
 			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
 			cloak = /obj/item/clothing/cloak/templar/nunite
@@ -84,7 +84,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/abyssor,
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
-			/obj/item/clothing/neck/roguetown/psicross/ravox,
+			/obj/item/clothing/neck/roguetown/psicross/carthus,
 			/obj/item/clothing/neck/roguetown/psicross/nunos,
 			/obj/item/clothing/neck/roguetown/psicross/eora,
 			/obj/item/clothing/neck/roguetown/psicross/wood
@@ -182,9 +182,9 @@
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
 		if(/datum/patron/order/carthus)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/ravox
+			wrists = /obj/item/clothing/neck/roguetown/psicross/carthus
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
-			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
+			cloak = /obj/item/clothing/cloak/tabard/crusader/carthus
 		if(/datum/patron/order/nunos)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/nunos
 			cloak = /obj/item/clothing/cloak/templar/nunite
@@ -283,7 +283,7 @@
 			H.put_in_hands(new /obj/item/rogueweapon/whip/xylix(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 		if("Duel Settler")
-			H.put_in_hands(new /obj/item/rogueweapon/mace/goden/steel/ravox(H), TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/mace/goden/steel/carthus(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
 		if("The Heartstring")
 			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/eora(H), TRUE)

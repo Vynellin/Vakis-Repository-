@@ -124,7 +124,7 @@
 	var/ziralines =list("'Colder than moonlight...'", "'No wisdom can reach me here...'", "'Please help me, I miss the stars...'")
 	var/tsoridyslines =list("'They snatched me from her grasp, for eternal torment...'", "'Tsoridys! Please! I am so tired! Release me!'", "'I am lost, lost in a sea of stolen ends.'")
 	var/abyssorlines =list("'I cannot feel the coast's breeze...'", "'We churn tighter here than schooling fish...'", "'Free me, please, so I may return to the sea...'")
-	var/ravoxlines =list("'Ravoxian kin! Tear this Otavan dog's head off! Free me from this damnable witchery!'", "'There is no justice nor glory to be found here, just endless fatigue...'", "'I begged for a death by the sword...'")
+	var/carthuslines =list("'Free me from this damnable witchery!'", "'There is no justice nor glory to be found here, just endless fatigue...'", "'I begged for a death by the sword...'")
 	var/eoralines =list("'Every caress feels like a thousand splintering bones...'", "'She was a heretic, but how could I hurt her?!'", "'I'm sorry! I only wanted peace! Please release me!'")
 	var/dendorlines =list("'HIS MADNESS CALLS FOR ME! RRGHNN...'", "'SHATTER THIS BOX, SO WE MAY CHOKE THIS OTAVAN ON DIRT AND ROOTS!'", "'I miss His voice in the leaves... Free me, please...'")
 	var/xylixlines =list("'ONE, TWO, THREE, FOUR- TWO, TWO, THREE, FOUR. --What do you mean, annoying?'", "'There are thirteen others in here, you know! What a good audience- they literally can't get out of their seats!'", "'Of course I went all-in! I thought he had an ace-high!'", "'No, the XYLIX'S FORTUNE was right- this definitely is quite bad.'")
@@ -182,7 +182,7 @@
 						H.add_stress(/datum/stressevent/soulchurner)
 					if(/datum/patron/order/carthus)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
-						to_chat(H, (span_cultsmall(pick(ravoxlines))))		
+						to_chat(H, (span_cultsmall(pick(carthuslines))))		
 						H.add_stress(/datum/stressevent/soulchurner)
 
 //Inquisitorial armory down here

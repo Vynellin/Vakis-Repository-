@@ -1010,7 +1010,7 @@
 /area/rogue/indoors/cave)
 "atD" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "atE" = (
@@ -5931,8 +5931,8 @@
 /obj/item/clothing/neck/roguetown/psicross/dendor,
 /obj/item/clothing/neck/roguetown/psicross/aeternus,
 /obj/item/clothing/neck/roguetown/psicross/aeternus,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
 /obj/item/clothing/neck/roguetown/psicross/nunos,
 /obj/item/clothing/neck/roguetown/psicross/nunos,
 /obj/item/clothing/neck/roguetown/psicross/abyssor,
