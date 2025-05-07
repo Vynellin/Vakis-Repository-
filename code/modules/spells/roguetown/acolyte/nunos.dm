@@ -10,7 +10,7 @@
 	no_early_release = TRUE
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/items/bsmithfail.ogg'
-	invocation = "Through flame and ash, let vigor rise, by Malum’s hand, let strength reprise!"
+	invocation = "Through flame and ash, let vigor rise, by Nuno's hand, let strength reprise!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
@@ -33,7 +33,7 @@
 	no_early_release = TRUE
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/items/bsmithfail.ogg'
-	invocation = "With heat I wield, with flame I claim, Let metal serve in Malum's name!"
+	invocation = "With heat I wield, with flame I claim, Let metal serve in Nunos' name!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
@@ -56,7 +56,7 @@
 	no_early_release = TRUE
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/items/bsmithfail.ogg'
-	invocation = "By molten might and hammer's weight, in Malum’s flame, the earth shall quake!"
+	invocation = "By molten might and hammer's weight, in Nunos' flame, the earth shall quake!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
@@ -79,7 +79,7 @@
 	no_early_release = TRUE
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/items/bsmithfail.ogg'
-	invocation = "Coins to ash, flame to form, in Malum’s name, let creation be born!"
+	invocation = "Coins to ash, flame to form, in Nunos' name, let creation be born!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = FALSE
@@ -281,7 +281,7 @@
 			doable += list(list(itemtorecord.name, itemtorecord))
 	}
 	if (!doable.len)
-		show_visible_message(usr, "A wave of heat washes over the pile as [user] speaks Malum's name. The pile of valuables crumble into dust.", "A wave of heat washes over the pile as you speak Malum's name. The pile of valuables crumble into dust. Malum accepted your sacrifice. Yet it seems it wasn't enough.")
+		show_visible_message(usr, "A wave of heat washes over the pile as [user] speaks Nunos' name. The pile of valuables crumble into dust.", "A wave of heat washes over the pile as you speak Nunos' name. The pile of valuables crumble into dust. Nunos accepted your sacrifice. Yet it seems it wasn't enough.")
 		return
 	var/list/doablename = list()
 	var/list/item_map = list()
@@ -297,7 +297,7 @@
 			new itemtospawn.type(altar)
 			sparks.set_up(1, 1, altar)
 			sparks.start()
-			show_visible_message(usr, "A wave of heat washes over the pile as [user] speaks Malum's name. The pile of valuables crumble into dust, only for the dust to reform into an item as if reborn from the flames. Malum has accepted the offering.", "A wave of heat washes over the pile as you speak Malum's name. The pile of valuables crumble into dust, only for the dust to reform into an item as if reborn from the flames. Malum has accepted the offering.")
+			show_visible_message(usr, "A wave of heat washes over the pile as [user] speaks Nunos' name. The pile of valuables crumble into dust, only for the dust to reform into an item as if reborn from the flames. Nunos has accepted the offering.", "A wave of heat washes over the pile as you speak Nunos' name. The pile of valuables crumble into dust, only for the dust to reform into an item as if reborn from the flames. Nunos has accepted the offering.")
 
 var/global/list/anvil_recipe_prices[][]
 /proc/add_recipe_to_global(var/datum/anvil_recipe/recipe)
@@ -381,8 +381,8 @@ var/global/list/anvil_recipe_prices[][]
 		aoemining.lastminer = usr
 		aoemining.take_damage(damage,BRUTE,"blunt",1)
 
-/obj/effect/proc_holder/spell/invoked/malum_flame_rogue
-	name = "Malum's Fire"
+/obj/effect/proc_holder/spell/invoked/nunos_flame_rogue
+	name = "Nunos' Fire"
 	overlay_state = "sacredflame"
 	releasedrain = 15
 	chargedrain = 0
@@ -401,7 +401,7 @@ var/global/list/anvil_recipe_prices[][]
 	miracle = TRUE
 	devotion_cost = 15
 
-/obj/effect/proc_holder/spell/invoked/malum_flame_rogue/cast(list/targets, mob/user = usr)
+/obj/effect/proc_holder/spell/invoked/nunos_flame_rogue/cast(list/targets, mob/user = usr)
 	. = ..()
 	if(isliving(targets[1]))
 		var/mob/living/L = targets[1]

@@ -49,18 +49,18 @@
 	cost = 150
 	contains = list(/obj/item/clothing/neck/roguetown/psicross/silver)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonaeternus
+/datum/supply_pack/rogue/apparel/crosses/lightpantheonaeternus
 	name = "Aeternian Amulet"
 	cost = 10
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/aeternus,
 				)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonmalum
-	name = "Malumite Amulet"
+/datum/supply_pack/rogue/apparel/crosses/orderpantheonnunos
+	name = "Nunite Amulet"
 	cost = 10
 	contains = list(
-					/obj/item/clothing/neck/roguetown/psicross/malum,)
+					/obj/item/clothing/neck/roguetown/psicross/nunos,)
 
 /datum/supply_pack/rogue/apparel/crosses/divinepantheoneora
 	name = "Eoran Amulet"
@@ -74,7 +74,7 @@
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/ravox,)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheontsoridys
+/datum/supply_pack/rogue/apparel/crosses/orderpantheontsoridys
 	name = "Tsoridian Amulet"
 	cost = 10
 	contains = list(
@@ -92,7 +92,7 @@
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/abyssor,)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheonnoc
+/datum/supply_pack/rogue/apparel/crosses/orderpantheonzira
 	name = "Ziran Amulet"
 	cost = 10
 	contains = list(

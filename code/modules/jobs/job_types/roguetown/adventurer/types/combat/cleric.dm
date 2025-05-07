@@ -81,7 +81,7 @@
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
-					cloak = /obj/item/clothing/cloak/templar/malumite
+					cloak = /obj/item/clothing/cloak/templar/nunite
 				if (/datum/patron/order/eora)
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/eora
 					head = /obj/item/clothing/head/roguetown/eoramask
@@ -138,8 +138,8 @@
 					cloak = /obj/item/clothing/cloak/templar/tsoridys
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridyshelm
 				if (/datum/patron/order/nunos)
-					cloak = /obj/item/clothing/cloak/templar/malum
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
+					cloak = /obj/item/clothing/cloak/templar/nunos
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/nunos
 				if (/datum/patron/order/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
@@ -217,7 +217,7 @@
 				if(/datum/patron/order/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/tsoridys
 				if (/datum/patron/order/nunos)
-					cloak = /obj/item/clothing/cloak/templar/malum
+					cloak = /obj/item/clothing/cloak/templar/nunos
 				if (/datum/patron/order/eora)
 					cloak = /obj/item/clothing/cloak/templar/eora
 				if (/datum/patron/order/carthus)
@@ -289,7 +289,7 @@
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
-					cloak = /obj/item/clothing/cloak/templar/malumite
+					cloak = /obj/item/clothing/cloak/templar/nunite
 				if (/datum/patron/order/eora)
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/eora
 					head = /obj/item/clothing/head/roguetown/eoramask
@@ -314,7 +314,7 @@
 		if(/datum/patron/order/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 		if(/datum/patron/order/nunos)
-			neck = /obj/item/clothing/neck/roguetown/psicross/malum
+			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
 		if(/datum/patron/order/eora)
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
 		if(/datum/patron/chaos/kasmidian) // Random pricross for Xylix
@@ -326,7 +326,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
-			/obj/item/clothing/neck/roguetown/psicross/malum,
+			/obj/item/clothing/neck/roguetown/psicross/nunos,
 			/obj/item/clothing/neck/roguetown/psicross/eora
 			)
 			neck = pick(psicross_options)

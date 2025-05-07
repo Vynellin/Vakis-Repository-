@@ -74,8 +74,8 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
 		if(/datum/patron/order/nunos)
-			neck = /obj/item/clothing/neck/roguetown/psicross/malum
-			cloak = /obj/item/clothing/cloak/templar/malumite
+			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
+			cloak = /obj/item/clothing/cloak/templar/nunite
 		if(/datum/patron/order/nunos)
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
@@ -85,7 +85,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
-			/obj/item/clothing/neck/roguetown/psicross/malum,
+			/obj/item/clothing/neck/roguetown/psicross/nunos,
 			/obj/item/clothing/neck/roguetown/psicross/eora,
 			/obj/item/clothing/neck/roguetown/psicross/wood
 			)
@@ -186,9 +186,9 @@
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 			cloak = /obj/item/clothing/cloak/tabard/crusader/ravox
 		if(/datum/patron/order/nunos)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/malum
-			cloak = /obj/item/clothing/cloak/templar/malumite
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
+			wrists = /obj/item/clothing/neck/roguetown/psicross/nunos
+			cloak = /obj/item/clothing/cloak/templar/nunite
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/nunos
 	backr = /obj/item/rogueweapon/shield/tower/metal
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
@@ -274,7 +274,7 @@
 			H.put_in_hands(new /obj/item/rogueweapon/flail/sflail/tsoridysflail(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 		if("Forgefiend")
-			H.put_in_hands(new /obj/item/rogueweapon/sword/long/malumflamm(H), TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/sword/long/nunosflamm(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		if("Summer Scythe")
 			H.put_in_hands(new /obj/item/rogueweapon/halberd/bardiche/scythe(H), TRUE)

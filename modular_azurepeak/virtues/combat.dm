@@ -75,7 +75,7 @@
 		if(/datum/patron/order/carthus)
 			recipient.mind?.special_items["Carthus Psycross"] =/obj/item/clothing/neck/roguetown/psicross/ravox
 		if(/datum/patron/order/nunos)
-			recipient.mind?.special_items["Nunos Psycross"] = /obj/item/clothing/neck/roguetown/psicross/malum
+			recipient.mind?.special_items["Nunos Psycross"] = /obj/item/clothing/neck/roguetown/psicross/nunos
 
 /datum/virtue/combat/duelist
 	name = "Duelist Apprentice"

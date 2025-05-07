@@ -291,8 +291,8 @@
 	desc = ""
 	icon_state = "ravox"
 
-/obj/item/clothing/neck/roguetown/psicross/malum
-	name = "amulet of Malum"
+/obj/item/clothing/neck/roguetown/psicross/nunos
+	name = "amulet of Nunos"
 	desc = ""
 	icon_state = "malum"
 

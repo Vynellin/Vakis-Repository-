@@ -149,9 +149,9 @@
 		target.apply_status_effect(/datum/status_effect/buff/lesserwolf)
 
 
-/obj/structure/ritualcircle/malum
+/obj/structure/ritualcircle/nunos
 	name = "Rune of Forge"
-	desc = "A Holy Rune of Malum"
+	desc = "A Holy Rune of Nunos"
 
 /obj/structure/ritualcircle/abyssor
 	name = "Rune of Storm"

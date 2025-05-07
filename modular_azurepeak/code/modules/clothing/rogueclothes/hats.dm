@@ -9,9 +9,9 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/clothing/head/roguetown/helmet/heavy/malum
-	name = "helm of malum"
-	desc = "Forged in a coal-black, this helmet carries a sigiled blade upon it's visor, ever reminding it's wearer of Malum's powerful gaze."
+/obj/item/clothing/head/roguetown/helmet/heavy/nunos
+	name = "helm of nunos"
+	desc = "Forged in a coal-black, this helmet carries a sigiled blade upon it's visor, ever reminding it's wearer of Nuno's powerful gaze."
 	icon_state = "malumhelm"
 	item_state = "malumhelm"
 	emote_environment = 3

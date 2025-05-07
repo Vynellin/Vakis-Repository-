@@ -6,12 +6,12 @@
 	desc = "The washed out golds of an aeternian crusader adorn these fine robes."
 	icon_state = "astratatabard"
 
-/obj/item/clothing/cloak/templar/malumite
+/obj/item/clothing/cloak/templar/nunite
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	alternate_worn_layer = TABARD_LAYER
 	boobed = FALSE
-	name = "tabard of malum"
-	desc = "Light blacks and greys, with a tinge of red, the everlasting fire of Malum's iron hammer as it strikes."
+	name = "tabard of nunos"
+	desc = "Light blacks and greys, with a tinge of red, the everlasting fire of Nunos' iron hammer as it strikes."
 	icon_state = "malumtabard"
 
 /obj/item/clothing/cloak/templar/tsoridian

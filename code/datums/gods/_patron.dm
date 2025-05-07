@@ -34,7 +34,7 @@ GLOBAL_LIST_EMPTY(preference_patrons)
 	var/t3
 	/// Final tier spell
 	var/t4
-	/// For patrons with more spells than tiers. eg. Malum's Fire
+	/// For patrons with more spells than tiers. eg. Nuno's Fire
 	var/extra_spell
 
 /datum/patron/proc/on_gain(mob/living/pious)

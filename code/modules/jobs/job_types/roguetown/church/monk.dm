@@ -76,11 +76,11 @@
 			cloak = /obj/item/clothing/cloak/templar/eoran
 		if(/datum/patron/order/nunos)
 			head = /obj/item/clothing/head/roguetown/roguehood
-			neck = /obj/item/clothing/neck/roguetown/psicross/malum
+			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			pants = /obj/item/clothing/under/roguetown/trou
-			cloak = /obj/item/clothing/cloak/templar/malumite
+			cloak = /obj/item/clothing/cloak/templar/nunite
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
 		if(/datum/patron/order/carthus)
 			head = /obj/item/clothing/head/roguetown/roguehood
@@ -104,7 +104,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/dendor,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/ravox,
-			/obj/item/clothing/neck/roguetown/psicross/malum,
+			/obj/item/clothing/neck/roguetown/psicross/nunos,
 			/obj/item/clothing/neck/roguetown/psicross/eora,
 			/obj/item/clothing/neck/roguetown/psicross/wood
 			)

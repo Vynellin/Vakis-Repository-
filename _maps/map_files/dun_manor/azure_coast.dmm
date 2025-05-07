@@ -2650,7 +2650,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/shelter)
 "rk" = (
-/obj/item/clothing/neck/roguetown/psicross/malum,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "rl" = (
@@ -4090,7 +4090,7 @@
 /area/rogue/under/cave/orcdungeon)
 "AS" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/malum,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "AT" = (

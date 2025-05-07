@@ -128,7 +128,7 @@
 	var/eoralines =list("'Every caress feels like a thousand splintering bones...'", "'She was a heretic, but how could I hurt her?!'", "'I'm sorry! I only wanted peace! Please release me!'")
 	var/dendorlines =list("'HIS MADNESS CALLS FOR ME! RRGHNN...'", "'SHATTER THIS BOX, SO WE MAY CHOKE THIS OTAVAN ON DIRT AND ROOTS!'", "'I miss His voice in the leaves... Free me, please...'")
 	var/xylixlines =list("'ONE, TWO, THREE, FOUR- TWO, TWO, THREE, FOUR. --What do you mean, annoying?'", "'There are thirteen others in here, you know! What a good audience- they literally can't get out of their seats!'", "'Of course I went all-in! I thought he had an ace-high!'", "'No, the XYLIX'S FORTUNE was right- this definitely is quite bad.'")
-	var/malumlines =list("'The structure of this cursed machine is malleable.. Shatter it, please...'", "'My craft could've changed the world...'", "'Free me, so I may return to my apprentice, please...'")
+	var/nunoslines =list("'The structure of this cursed machine is malleable.. Shatter it, please...'", "'My craft could've changed the world...'", "'Free me, so I may return to my apprentice, please...'")
 
 
 /datum/status_effect/buff/cranking_soulchurner/on_creation(mob/living/new_owner, stress, colour)
@@ -162,7 +162,7 @@
 						H.add_stress(/datum/stressevent/soulchurner)
 					if(/datum/patron/order/nunos)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
-						to_chat(H, (span_cultsmall(pick(malumlines))))
+						to_chat(H, (span_cultsmall(pick(nunoslines))))
 						H.add_stress(/datum/stressevent/soulchurner)
 					if(/datum/patron/chaos/tamari)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))

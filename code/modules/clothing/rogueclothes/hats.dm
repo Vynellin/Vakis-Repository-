@@ -1115,7 +1115,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/psydonbarbute
 	name = "psydonian barbute"
-	desc = "A ceremonial barbute, masterfully forged to represent Psydon's divine authority. The Order of Saint Malum's artisans have chiseled this pronged visage into more statues than you could possibly imagine."
+	desc = "A ceremonial barbute, masterfully forged to represent Psydon's divine authority."
 	icon_state = "psydonbarbute"
 	item_state = "psydonbarbute"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT

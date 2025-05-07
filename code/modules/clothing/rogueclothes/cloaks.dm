@@ -270,7 +270,7 @@
 	color = CLOTHING_RED
 	detail_color = CLOTHING_BLACK
 
-/obj/item/clothing/cloak/tabard/crusader/malum
+/obj/item/clothing/cloak/tabard/crusader/nunos
 	color = CLOTHING_RED
 	detail_color = CLOTHING_YELLOW
 
@@ -1261,9 +1261,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/malum
-	name = "malum tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Malum on it."
+/obj/item/clothing/cloak/templar/nunos
+	name = " tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Nunos on it."
 	icon_state = "tabard_malum"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN

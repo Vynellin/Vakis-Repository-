@@ -43,7 +43,7 @@
 	t2 = /obj/effect/proc_holder/spell/invoked/heatmetal
 	t3 = /obj/effect/proc_holder/spell/invoked/hammerfall
 	t4 = /obj/effect/proc_holder/spell/invoked/craftercovenant
-	extra_spell = /obj/effect/proc_holder/spell/invoked/malum_flame_rogue
+	extra_spell = /obj/effect/proc_holder/spell/invoked/nunos_flame_rogue
 	confess_lines = list(
 		"MY WORK IS MY LIFE!",
 		"TRUE VALUE IS IN THE TOIL!",
