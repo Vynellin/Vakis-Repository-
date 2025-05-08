@@ -255,15 +255,6 @@
 	last_used = 0
 	is_silver = TRUE
 
-/obj/item/rogueweapon/huntingknife/idagger/silver/psydagger
-	name = "psydonian dagger"
-	desc = "Silver dagger used by the finest of the inquisiton."
-	icon_state = "psydagger"
-	sellprice = 70
-	max_blade_int = 100
-	max_integrity = 210
-	wdefense = 3
-
 /obj/item/rogueweapon/huntingknife/idagger/silver/pickup(mob/user)
 	. = ..()
 	var/mob/living/carbon/human/H = user
@@ -402,20 +393,6 @@
 	icon_state = "throw_knifes"
 	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 30, "embedded_fall_chance" = 5)
 	sellprice = 2
-
-/obj/item/rogueweapon/huntingknife/throwingknife/psydon
-	name = "psydonian tossblade"
-	desc = "An unconventional method of delivering silver to a heretic; but one PSYDON smiles at, all the same. Doubles as an actual knife in a pinch, though obviously not as well."
-	item_state = "bone_dagger"
-	force = 12
-	throwforce = 28
-	armor_penetration = 50
-	max_integrity = 150
-	wdefense = 3
-	icon_state = "throw_knifep"
-	embedding = list("embedded_pain_multiplier" = 4, "embed_chance" = 50, "embedded_fall_chance" = 0)
-	is_silver = TRUE
-	sellprice = 6
 
 /obj/item/rogueweapon/huntingknife/scissors
 	possible_item_intents = list(/datum/intent/snip, /datum/intent/dagger/thrust, /datum/intent/dagger/cut)

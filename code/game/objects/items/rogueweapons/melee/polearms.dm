@@ -178,14 +178,6 @@
 	throwforce = 25
 	resistance_flags = FLAMMABLE
 
-/obj/item/rogueweapon/spear/psyspear
-	name = "psydonian spear"
-	desc = "Silver spear, crafted to impale those the Inquisiton hunts."
-	icon_state = "psyspear"
-	is_silver = TRUE
-	max_blade_int = 150
-	wdefense = 6
-
 /obj/item/rogueweapon/spear/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -540,16 +532,6 @@
 	icon_state = "dendorscythe"
 	gripped_intents = list(/datum/intent/spear/thrust/eaglebeak, /datum/intent/spear/cut/bardiche/scythe, /datum/intent/axe/chop/scythe, SPEAR_BASH)
 
-/obj/item/rogueweapon/halberd/psyhalberd
-	name = "psydonian halberd"
-	desc = "A silver halberd, forged by the inquisiton. Its construction lends it greater durability than a normal halberd."
-	max_blade_int = 250
-	icon_state = "psyhalberd"
-	max_integrity = 600
-	is_silver = TRUE
-	wdefense = 7
-	smeltresult = /obj/item/ingot/silver
-
 /obj/item/rogueweapon/halberd/glaive
 	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
 	gripped_intents = list(/datum/intent/spear/thrust/glaive, /datum/intent/spear/cut/glaive, /datum/intent/axe/chop/scythe, SPEAR_BASH)
@@ -699,15 +681,6 @@
 	icon_state = "steelzwei"
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 3
-
-/obj/item/rogueweapon/greatsword/psygsword
-	name = "psydonian greatsword"
-	desc = "Silverd, and able to cut apart foes of the inquisiton!"
-	icon_state = "psygsword"
-	max_blade_int = 350
-	wdefense = 6
-	is_silver = TRUE
-	smeltresult = /obj/item/ingot/silver
 
 /obj/item/rogueweapon/estoc
 	name = "estoc"

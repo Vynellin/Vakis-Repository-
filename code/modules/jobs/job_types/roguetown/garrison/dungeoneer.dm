@@ -61,8 +61,6 @@
 	H.change_stat("intelligence", -2)
 	H.change_stat("endurance", 1)
 	H.change_stat("constitution", 2)
-	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
-	H.verbs |= /mob/living/carbon/human/proc/torture_victim
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GUARDSMAN, TRAIT_GENERIC)

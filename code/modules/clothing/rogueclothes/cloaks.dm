@@ -57,69 +57,6 @@
 	user.update_inv_cloak()
 	user.update_inv_armor()
 
-/obj/item/clothing/cloak/psydontabard
-	name = "psydonian tabard"
-	desc = "A tabard worn by Psydon's disciples. Delicate stitchwork professes the psycross with pride."
-	color = null
-	icon_state = "psydontabard"
-	item_state = "psydontabard"
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	alternate_worn_layer = TABARD_LAYER
-	body_parts_covered = CHEST|GROIN
-	boobed = TRUE
-	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	flags_inv = HIDECROTCH|HIDEBOOB
-	var/open_wear = FALSE
-	var/overarmor = TRUE
-
-/obj/item/clothing/cloak/psydontabard/alt
-	name = "opened psydonian tabard"
-	desc = "A tabard worn by Psydon's disciples, peeled back to reveal its enduring innards."
-	body_parts_covered = GROIN
-	icon_state = "psydontabardalt"
-	item_state = "psydontabardalt"
-	flags_inv = HIDECROTCH
-	open_wear = TRUE
-
-
-/obj/item/clothing/cloak/psydontabard/MiddleClick(mob/user) 
-	overarmor = !overarmor
-	to_chat(user, span_info("I [overarmor ? "wear the tabard over my armor" : "wear the tabard under my armor"]."))
-	if(overarmor)
-		alternate_worn_layer = TABARD_LAYER
-	else
-		alternate_worn_layer = UNDER_ARMOR_LAYER
-	user.update_inv_cloak()
-	user.update_inv_armor()
-	user.update_inv_shirt()
-
-/obj/item/clothing/cloak/psydontabard/attack_right(mob/user)
-	switch(open_wear)
-		if(FALSE)
-			name = "opened psydonian tabard"
-			desc = "A tabard worn by Psydon's disciples, peeled back to reveal its enduring innards."
-			body_parts_covered = GROIN
-			icon_state = "psydontabardalt"
-			item_state = "psydontabardalt"
-			open_wear = TRUE
-			flags_inv = HIDECROTCH // BARE YOUR CHEST, NOT YOUR WEEN!
-			to_chat(usr, span_warning("ENDURING, like the MARTYRS who'll guide the faithful-and-pious to PARADISE."))
-		if(TRUE)
-			name = "psydonian tabard"
-			desc = "A tabard worn by Psydon's disciples. Delicate stitchwork professes the psycross with pride."
-			body_parts_covered = CHEST|GROIN
-			icon_state = "psydontabard"
-			item_state = "psydontabard"
-			flags_inv = HIDECROTCH|HIDEBOOB
-			open_wear = FALSE
-			to_chat(usr, span_warning("VEILED, like the CORPSES who've been shepherded by your steel to the AFTERLYFE."))
-	update_icon()
-	if(user)
-		if(ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_cloak()
-			H.update_inv_armor()
-
 /obj/item/clothing/cloak/tabard/update_icon()
 	cut_overlays()
 	if(get_detail_tag())
@@ -289,10 +226,6 @@
 /obj/item/clothing/cloak/tabard/crusader/noc
 	color = "#2C2231"
 	detail_color = "#9AB0B0"
-
-/obj/item/clothing/cloak/tabard/crusader/psydon
-	color = CLOTHING_BLACK
-	detail_color = CLOTHING_WHITE
 
 /obj/item/clothing/cloak/tabard/crusader/varielle
 	color = "#4D1E49"
@@ -1174,20 +1107,6 @@
 
 /obj/item/clothing/cloak/templar
 	var/overarmor = TRUE
-
-/obj/item/clothing/cloak/templar/psydon
-	name = "psydon tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Psydon on it."
-	icon_state = "tabard_weeping"
-	alternate_worn_layer = TABARD_LAYER
-	body_parts_covered = CHEST|GROIN
-	boobed = TRUE
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleevetype = "shirt"
-	nodismemsleeves = TRUE
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	flags_inv = HIDECROTCH|HIDEBOOB
 
 /obj/item/clothing/cloak/templar/aeternus
 	name = "aeternian tabard"

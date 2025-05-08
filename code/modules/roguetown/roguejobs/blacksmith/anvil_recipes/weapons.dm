@@ -400,13 +400,6 @@
 	created_item = /obj/item/rogueweapon/mace/silver
 	craftdiff = 3
 
-/datum/anvil_recipe/weapons/silver/tossblade
-	name = "Silver Tossblades 4x"
-	req_bar = /obj/item/ingot/silver
-	created_item = /obj/item/rogueweapon/huntingknife/throwingknife/psydon
-	craftdiff = 3
-	createditem_num = 4
-
 /datum/anvil_recipe/weapons/silver/javelin
 	name = "Silver Javelin (+1 Small Log)"
 	req_bar = /obj/item/ingot/silver

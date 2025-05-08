@@ -101,7 +101,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Beggar")
 	delete_after_roundstart = FALSE
 
-/obj/effect/landmark/start/orphanlate
+/obj/effect/landmark/start/vagabondlate
 	name = "Vagabondlate"
 	icon_state = "arrow"
 	jobspawn_override = list("Vagabond")
@@ -418,7 +418,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Churchling"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/orphan
+/obj/effect/landmark/start/vagabond
 	name = "Vagabond"
 	icon_state = "arrow"
 

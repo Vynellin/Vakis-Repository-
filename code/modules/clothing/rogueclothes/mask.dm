@@ -113,12 +113,6 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
 
-/obj/item/clothing/mask/rogue/facemask/psydonmask
-	name = "psydonian mask"
-	desc = "A silver mask."
-	icon_state = "psydonmask"
-	item_state = "psydonmask"
-
 /obj/item/clothing/mask/rogue/facemask/prisoner
 	name = "cursed mask"
 	desc = "An iron mask that seals around the head, making it impossible to remove. It seems to be enchanted with some kind of vile magic..."

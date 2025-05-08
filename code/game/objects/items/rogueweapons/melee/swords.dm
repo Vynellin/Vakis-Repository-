@@ -487,15 +487,6 @@
 	user.visible_message(span_warning("[user] wipes [src] down with its cloth."),span_notice("I wipe [src] down with its cloth."))
 	return
 
-/obj/item/rogueweapon/sword/long/psysword
-	name = "psydonian sword"
-	desc = "a silver bastard sword, for the Inquisiton. For when you need to make a point."
-	icon_state = "psysword"
-	max_blade_int = 200
-	wdefense = 5
-	is_silver = TRUE
-	smeltresult = /obj/item/ingot/silver
-
 /obj/item/rogueweapon/sword/iron
 	name = "sword"
 	desc = "A simple iron sword, the most classical war weapon."

@@ -343,19 +343,6 @@
 	icon_state = "ravoxhammer"
 	gripped_intents = list(/datum/intent/mace/strike, /datum/intent/mace/smash)
 
-/obj/item/rogueweapon/mace/goden/psymace
-	name = "psydonian grand mace"
-	desc = "A silvered grand mace, used by the Inquisiton. For when you need to be blunt."
-	icon_state = "psymace"
-	smeltresult = /obj/item/ingot/silver
-	is_silver = TRUE
-	wdefense = 5
-	max_integrity = 250
-	dropshrink = 0.75
-	force = 24
-	force_wielded = 35
-	slot_flags = ITEM_SLOT_BACK //Looks better on back
-
 /obj/item/rogueweapon/mace/spiked
 	icon_state = "spiked_club"
 

@@ -131,7 +131,6 @@
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/under/cavewet)
 "aL" = (
-/turf/open/water/gross/rust,
 /area/rogue/under/cavewet)
 "aM" = (
 /turf/open/floor/rogue/dirt/road,
@@ -150,46 +149,36 @@
 /turf/open/transparent/openspace,
 /area/rogue/under/cavewet)
 "aR" = (
-/turf/closed/wall/mineral/rogue/stone,
-/area/rogue/under/basement)
+/turf/closed/wall/mineral/rogue/stone)
 "aS" = (
-/turf/closed/mineral/rogue/bedrock,
-/area/rogue/under/basement)
+/turf/closed/mineral/rogue/bedrock)
 "aT" = (
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/basement)
+/turf/open/floor/rogue/blocks)
 "aU" = (
 /obj/effect/spawner/roguemap/hauntpile,
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/basement)
+/turf/open/floor/rogue/blocks)
 "aV" = (
 /obj/structure/table/wood,
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/basement)
+/turf/open/floor/rogue/blocks)
 "aW" = (
 /obj/structure/closet/crate/chest/lootbox,
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/basement)
+/turf/open/floor/rogue/blocks)
 "aX" = (
-/turf/open/transparent/openspace,
-/area/rogue/under/basement)
+/turf/open/transparent/openspace)
 "aY" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/blocks{
 	icon_state = "bluestone"
-	},
-/area/rogue/under/basement)
+	})
 "aZ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/basement)
+/turf/open/floor/rogue/blocks)
 "ba" = (
 /turf/open/floor/rogue/blocks{
 	icon_state = "bluestone"
-	},
-/area/rogue/under/basement)
+	})
 "bb" = (
 /obj/structure/mineral_door/wood/donjon{
 	icon_state = "donjondir";
@@ -197,13 +186,11 @@
 	},
 /turf/open/floor/rogue/blocks{
 	icon_state = "newstone2"
-	},
-/area/rogue/under/basement)
+	})
 "bc" = (
 /turf/open/floor/rogue/blocks{
 	icon_state = "newstone2"
-	},
-/area/rogue/under/basement)
+	})
 "bd" = (
 /obj/structure/mineral_door/wood/donjon{
 	dir = 4;
@@ -213,21 +200,18 @@
 	},
 /turf/open/floor/rogue/blocks{
 	icon_state = "bluestone"
-	},
-/area/rogue/under/basement)
+	})
 "be" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/basement)
+/turf/open/floor/rogue/blocks)
 "bf" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/under/cavewet)
 "bg" = (
 /obj/structure/stairs,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/under/basement)
+/turf/open/floor/rogue/dirt/road)
 "bh" = (
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/indoors/cave)
@@ -238,7 +222,6 @@
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/outdoors/bog)
 "bk" = (
-/turf/open/water/gross,
 /area/rogue/outdoors/bog)
 "bl" = (
 /turf/open/floor/rogue/dirt,
@@ -362,10 +345,6 @@
 /area/rogue/indoors/cave)
 "bT" = (
 /obj/effect/landmark/mapGenerator/rogue/forest,
-/turf/closed/mineral/rogue/bedrock,
-/area/rogue/indoors/cave)
-"bU" = (
-/obj/effect/landmark/mapGenerator/sunlights,
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/indoors/cave)
 "bV" = (
@@ -262825,7 +262804,7 @@ bh
 bh
 bh
 bh
-bU
+bh
 "}
 (2,1,5) = {"
 bh

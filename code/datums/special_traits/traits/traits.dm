@@ -192,21 +192,6 @@
 	character.mind.special_items["Whip"] = /obj/item/rogueweapon/whip
 	character.mind.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 6, TRUE)
 
-/datum/special_trait/psydons_rider
-	name = "Psydon's Drunkest Rider"
-	greet_text = span_notice("I ride! None of the laws shall stop me for that is Psydon's divine will!")
-	req_text = "Worship Psydon"
-	weight = 100
-
-/datum/special_trait/psydons_rider/on_apply(mob/living/carbon/human/character, silent)
-	character.drunkenness = 50
-	for(var/i in 1 to 2)
-		var/obj/item/bottle = new /obj/item/reagent_containers/glass/bottle/rogue/wine(get_turf(character))
-		character.put_in_hands(bottle, forced = TRUE)
-
-	character.mind.adjust_skillrank_up_to(/datum/skill/misc/riding, 4, TRUE)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled(get_turf(character))
-
 /datum/special_trait/spring_in_my_step
 	name = "Spring in my Step"
 	greet_text = span_notice("My legs are quite strong and where most have to climb, I can just jump")

@@ -45,17 +45,6 @@
 			holdingknife = null
 			playsound(loc, 'sound/foley/equip/swordsmall1.ogg')
 			return TRUE
-	
-
-/obj/item/clothing/shoes/roguetown/boots/psydonboots
-	name = "psydonian boots"
-	desc = "Blacksteel-heeled boots. The leather refuses to be worn down, no matter how far you march through these lands."
-	icon_state = "psydonboots"
-	item_state = "psydonboots"
-	sewrepair = TRUE
-	armor = list("blunt" = 30, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
-	salvage_amount = 1
-	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/shoes/roguetown/boots/nobleboot
 	name = "noble boots"
