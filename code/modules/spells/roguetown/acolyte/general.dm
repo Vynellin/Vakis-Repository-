@@ -101,10 +101,10 @@
 						situational_bonus = min(situational_bonus + 0.5, 2.5)
 				if (situational_bonus > 0)
 					conditional_buff = TRUE
-			if(/datum/patron/order/eora)
+			if(/datum/patron/order/varielle)
 				message_out = span_info("An emanance of love blossoms around [target]!")
 				message_self = span_notice("I'm filled with the restorative warmth of love!")
-				// if they're wearing an eoran bud (or are a pacifist), pretty much double the healing. if we're also wearing a bud at any point or a pacifist from any other source, apply another +15 bonus
+				// if they're wearing an heroine bud (or are a pacifist), pretty much double the healing. if we're also wearing a bud at any point or a pacifist from any other source, apply another +15 bonus
 				situational_bonus = 0
 				if (HAS_TRAIT(target, TRAIT_PACIFISM))
 					conditional_buff = TRUE

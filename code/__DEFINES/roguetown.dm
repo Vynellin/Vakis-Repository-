@@ -149,7 +149,7 @@
 	/datum/patron/order/tsoridys, \
 	/datum/patron/order/nunos, \
 	/datum/patron/order/carthus, \
-	/datum/patron/order/eora, \
+	/datum/patron/order/varielle, \
 	)
 
 #define ALL_CHAOS_PATRONS list(\
@@ -163,7 +163,7 @@
 	/datum/patron/order/tsoridys, \
 	/datum/patron/order/nunos, \
 	/datum/patron/order/carthus, \
-	/datum/patron/order/eora, \
+	/datum/patron/order/varielle, \
 	/datum/patron/chaos/tamari, \
 	/datum/patron/chaos/cinella, \
 	/datum/patron/chaos/kasmidian, \

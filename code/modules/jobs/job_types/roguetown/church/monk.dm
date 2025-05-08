@@ -25,7 +25,7 @@
 	name = "Acolyte"
 	jobtype = /datum/job/roguetown/monk
 
-	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/eora, /datum/patron/order/zira, /datum/patron/order/tsoridys, /datum/patron/chaos/cinella, /datum/patron/order/nunos, /datum/patron/order/carthus, /datum/patron/chaos/kasmidian) // The whole Ten. Probably could delete this now, actually.
+	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/order/varielle, /datum/patron/order/zira, /datum/patron/order/tsoridys, /datum/patron/chaos/cinella, /datum/patron/order/nunos, /datum/patron/order/carthus, /datum/patron/chaos/kasmidian) // The whole Ten. Probably could delete this now, actually.
 
 
 /datum/outfit/job/roguetown/monk/pre_equip(mob/living/carbon/human/H)
@@ -68,12 +68,12 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 			shirt = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
 			cloak = /obj/item/clothing/cloak/raincloak/mortus
-		if(/datum/patron/order/eora) //Eora content from Stonekeep
-			head = /obj/item/clothing/head/roguetown/eoramask
-			neck = /obj/item/clothing/neck/roguetown/psicross/eora
+		if(/datum/patron/order/varielle)
+			head = /obj/item/clothing/head/roguetown/variellemask
+			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/eora
-			cloak = /obj/item/clothing/cloak/templar/eoran
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/varielle
+			cloak = /obj/item/clothing/cloak/templar/variellian
 		if(/datum/patron/order/nunos)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
@@ -105,7 +105,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/carthus,
 			/obj/item/clothing/neck/roguetown/psicross/nunos,
-			/obj/item/clothing/neck/roguetown/psicross/eora,
+			/obj/item/clothing/neck/roguetown/psicross/varielle,
 			/obj/item/clothing/neck/roguetown/psicross/wood
 			)
 			neck = pick(psicross_options) // Random psicross, as cleric.
@@ -143,7 +143,7 @@
 		if(H.patron?.type == /datum/patron/order/tsoridys)
 			ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_SOUL_EXAMINE, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/order/eora)
+		if(H.patron?.type == /datum/patron/order/varielle)
 			ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 		if(H.patron?.type == /datum/patron/chaos/cinella)
 			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 3, TRUE)

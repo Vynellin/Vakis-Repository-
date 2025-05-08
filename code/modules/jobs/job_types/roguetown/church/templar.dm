@@ -64,9 +64,9 @@
 		if(/datum/patron/order/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			cloak = /obj/item/clothing/cloak/templar/tsoridian
-		if(/datum/patron/order/eora) //Eora content from stonekeep
-			neck = /obj/item/clothing/neck/roguetown/psicross/eora
-			cloak = /obj/item/clothing/cloak/templar/eoran
+		if(/datum/patron/order/varielle)
+			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
+			cloak = /obj/item/clothing/cloak/templar/variellian
 		if(/datum/patron/order/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
@@ -86,7 +86,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/carthus,
 			/obj/item/clothing/neck/roguetown/psicross/nunos,
-			/obj/item/clothing/neck/roguetown/psicross/eora,
+			/obj/item/clothing/neck/roguetown/psicross/varielle,
 			/obj/item/clothing/neck/roguetown/psicross/wood
 			)
 			neck = pick(psicross_options) // Random psicross, as cleric.
@@ -130,7 +130,7 @@
 	. = ..()
 	var/weapons = list("Katar")
 	switch(H.patron?.type)
-		if(/datum/patron/order/eora)
+		if(/datum/patron/order/varielle)
 			weapons += "Close Caress"
 		if(/datum/patron/chaos/cinella)
 			weapons += "Barotrauma"
@@ -140,7 +140,7 @@
 		if("Katar")
 			H.put_in_hands(new /obj/item/rogueweapon/katar(H), TRUE)
 		if("Close Caress")
-			H.put_in_hands(new /obj/item/rogueweapon/knuckles/eora(H), TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/knuckles/varielle(H), TRUE)
 		if("Barotrauma")
 			H.put_in_hands(new /obj/item/rogueweapon/katar/cinella(H), TRUE)
 
@@ -173,10 +173,10 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridian
 			cloak = /obj/item/clothing/cloak/templar/tsoridian
-		if(/datum/patron/order/eora) //Eora content from stonekeep
-			wrists = /obj/item/clothing/neck/roguetown/psicross/eora
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
-			cloak = /obj/item/clothing/cloak/templar/eoran
+		if(/datum/patron/order/varielle)
+			wrists = /obj/item/clothing/neck/roguetown/psicross/varielle
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/variellian
+			cloak = /obj/item/clothing/cloak/templar/variellian
 		if(/datum/patron/order/zira)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/zira
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
@@ -248,7 +248,7 @@
 			weapons += "Cackle Lash"
 		if(/datum/patron/order/carthus)
 			weapons += "Duel Settler"
-		if(/datum/patron/order/eora)
+		if(/datum/patron/order/varielle)
 			weapons += "The Heartstring"
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)
@@ -286,5 +286,5 @@
 			H.put_in_hands(new /obj/item/rogueweapon/mace/goden/steel/carthus(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
 		if("The Heartstring")
-			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/eora(H), TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/sword/rapier/varielle(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)

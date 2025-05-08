@@ -5925,8 +5925,8 @@
 /obj/item/clothing/neck/roguetown/psicross/zira,
 /obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/item/clothing/neck/roguetown/psicross/tsoridys,
-/obj/item/clothing/neck/roguetown/psicross/eora,
-/obj/item/clothing/neck/roguetown/psicross/eora,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
 /obj/item/clothing/neck/roguetown/psicross/tamari,
 /obj/item/clothing/neck/roguetown/psicross/tamari,
 /obj/item/clothing/neck/roguetown/psicross/aeternus,
@@ -18645,10 +18645,10 @@
 /area/rogue/indoors/town/manor)
 "hPv" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/head/roguetown/eoramask,
-/obj/item/clothing/head/roguetown/eoramask,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle,
+/obj/item/clothing/head/roguetown/variellemask,
+/obj/item/clothing/head/roguetown/variellemask,
 /obj/structure/fluff/walldeco/psybanner{
 	pixel_y = 29
 	},
@@ -30093,7 +30093,7 @@
 /area/rogue/indoors/town)
 "mAj" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/eora,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "mAk" = (
@@ -35239,7 +35239,7 @@
 /area/rogue/under/cave/orcdungeon)
 "oFf" = (
 /obj/item/alch/rosa,
-/obj/item/candle/eora/lit,
+/obj/item/candle/varielle/lit,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/bath)
 "oFh" = (
@@ -38420,11 +38420,11 @@
 /area/rogue/under/town/basement/keep)
 "pTs" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/bath)
 "pTw" = (
@@ -51175,12 +51175,12 @@
 /area/rogue/under/town/basement/keep)
 "vjK" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
-/obj/item/clothing/head/roguetown/eoramask,
-/obj/item/clothing/head/roguetown/eoramask,
-/obj/item/clothing/head/roguetown/eoramask,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/alt,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/alt,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/alt,
+/obj/item/clothing/head/roguetown/variellemask,
+/obj/item/clothing/head/roguetown/variellemask,
+/obj/item/clothing/head/roguetown/variellemask,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/bath)
 "vjN" = (

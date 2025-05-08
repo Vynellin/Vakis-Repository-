@@ -294,9 +294,7 @@
 	color = CLOTHING_BLACK
 	detail_color = CLOTHING_WHITE
 
-//Eora content from Stonekeep
-
-/obj/item/clothing/cloak/tabard/crusader/eora
+/obj/item/clothing/cloak/tabard/crusader/varielle
 	color = "#4D1E49"
 	detail_color = "#A95650"
 
@@ -1364,9 +1362,9 @@
 	user.update_inv_cloak()
 	user.update_inv_armor()
 
-/obj/item/clothing/cloak/templar/eora
-	name = "eora tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Eora on it."
+/obj/item/clothing/cloak/templar/varielle
+	name = "varielle tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Varielle on it."
 	icon_state = "tabard_eora"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN

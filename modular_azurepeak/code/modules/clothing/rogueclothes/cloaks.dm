@@ -22,10 +22,10 @@
 	desc = "Deep dark blacks, swallowing all light as if the night itself."
 	icon_state = "necratabard"
 
-/obj/item/clothing/cloak/templar/eoran
+/obj/item/clothing/cloak/templar/variellian
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
 	alternate_worn_layer = TABARD_LAYER
 	boobed = TRUE
-	name = "eoran tabard"
+	name = "variellian tabard"
 	desc = "A complex covering of translucent pink and beige clothes. They carry the scent of flowers in them."
 	icon_state = "eoratabard"

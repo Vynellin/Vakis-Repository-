@@ -296,8 +296,8 @@
 	desc = ""
 	icon_state = "malum"
 
-/obj/item/clothing/neck/roguetown/psicross/eora
-	name = "amulet of Eora"
+/obj/item/clothing/neck/roguetown/psicross/varielle
+	name = "amulet of Varielle"
 	desc = ""
 	icon_state = "eora"
 

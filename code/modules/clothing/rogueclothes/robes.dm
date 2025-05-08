@@ -184,12 +184,10 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	resistance_flags = FIRE_PROOF
 
-//Eora content from Stonekeep
-
-/obj/item/clothing/suit/roguetown/shirt/robe/eora
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
-	name = "eoran robe"
-	desc = "Holy robes, intended for use by followers of Eora"
+	name = "variellian robe"
+	desc = "Holy robes, intended for use by followers of Varielle."
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 	icon_state = "eorarobes"
 	icon = 'icons/roguetown/clothing/armor.dmi'
@@ -202,27 +200,24 @@
 	l_sleeve_status = SLEEVE_NORMAL
 	var/fanatic_wear = FALSE
 
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt
-	name = "open eoran robe"
-	desc = "Used by more radical followers of the Eoran Church"
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/alt
+	name = "open variellian robe"
 	body_parts_covered = null
 	icon_state = "eorastraps"
 	flags_inv = HIDEBOOB
 	fanatic_wear = TRUE
 
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/attack_right(mob/user)
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/attack_right(mob/user)
 	switch(fanatic_wear)
 		if(FALSE)
-			name = "open eoran robe"
-			desc = "Used by more radical followers of the Eoran Church"
+			name = "open variellian robe"
 			body_parts_covered = null
 			icon_state = "eorastraps"
 			fanatic_wear = TRUE
 			flags_inv = HIDEBOOB
 			to_chat(usr, span_warning("Now wearing radically!"))
 		if(TRUE)
-			name = "eoran robe"
-			desc = "Holy robes, intended for use by followers of Eora"
+			name = "variellian robe"
 			body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
 			icon_state = "eorarobes"
 			fanatic_wear = FALSE

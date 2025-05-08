@@ -201,15 +201,15 @@
 		target.apply_status_effect(/datum/status_effect/buff/undermaidenbargain)
 	
 
-/obj/structure/ritualcircle/eora
+/obj/structure/ritualcircle/varielle
 	name = "Rune of Love"
-	desc = "A Holy Rune of Eora"
+	desc = "A Holy Rune of Varielle"
 	icon_state = "eora_chalky"
 
 	var/peacerites = list("Rite of Pacification")
 
-/obj/structure/ritualcircle/eora/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/order/eora)
+/obj/structure/ritualcircle/varielle/attack_hand(mob/living/user)
+	if((user.patron?.type) != /datum/patron/order/varielle)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -219,7 +219,7 @@
 		to_chat(user,span_smallred("I have performed enough rituals for the day... I must rest before communing more."))
 		return
 	var/riteselection = input(user, "Rituals of Love", src) as null|anything in peacerites
-	switch(riteselection) // put ur rite selection here
+	switch(riteselection)
 		if("Rite of Pacification")
 			if(do_after(user, 50))
 				user.say("#Blessed be your weary head...")
@@ -234,7 +234,7 @@
 							spawn(120)
 								icon_state = "eora_chalky"
 
-/obj/structure/ritualcircle/eora/proc/pacify(src)
+/obj/structure/ritualcircle/varielle/proc/pacify(src)
 	var/ritualtargets = view(0, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
 		loc.visible_message(span_warning("[target] sways like windchimes in the wind..."))

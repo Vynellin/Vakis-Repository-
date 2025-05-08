@@ -95,15 +95,15 @@
 	start_lit = TRUE
 	icon_state = "candle1_lit"
 
-/obj/item/candle/eora
+/obj/item/candle/varielle
 	icon = 'icons/roguetown/items/lighting.dmi'
-	name = "eora's candle"
+	name = "varielle's candle"
 	desc = ""
 	color = "#f858b5ff"
 	light_color = "#ff13d8ff"
 	infinite = TRUE
 
-/obj/item/candle/eora/lit
+/obj/item/candle/varielle/lit
 	start_lit = TRUE
 	icon_state = "candle1_lit"
 

@@ -1119,7 +1119,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm
 	name = "psydonian armet"
-	desc = "An ornate helmet, whose visor has been bound shut with blacksteel chains. The Order of Saint Eora often decorates these armets with flowers - not only as a lucky charm gifted to them by fair maidens and family, but also as a vibrant reminder that 'happiness has to be fought for.'"
+	desc = "An ornate helmet, whose visor has been bound shut with blacksteel chains. The Order of Saint Varielle often decorates these armets with flowers - not only as a lucky charm gifted to them by fair maidens and family, but also as a vibrant reminder that 'happiness has to be fought for.'"
 	icon_state = "psydonarmet"
 	item_state = "psydonarmet"
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDESNOUT
@@ -1757,10 +1757,10 @@
 	body_parts_covered = HEAD|EARS|NOSE
 	color = null
 
-//............... Eora Helmet ............... //
-/obj/item/clothing/head/roguetown/helmet/sallet/eoran
-	name = "eora helmet"
-	desc = "A standard helmet forged in the style typical of Eoran worshippers, a simple yet practical protective piece of equipment. Upon it lays several laurels of flowers and other colorful ornaments, followed by several symbols and standards of the user's chapter, accomplishments or even punishment"
+//............... Varielle Helmet ............... //
+/obj/item/clothing/head/roguetown/helmet/sallet/variellian
+	name = "varielle helmet"
+	desc = "A standard helmet forged in the style typical of Variellian worshippers, a simple yet practical protective piece of equipment. Upon it lays several laurels of flowers and other colorful ornaments, followed by several symbols and standards of the user's chapter, accomplishments or even punishment"
 	icon_state = "eorahelmsallet"
 	item_state = "eorahelmsallet"
 
@@ -1852,11 +1852,9 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-//Eora content from Stonekeep
-
-/obj/item/clothing/head/roguetown/eoramask
-	name = "eoran mask"
-	desc = "A silver rabbit mask worn by the faithful of Eora, usually during their rituals."
+/obj/item/clothing/head/roguetown/variellemask
+	name = "variellian mask"
+	desc = "A silver rabbit mask worn by the faithful of Varielle, usually during their rituals."
 	color = null
 	icon_state = "eoramask"
 	item_state = "eoramask"
@@ -1867,16 +1865,16 @@
 	dynamic_hair_suffix = ""
 	resistance_flags = FIRE_PROOF // Made of metal
 
-/obj/item/clothing/head/roguetown/eoramask/equipped(mob/living/carbon/human/user, slot) //Copying Eora bud pacifism
+/obj/item/clothing/head/roguetown/variellemask/equipped(mob/living/carbon/human/user, slot) //Copying heroine bud pacifism
 	. = ..()
 	if(slot == SLOT_HEAD)
-		ADD_TRAIT(user, TRAIT_PACIFISM, "eoramask_[REF(src)]")
+		ADD_TRAIT(user, TRAIT_PACIFISM, "variellemask_[REF(src)]")
 
-/obj/item/clothing/head/roguetown/eoramask/dropped(mob/living/carbon/human/user)
+/obj/item/clothing/head/roguetown/variellemask/dropped(mob/living/carbon/human/user)
 	..()
-	REMOVE_TRAIT(user, TRAIT_PACIFISM, "eoramask_[REF(src)]")
+	REMOVE_TRAIT(user, TRAIT_PACIFISM, "variellemask_[REF(src)]")
 
-/obj/item/clothing/head/roguetown/eoramask/attack_hand(mob/user)
+/obj/item/clothing/head/roguetown/variellemask/attack_hand(mob/user)
 	if(iscarbon(user))
 		var/mob/living/carbon/C = user
 		if(src == C.head)

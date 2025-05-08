@@ -2,7 +2,7 @@
 
 /datum/advclass/fishermaster
 	name = "Master Fisher"
-	tutorial = "You are a Master Fisher, you cast your rod with might, and are able to pull fish larger than Eoras Bosom."
+	tutorial = "You are a Master Fisher, you cast your rod with might - and fish due well to fear you." // what is this, some kinda.. snake farm?
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/fishermaster

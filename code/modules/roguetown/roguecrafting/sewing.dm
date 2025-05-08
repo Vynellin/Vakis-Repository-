@@ -298,9 +298,9 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/eora
-	name = "tabard, eora (1 fibers, 3 cloth)"
-	result = list(/obj/item/clothing/cloak/templar/eora)
+/datum/crafting_recipe/roguetown/sewing/varielle
+	name = "tabard, varielle (1 fibers, 3 cloth)"
+	result = list(/obj/item/clothing/cloak/templar/varielle)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3

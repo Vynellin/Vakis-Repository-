@@ -6307,10 +6307,10 @@
 /area/rogue/indoors/town/vault)
 "ekU" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/head/roguetown/eoramask,
-/obj/item/clothing/head/roguetown/eoramask,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle,
+/obj/item/clothing/head/roguetown/variellemask,
+/obj/item/clothing/head/roguetown/variellemask,
 /obj/structure/fluff/walldeco/psybanner{
 	pixel_y = 29
 	},
@@ -18501,8 +18501,8 @@
 /obj/item/clothing/neck/roguetown/psicross/zira,
 /obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/item/clothing/neck/roguetown/psicross/tsoridys,
-/obj/item/clothing/neck/roguetown/psicross/eora,
-/obj/item/clothing/neck/roguetown/psicross/eora,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
 /obj/item/clothing/neck/roguetown/psicross/tamari,
 /obj/item/clothing/neck/roguetown/psicross/tamari,
 /obj/item/clothing/neck/roguetown/psicross/aeternus,
@@ -26535,9 +26535,9 @@
 /obj/item/clothing/cloak/templar/aeternian,
 /obj/item/clothing/cloak/templar/tsoridian,
 /obj/item/clothing/cloak/templar/tsoridian,
-/obj/item/clothing/cloak/templar/eoran,
-/obj/item/clothing/cloak/templar/eoran,
-/obj/item/clothing/cloak/templar/eoran,
+/obj/item/clothing/cloak/templar/variellian,
+/obj/item/clothing/cloak/templar/variellian,
+/obj/item/clothing/cloak/templar/variellian,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},

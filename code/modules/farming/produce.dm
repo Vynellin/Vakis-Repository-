@@ -379,7 +379,7 @@
 // poppies, from vanderlin
 /obj/item/reagent_containers/food/snacks/grown/rogue/poppy
 	name = "poppy"
-	desc = "For their crimson beauty and the sedating effect of their crushed seeds, these flowers are considered a symbol of Eora."
+	desc = "For their crimson beauty and the sedating effect of their crushed seeds, these flowers are considered a symbol of Varielle."
 	icon_state = "poppy"
 	seed = /obj/item/seeds/poppy
 	throwforce = 0

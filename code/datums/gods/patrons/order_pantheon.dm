@@ -65,17 +65,17 @@
 		"THROUGH PERSISTENCE, GLORY!",
 	)
 
-/datum/patron/order/eora
-	name = "Placeholder Name"
+/datum/patron/order/varielle
+	name = "Varielle"
 	domain = "Goddess of Love, Music and Harmony"
 	desc = "Placeholder"
 	worshippers = "Placeholder"
 	mob_traits = list(TRAIT_EMPATH, TRAIT_EXTEROCEPTION)
 	t1 = /obj/effect/proc_holder/spell/invoked/bud
-	t2 = /obj/effect/proc_holder/spell/invoked/eoracurse
+	t2 = /obj/effect/proc_holder/spell/invoked/variellecurse
 	t3 = null
 	confess_lines = list(
-		"EORA BRINGS US TOGETHER!",
+		"VARIELLE BRINGS US TOGETHER!",
 		"HER BEAUTY IS EVEN IN THIS TORMENT!",
 		"I LOVE YOU, EVEN AS YOU TRESPASS AGAINST ME!",
 	)

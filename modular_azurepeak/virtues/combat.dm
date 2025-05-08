@@ -68,8 +68,8 @@
 			recipient.mind?.special_items["Tamari Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tamari
 		if(/datum/patron/order/tsoridys)
 			recipient.mind?.special_items["Tsoridys Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tsoridys
-		if(/datum/patron/order/eora) 
-			recipient.mind?.special_items["Eora Psycross"] = /obj/item/clothing/neck/roguetown/psicross/eora
+		if(/datum/patron/order/varielle) 
+			recipient.mind?.special_items["Varielle Psycross"] = /obj/item/clothing/neck/roguetown/psicross/varielle
 		if(/datum/patron/order/zira)
 			recipient.mind?.special_items["Zira Psycross"] = /obj/item/clothing/neck/roguetown/psicross/zira
 		if(/datum/patron/order/carthus)

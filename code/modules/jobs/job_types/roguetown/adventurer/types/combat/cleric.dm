@@ -82,9 +82,9 @@
 				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
 					cloak = /obj/item/clothing/cloak/templar/nunite
-				if (/datum/patron/order/eora)
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/eora
-					head = /obj/item/clothing/head/roguetown/eoramask
+				if (/datum/patron/order/varielle)
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/varielle
+					head = /obj/item/clothing/head/roguetown/variellemask
 				else
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe //placeholder, anyone who doesn't have cool patron drip sprites just gets generic robes
 					head = /obj/item/clothing/head/roguetown/roguehood
@@ -140,9 +140,9 @@
 				if (/datum/patron/order/nunos)
 					cloak = /obj/item/clothing/cloak/templar/nunos
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/nunos
-				if (/datum/patron/order/eora)
-					cloak = /obj/item/clothing/cloak/templar/eora
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
+				if (/datum/patron/order/varielle)
+					cloak = /obj/item/clothing/cloak/templar/varielle
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/variellian
 				if (/datum/patron/order/carthus)
 					cloak = /obj/item/clothing/cloak/templar/carthus
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
@@ -218,8 +218,8 @@
 					cloak = /obj/item/clothing/cloak/templar/tsoridys
 				if (/datum/patron/order/nunos)
 					cloak = /obj/item/clothing/cloak/templar/nunos
-				if (/datum/patron/order/eora)
-					cloak = /obj/item/clothing/cloak/templar/eora
+				if (/datum/patron/order/varielle)
+					cloak = /obj/item/clothing/cloak/templar/varielle
 				if (/datum/patron/order/carthus)
 					cloak = /obj/item/clothing/cloak/templar/carthus
 				if (/datum/patron/chaos/kasmidian)
@@ -290,9 +290,9 @@
 				if (/datum/patron/order/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
 					cloak = /obj/item/clothing/cloak/templar/nunite
-				if (/datum/patron/order/eora)
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/eora
-					head = /obj/item/clothing/head/roguetown/eoramask
+				if (/datum/patron/order/varielle)
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/varielle
+					head = /obj/item/clothing/head/roguetown/variellemask
 				else
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe //placeholder, anyone who doesn't have cool patron drip sprites just gets generic robes
 					head = /obj/item/clothing/head/roguetown/roguehood
@@ -315,8 +315,8 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
 		if(/datum/patron/order/nunos)
 			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
-		if(/datum/patron/order/eora)
-			neck = /obj/item/clothing/neck/roguetown/psicross/eora
+		if(/datum/patron/order/varielle)
+			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
 		if(/datum/patron/chaos/kasmidian) // SOLARIS NOTE: kasmidian would ideally have their own psicross but idc to change this off xylix behavior rn
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
@@ -327,7 +327,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/carthus,
 			/obj/item/clothing/neck/roguetown/psicross/nunos,
-			/obj/item/clothing/neck/roguetown/psicross/eora
+			/obj/item/clothing/neck/roguetown/psicross/varielle
 			)
 			neck = pick(psicross_options)
 

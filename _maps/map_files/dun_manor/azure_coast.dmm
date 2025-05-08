@@ -5493,7 +5493,7 @@
 /area/rogue/indoors/cave)
 "JS" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/eora,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "JU" = (

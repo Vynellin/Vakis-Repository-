@@ -25,7 +25,7 @@
 			ritechoices+="Rune of Trickery"
 		if(/datum/patron/order/tsoridys)
 			ritechoices+="Rune of Death"
-		if(/datum/patron/order/eora)
+		if(/datum/patron/order/varielle)
 			ritechoices+="Rune of Love"
 		if(/datum/patron/order/carthus)
 			ritechoices+="Rune of War"
@@ -69,7 +69,7 @@
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her Love..."))
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/eora(step_turf)
+				new /obj/structure/ritualcircle/varielle(step_turf)
 		if("Rune of War")
 			to_chat(user,span_cultsmall("I begin inscribing the rune of His Prowess..."))
 			if(do_after(user, 30, src))

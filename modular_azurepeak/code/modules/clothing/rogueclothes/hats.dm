@@ -31,9 +31,9 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/clothing/head/roguetown/helmet/heavy/eoran
-	name = "eoran helmet"
-	desc = "A visage of beauty, this helm made in soft pink and beige reminds one of the grace of Eora."
+/obj/item/clothing/head/roguetown/helmet/heavy/variellian
+	name = "variellian helmet"
+	desc = "A visage of beauty, this helm made in soft pink and beige reminds one of the grace of Varielle."
 	icon_state = "eorahelm"
 	item_state = "eorahelm"
 	emote_environment = 3

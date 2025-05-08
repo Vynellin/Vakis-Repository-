@@ -359,7 +359,7 @@
 	item_d_type = "blunt"
 
 
-/obj/item/rogueweapon/knuckles/eora
+/obj/item/rogueweapon/knuckles/varielle
 	name = "close caress"
 	desc = "Some times call for a more intimate approach."
 	force = 20

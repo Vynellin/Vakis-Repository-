@@ -711,7 +711,7 @@
 	max_blade_int = 300
 	wdefense = 7
 
-/obj/item/rogueweapon/sword/rapier/eora
+/obj/item/rogueweapon/sword/rapier/varielle
 	name = "The Heartstring"
 	desc = "For when soft words cannot be spoken more, and hearts are to be pierced."
 	icon = 'icons/roguetown/weapons/32.dmi'

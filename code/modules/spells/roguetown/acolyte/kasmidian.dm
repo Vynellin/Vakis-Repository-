@@ -53,7 +53,7 @@
 			if(3)
 				user.say("Wandought thine blades stand, much like thine loving parts!", forced = "spell")
 			if(4)
-				user.say("That's a face not even Eora could love!", forced = "spell")
+				user.say("That's a face not even Varielle could love!", forced = "spell")
 			if(5)
 				user.say("Your breath smells like raw butter and cheap beer!.", forced = "spell")
 			if(6)
