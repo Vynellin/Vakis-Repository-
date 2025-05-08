@@ -42,12 +42,12 @@
 	src.holder = holder
 	holder?.devotion = src
 	src.patron = patron
-	if (patron.type == /datum/patron/order/tsoridys)
+	if (patron.type == /datum/patron/balance/tsoridys)
 		ADD_TRAIT(holder, TRAIT_DEATHSIGHT, "devotion")
 
 /datum/devotion/Destroy(force)
 	. = ..()
-	if (patron.type == /datum/patron/order/tsoridys)
+	if (patron.type == /datum/patron/balance/tsoridys)
 		REMOVE_TRAIT(holder, TRAIT_DEATHSIGHT, "devotion")
 	holder?.devotion = null
 	holder = null

@@ -62,19 +62,19 @@
 	switch(recipient.patron?.type)
 		if(/datum/patron/light/aeternus)
 			recipient.mind?.special_items["Aeternus Psycross"] = /obj/item/clothing/neck/roguetown/psicross/aeternus
-		if(/datum/patron/chaos/cinella)
+		if(/datum/patron/change/cinella)
 			recipient.mind?.special_items["Cinella Psycross"] = /obj/item/clothing/neck/roguetown/psicross/cinella
-		if(/datum/patron/chaos/tamari)
+		if(/datum/patron/change/tamari)
 			recipient.mind?.special_items["Tamari Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tamari
-		if(/datum/patron/order/tsoridys)
+		if(/datum/patron/balance/tsoridys)
 			recipient.mind?.special_items["Tsoridys Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tsoridys
-		if(/datum/patron/order/varielle) 
+		if(/datum/patron/balance/varielle) 
 			recipient.mind?.special_items["Varielle Psycross"] = /obj/item/clothing/neck/roguetown/psicross/varielle
-		if(/datum/patron/order/zira)
+		if(/datum/patron/balance/zira)
 			recipient.mind?.special_items["Zira Psycross"] = /obj/item/clothing/neck/roguetown/psicross/zira
-		if(/datum/patron/order/carthus)
+		if(/datum/patron/balance/carthus)
 			recipient.mind?.special_items["Carthus Psycross"] =/obj/item/clothing/neck/roguetown/psicross/carthus
-		if(/datum/patron/order/nunos)
+		if(/datum/patron/balance/nunos)
 			recipient.mind?.special_items["Nunos Psycross"] = /obj/item/clothing/neck/roguetown/psicross/nunos
 
 /datum/virtue/combat/duelist

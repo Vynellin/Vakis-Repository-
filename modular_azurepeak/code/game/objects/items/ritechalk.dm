@@ -15,21 +15,21 @@
 	switch (user.patron?.type)
 		if(/datum/patron/light/aeternus)
 			ritechoices+="Rune of Sun"
-		if(/datum/patron/order/zira)
+		if(/datum/patron/balance/zira)
 			ritechoices+="Rune of Moon"
-		if(/datum/patron/chaos/tamari)
+		if(/datum/patron/change/tamari)
 			ritechoices+="Rune of Beasts"
-		if(/datum/patron/order/nunos)
+		if(/datum/patron/balance/nunos)
 			ritechoices+="Rune of Forge"
-		if(/datum/patron/chaos/kasmidian)
+		if(/datum/patron/change/kasmidian)
 			ritechoices+="Rune of Trickery"
-		if(/datum/patron/order/tsoridys)
+		if(/datum/patron/balance/tsoridys)
 			ritechoices+="Rune of Death"
-		if(/datum/patron/order/varielle)
+		if(/datum/patron/balance/varielle)
 			ritechoices+="Rune of Love"
-		if(/datum/patron/order/carthus)
+		if(/datum/patron/balance/carthus)
 			ritechoices+="Rune of War"
-		if(/datum/patron/chaos/cinella)
+		if(/datum/patron/change/cinella)
 			ritechoices+="Rune of Storm"
 
 	var/runeselection = input(user, "Which rune shall I inscribe?", src) as null|anything in ritechoices

@@ -55,28 +55,28 @@
 		if(/datum/patron/light/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			cloak = /obj/item/clothing/cloak/tabard/crusader/aeternus
-		if(/datum/patron/chaos/cinella)
+		if(/datum/patron/change/cinella)
 			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
 			cloak = /obj/item/clothing/cloak/cinellatabard
-		if(/datum/patron/chaos/tamari)
+		if(/datum/patron/change/tamari)
 			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
 			cloak = /obj/item/clothing/cloak/tabard/crusader/tamari
-		if(/datum/patron/order/tsoridys)
+		if(/datum/patron/balance/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			cloak = /obj/item/clothing/cloak/templar/tsoridian
-		if(/datum/patron/order/varielle)
+		if(/datum/patron/balance/varielle)
 			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
 			cloak = /obj/item/clothing/cloak/templar/variellian
-		if(/datum/patron/order/zira)
+		if(/datum/patron/balance/zira)
 			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/order/carthus)
+		if(/datum/patron/balance/carthus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
 			cloak = /obj/item/clothing/cloak/tabard/crusader/carthus
-		if(/datum/patron/order/nunos)
+		if(/datum/patron/balance/nunos)
 			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
 			cloak = /obj/item/clothing/cloak/templar/nunite
-		if(/datum/patron/order/nunos)
+		if(/datum/patron/balance/nunos)
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
@@ -107,7 +107,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/order/nunos)
+		if(H.patron?.type == /datum/patron/balance/nunos)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 1, TRUE)
@@ -130,9 +130,9 @@
 	. = ..()
 	var/weapons = list("Katar")
 	switch(H.patron?.type)
-		if(/datum/patron/order/varielle)
+		if(/datum/patron/balance/varielle)
 			weapons += "Close Caress"
-		if(/datum/patron/chaos/cinella)
+		if(/datum/patron/change/cinella)
 			weapons += "Barotrauma"
 
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
@@ -161,31 +161,31 @@
 			wrists = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
 			cloak = /obj/item/clothing/cloak/templar/aeternian
-		if(/datum/patron/chaos/cinella)
+		if(/datum/patron/change/cinella)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/cinella
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/cinellagreathelm
 			cloak = /obj/item/clothing/cloak/cinellatabard
-		if(/datum/patron/chaos/tamari)
+		if(/datum/patron/change/tamari)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/tamari
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/tamarihelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/tamari
-		if(/datum/patron/order/tsoridys)
+		if(/datum/patron/balance/tsoridys)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridian
 			cloak = /obj/item/clothing/cloak/templar/tsoridian
-		if(/datum/patron/order/varielle)
+		if(/datum/patron/balance/varielle)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/varielle
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/variellian
 			cloak = /obj/item/clothing/cloak/templar/variellian
-		if(/datum/patron/order/zira)
+		if(/datum/patron/balance/zira)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/zira
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/noc
-		if(/datum/patron/order/carthus)
+		if(/datum/patron/balance/carthus)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/carthus
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 			cloak = /obj/item/clothing/cloak/tabard/crusader/carthus
-		if(/datum/patron/order/nunos)
+		if(/datum/patron/balance/nunos)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/nunos
 			cloak = /obj/item/clothing/cloak/templar/nunite
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/nunos
@@ -211,7 +211,7 @@
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/order/nunos)
+		if(H.patron?.type == /datum/patron/balance/nunos)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)
@@ -236,19 +236,19 @@
 	switch(H.patron?.type)
 		if(/datum/patron/light/aeternus) //Unique patron weapons, more can be added here if wanted.
 			weapons += "Solar Judgement"
-		if(/datum/patron/order/zira)
+		if(/datum/patron/balance/zira)
 			weapons += "Moonlight Khopesh"
-		if(/datum/patron/order/tsoridys)
+		if(/datum/patron/balance/tsoridys)
 			weapons += "Swift End"
-		if(/datum/patron/order/nunos)
+		if(/datum/patron/balance/nunos)
 			weapons += "Forgefiend"
-		if(/datum/patron/chaos/tamari)
+		if(/datum/patron/change/tamari)
 			weapons += "Summer Scythe"
-		if(/datum/patron/chaos/kasmidian)
+		if(/datum/patron/change/kasmidian)
 			weapons += "Cackle Lash"
-		if(/datum/patron/order/carthus)
+		if(/datum/patron/balance/carthus)
 			weapons += "Duel Settler"
-		if(/datum/patron/order/varielle)
+		if(/datum/patron/balance/varielle)
 			weapons += "The Heartstring"
 	var/weapon_choice = input(H,"Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	switch(weapon_choice)

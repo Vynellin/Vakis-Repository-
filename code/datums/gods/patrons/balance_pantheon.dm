@@ -1,9 +1,9 @@
-/datum/patron/order
+/datum/patron/balance
 	name = null
-	associated_faith = /datum/faith/order
+	associated_faith = /datum/faith/balance
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
-/datum/patron/order/zira
+/datum/patron/balance/zira
 	name = "Zira"
 	domain = "Goddess of the Moon"
 	desc = "Placeholder"
@@ -17,7 +17,7 @@
 		"I SEEK THE MYSTERIES OF THE MOON!",
 	)
 
-/datum/patron/order/tsoridys
+/datum/patron/balance/tsoridys
 	name = "Tsoridys"
 	domain = "God of Death, Time, and Entropy"
 	desc = "Placeholder"
@@ -33,7 +33,7 @@
 		"TSORIDYS WATCH ME ON THIS DAY!",
 	)
 
-/datum/patron/order/nunos
+/datum/patron/balance/nunos
 	name = "Nunos"
 	domain = "Contested God of Toil"
 	desc = "Placeholder"
@@ -50,7 +50,7 @@
 		"I AM AN INSTRUMENT OF CREATION!",
 	)
 
-/datum/patron/order/carthus
+/datum/patron/balance/carthus
 	name = "Carthus"
 	domain = "God of War, Ambition, and Rule"
 	desc = "Placeholder"
@@ -65,7 +65,7 @@
 		"THROUGH PERSISTENCE, GLORY!",
 	)
 
-/datum/patron/order/varielle
+/datum/patron/balance/varielle
 	name = "Varielle"
 	domain = "Goddess of Love, Music and Harmony"
 	desc = "Placeholder"

@@ -1,9 +1,9 @@
-/datum/patron/chaos
+/datum/patron/change
 	name = null
-	associated_faith = /datum/faith/chaos
+	associated_faith = /datum/faith/change
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
-/datum/patron/chaos/tamari
+/datum/patron/change/tamari
 	name = "Tamari"
 	domain = "God of Life and Nature"
 	desc = "Placeholder"
@@ -19,7 +19,7 @@
 		"I ANSWER THE CALL OF THE WILD!",
 	)
 
-/datum/patron/chaos/cinella
+/datum/patron/change/cinella
 	name = "Cinella"
 	domain = "Goddess of the Seas"
 	desc = "Placeholder"
@@ -34,7 +34,7 @@
 		"I AM DRAWN BY THE PULL OF THE TIDE!",
 	)
 
-/datum/patron/chaos/kasmidian
+/datum/patron/change/kasmidian
 	name = "Kasmidian"
 	domain = "God of Primordial Magic"
 	desc = "Placeholder"

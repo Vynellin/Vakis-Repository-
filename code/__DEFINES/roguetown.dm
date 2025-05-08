@@ -145,28 +145,28 @@
 	/datum/species/construct/metal,\
 )
 
-#define ALL_ORDER_PATRONS list(/datum/patron/order/zira, \
-	/datum/patron/order/tsoridys, \
-	/datum/patron/order/nunos, \
-	/datum/patron/order/carthus, \
-	/datum/patron/order/varielle, \
+#define ALL_ORDER_PATRONS list(/datum/patron/balance/zira, \
+	/datum/patron/balance/tsoridys, \
+	/datum/patron/balance/nunos, \
+	/datum/patron/balance/carthus, \
+	/datum/patron/balance/varielle, \
 	)
 
 #define ALL_CHAOS_PATRONS list(\
-	/datum/patron/chaos/tamari, \
-	/datum/patron/chaos/cinella, \
-	/datum/patron/chaos/kasmidian, \
+	/datum/patron/change/tamari, \
+	/datum/patron/change/cinella, \
+	/datum/patron/change/kasmidian, \
 	)
 
 #define ALL_PATRONS  list(\
 	/datum/patron/light/aeternus, \
-	/datum/patron/order/tsoridys, \
-	/datum/patron/order/nunos, \
-	/datum/patron/order/carthus, \
-	/datum/patron/order/varielle, \
-	/datum/patron/chaos/tamari, \
-	/datum/patron/chaos/cinella, \
-	/datum/patron/chaos/kasmidian, \
+	/datum/patron/balance/tsoridys, \
+	/datum/patron/balance/nunos, \
+	/datum/patron/balance/carthus, \
+	/datum/patron/balance/varielle, \
+	/datum/patron/change/tamari, \
+	/datum/patron/change/cinella, \
+	/datum/patron/change/kasmidian, \
 	)
 
 #define PLATEHIT "plate"

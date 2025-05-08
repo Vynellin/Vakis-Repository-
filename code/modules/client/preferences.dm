@@ -1814,7 +1814,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						if (V.name == virtue.name || V.name == virtuetwo.name)
 							continue
-						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/order))
+						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/balance))
 							continue
 						if (istype(V, /datum/virtue/utility/noble) && (pref_species == /datum/species/construct/metal))		//Stops bypass of nobility for constructs.
 							continue
@@ -1834,7 +1834,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						if (V.name == virtue.name || V.name == virtuetwo.name)
 							continue
-						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/order))
+						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/balance))
 							continue
 						if (istype(V, /datum/virtue/utility/noble) && (pref_species == /datum/species/construct/metal))		//Stops bypass of nobility for constructs.
 							continue
