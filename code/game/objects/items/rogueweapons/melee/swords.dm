@@ -996,7 +996,7 @@
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/chop)
 	icon_state = "eclipsum"
 	name = "eclipsum sword"
-	desc = "A mutual effort of Zira and Aeternus' followers, this blade was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether dae or nite."
+	desc = "A mutual effort of Zira and Aeternus' followers, this blade was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether day or night."
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 	smelt_bar_num = 2

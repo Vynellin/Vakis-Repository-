@@ -152,7 +152,6 @@
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-			H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_spells_templar(H)
 			var/weapons = list("Bastard Sword","Mace","Flail")

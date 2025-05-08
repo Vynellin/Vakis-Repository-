@@ -509,7 +509,7 @@
 
 /obj/item/rogueweapon/halberd/holysee
 	name = "eclipsum halberd"
-	desc = "A mutual effort of Zira and Aeternus's followers, this halberd was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether dae or nite. The reinforced shaft provides greater durability."
+	desc = "A mutual effort of Zira and Aeternus' followers, this halberd was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether day or night. The reinforced shaft provides greater durability."
 	icon_state = "gsspear"
 	max_integrity = 600
 	force = 20

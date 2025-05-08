@@ -101,7 +101,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 			H.change_stat("speed", 1)
 			H.change_stat("perception", 2)
 			H.change_stat("fortune", 5)
-		H.dna.species.soundpack_m = new /datum/voicepack/male/evil()
 	else if(should_wear_masc_clothes(H))
 		pants = /obj/item/clothing/under/roguetown/tights/black
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black

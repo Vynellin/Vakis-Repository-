@@ -490,22 +490,22 @@
 /obj/structure/fluff/clock/examine(mob/user)
 	. = ..()
 	if(!broke)
-		var/day = "... actually, WHAT dae is it?"
+		var/day = "... actually, WHAT day is it?"
 		switch(GLOB.dayspassed)
 			if(1)
-				day = "Moon's dae."
+				day = "Moon's day."
 			if(2)
-				day = "Tiw's dae."
+				day = "Tiw's day."
 			if(3)
-				day = "Wedding's dae."
+				day = "Wedding's day."
 			if(4)
-				day = "Thule's dae."
+				day = "Thule's day."
 			if(5)
-				day = "Freyja's dae."
+				day = "Freyja's day."
 			if(6)
-				day = "Saturn's dae."
+				day = "Saturn's day."
 			if(7)
-				day = "Sun's dae."
+				day = "Sun's day."
 		. += "Oh no, it's [station_time_timestamp("hh:mm")] on a [day]"
 //		if(SSshuttle.emergency.mode == SHUTTLE_DOCKED)
 //			if(SSshuttle.emergency.timeLeft() < 30 MINUTES)
@@ -546,22 +546,26 @@
 /obj/structure/fluff/wallclock/examine(mob/user)
 	. = ..()
 	if(!broke)
-		var/day = "... actually, WHAT dae is it?"
+		var/day = "... actually, WHAT day is it?"
 		switch(GLOB.dayspassed)
 			if(1)
-				day = "Moon's dae." // SOLARIS NOTE: Lorepass; adjust these
+				day = "Sun's Grasp." // SOLARIS NOTE: Lorepass; adjust these
 			if(2)
-				day = "Tiw's dae."
+				day = "Moon's Light."
 			if(3)
-				day = "Wedding's dae."
+				day = "Certainty's Flip."
 			if(4)
-				day = "Thule's dae."
+				day = "Innovation's Hope."
 			if(5)
-				day = "Freyja's dae."
+				day = "Ambition's Light."
 			if(6)
-				day = "Saturn's dae."
+				day = "Love's Sight."
 			if(7)
-				day = "Sun's dae."
+				day = "Nature's Boon."
+			if(8)
+				text_to_show = "Sea's Wave."
+			if(9)
+				text_to_show = "Rift's Watch."
 		. += "Oh no, it's [station_time_timestamp("hh:mm")] on a [day]"
 //		testing("mode is [SSshuttle.emergency.mode] should be [SHUTTLE_DOCKED]")
 //		if(SSshuttle.emergency.mode == SHUTTLE_DOCKED)

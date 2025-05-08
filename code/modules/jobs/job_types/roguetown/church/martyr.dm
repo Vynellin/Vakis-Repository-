@@ -488,7 +488,6 @@
 		H.change_stat("endurance", 3)
 		H.change_stat("intelligence", 1)
 		H.change_stat("perception", 1)
-		H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 
 
 /obj/item/rogueweapon/sword/long/martyr
@@ -614,7 +613,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/heavy/holysee
 	name = "holy silver bascinet"
-	desc = "Branded by the Holy See, these helms are worn by it's chosen warriors. A bastion of hope in the dark nite."
+	desc = "Branded by the Holy See, these helms are worn by it's chosen warriors. A bastion of hope in the dark night."
 	icon = 'icons/roguetown/clothing/special/martyr.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/special/onmob/martyrbascinet.dmi'
 	adjustable = CAN_CADJUST

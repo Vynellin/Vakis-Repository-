@@ -322,7 +322,7 @@
 /*	.................   Breadslice & Toast   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/breadslice
 	name = "sliced bread"
-	desc = "A bit of comfort to start your dae."
+	desc = "A bit of comfort to start your day."
 	icon_state = "loaf_slice"
 	faretype = FARE_POOR
 	w_class = WEIGHT_CLASS_NORMAL

@@ -213,7 +213,7 @@
 
 /obj/item/rogueweapon/huntingknife/idagger/steel/holysee
 	name = "eclipsum dagger"
-	desc = "A mutual effort of Zira and Aeternus' followers, this dagger was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether dae or nite."
+	desc = "A mutual effort of Zira and Aeternus' followers, this dagger was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether day or night."
 	force = 25
 	max_integrity = 200
 	icon_state = "gsdagger"

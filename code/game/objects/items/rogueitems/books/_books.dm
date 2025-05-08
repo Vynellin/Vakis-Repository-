@@ -175,7 +175,7 @@
 
 /obj/item/manuscript
 	name = "2 page manuscript"
-	desc = "A 2 page written piece aspiring to one dae become a book."
+	desc = "A 2 page written piece aspiring to one day become a book."
 	icon = 'icons/roguetown/items/misc.dmi'
 	icon_state = "manuscript"
 	dir = 2
@@ -209,7 +209,7 @@
 
 	++number_of_pages
 	name = "[number_of_pages] page manuscript"
-	desc = "A [number_of_pages] page written piece aspiring to one dae become a book."
+	desc = "A [number_of_pages] page written piece aspiring to one day become a book."
 	page_texts += P.info
 	compiled_pages += "<p>[P.info]</p>"
 	qdel(P)
@@ -312,7 +312,7 @@
 		else
 			update_icon()
 			name = "[number_of_pages] page manuscript"
-			desc = "A [number_of_pages] page written piece aspiring to one dae become a book."
+			desc = "A [number_of_pages] page written piece aspiring to one day become a book."
 			return
 
 	. = ..()

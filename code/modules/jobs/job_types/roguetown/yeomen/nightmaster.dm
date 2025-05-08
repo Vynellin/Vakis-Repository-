@@ -1,6 +1,6 @@
-/datum/job/roguetown/niteman
+/datum/job/roguetown/bathmaster
 	title = "Bathmaster"
-	flag = NITEMASTER
+	flag = BATHMASTER
 	department_flag = YEOMEN
 	faction = "Station"
 	total_positions = 1
@@ -9,15 +9,15 @@
 	allowed_races = RACES_ALL_KINDS
 	tutorial = "You are renting out the bathhouse in a joint operation with the Innkeep. You provide security for the bathwenches and help them to find work--when you're not being a trouble-making rake that others suffer to tolerate."
 	allowed_sexes = list(MALE, FEMALE)
-	outfit = /datum/outfit/job/roguetown/niteman
-	display_order = JDO_NITEMASTER
+	outfit = /datum/outfit/job/roguetown/bathmaster
+	display_order = JDO_BATHMASTER
 	give_bank_account = 20
 	min_pq = 1 //No drugs until you finish the tutorial, Jimmy!
 	max_pq = null
 	bypass_lastclass = TRUE
 	round_contrib_points = 3
 
-/datum/outfit/job/roguetown/niteman/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/bathmaster/pre_equip(mob/living/carbon/human/H)
 	..()
 	shoes = /obj/item/clothing/shoes/roguetown/boots // Swaggier and more armored against uppity/bitey attendants
 	belt = /obj/item/storage/belt/rogue/leather/black
@@ -51,11 +51,9 @@
 		H.change_stat("strength", 1)
 		H.change_stat("intelligence", -1)
 		H.change_stat("constitution", 1)
-		// H.change_stat("perception", -1) // They are criminal types, and should be reasonably perceptive
 		H.change_stat("endurance", 2) // They are professionals, they should 'outlast' their subordinates and clients
 
 	if(should_wear_masc_clothes(H))
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
-		H.dna.species.soundpack_m = new /datum/voicepack/male/zeth()
 	else if(should_wear_femme_clothes(H))
 		armor = /obj/item/clothing/suit/roguetown/armor/armordress/alt
