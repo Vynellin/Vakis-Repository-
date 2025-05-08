@@ -27,7 +27,7 @@
 		if(amount_blessed >= 5)
 			break
 	if(growed)
-		visible_message(span_green("[usr] blesses the nearby crops with Dendor's Favour!"))
+		visible_message(span_green("[usr] blesses the nearby crops with Tamari's Favour!"))
 	return growed
 
 //At some point, this spell should Awaken beasts, allowing a ghost to possess them. Not for this PR though.
@@ -50,7 +50,7 @@
 
 /obj/effect/proc_holder/spell/targeted/beasttame/cast(list/targets,mob/user = usr)
 	. = ..()
-	visible_message(span_green("[usr] soothes the beastblood with Dendor's whisper."))
+	visible_message(span_green("[usr] soothes the beastblood with Tamari's whisper."))
 	var/tamed = FALSE
 	for(var/mob/living/simple_animal/hostile/retaliate/animal in get_hearers_in_view(2, usr))
 		if((animal.mob_biotypes & MOB_UNDEAD))
@@ -62,7 +62,7 @@
 				animal.ai_controller.clear_blackboard_key(BB_BASIC_MOB_CURRENT_TARGET)
 				animal.ai_controller.clear_blackboard_key(BB_BASIC_MOB_RETALIATE_LIST)
 				animal.ai_controller.set_blackboard_key(BB_BASIC_MOB_TAMED, TRUE)
-			to_chat(usr, "With Dendor's aide, you soothe [animal] of their anger.")
+			to_chat(usr, "With Tamari's aide, you soothe [animal] of their anger.")
 	return tamed
 
 /obj/effect/proc_holder/spell/targeted/conjure_glowshroom
@@ -112,13 +112,13 @@
 	
 	if (!first_cast)
 		to_chat(user, span_boldwarning("So it is murmured in the Earth and Air: the Call of the Moon is sacred, and to share knowledge gleaned from it with those not of Him is a SIN."))
-		to_chat(user, span_boldwarning("Ware thee well, child of Dendor."))
+		to_chat(user, span_boldwarning("Ware thee well, child of Tamari."))
 		first_cast = TRUE
 	. = ..()
 	
-/obj/effect/proc_holder/spell/self/dendor_shapeshift
+/obj/effect/proc_holder/spell/self/tamari_shapeshift
 	name = "Beast Form"
-	desc = "Take on the form of one of Dendor's sacred beasts."
+	desc = "Take on the form of one of Tamari's sacred beasts."
 	overlay_state = "tamebeast"
 	releasedrain = 60
 	charge_max = 60 SECONDS
@@ -190,7 +190,7 @@ var/static/list/druid_forms = list(
 	),*/
 )
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/Initialize()
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/Initialize()
 	. = ..()
 	charge_type = "recharge"
 	charge_counter = charge_max
@@ -198,7 +198,7 @@ var/static/list/druid_forms = list(
 	recharging = FALSE
 	still_recharging_msg = span_warning("[name] is still recharging!")
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/cast(mob/living/carbon/human/user)
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/cast(mob/living/carbon/human/user)
 	if(!user)
 		return FALSE
 	
@@ -225,7 +225,7 @@ var/static/list/druid_forms = list(
 	if(selected_form)
 		do_shapeshift(user)
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/proc/do_shapeshift(mob/living/caster)
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/proc/do_shapeshift(mob/living/caster)
 	var/obj/shapeshift_holder/shapeshift_holder = locate() in caster
 	if(shapeshift_holder)
 		// If already shapeshifted, restore to human form
@@ -239,13 +239,13 @@ var/static/list/druid_forms = list(
 	
 	// Transformation effects and messages
 	caster.flash_fullscreen("redflash3") // Same effect as werewolves
-	to_chat(caster, span_userdanger("Your bones crack and reshape as Dendor's blessing takes hold!"))
+	to_chat(caster, span_userdanger("Your bones crack and reshape as Tamari's blessing takes hold!"))
 	caster.visible_message(span_warning("[caster]'s form begins to twist and contort unnaturally!"), \
 						  span_warning("The transformation is agonizing!"))
 	
 	// Drop all items EXCEPT the psicross
 	for(var/obj/item/W in caster)
-		if(!istype(W, /obj/item/clothing/neck/roguetown/psicross/dendor))
+		if(!istype(W, /obj/item/clothing/neck/roguetown/psicross/tamari))
 			caster.dropItemToGround(W)
 	
 	// Add transformation effects
@@ -422,7 +422,7 @@ var/static/list/druid_forms = list(
 	
 	return shape
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/proc/do_restore(mob/living/shape)
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/proc/do_restore(mob/living/shape)
 	var/obj/shapeshift_holder/shapeshift_holder = locate() in shape
 	if(!shapeshift_holder)
 		return
@@ -472,7 +472,7 @@ var/static/list/druid_forms = list(
 			return TRUE
 	return FALSE
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/process(delta_time)
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/process(delta_time)
 	if(recharging && charge_type == "recharge")
 		charge_counter += delta_time * 1  // Change from 10 to 1 since SECONDS macro already handles conversion
 		if(charge_counter >= charge_max)
@@ -482,7 +482,7 @@ var/static/list/druid_forms = list(
 			if(action)
 				action.UpdateButtonIcon()
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/perform(list/targets, recharge = TRUE, mob/user = usr)
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/perform(list/targets, recharge = TRUE, mob/user = usr)
 	before_cast(targets)
 	invocation(user)
 	if(user?.ckey)
@@ -496,7 +496,7 @@ var/static/list/druid_forms = list(
 		return TRUE
 	return FALSE
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/can_cast(mob/user)
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/can_cast(mob/user)
 	if(!..())
 		return FALSE
 	if(recharging)
@@ -507,7 +507,7 @@ var/static/list/druid_forms = list(
 		return FALSE
 	return TRUE
 
-/obj/effect/proc_holder/spell/self/dendor_shapeshift/proc/handle_death(mob/living/shape)
+/obj/effect/proc_holder/spell/self/tamari_shapeshift/proc/handle_death(mob/living/shape)
 	SIGNAL_HANDLER
 	
 	var/obj/shapeshift_holder/H = locate() in shape

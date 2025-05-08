@@ -106,13 +106,13 @@
 	name = "Rune of the Warrior"
 	desc = "A Holy Rune of Carthus"
 
-/obj/structure/ritualcircle/dendor
+/obj/structure/ritualcircle/tamari
 	name = "Rune of Beasts"
-	desc = "A Holy Rune of Dendor"
+	desc = "A Holy Rune of Tamari"
 	icon_state = "dendor_chalky"
 	var/bestialrites = list("Rite of the Lesser Wolf")
 
-/obj/structure/ritualcircle/dendor/attack_hand(mob/living/user)
+/obj/structure/ritualcircle/tamari/attack_hand(mob/living/user)
 	if((user.patron?.type) != /datum/patron/chaos/tamari)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
@@ -143,7 +143,7 @@
 							spawn(120)
 								icon_state = "dendor_chalky"
 
-/obj/structure/ritualcircle/dendor/proc/lesserwolf(src)
+/obj/structure/ritualcircle/tamari/proc/lesserwolf(src)
 	var/ritualtargets = view(1, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
 		target.apply_status_effect(/datum/status_effect/buff/lesserwolf)

@@ -2323,7 +2323,7 @@
 /area/rogue/under/cave/mazedungeon)
 "pj" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "pk" = (

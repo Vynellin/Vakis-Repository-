@@ -36,7 +36,7 @@
 	beltl = /obj/item/rogueweapon/whip //The whip itself is not often associated to many jobs. Druids feel like a thematic choice to have a self-defense whip
 	backl = /obj/item/storage/backpack/rogue/satchel
 	head = /obj/item/clothing/head/roguetown/dendormask
-	wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
+	wrists = /obj/item/clothing/neck/roguetown/psicross/tamari
 	shirt = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 	backpack_contents = list(/obj/item/ritechalk)
 	if(H.mind)

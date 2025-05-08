@@ -71,7 +71,7 @@
 #define TRAIT_WATERBREATHING "Water Breathing"
 
 // PATRON GOD TRAITS
-#define TRAIT_KNEESTINGER_IMMUNITY "Blessing of Dendor"
+#define TRAIT_KNEESTINGER_IMMUNITY "Blessing of Tamari"
 #define TRAIT_SOUL_EXAMINE "Blessing of Tsoridys" //can check bodies to see if they have departed // SOLARIS NOTE: why the fuck would you obfuscate critical info like this. oughhghgh
 #define TRAIT_CHOSEN "Aeternus' Chosen"
 #define TRAIT_CINELLA_SWIM "Blessing of Cinella" //less base fatigue drain when swimming
@@ -83,7 +83,7 @@
 #define TRAIT_EXTEROCEPTION	"Exteroception" //See others' hunger and thirst; pairs well with empath.
 #define TRAIT_BLACKLEG	"Blackleg" //Rig coin, dice, cards in your favor - UNUSED FOR NOW
 #define TRAIT_BETTER_SLEEP	"Better Sleep" //Recover more energy (blue bar) when sleeping
-#define TRAIT_LEECHIMMUNE "Unleechable" //leeches wont attach in bog squares + dendor boon.
+#define TRAIT_LEECHIMMUNE "Unleechable" //leeches wont attach in bog squares + tamari boon.
 #define TRAIT_LONGSTRIDER "Longstrider"
 
 #define TRAIT_BASHDOORS "Door Basher"

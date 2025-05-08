@@ -65,7 +65,7 @@
 		if(/datum/patron/chaos/cinella)
 			recipient.mind?.special_items["Cinella Psycross"] = /obj/item/clothing/neck/roguetown/psicross/cinella
 		if(/datum/patron/chaos/tamari)
-			recipient.mind?.special_items["Tamari Psycross"] = /obj/item/clothing/neck/roguetown/psicross/dendor
+			recipient.mind?.special_items["Tamari Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tamari
 		if(/datum/patron/order/tsoridys)
 			recipient.mind?.special_items["Tsoridys Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 		if(/datum/patron/order/eora) 

@@ -59,7 +59,7 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
 			cloak = /obj/item/clothing/cloak/cinellatabard
 		if(/datum/patron/chaos/tamari)
-			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
+			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/order/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
@@ -82,7 +82,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
 			/obj/item/clothing/neck/roguetown/psicross/zira,
 			/obj/item/clothing/neck/roguetown/psicross/cinella,
-			/obj/item/clothing/neck/roguetown/psicross/dendor,
+			/obj/item/clothing/neck/roguetown/psicross/tamari,
 			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 			/obj/item/clothing/neck/roguetown/psicross/carthus,
 			/obj/item/clothing/neck/roguetown/psicross/nunos,
@@ -166,7 +166,7 @@
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/cinellagreathelm
 			cloak = /obj/item/clothing/cloak/cinellatabard
 		if(/datum/patron/chaos/tamari)
-			wrists = /obj/item/clothing/neck/roguetown/psicross/dendor
+			wrists = /obj/item/clothing/neck/roguetown/psicross/tamari
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
 			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
 		if(/datum/patron/order/tsoridys)

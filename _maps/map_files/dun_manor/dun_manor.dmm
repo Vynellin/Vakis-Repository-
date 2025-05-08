@@ -18503,8 +18503,8 @@
 /obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/item/clothing/neck/roguetown/psicross/eora,
 /obj/item/clothing/neck/roguetown/psicross/eora,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
 /obj/item/clothing/neck/roguetown/psicross/aeternus,
 /obj/item/clothing/neck/roguetown/psicross/aeternus,
 /obj/item/clothing/neck/roguetown/psicross/carthus,
@@ -28145,8 +28145,8 @@
 	dir = 5
 	},
 /obj/structure/closet/crate/chest,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/woods)
 "tFu" = (

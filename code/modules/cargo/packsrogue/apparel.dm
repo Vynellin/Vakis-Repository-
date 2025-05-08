@@ -84,7 +84,7 @@
 	name = "Dendor Amulet"
 	cost = 10
 	contains = list(
-					/obj/item/clothing/neck/roguetown/psicross/dendor,)
+					/obj/item/clothing/neck/roguetown/psicross/tamari,)
 
 /datum/supply_pack/rogue/apparel/crosses/divinepantheoncinella
 	name = "Cinella Amulet"
