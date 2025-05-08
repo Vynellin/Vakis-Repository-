@@ -84,7 +84,6 @@
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/sickness)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/forcewall)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/summonrogueweapon/bladeofpsydon)
 		ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_INQUISITION, TRAIT_GENERIC)
