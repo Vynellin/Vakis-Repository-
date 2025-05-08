@@ -237,8 +237,6 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_BANDIT			"CAT_BANDIT"		// Bandit class - Tied to the bandit antag really
 #define CTAG_CHALLENGE 		"CAT_CHALLENGE"  	// Challenge class - Meant to be free for everyone
 #define CTAG_VAGABOND		"CAT_VAGABOND"		// Vagabond class - start with nothing and work your way up
-#define CTAG_INQUISITION	"CAT_INQUISITION"	// For Orthodoxist subclasses
-#define CTAG_PURITAN		"CAT_PURITAN"		// For Inquisitor subclasses
 #define CTAG_COURTAGENT		"CAT_COURTAGENT"	//Court agent classes
 #define CTAG_WRETCH			"CAT_WRETCH"		// Wretch classes untethered from adventurer
 

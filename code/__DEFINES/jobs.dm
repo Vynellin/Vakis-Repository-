@@ -204,11 +204,6 @@
 #define DEATHKNIGHT (1<<1)
 #define SKELETON	(1<<2)
 
-#define INQUISITION (1<<10)
-
-#define PURITAN		(1<<0)
-#define ORTHODOXIST	(1<<1)
-
 
 #define JCOLOR_NOBLE "#aa83b9"
 #define JCOLOR_COURTIER "#81adc8"
@@ -307,8 +302,6 @@
 #define JDO_TRIBALCOOK 37
 #define JDO_TRIBALGUARD 38
 #define JDO_TRIBALSMITH 39
-#define JDO_PURITAN 40
-#define JDO_ORTHODOXIST 40.1
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
@@ -391,7 +384,3 @@
 	/datum/job/roguetown/manorguard,\
 	/datum/job/roguetown/sheriff,\
 	/datum/job/roguetown/guardsman
-
-#define INQUISITION_ROLES \
-	/datum/job/roguetown/puritan,\
-	/datum/job/roguetown/orthodoxist

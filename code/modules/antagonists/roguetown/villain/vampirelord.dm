@@ -162,7 +162,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold
 	head  = /obj/item/clothing/head/roguetown/vampire
 	beltl = /obj/item/roguekey/vampire
-	cloak = /obj/item/clothing/cloak/cape/puritan
+	cloak = /obj/item/clothing/cloak/cape
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	H.ambushable = FALSE

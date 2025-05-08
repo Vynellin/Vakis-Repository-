@@ -93,15 +93,6 @@
 	color = pick("#6b5445", "#435436", "#704542", "#79763f")
 	..()
 
-/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
-	name = "formal silks"
-	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR
-	icon_state = "puritan_shirt"
-	allowed_race = CLOTHED_RACES_TYPES
-	sleeved = 'icons/roguetown/clothing/onmob/shirts.dmi'
-	r_sleeve_status = SLEEVE_NORMAL
-	l_sleeve_status = SLEEVE_NORMAL
-
 /obj/item/clothing/suit/roguetown/shirt/undershirt/artificer
 	name = "tinker suit"
 	desc = "Typical fashion of the best engineers."

@@ -11342,7 +11342,6 @@
 /area/rogue/indoors/town/tavern)
 "eKA" = (
 /obj/structure/closet/crate/chest,
-/obj/item/paper/inquisition_poultice_info,
 /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius,
 /obj/item/quicksilver,
 /turf/open/floor/rogue/hexstone,
@@ -13236,9 +13235,6 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/town)
 "fxB" = (
-/obj/effect/landmark/start/puritan{
-	dir = 8
-	},
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/double_pelt,
 /turf/open/floor/rogue/herringbone,
@@ -13307,7 +13303,6 @@
 /obj/structure/closet/crate/roguecloset/crafted,
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/princess,
 /obj/item/clothing/suit/roguetown/armor/silkcoat,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town)
@@ -16633,7 +16628,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/mineral_door/bars{
 	locked = 1;
-	lockid = "inquisition"
+	lockid = "undercroft"
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church/basement)
@@ -21625,7 +21620,6 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/princess,
 /obj/item/clothing/suit/roguetown/shirt/tunic/random,
 /obj/item/clothing/suit/roguetown/shirt/tunic/black,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 /obj/item/storage/backpack/rogue/satchel,
 /obj/item/storage/backpack/rogue/satchel,
 /obj/item/clothing/suit/roguetown/armor/silkcoat,
@@ -26164,13 +26158,6 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
-"kRS" = (
-/obj/structure/mineral_door/wood/donjon/stone{
-	locked = 1;
-	lockid = "puritan"
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/town/church/basement)
 "kRX" = (
 /obj/structure/fermenting_barrel,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -33599,7 +33586,7 @@
 "nVe" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition";
+	lockid = "undercroft";
 	name = "Inquisition's Quarters"
 	},
 /turf/open/floor/rogue/hexstone,
@@ -35788,7 +35775,7 @@
 "oQY" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition"
+	lockid = "undercroft"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/church/basement)
@@ -42145,7 +42132,6 @@
 "rvc" = (
 /obj/structure/bed/rogue/inn,
 /obj/item/bedsheet/rogue/pelt,
-/obj/effect/landmark/start/orthodoxist,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/church/basement)
 "rvj" = (
@@ -44984,7 +44970,7 @@
 "sCH" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition";
+	lockid = "undercroft";
 	name = "Inquisition Cell"
 	},
 /turf/open/floor/rogue/blocks,
@@ -47319,7 +47305,6 @@
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/princess,
 /obj/item/clothing/suit/roguetown/armor/silkcoat,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 /obj/item/clothing/suit/roguetown/shirt/tunic,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
@@ -130891,7 +130876,7 @@ isn
 vpK
 llO
 llO
-kRS
+oQY
 llO
 llO
 gkB

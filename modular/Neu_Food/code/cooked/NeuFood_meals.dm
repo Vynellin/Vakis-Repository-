@@ -260,7 +260,7 @@
 /*jellied eel*/
 /obj/item/reagent_containers/food/snacks/rogue/jelliedeel
 	name = "jellied eel"
-	desc = "Jellied eel! Eel in jelly made of eel! By the ten!"
+	desc = "Jellied eel! Eel in jelly made of eel! By the Nine!"
 	icon_state = "jellied_eel"
 	tastes = list("slimy, slippery fish" = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_GOOD)

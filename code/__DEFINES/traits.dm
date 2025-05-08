@@ -48,14 +48,12 @@
 #define TRAIT_WOODSMAN "Talented Woodsman"
 #define TRAIT_DEATHBARGAIN "Death Bargain" // Used by UNDERMAIDEN'S BARGAIN
 #define TRAIT_RITUALIST "Ritualist"  // Allows use of ritual chalk
-#define TRAIT_INQUISITION "Member of the Otavan Inquisition"
 #define TRAIT_GOODTRAINER "Good Trainer"
 #define TRAIT_OUTDOORSMAN "Outdoorsman"
 #define TRAIT_SEA_DRINKER "Denizen of the Deep"
 #define TRAIT_STUDENT		"Student"
 #define TRAIT_INTELLECTUAL "Intellectual"
 #define TRAIT_GRAVEROBBER "Experienced Grave Robber"
-#define TRAIT_PURITAN "Puritan"
 #define TRAIT_MIRROR_MAGIC "Mirror Magic"
 #define TRAIT_WITCH "They fear me, but I am useful to them."
 
@@ -142,7 +140,6 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_KNIGHTSMAN = span_info("I am a stalwart defender of the crown. In the keep of Solaris Ridge, my abilities are sharper due to my routine and familiarity."),
 	TRAIT_DEATHBARGAIN = span_info("A horrible deal has been prepared in your name. May you never see it fulfilled..."),
 	TRAIT_RITUALIST = span_info("I am skilled in the holy arts. Using ritual chalk, I can more deftly channel my God's powers via runes."),
-	TRAIT_INQUISITION = span_info("I am a member of the Otavan Inquisition. I can easily identify others of my cadre at a glance."),
 	TRAIT_CHOSEN = "Aeternus chose you to represent his light.",
 	TRAIT_WEBWALK = "I can move freely between webs.",
 	TRAIT_NOSTINK = span_dead("My nose is numb to the smell of decay."),
@@ -227,7 +224,6 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_KEENEARS = span_info("I've a good pair of ears, and can tell who is speaking, even when they're out of sight. I can also hear whispers from further away."),
 	TRAIT_SCREENSHAKE = span_suicide("I don't feel very steady anymore..."),
 	TRAIT_GRAVEROBBER = span_info("My experience with 'post-mortem artifact recovery' has allowed me to resist Tsoridys' curse placed upon those who disturb resting places."),
-	TRAIT_PURITAN = span_info("I can hear the secret whispers of the heretics."),
 	TRAIT_MIRROR_MAGIC = span_info("Mirror, mirror on the wall, who's the fairest of them all?"),
 	TRAIT_JUSTICARSIGHT = span_info("I am able to remember someone's crimes by looking at them, and how much their bounty is."),
 	TRAIT_CICERONE = span_info("I am well-versed in the differences of brews and spirits, and can tell them apart at a glance."),

@@ -3821,7 +3821,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/mineral_door/bars{
 	locked = 1;
-	lockid = "inquisition"
+	lockid = "undercroft"
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church/basement)
@@ -16106,7 +16106,7 @@
 "lmN" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition";
+	lockid = "undercroft";
 	name = "Inquisition's Quarters"
 	},
 /turf/open/floor/rogue/hexstone,
@@ -20903,7 +20903,7 @@
 "oCc" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition";
+	lockid = "undercroft";
 	name = "Inquisition Cell"
 	},
 /turf/open/floor/rogue/blocks,
@@ -24110,7 +24110,7 @@
 "qTW" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition"
+	lockid = "undercroft"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/church/basement)
@@ -29804,7 +29804,6 @@
 /area/rogue/indoors)
 "uPv" = (
 /obj/structure/closet/crate/chest,
-/obj/item/paper/inquisition_poultice_info,
 /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius,
 /obj/item/quicksilver,
 /turf/open/floor/rogue/hexstone,

@@ -929,11 +929,6 @@
 	GLOB.lordcolor -= src
 	return ..()
 
-
-/obj/item/clothing/cloak/cape/puritan
-	icon_state = "puritan_cape"
-	allowed_race = CLOTHED_RACES_TYPES
-
 /obj/item/clothing/cloak/cape/archivist
 	icon_state = "puritan_cape"
 	color = CLOTHING_BLACK

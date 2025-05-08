@@ -24,21 +24,6 @@
 	craftdiff = 3
 	sellprice = 19
 
-/datum/crafting_recipe/roguetown/weaving/puritan
-
-	name = "puritan's cape (4 silk)"
-	result = list(/obj/item/clothing/cloak/cape/puritan)
-	reqs = list(/obj/item/natural/silk = 4)
-	craftdiff = 3
-	sellprice = 35
-
-/datum/crafting_recipe/roguetown/weaving/shirt
-	name = "formal silks (5 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan)
-	reqs = list(/obj/item/natural/silk = 5)
-	craftdiff = 3
-	sellprice = 35
-
 /datum/crafting_recipe/roguetown/weaving/shepardmask
 	name = "half-mask (1 cloth, 1 silk)"
 	result = list(/obj/item/clothing/mask/rogue/shepherd)

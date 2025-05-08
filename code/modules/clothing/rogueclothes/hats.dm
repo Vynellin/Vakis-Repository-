@@ -284,11 +284,6 @@
 	icon_state = "strawhat"
 	sewrepair = TRUE
 
-/obj/item/clothing/head/roguetown/puritan
-	name = "buckled hat"
-	icon_state = "puritan_hat"
-	sewrepair = TRUE
-
 /obj/item/clothing/head/roguetown/nightman
 	name = "teller's hat"
 	icon_state = "tophat"

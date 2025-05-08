@@ -191,6 +191,3 @@
 			H.Paralyze(10)
 			H.adjustFireLoss(25)
 			H.fire_act(1,10)
-
-/obj/item/paper/inquisition_poultice_info
-	info = "The paper's stained, and unable to be read properly."

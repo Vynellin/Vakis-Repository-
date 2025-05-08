@@ -379,7 +379,7 @@
 /datum/outfit/job/roguetown/vet/spy/pre_equip(mob/living/carbon/human/H)
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/white
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather

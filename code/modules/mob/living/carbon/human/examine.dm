@@ -83,7 +83,7 @@
 			. = list(span_info("ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name]."))
 
 		if(HAS_TRAIT(src, TRAIT_WITCH))
-			if(HAS_TRAIT(user, TRAIT_NOBLE) || HAS_TRAIT(user, TRAIT_INQUISITION) || HAS_TRAIT(user, TRAIT_WITCH))
+			if(HAS_TRAIT(user, TRAIT_NOBLE) || HAS_TRAIT(user, TRAIT_WITCH))
 				. += span_warning("A witch! Their presence brings an unsettling aura.")
 			else
 				. += span_notice("Something about them seems... different.")
@@ -146,10 +146,6 @@
 				. += span_secradio("[m1] marked by scars inflicted for pleasure. A delectable target for my urges.")
 			if(has_flaw(/datum/charflaw/addiction/sadist) && user.has_flaw(/datum/charflaw/masochist))
 				. += span_secradio("[m1] looking with eyes filled with a desire to inflict pain. So exciting.")
-
-		var/inquisition_text = get_inquisition_text(user)
-		if(inquisition_text)
-			. +=span_notice(inquisition_text)
 
 		if(leprosy == 1)
 			. += span_necrosis("A LEPER...")
@@ -769,12 +765,3 @@
 			dat += "[new_text]\n" //dat.Join("\n") doesn't work here, for some reason
 	if(dat.len)
 		return dat.Join()
-
-
-// Used for Inquisition tags
-/mob/living/proc/get_inquisition_text(mob/examiner)
-	var/inquisition_text
-	if(HAS_TRAIT(src, TRAIT_INQUISITION) && HAS_TRAIT(examiner, TRAIT_INQUISITION))
-		inquisition_text += "Fellow Member of the Inquisition"
-
-	return inquisition_text
