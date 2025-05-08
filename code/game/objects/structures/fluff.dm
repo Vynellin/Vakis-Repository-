@@ -563,9 +563,9 @@
 			if(7)
 				day = "Nature's Boon."
 			if(8)
-				text_to_show = "Sea's Wave."
+				day = "Sea's Wave."
 			if(9)
-				text_to_show = "Rift's Watch."
+				day = "Rift's Watch."
 		. += "Oh no, it's [station_time_timestamp("hh:mm")] on a [day]"
 //		testing("mode is [SSshuttle.emergency.mode] should be [SHUTTLE_DOCKED]")
 //		if(SSshuttle.emergency.mode == SHUTTLE_DOCKED)

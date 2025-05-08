@@ -35,7 +35,6 @@
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	mask = /obj/item/clothing/mask/rogue/lordmask/naledi
-	wrists = /obj/item/clothing/neck/roguetown/psicross/naledi
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/flashlight/flare/torch
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor

@@ -248,8 +248,6 @@
 						"The heartland will hear of your accomplishments on this day.",
 						"The people of Sunmarch prepare to look forward; their actions locked in the impermeable past.", \
 						)
-		if(C.not_enough_players)
-			end_reason = "Little happened in Sunmarch, this week - though perhaps it was for the best..."
 
 		if(C.vampire_werewolf() == "vampire")
 			end_reason = "When the Vampires finished sucking the town dry, they moved on to the next one."
