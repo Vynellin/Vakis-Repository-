@@ -14136,7 +14136,7 @@
 /area/rogue/outdoors/town/roofs/keep)
 "jZh" = (
 /obj/structure/bookcase,
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /obj/item/book/rogue/tales3,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/magician)
@@ -34278,7 +34278,7 @@
 /area/rogue/indoors/town/garrison)
 "xSF" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /obj/structure/bookcase,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"

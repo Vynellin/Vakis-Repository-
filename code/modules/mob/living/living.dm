@@ -1772,8 +1772,8 @@
 			if(M.mind)	//We find the biggest value and use that, to account for mages / Zirites / sneaky people all at once
 				var/target_sneak = M.mind?.get_skill_level(/datum/skill/misc/sneaking)
 				var/target_holy = M.mind?.get_skill_level(/datum/skill/magic/holy)
-				var/target_arcyne = M.mind?.get_skill_level(/datum/skill/magic/arcane)
-				var/chosen_skill = max(target_sneak, target_holy, target_arcyne)
+				var/target_arcane = M.mind?.get_skill_level(/datum/skill/magic/arcane)
+				var/chosen_skill = max(target_sneak, target_holy, target_arcane)
 				probby -= chosen_skill * 10
 				if(M.STAPER > 10)
 					probby -= (M.STAPER) / 2

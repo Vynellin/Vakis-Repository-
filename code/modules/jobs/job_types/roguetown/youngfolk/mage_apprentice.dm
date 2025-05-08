@@ -41,7 +41,7 @@
 		
 /datum/advclass/wapprentice/associate
 	name = "Magicians Associate"
-	tutorial = "You were once an apprentice, though through your studies and practice you've mastered the basics of the arcyne. You now spend your days working under your master, honing your skills so that you might one day be considered a true master yourself."
+	tutorial = "You were once an apprentice, though through your studies and practice you've mastered the basics of the arcane. You now spend your days working under your master, honing your skills so that you might one day be considered a true master yourself."
 	outfit = /datum/outfit/job/roguetown/wapprentice/associate
 		
 	category_tags = list(CTAG_WAPPRENTICE)
@@ -49,7 +49,7 @@
 /datum/outfit/job/roguetown/wapprentice/associate/pre_equip(mob/living/carbon/human/H)
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/mage
 	head = /obj/item/clothing/head/roguetown/roguehood/mage
-	backpack_contents = list(/obj/item/roguegem/amethyst = 1, /obj/item/spellbook_unfinished/pre_arcyne = 1)
+	backpack_contents = list(/obj/item/roguegem/amethyst = 1, /obj/item/spellbook_unfinished/pre_arcane = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
@@ -76,7 +76,7 @@
 		
 /datum/advclass/wapprentice/alchemist
 	name = "Alchemist Associate"
-	tutorial = "During your studies, you became less focused on the arcyne and instead turned yourself to your true passion, alchemy. Through the art of transmutation, you have learned that the elements (much like the arcyne) can be maniupulated and bent to your will."
+	tutorial = "During your studies, you became less focused on the arcane and instead turned yourself to your true passion, alchemy. Through the art of transmutation, you have learned that the elements (much like the arcane) can be maniupulated and bent to your will."
 	outfit = /datum/outfit/job/roguetown/wapprentice/alchemist
 	
 	category_tags = list(CTAG_WAPPRENTICE)

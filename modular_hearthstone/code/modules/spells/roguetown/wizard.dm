@@ -6,10 +6,10 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 /obj/effect/proc_holder/spell/targeted/touch/prestidigitation
 	name = "Prestidigitation"
-	desc = "A few basic tricks many apprentices use to practice basic manipulation of the arcyne."
+	desc = "A few basic tricks many apprentices use to practice basic manipulation of the arcane."
 	clothes_req = FALSE
-	drawmessage = "I prepare to perform a minor arcyne incantation."
-	dropmessage = "I release my minor arcyne focus."
+	drawmessage = "I prepare to perform a minor arcane incantation."
+	dropmessage = "I release my minor arcane focus."
 	school = "transmutation"
 	overlay_state = "prestidigitation"
 	chargedrain = 0
@@ -22,7 +22,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 /obj/item/melee/touch_attack/prestidigitation
 	name = "\improper prestidigitating touch"
 	desc = "You recall the following incantations you've learned:\n \
-	<b>Touch</b>: Use your arcyne powers to scrub an object or something clean, like using soap. Also known as the Apprentice's Woe.\n \
+	<b>Touch</b>: Use your arcane powers to scrub an object or something clean, like using soap. Also known as the Apprentice's Woe.\n \
 	<b>Shove</b>: Will forth a spark on an item of your choosing (or in front of you, if used on the ground) to ignite flammable items and things like torches, lanterns or campfires. \n \
 	<b>Use</b>: Conjure forth an orbiting mote of magelight to light your way."
 	catchphrase = null
@@ -112,7 +112,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 		mote.update_light()
 
 	if (mote.loc == src)
-		user.visible_message(span_notice("[user] holds open the palm of [user.p_their()] hand and concentrates..."), span_notice("I hold open the palm of my hand and concentrate on my arcyne power..."))
+		user.visible_message(span_notice("[user] holds open the palm of [user.p_their()] hand and concentrates..."), span_notice("I hold open the palm of my hand and concentrate on my arcane power..."))
 		if (do_after(user, src.motespeed, target = user))
 			mote.orbit(user, 1, TRUE, 0, 48, TRUE)
 			return TRUE
@@ -152,21 +152,21 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	cleanspeed = initial(cleanspeed) - (skill_level * 3) // 3 cleanspeed per skill level, from 35 down to a maximum of 17 (pretty quick)
 
 	if (istype(target, /obj/structure/roguewindow))
-		user.visible_message(span_notice("[user] gestures at \the [target.name], tiny motes of arcyne power running across its surface..."), span_notice("I begin to clean \the [target.name] with my arcyne power..."))
+		user.visible_message(span_notice("[user] gestures at \the [target.name], tiny motes of arcane power running across its surface..."), span_notice("I begin to clean \the [target.name] with my arcane power..."))
 		if (do_after(user, src.cleanspeed, target = target))
 			wash_atom(target,CLEAN_MEDIUM)
 			to_chat(user, span_notice("I render \the [target.name] clean."))
 			return TRUE
 		return FALSE
 	else if (istype(target, /obj/effect/decal/cleanable))
-		user.visible_message(span_notice("[user] gestures at \the [target.name], arcyne power slowly scouring it away..."), span_notice("I begin to scour \the [target.name] away with my arcyne power..."))
+		user.visible_message(span_notice("[user] gestures at \the [target.name], arcane power slowly scouring it away..."), span_notice("I begin to scour \the [target.name] away with my arcane power..."))
 		if (do_after(user, src.cleanspeed, target = target))
 			wash_atom(get_turf(target),CLEAN_MEDIUM)
 			to_chat(user, span_notice("I expunge \the [target.name] with my mana."))
 			return TRUE
 		return FALSE
 	else
-		user.visible_message(span_notice("[user] gestures at \the [target.name], tiny motes of arcyne power surging over [target.p_them()]..."), span_notice("I begin to clean \the [target.name] with my arcyne power..."))
+		user.visible_message(span_notice("[user] gestures at \the [target.name], tiny motes of arcane power surging over [target.p_them()]..."), span_notice("I begin to clean \the [target.name] with my arcane power..."))
 		if (do_after(user, src.cleanspeed, target = target))
 			wash_atom(target,CLEAN_MEDIUM)
 			to_chat(user, span_notice("I render \the [target.name] clean."))
@@ -177,7 +177,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 /obj/effect/wisp/prestidigitation
 	name = "minor magelight mote"
-	desc = "A tiny display of arcyne power used to illuminate."
+	desc = "A tiny display of arcane power used to illuminate."
 	pixel_x = 20
 	light_outer_range =  4
 	light_color = "#3FBAFD"
@@ -222,7 +222,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 		/obj/effect/proc_holder/spell/invoked/fortitude,
 		/obj/effect/proc_holder/spell/invoked/snap_freeze,
 		/obj/effect/proc_holder/spell/invoked/projectile/frostbolt,
-		/obj/effect/proc_holder/spell/invoked/projectile/arcynebolt,
+		/obj/effect/proc_holder/spell/invoked/projectile/arcanebolt,
 		/obj/effect/proc_holder/spell/invoked/gravity,
 		/obj/effect/proc_holder/spell/invoked/projectile/repel,
 		/obj/effect/proc_holder/spell/invoked/poisonspray5e,
@@ -263,7 +263,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 //forcewall
 /obj/effect/proc_holder/spell/invoked/forcewall_weak
 	name = "Forcewall"
-	desc = "Conjure a wall of arcyne force, preventing anyone and anything other than you from moving through it."
+	desc = "Conjure a wall of arcane force, preventing anyone and anything other than you from moving through it."
 	school = "transmutation"
 	releasedrain = 30
 	chargedrain = 1
@@ -286,8 +286,8 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 //adapted from forcefields.dm, this needs to be destructible
 /obj/structure/forcefield_weak
-	desc = "A wall of pure arcyne force."
-	name = "Arcyne Wall"
+	desc = "A wall of pure arcane force."
+	name = "Arcane Wall"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "forcefield"
 	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'
@@ -312,7 +312,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	else
 		new wall_type(get_step(front, NORTH), user)
 		new wall_type(get_step(front, SOUTH), user)
-	user.visible_message("[user] mutters an incantation and a wall of arcyne force manifests out of thin air!")
+	user.visible_message("[user] mutters an incantation and a wall of arcane force manifests out of thin air!")
 	return TRUE
 
 /obj/structure/forcefield_weak
@@ -334,7 +334,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 // no slowdown status effect defined, so this just immobilizes for now
 /obj/effect/proc_holder/spell/invoked/slowdown_spell_aoe
 	name = "Ensnare"
-	desc = "Tendrils of arcyne force hold anyone in a small area in place for a short while."
+	desc = "Tendrils of arcane force hold anyone in a small area in place for a short while."
 	cost = 1
 	xp_gain = TRUE
 	releasedrain = 20
@@ -374,7 +374,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 			return
 		L.Immobilize(duration)
 		L.OffBalance(duration)
-		L.visible_message("<span class='warning'>[L] is held by tendrils of arcyne force!</span>")
+		L.visible_message("<span class='warning'>[L] is held by tendrils of arcane force!</span>")
 		new /obj/effect/temp_visual/slowdown_spell_aoe/long(get_turf(L))
 
 /obj/effect/temp_visual/slowdown_spell_aoe
@@ -429,10 +429,10 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 				if(HL.mind)
 					if(HL.mind.do_i_know(name=user.real_name)) //do we know who this person is?
 						identified = TRUE // we do
-						to_chat(HL, "Arcyne whispers fill the back of my head, resolving into [user]'s voice: <font color=#7246ff>[message]</font>")
+						to_chat(HL, "Arcane whispers fill the back of my head, resolving into [user]'s voice: <font color=#7246ff>[message]</font>")
 
 			if(!identified) //we failed the check OR we just dont know who that is
-				to_chat(HL, "Arcyne whispers fill the back of my head, resolving into an unknown [user.gender == FEMALE ? "woman" : "man"]'s voice: <font color=#7246ff>[message]</font>")
+				to_chat(HL, "Arcane whispers fill the back of my head, resolving into an unknown [user.gender == FEMALE ? "woman" : "man"]'s voice: <font color=#7246ff>[message]</font>")
 
 			user.visible_message("[user] mutters an incantation and their mouth briefly flashes white.")
 			user.whisper(message)
@@ -504,7 +504,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 /obj/effect/proc_holder/spell/invoked/blade_burst
 	name = "Blade Burst"
-	desc = "Summon a storm of arcyne force in an area, wounding anything in that location after a delay."
+	desc = "Summon a storm of arcane force in an area, wounding anything in that location after a delay."
 	cost = 1
 	range = 7
 	xp_gain = TRUE
@@ -533,7 +533,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 /obj/effect/temp_visual/blade_burst
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "purplesparkles"
-	name = "rippeling arcyne energy"
+	name = "rippeling arcane energy"
 	desc = "Get out of the way!"
 	randomdir = FALSE
 	duration = 1 SECONDS
@@ -558,7 +558,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 			play_cleave = TRUE
 			L.adjustBruteLoss(damage)
 			playsound(affected_turf, "genslash", 80, TRUE)
-			to_chat(L, "<span class='userdanger'>You're cut by arcyne force!</span>")
+			to_chat(L, "<span class='userdanger'>You're cut by arcane force!</span>")
 
 	if(play_cleave)
 		playsound(T, 'sound/combat/newstuck.ogg', 80, TRUE, soundping = TRUE)
@@ -570,7 +570,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	desc = "Consume a handful of ash and shroud a target that you touch from divination magic for 1 hour."
 	clothes_req = FALSE
 	drawmessage = "I prepare to form a magical shroud."
-	dropmessage = "I release my arcyne focus."
+	dropmessage = "I release my arcane focus."
 	school = "abjuration"
 	charge_max = 30 SECONDS
 	chargedloop = /datum/looping_sound/invokegen
@@ -580,7 +580,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	cost = 1
 
 /obj/item/melee/touch_attack/nondetection
-	name = "\improper arcyne focus"
+	name = "\improper arcane focus"
 	desc = "Touch a creature to cover them in an anti-scrying shroud for 1 hour, consumes some ash as a catalyst."
 	catchphrase = null
 	possible_item_intents = list(INTENT_HELP)
@@ -636,7 +636,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	desc = "Enhance the night vision of a target you touch for 15 minutes."
 	clothes_req = FALSE
 	drawmessage = "I prepare to grant Darkvision."
-	dropmessage = "I release my arcyne focus."
+	dropmessage = "I release my arcane focus."
 	school = "transmutation"
 	charge_max = 1 MINUTES
 	chargedloop = /datum/looping_sound/invokegen
@@ -646,7 +646,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	cost = 2
 
 /obj/item/melee/touch_attack/darkvision
-	name = "\improper arcyne focus"
+	name = "\improper arcane focus"
 	desc = "Touch a creature to grant them Darkvision for 15 minutes."
 	catchphrase = null
 	possible_item_intents = list(INTENT_HELP)
@@ -666,9 +666,9 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 		spelltarget.apply_status_effect(/datum/status_effect/buff/darkvision)
 		user.rogfat_add(80)
 		if(spelltarget != user)
-			user.visible_message("[user] draws a glyph in the air and touches [spelltarget] with an arcyne focus.")
+			user.visible_message("[user] draws a glyph in the air and touches [spelltarget] with an arcane focus.")
 		else
-			user.visible_message("[user] draws a glyph in the air and touches themselves with an arcyne focus.")
+			user.visible_message("[user] draws a glyph in the air and touches themselves with an arcane focus.")
 		attached_spell.remove_hand()
 	return
 
@@ -890,7 +890,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 /obj/effect/temp_visual/snap_freeze
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "shieldsparkles"
-	name = "rippeling arcyne ice"
+	name = "rippeling arcane ice"
 	desc = "Get out of the way!"
 	randomdir = FALSE
 	duration = 1 SECONDS
@@ -985,9 +985,9 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	qdel(src)
 
 
-/obj/effect/proc_holder/spell/invoked/projectile/arcynebolt //makes you confused for 2 seconds,
-	name = "Arcyne Bolt"
-	desc = "Shoot out a rapid bolt of arcyne magic that hits on impact. Little damage, but disorienting."
+/obj/effect/proc_holder/spell/invoked/projectile/arcanebolt //makes you confused for 2 seconds,
+	name = "Arcane Bolt"
+	desc = "Shoot out a rapid bolt of arcane magic that hits on impact. Little damage, but disorienting."
 	clothes_req = FALSE
 	range = 12
 	projectile_type = /obj/projectile/energy/rogue3
@@ -1007,7 +1007,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	cost = 1
 
 /obj/projectile/energy/rogue3
-	name = "Arcyne Bolt"
+	name = "Arcane Bolt"
 	icon_state = "arcane_barrage"
 	damage = 30
 	damage_type = BRUTE
@@ -1213,10 +1213,10 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 /obj/effect/proc_holder/spell/targeted/touch/lesserknock
 	name = "Lesser Knock"
-	desc = "A simple spell used to focus the arcyne into an instrument for lockpicking. Can be dispelled by using it on anything that isn't a locked/unlocked door."
+	desc = "A simple spell used to focus the arcane into an instrument for lockpicking. Can be dispelled by using it on anything that isn't a locked/unlocked door."
 	clothes_req = FALSE
-	drawmessage = "I prepare to perform a minor arcyne incantation."
-	dropmessage = "I release my minor arcyne focus."
+	drawmessage = "I prepare to perform a minor arcane incantation."
+	dropmessage = "I release my minor arcane focus."
 	school = "transmutation"
 	overlay_state = "rune4"
 	chargedrain = 0
@@ -1229,7 +1229,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	
 /obj/item/melee/touch_attack/lesserknock
 	name = "Spectral Lockpick"
-	desc = "A faintly glowing lockpick that appears to be held together by the mysteries of the arcyne. To dispel it, simply use it on anything that isn't a door."
+	desc = "A faintly glowing lockpick that appears to be held together by the mysteries of the arcane. To dispel it, simply use it on anything that isn't a door."
 	catchphrase = null
 	possible_item_intents = list(/datum/intent/use)
 	icon = 'icons/roguetown/items/keys.dmi'
@@ -1245,7 +1245,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 /obj/effect/proc_holder/spell/invoked/counterspell
 	name = "Counterspell"
-	desc = "Briefly nullify the arcyne energy surrounding a target. Either preventing magic from being used outright, or preventing most magics from affecting the subject."
+	desc = "Briefly nullify the arcane energy surrounding a target. Either preventing magic from being used outright, or preventing most magics from affecting the subject."
 	cost = 1
 	releasedrain = 35
 	chargedrain = 1
@@ -1268,8 +1268,8 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 			return
 		ADD_TRAIT(target, TRAIT_SPELLCOCKBLOCK, MAGIC_TRAIT)
 		ADD_TRAIT(target, TRAIT_ANTIMAGIC, MAGIC_TRAIT)
-		to_chat(target, span_warning("I feel as if my connection to the Arcyne disappears entirely. The air feels still..."))
-		target.visible_message("[target]'s arcyne aura seems to fade.")
+		to_chat(target, span_warning("I feel as if my connection to the Arcane disappears entirely. The air feels still..."))
+		target.visible_message("[target]'s arcane aura seems to fade.")
 		addtimer(CALLBACK(src, PROC_REF(remove_buff), target), wait = 20 SECONDS)
 		return TRUE
 	
@@ -1277,8 +1277,8 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 /obj/effect/proc_holder/spell/invoked/counterspell/proc/remove_buff(mob/living/carbon/target)
 	REMOVE_TRAIT(target, TRAIT_SPELLCOCKBLOCK, MAGIC_TRAIT)
 	REMOVE_TRAIT(target, TRAIT_ANTIMAGIC, MAGIC_TRAIT)
-	to_chat(target, span_warning("I feel my connection to the arcyne surround me once more."))
-	target.visible_message("[target]'s arcyne aura seems to return once more.")
+	to_chat(target, span_warning("I feel my connection to the arcane surround me once more."))
+	target.visible_message("[target]'s arcane aura seems to return once more.")
 	
 /obj/effect/proc_holder/spell/invoked/enlarge
 	name = "Enlarge Person"

@@ -5821,7 +5821,7 @@
 /area/rogue/indoors/town/church/chapel)
 "cwx" = (
 /obj/structure/bookcase,
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /obj/item/book/rogue/tales3,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/magician)
@@ -15968,7 +15968,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/garrison)
 "gIQ" = (
-/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne,
+/obj/item/rogueweapon/huntingknife/idagger/silver/arcane,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
@@ -28264,7 +28264,7 @@
 /area/rogue/indoors/town/church)
 "lLE" = (
 /obj/structure/bookcase,
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "lLG" = (
@@ -36625,7 +36625,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/tavern)
 "pic" = (
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /obj/structure/bookcase/random/archive,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
@@ -48820,8 +48820,8 @@
 /area/rogue/indoors/town/magician)
 "ulk" = (
 /obj/structure/table/wood/fancy/black,
-/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne,
-/obj/item/spellbook_unfinished/pre_arcyne,
+/obj/item/rogueweapon/huntingknife/idagger/silver/arcane,
+/obj/item/spellbook_unfinished/pre_arcane,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "uln" = (
@@ -56668,7 +56668,7 @@
 /area/rogue/outdoors/town)
 "xzE" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /obj/structure/bookcase,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"

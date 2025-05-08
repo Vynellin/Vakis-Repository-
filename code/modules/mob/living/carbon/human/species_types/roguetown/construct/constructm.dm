@@ -6,7 +6,7 @@
 	name = "Metal Construct"
 	id = "constructm"
 	desc = "<b>Metallic Construct</b><br>\
-	Masterworks of artifice, metal constructs are as the name implies- entirely constructed by mortal hands. They are beings not of flesh and blood, but cold metal and the arcyne. For some reason, they have found themselves travelling out of the empty, as of late. Children of the Resonator Siphon.<br>\
+	Masterworks of artifice, metal constructs are as the name implies- entirely constructed by mortal hands. They are beings not of flesh and blood, but cold metal and the arcane. For some reason, they have found themselves travelling out of the empty, as of late. Children of the Resonator Siphon.<br>\
 	(+1 Endurance, -2 Speed)<br>\
 	(Insomnia, No hunger, no blood.)"
 

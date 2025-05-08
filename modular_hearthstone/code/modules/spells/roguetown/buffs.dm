@@ -69,7 +69,7 @@
 /obj/effect/proc_holder/spell/invoked/guidance
 	name = "Guidance"
 	overlay_state = "guidance"
-	desc = "Makes one's hand travel true, blessing them with arcyne luck in combat. (+15% chance to bypass parry / dodge, +15% chance to parry / dodge)"
+	desc = "Makes one's hand travel true, blessing them with arcane luck in combat. (+15% chance to bypass parry / dodge, +15% chance to parry / dodge)"
 	cost = 1
 	xp_gain = TRUE
 	releasedrain = 60
@@ -107,7 +107,7 @@
 #define GUIDANCE_FILTER "guidance_glow"
 /atom/movable/screen/alert/status_effect/buff/guidance
 	name = "Guidance"
-	desc = "Arcyne assistance guides my hands. (+15% chance to bypass parry / dodge, +15% chance to parry / dodge)"
+	desc = "Arcane assistance guides my hands. (+15% chance to bypass parry / dodge, +15% chance to parry / dodge)"
 	icon_state = "buff"
 
 /datum/status_effect/buff/guidance
@@ -124,7 +124,7 @@
 	var/filter = owner.get_filter(GUIDANCE_FILTER)
 	if (!filter)
 		owner.add_filter(GUIDANCE_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 200, "size" = 1))
-	to_chat(owner, span_warning("The arcyne aides me in battle."))
+	to_chat(owner, span_warning("The arcane aides me in battle."))
 	ADD_TRAIT(owner, TRAIT_GUIDANCE, MAGIC_TRAIT)
 
 /datum/status_effect/buff/guidance/on_remove()

@@ -149,7 +149,7 @@
 	craftdiff = 5
 
 /datum/anvil_recipe/engineering/scomstone
-	name = "SCOM Stone (+1 cog, +1 Gemerald, Arcyne)"
+	name = "SCOM Stone (+1 cog, +1 Gemerald, Arcane)"
 	req_bar = /obj/item/ingot/Gold
 	additional_items = list(/obj/item/roguegear, /obj/item/roguegem/green)
 	created_item = /obj/item/scomstone
@@ -157,7 +157,7 @@
 	craftdiff = 5
 
 /datum/anvil_recipe/engineering/emeraldchoker
-	name = "emerald choker (+1 cog, +Gold, +1 Gemerald, Arcyne)"
+	name = "emerald choker (+1 cog, +Gold, +1 Gemerald, Arcane)"
 	req_bar = /obj/item/ingot/Gold
 	additional_items = list(/obj/item/roguegear, /obj/item/ingot/Gold, /obj/item/roguegem/green)
 	created_item = /obj/item/listenstone

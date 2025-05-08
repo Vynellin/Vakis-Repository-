@@ -1073,7 +1073,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/orcdungeon)
 "ga" = (
-/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne,
+/obj/item/rogueweapon/huntingknife/idagger/silver/arcane,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
@@ -3351,7 +3351,7 @@
 /area/rogue/outdoors/beach/forest)
 "vS" = (
 /obj/structure/bookcase,
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "vT" = (
@@ -5123,7 +5123,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
 "HS" = (
-/obj/item/book/rogue/arcyne,
+/obj/item/book/rogue/arcane,
 /obj/structure/bookcase/random/archive,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
@@ -6815,8 +6815,8 @@
 /area/rogue/under/cave/orcdungeon)
 "SE" = (
 /obj/structure/table/wood/fancy/black,
-/obj/item/rogueweapon/huntingknife/idagger/silver/arcyne,
-/obj/item/spellbook_unfinished/pre_arcyne,
+/obj/item/rogueweapon/huntingknife/idagger/silver/arcane,
+/obj/item/spellbook_unfinished/pre_arcane,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "SG" = (
