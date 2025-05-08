@@ -90,7 +90,7 @@
 			/obj/item/clothing/neck/roguetown/psicross/wood
 			)
 			neck = pick(psicross_options) // Random psicross, as cleric.
-			cloak = /obj/item/clothing/cloak/templar/xylix
+			cloak = /obj/item/clothing/cloak/templar/kasmidian
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
@@ -280,7 +280,7 @@
 			H.put_in_hands(new /obj/item/rogueweapon/halberd/bardiche/scythe(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 4, TRUE) // again, needs skill to actually use the weapon
 		if("Cackle Lash")
-			H.put_in_hands(new /obj/item/rogueweapon/whip/xylix(H), TRUE)
+			H.put_in_hands(new /obj/item/rogueweapon/whip/kasmidian(H), TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 		if("Duel Settler")
 			H.put_in_hands(new /obj/item/rogueweapon/mace/goden/steel/carthus(H), TRUE)

@@ -98,9 +98,9 @@
 	for(var/mob/living/carbon/human/target in ritualtargets)
 		target.apply_status_effect(/datum/status_effect/buff/moonlightdance)
 
-/obj/structure/ritualcircle/xylix
-	name = "Rune of Trickery"
-	desc = "A Holy Rune of Xylix"
+/obj/structure/ritualcircle/kasmidian
+	name = "Rune of Pryamore"
+	desc = "A Holy Rune of Kasmidian"
 
 /obj/structure/ritualcircle/carthus
 	name = "Rune of the Warrior"

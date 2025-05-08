@@ -1,5 +1,5 @@
 /obj/structure/roguemachine/lottery_roguetown
-	name = "XYLIX'S FORTUNE"
+	name = "BRASS AND STEEL"
 	desc = "An infinite, yawning hole that makes or breaks men. Come and play!"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "lottery"
@@ -59,7 +59,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 	if(src.stopgambling == 1)
 		return
 	if(src.gamblingprice == 0)
-		src.say(pick("Eager fool; you need mammons to gamble your life away.", "You are missing your tithe.", "A lord without land is no lord at all."))
+		src.say(pick("You are missing your tithe.", "A lord without land is no lord at all."))
 		src.stopgambling = 1
 		sleep(20)
 		src.stopgambling = 0
@@ -68,7 +68,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 
 	else
 		src.diceroll = rand(1,100)
-		src.say(pick("Around and around I go, where I stop, only I know.", "Xylix smiles upon your idiocy, child.", "The wheel of fate spins, and spins.", "Oh, you poor fool.", "This is going to hurt for one of us.", "I laugh, you cry; I weep, you cheer..", "I will be your fool; I'll perform for you...", "Let's go gambling!", "Around and around, folly abounds.", "Dance with ruin and wealth."))
+		src.say(pick("Around and around I go, where I stop, only I know.", "The wheel of fate spins, and spins.", "Let's go gambling!"))
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		playsound(src, 'sound/misc/letsgogambling.ogg', 100, FALSE, -1)
 		src.gamblingprob += (user.STALUC - src.probpenalty)

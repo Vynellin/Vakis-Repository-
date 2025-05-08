@@ -59,7 +59,7 @@
 			to_chat(user,span_cultsmall("I begin inscribing the rune of His Trickery..."))
 			if(do_after(user, 30, src))
 				playsound(src, 'sound/foley/scribble.ogg', 40, TRUE)
-				new /obj/structure/ritualcircle/xylix(step_turf)
+				new /obj/structure/ritualcircle/kasmidian(step_turf)
 		if("Rune of Death")
 			to_chat(user,span_cultsmall("I begin inscribing the rune of Her Embrace..."))
 			if(do_after(user, 30, src))

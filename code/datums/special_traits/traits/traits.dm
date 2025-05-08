@@ -312,8 +312,8 @@
 
 /datum/special_trait/lucky
 	name = "Fortune's Grace"
-	greet_text = span_notice("Xylix favor me, I am extremely lucky.")
-	req_text = "Have Xylix as your Patron"
+	greet_text = span_notice("Kasmidian favor me, I am extremely lucky.")
+	req_text = "Have Kasmidian as your Patron"
 	allowed_patrons = list(/datum/patron/chaos/kasmidian)
 	weight = 7
 

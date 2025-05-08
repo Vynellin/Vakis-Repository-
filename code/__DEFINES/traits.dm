@@ -75,7 +75,7 @@
 #define TRAIT_SOUL_EXAMINE "Blessing of Tsoridys" //can check bodies to see if they have departed // SOLARIS NOTE: why the fuck would you obfuscate critical info like this. oughhghgh
 #define TRAIT_CHOSEN "Aeternus' Chosen"
 #define TRAIT_CINELLA_SWIM "Blessing of Cinella" //less base fatigue drain when swimming
-#define TRAIT_XYLIX "Blessing of Xylix" //secret thieves cant language
+#define TRAIT_KASMIDIAN "Blessing of Kasmidian" //secret thieves cant language
 #define TRAIT_FORGEBLESSED "Blessing of Nunos" //Reduces the fatigue cost of smithing a bit.
 #define TRAIT_APRICITY	"Apricity" //Decreased stamina regen time during "day"
 #define TRAIT_SHARPER_BLADES "Sharper Blades" //Weapons lose less blade integrity
@@ -206,7 +206,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_TRAINED_SMITH = span_info("I've spent long training, and with some more, I will be able to smith legendary items."),
 	TRAIT_DEATHSIGHT = span_info("I can feel when someone nearby draws the Undermaiden's attention."),
 	TRAIT_FORGEBLESSED = span_info("Countless long nights spent forging metal have honed my endurance, allowing me to work an anvil far longer than most without tiring."),
-	TRAIT_XYLIX = span_info("I know how to speak in code that only fellow tricksters can understand."),
+	TRAIT_KASMIDIAN = span_info("I know how to speak in code that only fellow tricksters can understand."),
 	TRAIT_APRICITY = span_info("Aeternus' light blesses and rejuvenates me, allowing me to regain my stamina quicker during the dae."),
 	TRAIT_SHARPER_BLADES = span_info("My blades go dull slower, ensuring they stay sharp longer."),
 	TRAIT_FORTITUDE = span_info("The typical drain I feel from day to day life is lessened, my athleticism greater."),

@@ -39,7 +39,7 @@
 	domain = "God of Primordial Magic"
 	desc = "Placeholder"
 	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_XYLIX)
+	mob_traits = list(TRAIT_KASMIDIAN)
 	t1 = /obj/effect/proc_holder/spell/invoked/wheel
 	t2 = /obj/effect/proc_holder/spell/invoked/mockery
 	confess_lines = list(

@@ -147,7 +147,7 @@
 					cloak = /obj/item/clothing/cloak/templar/carthus
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
 				if (/datum/patron/chaos/kasmidian)
-					cloak = /obj/item/clothing/cloak/templar/xylix
+					cloak = /obj/item/clothing/cloak/templar/kasmidian
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
@@ -223,7 +223,7 @@
 				if (/datum/patron/order/carthus)
 					cloak = /obj/item/clothing/cloak/templar/carthus
 				if (/datum/patron/chaos/kasmidian)
-					cloak = /obj/item/clothing/cloak/templar/xylix
+					cloak = /obj/item/clothing/cloak/templar/kasmidian
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
 			var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman")
@@ -317,7 +317,7 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
 		if(/datum/patron/order/eora)
 			neck = /obj/item/clothing/neck/roguetown/psicross/eora
-		if(/datum/patron/chaos/kasmidian) // Random pricross for Xylix
+		if(/datum/patron/chaos/kasmidian) // SOLARIS NOTE: kasmidian would ideally have their own psicross but idc to change this off xylix behavior rn
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
 			/obj/item/clothing/neck/roguetown/psicross/aeternus,
