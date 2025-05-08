@@ -207,7 +207,7 @@
 
 
 /obj/structure/fermenting_barrel/murkwine
-	desc = "A barrel with a Possumtail Brewery mark. Two Volk tails interlace with eachother upon the seal in a dance. A country tradition from Heartfelt."
+	desc = "A barrel with a Possumtail Brewery mark. Two Volk tails interlace with eachother upon the seal in a dance."
 
 /obj/structure/fermenting_barrel/murkwine/Initialize()
 	. = ..()

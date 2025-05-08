@@ -394,17 +394,6 @@
 	craftdiff = 3
 	sellprice = 80
 
-/datum/crafting_recipe/roguetown/leather/otavanleatherpants
-	name = "otavan leather trousers (1 fibers, 2 leather, 1 fur)"
-	result = list(/obj/item/clothing/under/roguetown/trou/otavan)
-	reqs = list(/obj/item/reagent_containers/food/snacks/tallow = 1,
-	            /obj/item/natural/fibers = 1,
-	            /obj/item/natural/hide/cured = 2,
-				/obj/item/natural/fur = 1)
-	tools = list(/obj/item/needle)
-	craftdiff = 6
-	sellprice = 30
-
 /datum/crafting_recipe/roguetown/leather/leathertights
 	name = "leather tights (2 leather)"
 	result = list(/obj/item/clothing/under/roguetown/trou/leathertights)
@@ -449,17 +438,6 @@
 	tools = list(/obj/item/needle)
 	craftdiff = 4
 	sellprice = 15
-	
-/datum/crafting_recipe/roguetown/leather/otavanboots
-	name = "otavan leather boots (1 fibers, 1 leather, 1 fur, 1 tallow)"
-	result = list(/obj/item/clothing/shoes/roguetown/boots/otavan)
-	reqs = list(/obj/item/natural/hide/cured = 1,
-	            /obj/item/reagent_containers/food/snacks/tallow = 1,
-				/obj/item/natural/fur = 1,
-	            /obj/item/natural/fibers = 1)
-	tools = list(/obj/item/needle)
-	craftdiff = 6
-	sellprice = 25
 
 /datum/crafting_recipe/roguetown/leather/buckleshoes
 	name = "buckled shoes (2 fibers, 2 leather)"

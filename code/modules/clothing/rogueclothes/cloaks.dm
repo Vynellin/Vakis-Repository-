@@ -1001,19 +1001,6 @@
 	nodismemsleeves = TRUE
 	salvage_result = /obj/item/natural/fur
 
-/obj/item/clothing/cloak/heartfelt
-	name = "red cloak"
-	desc = ""
-	icon_state = "heartfelt_cloak"
-	body_parts_covered = CHEST|GROIN|VITALS|ARMS
-	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	sleevetype = "shirt"
-	slot_flags = ITEM_SLOT_CLOAK
-	allowed_sex = list(MALE, FEMALE)
-	allowed_race = NON_DWARVEN_RACE_TYPES
-	sellprice = 50
-	nodismemsleeves = TRUE
-
 /obj/item/clothing/cloak/half
 	name = "halfcloak"
 	desc = ""

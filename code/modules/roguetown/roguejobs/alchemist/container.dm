@@ -110,11 +110,11 @@
 
 /obj/item/reagent_containers/glass/bottle/rogue/redwine
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/redwine = 48)
-	desc = "A bottle with the Otavan Merchant Guild cork-seal. This one appears to be labelled as a relatively young red-wine from the coinlord state."
+	desc = "A bottle. This one appears to be labelled as a relatively young red-wine."
 
 /obj/item/reagent_containers/glass/bottle/rogue/whitewine
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/whitewine = 48)
-	desc = "A bottle with the Otavan Merchant Guild cork-seal. This one appears to be labelled as a sweet wine from the colder northern regions."
+	desc = "A bottle. This one appears to be labelled as a sweet wine."
 
 /obj/item/reagent_containers/glass/bottle/rogue/elfred
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/elfred = 48)

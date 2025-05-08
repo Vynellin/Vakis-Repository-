@@ -885,9 +885,9 @@
 	craftdiff = 4
 	sellprice = 15
 
-/datum/crafting_recipe/roguetown/sewing/otavangambeson
-	name = "otavan gambeson (5 fibers, 6 cloth)"
-	result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/otavan)
+/datum/crafting_recipe/roguetown/sewing/fencergambeson
+	name = "fencer gambeson (5 fibers, 6 cloth)"
+	result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/fencer)
 	reqs = list(/obj/item/natural/cloth = 6,
 	            /obj/item/natural/fibers = 5)
 	tools = list(/obj/item/needle)
