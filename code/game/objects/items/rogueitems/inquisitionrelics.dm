@@ -126,7 +126,7 @@
 	var/cinellalines =list("'I cannot feel the coast's breeze...'", "'We churn tighter here than schooling fish...'", "'Free me, please, so I may return to the sea...'")
 	var/carthuslines =list("'Free me from this damnable witchery!'", "'There is no justice nor glory to be found here, just endless fatigue...'", "'I begged for a death by the sword...'")
 	var/eoralines =list("'Every caress feels like a thousand splintering bones...'", "'She was a heretic, but how could I hurt her?!'", "'I'm sorry! I only wanted peace! Please release me!'")
-	var/dendorlines =list("'HIS MADNESS CALLS FOR ME! RRGHNN...'", "'SHATTER THIS BOX, SO WE MAY CHOKE THIS OTAVAN ON DIRT AND ROOTS!'", "'I miss His voice in the leaves... Free me, please...'")
+	var/tamarilines =list("'HIS BOUNTY CALLS FOR ME! RRGHNN...'", "'SHATTER THIS BOX, SO WE MAY CHOKE THIS OTAVAN ON DIRT AND ROOTS!'", "'I miss His voice in the leaves... Free me, please...'")
 	var/kasmidianlines =list("'THEY TOOK MY SIGHT, MY KNOWLEDGE AND STRIFE.'", "'NOTHING TO BE LEARNED SITS HERE.'", "'I WOULD HAVE PREFERED TO BE RENDED ASUNDER.'", "'A NIGHTMARE.'")
 	var/nunoslines =list("'The structure of this cursed machine is malleable.. Shatter it, please...'", "'My craft could've changed the world...'", "'Free me, so I may return to my apprentice, please...'")
 
@@ -166,7 +166,7 @@
 						H.add_stress(/datum/stressevent/soulchurner)
 					if(/datum/patron/chaos/tamari)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))
-						to_chat(H, (span_cultsmall(pick(dendorlines))))
+						to_chat(H, (span_cultsmall(pick(tamarilines))))
 						H.add_stress(/datum/stressevent/soulchurner)
 					if(/datum/patron/chaos/kasmidian)
 						to_chat(H, (span_hypnophrase("A voice calls out from the song for you...")))

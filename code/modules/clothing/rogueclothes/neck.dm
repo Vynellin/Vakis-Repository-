@@ -277,7 +277,7 @@
 	icon_state = "abyssor"
 
 /obj/item/clothing/neck/roguetown/psicross/tamari
-	name = "amulet of Dendor"
+	name = "amulet of Tamari"
 	desc = ""
 	icon_state = "dendor"
 

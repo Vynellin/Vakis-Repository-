@@ -70,7 +70,7 @@
 	r_sleeve_status = SLEEVE_NORMAL
 	l_sleeve_status = SLEEVE_NORMAL
 
-/obj/item/clothing/suit/roguetown/shirt/robe/dendor
+/obj/item/clothing/suit/roguetown/shirt/robe/tamari
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT|ITEM_SLOT_CLOAK
 	name = "briar robe"
 	desc = ""

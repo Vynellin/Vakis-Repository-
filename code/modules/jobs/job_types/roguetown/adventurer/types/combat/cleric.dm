@@ -19,10 +19,10 @@
 /datum/outfit/job/roguetown/adventurer/cleric/pre_equip(mob/living/carbon/human/H)
 	..()
 
-	// Add druidic skill for Dendor followers
+	// Add druidic skill for Tamari followers
 	if(istype(H.patron, /datum/patron/chaos/tamari))
 		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE)
-		to_chat(H, span_notice("As a follower of Dendor, you have innate knowledge of druidic magic."))
+		to_chat(H, span_notice("As a follower of Tamari, you have innate knowledge of druidic magic."))
 
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)
@@ -74,8 +74,8 @@
 					head = /obj/item/clothing/head/roguetown/roguehood/cinella
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
 				if(/datum/patron/chaos/tamari)
-					head = /obj/item/clothing/head/roguetown/dendormask
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
+					head = /obj/item/clothing/head/roguetown/tamarimask
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
 				if(/datum/patron/order/tsoridys)
 					head = /obj/item/clothing/head/roguetown/tsoridyshood
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
@@ -132,8 +132,8 @@
 					cloak = /obj/item/clothing/cloak/templar/cinella
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
 				if(/datum/patron/chaos/tamari)
-					cloak = /obj/item/clothing/cloak/templar/dendor
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
+					cloak = /obj/item/clothing/cloak/templar/tamari
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/tamarihelm
 				if(/datum/patron/order/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/tsoridys
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridyshelm
@@ -213,7 +213,7 @@
 				if(/datum/patron/chaos/cinella)
 					cloak = /obj/item/clothing/cloak/templar/cinella
 				if(/datum/patron/chaos/tamari)
-					cloak = /obj/item/clothing/cloak/templar/dendor
+					cloak = /obj/item/clothing/cloak/templar/tamari
 				if(/datum/patron/order/tsoridys)
 					cloak = /obj/item/clothing/cloak/templar/tsoridys
 				if (/datum/patron/order/nunos)
@@ -281,8 +281,8 @@
 					head = /obj/item/clothing/head/roguetown/roguehood/cinella
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
 				if(/datum/patron/chaos/tamari)
-					head = /obj/item/clothing/head/roguetown/dendormask
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
+					head = /obj/item/clothing/head/roguetown/tamarimask
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
 					H.cmode_music = 'sound/music/combat_druid.ogg'
 				if(/datum/patron/order/tsoridys)
 					head = /obj/item/clothing/head/roguetown/tsoridyshood

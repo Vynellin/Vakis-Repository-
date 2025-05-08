@@ -33800,10 +33800,10 @@
 /area/rogue/under/cave/dukecourt)
 "nZn" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/dendor,
-/obj/item/clothing/suit/roguetown/shirt/robe/dendor,
-/obj/item/clothing/head/roguetown/dendormask,
-/obj/item/clothing/head/roguetown/dendormask,
+/obj/item/clothing/suit/roguetown/shirt/robe/tamari,
+/obj/item/clothing/suit/roguetown/shirt/robe/tamari,
+/obj/item/clothing/head/roguetown/tamarimask,
+/obj/item/clothing/head/roguetown/tamarimask,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/church/chapel)
 "nZr" = (

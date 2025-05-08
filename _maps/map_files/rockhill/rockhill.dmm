@@ -15173,10 +15173,10 @@
 "pww" = (
 /obj/structure/rack/rogue/shelf/big,
 /obj/structure/rack/rogue/shelf,
-/obj/item/clothing/suit/roguetown/shirt/robe/dendor{
+/obj/item/clothing/suit/roguetown/shirt/robe/tamari{
 	pixel_y = 8
 	},
-/obj/item/clothing/head/roguetown/dendormask{
+/obj/item/clothing/head/roguetown/tamarimask{
 	pixel_y = 36
 	},
 /turf/open/floor/rogue/hexstone,

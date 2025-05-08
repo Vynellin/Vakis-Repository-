@@ -95,9 +95,9 @@
 	craftdiff = 3
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/dendorrobe
-	name = "dendor robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/dendor)
+/datum/crafting_recipe/roguetown/weaving/tamarirobe
+	name = "tamari robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/tamari)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4

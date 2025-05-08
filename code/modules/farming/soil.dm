@@ -274,14 +274,14 @@
 
 /obj/structure/soil/proc/bless_soil()
 	blessed_time = 15 MINUTES
-	// It's a miracle! Plant comes back to life when blessed by Dendor
+	// It's a miracle! Plant comes back to life when blessed by Tamari
 	if(plant && plant_dead)
 		plant_dead = FALSE
 		plant_health = 10.0
-	// If low on nutrition, Dendor provides
+	// If low on nutrition, Tamari provides
 	if(nutrition < 30)
 		adjust_nutrition(max(30 - nutrition, 0))
-	// If low on water, Dendor provides
+	// If low on water, Tamari provides
 	if(water < 30)
 		adjust_water(max(30 - water, 0))
 	// And it grows a little!

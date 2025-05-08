@@ -60,7 +60,7 @@
 			cloak = /obj/item/clothing/cloak/cinellatabard
 		if(/datum/patron/chaos/tamari)
 			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
-			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
+			cloak = /obj/item/clothing/cloak/tabard/crusader/tamari
 		if(/datum/patron/order/tsoridys)
 			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			cloak = /obj/item/clothing/cloak/templar/tsoridian
@@ -167,8 +167,8 @@
 			cloak = /obj/item/clothing/cloak/cinellatabard
 		if(/datum/patron/chaos/tamari)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/tamari
-			head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
-			cloak = /obj/item/clothing/cloak/tabard/crusader/dendor
+			head = /obj/item/clothing/head/roguetown/helmet/heavy/tamarihelm
+			cloak = /obj/item/clothing/cloak/tabard/crusader/tamari
 		if(/datum/patron/order/tsoridys)
 			wrists = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridian

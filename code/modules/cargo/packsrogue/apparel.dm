@@ -80,8 +80,8 @@
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/tsoridys,)
 
-/datum/supply_pack/rogue/apparel/crosses/divinepantheondendor
-	name = "Dendor Amulet"
+/datum/supply_pack/rogue/apparel/crosses/divinepantheontamari
+	name = "Tamari Amulet"
 	cost = 10
 	contains = list(
 					/obj/item/clothing/neck/roguetown/psicross/tamari,)

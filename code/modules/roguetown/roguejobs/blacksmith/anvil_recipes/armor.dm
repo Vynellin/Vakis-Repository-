@@ -424,11 +424,11 @@
 	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 	craftdiff = 3
 
-/datum/anvil_recipe/armor/steel/dendorhelm
+/datum/anvil_recipe/armor/steel/tamarihelm
 	name = "Tamari Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/tamarihelm
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/steel/frogmouth

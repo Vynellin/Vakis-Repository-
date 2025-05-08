@@ -150,7 +150,7 @@
 		if ("bog", "dense bog")
 			locale = "a wretched, fetid bog"
 		if ("coast", "coastforest")
-			locale = "somewhere betwixt Cinella's realm and Dendor's bounty"
+			locale = "somewhere betwixt Cinella's realm and Tamari's bounty"
 		if ("indoors", "shop", "physician", "outdoors", "roofs", "manor", "wizard's tower", "garrison", "dungeon cell", "baths", "tavern")
 			locale = "the city of Solaris Ridhe and all its bustling souls"
 		if ("church")

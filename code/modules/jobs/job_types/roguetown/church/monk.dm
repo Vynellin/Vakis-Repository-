@@ -56,10 +56,10 @@
 			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
 			head = /obj/item/clothing/head/roguetown/roguehood/cinella		
-		if(/datum/patron/chaos/tamari) //Dendorites all busted. Play Druid.
-			head = /obj/item/clothing/head/roguetown/dendormask
+		if(/datum/patron/chaos/tamari) //Tamarites all busted. Play Druid.
+			head = /obj/item/clothing/head/roguetown/tamarimask
 			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
 		if(/datum/patron/order/tsoridys)
 			head = /obj/item/clothing/head/roguetown/tsoridyshood
 			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys

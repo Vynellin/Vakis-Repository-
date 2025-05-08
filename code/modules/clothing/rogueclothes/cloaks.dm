@@ -278,7 +278,7 @@
 	color = "#373f69"
 	detail_color = "#974305"
 
-/obj/item/clothing/cloak/tabard/crusader/dendor
+/obj/item/clothing/cloak/tabard/crusader/tamari
 	color = "#4B5637"
 	detail_color = "#3D1D1C"
 
@@ -1219,9 +1219,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/dendor
-	name = "dendor tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Dendor on it."
+/obj/item/clothing/cloak/templar/tamari
+	name = "tamari tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Tamari on it."
 	icon_state = "tabard_dendor"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN

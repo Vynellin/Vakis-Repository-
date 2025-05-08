@@ -235,7 +235,7 @@
 
 /turf/open/floor/rogue/grassred
 	name = "red grass"
-	desc = "Grass, ripe with Dendor's blood."
+	desc = "Grass, ripe with the essence of Autumn."
 	icon_state = "grass_red"
 	layer = MID_TURF_LAYER
 	footstep = FOOTSTEP_GRASS

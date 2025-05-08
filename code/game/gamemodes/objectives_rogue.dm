@@ -20,7 +20,7 @@
 /datum/objective/werewolf
 	name = "conquer"
 	explanation_text = "Fear not the moon and Zira's light."
-	team_explanation_text = "Lycanthropy is a terrible disease that's been recorded in scattered accounts going back hundreds of years. Whatever madness drove Dendor to create such an aberration is beyond mortal minds - and whatever the reason, he has been unwilling or unable to undo it. Nightly transformations and prodigious increses in mass drive the body into an active state of insatiable starvation, driving animalistic, rabid behavior."
+	team_explanation_text = "Lycanthropy is a terrible disease that's been recorded in scattered accounts going back hundreds of years. Nightly transformations and prodigious increses in mass drive the body into an active state of insatiable starvation, driving animalistic, rabid behavior."
 	triumph_count = 5
 
 /datum/objective/werewolf/check_completion()

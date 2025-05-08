@@ -169,9 +169,9 @@
 	mask_override = TRUE
 
 
-/obj/item/clothing/head/roguetown/dendormask
+/obj/item/clothing/head/roguetown/tamarimask
 	name = "briarmask"
-	desc = "A mask of wood worn by druids in service to Dendor."
+	desc = "A mask of wood worn by druids in service to Tamari."
 	color = null
 	icon_state = "dendormask"
 	item_state = "dendormask"
@@ -1245,9 +1245,9 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 2
 
-/obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
-	name = "dendor helmet"
-	desc = "Headwear commonly worn by Templars in service to Dendor. Its protrusions almost resemble branches. Take root in the earth, and you will never be moved."
+/obj/item/clothing/head/roguetown/helmet/heavy/tamarihelm
+	name = "tamari helmet"
+	desc = "Headwear commonly worn by Templars in service to Tamari. Its protrusions almost resemble branches. Take root in the earth, and you will never be moved."
 	icon_state = "dendorhelm"
 	item_state = "dendorhelm"
 	emote_environment = 3
@@ -1764,7 +1764,7 @@
 	icon_state = "eorahelmsallet"
 	item_state = "eorahelmsallet"
 
-//................ Briar Thorns ............... //	- Dendor Briar
+//................ Briar Thorns ............... //	- Tamari Briar
 /obj/item/clothing/head/roguetown/padded/briarthorns
 	name = "briar thorns"
 	desc = "The pain it causes perhaps can distract from the whispers of a mad God overpowering your sanity..."
