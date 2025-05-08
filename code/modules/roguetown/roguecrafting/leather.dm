@@ -410,16 +410,6 @@
 	tools = list(/obj/item/needle)
 	craftdiff = 3
 	sellprice = 11
-
-/datum/crafting_recipe/roguetown/leather/baggyleatherpants
-	name = "baggy leather pants (1 fibers, 1 cloth, 2 leather)"
-	result = list(/obj/item/clothing/under/roguetown/trou/leather/pontifex)
-	reqs = list(/obj/item/natural/cloth = 1,
-	            /obj/item/natural/fibers = 1,
-	            /obj/item/natural/hide/cured = 2)
-	tools = list(/obj/item/needle)
-	craftdiff = 5
-	sellprice = 20
 		
 /datum/crafting_recipe/roguetown/leather/gladsandals
 	name = "gladiator sandals (1 fibers, 2 leather)"
@@ -447,15 +437,6 @@
 	tools = list(/obj/item/needle)
 	craftdiff = 6
 	sellprice = 25
-
-/datum/crafting_recipe/roguetown/leather/monkleather
-	name = "asymetrical leather vest (1 cloth, 2 leather)"
-	result = list(/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/pontifex)
-	reqs = list(/obj/item/natural/hide/cured = 2,
-	            /obj/item/natural/cloth = 1)
-	tools = list(/obj/item/needle)
-	craftdiff = 5
-	sellprice = 23
 
 /datum/crafting_recipe/roguetown/leather/greatcoat
 	name = "greatcoat (1 cloth, 3 leather, 1 fur)"
