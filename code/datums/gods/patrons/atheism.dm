@@ -6,9 +6,3 @@
 	associated_faith = /datum/faith/godless
 	preference_accessible = FALSE
 	undead_hater = FALSE
-	confess_lines = list(
-		"Gods are WORTHLESS!",
-		"I DON'T NEED GODS!",
-		"I AM MY OWN GOD!",
-		"NO GODS, NO MASTERS!",
-	)

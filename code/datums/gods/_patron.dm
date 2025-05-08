@@ -20,8 +20,6 @@ GLOBAL_LIST_EMPTY(preference_patrons)
 	var/preference_accessible = TRUE
 	/// Whether or not this patron hates undead - Mostly so we know whether miracles should actually harm
 	var/undead_hater = TRUE
-	/// Some gods have related confessions, if they're evil and such
-	var/list/confess_lines
 	/// Some patrons have related traits, why not?
 	var/list/mob_traits
 	/// Tier 0 spell

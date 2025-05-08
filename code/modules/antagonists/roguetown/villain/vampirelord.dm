@@ -14,11 +14,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	var/list/inherent_traits = list(TRAIT_STRONGBITE, TRAIT_NOBLE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOPAIN, TRAIT_TOXIMMUNE, TRAIT_STEELHEARTED, TRAIT_NOSLEEP, TRAIT_VAMPMANSION, TRAIT_VAMP_DREAMS, TRAIT_NOROGSTAM, TRAIT_HEAVYARMOR, TRAIT_COUNTERCOUNTERSPELL)
 	antag_hud_type = ANTAG_HUD_TRAITOR
 	antag_hud_name = "vampire lord"
-	confess_lines = list(
-		"I AM ANCIENT",
-		"I AM THE LAND",
-		"CHILD OF KAIN!",
-	)
 	rogue_enabled = TRUE
 	var/isspawn = FALSE
 	var/disguised = FALSE
@@ -463,11 +458,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	name = "Vampire Spawn"
 	antag_hud_name = "Vspawn"
 	inherent_traits = list(TRAIT_STRONGBITE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOPAIN, TRAIT_TOXIMMUNE, TRAIT_STEELHEARTED, TRAIT_NOSLEEP, TRAIT_VAMPMANSION, TRAIT_VAMP_DREAMS)
-	confess_lines = list(
-		"THE CRIMSON CALLS!",
-		"MY MASTER COMMANDS",
-		"THE SUN IS ENEMY!",
-	)
 	isspawn = TRUE
 
 /datum/antagonist/vampirelord/lesser/move_to_spawnpoint()

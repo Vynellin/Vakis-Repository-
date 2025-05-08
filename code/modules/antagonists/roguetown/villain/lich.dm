@@ -3,11 +3,6 @@
 	roundend_category = "Lich"
 	antagpanel_category = "Lich"
 	job_rank = ROLE_LICH
-	confess_lines = list(
-		"I WILL LIVE ETERNAL!",
-		"I AM BEHIND SEVEN PHYLACTERIES!",
-		"YOU CANNOT KILL ME!",
-	)
 	rogue_enabled = TRUE
 	var/list/phylacteries = list()
 	var/out_of_lives = FALSE

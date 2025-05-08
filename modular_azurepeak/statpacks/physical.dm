@@ -27,5 +27,5 @@
 
 /datum/statpack/physical/struggler
 	name = "Struggler"
-	desc = "Lyfe's dealt you a poor hand, so you've opted to simply flip the table instead."
+	desc = "Life's dealt you a poor hand, so you've opted to simply flip the table instead."
 	stat_array = list(STAT_STRENGTH = 2, STAT_CONSTITUTION = 2, STAT_ENDURANCE = 2, STAT_INTELLIGENCE = -3, STAT_PERCEPTION = -3, STAT_FORTUNE = -2)

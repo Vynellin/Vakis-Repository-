@@ -155,6 +155,7 @@
 		recipient.mind?.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_APPRENTICE, silent = TRUE)
 	else
 		added_skills = list(list(/datum/skill/combat/bows, 1, 6))
+		
 /*/datum/virtue/combat/tavern_brawler
 	name = "Tavern Brawler"
 	desc = "I've never met a problem my fists couldn't solve."
@@ -162,7 +163,7 @@
 
 /datum/virtue/combat/guarded
 	name = "Guarded"
-	desc = "I have long kept my true capabilities and vices a secret. Sometimes being deceptively weak can save one's lyfe."
+	desc = "I have long kept my true capabilities and vices a secret. Sometimes being deceptively weak can save one's life."
 	added_traits = list(TRAIT_DECEIVING_MEEKNESS)
 
 /*/datum/virtue/combat/impervious

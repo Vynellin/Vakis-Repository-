@@ -4,11 +4,6 @@
 	antagpanel_category = "Werewolf"
 	job_rank = ROLE_WEREWOLF
 	var/list/inherent_traits = list(TRAIT_NOPAIN, TRAIT_NOPAINSTUN, TRAIT_CRITICAL_RESISTANCE, TRAIT_NOFALLDAMAGE1, TRAIT_KNEESTINGER_IMMUNITY, TRAIT_SHOCKIMMUNE)
-	confess_lines = list(
-		"THE BEAST INSIDE ME!",
-		"BEWARE THE BEAST!",
-		"MY LUPINE MARK!",
-	)
 	rogue_enabled = TRUE
 	var/special_role = ROLE_WEREWOLF
 	var/transformed

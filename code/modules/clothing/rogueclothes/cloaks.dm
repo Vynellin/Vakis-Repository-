@@ -1473,12 +1473,6 @@
 	GLOB.lordcolor -= src
 	return ..()
 
-/obj/item/clothing/cloak/hierophant
-	name = "hierophant's sash"
-	icon_state = "naledisash"
-	item_state = "naledisash"
-	desc = "A limp piece of fabric traditionally used to fasten bags that are too baggy, but in modern days has become more of a fashion statement than anything."
-
 /obj/item/clothing/cloak/wardencloak
 	name = "warden cloak"
 	desc = "A cloak worn by the Veteran Warden of Vanderlin's Forest Guard"

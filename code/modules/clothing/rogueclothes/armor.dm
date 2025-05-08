@@ -286,20 +286,6 @@
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	icon_state = "shadowrobe"
 
-/obj/item/clothing/suit/roguetown/armor/gambeson/hierophant
-	name = "hierophant's shawl"
-	icon_state = "desertrobe"
-	item_state = "desertrobe"
-	desc = "A thick robe intervowen with spell-laced fabrics. Thick and protective while remaining light and breezy; the perfect gear for protecting one from the threats of the sun, the desert and the daemons, yet still allowing one to cast spells aptly."
-	naledicolor = TRUE
-
-/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/pontifex
-	name = "pontifex's kaftan"
-	icon_state = "monkleather"
-	item_state = "monkleather"
-	desc = "Tight boiled leathers that stretch and fit to one's frame perfectly."
-	shiftable = FALSE
-
 //leather family
 
 /obj/item/clothing/suit/roguetown/armor/leather

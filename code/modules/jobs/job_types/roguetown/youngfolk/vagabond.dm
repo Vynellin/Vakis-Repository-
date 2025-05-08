@@ -9,7 +9,7 @@
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT)
 
-	tutorial = "Dozens of people end up down on their luck in the kingdom of Psydonia every day. They sometimes make something of themselves but much more often die in the streets."
+	tutorial = "Whatever fortunes led you to this fate, you sit on the sidelines - an outcast from all but the rare shelter managed within town."
 
 	outfit = /datum/outfit/job/roguetown/vagabond
 	display_order = JDO_VAGABOND

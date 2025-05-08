@@ -800,15 +800,6 @@
 	craftdiff = 6
 	sellprice = 35
 
-/datum/crafting_recipe/roguetown/sewing/naledisash
-	name = "neck sash (2 fibers, 2 cloth)"
-	result = list(/obj/item/clothing/cloak/hierophant)
-	reqs = list(/obj/item/natural/cloth = 2,
-	            /obj/item/natural/fibers = 2)
-	tools = list(/obj/item/needle)
-	craftdiff = 4
-	sellprice = 15
-
 /datum/crafting_recipe/roguetown/sewing/ladycloak
 	name = "royal half-cloak (2 fibers, 2 cloth, 2 silk, 1 fur)"
 	result = list(/obj/item/clothing/cloak/lordcloak/ladycloak)

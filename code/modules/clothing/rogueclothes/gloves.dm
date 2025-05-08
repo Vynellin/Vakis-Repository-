@@ -158,12 +158,6 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/blacksteel
 
-/obj/item/clothing/gloves/roguetown/angle/pontifex
-	name = "rune-scrybed wrappings"
-	desc = "Paper and cloth bandages enscrybed with powerful naledian runes. They do an ample job of protecting their user's hands in combat."
-	icon_state = "clothwraps"
-	item_state = "clothwraps"
-
 //------------ BLACKSTEEL END ---------------------
 
 /obj/item/clothing/gloves/roguetown/elven_gloves

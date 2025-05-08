@@ -9,12 +9,6 @@
 	antag_hud_type = ANTAG_HUD_REV
 	antag_hud_name = "rev"
 	show_in_roundend = FALSE
-	confess_lines = list(
-		"VIVA!",
-		"DEATH TO THE NOBLES!",
-		"STICK IT TO THE MAN!",
-		"NO GODS, NO MASTERS!",
-	)
 	increase_votepwr = FALSE
 	rogue_enabled = TRUE
 	var/datum/team/prebels/rev_team
