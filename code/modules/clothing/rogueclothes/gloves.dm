@@ -94,12 +94,6 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 
-/obj/item/clothing/gloves/roguetown/chain/psydon
-	name = "psydonian gloves"
-	desc = "Blacksteel-bound gauntlets. These ritualistic restraints, when left to dangle-and-sway, assist in the deflection of unpredictable blows."
-	icon_state = "psydongloveschain"
-	item_state = "psydongloveschains"
-
 /obj/item/clothing/gloves/roguetown/chain/iron
 	icon_state = "icgloves"
 	anvilrepair = /datum/skill/craft/armorsmithing
@@ -148,40 +142,6 @@
 
 	grid_width = 64
 	grid_height = 32
-
-/obj/item/clothing/gloves/roguetown/plate/matthios
-	name = "gilded gauntlets"
-	desc = "Many a man his life hath sold,"
-	icon_state = "matthiosgloves"
-	max_integrity = 500
-
-/obj/item/clothing/gloves/roguetown/plate/matthios/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/gloves/roguetown/plate/matthios/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-
-/obj/item/clothing/gloves/roguetown/plate/zizo
-	name = "darksteel gauntlets"
-	desc = "darksteel plate gauntlets. Called forth from the edge of what should be known. In Her name."
-	icon_state = "zizogauntlets"
-	max_integrity = 500
-
-/obj/item/clothing/gloves/roguetown/plate/zizo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/gloves/roguetown/plate/zizo/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
 
 /obj/item/clothing/gloves/roguetown/grenzelgloves
 	name = "grenzelhoft gloves"

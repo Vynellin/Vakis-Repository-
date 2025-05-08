@@ -1185,7 +1185,7 @@
 /area/rogue/outdoors/beach)
 "gM" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/noc,
+/obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/cave/mazedungeon)
 "gN" = (
@@ -1617,7 +1617,7 @@
 /area/rogue/under/cave/dukecourt)
 "jV" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "jW" = (
@@ -1977,7 +1977,7 @@
 /turf/open/floor/rogue/grassyel,
 /area/rogue/under/cave/dukecourt)
 "mI" = (
-/obj/item/clothing/neck/roguetown/psicross/astrata,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "mJ" = (
@@ -2323,7 +2323,7 @@
 /area/rogue/under/cave/mazedungeon)
 "pj" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "pk" = (
@@ -2650,7 +2650,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/shelter)
 "rk" = (
-/obj/item/clothing/neck/roguetown/psicross/malum,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "rl" = (
@@ -3662,9 +3662,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/cave)
 "xQ" = (
-/obj/structure/wonder{
-	name = "graggarite altar"
-	},
+/obj/structure/wonder,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
 "xS" = (
@@ -4092,7 +4090,7 @@
 /area/rogue/under/cave/orcdungeon)
 "AS" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/malum,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "AT" = (
@@ -4707,7 +4705,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/outdoors/beach)
 "EP" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/orcdungeon)
 "ES" = (
@@ -5286,7 +5284,7 @@
 /area/rogue/indoors/shelter)
 "IC" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/astrata,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/orcdungeon)
 "IH" = (
@@ -5314,7 +5312,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
 "IN" = (
-/obj/item/clothing/neck/roguetown/psicross/abyssor,
+/obj/item/clothing/neck/roguetown/psicross/cinella,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "IP" = (
@@ -5495,7 +5493,7 @@
 /area/rogue/indoors/cave)
 "JS" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/eora,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "JU" = (
@@ -5799,7 +5797,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/shelter)
 "LV" = (
-/obj/structure/fluff/statue/astrata,
+/obj/structure/fluff/statue/aeternus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/orcdungeon)
 "LX" = (
@@ -5954,7 +5952,6 @@
 /area/rogue/indoors/cave)
 "MR" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -6060,7 +6057,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach/forest)
 "NI" = (
-/obj/item/clothing/neck/roguetown/psicross/noc,
+/obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "NJ" = (
@@ -6193,7 +6190,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/cave)
 "Ox" = (
-/obj/structure/fluff/statue/femalestatue/zizo{
+/obj/structure/fluff/statue/femalestatue/bared{
 	name = "savior";
 	desc = "An inscription reads: She who split that which was one into that which is many.";
 	pixel_x = -20;
@@ -6340,7 +6337,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/mazedungeon)
 "Pz" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/structure/table/wood/fancy/black,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/mazedungeon)

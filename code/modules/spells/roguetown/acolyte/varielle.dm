@@ -1,8 +1,7 @@
-//Eora content from Stonekeep
-
+/// Formerly a xenobiology artefact in standard SS13; the 'heroine bud' pacifies it's wearer and makes them unable to remove it from their own person.
 /obj/item/clothing/head/peaceflower
-	name = "eoran bud"
-	desc = "A flower of gentle petals, associated with Eora or Necra. Usually adorned as a headress or laid at graves as a symbol of love or peace."
+	name = "variellian bud"
+	desc = "A flower of gentle petals, associated with Varielle or Tsoridys. Usually adorned as a headress or laid at graves as a symbol of love or peace."
 	icon = 'icons/roguetown/items/produce.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/head_items.dmi'
 	icon_state = "peaceflower"
@@ -35,13 +34,13 @@
 	return ..()
 
 /obj/effect/proc_holder/spell/invoked/bud
-	name = "Eoran Bloom"
+	name = "Variellian Bloom"
 	desc = ""
 	clothes_req = FALSE
 	range = 7
 	overlay_state = "love"
 	sound = list('sound/magic/magnet.ogg')
-	req_items = list(/obj/item/clothing/neck/roguetown/psicross/eora)
+	req_items = list(/obj/item/clothing/neck/roguetown/psicross/varielle)
 	releasedrain = 40
 	chargetime = 60
 	warnie = "spellwarning"
@@ -58,22 +57,22 @@
 		if(!C.get_item_by_slot(SLOT_HEAD))
 			var/obj/item/clothing/head/peaceflower/F = new(get_turf(C))
 			C.equip_to_slot_if_possible(F, SLOT_HEAD, TRUE, TRUE)
-			to_chat(C, "<span class='info'>A flower of Eora blooms on my head. I feel at peace.</span>")
+			to_chat(C, "<span class='info'>A flower of Varielle blooms on my head. I feel at peace.</span>")
 			return TRUE
 		else
-			to_chat(user, "<span class='warning'>The target's head is covered. The flowers of Eora need an open space to bloom.</span>")
+			to_chat(user, "<span class='warning'>The target's head is covered. The flowers of Varielle need an open space to bloom.</span>")
 			revert_cast()
 			return FALSE
 	var/turf/T = get_turf(targets[1])
 	if(!isclosedturf(T))
 		new /obj/item/clothing/head/peaceflower(T)
 		return TRUE
-	to_chat(user, "<span class='warning'>The targeted location is blocked. The flowers of Eora refuse to grow.</span>")
+	to_chat(user, "<span class='warning'>The targeted location is blocked. The flowers of Varielle refuse to grow.</span>")
 	revert_cast()
 	return FALSE
 
-/obj/effect/proc_holder/spell/invoked/eoracurse
-	name = "Eora's Curse"
+/obj/effect/proc_holder/spell/invoked/variellecurse
+	name = "Varielle's Curse"
 	overlay_state = "curse2"
 	releasedrain = 50
 	chargetime = 30
@@ -81,14 +80,14 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	chargedloop = null
-	req_items = list(/obj/item/clothing/neck/roguetown/psicross/eora)
+	req_items = list(/obj/item/clothing/neck/roguetown/psicross/varielle)
 	sound = 'sound/magic/whiteflame.ogg'
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
 	charge_max = 10 SECONDS
 	miracle = FALSE
 
-/obj/effect/proc_holder/spell/invoked/eoracurse/cast(list/targets, mob/living/user)
+/obj/effect/proc_holder/spell/invoked/variellecurse/cast(list/targets, mob/living/user)
 	if(isliving(targets[1]))
 		var/mob/living/carbon/target = targets[1]
 		target.apply_status_effect(/datum/status_effect/buff/druqks)

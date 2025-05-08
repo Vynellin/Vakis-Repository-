@@ -1,7 +1,7 @@
 /datum/job/roguetown/squire
 	title = "Squire"
 	flag = SQUIRE
-	department_flag = YOUNGFOLK
+	department_flag = SIDEFOLK
 	faction = "Station"
 	total_positions = 4
 	spawn_positions = 4

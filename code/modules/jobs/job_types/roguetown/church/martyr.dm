@@ -118,7 +118,7 @@
 			if(ishuman(M))
 				var/mob/living/carbon/human/H
 				var/type = H.patron?.type
-				if(istype(type, /datum/patron/inhumen))
+				if(istype(type, /datum/patron/balance))
 					H.electrocution_animation(20)
 
 //This gives a countdown to the user, it's pretty hacky
@@ -325,10 +325,10 @@
 		M.lightning_flashing = TRUE
 		M.update_sight()
 		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living/carbon, reset_lightning)), 2)
-		if(istype(M.patron, /datum/patron/inhumen))
+		if(istype(M.patron, /datum/patron/balance))
 			var/turf/T = get_step(get_step(M, NORTH), NORTH)
 			T.Beam(M, icon_state="lightning[rand(1,12)]", time = 5)
-			M.visible_message(span_warning("[M] gets struck down by the Ten!"), span_warning("The Ten curse you! You stood too close to one of their devout!"))
+			M.visible_message(span_warning("[M] gets struck down by the Nine!"), span_warning("The Nine curse you! You stood too close to one of their devout!"))
 			M.electrocution_animation(20)
 			mob_ignite(M)
 			playsound(M, 'sound/magic/lightning.ogg', 100, FALSE)
@@ -423,12 +423,12 @@
 	title = "Martyr"
 	department_flag = CHURCHMEN
 	faction = "Station"
-	tutorial = "Martyrs are hand-picked among the most devout of the Holy See. They are given one of the See's cherished relics to protect the Church, and to inspire hope and lead by example of grace, kindness and vicious intolerance to any who do not share the belief of the Ten. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
+	tutorial = "Martyrs are hand-picked among the most devout of the Holy See. They are given one of the See's cherished relics to protect the Church, and to inspire hope and lead by example of grace, kindness and vicious intolerance to any who do not share the belief of the Nine. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = ALL_CHAOS_PATRONS
 	outfit = /datum/outfit/job/roguetown/martyr
-	min_pq = 10 //Cus it's a Martyr of the Ten. Get it.
+	min_pq = 9 // what're we; some kinda... knights of the nine?
 	max_pq = null
 	round_contrib_points = 4
 	total_positions = 1
@@ -439,7 +439,7 @@
 
 	cmode_music = 'sound/music/combat_martyrsafe.ogg'
 
-	//No undeath-adjacent virtues for a role that can sacrifice itself. The Ten like their sacrifices 'pure'. (I actually didn't want to code returning those virtue traits post-sword use)
+	//No undeath-adjacent virtues for a role that can sacrifice itself. The Nine like their sacrifices 'pure'. (I actually didn't want to code returning those virtue traits post-sword use)
 	//They get those traits during sword activation, anyway. 
 	//Dual wielder is there to stand-in for ambidextrous in case they activate their sword in their off-hand.
 	virtue_restrictions = list(/datum/virtue/utility/noble, /datum/virtue/combat/rotcured, /datum/virtue/utility/deadened, /datum/virtue/utility/deathless, /datum/virtue/heretic/seer, /datum/virtue/combat/dualwielder)
@@ -536,7 +536,7 @@
 		else if (H.job in GLOB.church_positions)
 			to_chat(user, span_warning("You feel a jolt of holy energies just for a split second, and then the sword slips from your grasp! You are not devout enough."))
 			return FALSE
-		else if(istype(H.patron, /datum/patron/inhumen)) 
+		else if(istype(H.patron, /datum/patron/balance)) 
 			var/datum/component/martyrweapon/marty = GetComponent(/datum/component/martyrweapon)
 			to_chat(user, span_warning("YOU FOOL! IT IS ANATHEMA TO YOU! GET AWAY!"))
 			H.Stun(40)
@@ -573,7 +573,7 @@
 
 /obj/item/clothing/cloak/martyr
 	name = "martyr cloak"
-	desc = "An elegant cloak in the colors of Astrata. Looks like it can only fit Humen-sized people."
+	desc = "An elegant cloak in the colors of Aeternus. Looks like it can only fit Humen-sized people."
 	color = null
 	icon_state = "martyrcloak"
 	item_state = "martyrcloak"
@@ -586,7 +586,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/holysee
 	name = "holy silver plate"
-	desc = "Silver-clad plate for the guardians and the warriors, for the spears and shields of the Ten."
+	desc = "Silver-clad plate for the guardians and the warriors, for the spears and shields of the Nine."
 	icon = 'icons/roguetown/clothing/special/martyr.dmi'
 	icon_state = "silverarmor"
 	item_state = "silverarmor"

@@ -1,5 +1,5 @@
 //t1, the bends
-/obj/effect/proc_holder/spell/invoked/abyssor_bends
+/obj/effect/proc_holder/spell/invoked/cinella_bends
 	name = "Depth Bends"
 	overlay_state = "thebends"
 	releasedrain = 15
@@ -17,7 +17,7 @@
 	miracle = TRUE
 	devotion_cost = 15
 
-/obj/effect/proc_holder/spell/invoked/abyssor_bends/cast(list/targets, mob/user = usr)
+/obj/effect/proc_holder/spell/invoked/cinella_bends/cast(list/targets, mob/user = usr)
 	. = ..()
 	if(isliving(targets[1]))
 		var/mob/living/target = targets[1]
@@ -75,7 +75,7 @@
 		var/healing = 6.5
 		target.adjustFireLoss(-80)
 		if (conditional_buff)
-			to_chat(user, "Calling upon Abyssor's power is easier in these conditions!")
+			to_chat(user, "Calling upon Cinella's power is easier in these conditions!")
 			healing += situational_bonus
 			target.adjustFireLoss(-40)
 		target.apply_status_effect(/datum/status_effect/buff/healing, healing)

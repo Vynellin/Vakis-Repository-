@@ -97,12 +97,6 @@ GLOBAL_LIST_INIT(church_positions, list(
 	"Martyr",
 ))
 
-GLOBAL_LIST_INIT(inquisition_positions, list(
-	"Inquisitor",
-	"Orthodoxist",
-))
-
-
 GLOBAL_LIST_INIT(yeoman_positions, list(
 	"Merchant",
 	"Innkeeper",
@@ -192,7 +186,6 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	sorting_order += GLOB.courtier_positions
 	sorting_order += GLOB.garrison_positions
 	sorting_order += GLOB.church_positions
-	sorting_order += GLOB.inquisition_positions
 	sorting_order += GLOB.yeoman_positions
 	sorting_order += GLOB.peasant_positions
 	sorting_order += GLOB.youngfolk_positions

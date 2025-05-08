@@ -1591,9 +1591,6 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue)
 "kJ" = (
-/obj/structure/roguemachine/Hoardmaster{
-	pixel_x = -16
-	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/banditcamp)
 "kR" = (
@@ -1900,10 +1897,6 @@
 	icon_state = "largetable";
 	dir = 1
 	},
-/obj/item/mattcoin,
-/obj/item/mattcoin,
-/obj/item/mattcoin,
-/obj/item/mattcoin,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/banditcamp)
 "vI" = (
@@ -2836,7 +2829,6 @@
 /area/rogue/indoors)
 "WW" = (
 /obj/structure/rack/rogue,
-/obj/item/coveter,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/banditcamp)
 "Xi" = (

@@ -213,9 +213,9 @@
 	. = ..()
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/murkwine,900)
 
-/obj/structure/fermenting_barrel/nocshine
+/obj/structure/fermenting_barrel/moonshine
 	desc = "A barrel with a blue, Crescent moon mark. Not the wisest choice of drinks, but certainly the strongest."
 
-/obj/structure/fermenting_barrel/nocshine/Initialize()
+/obj/structure/fermenting_barrel/moonshine/Initialize()
 	. = ..()
-	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/nocshine,900)
+	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/moonshine,900)

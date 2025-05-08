@@ -115,7 +115,7 @@
 		if(possible_len)
 			var/datum/surgery_step/done_step
 			if(possible_len > 1)
-				var/input = input(user, "Which surgery step do you want to perform?", "PESTRA", ) as null|anything in possible_steps
+				var/input = input(user, "Which surgery step do you want to perform?", "Surgery", ) as null|anything in possible_steps
 				if(input)
 					done_step = possible_steps[input]
 			else
@@ -757,8 +757,8 @@
 		sight |= (SEE_TURFS|SEE_MOBS|SEE_OBJS)
 		see_in_dark = max(see_in_dark, 8)
 
-	if(HAS_TRAIT(src, TRAIT_NOCSIGHT))
-		lighting_alpha = min(lighting_alpha, LIGHTING_PLANE_ALPHA_NOCVISION)
+	if(HAS_TRAIT(src, TRAIT_ZIRASIGHT))
+		lighting_alpha = min(lighting_alpha, LIGHTING_PLANE_ALPHA_ZIRAVISION)
 		see_in_dark = max(see_in_dark, 8)
 
 	if(see_override)

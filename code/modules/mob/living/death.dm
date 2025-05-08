@@ -125,7 +125,7 @@
 
 	set_typing_indicator(FALSE)
 
-	// AZURE EDIT BEGIN: necra acolyte/priest deathsight trait
+	// AZURE EDIT BEGIN: tsoridys acolyte/priest deathsight trait
 	// this was a player that just died, so do the honors
 	if (client)
 		if (!gibbed)
@@ -134,10 +134,7 @@
 				if (player.stat == DEAD || isbrain(player))
 					continue
 				if (HAS_TRAIT(player, TRAIT_DEATHSIGHT))
-					if (HAS_TRAIT(player, TRAIT_CABAL))
-						to_chat(player, span_warning("I feel the faint passage of disjointed life essence as it flees [locale]."))
-					else
-						to_chat(player, span_warning("Veiled whispers herald the Undermaiden's gaze in my mind's eye as it turn towards [locale] for but a brief, singular moment."))
+					to_chat(player, span_warning("Veiled whispers herald the Undermaiden's gaze in my mind's eye as it turn towards [locale] for but a brief, singular moment."))
 	// AZURE EDIT END
 
 	return TRUE
@@ -153,10 +150,10 @@
 		if ("bog", "dense bog")
 			locale = "a wretched, fetid bog"
 		if ("coast", "coastforest")
-			locale = "somewhere betwixt Abyssor's realm and Dendor's bounty"
+			locale = "somewhere betwixt Cinella's realm and Tamari's bounty"
 		if ("indoors", "shop", "physician", "outdoors", "roofs", "manor", "wizard's tower", "garrison", "dungeon cell", "baths", "tavern")
-			locale = "the city of Solaris and all its bustling souls"
+			locale = "the city of Solaris Ridhe and all its bustling souls"
 		if ("church")
-			locale = "a hallowed place, sworn to the Ten" // special bit for the church since it's sacred ground
+			locale = "a hallowed place, sworn to the Nine" // special bit for the church since it's sacred ground
 	
 	return locale

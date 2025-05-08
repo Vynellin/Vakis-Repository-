@@ -31,4 +31,4 @@
 				return TRUE
 		else
 			if(!SSvote.mode && SSticker.autovote)
-				SSvote.initiate_vote("endround", "Psydon")
+				SSvote.initiate_vote("endround", "Rest's Call")

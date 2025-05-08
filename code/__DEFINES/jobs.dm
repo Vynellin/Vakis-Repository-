@@ -170,13 +170,13 @@
 #define COURTAGENT	(1<<20)
 #define WRETCH		(1<<21)
 
-#define YOUNGFOLK	(1<<6)
+#define SIDEFOLK	(1<<6)
 
 #define APPRENTICE	(1<<0)
 #define CHURCHLING	(1<<1)
 #define SQUIRE		(1<<2)
 #define SERVANT		(1<<3)
-#define ORPHAN		(1<<4)
+#define VAGABOND	(1<<4)
 #define PRINCE		(1<<5)
 #define SHOPHAND	(1<<6)
 #define CLERK 		(1<<7)
@@ -203,11 +203,6 @@
 #define TESTER		(1<<0)
 #define DEATHKNIGHT (1<<1)
 #define SKELETON	(1<<2)
-
-#define INQUISITION (1<<10)
-
-#define PURITAN		(1<<0)
-#define ORTHODOXIST	(1<<1)
 
 
 #define JCOLOR_NOBLE "#aa83b9"
@@ -296,7 +291,7 @@
 #define JDO_VET 31.4
 
 #define JDO_VAGRANT 33
-#define JDO_ORPHAN 34
+#define JDO_VAGABOND 34
 
 #define JDO_PRISONERR 35
 #define JDO_PRISONERB 35.1
@@ -307,8 +302,6 @@
 #define JDO_TRIBALCOOK 37
 #define JDO_TRIBALGUARD 38
 #define JDO_TRIBALSMITH 39
-#define JDO_PURITAN 40
-#define JDO_ORTHODOXIST 40.1
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
@@ -353,7 +346,7 @@
 	/datum/job/roguetown/knavewench,\
 	/datum/job/roguetown/lunatic,\
 	/datum/job/roguetown/farmer,\
-	/datum/job/roguetown/orphan,\
+	/datum/job/roguetown/vagabond,\
 	/datum/job/roguetown/shophand,\
 	/datum/job/roguetown/bapprentice,\
 	/datum/job/roguetown/prisonerb,\
@@ -391,7 +384,3 @@
 	/datum/job/roguetown/manorguard,\
 	/datum/job/roguetown/sheriff,\
 	/datum/job/roguetown/guardsman
-
-#define INQUISITION_ROLES \
-	/datum/job/roguetown/puritan,\
-	/datum/job/roguetown/orthodoxist

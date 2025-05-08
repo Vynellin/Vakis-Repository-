@@ -1010,7 +1010,7 @@
 /area/rogue/indoors/cave)
 "atD" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "atE" = (
@@ -3180,7 +3180,7 @@
 /area/rogue/outdoors/beach/forest)
 "brA" = (
 /obj/structure/table/wood,
-/obj/item/clothing/cloak/templar/malum,
+/obj/item/clothing/cloak/templar/nunos,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/mountains/decap)
 "brH" = (
@@ -3447,10 +3447,10 @@
 /area/rogue/under/cave/licharena)
 "bvL" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/necra,
-/obj/item/clothing/suit/roguetown/shirt/robe/necra,
-/obj/item/clothing/head/roguetown/necrahood,
-/obj/item/clothing/head/roguetown/necrahood,
+/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys,
+/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys,
+/obj/item/clothing/head/roguetown/tsoridyshood,
+/obj/item/clothing/head/roguetown/tsoridyshood,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -5921,24 +5921,22 @@
 /area/rogue/outdoors/mountains/decap)
 "czt" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
-/obj/item/clothing/neck/roguetown/psicross/noc,
-/obj/item/clothing/neck/roguetown/psicross/noc,
-/obj/item/clothing/neck/roguetown/psicross/necra,
-/obj/item/clothing/neck/roguetown/psicross/necra,
-/obj/item/clothing/neck/roguetown/psicross/eora,
-/obj/item/clothing/neck/roguetown/psicross/eora,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
-/obj/item/clothing/neck/roguetown/psicross/astrata,
-/obj/item/clothing/neck/roguetown/psicross/astrata,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
-/obj/item/clothing/neck/roguetown/psicross/ravox,
-/obj/item/clothing/neck/roguetown/psicross/malum,
-/obj/item/clothing/neck/roguetown/psicross/malum,
-/obj/item/clothing/neck/roguetown/psicross/abyssor,
-/obj/item/clothing/neck/roguetown/psicross/abyssor,
+/obj/item/clothing/neck/roguetown/psicross/zira,
+/obj/item/clothing/neck/roguetown/psicross/zira,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
+/obj/item/clothing/neck/roguetown/psicross/carthus,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
+/obj/item/clothing/neck/roguetown/psicross/cinella,
+/obj/item/clothing/neck/roguetown/psicross/cinella,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -6797,7 +6795,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains)
 "cRk" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/structure/table/wood/fancy/black,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/under/cave/mazedungeon)
@@ -7127,7 +7125,6 @@
 /obj/item/reagent_containers/glass/bottle/rogue/manapot,
 /obj/item/book/rogue/bibble,
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
-/obj/item/roguekey/psydonkey,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/church/basement)
 "cYq" = (
@@ -7770,17 +7767,6 @@
 /obj/item/reagent_containers/glass/bottle/rogue/wine/sourwine,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/town/basement)
-"dnV" = (
-/obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/cloak/psydontabard,
-/obj/item/clothing/cloak/psydontabard,
-/obj/item/clothing/cloak/psydontabard,
-/obj/item/clothing/mask/rogue/facemask/psydonmask,
-/obj/item/clothing/mask/rogue/facemask/psydonmask,
-/obj/item/clothing/head/roguetown/roguehood/psydon,
-/obj/item/clothing/head/roguetown/roguehood/psydon,
-/turf/open/floor/rogue/blocks,
-/area/rogue/indoors/town/church/basement)
 "dof" = (
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors)
@@ -8660,7 +8646,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/under/cave/dukecourt)
 "dIa" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /obj/structure/table/church,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/scarymaze)
@@ -11356,7 +11342,6 @@
 /area/rogue/indoors/town/tavern)
 "eKA" = (
 /obj/structure/closet/crate/chest,
-/obj/item/paper/inquisition_poultice_info,
 /obj/item/reagent_containers/food/snacks/grown/rogue/fyritius,
 /obj/item/quicksilver,
 /turf/open/floor/rogue/hexstone,
@@ -11417,7 +11402,7 @@
 /area/rogue/under/town/basement)
 "eMu" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/noc,
+/obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/cave/mazedungeon)
 "eMv" = (
@@ -12266,10 +12251,10 @@
 "fdA" = (
 /obj/effect/decal/cobbleedge,
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/noc,
-/obj/item/clothing/suit/roguetown/shirt/robe/noc,
-/obj/item/clothing/head/roguetown/nochood,
-/obj/item/clothing/head/roguetown/nochood,
+/obj/item/clothing/suit/roguetown/shirt/robe/zira,
+/obj/item/clothing/suit/roguetown/shirt/robe/zira,
+/obj/item/clothing/head/roguetown/zirahood,
+/obj/item/clothing/head/roguetown/zirahood,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -13250,9 +13235,6 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/town)
 "fxB" = (
-/obj/effect/landmark/start/puritan{
-	dir = 8
-	},
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/double_pelt,
 /turf/open/floor/rogue/herringbone,
@@ -13321,7 +13303,6 @@
 /obj/structure/closet/crate/roguecloset/crafted,
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/princess,
 /obj/item/clothing/suit/roguetown/armor/silkcoat,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 /obj/item/clothing/suit/roguetown/shirt/tunic/noblecoat,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town)
@@ -13894,7 +13875,7 @@
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "fMQ" = (
-/obj/effect/landmark/start/orphan,
+/obj/effect/landmark/start/vagabond,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
 "fNn" = (
@@ -15477,10 +15458,10 @@
 /area/rogue/under/town/basement)
 "gwQ" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/abyssor,
-/obj/item/clothing/suit/roguetown/shirt/robe/abyssor,
-/obj/item/clothing/head/roguetown/roguehood/abyssor,
-/obj/item/clothing/head/roguetown/roguehood/abyssor,
+/obj/item/clothing/suit/roguetown/shirt/robe/cinella,
+/obj/item/clothing/suit/roguetown/shirt/robe/cinella,
+/obj/item/clothing/head/roguetown/roguehood/cinella,
+/obj/item/clothing/head/roguetown/roguehood/cinella,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -16377,7 +16358,7 @@
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/rogue/indoors/town/tavern)
 "gSj" = (
-/obj/item/clothing/neck/roguetown/psicross/astrata,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "gSn" = (
@@ -16647,7 +16628,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/structure/mineral_door/bars{
 	locked = 1;
-	lockid = "inquisition"
+	lockid = "undercroft"
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church/basement)
@@ -18647,10 +18628,10 @@
 /area/rogue/indoors/town/manor)
 "hPv" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora,
-/obj/item/clothing/head/roguetown/eoramask,
-/obj/item/clothing/head/roguetown/eoramask,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle,
+/obj/item/clothing/head/roguetown/variellemask,
+/obj/item/clothing/head/roguetown/variellemask,
 /obj/structure/fluff/walldeco/psybanner{
 	pixel_y = 29
 	},
@@ -19967,7 +19948,6 @@
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "ipy" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/pestra,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -21059,7 +21039,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
 "iLO" = (
-/obj/structure/fluff/statue/femalestatue/zizo{
+/obj/structure/fluff/statue/femalestatue/bared{
 	name = "savior";
 	desc = "An inscription reads: She who split that which was one into that which is many.";
 	pixel_x = -20;
@@ -21640,7 +21620,6 @@
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/princess,
 /obj/item/clothing/suit/roguetown/shirt/tunic/random,
 /obj/item/clothing/suit/roguetown/shirt/tunic/black,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 /obj/item/storage/backpack/rogue/satchel,
 /obj/item/storage/backpack/rogue/satchel,
 /obj/item/clothing/suit/roguetown/armor/silkcoat,
@@ -22698,7 +22677,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "jru" = (
-/obj/effect/landmark/start/orphan,
+/obj/effect/landmark/start/vagabond,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/rtfield)
 "jrv" = (
@@ -24791,9 +24770,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/under/underdark)
 "knj" = (
-/obj/structure/wonder{
-	name = "graggarite altar"
-	},
+/obj/structure/wonder,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/orcdungeon)
 "knk" = (
@@ -25194,7 +25171,6 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonbarbute,
 /obj/item/clothing/suit/roguetown/armor/plate/half/fluted,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church/basement)
@@ -26182,13 +26158,6 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
-"kRS" = (
-/obj/structure/mineral_door/wood/donjon/stone{
-	locked = 1;
-	lockid = "puritan"
-	},
-/turf/open/floor/rogue/ruinedwood/spiral,
-/area/rogue/indoors/town/church/basement)
 "kRX" = (
 /obj/structure/fermenting_barrel,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -26934,14 +26903,12 @@
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/suit/roguetown/shirt/undershirt/priest,
 /obj/item/clothing/suit/roguetown/shirt/undershirt/priest,
-/obj/item/clothing/cloak/templar/malumite,
-/obj/item/clothing/cloak/templar/malumite,
-/obj/item/clothing/cloak/templar/astratan,
-/obj/item/clothing/cloak/templar/astratan,
-/obj/item/clothing/cloak/templar/pestran,
-/obj/item/clothing/cloak/templar/pestran,
-/obj/item/clothing/cloak/templar/necran,
-/obj/item/clothing/cloak/templar/necran,
+/obj/item/clothing/cloak/templar/nunite,
+/obj/item/clothing/cloak/templar/nunite,
+/obj/item/clothing/cloak/templar/aeternian,
+/obj/item/clothing/cloak/templar/aeternian,
+/obj/item/clothing/cloak/templar/tsoridian,
+/obj/item/clothing/cloak/templar/tsoridian,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -27853,7 +27820,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/tavern)
 "lCr" = (
-/obj/item/clothing/neck/roguetown/psicross/abyssor,
+/obj/item/clothing/neck/roguetown/psicross/cinella,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "lCt" = (
@@ -30100,7 +30067,7 @@
 /area/rogue/indoors/town)
 "mAj" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/eora,
+/obj/item/clothing/neck/roguetown/psicross/varielle,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "mAk" = (
@@ -33619,7 +33586,7 @@
 "nVe" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition";
+	lockid = "undercroft";
 	name = "Inquisition's Quarters"
 	},
 /turf/open/floor/rogue/hexstone,
@@ -33807,10 +33774,10 @@
 /area/rogue/under/cave/dukecourt)
 "nZn" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/dendor,
-/obj/item/clothing/suit/roguetown/shirt/robe/dendor,
-/obj/item/clothing/head/roguetown/dendormask,
-/obj/item/clothing/head/roguetown/dendormask,
+/obj/item/clothing/suit/roguetown/shirt/robe/tamari,
+/obj/item/clothing/suit/roguetown/shirt/robe/tamari,
+/obj/item/clothing/head/roguetown/tamarimask,
+/obj/item/clothing/head/roguetown/tamarimask,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/church/chapel)
 "nZr" = (
@@ -34445,7 +34412,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement)
 "ont" = (
-/obj/structure/fluff/statue/femalestatue/zizo{
+/obj/structure/fluff/statue/femalestatue/bared{
 	desc = "An ancient statue depicting an elven woman.";
 	name = "Ancient Statue";
 	pixel_y = 0
@@ -34719,7 +34686,7 @@
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
 "our" = (
-/obj/item/clothing/neck/roguetown/psicross/malum,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "ouv" = (
@@ -35246,7 +35213,7 @@
 /area/rogue/under/cave/orcdungeon)
 "oFf" = (
 /obj/item/alch/rosa,
-/obj/item/candle/eora/lit,
+/obj/item/candle/varielle/lit,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/bath)
 "oFh" = (
@@ -35578,7 +35545,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "oMM" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/malum,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "oMN" = (
@@ -35808,7 +35775,7 @@
 "oQY" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition"
+	lockid = "undercroft"
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/church/basement)
@@ -38427,11 +38394,11 @@
 /area/rogue/under/town/basement/keep)
 "pTs" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
-/obj/item/candle/eora,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
+/obj/item/candle/varielle,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/bath)
 "pTw" = (
@@ -42165,7 +42132,6 @@
 "rvc" = (
 /obj/structure/bed/rogue/inn,
 /obj/item/bedsheet/rogue/pelt,
-/obj/effect/landmark/start/orthodoxist,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/church/basement)
 "rvj" = (
@@ -42370,10 +42336,10 @@
 "rAo" = (
 /obj/effect/decal/cobbleedge,
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/clothing/suit/roguetown/shirt/robe/astrata,
-/obj/item/clothing/suit/roguetown/shirt/robe/astrata,
-/obj/item/clothing/head/roguetown/roguehood/astrata,
-/obj/item/clothing/head/roguetown/roguehood/astrata,
+/obj/item/clothing/suit/roguetown/shirt/robe/aeternus,
+/obj/item/clothing/suit/roguetown/shirt/robe/aeternus,
+/obj/item/clothing/head/roguetown/roguehood/aeternus,
+/obj/item/clothing/head/roguetown/roguehood/aeternus,
 /obj/structure/fluff/walldeco/psybanner{
 	pixel_y = 29
 	},
@@ -43813,7 +43779,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/church/chapel)
 "siB" = (
-/obj/structure/fluff/statue/astrata,
+/obj/structure/fluff/statue/aeternus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/orcdungeon)
 "siD" = (
@@ -45004,7 +44970,7 @@
 "sCH" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "inquisition";
+	lockid = "undercroft";
 	name = "Inquisition Cell"
 	},
 /turf/open/floor/rogue/blocks,
@@ -46107,7 +46073,7 @@
 /area/rogue/under/town/basement/keep)
 "tdD" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/astrata,
+/obj/item/clothing/neck/roguetown/psicross/aeternus,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/orcdungeon)
 "tdO" = (
@@ -47339,7 +47305,6 @@
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/suit/roguetown/shirt/dress/silkdress/princess,
 /obj/item/clothing/suit/roguetown/armor/silkcoat,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 /obj/item/clothing/suit/roguetown/shirt/tunic,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
@@ -51182,12 +51147,12 @@
 /area/rogue/under/town/basement/keep)
 "vjK" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt,
-/obj/item/clothing/head/roguetown/eoramask,
-/obj/item/clothing/head/roguetown/eoramask,
-/obj/item/clothing/head/roguetown/eoramask,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/alt,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/alt,
+/obj/item/clothing/suit/roguetown/shirt/robe/varielle/alt,
+/obj/item/clothing/head/roguetown/variellemask,
+/obj/item/clothing/head/roguetown/variellemask,
+/obj/item/clothing/head/roguetown/variellemask,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/bath)
 "vjN" = (
@@ -51763,7 +51728,7 @@
 /area/rogue/indoors)
 "vwA" = (
 /obj/structure/table/wood,
-/obj/item/clothing/neck/roguetown/psicross/malum,
+/obj/item/clothing/neck/roguetown/psicross/nunos,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/mountains/decap)
 "vwS" = (
@@ -52399,7 +52364,7 @@
 /turf/open/floor/rogue/grassred,
 /area/rogue/indoors/shelter/woods)
 "vII" = (
-/obj/structure/fluff/statue/astrata/gold,
+/obj/structure/fluff/statue/aeternus/gold,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement/keep)
 "vJh" = (
@@ -52881,7 +52846,6 @@
 	dir = 1;
 	icon_state = "longtable"
 	},
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonbarbute,
 /obj/item/clothing/suit/roguetown/armor/plate/half/fluted,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church/basement)
@@ -52924,7 +52888,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach/forest)
 "vUY" = (
-/obj/structure/fluff/statue/astrata,
+/obj/structure/fluff/statue/aeternus,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town/church/chapel)
 "vUZ" = (
@@ -54208,8 +54172,8 @@
 	dir = 5
 	},
 /obj/structure/closet/crate/chest,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/shelter/woods)
 "wuZ" = (
@@ -54748,10 +54712,6 @@
 /area/rogue/outdoors/beach)
 "wIq" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm,
-/obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm,
-/obj/item/clothing/head/roguetown/roguehood/psydon,
-/obj/item/clothing/head/roguetown/roguehood/psydon,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/church/basement)
 "wIv" = (
@@ -55441,10 +55401,6 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
-"xai" = (
-/obj/structure/reliquarybox,
-/turf/open/floor/rogue/herringbone,
-/area/rogue/indoors/town/church/basement)
 "xaj" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
 /turf/open/floor/rogue/naturalstone,
@@ -57147,7 +57103,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach/forest)
 "xIY" = (
-/obj/item/clothing/neck/roguetown/psicross/noc,
+/obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/under/cave/orcdungeon)
 "xJq" = (
@@ -57258,7 +57214,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "xMU" = (
-/obj/item/clothing/neck/roguetown/psicross/necra,
+/obj/item/clothing/neck/roguetown/psicross/tsoridys,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/orcdungeon)
 "xNi" = (
@@ -58141,7 +58097,7 @@
 /area/rogue/under/cave/licharena)
 "yhc" = (
 /obj/structure/table/vtable/v2,
-/obj/item/clothing/neck/roguetown/psicross/dendor,
+/obj/item/clothing/neck/roguetown/psicross/tamari,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/mazedungeon)
 "yhe" = (
@@ -127300,7 +127256,7 @@ mRC
 uZk
 tvo
 kcq
-dnV
+wIq
 llO
 nwT
 gZJ
@@ -130920,7 +130876,7 @@ isn
 vpK
 llO
 llO
-kRS
+oQY
 llO
 llO
 gkB
@@ -131826,7 +131782,7 @@ llO
 iZd
 vrW
 vrW
-xai
+jCS
 pXp
 wYQ
 llO

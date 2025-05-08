@@ -396,39 +396,39 @@
 	createditem_num = 1
 	craftdiff = 2
 
-/datum/anvil_recipe/armor/steel/astratahelm
-	name = "Astrata Helmet (+1 Steel)"
+/datum/anvil_recipe/armor/steel/aeternushelm
+	name = "Aeternus Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/astratahelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/aeternushelm
 	craftdiff = 3
 
-/datum/anvil_recipe/armor/steel/abyssorhelm
-	name = "Abyssor Helmet (+1 Steel)"
+/datum/anvil_recipe/armor/steel/cinellahelm
+	name = "Cinella Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/abyssorgreathelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/cinellagreathelm
 	craftdiff = 3
 
-/datum/anvil_recipe/armor/steel/necrahelm
-	name = "Necra Helmet (+1 Steel)"
+/datum/anvil_recipe/armor/steel/tsoridyshelm
+	name = "Tsoridys Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridyshelm
 	craftdiff = 3
 
-/datum/anvil_recipe/armor/steel/nochelm
-	name = "Noc Helmet (+1 Steel)"
+/datum/anvil_recipe/armor/steel/zirahelm
+	name = "Zira Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 	craftdiff = 3
 
-/datum/anvil_recipe/armor/steel/dendorhelm
-	name = "Dendor Helmet (+1 Steel)"
+/datum/anvil_recipe/armor/steel/tamarihelm
+	name = "Tamari Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/tamarihelm
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/steel/frogmouth

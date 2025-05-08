@@ -1,7 +1,7 @@
-/datum/job/roguetown/orphan
+/datum/job/roguetown/vagabond
 	title = "Vagabond"
-	flag = ORPHAN
-	department_flag = YOUNGFOLK
+	flag = VAGABOND
+	department_flag = SIDEFOLK
 	faction = "Station"
 	total_positions = 12
 	spawn_positions = 12
@@ -11,8 +11,8 @@
 
 	tutorial = "Dozens of people end up down on their luck in the kingdom of Psydonia every day. They sometimes make something of themselves but much more often die in the streets."
 
-	outfit = /datum/outfit/job/roguetown/orphan
-	display_order = JDO_ORPHAN
+	outfit = /datum/outfit/job/roguetown/vagabond
+	display_order = JDO_VAGABOND
 	show_in_credits = FALSE
 	min_pq = -30
 	max_pq = null
@@ -20,11 +20,11 @@
 
 	cmode_music = 'sound/music/combat_bum.ogg'
 
-/datum/job/roguetown/orphan/New()
+/datum/job/roguetown/vagabond/New()
 	. = ..()
 	peopleknowme = list()
 
-/datum/outfit/job/roguetown/orphan/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/vagabond/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(should_wear_femme_clothes(H))
 		armor = /obj/item/clothing/suit/roguetown/shirt/rags

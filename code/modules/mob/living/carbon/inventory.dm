@@ -165,13 +165,3 @@
 		if(STR)
 			processing_list += STR.return_inv(TRUE)
 	return processing_list
-
-//Vanderlin port - Matthios Eyes ability to nab most expensive items.
-/mob/living/carbon/proc/get_most_expensive()
-	var/atom/movable/most_expensive = null
-	var/price = 0
-	for(var/atom/movable/atom in get_all_gear())
-		if(atom.sellprice > price)
-			most_expensive = atom
-			price = atom.sellprice
-	return most_expensive

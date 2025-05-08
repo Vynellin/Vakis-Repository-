@@ -65,7 +65,10 @@ GLOBAL_LIST_INIT(special_traits, build_special_traits())
 
 	var/virtuous = FALSE
 	var/heretic = FALSE
-	if(istype(player.prefs.selected_patron, /datum/patron/inhumen))
+
+	// SOLARIS NOTE: this is a temporary measure to keep this code in-place for a bit. 
+	// We want to kill off the motif of heretics and the like but I don't want to commit to rebalancing this all yet either
+	if(SSevents.holidays && SSevents.holidays[APRIL_FOOLS])
 		heretic = TRUE
 
 	if(player.prefs.statpack.name == "Virtuous")

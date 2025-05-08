@@ -18,8 +18,8 @@
 	desc = ""
 	icon_state = "drunk"
 
-/atom/movable/screen/alert/status_effect/buff/drunknoc
-	name = "Noc-Shine Strength"
+/atom/movable/screen/alert/status_effect/buff/drunkmoonshine
+	name = "Moonshine Strength"
 	desc = ""
 	icon_state = "drunk"
 
@@ -29,9 +29,9 @@
 	effectedstats = list("intelligence" = 5)
 	duration = 2 MINUTES
 
-/datum/status_effect/buff/nocshine
-	id = "nocshine"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/drunknoc
+/datum/status_effect/buff/moonshine
+	id = "moonshine"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/drunkmoonshine
 	effectedstats = list("strength" = 1, "endurance" = 1)
 	duration = 2 MINUTES
 
@@ -498,7 +498,7 @@
 #define BLESSINGOFSUN_FILTER "sun_glow"
 /atom/movable/screen/alert/status_effect/buff/guidinglight
 	name = "Guiding Light"
-	desc = "Astrata's gaze follows me, lighting the path!"
+	desc = "Aeternus' gaze follows me, lighting the path!"
 	icon_state = "stressvg"
 
 /datum/status_effect/buff/guidinglight // Hey did u follow us from ritualcircles? Cool, okay this stuff is pretty simple yeah? Most ritual circles use some sort of status effects to get their effects ez.
@@ -507,7 +507,7 @@
 	duration = 30 MINUTES // Lasts for 30 minutes, roughly an ingame day. This should be the gold standard for rituals, unless its some particularly powerul effect or one-time effect(Flylord's triage)
 	status_type = STATUS_EFFECT_REFRESH
 	effectedstats = list("perception" = 2) // This is for basic stat effects, I would consider these a 'little topping' and not what you should rlly aim for for rituals. Ideally we have cool flavor boons, rather than combat stims.
-	examine_text = "SUBJECTPRONOUN walks with Her Light!"
+	examine_text = "SUBJECTPRONOUN walks with his light!"
 	var/list/mobs_affected
 	var/obj/effect/dummy/lighting_obj/moblight/mob_light_obj
 	var/outline_colour = "#ffffff"
@@ -540,7 +540,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/moonlightdance
 	name = "Moonlight Dance"
-	desc = "Noc's stony touch lay upon my mind, bringing me wisdom."
+	desc = "Zira's stony touch lay upon my mind, bringing me wisdom."
 	icon_state = "moonlightdance"
 
 
@@ -552,54 +552,8 @@
 
 /datum/status_effect/buff/moonlightdance/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("Noc's silver leaves my"))
+	to_chat(owner, span_warning("Zira's silver leaves me!"))
 	REMOVE_TRAIT(owner, TRAIT_DARKVISION, MAGIC_TRAIT)
-
-
-
-
-/atom/movable/screen/alert/status_effect/buff/flylordstriage
-	name = "Flylord's Triage"
-	desc = "Pestra's servants crawl through my pores and wounds!"
-	icon_state = "buff"
-
-/datum/status_effect/buff/flylordstriage
-	id = "healing"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/healing
-	duration = 20 SECONDS
-	var/healing_on_tick = 40
-
-/datum/status_effect/buff/flylordstriage/tick()
-	playsound(owner, 'sound/misc/fliesloop.ogg', 100, FALSE, -1)
-	owner.flash_fullscreen("redflash3")
-	owner.emote("agony")
-	new /obj/effect/temp_visual/flies(get_turf(owner))
-	var/list/wCount = owner.get_wounds()
-	if(owner.blood_volume < BLOOD_VOLUME_NORMAL)
-		owner.blood_volume = min(owner.blood_volume+100, BLOOD_VOLUME_NORMAL)
-	if(wCount.len > 0)
-		owner.heal_wounds(healing_on_tick)
-		owner.update_damage_overlays()
-	owner.adjustBruteLoss(-healing_on_tick, 0)
-	owner.adjustFireLoss(-healing_on_tick, 0)
-	owner.adjustOxyLoss(-healing_on_tick, 0)
-	owner.adjustToxLoss(-healing_on_tick, 0)
-	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing_on_tick)
-	owner.adjustCloneLoss(-healing_on_tick, 0)
-
-/obj/effect/temp_visual/flies
-	name = "Flylord's triage"
-	icon_state = "flies"
-	duration = 15
-	plane = GAME_PLANE_UPPER
-	layer = ABOVE_ALL_MOB_LAYER
-	icon = 'icons/roguetown/mob/rotten.dmi'
-	icon_state = "rotten"
-
-
-/datum/status_effect/buff/flylordstriage/on_remove()
-	to_chat(owner,span_userdanger("It's finally over..."))
-
 
 
 /atom/movable/screen/alert/status_effect/buff/undermaidenbargain
@@ -647,7 +601,7 @@
 
 /datum/status_effect/buff/undermaidenbargainheal/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("The Bargain struck in my name has been fulfilled... I am thrown from Necra's embrace, another in my place..."))
+	to_chat(owner, span_warning("The Bargain struck in my name has been fulfilled... I am thrown from Tsoridys' embrace, another in my place..."))
 	playsound(owner, 'sound/misc/deadbell.ogg', 100, FALSE, -1)
 	REMOVE_TRAIT(owner, TRAIT_NODEATH, TRAIT_GENERIC)
 
@@ -696,12 +650,12 @@
 
 /datum/status_effect/buff/lesserwolf/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("I feel Dendor's blessing leave my body..."))
+	to_chat(owner, span_warning("I feel Tamari's blessing leave my body..."))
 	REMOVE_TRAIT(owner, TRAIT_LONGSTRIDER, TRAIT_GENERIC)
 	REMOVE_TRAIT(owner, TRAIT_STRONGBITE, TRAIT_GENERIC)
 
 /atom/movable/screen/alert/status_effect/buff/pacify
-	name = "Blessing of Eora"
+	name = "Blessing of Varielle"
 	desc = "I feel my heart as light as feathers. All my worries have washed away."
 	icon_state = "buff"
 
@@ -744,22 +698,22 @@
 	desc = span_bloody("LAMBS TO THE SLAUGHTER!")
 	icon_state = "call_to_slaughter"
 
-/atom/movable/screen/alert/status_effect/buff/xylix_joy
-	name = "Trickster's Joy"
+/atom/movable/screen/alert/status_effect/buff/kasmidian_joy
+	name = "Joy And Merriment"
 	desc = "The sound of merriment fills me with fortune."
 	icon_state = "buff"
 
-/datum/status_effect/buff/xylix_joy
-	id = "xylix_joy"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/xylix_joy
+/datum/status_effect/buff/kasmidian_joy
+	id = "kasmidian_joy"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/kasmidian_joy
 	effectedstats = list("fortune" = 1)
 	duration = 5 MINUTES
 	status_type = STATUS_EFFECT_REFRESH
 
-/datum/status_effect/buff/xylix_joy/on_apply()
+/datum/status_effect/buff/kasmidian_joy/on_apply()
 	. = ..()
 	to_chat(owner, span_info("The sounds of joy fill me with fortune!"))
 
-/datum/status_effect/buff/xylix_joy/on_remove()
+/datum/status_effect/buff/kasmidian_joy/on_remove()
 	. = ..()
 	to_chat(owner, span_info("My fortune returns to normal."))

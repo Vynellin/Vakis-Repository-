@@ -72,7 +72,7 @@
 
 /datum/special_trait/night_owl
 	name = "Night Owl"
-	greet_text = span_notice("I've always preferred Noc over his other half.")
+	greet_text = span_notice("The night beckons, where others would shirk it.")
 	weight = 100
 
 /datum/special_trait/night_owl/on_apply(mob/living/carbon/human/character, silent)
@@ -80,7 +80,7 @@
 
 /datum/special_trait/beautiful
 	name = "Beautiful"
-	greet_text = span_notice("My face is a work of art")
+	greet_text = span_notice("My face is a work of art.")
 	weight = 100
 
 /datum/special_trait/beautiful/on_apply(mob/living/carbon/human/character, silent)
@@ -192,22 +192,6 @@
 	character.mind.special_items["Whip"] = /obj/item/rogueweapon/whip
 	character.mind.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 6, TRUE)
 
-/datum/special_trait/psydons_rider
-	name = "Psydon's Drunkest Rider"
-	greet_text = span_notice("I ride! None of the laws shall stop me for that is Psydon's divine will!")
-	req_text = "Worship Psydon"
-	allowed_patrons = list(/datum/patron/old_god)
-	weight = 100
-
-/datum/special_trait/psydons_rider/on_apply(mob/living/carbon/human/character, silent)
-	character.drunkenness = 50
-	for(var/i in 1 to 2)
-		var/obj/item/bottle = new /obj/item/reagent_containers/glass/bottle/rogue/wine(get_turf(character))
-		character.put_in_hands(bottle, forced = TRUE)
-
-	character.mind.adjust_skillrank_up_to(/datum/skill/misc/riding, 4, TRUE)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled(get_turf(character))
-
 /datum/special_trait/spring_in_my_step
 	name = "Spring in my Step"
 	greet_text = span_notice("My legs are quite strong and where most have to climb, I can just jump")
@@ -313,9 +297,9 @@
 
 /datum/special_trait/lucky
 	name = "Fortune's Grace"
-	greet_text = span_notice("Xylix favor me, I am extremely lucky.")
-	req_text = "Have Xylix as your Patron"
-	allowed_patrons = list(/datum/patron/divine/xylix)
+	greet_text = span_notice("Kasmidian favor me, I am extremely lucky.")
+	req_text = "Have Kasmidian as your Patron"
+	allowed_patrons = list(/datum/patron/change/kasmidian)
 	weight = 7
 
 /datum/special_trait/lucky/on_apply(mob/living/carbon/human/character, silent)

@@ -246,8 +246,8 @@
 	if(Were && Were.transformed == TRUE)
 		user.visible_message(span_notice("[user] brings [src] to soak up the ichor of [M]'s wounds."))
 		if(do_after(user, 5 SECONDS, target = M))
-			user.visible_message(span_notice("[user] draws the ichor of Dendor's Curse from [M]'s open wounds into [src]."), \
-								 span_notice("I have captured the ferocity of Dendor's Curse inside [src]."))
+			user.visible_message(span_notice("[user] draws the ichor of Tamari's Curse from [M]'s open wounds into [src]."), \
+								 span_notice("I have captured the ferocity of Tamari's Curse inside [src]."))
 			success = TRUE
 	else if(Vamp)
 		user.visible_message(span_notice("[user] brings [src] to soak up the petrified blood of [M]'s wounds."))
@@ -379,7 +379,7 @@
 // poppies, from vanderlin
 /obj/item/reagent_containers/food/snacks/grown/rogue/poppy
 	name = "poppy"
-	desc = "For their crimson beauty and the sedating effect of their crushed seeds, these flowers are considered a symbol of Eora."
+	desc = "For their crimson beauty and the sedating effect of their crushed seeds, these flowers are considered a symbol of Varielle."
 	icon_state = "poppy"
 	seed = /obj/item/seeds/poppy
 	throwforce = 0

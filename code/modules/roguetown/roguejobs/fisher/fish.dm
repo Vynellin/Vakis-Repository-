@@ -170,7 +170,7 @@
 
 /obj/item/reagent_containers/food/snacks/fish/sunny
 	name = "sunny"
-	desc = "A pitiful beast, clinging to Astrata's light as if it would make it stronger. Little does it know that it needs faith for such miracles."
+	desc = "A small, green-and-yellow scaled fish that ebbs close to the surface."
 	icon_state = "sunny"
 	faretype = FARE_NEUTRAL
 	sellprice = 3
@@ -179,7 +179,7 @@
 
 /obj/item/reagent_containers/food/snacks/fish/clam
 	name = "clam"
-	desc = "A beastye built by Abyssor in the image of a knight. Hard shell, squishy interior."
+	desc = "A beastye built by Cinella in the image of a knight. Hard shell, squishy interior."
 	icon_state = "clam"
 	faretype = FARE_NEUTRAL
 	sellprice = 15

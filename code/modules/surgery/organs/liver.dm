@@ -75,7 +75,7 @@
 /obj/item/organ/liver/construct
 	name = "construct decay regulator"
 	icon_state = "liver-con"
-	desc = "A construct's decay regulator. Swirling with pestran energies, it prevents corrosion and rot. Unfortunately, this makes them susceptible to toxins."
+	desc = "A construct's decay regulator. It prevents corrosion and rot. Unfortunately, this makes them susceptible to toxins."
 /obj/item/organ/liver/alien
 	name = "alien liver" // doesnt matter for actual aliens because they dont take toxin damage
 	icon_state = "liver-x" // Same sprite as fly-person liver.

@@ -4,7 +4,7 @@
 /datum/species/vulpkanin
 	name = "Vulpkian"
 	id = "vulpkanin"
-	desc = "Foxy creatures known for their cleverness and mischief. In ancient history they were Dendor's original champions, but as His madness grew the connect became frey and forgotten, leaving them to their own devices. Or, at least, that's what they say.<br>\
+	desc = "Placeholder Description.<br>\
 	(+1 Intelligence, +1 Perception)"
 	default_color = "444"
 	species_traits = list(
@@ -111,14 +111,6 @@
 
 /datum/species/vulpkanin/qualifies_for_rank(rank, list/features)
 	return TRUE
-
-/datum/species/vulpkanin/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	. = ..()
-	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
-
-/datum/species/vulpkanin/on_species_loss(mob/living/carbon/C)
-	. = ..()
-	UnregisterSignal(C, COMSIG_MOB_SAY)
 
 /datum/species/vulpkanin/get_random_features()
 	var/list/returned = MANDATORY_FEATURE_LIST

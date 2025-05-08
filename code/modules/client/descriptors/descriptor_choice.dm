@@ -271,7 +271,6 @@
 	)
 
 #define PROMINENT_DESCRIPTORS \
-	/datum/mob_descriptor/prominent/hunched_over,\
 	/datum/mob_descriptor/prominent/drooling,\
 	/datum/mob_descriptor/prominent/lazy_eye,\
 	/datum/mob_descriptor/prominent/bloodshot_eye,\

@@ -222,7 +222,7 @@
 	icon_state = "harp"
 	song_list = list("Through Thine Window, He Glanced" = 'sound/music/instruments/harb (1).ogg',
 	"The Lady of Red Silks" = 'sound/music/instruments/harb (2).ogg',
-	"Eora Doth Watches" = 'sound/music/instruments/harb (3).ogg',
+	"Varielle Doth Watches" = 'sound/music/instruments/harb (3).ogg',
 	"On the Breeze" = 'sound/music/instruments/harb (4).ogg',
 	"Never Enough" = 'sound/music/instruments/harb (5).ogg',
 	"Sundered Heart" = 'sound/music/instruments/harb (6).ogg',
@@ -285,7 +285,7 @@
 	desc = "This talisman eminates a small shimmer of light. When held, it can amplify and even change a bard's voice."
 	icon_state = "vtalisman"
 	song_list = list("Harpy's Call (Feminine)" = 'sound/music/instruments/vocalsf (1).ogg',
-	"Necra's Lullaby (Feminine)" = 'sound/music/instruments/vocalsf (2).ogg',
+	"Tsoridys' Lullaby (Feminine)" = 'sound/music/instruments/vocalsf (2).ogg',
 	"Death Touched Aasimar (Feminine)" = 'sound/music/instruments/vocalsf (3).ogg',
 	"Our Mother, Our Divine (Feminine)" = 'sound/music/instruments/vocalsf (4).ogg',
 	"Wed, Forever More (Feminine)" = 'sound/music/instruments/vocalsf (5).ogg',

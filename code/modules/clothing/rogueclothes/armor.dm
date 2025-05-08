@@ -624,7 +624,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/half/fluted
 	name = "fluted cuirass"
 	icon_state = "flutedcuirass"
-	desc = "An ornate steel cuirass with tassets, favored by both the Holy Otavan Inquisition and the Order of the Silver Psycross. Arrows may yet splinter against the steel, but a bolt will still punch straight through it."
+	desc = "An ornate steel cuirass with tassets. Arrows may yet splinter against the steel, but a bolt will still punch straight through it."
 	body_parts_covered = CHEST|VITALS|LEGS
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron
@@ -690,41 +690,6 @@
 	equip_delay_other = 3 SECONDS
 	strip_delay = 6 SECONDS
 	smelt_bar_num = 4
-
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/matthios
-	name = "gilded fullplate"
-	desc = "Often, you have heard that told,"
-	icon_state = "matthiosarmor"
-	max_integrity = 700	
-
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/matthios/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/matthios/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo
-	name = "darksteel fullplate"
-	desc = "Full plate. Called forth from the edge of what should be known. In Her name."
-	icon_state = "zizoplate"
-	max_integrity = 700
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
 
 /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
 	name = "fullplate bikini"
@@ -944,23 +909,6 @@
 	equip_delay_self = 40
 	armor_class = ARMOR_CLASS_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
-
-/obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat
-	slot_flags = ITEM_SLOT_ARMOR
-	name = "inquisitorial duster"
-	desc = "Metal plates reinforce this heavy coat, only the finest for the inquisition."
-	body_parts_covered = CHEST|VITALS|GROIN|LEGS|ARMS
-	allowed_sex = list(MALE, FEMALE)
-	icon_state = "inqcoat"
-	item_state = "inqcoat"
-	sleevetype = "shirt"
-	max_integrity = 200
-	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/steel
-	equip_delay_self = 4 SECONDS
-	armor_class = ARMOR_CLASS_MEDIUM
-	smelt_bar_num = 2
-	blocksound = SOFTHIT
 
  //--------------- BLACKSTEEL ---------------------
 

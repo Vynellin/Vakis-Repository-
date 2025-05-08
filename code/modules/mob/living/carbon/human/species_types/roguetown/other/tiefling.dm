@@ -5,14 +5,7 @@
 	name = "Tiefling"
 	id = "tiefling"
 	desc = "<b>Tiefling</b><br>\
-	The offspring of demons with mortal races, a consequence of demonic incursions into the mortal realm and dark pacts. \
-	Their origins dating back to the demonic invasion of Archdevil Vheslyn who pillaged and ravaged the mortal lands and its people before being stopped by Psydon. \
-	These offspring of demon and mortal races came to be known as 'Tieflings', largely despised by most people for centuries for their unnatural origins and appearances. \
-	It was only recently that they became more tolerated, even if the Church still watches them with a weary eye. \
-	When a Tiefling has offspring, no matter the race of their partner, the child would always be a pureblooded Tiefling. \
-	The taint of their very being going back generations, and no amount of cleansing can be rid of it. \
-	As over a millennium a simple handful of Tieflings have created extended bloodlines linking back to their infernal progenitors. Some Tieflings embrace their demonic origin, while other shun it. \
-	No matter if they embrace their demonic ancestors or not, Tieflings have formed an importance upon their bloodline and family due to often being shunned and hunted through out time in which only those of their blood and kin they could truly trust. <br>\
+	Placeholder Description.<br>\
 	(+1 Constitution, +1 Intelligence)"
 
 	skin_tone_wording = "Progenitor"
@@ -95,17 +88,9 @@
 	stress_examine = TRUE
 	stress_desc = span_red("Helldweller... better stay away.")
 
-/datum/species/tieberian/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	..()
-	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
-
 /datum/species/tieberian/after_creation(mob/living/carbon/C)
 	..()
 	to_chat(C, "<span class='info'>I can speak Infernal with ,h before my speech.</span>")
-
-/datum/species/tieberian/on_species_loss(mob/living/carbon/C)
-	. = ..()
-	UnregisterSignal(C, COMSIG_MOB_SAY)
 
 /datum/species/tieberian/qualifies_for_rank(rank, list/features)
 	return TRUE

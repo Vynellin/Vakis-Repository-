@@ -383,13 +383,13 @@
 /datum/emote/living/giggle/run_emote(mob/living/user, params, type_override, intentional)
 	. = ..()
 	if(.)
-		// Apply Xylix buff to those with the trait who hear the giggling
+		// Apply Kasmidian buff to those with the trait who hear the giggling
 		// Only apply if the hearer is not the one laughing
 		for(var/mob/living/carbon/human/H in hearers(7, user))
 			if(H == user || !H.client)
 				continue
-			if(HAS_TRAIT(H, TRAIT_XYLIX) && !H.has_status_effect(/datum/status_effect/buff/xylix_joy))
-				H.apply_status_effect(/datum/status_effect/buff/xylix_joy)
+			if(HAS_TRAIT(H, TRAIT_KASMIDIAN) && !H.has_status_effect(/datum/status_effect/buff/kasmidian_joy))
+				H.apply_status_effect(/datum/status_effect/buff/kasmidian_joy)
 				to_chat(H, span_info("The giggling brings a smile to my face, and fortune to my steps!"))
 
 /mob/living/carbon/human/verb/emote_giggle()
@@ -409,13 +409,13 @@
 /datum/emote/living/chuckle/run_emote(mob/living/user, params, type_override, intentional)
 	. = ..()
 	if(.)
-		// Apply Xylix buff to those with the trait who hear the chuckling
+		// Apply Kasmidian buff to those with the trait who hear the chuckling
 		// Only apply if the hearer is not the one chuckling
 		for(var/mob/living/carbon/human/H in hearers(7, user))
 			if(H == user || !H.client)
 				continue
-			if(HAS_TRAIT(H, TRAIT_XYLIX) && !H.has_status_effect(/datum/status_effect/buff/xylix_joy))
-				H.apply_status_effect(/datum/status_effect/buff/xylix_joy)
+			if(HAS_TRAIT(H, TRAIT_KASMIDIAN) && !H.has_status_effect(/datum/status_effect/buff/kasmidian_joy))
+				H.apply_status_effect(/datum/status_effect/buff/kasmidian_joy)
 				to_chat(H, span_info("The chuckling brings a smile to my face, and fortune to my steps!"))
 
 /mob/living/carbon/human/verb/emote_chuckle()
@@ -685,13 +685,13 @@
 /datum/emote/living/laugh/run_emote(mob/living/user, params, type_override, intentional)
 	. = ..()
 	if(.)
-		// Apply Xylix buff to those with the trait who hear the laughter
+		// Apply Kasmidian buff to those with the trait who hear the laughter
 		// Only apply if the hearer is not the one laughing
 		for(var/mob/living/carbon/human/H in hearers(7, user))
 			if(H == user || !H.client)
 				continue
-			if(HAS_TRAIT(H, TRAIT_XYLIX) && !H.has_status_effect(/datum/status_effect/buff/xylix_joy))
-				H.apply_status_effect(/datum/status_effect/buff/xylix_joy)
+			if(HAS_TRAIT(H, TRAIT_KASMIDIAN) && !H.has_status_effect(/datum/status_effect/buff/kasmidian_joy))
+				H.apply_status_effect(/datum/status_effect/buff/kasmidian_joy)
 				to_chat(H, span_info("The laughter brings a smile to my face, and fortune to my steps!"))
 
 /mob/living/carbon/human/verb/emote_laugh()

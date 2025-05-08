@@ -260,7 +260,7 @@
 /*jellied eel*/
 /obj/item/reagent_containers/food/snacks/rogue/jelliedeel
 	name = "jellied eel"
-	desc = "Jellied eel! Eel in jelly made of eel! By the ten!"
+	desc = "Jellied eel! Eel in jelly made of eel! By the Nine!"
 	icon_state = "jellied_eel"
 	tastes = list("slimy, slippery fish" = 1)
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_GOOD)
@@ -450,7 +450,7 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = MEAL_MEAGRE)
 	tastes = list("frybird" = 1, "tato" = 1)
 	name = "frybird with a tato"
-	desc = "Hearty, comforting and rich - Alleged favorite dish of Ravox."
+	desc = "Hearty, comforting and rich - Alleged favorite dish of Carthus."
 	faretype = FARE_FINE
 	portable = FALSE
 	icon_state = "frybirdtato"
@@ -513,7 +513,7 @@
 /*	.................   Plated fryfish   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = "Cinella's bounty, make sure to eat the eyes!"
 	icon_state = "carpcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -528,7 +528,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/clownfish/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "clownfishcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -543,7 +543,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/angler/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "anglercooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -558,7 +558,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/eel/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "eelcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -573,7 +573,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/sole/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "solecooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -588,7 +588,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/cod/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "codcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -603,7 +603,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/lobster/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "lobstercooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -618,7 +618,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/salmon/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "salmoncooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -633,7 +633,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/plaice/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "plaicecooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -648,7 +648,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/bass/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "seabasscooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -663,7 +663,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/sunny/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "sunnycooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'
@@ -678,7 +678,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/fryfish/clam/plated
 	icon = 'modular/Neu_Food/icons/food.dmi'
-	desc = "Abyssor's bounty, make sure to eat the eyes!"
+	desc = /obj/item/reagent_containers/food/snacks/rogue/fryfish/carp/plated::desc
 	icon_state = "clamcooked_plated"
 	item_state = "plate_food"
 	lefthand_file = 'modular/Neu_Food/icons/food_lefthand.dmi'

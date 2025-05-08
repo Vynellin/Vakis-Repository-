@@ -97,7 +97,7 @@
 		return ..()
 	if(quantity == 1)
 		if(HAS_TRAIT(user, TRAIT_BLACKLEG))
-			switch(alert(user, "What will you rig the next coin flip to?","XYLIX","Heads","Tails","Play fair"))
+			switch(alert(user, "What will you rig the next coin flip to?",src.name,"Heads","Tails","Play fair"))
 				if("Heads")
 					rigged_outcome = 1
 				if("Tails")

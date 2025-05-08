@@ -150,42 +150,49 @@
 	icon_state = "ingotgold"
 	smeltresult = /obj/item/ingot/gold
 	sellprice = 100
+
 /obj/item/ingot/iron
 	name = "iron bar"
 	desc = "Forged strength. Essential for crafting."
 	icon_state = "ingotiron"
 	smeltresult = /obj/item/ingot/iron
 	sellprice = 25
+
 /obj/item/ingot/copper
 	name = "copper bar"
 	desc = "This bar causes a gentle tingling sensation when touched."
 	icon_state = "ingotcop"
 	smeltresult = /obj/item/ingot/copper
 	sellprice = 10
+
 /obj/item/ingot/tin
 	name = "tin bar"
 	desc = "An ingot of strangely soft and malleable essence."
 	icon_state = "ingottin"
 	smeltresult = /obj/item/ingot/tin
 	sellprice = 15
+
 /obj/item/ingot/bronze
 	name = "bronze bar"
-	desc = "A hard and durable alloy favored by engineers and followers of Ravox alike."
+	desc = "A hard and durable alloy favored by engineers and followers of Carthus alike."
 	icon_state = "ingotbronze"
 	smeltresult = /obj/item/ingot/bronze
 	sellprice = 30
+
 /obj/item/ingot/silver
 	name = "silver bar"
 	desc = "This bar radiates purity. Treasured by the realms."
 	icon_state = "ingotsilv"
 	smeltresult = /obj/item/ingot/silver
 	sellprice = 80
+
 /obj/item/ingot/steel
 	name = "steel bar"
 	desc = "This ingot is a stalwart defender of the realm."
 	icon_state = "ingotsteel"
 	smeltresult = /obj/item/ingot/steel
 	sellprice = 40
+	
 /obj/item/ingot/blacksteel
 	name = "blacksteel bar"
 	desc = "Sacrificing the holy elements of silver for raw strength, this strange and powerful ingot's origin carries dark rumors.."

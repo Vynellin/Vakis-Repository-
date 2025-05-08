@@ -24,21 +24,6 @@
 	craftdiff = 3
 	sellprice = 19
 
-/datum/crafting_recipe/roguetown/weaving/puritan
-
-	name = "puritan's cape (4 silk)"
-	result = list(/obj/item/clothing/cloak/cape/puritan)
-	reqs = list(/obj/item/natural/silk = 4)
-	craftdiff = 3
-	sellprice = 35
-
-/datum/crafting_recipe/roguetown/weaving/shirt
-	name = "formal silks (5 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan)
-	reqs = list(/obj/item/natural/silk = 5)
-	craftdiff = 3
-	sellprice = 35
-
 /datum/crafting_recipe/roguetown/weaving/shepardmask
 	name = "half-mask (1 cloth, 1 silk)"
 	result = list(/obj/item/clothing/mask/rogue/shepherd)
@@ -47,73 +32,73 @@
 	craftdiff = 1
 	sellprice = 30
 
-/datum/crafting_recipe/roguetown/weaving/astratarobe
-	name = "astrata robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/astrata)
+/datum/crafting_recipe/roguetown/weaving/aeternus
+	name = "aeternus robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/aeternus)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/abyssorrobe
-	name = "abyssor robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/abyssor)
+/datum/crafting_recipe/roguetown/weaving/cinellarobe
+	name = "cinella robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/cinella)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/abyssorhood
-	name = "abyssor hood (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/head/roguetown/roguehood/abyssor)
+/datum/crafting_recipe/roguetown/weaving/cinellahood
+	name = "cinella hood (2 cloth, 1 silk)"
+	result = list(/obj/item/clothing/head/roguetown/roguehood/cinella)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/astratahood
+/datum/crafting_recipe/roguetown/weaving/aeternushood
 	name = "solar hood (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/head/roguetown/roguehood/astrata)
+	result = list(/obj/item/clothing/head/roguetown/roguehood/aeternus)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/nocrobe
-	name = "noc robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/noc)
+/datum/crafting_recipe/roguetown/weaving/zirarobe
+	name = "zira robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/zira)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/nochood
+/datum/crafting_recipe/roguetown/weaving/zirahood
 	name = "moon hood (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/head/roguetown/nochood)
+	result = list(/obj/item/clothing/head/roguetown/zirahood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/dendorrobe
-	name = "dendor robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/dendor)
+/datum/crafting_recipe/roguetown/weaving/tamarirobe
+	name = "tamari robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/tamari)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/necrarobe
-	name = "necra robes (3 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/necra)
+/datum/crafting_recipe/roguetown/weaving/tsoridysrobe
+	name = "tsoridys robes (3 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/tsoridys)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/silk = 1)
 	craftdiff = 4
 	sellprice = 25
 
-/datum/crafting_recipe/roguetown/weaving/necrahood
-	name = "necra hood (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/head/roguetown/necrahood)
+/datum/crafting_recipe/roguetown/weaving/tsoridyshood
+	name = "tsoridys hood (2 cloth, 1 silk)"
+	result = list(/obj/item/clothing/head/roguetown/tsoridyshood)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3
@@ -144,18 +129,17 @@
 	craftdiff = 5
 	sellprice = 60
 
-//Eora content from Stonekeep
-/datum/crafting_recipe/roguetown/weaving/eoramask
-	name = "eora mask (4 silk)"
-	result = list(/obj/item/clothing/head/roguetown/eoramask)
+/datum/crafting_recipe/roguetown/weaving/variellemask
+	name = "varielle mask (4 silk)"
+	result = list(/obj/item/clothing/head/roguetown/variellemask)
 	reqs = list(/obj/item/ingot/silver,
 				/obj/item/natural/silk = 4)
 	craftdiff = 3
 	sellprice = 20
 
-/datum/crafting_recipe/roguetown/weaving/eorarobes
-	name = "eora robes (2 cloth, 1 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/eora)
+/datum/crafting_recipe/roguetown/weaving/variellerobes
+	name = "varielle robes (2 cloth, 1 silk)"
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/varielle)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/silk = 1)
 	craftdiff = 3

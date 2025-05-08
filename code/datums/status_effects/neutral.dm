@@ -136,11 +136,11 @@
 	desc = "I have a letter waiting for me at the HERMES."
 	icon_state = "mail"
 
-//Xylix Gambling
+//Kasmidian Gambling
 /datum/status_effect/wheel
 	id = "lucky(?)"
 	status_type = STATUS_EFFECT_UNIQUE
-	duration = 3000 //Lasts five minutes
+	duration = 5 MINUTES //Lasts five minutes
 	var/wheeleffect
 	
 /datum/status_effect/wheel/on_apply()

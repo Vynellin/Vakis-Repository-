@@ -25,7 +25,6 @@
 		TRAIT_STEELHEARTED,
 		TRAIT_BREADY,
 		TRAIT_TOXIMMUNE,
-		TRAIT_ORGAN_EATER,
 		TRAIT_NASTY_EATER,
 		TRAIT_NOSTINK,
 		TRAIT_CRITICAL_RESISTANCE,
@@ -75,10 +74,6 @@
 		H.icon_state = "wwolf_f"
 	H.update_damage_overlays()
 	return TRUE
-
-/datum/species/werewolf/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	. = ..()
-	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
 
 /datum/species/werewolf/update_damage_overlays(mob/living/carbon/human/H)
 	H.remove_overlay(DAMAGE_LAYER)

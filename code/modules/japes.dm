@@ -14,7 +14,7 @@
 	I.say(message)
 	log_admin("[key_name(usr)] ventriloquated [I] at [AREACOORD(I)] to say \"[message]\"")
 
-// Ear Trick! Pull objects from behind someone's ear by the will of Xylix!
+// Ear Trick! Pull objects from behind someone's ear!
 
 /mob/living/carbon/human/proc/ear_trick()
 	set name = "Ear Trick"

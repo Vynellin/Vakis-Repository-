@@ -1,4 +1,4 @@
-/datum/job/roguetown/orphan
+/datum/job/roguetown/vagabond
 	tutorial = "The world is not a kind place, and many have lost everything in the pursuit of even a meagre existence. Vagabonds are such individuals, and start with next to nothing but their skills and wits."
 	outfit = null
 	outfit_female = null
@@ -12,7 +12,7 @@
 	same_job_respawn_delay = 10 SECONDS
 	announce_latejoin = FALSE
 
-/datum/job/roguetown/orphan/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+/datum/job/roguetown/vagabond/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
 		var/mob/living/carbon/human/H = L

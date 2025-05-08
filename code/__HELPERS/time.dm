@@ -76,7 +76,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 	if(GLOB.tod != oldtod)
 		if(GLOB.tod == "dawn")
 			GLOB.dayspassed++
-			if(GLOB.dayspassed == 8)
+			if(GLOB.dayspassed == 10)
 				GLOB.dayspassed = 1
 			SStreasury.distribute_estate_incomes()
 		for(var/mob/living/player in GLOB.mob_list)
@@ -99,19 +99,23 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 		var/text_to_show
 		switch(GLOB.dayspassed)
 			if(1)
-				text_to_show = "DAWN OF THE FIRST DAE\nMOON'S DAE"
+				text_to_show = "DAWN OF THE FIRST DAY\nSUN'S GRASP" // Aeternus
 			if(2)
-				text_to_show = "DAWN OF THE SECOND DAE\nTIW'S DAE"
+				text_to_show = "DAWN OF THE SECOND DAY\nMOON'S LIGHT" // Zira
 			if(3)
-				text_to_show = "DAWN OF THE THIRD DAE\nWEDDING'S DAE"
+				text_to_show = "DAWN OF THE THIRD DAY\nCERTAINTY'S FLIP" // Tsoridys
 			if(4)
-				text_to_show = "DAWN OF THE FOURTH DAE\nTHULE'S DAE"
+				text_to_show = "DAWN OF THE FOURTH DAY\nINNOVATION'S HOPE" // Nunos
 			if(5)
-				text_to_show = "DAWN OF THE FIFTH DAE\nFREYJA'S DAE"
+				text_to_show = "DAWN OF THE FIFTH DAY\nAMBITION'S LIGHT" // Carthus
 			if(6)
-				text_to_show = "DAWN OF THE SIXTH DAE\nSATURN'S DAE"
+				text_to_show = "DAWN OF THE SIXTH DAY\nLOVE'S SIGHT" // SOLARIS PLACHEOLDER : /datum/patron/balance/varielle
 			if(7)
-				text_to_show = "DAWN OF THE SEVENTH DAE\nSUN'S DAE"
+				text_to_show = "DAWN OF THE SEVENTH DAY\nNATURE'S BOON" // Tamari
+			if(8)
+				text_to_show = "DAWN OF THE EIGHTH DAY\nSEA'S WAVE" // Cinella
+			if(9)
+				text_to_show = "DAWN OF THE NINTH DAY\nRIFT'S WATCH" // Kasmidian
 		if(!text_to_show)
 			return
 		if(text_to_show in mind.areas_entered)
