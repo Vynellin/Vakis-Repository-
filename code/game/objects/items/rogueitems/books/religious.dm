@@ -2,7 +2,7 @@
 	name = "Solastra Lunata"
 	icon_state = "bibble_0"
 	base_icon_state = "bibble"
-	bookfile = "solastra_lunata.json"
+	bookfile = "religious/solastra_lunata.json"
 
 /obj/item/book/rogue/solastra_lunata/attack(mob/living/M, mob/user)
 	if(user.mind && user.mind.assigned_role == "Priest")
