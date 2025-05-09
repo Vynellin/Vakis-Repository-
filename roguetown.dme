@@ -854,6 +854,7 @@
 #include "code\game\objects\items\rogueitems\waterskin.dm"
 #include "code\game\objects\items\rogueitems\books\_books.dm"
 #include "code\game\objects\items\rogueitems\books\cargo.dm"
+#include "code\game\objects\items\rogueitems\books\fiction.dm"
 #include "code\game\objects\items\rogueitems\books\religious.dm"
 #include "code\game\objects\items\rogueitems\natural\animals.dm"
 #include "code\game\objects\items\rogueitems\natural\ash.dm"
