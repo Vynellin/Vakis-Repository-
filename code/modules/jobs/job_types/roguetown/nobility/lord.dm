@@ -1,4 +1,3 @@
-GLOBAL_VAR(lordsurname)
 GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/job/roguetown/lord
@@ -48,12 +47,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 /datum/job/roguetown/lord/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()
 	if(L)
-		var/list/chopped_name = splittext(L.real_name, " ")
-		if(length(chopped_name) > 1)
-			chopped_name -= chopped_name[1]
-			GLOB.lordsurname = jointext(chopped_name, " ")
-		else
-			GLOB.lordsurname = "of [L.real_name]"
 		SSticker.rulermob = L
 		if(should_wear_femme_clothes(L))
 			SSticker.rulertype = "Marquise"
@@ -143,19 +136,6 @@ GLOBAL_LIST_EMPTY(lord_titles)
 /datum/outfit/job/roguetown/lord/visuals/pre_equip(mob/living/carbon/human/H)
 	..()
 	head = /obj/item/clothing/head/roguetown/crown/fakecrown //Prevents the crown of woe from happening again.
-
-/proc/give_lord_surname(mob/living/carbon/human/family_guy, preserve_original = FALSE)
-	if(!GLOB.lordsurname)
-		return
-	if(preserve_original)
-		family_guy.fully_replace_character_name(family_guy.real_name, family_guy.real_name + " " + GLOB.lordsurname)
-		return family_guy.real_name
-	var/list/chopped_name = splittext(family_guy.real_name, " ")
-	if(length(chopped_name) > 1)
-		family_guy.fully_replace_character_name(family_guy.real_name, chopped_name[1] + " " + GLOB.lordsurname)
-	else
-		family_guy.fully_replace_character_name(family_guy.real_name, family_guy.real_name + " " + GLOB.lordsurname)
-	return family_guy.real_name
 
 /obj/effect/proc_holder/spell/self/grant_title
 	name = "Grant Title"
