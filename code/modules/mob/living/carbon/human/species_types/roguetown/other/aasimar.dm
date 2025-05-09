@@ -5,14 +5,11 @@
 	name = "Aasimar"
 	id = "aasimar"
 	desc = "<b>Aasimar</b><br>\
-	Aasimar are born of a rare union between Humens and Angels. \
-	They bear the mark of their celestial touch through their many varying physical features. \
-	Their looks resemble the traditional characteristics of whichever of the Gods their Angel parent was associated with. \
-	Most commonly, Aasimar are similar to Humens, albeit taller, and commonly possess an uncanny beauty. \
-	When compared to the average Humen, they have strangely colored skin and are more physically frail. \
-	Because of their upbringing, they make for natural conduits for godly powers. \
-	Solaris's populace holds them with a mixture of uneasy mixture of fear and respect. \
-	Due to their celestial nature, it is widely believed that an Aasimar's death is a bad omen...<br>\
+Long ago in realms of legend existed living saints; Godir. As they walked the world they left not only celestial judgement in their wake but left their imprint among the peoples of the world.\
+Once in a blue moon when the celestial hand of the Gods wills it a being is born with just a fraction of that power in their blood. <br>\
+They are known as Aasimar. Divinity, however dilute, flows within them. It makes them chiselled and impressive beings of might and splendor.\
+In truth they are mortal. Each one feels the impossible pull towards the path of their God, forever trying to uphold the ideals and legacy of forgotten faith and miraculous Gods. A great many are priests and paladins, few others claiming royal blood from their saintly lines.\
+Despite their rare sight a great many seem to flow through Sunmarch perhaps leading to the places uncanny fortune and destiny... <br>\
 	(+1 Fortune)"
 
 	skin_tone_wording = "Craft"
@@ -94,6 +91,28 @@
 		"Olympia" = SKIN_COLOR_OLYMPIA,
 		"Necral" = SKIN_COLOR_NECRAL,
 		"Abyssal" = SKIN_COLOR_ABYSSAL,
+		"Platinum" = SKIN_COLOR_PLATINUM,
+		"Aurum" = SKIN_COLOR_AURUM,
+		"Quicksilver" = SKIN_COLOR_QUICKSILVER,
+		"Brass" = SKIN_COLOR_BRASS,
+		"Iron" = SKIN_COLOR_IRON,
+		"Malachite" = SKIN_COLOR_MALACHITE,
+		"Obsidian" = SKIN_COLOR_OBSIDIAN,
+		"Brimstone" = SKIN_COLOR_BRIMSTONE,
+		"Jade" = SKIN_COLOR_JADE,
+		"Ashen" = SKIN_COLOR_ASHEN,
+		"Underdusk" = SKIN_COLOR_UNDERDUSK,
+		"Light" = SKIN_COLOR_LIGHT,
+		"Warm Ivory" = SKIN_COLOR_WARMIVORY,
+		"Heartland" = SKIN_COLOR_HEARTLAND,
+		"Cool Sand" = SKIN_COLOR_COOLSAND,
+		"South Sand" = SKIN_COLOR_SOUTHSAND,
+		"Dull" = SKIN_COLOR_DULL,
+		"Beach" = SKIN_COLOR_BEACH,
+		"Coastal" = SKIN_COLOR_COASTAL,
+		"Dark Gold" = SKIN_COLOR_DARKGOLD,
+		"Palm" = SKIN_COLOR_PALM,
+		"Walnut" = SKIN_COLOR_WALNUT,
 	)
 
 /datum/species/aasimar/get_hairc_list()

@@ -5,11 +5,11 @@
 	name = "Goblin"
 	id = "goblinp"
 	desc = "<b>Goblin</b><br>\
-	A clever and stubborn nature are two charitable qualities of a goblin - scheming and selfish are less so. The Fell Gods use them as an avatar of malice, sending out \
-	mindless, enthralled waves of the creatures to attack civilization from lunar portals. It leaves the typical goblinoid to cloister in their hidden away tribes, stealing \
-	from the scraps out of fear of reprisal while shooing away outsiders. The cities of Man typically shun them, but it's not unheard of to see one pushing their luck in a \
-	town square or out on a well-traveled road, as even the most backwater peasant can tell the difference between a sapient one and portal-spawn. Usually.<br>\
-	(+1 Speed)" 
+Goblins are diminutive yet brilliant creatures of quick wit and agile hands.\
+Their features are as sharp as their senses with most Goblins one or another shade of characteristic green. <br>\
+Keen senses evolved from eons as scavengers in caves and forests which serve them well in the world of the Dawn. Often called too clever for their own good Goblins are a clever sort who can easily find a place to thrive in the bustling places such as Sunmarch.<br>\
+Goblins never fully moved away from the reputation as troublemakers, yet they are no evil beasts. Goblins can actually become very captivated by work that interests them, although their often spotty minds bounce between interests faster than a sewer rat scurries.\ While rarely quick to trust the friendship of a Goblin is a bond that is unbreakable, if occasionally a cause of trouble. <br>\
+	(+1 Speed)"
 	species_traits = list(EYECOLOR,LIPS,STUBBLE)
 	possible_ages = ALL_AGES_LIST
 	use_skintones = TRUE
@@ -108,7 +108,16 @@
 		"Frost" = SKIN_COLOR_FROST,
 		"Abyss" = SKIN_COLOR_ABYSS,
 		"Teal" = SKIN_COLOR_TEAL,
-		"Hadal" = SKIN_COLOR_HADAL
+		"Hadal" = SKIN_COLOR_HADAL,
+		"Slate" = SKIN_COLOR_SLATE,
+		"Teak" = SKIN_COLOR_TEAK,
+		"Undergrowth" = SKIN_COLOR_UNDERGROWTH,
+		"Hobbe" = SKIN_COLOR_HOBBE,
+		"Murkwalker" = SKIN_COLOR_MURKWALKER,
+		"Ice Blood" = SKIN_COLOR_ICEBLOOD,
+		"Rawhide" = SKIN_COLOR_RAWHIDE,
+		"Marine" = SKIN_COLOR_MARINE,
+		"Pyrite" = SKIN_COLOR_PYRITE,
 	)
 
 /datum/species/goblinp/on_species_gain(mob/living/carbon/C, datum/species/old_species)

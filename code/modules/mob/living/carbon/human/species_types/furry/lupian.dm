@@ -5,7 +5,8 @@
 	name = "Lupian"
 	id = "lupian"
 	desc = "<b>Lupian</b><br>\
-	Placeholder description.<br>\
+	Wise and keen canine folk. Lupian were driven from their great distant packs in the tundras and hills by the Dusk War.\
+	Made for a more wild world, Lupian turn their strength and the attuned senses of a hunter to the benefit of Sunmarch making Solaris Ridge their pack. <br>\
 	(+1 Constitution, +1 Intelligence)"
 	skin_tone_wording = "Pack"
 	species_traits = list(

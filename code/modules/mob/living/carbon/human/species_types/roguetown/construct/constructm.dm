@@ -3,10 +3,13 @@
 	construct = 1
 
 /datum/species/construct/metal
-	name = "Metal Construct"
+	name = "Construct"
 	id = "constructm"
 	desc = "<b>Metallic Construct</b><br>\
-	Masterworks of artifice, metal constructs are as the name implies- entirely constructed by mortal hands. They are beings not of flesh and blood, but cold metal and the arcyne. For some reason, they have found themselves travelling out of the empty, as of late. Children of the Resonator Siphon.<br>\
+	Life forged by mortal hands. These constructs are not men of flesh and blood but machines forged of stone, wood, artifice and intellect.\
+	Their place in the world was meant to be ones of war and servitude yet their war and its bloodshed is over.\
+	These ancient constructs, in the multitude of shapes they are formed, and those made by mortals of enterprise seek meaning in a world not meant for beings like them.\
+	<br>\
 	(+1 Endurance, -2 Speed)<br>\
 	(Insomnia, No hunger, no blood.)"
 
@@ -73,7 +76,7 @@
 
 /datum/species/construct/metal/check_roundstart_eligible()
 	return TRUE
-	
+
 /datum/species/construct/metal/get_skin_list()
 	return list(
 		"BRASS" = "dfbd6c",

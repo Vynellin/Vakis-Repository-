@@ -2,24 +2,15 @@
 	race = /datum/species/elf/dark
 
 /datum/species/elf/dark
-	name = "Dark Elf"
+	name = "Dusk Elf"
 	id = "elfd"
-	desc = "<b>Dark Elf</b><br>\
-	\"Elf\" is a catch-all term used for tall, pointy-eared humanoids who can trace their \
-	heritage to the ancient and mysterious Snow Elves. This species of elf, less frequently \
-	seen, are also referred to by some as \"drow,\" and have several key differences \
-	that set them apart from their more well-known and surface-dwelling kin. Chief among these \
-	differences are their dark complexions and origins from the Underdark; a massive subterranean \
-	landscape made up of a vast network of interconnected caves, caverns and tunnels. In this world \
-	hidden deep beneath the soil are several dark elven cities who exist and function far from the \
-	reaches of the rest of the surface-dwelling societies. These are a large part of what has earned \
-	the dark elves their notoriety, for in these cities the worship of the ascendant pantheon is \
-	normalized, and their cruel and bloodthirsty culture reflects this. It was rare to see dark \
-	elves outside of their underground homes, but in recent years, more and more of them have fled \
-	to the surface. The reasons for each dark elf fleeing the Underdark vary depending on the \
-	individual, such as a kinder heart fleeing from a brutal society that scorns them for their \
-	less cruel nature. However, not every dark elf seen on the surface can be safely assumed as \
-	kind, for some leave the Underdark simply to find their own greater heights of power.<br>\
+	desc = "<b>Dusk Elf</b><br>\
+When the most elder of Elves saw to fill their near endless lives with meaning a great many found purpose in tome and book. Knowledge became power and power inevitably became divide.\
+The Elves of the Dusk sought power in the most curious and unknown places beneath the world carving existences out of cobalt and stone. They thrived as they turned their back from the nature worship of their not-so-distant ancestors.<br>\
+Secluded from the world the Dusk Elves became a very different people from their siblings in the light. Each passing generation studied magic with greater greed and appetite.\
+ While wizardly magic flowed through the very stonework of their brilliant arcane library cities it brought not bounty but paranoia, cutthroat ambition and disastrous webs of politics.<br>\
+Few, if any, of their great library cities survived the Dusk War. It ravaged the deep and the gloom as much as the world above and it did not take long for the first Dusk Elves to leave the dark in search of survival in the light.\
+ They were bleary eyed yet found their place, magisters and sellswords and quickly courting into nobility among the Dawn Elves, Humans and others. Dusk Elves in the Dawn Era can be found in small conclaves in most cities in the land. They are as ever a cryptic, mysterious and arcane people.<br>\
 	(+1 Intellect, +1 Perception)"
 
 /*
@@ -37,7 +28,7 @@
 	without careful upkeep...\
 	They typically trace their beginnings to how their progenator died before being raised."
 */
-	skin_tone_wording = "Origin City-State"
+	skin_tone_wording = "Skintone"
 
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,OLDGREY)
 	default_features = MANDATORY_FEATURE_LIST
@@ -122,13 +113,14 @@
 
 /datum/species/elf/dark/get_skin_list()
 	return list(
-		"Commorah" = SKIN_COLOR_COMMORAH,
-		"Gloomhaven" = SKIN_COLOR_GLOOMHAVEN,
-		"Darkpila" = SKIN_COLOR_DARKPILA,
-		"Sshanntynlan" = SKIN_COLOR_SSHANNTYNLAN,
-		"Llurth Dreir" = SKIN_COLOR_LLURTH_DREIR,
-		"Tafravma" = SKIN_COLOR_TAFRAVMA,
-		"Yuethindrynn" = SKIN_COLOR_YUETHINDRYNN,
+		"Bone" = SKIN_COLOR_BONE,
+		"Ichor" = SKIN_COLOR_ICHOR,
+		"Gloom" = SKIN_COLOR_GLOOM,
+		"Lilac" = SKIN_COLOR_LILAC,
+		"Shaded" = SKIN_COLOR_SHADED,
+		"Matronly" = SKIN_COLOR_MATRONLY,
+		"Cobalt" = SKIN_COLOR_COBALT,
+		"Jet" = SKIN_COLOR_JET,
 	)
 
 /datum/species/elf/dark/get_hairc_list()

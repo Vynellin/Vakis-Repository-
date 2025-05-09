@@ -15,7 +15,7 @@
 	characteristics can be either more Elvish or more Humen, depending on which of their parents' genes \
 	are more predominant. In terms of cultural identity, a Half-Elf will typically choose to lean more \
 	towards either their Humen or Elvish heritages.<br>\
-	(+1 Constitution, +1 Perception)" 
+	(+1 Constitution, +1 Perception)"
 
 	skin_tone_wording = "Identity"
 	default_color = "FFFFFF"
@@ -81,7 +81,7 @@
 		/datum/body_marking/flushed_cheeks,
 		/datum/body_marking/eyeliner,
 		/datum/body_marking/tonage,
-		
+
 	)
 	languages = list(
 		/datum/language/common,
@@ -94,28 +94,31 @@
 
 /datum/species/human/halfelf/get_skin_list()
 	return list(
-		"Timber-Gronn" = SKIN_COLOR_TIMBER_GRONN,
-		"Giza-Azure" = SKIN_COLOR_GIZA_AZURE,
-		"Walnut-Stine" = SKIN_COLOR_WALNUT_STINE,
-		"Etrustcan-Dandelion" = SKIN_COLOR_ETRUSTCAN_DANDELION,
-		"Naledi-Born" = SKIN_COLOR_NALEDI_BORN,
-		"Kaze-Lotus" = SKIN_COLOR_KAZE_LOTUS,
-		"Grenzel-Solaria" = SKIN_COLOR_GRENZEL_WOODS,
-		"Etrusca-Lirvas" = SKIN_COLOR_ETRUSCA_LIRVAS,
-		"Free Roamers" = SKIN_COLOR_FREE_FOLK,
-		"Avar Borne"	= SKIN_COLOR_AVAR_BORNE,
-		"Shalvine Roamer" = SKIN_COLOR_SHALVINE_AZURE,
-		"Lalve-Steppes" = SKIN_COLOR_LALVE_NALEDI,
-		"Naledi-Otava" = SKIN_COLOR_NALEDI_OTAVA,
-		"Grezel-Avar" = SKIN_COLOR_GRENZEL_AVAR,
-		"Hammer-Gronn" = SKIN_COLOR_HAMMER_GRONN,
-		"Commorah-kin" = SKIN_COLOR_COMMORAH,
-		"Gloomhaven-kin" = SKIN_COLOR_GLOOMHAVEN,
-		"Darkpila-kin" = SKIN_COLOR_DARKPILA,
-		"Sshanntynlan-kin" = SKIN_COLOR_SSHANNTYNLAN,
-		"Llurth Dreir-kin" = SKIN_COLOR_LLURTH_DREIR,
-		"Tafravma-kin" = SKIN_COLOR_TAFRAVMA,
-		"Yuethindrynn-kin" = SKIN_COLOR_YUETHINDRYNN
+		"Sunless" = SKIN_COLOR_SUNLESS,
+		"Dandelion" = SKIN_COLOR_DANDELION,
+		"Greywood" = SKIN_COLOR_GREYWOOD,
+		"Lotus" = SKIN_COLOR_LOTUS,
+		"Peachy" = SKIN_COLOR_PEACHY,
+		"Sunless" = SKIN_COLOR_SUNLESS,
+		"Light" = SKIN_COLOR_LIGHT,
+		"Warm Ivory" = SKIN_COLOR_WARMIVORY,
+		"Heartland" = SKIN_COLOR_HEARTLAND,
+		"Cool Sand" = SKIN_COLOR_COOLSAND,
+		"South Sand" = SKIN_COLOR_SOUTHSAND,
+		"Dull" = SKIN_COLOR_DULL,
+		"Beach" = SKIN_COLOR_BEACH,
+		"Coastal" = SKIN_COLOR_COASTAL,
+		"Dark Gold" = SKIN_COLOR_DARKGOLD,
+		"Palm" = SKIN_COLOR_PALM,
+		"Walnut" = SKIN_COLOR_WALNUT,
+		"Bone" = SKIN_COLOR_BONE,
+		"Ichor" = SKIN_COLOR_ICHOR,
+		"Gloom" = SKIN_COLOR_GLOOM,
+		"Lilac" = SKIN_COLOR_LILAC,
+		"Shaded" = SKIN_COLOR_SHADED,
+		"Matronly" = SKIN_COLOR_MATRONLY,
+		"Cobalt" = SKIN_COLOR_COBALT,
+		"Jet" = SKIN_COLOR_JET,
 	)
 
 /datum/species/human/halfelf/proc/languages(mob/living/carbon/human/literally_him)

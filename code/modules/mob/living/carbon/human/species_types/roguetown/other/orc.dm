@@ -92,15 +92,19 @@
 
 /datum/species/halforc/get_skin_list()
 	return list(
-		"Shellcrest" = SKIN_COLOR_SHELLCREST,
-		"Bloodaxe" = SKIN_COLOR_BLOOD_AXE,
-		"Splitjaw" = SKIN_COLOR_GROONN, //Changed name from Gronn, which no longer aligned with lore here or elsewhere.
-		"Blackhammer" = SKIN_COLOR_BLACK_HAMMER,
-		"Skullseeker" = SKIN_COLOR_SKULL_SEEKER,
-		"Crescent Fang" = SKIN_COLOR_CRESCENT_FANG,
+		"Slate" = SKIN_COLOR_SLATE,
+		"Teak" = SKIN_COLOR_TEAK,
+		"Undergrowth" = SKIN_COLOR_UNDERGROWTH,
+		"Raw Blood" = SKIN_COLOR_RAWBLOOD,
+		"Water Moss" = SKIN_COLOR_WATERMOSS,
+		"Deep One" = SKIN_COLOR_DEEPONE,
+		"Cave Moss" = SKIN_COLOR_CAVEMOSS,
+		"Hobbe" = SKIN_COLOR_HOBBE,
 		"Murkwalker" = SKIN_COLOR_MURKWALKER,
-		"Shatterhorn" = SKIN_COLOR_SHATTERHORN,
-		"Spirit Crusher" = SKIN_COLOR_SPIRITCRUSHER
+		"Ice Blood" = SKIN_COLOR_ICEBLOOD,
+		"Rawhide" = SKIN_COLOR_RAWHIDE,
+		"Marine" = SKIN_COLOR_MARINE,
+		"Pyrite" = SKIN_COLOR_PYRITE,
 	)
 
 /datum/species/halforc/get_hairc_list()

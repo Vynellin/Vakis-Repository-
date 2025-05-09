@@ -5,7 +5,9 @@
 	name = "Drakian"
 	id = "dracon"
 	desc = "<b>Drakian</b><br>\
-	Mighty scaled individuals who claim to be descendants of the dragons of yore.<br>\
+	The Drakian are mighty and strong dragon like people covered horn to claw in beautiful and tough dragonscales. \
+Their dragon like visage is claimed to come from true dragon blood, from extravigant dragon kingdoms that once existed in eons far long past. What truth there is to it is barely known yet Drakian come to Sunmarch seeking their place as warriors, adventurers and great dragonly scholars.<br>\
+
 	(+1 Strength)"
 	species_traits = list(EYECOLOR,LIPS,STUBBLE,MUTCOLORS)
 	possible_ages = ALL_AGES_LIST

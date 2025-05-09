@@ -2,24 +2,20 @@
 	race = /datum/species/elf/wood
 
 /datum/species/elf/wood
-	name = "Elf"
+	name = "Dawn Elf"
 	id = "elfw"
-	desc = "<b>Elf</b><br>\
-	\"Elf\" is a catch-all term used for tall, pointy-eared humanoids who can trace \
-	their heritage to the ancient and mysterious Snow Elves. This particular species \
-	of elf are what most imagine when they hear the word, and are also known among \
-	the elder races as \"Wood-Elves\". Considering their diverse history, it is extremely \
-	difficult for other mortals to even conceive the various intricacies found in elven \
-	society, thanks in no small part to the hundreds if not thousands of tribes that exist \
-	within their culture. Although ancient and complex, Elves tend to be looked poorly upon by \
-	Humens, as historically the two races have been rivals in various conflicts and \
-	territorial disputes. This, however, does not stop many Humens and Elves from forming \
-	relationships, which are capable of producing half-elven children. Elves are known for \
-	their intelligence and sharp eyes, but their graceful nature typically leaves their bodies \
-	more frail and fagile than most. In these lands, only a handful of the many Elvish tribes are seen.<br>\
+	desc = "<b>Dawn Elf</b><br>\
+The Elves of the Dawn are the long-lived, poised and graceful descendants of an age where magic flowed freely as wine.\
+In the blood of every elf flows a trickle of power from the Radiant Epoch that grants them the quirks of pointed ears and lifespans that effortlessly reach the centuries.<br>\
+Stewardry of nature had long been the heart of the Dawn Elves. Their bodies carry unnatural grace and deliberate poise that the first of the Dawn Elves used to become champions of nature.\
+Great bloodlines became one with the wild where the fey things roamed, embracing natural chaos from where it wildly springs, while other kingdoms tamed nature with the help of forgotten Gods growing cities from Oak and legacies in song.\
+The oldest of families hold on to these legacies even now proud of a touch of ancient power in their long-lived blood. Most are gone now. The Dusk War left the legacy of all Elves scattered all over the burning world yet rebuilding from the ashes.<br>\
+In the Dawn Era these elves can be commonplace. Some may find Dawn Elves hard to relate to as lifetimes in the centuries make each elf a complex multifaceted person rarely the same as their brothers.\
+It is their passions, their interests and skills that they freely share, that make the elder beings known as Dawn Elves dependable and ever curious people in the Sunmarch.\
+<br>\
 	(+1 Speed)"
 
-	skin_tone_wording = "Tribal Identity"
+	skin_tone_wording = "Skintone"
 
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,OLDGREY)
@@ -103,20 +99,23 @@
 
 /datum/species/elf/wood/get_skin_list()
 	return list(
-		"Grenzel Woods" = SKIN_COLOR_GRENZEL_WOODS,
-		"Dandelion Creek" = SKIN_COLOR_DANDELION_CREEK,
-		"Roseveil" = SKIN_COLOR_ROSEVEIL,
-		"Solargrove" = SKIN_COLOR_AZUREGROVE,
-		"Arborshome" = SKIN_COLOR_ARBORSHOME,
-		"Almondvalle" = SKIN_COLOR_ALMONDVALLE,
-		"Walnut Woods" = SKIN_COLOR_WALNUT_WOODS,
-		"Timberborn" = SKIN_COLOR_TIMBERBORN,
-		"Lotus Coast" = SKIN_COLOR_LOTUS_COAST,
-		"Grenzel Woods" = SKIN_COLOR_GRENZEL_WOODS,
-		"Etruscan Swamps" = SKIN_COLOR_ETRUSCAN_SWAMPS,
-		"Shalvine Forests" = SKIN_COLOR_SHALVINE_FORESTS,
-		"Lalvestine Thickets" = SKIN_COLOR_LALVE_STEPPES,
-		"Naledi Coverts"	= SKIN_COLOR_NALEDI_COAST
+		"Sunless" = SKIN_COLOR_SUNLESS,
+		"Dandelion" = SKIN_COLOR_DANDELION,
+		"Greywood" = SKIN_COLOR_GREYWOOD,
+		"Lotus" = SKIN_COLOR_LOTUS,
+		"Peachy" = SKIN_COLOR_PEACHY,
+		"Sunless" = SKIN_COLOR_SUNLESS,
+		"Light" = SKIN_COLOR_LIGHT,
+		"Warm Ivory" = SKIN_COLOR_WARMIVORY,
+		"Heartland" = SKIN_COLOR_HEARTLAND,
+		"Cool Sand" = SKIN_COLOR_COOLSAND,
+		"South Sand" = SKIN_COLOR_SOUTHSAND,
+		"Dull" = SKIN_COLOR_DULL,
+		"Beach" = SKIN_COLOR_BEACH,
+		"Coastal" = SKIN_COLOR_COASTAL,
+		"Dark Gold" = SKIN_COLOR_DARKGOLD,
+		"Palm" = SKIN_COLOR_PALM,
+		"Walnut" = SKIN_COLOR_WALNUT,
 	)
 
 /datum/species/elf/wood/get_hairc_list()
