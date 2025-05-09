@@ -4,7 +4,10 @@
 /datum/species/anthromorph
 	name = "Wild-Kin"
 	id = "anthromorph"
-	desc = "Placeholder Description.<br>\
+	desc = "<b>Wild-Kin</b><<br>\
+Long ago the fey would live in tandem with our world. The veils between worlds drew thin and so did the difference between beasts and men. <br>\
+Wild-Kin are drawn from this palette of celestial chaos. Among Wild-kin the traits of the bestial world run strong. The majority live in tribes and villages in the distant reaches of the world. \
+Those that visit Sunmarch come in every shape and size often bringing cultures of their own. <br>\
 	(+1 Constitution, +1 Perception)"
 	default_color = "444"
 	species_traits = list(

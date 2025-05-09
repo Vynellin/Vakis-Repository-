@@ -2,9 +2,9 @@
 	race = /datum/species/moth
 
 /datum/species/moth
-	name = "Fluvian"
+	name = "Mothkin"
 	id = "moth"
-	desc = "A curious, insectoid creature that almost seems out of place. Uniquely, despite their size, they're capable of flight!<br>\
+	desc = "Mysterious Mothkin from the far reaches of the world. Mothkin in Sunmarch are far away from their simple homes among dense dark forest and twisting winding carves. Their curiousity of the world is seen as a breath of fresh air by many.<br>\
 	(+1 Speed)"
 	species_traits = list(EYECOLOR,LIPS,STUBBLE,MUTCOLORS,HAIR)
 	possible_ages = ALL_AGES_LIST

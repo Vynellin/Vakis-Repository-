@@ -4,7 +4,10 @@
 /datum/species/demihuman
 	name = "Half-Kin"
 	id = "demihuman"
-	desc = "The inevitable union between wildkin and some form of humanity or another. While they also experience animalistic tendencies akin to their full-blooded ancestors, their intermingling with others has stemmed the severity of such primordial impulses. (Half-kin are not a template race to play your own custom race. If you play a half-kin, you are expected to roleplay to the setting and the race's lore.)<br>\
+	desc = "<b>Half-Kin</b><<br>\
+	Long ago the fey would live in tandem with our world. The veils between worlds drew thin and so did the difference between beasts and men. <br>\
+Half-Kin are drawn from this palette of celestial chaos. Close to humanity but different in many ways, often touched with features from animals and beasts.\
+ Even after the Dusk War as many bloodlines of Half-Kin remain as there are stars in the sky. <br>\
 	(+1 Endurance, +1 Perception)"
 	skin_tone_wording = "Ancestry"
 	default_color = "FFFFFF"
@@ -93,7 +96,7 @@
 		/datum/descriptor_choice/prominent_three_wild,
 		/datum/descriptor_choice/prominent_four_wild,
 	)
-	
+
 /datum/species/demihuman/check_roundstart_eligible()
 	return TRUE
 
@@ -103,9 +106,9 @@
 /datum/species/demihuman/on_species_gain(mob/living/carbon/foreign, datum/species/old_species)
 	..()
 	languages(foreign)
-	
+
 /datum/species/demihuman/proc/languages(mob/living/carbon/human/foreign)
-	if(foreign.skin_tone == SKIN_COLOR_GRENZELHOFT)
+	if(foreign.skin_tone == SKIN_COLOR_HEARTLAND)
 		foreign.grant_language(/datum/language/grenzelhoftian)
 
 /datum/species/demihuman/get_random_features()
@@ -137,16 +140,21 @@
 
 /datum/species/demihuman/get_skin_list()
 	return list(
-		"Grenzelhoft" = SKIN_COLOR_GRENZELHOFT,
-		"Hammerhold" = SKIN_COLOR_HAMMERHOLD,
-		"Avar" = SKIN_COLOR_AVAR,
-		"Rockhill" = SKIN_COLOR_ROCKHILL,
-		"Otava" = SKIN_COLOR_OTAVA,
-		"Etrusca" = SKIN_COLOR_ETRUSCA,
-		"Gronn" = SKIN_COLOR_GRONN,
-		"North Raneshen (Chorodiaki)" = SKIN_COLOR_GIZA,
-		"West Raneshen (Vrdaqnan)" = SKIN_COLOR_SHALVISTINE,
-		"East Raneshen (Nshkormh)" = SKIN_COLOR_LALVESTINE,
-		"Naledi" = SKIN_COLOR_NALEDI,
-		"Kazengun" = SKIN_COLOR_KAZENGUN,
+		"Sunless" = SKIN_COLOR_SUNLESS,
+		"Dandelion" = SKIN_COLOR_DANDELION,
+		"Greywood" = SKIN_COLOR_GREYWOOD,
+		"Lotus" = SKIN_COLOR_LOTUS,
+		"Peachy" = SKIN_COLOR_PEACHY,
+		"Sunless" = SKIN_COLOR_SUNLESS,
+		"Light" = SKIN_COLOR_LIGHT,
+		"Warm Ivory" = SKIN_COLOR_WARMIVORY,
+		"Heartland" = SKIN_COLOR_HEARTLAND,
+		"Cool Sand" = SKIN_COLOR_COOLSAND,
+		"South Sand" = SKIN_COLOR_SOUTHSAND,
+		"Dull" = SKIN_COLOR_DULL,
+		"Beach" = SKIN_COLOR_BEACH,
+		"Coastal" = SKIN_COLOR_COASTAL,
+		"Dark Gold" = SKIN_COLOR_DARKGOLD,
+		"Palm" = SKIN_COLOR_PALM,
+		"Walnut" = SKIN_COLOR_WALNUT,
 	)

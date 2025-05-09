@@ -1,6 +1,6 @@
 /mob/living/carbon/human/species/orc/npc
 	name = "orc"
-	skin_tone = SKIN_COLOR_GROONN
+	skin_tone = SKIN_COLOR_UNDERGROWTH
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	var/orc_outfit = /datum/outfit/job/roguetown/orc/npc
