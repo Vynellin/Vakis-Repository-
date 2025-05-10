@@ -5,9 +5,12 @@
 
 /datum/patron/balance/zira
 	name = "Zira"
-	domain = "Goddess of the Moon"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
+	domain = "Balance; The Moon, Masks, Secrets, Alteration, Nighttime, and Yearning"
+	desc = "The Moonmaiden, the Lady of Night, Zira is one half of the two Prime Deities alongside her Brother, Aeternus. \
+			Her domain is night, her voice moonlight, and her influence is that compassion and firmness, decorum and \
+			self-actualization, has guided the hands of wizard, priest, ruler, and commoner alike, teaching that gentility \
+			is just as necessary as might."
+	worshippers = "Children of the Night, the Gentle, Caretakers, Secretkeepers, and Lovers"
 	mob_traits = list(TRAIT_NIGHT_OWL, TRAIT_ZIRASIGHT)
 	t1 = /obj/effect/proc_holder/spell/invoked/blindness/miracle
 	t2 = /obj/effect/proc_holder/spell/invoked/invisibility/miracle
