@@ -15877,10 +15877,10 @@
 	icon_state = "cobweb2"
 	},
 /obj/structure/rack/rogue/shelf,
-/obj/item/reagent_containers/glass/bottle/rogue/beer/avarrice{
+/obj/item/reagent_containers/glass/bottle/rogue/beer/whitericewine{
 	pixel_x = 3
 	},
-/obj/item/reagent_containers/glass/bottle/rogue/beer/avarmead{
+/obj/item/reagent_containers/glass/bottle/rogue/beer/honeyedmead{
 	pixel_x = -3
 	},
 /obj/item/reagent_containers/glass/bottle/rogue/beer/saigamilk{

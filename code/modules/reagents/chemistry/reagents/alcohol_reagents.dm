@@ -2158,23 +2158,21 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#772C48"
 	quality = DRINK_GOOD
 
-//Avar boozes
-
-/datum/reagent/consumable/ethanol/beer/avarmead
+/datum/reagent/consumable/ethanol/beer/honeyedmead
 	name = "Zögiin bal"
 	boozepwr = 30
 	taste_description = "spicy honey"
 	color = "#e0a400"
 	quality = DRINK_GOOD
 
-/datum/reagent/consumable/ethanol/beer/avarrice
+/datum/reagent/consumable/ethanol/beer/makkolir
 	name = "Makkolir"
 	boozepwr = 30
 	taste_description = "tangy sweetness"
 	color = "#ddcbc9"
 	quality = DRINK_GOOD
 
-/datum/reagent/consumable/ethanol/beer/saigamilk //No way, kumys from avar!!!
+/datum/reagent/consumable/ethanol/beer/saigamilk
 	name = "Bökhiin Arkhi"
 	boozepwr = 15
 	taste_description = "bubbly, sour salt"
