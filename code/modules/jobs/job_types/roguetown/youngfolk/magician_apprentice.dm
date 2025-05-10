@@ -1,6 +1,6 @@
-/datum/job/roguetown/apothecary
-	title = "Apothecary"
-	flag = APOTHECARY
+/datum/job/roguetown/mage_apprentice
+	title = "Magician's Apprentice"
+	flag = MAGICIAN_APPRENTICE
 	department_flag = SIDEFOLK
 	faction = "Station"
 	total_positions = 2
@@ -9,12 +9,13 @@
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT)
 
-	tutorial = "Working under the tutelage of the court physician, you still remain a mere apprentice in the medical arts. Woe is the one who has to suffer your hand holding the scalpel when your master is out."
+	tutorial = "As part of your studies at the University; you were put under the tutelage of the court's Magician. While it feels you oft hinder more than help, \
+				you've earned your keep here all the same."
 
 	outfit = /datum/outfit/job/roguetown/apothecary
 
 
-	display_order = JDO_APOTHECARY
+	display_order = JDO_MAGICIAN_APPRENTICE
 	give_bank_account = 30
 
 	min_pq = 0

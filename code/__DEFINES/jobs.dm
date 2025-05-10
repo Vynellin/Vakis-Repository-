@@ -181,7 +181,7 @@
 #define SHOPHAND	(1<<6)
 #define CLERK 		(1<<7)
 #define MAGEAPPRENTICE	(1<<8)
-#define APOTHECARY	(1<<9)
+#define MAGICIAN_APPRENTICE	(1<<9)
 
 #define MERCENARIES		(1<<7)
 
@@ -227,7 +227,7 @@
 #define JDO_MAGICIAN 5
 #define JDO_MAGEAPPRENTICE 5.1
 #define JDO_PHYSICIAN 6
-#define JDO_APOTHECARY 6.1
+#define JDO_MAGICIAN_APPRENTICE 6.1
 #define JDO_JESTER 7
 #define JDO_BUTLER 7.1
 #define JDO_SERVANT 7.2
@@ -306,7 +306,7 @@
 	/datum/job/roguetown/servant,\
 	/datum/job/roguetown/squire,\
 	/datum/job/roguetown/butler,\
-	/datum/job/roguetown/apothecary,\
+	/datum/job/roguetown/mage_apprentice,\
 	/datum/job/roguetown/magician
 
 #define NOBLE_ROLES \
