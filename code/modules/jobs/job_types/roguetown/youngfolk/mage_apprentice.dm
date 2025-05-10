@@ -10,7 +10,9 @@
 	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	advclass_cat_rolls = list(CTAG_WAPPRENTICE = 20)
 
-	tutorial = "Your master once saw potential in you, although you are uncertain if they still do, given how rigorous and difficult your studies have been. The path to using magic is a treacherous and untamed one, and you are still decades away from calling yourself even a journeyman in the field. Listen and serve, and someday you will earn your hat."
+	tutorial = "Your master once saw potential in you, although you are uncertain if they still do, given how rigorous and difficult your studies have been. \
+	The path to using magic is a treacherous and untamed one, and you are still decades away from calling yourself even a journeyman in the field. Listen and \
+	serve, and someday you will earn your hat under him... and if not - there's always the university."
 
 	outfit = /datum/outfit/job/roguetown/wapprentice
 
@@ -73,41 +75,6 @@
 		H.change_stat("intelligence", 2)
 		H.change_stat("speed", 1)
 		H.change_stat("perception", 1)
-		
-/datum/advclass/wapprentice/alchemist
-	name = "Alchemist Associate"
-	tutorial = "During your studies, you became less focused on the arcane and instead turned yourself to your true passion, alchemy. Through the art of transmutation, you have learned that the elements (much like the arcane) can be maniupulated and bent to your will."
-	outfit = /datum/outfit/job/roguetown/wapprentice/alchemist
-	
-	category_tags = list(CTAG_WAPPRENTICE)
-	
-/datum/outfit/job/roguetown/wapprentice/alchemist/pre_equip(mob/living/carbon/human/H)
-	backpack_contents = list(/obj/item/roguegem/amethyst = 1, /obj/item/seeds/sweetleaf = 1, /obj/item/seeds/pipeweed = 1)
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/labor/farming, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/labor/mining, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/labor/fishing, 1, TRUE)
-		if(H.age == AGE_OLD)
-			H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 1, TRUE)
-			H.change_stat("perception", -1)
-			H.change_stat("intelligence", 1)
-		H.mind.adjust_spellpoints(3)
-		ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
-		H.change_stat("intelligence", 2)
-		H.change_stat("perception", 2)
-		ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
 		
 /datum/advclass/wapprentice/apprentice
 	name = "Magicians Apprentice"

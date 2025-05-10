@@ -1,6 +1,6 @@
-/datum/job/roguetown/mage_apprentice
-	title = "Magician's Apprentice"
-	flag = MAGICIAN_APPRENTICE
+/datum/job/roguetown/apothicant_apprentice
+	title = "Apothicant Apprentice"
+	flag = APOTHICANT_APPRENTICE
 	department_flag = SIDEFOLK
 	faction = "Station"
 	total_positions = 2
@@ -10,12 +10,13 @@
 	allowed_ages = list(AGE_ADULT)
 
 	tutorial = "As part of your studies at the University; you were put under the tutelage of the court's Magician. While it feels you oft hinder more than help, \
-				you've earned your keep here all the same."
+				you've earned your keep here all the same. More specifically, you were put on as their understudy Apothecary, and have been dabbling in the art of \
+				alchemy for your studies..."
 
 	outfit = /datum/outfit/job/roguetown/apothecary
 
 
-	display_order = JDO_MAGICIAN_APPRENTICE
+	display_order = JDO_APOTHICANT_APPRENTICE
 	give_bank_account = 30
 
 	min_pq = 0
