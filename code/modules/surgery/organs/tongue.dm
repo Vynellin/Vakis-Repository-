@@ -20,7 +20,7 @@
 		/datum/language/draconic,
 		/datum/language/canilunzt,
 		/datum/language/grataarcana,
-		/datum/language/grenzelhoftian
+		/datum/language/old_rasurian
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)

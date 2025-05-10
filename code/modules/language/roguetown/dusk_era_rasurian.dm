@@ -1,6 +1,7 @@
-/datum/language/grenzelhoftian
-	name = "Grenzelhoftian Imperial"
-	desc = "The primary language of the Grenzelhoft Emperiate, a robust language filled with hearty words and enthusiastic enunciation. Often said to be similar to the Lupians Canilunzt."
+/datum/language/old_rasurian
+	name = "Dusk Era Rasurian"
+	desc = "In the striking of the dusk war; the world heeded heroes to answer the calls of Aeternus. \
+			What is certain, from that much - is that Dusk Era Rasurian spread out from the heartland in their wake."
 	speech_verb = "remarks"
 	ask_verb = "inquires"
 	exclaim_verb = "asserts"

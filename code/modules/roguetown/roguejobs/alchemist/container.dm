@@ -127,15 +127,15 @@
 //AZURE DRINKS
 /obj/item/reagent_containers/glass/bottle/rogue/beer/jagdtrunk
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/jagdtrunk = 48)
-	desc = "A bottle with a Saigabuck cork-seal. This dark liquid is the strongest alcohol coming out of Grenzelhoft available. A herbal schnapps, sure to burn out any disease."
+	desc = "A bottle with a Saigabuck cork-seal. A herbal schnapps, sure to burn out any disease."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/apfelweinheim
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/apfelweinheim = 48)
-	desc = "A bottle with the Apfelweinheim cork-seal. A cider from the Grenzelhoftian town of Apfelweinheim. Well received for its addition of pear, alongside crisp apples."
+	desc = "A bottle with a small drawing of an apple upon it's cork-seal."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/rtoper
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/rtoper = 48)
-	desc = "A bottle with the Rockhill-crest cork-seal. An especially tart cider from the kingdom of Rockhill. Myths say the brewers let the barrels age in the bog, which results in that especially stong flavour."
+	desc = "A bottle with the cork-seal inexplicably made out in the image of a fogged bog."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/nred
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/nred = 48)

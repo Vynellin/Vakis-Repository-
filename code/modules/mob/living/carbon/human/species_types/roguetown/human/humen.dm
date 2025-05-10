@@ -76,7 +76,7 @@ In every town and every province Humans are a common sight. The Dawn Era could n
 
 /datum/species/human/northern/proc/languages(mob/living/carbon/human/foreign)
 	if(foreign.skin_tone == SKIN_COLOR_HEARTLAND)
-		foreign.grant_language(/datum/language/grenzelhoftian)
+		foreign.grant_language(/datum/language/old_rasurian)
 
 /datum/species/human/northern/get_skin_list()
 	return list(

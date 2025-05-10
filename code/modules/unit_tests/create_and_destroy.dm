@@ -29,8 +29,6 @@ GLOBAL_VAR_INIT(running_create_and_destroy, FALSE)
 		// requires a pod passed
 		/obj/effect/DPfall,
 		/obj/effect/DPtarget,
-		// prompts loc for input
-		/obj/item/clothing/suit/roguetown/shirt/grenzelhoft,
 	)
 	//these are VERY situational and need info passed
 	ignore += typesof(/obj/effect/abstract)

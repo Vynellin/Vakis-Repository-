@@ -190,13 +190,6 @@
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_JINGLE_BELLS)
 
-/obj/item/clothing/shoes/roguetown/grenzelhoft
-	name = "grenzelhoft boots"
-	icon_state = "grenzelboots"
-	item_state = "grenzelboots"
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
-	armor = list("blunt" = 15, "slash" = 15, "stab" = 15, "piercing" = 0, "fire" = 0, "acid" = 0)
-
 /obj/item/clothing/shoes/roguetown/boots/furlinedboots
 	name = "fur lined boots"
 	desc = "Leather boots lined with fur."

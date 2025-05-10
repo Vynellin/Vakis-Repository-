@@ -120,7 +120,7 @@
 		/datum/language/hellspeak,
 		/datum/language/draconic,
 		/datum/language/celestial,
-		/datum/language/grenzelhoftian
+		/datum/language/old_rasurian
 	)
 		
 	var/list/choices = list()

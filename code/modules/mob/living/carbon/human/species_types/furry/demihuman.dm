@@ -109,7 +109,7 @@ Half-Kin are drawn from this palette of celestial chaos. Close to humanity but d
 
 /datum/species/demihuman/proc/languages(mob/living/carbon/human/foreign)
 	if(foreign.skin_tone == SKIN_COLOR_HEARTLAND)
-		foreign.grant_language(/datum/language/grenzelhoftian)
+		foreign.grant_language(/datum/language/old_rasurian)
 
 /datum/species/demihuman/get_random_features()
 	var/list/returned = MANDATORY_FEATURE_LIST
