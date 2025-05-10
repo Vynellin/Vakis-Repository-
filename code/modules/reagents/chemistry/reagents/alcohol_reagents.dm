@@ -2178,8 +2178,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	taste_description = "bubbly, sour salt"
 	color = "#dddddd"
 
-//Kazengun boozes
-
 /datum/reagent/consumable/ethanol/beer/kgunlager
 	name = "Yamaguchi Pale"
 	boozepwr = 10 //A PALE imitation actual beer...

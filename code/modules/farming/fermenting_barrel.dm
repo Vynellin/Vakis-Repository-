@@ -183,7 +183,7 @@
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/saigamilk,900)
 
 /obj/structure/fermenting_barrel/kgsunsake
-	desc = "A barrel with a Golden Swan mark. A translucient, pale-blue liquid made from rice. A favourite drink of the warlords and nobles of Kazengun."
+	desc = "A barrel with a Golden Swan mark. A translucient, pale-blue liquid made from rice."
 
 /obj/structure/fermenting_barrel/kgsunsake/Initialize()
 	. = ..()
@@ -199,7 +199,7 @@
 
 
 /obj/structure/fermenting_barrel/gronmead
-	desc = "A barrel with a Shieldmaiden Brewery mark. A deep red honey-wine, refined with the red berries native to Gronns highlands."
+	desc = "A barrel with a Shieldmaiden Brewery mark. A deep red honey-wine, refined with the red berries."
 
 /obj/structure/fermenting_barrel/gronmead/Initialize()
 	. = ..()

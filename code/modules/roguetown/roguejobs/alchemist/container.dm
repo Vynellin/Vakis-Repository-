@@ -143,7 +143,7 @@
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/gronnmead
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/gronnmead = 48)
-	desc = "A bottle with a Shieldmaiden Berewrey cork-seal. A deep red honey-wine, refined with the red berries native to Gronns highlands."
+	desc = "A bottle with a Shieldmaiden Berewrey cork-seal. A deep red honey-wine, refined with the red berries."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/honeyedmead
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/honeyedmead = 48)
@@ -159,12 +159,12 @@
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/kgunlager
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/kgunlager = 48)
-	desc = "A bottle with a Yamaguchi Brewery cork-seal. A pale lager brewed in the far-away lands of Kazengun, refined with green tea for an unique flavour-profile. Even lighter than elven-brew!"
+	desc = "A bottle with a Yamaguchi Brewery cork-seal. A pale lager, refined with green tea for an unique flavour-profile. Even lighter than elven-brew!"
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/kgunsake
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/kgunsake = 48)
-	desc = "A bottle with a Golden Swan cork-seal. A translucient, pale-blue liquid made from rice. A favourite drink of the warlords and nobles of Kazengun."
+	desc = "A bottle with a Golden Swan cork-seal. A translucient, pale-blue liquid made from rice."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/kgunplum
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/kgunplum = 48)
-	desc = "A bottle with a Golden Swan cork-seal. A reddish-golden alcohol made from a fruit commonly found on the Kazengun-isles. A favourite of the commoners."
+	desc = "A bottle with a Golden Swan cork-seal. A reddish-golden alcohol made from plum - a favourite of the commoners."
