@@ -8,7 +8,7 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	allowed_patrons = ALL_CHAOS_PATRONS
-	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions."
+	tutorial = "Tales speak of the Gatemaster's legendary ability to stand still at a gate and ask people questions." // vrc bouncer ahhh behavior
 	display_order = JDO_GATEMASTER
 
 	outfit = /datum/outfit/job/roguetown/gatemaster
@@ -72,11 +72,6 @@
 		H.change_stat("constitution", 1)
 		H.change_stat("endurance", 1)
 		H.change_stat("speed", 1)
-	if(should_wear_femme_clothes(H))
-		var/acceptable = list("Tomboy", "Bob", "Curly Short")
-		if(!(H.hairstyle in acceptable))
-			H.hairstyle = pick(acceptable)
-			H.update_hair()
 	H.verbs |= /mob/proc/haltyell
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
