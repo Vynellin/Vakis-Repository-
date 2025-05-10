@@ -698,22 +698,22 @@
 	desc = span_bloody("LAMBS TO THE SLAUGHTER!")
 	icon_state = "call_to_slaughter"
 
-/atom/movable/screen/alert/status_effect/buff/kasmidian_joy
+/atom/movable/screen/alert/status_effect/buff/variellian_joy
 	name = "Joy And Merriment"
 	desc = "The sound of merriment fills me with fortune."
 	icon_state = "buff"
 
-/datum/status_effect/buff/kasmidian_joy
-	id = "kasmidian_joy"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/kasmidian_joy
+/datum/status_effect/buff/variellian_joy
+	id = "variellian_joy"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/variellian_joy
 	effectedstats = list("fortune" = 1)
 	duration = 5 MINUTES
 	status_type = STATUS_EFFECT_REFRESH
 
-/datum/status_effect/buff/kasmidian_joy/on_apply()
+/datum/status_effect/buff/variellian_joy/on_apply()
 	. = ..()
 	to_chat(owner, span_info("The sounds of joy fill me with fortune!"))
 
-/datum/status_effect/buff/kasmidian_joy/on_remove()
+/datum/status_effect/buff/variellian_joy/on_remove()
 	. = ..()
 	to_chat(owner, span_info("My fortune returns to normal."))

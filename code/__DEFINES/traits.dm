@@ -74,6 +74,7 @@
 #define TRAIT_CHOSEN "Aeternus' Chosen"
 #define TRAIT_CINELLA_SWIM "Blessing of Cinella" //less base fatigue drain when swimming
 #define TRAIT_KASMIDIAN "Blessing of Kasmidian" //secret thieves cant language
+#define TRAIT_VARIELLE "Blessing of Varielle" //Overjoyed by music
 #define TRAIT_FORGEBLESSED "Blessing of Nunos" //Reduces the fatigue cost of smithing a bit.
 #define TRAIT_APRICITY	"Apricity" //Decreased stamina regen time during "day"
 #define TRAIT_SHARPER_BLADES "Sharper Blades" //Weapons lose less blade integrity
@@ -203,7 +204,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_TRAINED_SMITH = span_info("I've spent long training, and with some more, I will be able to smith legendary items."),
 	TRAIT_DEATHSIGHT = span_info("I can feel when someone nearby draws the Undermaiden's attention."),
 	TRAIT_FORGEBLESSED = span_info("Countless long nights spent forging metal have honed my endurance, allowing me to work an anvil far longer than most without tiring."),
-	TRAIT_KASMIDIAN = span_info("I know how to speak in code that only fellow tricksters can understand."),
+	TRAIT_KASMIDIAN = span_info("The gifts of arcana speak to me, and I speak them in kind. A language lost to history was bestowed upon me..."),
+	TRAIT_VARIELLE = span_info("Varielle's gift of music makes me feel ever-the-more alive."),
 	TRAIT_APRICITY = span_info("Aeternus' light blesses and rejuvenates me, allowing me to regain my stamina quicker during the day."),
 	TRAIT_SHARPER_BLADES = span_info("My blades go dull slower, ensuring they stay sharp longer."),
 	TRAIT_FORTITUDE = span_info("The typical drain I feel from day to day life is lessened, my athleticism greater."),

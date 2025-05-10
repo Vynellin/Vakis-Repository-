@@ -10,9 +10,9 @@
 		user.add_stress(/datum/stressevent/jesterphobia)
 	if(HAS_TRAIT(src, TRAIT_BEAUTIFUL))
 		user.add_stress(/datum/stressevent/beautiful)
-		// Apply Kasmidian buff when examining someone with the beautiful trait
-		if(HAS_TRAIT(user, TRAIT_KASMIDIAN) && !user.has_status_effect(/datum/status_effect/buff/kasmidian_joy))
-			user.apply_status_effect(/datum/status_effect/buff/kasmidian_joy)
+		// Apply Varielle buff when examining someone with the beautiful trait
+		if(HAS_TRAIT(user, TRAIT_VARIELLE) && !user.has_status_effect(/datum/status_effect/buff/variellian_joy))
+			user.apply_status_effect(/datum/status_effect/buff/variellian_joy)
 			to_chat(user, span_info("Their beauty brings a smile to my face, and fortune to my steps!"))
 	if(HAS_TRAIT(src, TRAIT_UNSEEMLY))
 		if(!HAS_TRAIT(user, TRAIT_UNSEEMLY))

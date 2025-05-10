@@ -388,8 +388,8 @@
 		for(var/mob/living/carbon/human/H in hearers(7, user))
 			if(H == user || !H.client)
 				continue
-			if(HAS_TRAIT(H, TRAIT_KASMIDIAN) && !H.has_status_effect(/datum/status_effect/buff/kasmidian_joy))
-				H.apply_status_effect(/datum/status_effect/buff/kasmidian_joy)
+			if(HAS_TRAIT(H, TRAIT_VARIELLE) && !H.has_status_effect(/datum/status_effect/buff/variellian_joy))
+				H.apply_status_effect(/datum/status_effect/buff/variellian_joy)
 				to_chat(H, span_info("The giggling brings a smile to my face, and fortune to my steps!"))
 
 /mob/living/carbon/human/verb/emote_giggle()
@@ -414,8 +414,8 @@
 		for(var/mob/living/carbon/human/H in hearers(7, user))
 			if(H == user || !H.client)
 				continue
-			if(HAS_TRAIT(H, TRAIT_KASMIDIAN) && !H.has_status_effect(/datum/status_effect/buff/kasmidian_joy))
-				H.apply_status_effect(/datum/status_effect/buff/kasmidian_joy)
+			if(HAS_TRAIT(H, TRAIT_VARIELLE) && !H.has_status_effect(/datum/status_effect/buff/variellian_joy))
+				H.apply_status_effect(/datum/status_effect/buff/variellian_joy)
 				to_chat(H, span_info("The chuckling brings a smile to my face, and fortune to my steps!"))
 
 /mob/living/carbon/human/verb/emote_chuckle()
@@ -690,8 +690,8 @@
 		for(var/mob/living/carbon/human/H in hearers(7, user))
 			if(H == user || !H.client)
 				continue
-			if(HAS_TRAIT(H, TRAIT_KASMIDIAN) && !H.has_status_effect(/datum/status_effect/buff/kasmidian_joy))
-				H.apply_status_effect(/datum/status_effect/buff/kasmidian_joy)
+			if(HAS_TRAIT(H, TRAIT_VARIELLE) && !H.has_status_effect(/datum/status_effect/buff/variellian_joy))
+				H.apply_status_effect(/datum/status_effect/buff/variellian_joy)
 				to_chat(H, span_info("The laughter brings a smile to my face, and fortune to my steps!"))
 
 /mob/living/carbon/human/verb/emote_laugh()

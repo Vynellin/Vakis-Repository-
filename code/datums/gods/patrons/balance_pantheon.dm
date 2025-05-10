@@ -18,7 +18,7 @@
 /datum/patron/balance/tsoridys
 	name = "Tsoridys"
 	domain = "Death; Time, and Entropy"
-	desc = "Placeholder Description."
+	desc = "Placeholder Description. Tsoridys shepherds the end of Tamari's reign on life, ensuring safe passage for mortals."
 	worshippers = "Mourners, The World-Weary, Gravediggers & Burialmen"
 	mob_traits = list(TRAIT_SOUL_EXAMINE, TRAIT_NOSTINK)	//No stink is generic but they deal with dead bodies so.. makes sense, I suppose?
 	t1 = /obj/effect/proc_holder/spell/invoked/avert
@@ -44,7 +44,7 @@
 /datum/patron/balance/carthus
 	name = "Carthus"
 	domain = "God of War, Ambition, and Rule"
-	desc = "Placeholder"
+	desc = "Placeholder Description - Carthus guides the power mortals hold over each other, hand-in-hand with ambitions they hold to keep it."
 	worshippers = "Placeholder"
 	mob_traits = list(TRAIT_SHARPER_BLADES, TRAIT_JUSTICARSIGHT)
 	t1 = /obj/effect/proc_holder/spell/self/divine_strike
@@ -54,9 +54,9 @@
 /datum/patron/balance/varielle
 	name = "Varielle"
 	domain = "Goddess of Love, Music and Harmony"
-	desc = "Placeholder"
+	desc = "Placeholder Description - Varielle guides mortals and thought in lock-step, be it in wed or in echoes of music."
 	worshippers = "Placeholder"
-	mob_traits = list(TRAIT_EMPATH, TRAIT_EXTEROCEPTION)
+	mob_traits = list(TRAIT_VARIELLE, TRAIT_EMPATH, TRAIT_EXTEROCEPTION)
 	t1 = /obj/effect/proc_holder/spell/invoked/bud
 	t2 = /obj/effect/proc_holder/spell/invoked/variellecurse
 	t3 = null
