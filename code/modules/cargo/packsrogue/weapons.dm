@@ -95,14 +95,6 @@
 					/obj/item/rogueweapon/sword/sabre/shamshir,
 				)
 
-
-/datum/supply_pack/rogue/weapons/beardedaxe
-	name = "Bearded Axe"
-	cost = 80
-	contains = list(
-					/obj/item/rogueweapon/stoneaxe/woodcut/steel/atgervi,
-	)
-
 /datum/supply_pack/rogue/weapons/pulaxe
 	name = "Pulaski Axe"
 	cost = 80
