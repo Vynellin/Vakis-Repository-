@@ -17,9 +17,9 @@
 
 /datum/patron/balance/tsoridys
 	name = "Tsoridys"
-	domain = "God of Death, Time, and Entropy"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
+	domain = "Death; Time, and Entropy"
+	desc = "Placeholder Description."
+	worshippers = "Mourners, The World-Weary, Gravediggers & Burialmen"
 	mob_traits = list(TRAIT_SOUL_EXAMINE, TRAIT_NOSTINK)	//No stink is generic but they deal with dead bodies so.. makes sense, I suppose?
 	t1 = /obj/effect/proc_holder/spell/invoked/avert
 	t2 = /obj/effect/proc_holder/spell/targeted/abrogation
@@ -29,8 +29,11 @@
 /datum/patron/balance/nunos
 	name = "Nunos"
 	domain = "Contested God of Toil"
-	desc = "Placeholder"
-	worshippers = "Placeholder"
+	desc = "Placeholder Description - Nunos is split apart into three divergent interpretations. The human-borne interpretation considers Nunos \
+	to be the god of Technology, Alchemy, Industry, Forces, Toil, and Metal - the elven-borne interpretation, Nuvelle, is the god of Fire, Renewal, \
+	Transformation, Rebirth, and Toil - and the dwarven-borne interpretation, Nardám, is the god of Fire, Metallurgy, Craftsdwarfship, Industry, Hammers, \
+	and Toil. Nunos' exact place in the balance pantheon is heavily debated, as is their details - being the only one incapable of verbal communion with mortals."
+	worshippers = "Artisans, Mages, The Reformed, Thugs and Smithys"
 	mob_traits = list(TRAIT_FORGEBLESSED, TRAIT_BETTER_SLEEP)
 	t1 = /obj/effect/proc_holder/spell/invoked/vigorousexchange
 	t2 = /obj/effect/proc_holder/spell/invoked/heatmetal
