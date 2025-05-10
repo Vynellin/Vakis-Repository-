@@ -101,21 +101,19 @@
 		//Abdicate previous King
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
-				if(HL.mind.assigned_role == "Grand Duke" || HL.mind.assigned_role == "Consort")
+				if(HL.mind.assigned_role == /datum/job/roguetown/lord::title)
 					HL.mind.assigned_role = "Towner" //So they don't get the innate traits of the king
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
-			if(HL.job == "Grand Duke")
-				HL.job = "Duke Emeritus"
-			if(HL.job == "Consort")
-				HL.job = "Consort Dowager"
+			if(HL.job == /datum/job/roguetown/lord::title)
+				HL.job = /datum/job/roguetown/exlord::title
 
 		//Coronate new King (or Queen)
-		HU.mind.assigned_role = "Grand Duke"
-		HU.job = "Grand Duke"
+		HU.mind.assigned_role = /datum/job/roguetown/lord::title
+		HU.job = /datum/job/roguetown/lord::title
 		if(should_wear_femme_clothes(HU))
-			SSticker.rulertype = "Grand Duchess"
+			SSticker.rulertype = /datum/job/roguetown/lord::f_title
 		else
-			SSticker.rulertype = "Grand Duke"
+			SSticker.rulertype = /datum/job/roguetown/lord::title
 		SSticker.rulermob = HU
 		var/dispjob = mind.assigned_role
 		removeomen(OMEN_NOLORD)

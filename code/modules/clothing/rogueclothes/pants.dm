@@ -338,57 +338,6 @@
 /obj/item/clothing/under/roguetown/loincloth/pink
 	color = "#b98ae3"
 
-/obj/item/clothing/under/roguetown/grenzelpants
-	name = "grenzelhoftian paumpers"
-	desc = "Padded pants for extra comfort and protection, adorned in vibrant colors."
-	icon_state = "grenzelpants"
-	item_state = "grenzelpants"
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
-	detail_tag = "_detail"
-	armor = list("blunt" = 30, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_BLUNT)
-	var/picked = FALSE
-	armor_class = ARMOR_CLASS_LIGHT
-
-/obj/item/clothing/under/roguetown/grenzelpants/attack_right(mob/user)
-	..()
-	if(!picked)
-		var/list/colors = list(
-		"Swan White"="#ffffff",
-		"Lavender"="#865c9c",
-		"Royal Purple"="#5E4687",
-		"Wine Rouge"="#752B55",
-		"Sow's skin"="#CE929F",
-		"Knight's Red"="#933030",
-		"Madroot Red"="#AD4545",
-		"Marigold Orange"="#E2A844",
-		"Politely, Yuck"="#685542",
-		"Aeternus' Yellow"="#FFFD8D",
-		"Bog Green"="#375B48",
-		"Seafoam Green"="#49938B",
-		"Woad Blue"="#395480",
-		"Cornflower Blue"="#749EE8",
-		"Blacksteel Grey"="#404040",)
-
-		var/choice = input(user, "Choose a color.", "Grenzelhoft colors") as anything in colors
-		var/playerchoice = colors[choice]
-		picked = TRUE
-		detail_color = playerchoice
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_pants()
-
-/obj/item/clothing/under/roguetown/grenzelpants/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
-
 /obj/item/clothing/under/roguetown/chainlegs/kilt
 	name = "steel chain kilt"
 	desc = "Interlinked metal rings that drape down all the way to the ankles."

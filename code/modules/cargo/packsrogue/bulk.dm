@@ -10,7 +10,7 @@
 
 
 /datum/supply_pack/rogue/bulk/sour
-	name = "Barrel of Grenzelhoft Sour"
+	name = "Barrel of Sour Wine"
 	cost = 150
 	contains = list(/obj/structure/fermenting_barrel/sourwine)
 

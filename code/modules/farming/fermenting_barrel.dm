@@ -145,7 +145,7 @@
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/blackgoat,900)
 
 /obj/structure/fermenting_barrel/hagwoodbitter
-	desc = "A barrel marked with the Hagwood Bitters emblem. The least bitter thing to be exported from the Grenzelhoft occupied state of Zorn."
+	desc = "A barrel marked with the Hagwood Bitters emblem."
 
 /obj/structure/fermenting_barrel/hagwoodbitter/Initialize()
 	. = ..()
@@ -154,14 +154,14 @@
 
 
 /obj/structure/fermenting_barrel/jagt
-	desc = "A barrel with a Saigabuck mark. This dark liquid is the strongest alcohol coming out of Grenzelhoft available. A herbal schnapps, sure to burn out any disease."
+	desc = "A barrel with a Saigabuck mark. A herbal schnapps, sure to burn out any disease."
 
 /obj/structure/fermenting_barrel/jagt/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/jagdtrunk,900)
 
 /obj/structure/fermenting_barrel/sourwine
-	desc = "A barrel that contains a Grenzelhoftian classic. An extremely sour wine that is watered down with mineral water."
+	desc = "A barrel that contains an extremely sour wine that is watered down with mineral water."
 
 /obj/structure/fermenting_barrel/sourwine/Initialize()
 	. = ..()

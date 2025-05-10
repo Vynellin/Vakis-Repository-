@@ -191,8 +191,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 /datum/game_mode/chaosmode/proc/pick_bandits()
 	//BANDITS
 	banditgoal = rand(200,400)
-	restricted_jobs = list("Grand Duke",
-	"Consort",
+	restricted_jobs = list(/datum/job/roguetown/lord::title,
 	"Merchant",
 	"Priest",
 	"Knight")
@@ -255,8 +254,8 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 
 
 /datum/game_mode/chaosmode/proc/pick_aspirants()
-	var/list/possible_jobs_aspirants = list("Prince", "Princess", "Knight Captain", "Steward", "Hand", "Knight")
-	var/list/possible_jobs_helpers = list("Knight Captain", "Prince", "Princess", "Hand",  "Steward", "Knight")
+	var/list/possible_jobs_aspirants = list("Nobleman", "Knight Captain", "Steward", "Hand", "Knight")
+	var/list/possible_jobs_helpers = list("Knight Captain", "Nobleman", "Hand",  "Steward", "Knight")
 	var/list/rolesneeded = list("Aspirant","Loyalist","Supporter")
 
 	antag_candidates = get_players_for_role(ROLE_ASPIRANT)
@@ -329,7 +328,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 	restricted_jobs = list()
 
 /datum/game_mode/chaosmode/proc/pick_maniac()
-	restricted_jobs = list("Grand Duke", "Consort")
+	restricted_jobs = list("Grand Duke")
 	antag_candidates = get_players_for_role(ROLE_MANIAC)
 	var/datum/mind/villain = pick_n_take(antag_candidates)
 	if(villain)
@@ -349,7 +348,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 	restricted_jobs = list()
 
 /datum/game_mode/chaosmode/proc/pick_lich()
-	restricted_jobs = list("Grand Duke", "Consort", "Knight", "Knight Captain")
+	restricted_jobs = list("Grand Duke", "Knight", "Knight Captain")
 	antag_candidates = get_players_for_role(ROLE_LICH)
 	var/datum/mind/lichman = pick_n_take(antag_candidates)
 	if(lichman)
@@ -371,8 +370,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 /datum/game_mode/chaosmode/proc/pick_vampires()
 	var/vampsremaining = 3
 	restricted_jobs = list(
-	"Grand Duke",
-	"Consort",
+	/datum/job/roguetown/lord::title,
 	"Dungeoneer",
 	"Inquisitor",
 	"Confessor",
@@ -419,8 +417,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 /datum/game_mode/chaosmode/proc/pick_werewolves()
 	// Ideally we want adventurers/pilgrims/towners to roll it
 	restricted_jobs = list(
-	"Grand Duke",
-	"Consort",
+	/datum/job/roguetown/lord::title,
 	"Dungeoneer",
 	"Inquisitor",
 	"Confessor",
@@ -438,8 +435,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 	"Knight",
 	"Mortician",
 	"Desert Rider",
-	"Desert Rider Mercenary",
-	"Grenzelhoft Mercenary"
+	"Desert Rider Mercenary"
 	)
 
 	var/num_werewolves = rand(1,2)

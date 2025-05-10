@@ -16,17 +16,6 @@
 	cost = 5
 	contains = list(/obj/item/clothing/head/roguetown/roguehood/shalal)
 
-
-/datum/supply_pack/rogue/Sellsword/grenzelhofthat
-	name = "Grenzel Hat"
-	cost = 5
-	contains = list(/obj/item/clothing/head/roguetown/grenzelhofthat)
-
-/datum/supply_pack/rogue/Sellsword/Grenzelpants
-	name = "Grenzel Pants"
-	cost = 5
-	contains = list(/obj/item/clothing/under/roguetown/grenzelpants)
-
 /datum/supply_pack/rogue/Sellsword/coif/steel
 	name = "Steel Coif"
 	cost = 20

@@ -1,6 +1,7 @@
 /datum/language/canilunzt
 	name = "Canilunzt"
-	desc = "A somewhat simple language consisting of heavily articulate barks, growls, yaps, and combined movements of the tail and ears. It's natively spoken by the Lupian and Vulpkian. Its parlance has been loosely compared to the Grenzel language group."
+	desc = "In Tamari's grace came language, to man and beast. Canilunzt stands as stark reminder that; though verbiage may sit similar to less complicated languages - the sheer incorporation of the rest of the body \
+		informs a cacophony of additional complication."
 	speech_verb = "rrrfts"
 	ask_verb = "rurs"
 	exclaim_verb = "snaps"

@@ -119,8 +119,8 @@
 	grid_width = 64
 	grid_height = 32
 
-/obj/item/clothing/gloves/roguetown/grenzelgloves
-	name = "grenzelhoft gloves"
+/obj/item/clothing/gloves/roguetown/blacksmith
+	name = "forge gauntlets"
 	desc = ""
 	icon_state = "grenzelgloves"
 	item_state = "grenzelgloves"
@@ -134,9 +134,6 @@
 	drop_sound = 'sound/foley/dropsound/cloth_drop.ogg'
 	anvilrepair = null
 	sewrepair = TRUE
-
-/obj/item/clothing/gloves/roguetown/grenzelgloves/blacksmith
-	name = "forge gauntlets"
 
 //---------------- BLACKSTEEL ---------------------
 

@@ -375,7 +375,7 @@
 	var/reason = ""
 	var/employer = "unknown employer"
 	var/employer_gender
-	if(prob(65))
+	if(prob(50))
 		employer_gender = MALE
 	else
 		employer_gender = FEMALE

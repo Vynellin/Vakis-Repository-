@@ -77,7 +77,7 @@
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/hagwoodbitter
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/hagwoodbitter = 48)
-	desc = "A bottle with the hagwood bitters cork-seal. The least bitter thing to be exported from the Grenzelhoft occupied state of Zorn."
+	desc = "A bottle with the hagwood bitters cork-seal."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/aurorian
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/aurorian = 48)
@@ -102,11 +102,11 @@
 // WINES - Expensive, Nobleblooded
 /obj/item/reagent_containers/glass/bottle/rogue/wine
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/wine = 48)
-	desc = "A bottle that contains a generic red-wine, likely from Raneshen. It has a red-clay cork-seal."
+	desc = "A bottle that contains a generic red-wine. It has a red-clay cork-seal."
 
 /obj/item/reagent_containers/glass/bottle/rogue/wine/sourwine
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/sourwine = 48)
-	desc = "A bottle that contains a Grenzelhoftian classic with a black ink cork-seal.. An extremely sour wine that is watered down with mineral water."
+	desc = "A bottle, sealed by a black ink cork-seal. An extremely sour wine that is watered down with mineral water."
 
 /obj/item/reagent_containers/glass/bottle/rogue/redwine
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/redwine = 48)

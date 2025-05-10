@@ -174,8 +174,7 @@
 /obj/item/rogueweapon/huntingknife/combat
 	force = 16
 	name = "seax"
-	desc = "A fighting knife used amongst the Grenzels and Northerners for centuries, serving dual purpose as a \
-	tool of daily life and as a capable fighting knife."
+	desc = "An honored shortsword that's simple; functional, and deadly, in the right hands."
 	possible_item_intents = list(/datum/intent/dagger/cut, /datum/intent/dagger/chop/cleaver, /datum/intent/dagger/sucker_punch,)
 	icon_state = "combatknife"
 	icon = 'icons/roguetown/weapons/32.dmi'

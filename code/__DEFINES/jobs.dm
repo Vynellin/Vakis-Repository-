@@ -188,7 +188,6 @@
 #define VETERAN			(1<<1)
 #define MERCENARY		(1<<2)
 #define DESERT_RIDER	(1<<3)	//Unused
-#define GRENZELHOFT		(1<<4)	//Unused
 
 
 #define TRIBAL		(1<<8)
@@ -212,7 +211,6 @@
 #define JCOLOR_YEOMAN "#819e82"
 #define JCOLOR_PEASANT "#b09262"
 #define JCOLOR_MERCENARY "#c86e3a"
-#define JCOLOR_INQUISITION "#FF0000"
 
 // job display orders //
 
@@ -286,7 +284,6 @@
 #define JDO_WRETCH 30.4
 
 #define JDO_MERCENARY 31
-#define JDO_GRENZELHOFT 31.1
 #define JDO_DESERT_RIDER 31.2
 #define JDO_VET 31.4
 
@@ -372,7 +369,6 @@
 	/datum/job/roguetown/pilgrim,\
 	/datum/job/roguetown/adventurer,\
 	/datum/job/roguetown/mercenary/desert_rider,\
-	/datum/job/roguetown/mercenary/grenzelhoft,\
 	/datum/job/roguetown/bandit,\
 	/datum/job/roguetown/wretch
 

@@ -23,8 +23,8 @@
 	cost = 20
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/ratkept)
 
-/datum/supply_pack/rogue/alcohol/grenzelbeer
-	name = "Grenzelhoftian Bitter Beer"
+/datum/supply_pack/rogue/alcohol/hagwoodbitter
+	name = "Hagwood Bitters Beer"
 	cost = 25
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/hagwoodbitter)
 
@@ -58,8 +58,8 @@
 	cost = 20
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/wine)
 
-/datum/supply_pack/rogue/alcohol/winegrenzel
-	name = "Grenzelhoftian Sour Wine"
+/datum/supply_pack/rogue/alcohol/winesour
+	name = "Sour Wine"
 	cost = 25
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/wine/sourwine)
 

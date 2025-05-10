@@ -113,12 +113,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Desert Rider Mercenary")
 	delete_after_roundstart = FALSE
 
-/obj/effect/landmark/start/grenzelhoftlate
-	name = "Grenzelhoftlate"
-	icon_state = "arrow"
-	jobspawn_override = list("Grenzelhoft Mercenary")
-	delete_after_roundstart = FALSE
-
 /obj/effect/landmark/start/mercenarylate
 	name = "Mercenarylate"
 	icon_state = "arrow"
@@ -326,10 +320,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 
 /obj/effect/landmark/start/vagrant
 	name = "Beggar"
-	icon_state = "arrow"
-
-/obj/effect/landmark/start/lady
-	name = "Consort"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/nobleman

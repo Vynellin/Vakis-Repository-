@@ -1308,7 +1308,7 @@
 
 /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan
 	name = "\improper Etruscan bascinet"
-	desc = "A steel bascinet helmet of Etruscan origin, though also widely used in Grenzelhoft. Bears a straight visor, or \"klappvisier\", which can greatly reduce visibility."
+	desc = "A steel bascinet helmet with a straight visor, trading heavy protection for low visibility."
 	icon_state = "klappvisier"
 	item_state = "klappvisier"
 	adjustable = CAN_CADJUST
@@ -1642,59 +1642,6 @@
 	name = "doctor's hat"
 	desc = "My cure is most effective."
 	icon_state = "physhat"
-
-/obj/item/clothing/head/roguetown/grenzelhofthat
-	name = "grenzelhoft plume hat"
-	desc = "Slaying monsters or fair maidens: Grenzelhoft stands."
-	icon_state = "grenzelhat"
-	item_state = "grenzelhat"
-	icon = 'icons/roguetown/clothing/head.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
-	slot_flags = ITEM_SLOT_HEAD
-	detail_tag = "_detail"
-	dynamic_hair_suffix = ""
-	max_integrity = 150
-	armor = list("blunt" = 15, "slash" = 20, "stab" = 15, "piercing" = 0, "fire" = 0, "acid" = 0)
-	sewrepair = TRUE
-	var/picked = FALSE
-
-/obj/item/clothing/head/roguetown/grenzelhofthat/attack_right(mob/user)
-	..()
-	if(!picked)
-		var/list/colors = list(
-		"Swan White"="#ffffff",
-		"Lavender"="#865c9c",
-		"Royal Purple"="#5E4687",
-		"Wine Rouge"="#752B55",
-		"Sow's skin"="#CE929F",
-		"Knight's Red"="#933030",
-		"Madroot Red"="#AD4545",
-		"Marigold Orange"="#E2A844",
-		"Politely, Yuck"="#685542",
-		"Aeternus' Yellow"="#FFFD8D",
-		"Bog Green"="#375B48",
-		"Seafoam Green"="#49938B",
-		"Woad Blue"="#395480",
-		"Cornflower Blue"="#749EE8",
-		"Blacksteel Grey"="#404040",)
-		var/choice = input(user, "Choose a color.", "Grenzelhoft colors") as anything in colors
-		var/playerchoice = colors[choice]
-		picked = TRUE
-		detail_color = playerchoice
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_head()
-
-/obj/item/clothing/head/roguetown/grenzelhofthat/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
 
 /obj/item/clothing/head/roguetown/variellemask
 	name = "variellian mask"

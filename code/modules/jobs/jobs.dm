@@ -60,9 +60,8 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 	ROLE_PAI))
 
 GLOBAL_LIST_INIT(noble_positions, list(
-	"Grand Duke",
-	"Consort",
-	"Prince",
+	/datum/job/roguetown/lord::title,
+	"Nobleman",
 	"Hand",
 	"Knight Captain",
 	"Marshal",
@@ -137,7 +136,6 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 
 GLOBAL_LIST_INIT(mercenary_positions, list(
 	"Mercenary",
-	"Grenzelhoft Mercenary",
 	"Desert Rider Mercenary",
 	"Veteran",
 ))
