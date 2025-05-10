@@ -423,7 +423,7 @@
 	title = "Martyr"
 	department_flag = CHURCHMEN
 	faction = "Station"
-	tutorial = "Martyrs are hand-picked among the most devout of the Holy See. They are given one of the See's cherished relics to protect the Church, and to inspire hope and lead by example of grace, kindness and vicious intolerance to any who do not share the belief of the Nine. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
+	tutorial = "Martyrs are hand-picked among the most devout. They are given one of the protectorate's cherished relics to protect the Church, and to inspire hope and lead by example of grace. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
 	allowed_patrons = ALL_CHAOS_PATRONS
@@ -501,7 +501,7 @@
 	lefthand_file = 'icons/mob/inhands/weapons/roguemartyr_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/roguemartyr_righthand.dmi'
 	name = "martyr sword"
-	desc = "A relic from the Holy See's own vaults. It simmers with godly energies, and will only yield to the hands of those who have taken the Oath."
+	desc = "A relic from the church's vaults. It simmers with godly energies, and will only yield to the hands of those who have taken the Oath."
 	max_blade_int = 200
 	max_integrity = 300
 	parrysound = "bladedmedium"

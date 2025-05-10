@@ -10,7 +10,8 @@
 	allowed_races = RACES_NO_CONSTRUCT		//Too recent arrivals to ascend to priesthood.
 	allowed_patrons = ALL_CHAOS_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
-	tutorial = "Placeholder text."
+	tutorial = "The nine protect; and it is your watch that has kept the church comfortable under such, even through the debates of nobles and scholars, balance and change. Aeternus guides your hand, yet still; \
+				to keep this as it is, fraught as it may sometimes feel."
 	whitelist_req = FALSE
 
 	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot, /obj/effect/proc_holder/spell/self/convertrole/templar, /obj/effect/proc_holder/spell/self/convertrole/monk)

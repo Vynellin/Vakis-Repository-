@@ -10,7 +10,7 @@
 	allowed_patrons = ALL_CHAOS_PATRONS 
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/job/roguetown/monk
-	tutorial = "Chores, some more chores- Even more chores.. Oh how the life of a humble acolyte is exhausting… You have faith, but even you know you gave up a life of adventure for that of the security in the Church. Assist the Priest in their daily tasks, maybe today will be the day something interesting happens."
+	tutorial = "An Acolyte's life is exhausting; pulling double duty as the church's servant and student. Some find it wonderfully fufilling; others will grow to resent it."
 
 	display_order = JDO_MONK
 	give_bank_account = TRUE

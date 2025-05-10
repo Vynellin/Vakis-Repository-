@@ -11,7 +11,7 @@
 	allowed_races = RACES_ALL_KINDS
 	allowed_patrons = ALL_CHAOS_PATRONS //gets set to Tamari on the outfit anyways lol
 	outfit = /datum/outfit/job/roguetown/druid
-	tutorial = "Placeholder description."
+	tutorial = "Tamari's gift to men was the earth; and it is ours to protect and venerate, as much as we can."
 
 	display_order = JDO_DRUID
 	give_bank_account = TRUE
