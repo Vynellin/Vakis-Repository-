@@ -16,8 +16,9 @@ GLOBAL_LIST_EMPTY(lord_titles)
 		/obj/effect/proc_holder/spell/self/grant_title,
 		/obj/effect/proc_holder/spell/self/convertrole/servant,
 		/obj/effect/proc_holder/spell/self/convertrole/guard,
+		/obj/effect/proc_holder/spell/self/convertrole/mercenary,
+		/obj/effect/proc_holder/spell/self/convertrole/bog,
 		/obj/effect/proc_holder/spell/self/grant_nobility,
-		/obj/effect/proc_holder/spell/self/convertrole/bog
 	)
 	outfit = /datum/outfit/job/roguetown/lord
 	visuals_only_outfit = /datum/outfit/job/roguetown/lord/visuals
@@ -254,3 +255,31 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	ADD_TRAIT(recruit, TRAIT_NOBLE, TRAIT_GENERIC)
 	REMOVE_TRAIT(recruit, TRAIT_OUTLANDER, ADVENTURER_TRAIT)
 	return TRUE
+
+
+/obj/effect/proc_holder/spell/self/convertrole/servant
+	name = "Recruit Servant"
+	new_role = "Servant"
+	overlay_state = "recruit_servant"
+	recruitment_faction = "Servants"
+	recruitment_message = "Serve the crown, %RECRUIT!"
+	accept_message = "FOR THE CROWN!"
+	refuse_message = "I refuse."
+	charge_max = 100
+
+/obj/effect/proc_holder/spell/self/convertrole/mercenary
+	name = "Recruit Mercenary"
+	new_role = "Mercenary"
+	recruitment_faction = "MERCENARIES"
+	recruitment_message = "Serve the Guild, %RECRUIT!"
+	accept_message = "FOR THE GUILD!"
+	refuse_message = "I refuse."
+	charge_max = 100
+
+/obj/effect/proc_holder/spell/self/convertrole/bog
+	name = "Recruit Warden"
+	new_role = "Warden"
+	recruitment_faction = "Bog Guard"
+	recruitment_message = "Serve the Wardens, %RECRUIT!"
+	accept_message = "FOR THE GROVE!"
+	refuse_message = "I refuse."
