@@ -24,7 +24,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	visuals_only_outfit = /datum/outfit/job/roguetown/lord/visuals
 
 	display_order = JDO_LORD
-	tutorial = "Elevated upon your throne through a web of intrigue and political upheaval, you are the absolute authority of these lands and at the center of every plot within it. Every man, woman and child is envious of your position and would replace you in less than a heartbeat: Show them the error of their ways."
+	tutorial = "Rasura protects, Rasura provides. You are the ultimate authority in Sunmarch; and while you bear loyalty to those above your station in the heartland - you are the end-all for internal matters."
 	whitelist_req = FALSE
 	min_pq = 10
 	max_pq = null
