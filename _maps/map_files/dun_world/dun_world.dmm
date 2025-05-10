@@ -15169,7 +15169,7 @@
 /obj/item/clothing/cloak/lordcloak/ladycloak,
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/clothing/cloak/lordcloak,
-/obj/item/clothing/suit/roguetown/shirt/dress/royal/prince,
+/obj/item/clothing/suit/roguetown/shirt/dress/royal/nobleman,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/cave)
 "grI" = (
@@ -18190,7 +18190,7 @@
 "hHn" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
-/obj/effect/landmark/start/prince{
+/obj/effect/landmark/start/nobleman{
 	dir = 8
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
@@ -31490,7 +31490,7 @@
 "niv" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
-/obj/effect/landmark/start/prince{
+/obj/effect/landmark/start/nobleman{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood{

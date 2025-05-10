@@ -132,7 +132,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/lord
-	name = "Grand Duke"
+	name = /datum/job/roguetown/lord::title
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/knight
@@ -332,8 +332,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Consort"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/prince
-	name = "Prince"
+/obj/effect/landmark/start/nobleman
+	name = /datum/job/roguetown/nobleman::title
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerr

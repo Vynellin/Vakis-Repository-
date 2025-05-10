@@ -4107,7 +4107,7 @@
 /obj/item/clothing/cloak/lordcloak/ladycloak,
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/clothing/cloak/lordcloak,
-/obj/item/clothing/suit/roguetown/shirt/dress/royal/prince,
+/obj/item/clothing/suit/roguetown/shirt/dress/royal/nobleman,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/cave/dukecourt)
 "AW" = (

@@ -177,7 +177,7 @@
 #define SQUIRE		(1<<2)
 #define SERVANT		(1<<3)
 #define VAGABOND	(1<<4)
-#define PRINCE		(1<<5)
+#define NOBLEMAN		(1<<5)
 #define SHOPHAND	(1<<6)
 #define CLERK 		(1<<7)
 #define MAGEAPPRENTICE	(1<<8)
@@ -219,7 +219,7 @@
 // Nobles
 #define JDO_LORD 1
 #define JDO_LADY 1.1
-#define JDO_PRINCE 1.2
+#define JDO_NOBLEMAN 1.2
 #define JDO_HAND 2
 #define JDO_STEWARD 3
 #define JDO_CLERK 3.1
@@ -315,7 +315,7 @@
 	/datum/job/roguetown/magician
 
 #define NOBLE_ROLES \
-	/datum/job/roguetown/prince,\
+	/datum/job/roguetown/nobleman,\
 	/datum/job/roguetown/councillor,\
 	/datum/job/roguetown/physician,\
 	/datum/job/roguetown/marshal,\

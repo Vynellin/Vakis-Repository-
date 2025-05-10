@@ -18143,7 +18143,7 @@
 "mIE" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
-/obj/effect/landmark/start/prince{
+/obj/effect/landmark/start/nobleman{
 	dir = 8
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
@@ -34201,7 +34201,7 @@
 "xRc" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/fabric_double,
-/obj/effect/landmark/start/prince{
+/obj/effect/landmark/start/nobleman{
 	dir = 1
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/east,

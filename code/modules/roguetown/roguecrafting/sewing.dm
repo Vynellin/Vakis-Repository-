@@ -589,7 +589,7 @@
 
 /datum/crafting_recipe/roguetown/sewing/royaldress
 	name = "royal dress (2 fibers, 3 cloth, 2 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/royal/princess)
+	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/royal/noblewoman)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2,
 				/obj/item/natural/silk = 2)
@@ -599,7 +599,7 @@
 
 /datum/crafting_recipe/roguetown/sewing/royalshirt
 	name = "royal shirt (2 fibers, 3 cloth, 2 silk)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/royal/prince)
+	result = list(/obj/item/clothing/suit/roguetown/shirt/dress/royal/nobleman)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 2,
 				/obj/item/natural/silk = 2)
