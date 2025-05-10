@@ -6,7 +6,7 @@
 	total_positions = 75
 	spawn_positions = 75
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "Solaris Ridge is your home, through all it's faults. You are not an explorer; nor most likely a warrior - but you are one with it; all the same."
+	tutorial = "Solaris Ridge is your home, the Sunmarch your life, through all it's faults. You are not an explorer; nor most likely a warrior - but you are one with it; all the same."
 	advclass_cat_rolls = list(CTAG_TOWNER = 20)
 	outfit = null
 	outfit_female = null

@@ -1,6 +1,7 @@
 /datum/advclass/drunkard
 	name = "Gambler"
-	tutorial = "You are a gambler. Everyone in your life has given up on you, and the stress of losing it all over and over has taken its toll on your body. All you have left to your name are some cards, dice and whatever is in this bottle."
+	tutorial = "You were a gambler, once - now held with only a bottle in-hand, you've staggered your way into Sunmarch for respite... yet the land \
+				may offer you none."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/drunkard

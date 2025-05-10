@@ -1,16 +1,19 @@
-/datum/advclass/witch
-	name = "Witch"
-	tutorial = "You are a witch, seen as wisefolk to some and a demon to many. Ostracized and sequestered for wrongthinks or outright heresy, your potions are what the commonfolk turn to when all else fails, and for this they tolerate you — at an arm's length. Take care not to end 'pon a pyre, for the church condemns your left handed arts."
+/datum/advclass/apothecary
+	name = "Apothecary"
+	tutorial = "While alchemy was an ostracized art in the Dusk Era - the founding of the Mage's University led to legitimization; proliferation. \
+				Ultimately, apothecaries have carved their place into Rasura at large, whether the superstitious mind you or not - a detail that the \
+				more \"good humored\" mages alongside you filtered into knowledge to feed your way in jest - however useful they may have incidentally \
+				become in the process..."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/adventurer/witch
+	outfit = /datum/outfit/job/roguetown/adventurer/apothecary
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
-	traits_applied = list(TRAIT_RITUALIST, TRAIT_DEATHSIGHT, TRAIT_WITCH)
+	traits_applied = list(TRAIT_RITUALIST, TRAIT_DEATHSIGHT)
 	cmode_music = 'sound/music/combat_cult.ogg'
 
-/datum/outfit/job/roguetown/adventurer/witch/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/adventurer/apothecary/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/witchhat
+	head = /obj/item/clothing/head/roguetown/apothecaryhat
 	mask = /obj/item/clothing/head/roguetown/roguehood/black
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/phys
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest

@@ -80,7 +80,7 @@
 			to_chat(src, span_notice("I can't fly away while being grabbed!"))
 
 /mob/living/simple_animal/hostile/retaliate/bat/crow
-	name = "zad"
+	name = "crow"
 	desc = ""
 	icon = 'icons/roguetown/mob/monster/crow.dmi'
 	icon_state = "crow_flying"
@@ -96,7 +96,7 @@
 	fly_time = 3 SECONDS // slowing down crow for witches
 
 /obj/effect/decal/remains/crow
-	name = "zad remains"
+	name = "crow remains"
 	gender = PLURAL
 	icon_state = "crow1"
 	icon = 'icons/roguetown/mob/monster/crow.dmi'

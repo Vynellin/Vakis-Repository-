@@ -1,7 +1,7 @@
 /datum/advclass/blacksmith
 	name = "Blacksmith"
-	tutorial = "A skilled blacksmith, able to forge capable weapons for warriors in the bog, \
-	only after building a forge for themselves ofourse"
+	tutorial = "A skilled blacksmith, able to forge capable weapons for warriors... if only \
+	you had a forge. Perhaps you might create one?"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/blacksmith

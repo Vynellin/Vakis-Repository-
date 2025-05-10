@@ -2,7 +2,7 @@
 
 /datum/advclass/mastercarpenter
 	name = "Master Carpenter"
-	tutorial = "Placeholder description."
+	tutorial = "You've mastered carpentry, the art of woodcutting and creation, on some form or another."
 	
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS

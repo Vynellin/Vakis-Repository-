@@ -1625,8 +1625,8 @@
 	icon_state = pick("wizardhatred", "wizardhatyellow", "wizardhatgreen", "wizardhat")
 	..()
 
-/obj/item/clothing/head/roguetown/witchhat
-	name = "witch hat"
+/obj/item/clothing/head/roguetown/apothecaryhat
+	name = "apothecary hat"
 	desc = ""
 	icon_state = "witch"
 	item_state = "witch"

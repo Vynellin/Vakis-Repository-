@@ -6,17 +6,16 @@
 	outfit = /datum/outfit/job/roguetown/adventurer/trader
 	category_tags = list(CTAG_ADVENTURER, CTAG_COURTAGENT)
 	traits_applied = list(TRAIT_OUTLANDER, TRAIT_SEEPRICES)
-	classes = list("Peddler" = "You make your coin peddling in spices and performing back-alley 'medical' procedures. Hope your patient didn't need that kidney.",
+	classes = list("Peddler" = "You make your coin peddling in spices and performing back-alley 'medical' procedures.",
 					"Brewer" = "You make your coin peddling imported alcohols from all over the world, though you're no stranger to the craft, and have experience brewing your own ale in a pinch.",
 					"Jeweler" = "You make your coin peddling exotic jewelry, gems, and shiny things.",
-					"Doomsayer" = "THE WORLD IS ENDING!!! At least, that's what you want your clients to believe. You'll offer them a safe place in the new world, of course - built by yours truly.",
 					"Scholar" = "You are a scholar traveling the world in order to write a book about your ventures. You trade in stories and tales of your travels.",
 					"Harlequin" = "You are a travelling entertainer - a jester by trade. Where you go, chaos follows - and mischief is made.")
 
 /datum/outfit/job/roguetown/adventurer/trader/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	var/classes = list("Peddler","Brewer","Jeweler","Doomsayer","Scholar","Harlequin")
+	var/classes = list("Peddler","Brewer","Jeweler","Scholar","Harlequin")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	switch(classchoice)
@@ -107,36 +106,6 @@
 			H.change_stat("perception", 1)
 			H.change_stat("strength", 1)
 			H.change_stat("endurance", 1)
-
-		if ("Doomsayer")
-			to_chat(H, span_warning("THE WORLD IS ENDING!!! At least, that's what you want your clients to believe. You'll offer them a safe place in the new world, of course - built by yours truly."))
-			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/masonry, 3, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/labor/lumberjacking, 2, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-			head = /obj/item/clothing/head/roguetown/roguehood/black
-			mask = /obj/item/clothing/mask/rogue/skullmask
-			shoes = /obj/item/clothing/shoes/roguetown/boots
-			pants = /obj/item/clothing/under/roguetown/tights/black
-			shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/black
-			belt = /obj/item/storage/belt/rogue/leather/black
-			cloak = /obj/item/clothing/cloak/half
-			backl = /obj/item/storage/backpack/rogue/satchel
-			backr = /obj/item/storage/backpack/rogue/satchel
-			neck = /obj/item/storage/belt/rogue/pouch/coins/mid
-			beltl = /obj/item/flashlight/flare/torch/lantern
-			beltr = /obj/item/rogueweapon/stoneaxe/woodcut
-			backpack_contents = list(/obj/item/clothing/neck/roguetown/psicross/silver = 3, /obj/item/clothing/neck/roguetown/psicross = 2, /obj/item/clothing/neck/roguetown/psicross/wood = 1, /obj/item/rogueweapon/huntingknife = 1)
-			H.change_stat("intelligence", 3)
-			H.change_stat("perception", 1)
-			H.change_stat("strength", 1)
-			H.change_stat("constitution", 1)
 
 		if ("Scholar")
 			to_chat(H, span_warning("You are a scholar traveling the world in order to write a book about your ventures. You trade in stories and tales of your travels."))

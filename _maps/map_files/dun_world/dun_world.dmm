@@ -30821,7 +30821,7 @@
 /obj/item/storage/roguebag,
 /obj/item/rogueweapon/hoe/stone,
 /obj/item/clothing/suit/roguetown/shirt/robe/phys,
-/obj/item/clothing/head/roguetown/witchhat,
+/obj/item/clothing/head/roguetown/apothecaryhat,
 /obj/item/broom,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)

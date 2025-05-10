@@ -1,3 +1,4 @@
+// Naked & Afraid 2: Electric Boogaloo. Survival is a true test of skill, other's mercy - and patience.
 /datum/advclass/torso
 	name = "Torso"
 	tutorial = "Some horrible accident in the forest away all of your limbs!\nSurvival will be a true TRIUMPH."
@@ -5,7 +6,7 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/torso
 	traits_applied = list(TRAIT_HEAVYARMOR, TRAIT_MEDIUMARMOR, TRAIT_STEELHEARTED)
-	category_tags = list(CTAG_DISABLED)
+	category_tags = list(CTAG_DISABLED) // Butttt I don't want this to be something everyone tries to grind; either, so. Event only.
 
 /datum/outfit/job/roguetown/adventurer/torso/pre_equip(mob/living/carbon/human/H)
 	..()

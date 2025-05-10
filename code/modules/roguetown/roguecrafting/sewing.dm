@@ -428,7 +428,7 @@
 
 /datum/crafting_recipe/roguetown/sewing/witchhat
 	name = "witch hat (1 fibers, 2 cloth)"
-	result = list(/obj/item/clothing/head/roguetown/witchhat)
+	result = list(/obj/item/clothing/head/roguetown/apothecaryhat)
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
 	craftdiff = 4

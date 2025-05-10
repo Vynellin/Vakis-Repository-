@@ -2,7 +2,7 @@
 
 /datum/advclass/masterwoodcutter
 	name = "Master Lumberjack"
-	tutorial = "Placeholder description."
+	tutorial = "The forest called, and you culled. Tamari's bounty is in the bark and wood, milled and cut."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/masterwoodcutter
