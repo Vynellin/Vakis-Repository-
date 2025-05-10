@@ -187,7 +187,6 @@
 
 #define VETERAN			(1<<1)
 #define MERCENARY		(1<<2)
-#define DESERT_RIDER	(1<<3)	//Unused
 
 
 #define TRIBAL		(1<<8)
@@ -284,7 +283,6 @@
 #define JDO_WRETCH 30.4
 
 #define JDO_MERCENARY 31
-#define JDO_DESERT_RIDER 31.2
 #define JDO_VET 31.4
 
 #define JDO_VAGRANT 33
@@ -368,7 +366,6 @@
 #define WANDERER_ROLES \
 	/datum/job/roguetown/pilgrim,\
 	/datum/job/roguetown/adventurer,\
-	/datum/job/roguetown/mercenary/desert_rider,\
 	/datum/job/roguetown/bandit,\
 	/datum/job/roguetown/wretch
 
