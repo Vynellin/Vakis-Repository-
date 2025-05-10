@@ -433,14 +433,6 @@
 /obj/item/clothing/suit/roguetown/armor/leather/vest/white
 	color = CLOTHING_WHITE
 
-/obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
-	name = "silk jacket"
-	desc = "A soft and comfortable jacket."
-	icon_state = "nightman"
-	sleeved = 'icons/roguetown/clothing/onmob/armor.dmi'
-	allowed_sex = list(MALE, FEMALE)
-	allowed_race = NON_DWARVEN_RACE_TYPES
-
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/hand
 	name = "Hand's vest"

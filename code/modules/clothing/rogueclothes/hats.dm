@@ -284,12 +284,6 @@
 	icon_state = "strawhat"
 	sewrepair = TRUE
 
-/obj/item/clothing/head/roguetown/nightman
-	name = "teller's hat"
-	icon_state = "tophat"
-	color = CLOTHING_BLACK
-	sewrepair = TRUE
-
 /obj/item/clothing/head/roguetown/bardhat
 	name = "hat"
 	icon_state = "bardhat"

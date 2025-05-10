@@ -12,14 +12,6 @@
 					/obj/item/clothing/head/roguetown/physician,
 				)
 
-/datum/supply_pack/rogue/wardrobe/hat/nightmanhat
-	name = "Teller's Hats"
-	cost = 10
-	contains = list(
-					/obj/item/clothing/head/roguetown/nightman,
-					/obj/item/clothing/head/roguetown/nightman,
-				)
-
 /datum/supply_pack/rogue/wardrobe/hat/bardhat
 	name = "Minstrel's Hat"
 	cost = 10

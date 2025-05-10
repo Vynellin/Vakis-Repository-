@@ -25,9 +25,8 @@
 		head  = /obj/item/clothing/head/roguetown/roguehood/black
 	else
 		shirt = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
-		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
+		armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
 		pants = /obj/item/clothing/under/roguetown/tights/black
-		head = /obj/item/clothing/head/roguetown/nightman
 	backr = /obj/item/storage/backpack/rogue/satchel
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	belt = /obj/item/storage/belt/rogue/leather/plaquesilver

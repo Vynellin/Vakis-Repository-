@@ -354,18 +354,6 @@
 	icon_state = "brownkey"
 	lockid = "tailor"
 
-/obj/item/roguekey/nightman
-	name = "bathmaster's key"
-	desc = "This regal key opens the bathmaster's office - and his vault."
-	icon_state = "greenkey"
-	lockid = "nightman"
-
-/obj/item/roguekey/nightmaiden
-	name = "bathhouse key"
-	desc = "This regal key opens doors inside the bath-house."
-	icon_state = "brownkey"
-	lockid = "nightmaiden"
-
 /obj/item/roguekey/mercenary
 	name = "mercenary key"
 	desc = "Why, a mercenary would not kick doors down."

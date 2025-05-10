@@ -262,9 +262,6 @@
 /obj/structure/roguemachine/vendor/inn
 	keycontrol = "tavern"
 
-/obj/structure/roguemachine/vendor/bathhouse
-	keycontrol = "nightman"
-
 /obj/structure/roguemachine/vendor/inn/Initialize()
     . = ..()
     

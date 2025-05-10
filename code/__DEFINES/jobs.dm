@@ -156,7 +156,6 @@
 #define COOK		(1<<6)
 #define KNAVEWENCH (1<<7)
 #define GRABBER		(1<<8)
-#define BATHMASTER	(1<<9)
 #define WENCH		(1<<10)
 #define BEGGAR		(1<<11)
 #define ADVENTURER	(1<<12)
@@ -268,7 +267,6 @@
 
 #define JDO_BARKEEP 26
 #define JDO_COOK 27
-#define JDO_BATHMASTER 27.1
 #define JDO_KNAVEWENCH 27.2
 #define JDO_WENCH 27.3
 
@@ -334,7 +332,6 @@
 
 #define PEASANT_ROLES \
 	/datum/job/roguetown/villager,\
-	/datum/job/roguetown/nightmaiden,\
 	/datum/job/roguetown/beggar,\
 	/datum/job/roguetown/butcher,\
 	/datum/job/roguetown/cook,\
@@ -350,7 +347,6 @@
 
 #define YEOMEN_ROLES \
 	/datum/job/roguetown/woodsman,\
-	/datum/job/roguetown/bathmaster,\
 	/datum/job/roguetown/archivist,\
 	/datum/job/roguetown/barkeep,\
 	/datum/job/roguetown/armorsmith,\
