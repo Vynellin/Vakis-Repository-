@@ -1,18 +1,19 @@
 // Meant for cave-races, less boons than other mercs but unique weapon + mining skill and helmet-torch combo.
-/datum/advclass/mercenary/underdweller
-	name = "Underdweller"
-	tutorial = "A member of the Underdwellers, you've taken many of the deadliest contracts known to man in literal underground circles. Drow or Dwarf, you've put your differences aside for coin and adventure."
+/datum/advclass/mercenary/cavedweller
+	name = "Cave Dweller" // SCARY,.,,.
+	tutorial = "History aligns on the mountain dwarves, the dusk elves and kobolds - all gathered in the mountains for not insignificant time. Even today; mercenary-folk \
+				can hail from caverns uncharted, ruminations of former great dusk elven cities and structures unknown abound."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		/datum/species/dwarf/mountain,
 		/datum/species/elf/dark,
 		/datum/species/kobold,
 	)
-	outfit = /datum/outfit/job/roguetown/mercenary/underdweller
+	outfit = /datum/outfit/job/roguetown/mercenary/cavedweller
 	category_tags = list(CTAG_MERCENARY)
 	traits_applied = list(TRAIT_OUTLANDER)
 
-/datum/outfit/job/roguetown/mercenary/underdweller/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/mercenary/cavedweller/pre_equip(mob/living/carbon/human/H)
 	..()
 	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
 	pants = /obj/item/clothing/under/roguetown/trou/leather

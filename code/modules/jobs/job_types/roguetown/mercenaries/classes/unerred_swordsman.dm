@@ -1,14 +1,16 @@
-/datum/advclass/mercenary/condottiero
-	name = "Condottiero Guildsman"
-	tutorial = "Hailing from the Kingdom of Etrusca, Condottieri are soldiers of fortune oft found in the employ of powerful merchants. Without a war to fight back home, the Grand Duchy has become a much-needed source of contracts. Afterall, this land is rich in coin yet poor in manpower..."
+/datum/advclass/mercenary/generic
+	name = "Unerred Swordsman"
+	tutorial = "Modelled on the mercenaries of yore, untrained, unaffiliated; yet hardened in strife, those like you \
+				have gotten all-the-used to being the hunter. Yet, daily, it weighs on you. An immeasurable truth. \
+				As one hunts, so is he hunted in kind." // I'm not even fuckin' hiding it anymore, go larp as Ares.
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	traits_applied = list(TRAIT_OUTLANDER)
-	outfit = /datum/outfit/job/roguetown/mercenary/condottiero
+	outfit = /datum/outfit/job/roguetown/mercenary/unerred_swordsman
 	category_tags = list(CTAG_MERCENARY)
 	cmode_music = 'sound/music/combat_condottiero.ogg'
 
-/datum/outfit/job/roguetown/mercenary/condottiero/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/mercenary/unerred_swordsman/pre_equip(mob/living/carbon/human/H)
 	..()
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	cloak = /obj/item/clothing/cloak/half/red
@@ -19,7 +21,7 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	beltl = /obj/item/rogueweapon/sword/short
 	beltr = /obj/item/quiver/bolts
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow // THIS TYPEPATH IS FUCKING AWFUL
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
