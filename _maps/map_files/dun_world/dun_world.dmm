@@ -4773,6 +4773,16 @@
 /obj/structure/fermenting_barrel/hagwoodbitter,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement)
+"bYw" = (
+/obj/effect/decal/cobbleedge{
+	dir = 6
+	},
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/obj/item/mundane/puzzlebox/easy,
+/turf/open/floor/rogue/blocks,
+/area/rogue/under/town/basement)
 "bYC" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/under/town/basement/keep)
@@ -11186,6 +11196,10 @@
 /obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/cave/mazedungeon)
+"eMv" = (
+/obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
+/turf/open/water/bath,
+/area/rogue/under/town/basement)
 "eMx" = (
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/woods)
@@ -30259,10 +30273,6 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/beach/forest)
-"mSK" = (
-/obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
-/turf/open/water/bath,
-/area/rogue/under/town/basement)
 "mSL" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/ausbushes/ywflowers,
@@ -37726,10 +37736,6 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/goblinfort)
-"pVz" = (
-/obj/item/soap/bath,
-/turf/open/floor/rogue/tile/bath,
-/area/rogue/under/town/basement)
 "pVA" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
 /turf/open/water/bath,
@@ -50005,6 +50011,10 @@
 /obj/item/paper/scroll,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/manor)
+"vfN" = (
+/obj/item/soap/bath,
+/turf/open/floor/rogue/tile/bath,
+/area/rogue/under/town/basement)
 "vgd" = (
 /obj/structure/mineral_door/swing_door,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -50337,16 +50347,6 @@
 "voH" = (
 /turf/open/floor/carpet/red,
 /area/rogue/outdoors/mountains/decap)
-"voW" = (
-/obj/effect/decal/cobbleedge{
-	dir = 6
-	},
-/obj/structure/table/wood{
-	icon_state = "tablewood1"
-	},
-/obj/item/mundane/puzzlebox/easy,
-/turf/open/floor/rogue/blocks,
-/area/rogue/under/town/basement)
 "vps" = (
 /obj/structure/mirror{
 	pixel_x = -28;
@@ -124278,11 +124278,11 @@ qHj
 ogs
 xPZ
 eTd
-mSK
+eMv
 eTd
 eTd
 eTd
-mSK
+eMv
 xPZ
 ogs
 xPZ
@@ -125184,7 +125184,7 @@ xPZ
 eTd
 eTd
 eTd
-pVz
+vfN
 fyg
 pNJ
 xPZ
@@ -126090,7 +126090,7 @@ eTd
 fyg
 hSR
 vsI
-voW
+bYw
 eXr
 ogs
 ogs
