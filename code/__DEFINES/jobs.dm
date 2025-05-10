@@ -341,7 +341,6 @@
 	/datum/job/roguetown/vagabond,\
 	/datum/job/roguetown/shophand,\
 	/datum/job/roguetown/bapprentice,\
-	/datum/job/roguetown/prisonerb,\
 	/datum/job/roguetown/hostage,\
 	/datum/job/roguetown/prisonerr
 

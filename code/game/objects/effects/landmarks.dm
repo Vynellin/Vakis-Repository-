@@ -322,10 +322,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Prisoner (Solaris Keep)"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/prisonerb
-	name = "Prisoner (Bog)"
-	icon_state = "arrow"
-
 /obj/effect/landmark/start/hostage
 	name = "Hostage"
 	icon_state = "arrow"
