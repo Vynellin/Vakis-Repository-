@@ -184,15 +184,15 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 50)
 	first_time_text = "SOLAR BASIN"
 	droning_sound = 'sound/music/area/field.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound_dusk = 'sound/music/area/fieldsdusk.ogg'
+	droning_sound_night = 'sound/music/area/fieldsnight.ogg'
 	converted_type = /area/rogue/indoors/shelter/rtfield
 
 /area/rogue/indoors/shelter/rtfield
 	icon_state = "rtfield"
 	droning_sound = 'sound/music/area/field.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
-	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	droning_sound_dusk = 'sound/music/area/fieldsdusk.ogg'
+	droning_sound_night = 'sound/music/area/fieldsnight.ogg'
 
 
 /area/rogue/outdoors/woods
@@ -203,7 +203,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	spookysounds = SPOOKY_CROWS
 	spookynight = SPOOKY_FOREST
 	droning_sound = 'sound/music/area/forest.ogg'
-	droning_sound_dusk = 'sound/music/area/septimus.ogg'
+	droning_sound_dusk = 'sound/music/area/fieldsdusk.ogg'
 	droning_sound_night = 'sound/music/area/forestnight.ogg'
 	soundenv = 15
 	warden_area = TRUE
@@ -597,7 +597,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	icon_state = "manor"
 	droning_sound = list('sound/music/area/manor.ogg', 'sound/music/area/manor2.ogg')
 	droning_sound_dusk = null
-	droning_sound_night = null
+	droning_sound_night = list('sound/music/area/manor.ogg', 'sound/music/area/manor.ogg')
 	converted_type = /area/rogue/outdoors/exposed/manorgarri
 	first_time_text = "THE KEEP OF SOLARIS RIDGE"
 	keep_area = TRUE
