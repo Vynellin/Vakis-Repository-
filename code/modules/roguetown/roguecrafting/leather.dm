@@ -59,6 +59,13 @@
 				/obj/item/natural/fibers = 2)
 	sellprice = 30
 
+
+/datum/crafting_recipe/roguetown/leather/ammopouch
+	name = "ammo pouch"
+	result = /obj/item/ammopouch
+	reqs = list (/obj/item/natural/hide/cured = 4,
+				/obj/item/natural/fibers = 3)
+
 /datum/crafting_recipe/roguetown/leather/javelinbag
 	name = "javelin bag (1 tallow, 1 rope)"
 	result = /obj/item/quiver/javelin
