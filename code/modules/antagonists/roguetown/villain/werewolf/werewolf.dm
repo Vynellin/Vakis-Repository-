@@ -1,5 +1,5 @@
 /datum/antagonist/werewolf
-	name = "Verewolf"
+	name = "Werewolf"
 	roundend_category = "Werewolves"
 	antagpanel_category = "Werewolf"
 	job_rank = ROLE_WEREWOLF
@@ -9,10 +9,10 @@
 	var/transformed
 	var/transforming
 	var/untransforming
-	var/wolfname = "Verewolf"
+	var/wolfname = "Werewolf"
 
 /datum/antagonist/werewolf/lesser
-	name = "Lesser Verewolf"
+	name = "Lesser Werewolf"
 	increase_votepwr = FALSE
 
 /datum/antagonist/werewolf/lesser/roundend_report()
@@ -119,7 +119,7 @@
 
 /obj/item/clothing/suit/roguetown/armor/skin_armor/werewolf_skin
 	slot_flags = null
-	name = "verewolf's skin"
+	name = "werewolf's skin"
 	desc = ""
 	icon_state = null
 	body_parts_covered = FULL_BODY

@@ -12,7 +12,7 @@
 	gender = FEMALE
 
 /datum/species/werewolf
-	name = "verewolf"
+	name = "werewolf"
 	id = "werewolf"
 	species_traits = list(NO_UNDERWEAR, NO_ORGAN_FEATURES, NO_BODYPART_FEATURES)
 	inherent_traits = list(
@@ -108,4 +108,4 @@
 	return TRUE
 
 /datum/species/werewolf/random_name(gender,unique,lastname)
-	return "VEREWOLF"
+	return "WEREWOLF"
