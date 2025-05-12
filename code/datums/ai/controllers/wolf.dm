@@ -1,4 +1,4 @@
-/datum/ai_controller/volf
+/datum/ai_controller/wolf
 	movement_delay = WOLF_MOVEMENT_SPEED
 
 	ai_movement = /datum/ai_movement/basic_avoidance

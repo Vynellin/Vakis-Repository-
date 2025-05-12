@@ -140,7 +140,7 @@
 			H.change_stat("constitution", 2)
 			H.change_stat("intelligence", -2)
 			if(should_wear_masc_clothes(H))
-				head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
+				head = /obj/item/clothing/head/roguetown/helmet/leather/wolfhelm
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 				pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 				shoes = /obj/item/clothing/shoes/roguetown/boots/leather
@@ -150,7 +150,7 @@
 				neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 				beltl = /obj/item/rogueweapon/huntingknife
 			if(should_wear_femme_clothes(H))
-				head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
+				head = /obj/item/clothing/head/roguetown/helmet/leather/wolfhelm
 				armor = /obj/item/clothing/suit/roguetown/armor/leather/bikini
 				pants = /obj/item/clothing/under/roguetown/heavy_leather_pants/shorts
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/leather

@@ -23,9 +23,9 @@
 	color = "#5c5243"
 	sellprice = 18
 
-/obj/item/natural/head/volf
-	name = "volf head"
-	desc = "the head of a fearsome volf."
+/obj/item/natural/head/wolf
+	name = "wolf head"
+	desc = "the head of a fearsome wolf."
 	icon_state = "volfhead"
 	layer = 3.1
 

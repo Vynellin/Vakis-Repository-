@@ -39,7 +39,7 @@
 					)
 	mask = /obj/item/clothing/mask/rogue/facemask/steel
 	neck = /obj/item/clothing/neck/roguetown/coif
-	head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm
+	head = /obj/item/clothing/head/roguetown/helmet/leather/wolfhelm
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
 	H.change_stat("strength", 4) //have you seen this idiot's starting gear and skill spread??
 	H.change_stat("endurance", 2)

@@ -1167,9 +1167,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/volfmantle
-	name = "volf mantle"
-	desc = "A warm cloak made using the hide and head of a slain volf. A status symbol if ever there was one."
+/obj/item/clothing/cloak/wolfmantle
+	name = "wolf mantle"
+	desc = "A warm cloak made using the hide and head of a slain wolf. A status symbol if ever there was one."
 	color = null
 	icon_state = "volfpelt"
 	item_state = "volfpelt"

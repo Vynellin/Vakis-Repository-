@@ -67,7 +67,7 @@
 			backl= /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			beltl = /obj/item/rogueweapon/sword/short
 			beltr = /obj/item/quiver/arrows
-			head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm //cool hat
+			head = /obj/item/clothing/head/roguetown/helmet/leather/wolfhelm //cool hat
 			backr = /obj/item/storage/backpack/rogue/satchel
 			backpack_contents = list(
 						/obj/item/needle/thorn = 1,

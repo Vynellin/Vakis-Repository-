@@ -1455,10 +1455,10 @@
 	blocksound = SOFTHIT
 	salvage_result = /obj/item/natural/hide/cured
 
-/obj/item/clothing/head/roguetown/helmet/leather/volfhelm
+/obj/item/clothing/head/roguetown/helmet/leather/wolfhelm
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
-	name = "volf helmet"
-	desc = "A leather helmet fashioned from a volf's pelt."
+	name = "wolf helmet"
+	desc = "A leather helmet fashioned from a wolf's pelt."
 	body_parts_covered = HEAD|HAIR|EARS
 	icon_state = "volfhead"
 	item_state = "volfhead"
@@ -1738,8 +1738,8 @@
 	salvage_result = /obj/item/natural/hide/cured
 
 
-/obj/item/clothing/head/roguetown/helmet/heavy/volfplate
-	name = "volf-face helm"
+/obj/item/clothing/head/roguetown/helmet/heavy/wolfplate
+	name = "wolf-face helm"
 	desc = "A steel bascinet helmet with a volfish visor protecting the head, ears, eyes, nose and mouth."
 	icon_state = "volfplate"
 	item_state = "volfplate"
@@ -1750,7 +1750,7 @@
 	block2add = FOV_BEHIND
 	smeltresult = /obj/item/ingot/steel
 
-/obj/item/clothing/head/roguetown/helmet/heavy/volfplate/AdjustClothes(mob/user)
+/obj/item/clothing/head/roguetown/helmet/heavy/wolfplate/AdjustClothes(mob/user)
 	if(loc == user)
 		playsound(user, "sound/items/visor.ogg", 100, TRUE, -1)
 		if(adjustable == CAN_CADJUST)

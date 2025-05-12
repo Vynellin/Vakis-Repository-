@@ -1953,9 +1953,9 @@
 /area/rogue/outdoors/banditcamp)
 "wA" = (
 /obj/structure/rack/rogue,
-/obj/item/clothing/head/roguetown/helmet/leather/volfhelm,
-/obj/item/clothing/head/roguetown/helmet/leather/volfhelm,
-/obj/item/clothing/head/roguetown/helmet/leather/volfhelm,
+/obj/item/clothing/head/roguetown/helmet/leather/wolfhelm,
+/obj/item/clothing/head/roguetown/helmet/leather/wolfhelm,
+/obj/item/clothing/head/roguetown/helmet/leather/wolfhelm,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/banditcamp)
 "wB" = (

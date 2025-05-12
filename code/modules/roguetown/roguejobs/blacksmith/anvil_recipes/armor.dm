@@ -517,11 +517,11 @@
 	i_type = "Armor"
 
 
-/datum/anvil_recipe/armor/helmetvolf
+/datum/anvil_recipe/armor/helmetwolf
 	name = "Volf Face Helmet (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/volfplate
+	created_item = /obj/item/clothing/head/roguetown/helmet/heavy/wolfplate
 	craftdiff = 3
 	i_type = "Armor"
 

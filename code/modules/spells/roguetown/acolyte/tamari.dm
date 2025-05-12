@@ -155,7 +155,7 @@ var/static/list/druid_forms = list(
 		"level" = 2
 	),
 	// Intermediate forms (Level 2-3)
-	"volf" = list(
+	"wolf" = list(
 		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
 		"level" = 2
 	),

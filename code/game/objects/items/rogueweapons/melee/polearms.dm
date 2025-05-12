@@ -121,7 +121,7 @@
 
 /obj/item/rogueweapon/woodstaff/wise
 	name = "wise staff"
-	desc = "A staff for keeping the volfs at bay..."
+	desc = "A staff for keeping the wolfs at bay..."
 
 /obj/item/rogueweapon/woodstaff/aries
 	name = "staff of the shepherd"

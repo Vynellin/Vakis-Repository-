@@ -144,18 +144,18 @@
 	reqs = list(/obj/item/natural/hide/cured = 2)
 	sellprice = 10
 
-/datum/crafting_recipe/roguetown/leather/volfhelm
-	name = "volf helm (1 leather, 1 fur, 1 volf head)"
-	result = list(/obj/item/clothing/head/roguetown/helmet/leather/volfhelm)
-	reqs = list(/obj/item/natural/hide/cured = 1, /obj/item/natural/fur = 2, /obj/item/natural/head/volf = 1)
+/datum/crafting_recipe/roguetown/leather/wolfhelm
+	name = "wolf helm (1 leather, 1 fur, 1 wolf head)"
+	result = list(/obj/item/clothing/head/roguetown/helmet/leather/wolfhelm)
+	reqs = list(/obj/item/natural/hide/cured = 1, /obj/item/natural/fur = 2, /obj/item/natural/head/wolf = 1)
 	sellprice = 20
 
-/datum/crafting_recipe/roguetown/leather/volfmantle
-	name = "volf mantle (2 leather, 1 volf head)"
-	result = /obj/item/clothing/cloak/volfmantle
+/datum/crafting_recipe/roguetown/leather/wolfmantle
+	name = "wolf mantle (2 leather, 1 wolf head)"
+	result = /obj/item/clothing/cloak/wolfmantle
 	reqs = list(
 		/obj/item/natural/hide/cured = 2,
-		/obj/item/natural/head/volf = 1,
+		/obj/item/natural/head/wolf = 1,
 	)
 	craftdiff = 2
 
