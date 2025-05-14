@@ -15,12 +15,12 @@
 	var/real_value = get_real_price()
 	if(real_value > 0)
 		if(HAS_TRAIT(user, TRAIT_SEEPRICES) || simpleton_price)
-			. += span_info("Value: [real_value] mammon")
+			. += span_info("Value: [real_value] sunmarks")
 		else if(HAS_TRAIT(user, TRAIT_SEEPRICES_SHITTY))
 			//you can get up to 50% of the value if you have shitty see prices
 			var/static/fumbling_seed = text2num(GLOB.rogue_round_id)
 			var/fumbled_value = max(1, round(real_value + (real_value * clamp(noise_hash(real_value, fumbling_seed) - 0.25, -0.25, 0.25)), 1))
-			. += span_info("Value: [fumbled_value] mammon... <i>I think</i>")
+			. += span_info("Value: [fumbled_value] sunmarks... [span_italics("I think.")]")
 
 //	. += "[gender == PLURAL ? "They are" : "It is"] a [weightclass2text(w_class)] item."
 

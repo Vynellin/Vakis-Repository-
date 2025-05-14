@@ -5,7 +5,6 @@
 	icon_state = "atm"
 	density = FALSE
 	blade_dulling = DULLING_BASH
-	var/mammonsiphoned = 0
 	var/has_reported = FALSE
 	var/location_tag
 
@@ -41,7 +40,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/atm, 32)
 			mod = 10
 		if(selection == "SILVER")
 			mod = 5
-		var/coin_amt = input(user, "There is [SStreasury.treasury_value] mammon in the treasury. You may withdraw [floor(amt/mod)] [selection] COINS from your account.", src) as null|num
+		var/coin_amt = input(user, "There is [SStreasury.treasury_value] sunmarks in the treasury. You may withdraw [floor(amt/mod)] [selection] COINS from your account.", src) as null|num
 		coin_amt = round(coin_amt)
 		if(coin_amt < 1)
 			return
@@ -78,7 +77,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/atm, 32)
 				if(!HAS_TRAIT(H, TRAIT_NOBLE))
 					var/T = round(P.get_real_price() * SStreasury.tax_value)
 					if(T != 0)
-						say("Your deposit was taxed [T] mammon.")
+						say("Your deposit was taxed [T] sunmarks.")
 				qdel(P)
 				playsound(src, 'sound/misc/coininsert.ogg', 100, FALSE, -1)
 				return

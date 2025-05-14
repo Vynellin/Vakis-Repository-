@@ -108,7 +108,7 @@
 		if(HAS_TRAIT(user, TRAIT_JUSTICARSIGHT) && !HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
 			for(var/datum/bounty/b in GLOB.head_bounties) //I hate this.
 				if(b.target == real_name)
-					. += span_syndradio("[m3] a bounty on [m2] head of [b.amount] mammon for [b.reason], issued by [b.employer].")
+					. += span_syndradio("[m3] a bounty on [m2] head of [b.amount] sunmarks for [b.reason], issued by [b.employer].")
 					break
 
 		if(name in GLOB.court_agents)

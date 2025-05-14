@@ -67,13 +67,13 @@
 		if(!D)
 			return
 		if(SStreasury.treasury_value < D.get_import_price())
-			say("Insufficient mammon.")
+			say("Insufficient sunmarks.")
 			return
 		var/amt = D.get_import_price()
 		SStreasury.treasury_value -= amt
 		SStreasury.log_to_steward("-[amt] imported [D.name]")
 		if(amt >= 100) //Only announce big spending.
-			scom_announce("Solaris imports [D.name] for [amt] mammon.", )
+			scom_announce("Solaris Ridge imports [D.name] for [amt] sunmarks.", )
 		D.raise_demand()
 		addtimer(CALLBACK(src, PROC_REF(do_import), D.type), 10 SECONDS)
 	if(href_list["export"])
@@ -96,7 +96,7 @@
 		SStreasury.treasury_value += amt
 		SStreasury.log_to_steward("+[amt] exported [D.name]")
 		if(amt >= 100) //Only announce big spending.
-			scom_announce("Solaris exports [D.name] for [amt] mammon.")
+			scom_announce("Solaris exports [D.name] for [amt] sunmarks.")
 		D.lower_demand()
 	if(href_list["togglewithdraw"])
 		var/datum/roguestock/D = locate(href_list["togglewithdraw"]) in SStreasury.stockpile_datums

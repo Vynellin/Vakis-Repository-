@@ -43,7 +43,7 @@ GLOBAL_VAR(moneymaster)
 					return
 			P.forceMove(T.loc)
 			playsound(T.loc, 'sound/misc/hiss.ogg', 100, TRUE, -1)
-			say("Item accepted for [amtofsale] mammon.")
+			say("Item accepted for [amtofsale] sunmarks.")
 			playsound(src, 'sound/misc/machineyes.ogg', 100, FALSE, -1)
 			playsound(T, 'sound/misc/machinevomit.ogg', 100, TRUE, -1)
 
@@ -63,7 +63,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/money, 32)
 	user.changeNext_move(CLICK_CD_MELEE)
 	to_chat(user, span_info("I rub the machine clockwise."))
 	if(budget > 0)
-		say("[budget] MAMMON ARE MINE...")
+		say("[budget] SUNMARKS ARE MINE...")
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
 	update_icon()
@@ -89,14 +89,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/money, 32)
 			budget2change(budget, user, inputt)
 			switch(inputt)
 				if("GOLD")
-					var/zenars = budget/10
-					if(zenars >= 1)
-						for(var/i in 1 to zenars)
+					var/kingmarks = budget/10
+					if(kingmarks >= 1)
+						for(var/i in 1 to kingmarks)
 							budget -= 10
 				if("SILVER")
-					var/zenars = budget/5
-					if(zenars >= 1)
-						for(var/i in 1 to zenars)
+					var/kingmarks = budget/5
+					if(kingmarks >= 1)
+						for(var/i in 1 to kingmarks)
 							budget -= 5
 				if("BRONZE")
 					if(budget >= 1)
@@ -114,44 +114,44 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/money, 32)
 		return
 	budget = floor(budget)
 	var/type_to_put
-	var/zenars_to_put
+	var/kingmarks_to_put
 	if(specify)
 		switch(specify)
 			if("GOLD")
-				zenars_to_put = budget/10
+				kingmarks_to_put = budget/10
 				type_to_put = /obj/item/roguecoin/gold
 			if("SILVER")
-				zenars_to_put = budget/5
+				kingmarks_to_put = budget/5
 				type_to_put = /obj/item/roguecoin/silver
 			if("BRONZE")
-				zenars_to_put = budget
+				kingmarks_to_put = budget
 				type_to_put = /obj/item/roguecoin/copper
 	else
 		var/highest_found = FALSE
-		var/zenars = floor(budget/10)
-		if(zenars)
-			budget -= zenars * 10
+		var/kingmarks = floor(budget/10)
+		if(kingmarks)
+			budget -= kingmarks * 10
 			highest_found = TRUE
 			type_to_put = /obj/item/roguecoin/gold
-			zenars_to_put = zenars
-		zenars = floor(budget/5)
-		if(zenars)
-			budget -= zenars * 5
+			kingmarks_to_put = kingmarks
+		kingmarks = floor(budget/5)
+		if(kingmarks)
+			budget -= kingmarks * 5
 			if(!highest_found)
 				highest_found = TRUE
 				type_to_put = /obj/item/roguecoin/silver
-				zenars_to_put = zenars
+				kingmarks_to_put = kingmarks
 			else
-				new /obj/item/roguecoin/silver(T, zenars)
+				new /obj/item/roguecoin/silver(T, kingmarks)
 		if(budget >= 1)
 			if(!highest_found)
 				type_to_put = /obj/item/roguecoin/copper
-				zenars_to_put = budget
+				kingmarks_to_put = budget
 			else
 				new /obj/item/roguecoin/copper(T, budget)
-	if(!type_to_put || zenars_to_put < 1)
+	if(!type_to_put || kingmarks_to_put < 1)
 		return
-	var/obj/item/roguecoin/G = new type_to_put(T, floor(zenars_to_put))
+	var/obj/item/roguecoin/G = new type_to_put(T, floor(kingmarks_to_put))
 	if(user)
 		user.put_in_hands(G)
 	playsound(T, 'sound/misc/coindispense.ogg', 100, FALSE, -1)

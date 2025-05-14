@@ -270,7 +270,7 @@
 
 /datum/special_trait/richpouch
 	name = "Rich Pouch"
-	greet_text = span_notice("I've recently found a pouch filled with mammons, probably belonging to some noble.")
+	greet_text = span_notice("I've recently found a pouch filled with sunmarks, probably belonging to some noble.")
 	weight = 100
 
 /datum/special_trait/richpouch/on_apply(mob/living/carbon/human/character, silent)
@@ -343,7 +343,7 @@
 
 /datum/special_trait/nopouch
 	name = "No Pouch"
-	greet_text = span_boldwarning("I lost my pouch recently, I'm without a zenny..")
+	greet_text = span_boldwarning("I lost my pouch recently, I'm without a sunmark...")
 	weight = 200
 
 /datum/special_trait/nopouch/on_apply(mob/living/carbon/human/character, silent)
@@ -355,16 +355,6 @@
 	if(character.beltr == pouch)
 		character.beltr = null
 	qdel(pouch)
-
-/datum/special_trait/hussite
-	name = "Known Heretic"
-	greet_text = span_boldwarning("I've been denounced by the church for either reasons legitimate or not!")
-	req_text = "Non-church role"
-	weight = 20
-	restricted_jobs = list(CHURCH_ROLES)
-
-/datum/special_trait/hussite/on_apply(mob/living/carbon/human/character, silent)
-	GLOB.excommunicated_players += character.real_name
 
 /datum/special_trait/bounty
 	name = "Hunted Man"

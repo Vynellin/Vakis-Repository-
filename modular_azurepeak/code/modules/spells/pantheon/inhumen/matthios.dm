@@ -1,5 +1,5 @@
 /// SOLARIS NOTE: Like pestra, a lot of gameplay still relies on this fucking spell. ough. For that reason it's being left here for now
-// T0: Determine the net mammon value of target
+// T0: Determine the net sunmark value of target
 
 /obj/effect/proc_holder/spell/invoked/appraise
 	name = "Appraise"
@@ -29,7 +29,7 @@
 /obj/effect/proc_holder/spell/invoked/appraise/cast(list/targets, mob/living/user)
 	if(ishuman(targets[1]))
 		var/mob/living/carbon/human/target = targets[1]
-		var/mammonsonperson = get_mammons_in_atom(target)
-		var/mammonsinbank = SStreasury.bank_accounts[target]
-		var/totalvalue = mammonsinbank + mammonsonperson
-		to_chat(user, ("<font color='yellow'>[target] has [mammonsonperson] mammons on them, [mammonsinbank] in their meister, for a total of [totalvalue] mammons.</font>"))
+		var/sunmarksonperson = get_sunmarks_in_atom(target)
+		var/sunmarksinbank = SStreasury.bank_accounts[target]
+		var/totalvalue = sunmarksinbank + sunmarksonperson
+		to_chat(user, ("<font color='yellow'>[target] has [sunmarksonperson] sunmarks on them, [sunmarksinbank] in their meister, for a total of [totalvalue] sunmarks.</font>"))

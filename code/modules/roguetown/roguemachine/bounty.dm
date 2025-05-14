@@ -107,15 +107,15 @@
 		say("No target selected.")
 		return
 
-	var/amount = input(user, "How many mammons shall be stained red for their demise?", src) as null|num
+	var/amount = input(user, "How many sunmarks shall be stained red for their demise?", src) as null|num
 	if(isnull(amount))
 		say("Invalid amount.")
 		return
 	if(amount < 100)
-		say("Insufficient amount. Bounty must be at least 100 mammon.")
+		say("Insufficient amount. Bounty must be at least 100 sunmarks.")
 		return
 	if(amount > 500)
-		say("Insufficient amount. Bounties cannot be more than 500 mammon.")
+		say("Insufficient amount. Bounties cannot be more than 500 sunmarks.")
 		return
 
 	// Has user a bank account?
@@ -173,12 +173,12 @@
 	switch(rand(1, 3))
 		if(1)
 			new_bounty.banner += "A dire bounty hangs upon the capture of [new_bounty.target], for '[new_bounty.reason]'.<BR>"
-			new_bounty.banner += "The patron, [new_bounty.employer], offers [new_bounty.amount] mammons for the task.<BR>"
+			new_bounty.banner += "The patron, [new_bounty.employer], offers [new_bounty.amount] sunmarks for the task.<BR>"
 		if(2)
 			new_bounty.banner += "The capture of [new_bounty.target] is wanted for '[new_bounty.reason]''.<BR>"
-			new_bounty.banner += "The employer, [new_bounty.employer], offers [new_bounty.amount] mammons for the deed.<BR>"
+			new_bounty.banner += "The employer, [new_bounty.employer], offers [new_bounty.amount] sunmarks for the deed.<BR>"
 		if(3)
-			new_bounty.banner += "[new_bounty.employer] hath offered to pay [new_bounty.amount] mammons for the capture of [new_bounty.target].<BR>"
+			new_bounty.banner += "[new_bounty.employer] hath offered to pay [new_bounty.amount] sunmarks for the capture of [new_bounty.target].<BR>"
 			new_bounty.banner += "By reason of the following: '[new_bounty.reason]'.<BR>"
 	new_bounty.banner += "--------------<BR>"
 
@@ -188,7 +188,7 @@
 		return
 
 	var/cost = 50
-	var/choice = alert(user, "Print a continously updated list of active bounties for [cost] mammons?", "Print Bounty Scroll", "Yes", "No")
+	var/choice = alert(user, "Print a continously updated list of active bounties for [cost] sunmarks?", "Print Bounty Scroll", "Yes", "No")
 	if(choice != "Yes")
 		return
 
@@ -197,7 +197,7 @@
 		return
 
 	if(SStreasury.bank_accounts[user] < cost)
-		say("Insufficient funds. [cost] mammons required.")
+		say("Insufficient funds. [cost] sunmarks required.")
 		return
 
 	SStreasury.bank_accounts[user] -= cost
@@ -401,42 +401,42 @@
 		return
 	budget = floor(budget)
 	var/type_to_put
-	var/zenars_to_put
+	var/kingmarks_to_put
 	if(specify)
 		switch(specify)
 			if("GOLD")
-				zenars_to_put = budget/10
+				kingmarks_to_put = budget/10
 				type_to_put = /obj/item/roguecoin/gold
 			if("SILVER")
-				zenars_to_put = budget/5
+				kingmarks_to_put = budget/5
 				type_to_put = /obj/item/roguecoin/silver
 			if("BRONZE")
-				zenars_to_put = budget
+				kingmarks_to_put = budget
 				type_to_put = /obj/item/roguecoin/copper
 	else
 		var/highest_found = FALSE
-		var/zenars = floor(budget/10)
-		if(zenars)
-			budget -= zenars * 10
+		var/kingmarks = floor(budget/10)
+		if(kingmarks)
+			budget -= kingmarks * 10
 			highest_found = TRUE
 			type_to_put = /obj/item/roguecoin/gold
-			zenars_to_put = zenars
-		zenars = floor(budget/5)
-		if(zenars)
-			budget -= zenars * 5
+			kingmarks_to_put = kingmarks
+		kingmarks = floor(budget/5)
+		if(kingmarks)
+			budget -= kingmarks * 5
 			if(!highest_found)
 				highest_found = TRUE
 				type_to_put = /obj/item/roguecoin/silver
-				zenars_to_put = zenars
+				kingmarks_to_put = kingmarks
 			else
-				new /obj/item/roguecoin/silver(T, zenars)
+				new /obj/item/roguecoin/silver(T, kingmarks)
 		if(budget >= 1)
 			if(!highest_found)
 				type_to_put = /obj/item/roguecoin/copper
-				zenars_to_put = budget
+				kingmarks_to_put = budget
 			else
 				new /obj/item/roguecoin/copper(T, budget)
-	if(!type_to_put || zenars_to_put < 1)
+	if(!type_to_put || kingmarks_to_put < 1)
 		return
-	new type_to_put(T, floor(zenars_to_put))
+	new type_to_put(T, floor(kingmarks_to_put))
 	playsound(T, 'sound/misc/coindispense.ogg', 100, FALSE, -1)

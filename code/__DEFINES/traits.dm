@@ -153,7 +153,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_LEAPER = "I can leap like a frog, landing where I want.",
 	TRAIT_NOSEGRAB = "I love to grab idiots by their noses!",
 	TRAIT_NUTCRACKER = "I love kicking idiots on the nuts!",
-	TRAIT_SEEPRICES = "I can tell the prices of things down to the zenny.",
+	TRAIT_SEEPRICES = "I can tell the prices of things down to the sunmark.",
 	TRAIT_SEEPRICES_SHITTY = "I can tell the prices of things... <i>Kind of</i>.",
 	TRAIT_STRONGBITE = span_info("Stronger bites, critical bite attacks."),
 	TRAIT_NOBLE = span_blue("I'm of noble blood."),

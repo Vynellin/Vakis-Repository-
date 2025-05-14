@@ -199,31 +199,32 @@
 
 //GOLD
 /obj/item/roguecoin/gold
-	name = "zenar"
-	desc = "A gold coin bearing the symbol of the Taurus and the pre-kingdom psycross. These were in the best condition of the provincial gold mints, the rest were melted down."
+	name = "kingmark"
+	desc = "The Rasurian kingmark, cast in fine gold, it depicts his former Majesty Gulliver IV on one face - and the heartland upon the other."
 	icon_state = "g1"
 	sellprice = 10
 	base_type = CTYPE_GOLD
-	plural_name = "zenarii"
+	plural_name = "kingmarks"
 
 
 // SILVER
 /obj/item/roguecoin/silver
-	name = "ziliqua"
-	desc = "An ancient silver coin still in use due to their remarkable ability to last the ages."
+	name = "moonmark"
+	desc = "Blessed moonmarks, the outer rim cast in true silver in Zira's favor. On the front face it depicts her, the rear Cinella."
 	icon_state = "s1"
 	sellprice = 5
 	base_type = CTYPE_SILV
-	plural_name = "ziliquae"
+	plural_name = "moonmarks"
 
 // COPPER
 /obj/item/roguecoin/copper
-	name = "zenny"
-	desc = "A brand-new bronze coin minted by the capital in an effort to be rid of the financial use of silver."
+	name = "sunmark"
+	desc = "A copper coin cast in the image of Aeternus - catching the sun just right at midday of Sun's grasp. The front face depicts him; whilst \
+			the rear depicts the \"beacon of artmour\", a heartland folkhero."
 	icon_state = "c1"
 	sellprice = 1
 	base_type = CTYPE_COPP
-	plural_name = "zennies"
+	plural_name = "sunmarks"
 
 /obj/item/roguecoin/copper/pile/Initialize()
 	. = ..()
