@@ -150,6 +150,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 				pick_rebels()
 				log_game("Major Antagonist: Rebellion")
 			*/
+			/*
 			if(1 to 25)
 				pick_bandits()
 				log_game("Antagonists: Bandits")
@@ -168,10 +169,9 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 			if(90 to 100)
 				pick_vampires()
 				log_game("Antagonists: Vampyr")
-			/* we've been having a lot of this, we can reimplement a random extended chance after seeing how the antags go
+			*/
 			if(81 to 100)
 				log_game("Major Antagonist: Extended") //gotta put something here.
-			*/
 
 		/* removing the "minor antagonist" system as we currently need them as major antagonist gamemodes while waiting for our own custom antags
 		if(prob(45))
