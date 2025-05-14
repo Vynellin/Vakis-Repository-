@@ -170,7 +170,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 				pick_vampires()
 				log_game("Antagonists: Vampyr")
 			*/
-			if(81 to 100)
+			if(1 to 100)
 				log_game("Major Antagonist: Extended") //gotta put something here.
 
 		/* removing the "minor antagonist" system as we currently need them as major antagonist gamemodes while waiting for our own custom antags
