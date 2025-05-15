@@ -32912,7 +32912,7 @@
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
 	lockid = "undercroft";
-	name = "Inquisition's Quarters"
+	name = "Chapel Undercroft"
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church)
@@ -44092,7 +44092,7 @@
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
 	lockid = "undercroft";
-	name = "Inquisition Cell"
+	name = "Chapel Undercroft"
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/church/basement)
