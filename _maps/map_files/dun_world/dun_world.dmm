@@ -34647,7 +34647,7 @@
 /obj/structure/mineral_door/wood/fancywood{
 	locked = 1;
 	lockid = "heir";
-	name = "Heir's Apartment"
+	name = "Noble's Apartment"
 	},
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
@@ -56378,7 +56378,7 @@
 "xWN" = (
 /obj/structure/mineral_door/wood/fancywood{
 	lockid = "heir";
-	name = "Heir's Apartment"
+	name = "Noble's Apartment"
 	},
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
