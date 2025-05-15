@@ -9,7 +9,7 @@
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	allowed_patrons = ALL_CHAOS_PATRONS //gets set to Tamari on the outfit anyways lol
+	allowed_patrons = list(/datum/patron/change/tamari)
 	outfit = /datum/outfit/job/roguetown/druid
 	tutorial = "Tamari's gift to men was the earth; and it is ours to protect and venerate, as much as we can."
 

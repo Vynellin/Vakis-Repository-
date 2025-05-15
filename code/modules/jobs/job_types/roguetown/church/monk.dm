@@ -7,7 +7,7 @@
 	spawn_positions = 6
 
 	allowed_races = RACES_ALL_KINDS
-	allowed_patrons = ALL_CHAOS_PATRONS 
+	allowed_patrons = ALL_PATRONS 
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/job/roguetown/monk
 	tutorial = "An Acolyte's life is exhausting; pulling double duty as the church's servant and student. Some find it wonderfully fufilling; others will grow to resent it."
@@ -24,8 +24,6 @@
 /datum/outfit/job/roguetown/monk
 	name = "Acolyte"
 	jobtype = /datum/job/roguetown/monk
-
-	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/balance/varielle, /datum/patron/balance/zira, /datum/patron/balance/tsoridys, /datum/patron/change/cinella, /datum/patron/balance/nunos, /datum/patron/balance/carthus, /datum/patron/change/kasmidian) // The whole Ten. Probably could delete this now, actually.
 
 
 /datum/outfit/job/roguetown/monk/pre_equip(mob/living/carbon/human/H)

@@ -7,7 +7,7 @@
 	tutorial = "Templars are warriors who have forsaken wealth and title in lieu of service to the church, due to either zealotry or a past shame. They guard the church and its priest; largely ceremonially."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	allowed_patrons = ALL_CHAOS_PATRONS
+	allowed_patrons = ALL_PATRONS
 	outfit = /datum/outfit/job/roguetown/templar
 	min_pq = 3 //Deus vult, but only according to the proper escalation rules
 	max_pq = null
@@ -24,7 +24,6 @@
 
 /datum/outfit/job/roguetown/templar
 	has_loadout = TRUE
-	allowed_patrons = ALL_CHAOS_PATRONS
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltr = /obj/item/storage/keyring/churchie

@@ -145,14 +145,14 @@
 	/datum/species/construct/metal,\
 )
 
-#define ALL_ORDER_PATRONS list(/datum/patron/balance/zira, \
+#define ALL_BALANCE_PATRONS list(/datum/patron/balance/zira, \
 	/datum/patron/balance/tsoridys, \
 	/datum/patron/balance/nunos, \
 	/datum/patron/balance/carthus, \
 	/datum/patron/balance/varielle, \
 	)
 
-#define ALL_CHAOS_PATRONS list(\
+#define ALL_CHANGE_PATRONS list(\
 	/datum/patron/change/tamari, \
 	/datum/patron/change/cinella, \
 	/datum/patron/change/kasmidian, \

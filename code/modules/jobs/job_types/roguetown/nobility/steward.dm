@@ -7,7 +7,7 @@
 	spawn_positions = 1
 
 	allowed_races = RACES_NO_CONSTRUCT
-	allowed_patrons = list(/datum/patron/light/aeternus, /datum/patron/balance/zira, /datum/patron/change/tamari, /datum/patron/change/cinella, /datum/patron/balance/carthus, /datum/patron/balance/tsoridys, /datum/patron/change/kasmidian, /datum/patron/balance/nunos, /datum/patron/balance/varielle)
+	allowed_patrons = ALL_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
 	display_order = JDO_STEWARD
 	tutorial = "Coin, Coin, Coin! Oh beautiful coin: You're addicted to it, and you hold the position as the Grand Duke's personal treasurer of both coin and information. You know the power silver and gold has on a man's mortal soul, and you know just what lengths they'll go to in order to get even more."

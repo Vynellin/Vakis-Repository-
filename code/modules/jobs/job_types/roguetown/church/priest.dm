@@ -8,10 +8,10 @@
 	selection_color = JCOLOR_CHURCH
 	f_title = "Priestess"
 	allowed_races = RACES_NO_CONSTRUCT		//Too recent arrivals to ascend to priesthood.
-	allowed_patrons = ALL_CHAOS_PATRONS
+	allowed_patrons = ALL_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
 	tutorial = "The nine protect; and it is your watch that has kept the church comfortable under such, even through the debates of nobles and scholars, balance and change. Aeternus guides your hand, yet still; \
-				to keep this as it is, fraught as it may sometimes feel."
+				to keep this as it is, fraught as it may sometimes feel - and your own opinions therein..."
 	whitelist_req = FALSE
 
 	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot, /obj/effect/proc_holder/spell/self/convertrole/templar, /obj/effect/proc_holder/spell/self/convertrole/monk)
@@ -25,9 +25,6 @@
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
-
-/datum/outfit/job/roguetown/priest
-	allowed_patrons = list(/datum/patron/light/aeternus)
 
 /datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
 	..()

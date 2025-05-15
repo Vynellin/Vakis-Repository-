@@ -426,7 +426,7 @@
 	tutorial = "Martyrs are hand-picked among the most devout. They are given one of the protectorate's cherished relics to protect the Church, and to inspire hope and lead by example of grace. They have sworn an Oath in the sight of the gods, and will fulfill it to the bitter end."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_NO_CONSTRUCT
-	allowed_patrons = ALL_CHAOS_PATRONS
+	allowed_patrons = ALL_PATRONS
 	outfit = /datum/outfit/job/roguetown/martyr
 	min_pq = 9 // what're we; some kinda... knights of the nine?
 	max_pq = null
