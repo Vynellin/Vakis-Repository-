@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/handgonne
 	name = "handgonne"
 	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
-	icon = 'modular_helmsguard/licensed-feralope/icons/weapons/handgonne.dmi'
+	icon = 'modular_helmsguard/icons/weapons/handgonne.dmi'
 	icon_state = "handgonne"
 	item_state = "handgonne"
 	force = 10
@@ -112,7 +112,7 @@
 		user.visible_message("<span class='notice'>[user] forces \a [A] down the barrel of \the [src].</span>")
 		..()
 
-	if(istype(A, /obj/item/powderflask))
+	if(istype(A, /obj/item/powderhorn))
 		if(gunpowder)
 			user.visible_message("<span class='notice'>\The [src] is already filled with gunpowder!</span>")
 			return

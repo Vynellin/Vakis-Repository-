@@ -2,7 +2,7 @@
 /obj/item/gun/ballistic/arquebus
 	name = "arquebus rifle"
 	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
-	icon = 'modular_helmsguard/licensed-feralope/icons/weapons/arquebus.dmi'
+	icon = 'modular_helmsguard/icons/weapons/arquebus.dmi'
 	icon_state = "arquebus"
 	item_state = "arquebus"
 	force = 10
@@ -167,7 +167,7 @@
 		user.visible_message("<span class='notice'>[user] forces \a [A] down the barrel of \the [src].</span>")
 		return ..()
 
-	if(istype(A, /obj/item/powderflask))
+	if(istype(A, /obj/item/powderhorn))
 		if(gunpowder)
 			user.visible_message("<span class='notice'>The [src] is already filled with gunpowder!</span>")
 			return
@@ -436,7 +436,7 @@
 		user.visible_message("<span class='notice'>[user] forces \a [A] down the barrel of \the [src].</span>")
 		..()
 
-	if(istype(A, /obj/item/powderflask))
+	if(istype(A, /obj/item/powderhorn))
 		if(gunpowder)
 			user.visible_message("<span class='notice'>The [src] is already filled with gunpowder!</span>")
 			return
@@ -590,7 +590,7 @@
 
 /obj/item/ramrod
 	name = "ramrod"
-	icon = 'modular_helmsguard/licensed-feralope/icons/obj/items/arquebus_items.dmi'
+	icon = 'modular_helmsguard/icons/obj/items/arquebus_items.dmi'
 	desc = "A ramrod used for reloading a firearm."
 	icon_state = "ramrod"
 	item_state = "ramrod"
@@ -598,12 +598,12 @@
 	w_class = WEIGHT_CLASS_SMALL
 
 
-/obj/item/powderflask
-	name = "firepowder flask"
-	icon = 'modular_helmsguard/licensed-feralope/icons/obj/items/arquebus_items.dmi'
-	desc = "A flask of gunpowder used for reloading a firearm."
-	icon_state = "powderflask"
-	item_state = "powderflask"
+/obj/item/powderhorn
+	name = "firepowder horn"
+	icon = 'modular_helmsguard/icons/obj/items/arquebus_items.dmi'
+	desc = "A powderhorn of gunpowder used for reloading a firearm."
+	icon_state = "powderhorn"
+	item_state = "powderhorn"
 	slot_flags = SLOT_BELT_L | SLOT_BELT_R | ITEM_SLOT_NECK | ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_TINY
 

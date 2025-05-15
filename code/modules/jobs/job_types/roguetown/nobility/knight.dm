@@ -412,7 +412,7 @@
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	id = /obj/item/scomstone/bad/garrison
-	backpack_contents = list(/obj/item/gun/ballistic/arquebus_pistol = 1, /obj/item/powderflask = 1, /obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/bait/doe = 1)
+	backpack_contents = list(/obj/item/gun/ballistic/arquebus_pistol = 1, /obj/item/powderhorn = 1, /obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/bait/doe = 1)
 	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE) 
 	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)	
 	H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)	
