@@ -9,7 +9,7 @@
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	allowed_patrons = list(/datum/patron/change/tamari)
+	allowed_patrons = list(/datum/patron/three_sisters/tamari)
 	outfit = /datum/outfit/job/roguetown/druid
 	tutorial = "Tamari's gift to men was the earth; and it is ours to protect and venerate, as much as we can."
 
@@ -26,7 +26,7 @@
 /datum/outfit/job/roguetown/druid
 	name = "Druid"
 	jobtype = /datum/job/roguetown/druid
-	allowed_patrons = list(/datum/patron/change/tamari)
+	allowed_patrons = list(/datum/patron/three_sisters/tamari)
 
 /datum/outfit/job/roguetown/druid/pre_equip(mob/living/carbon/human/H)
 	..()

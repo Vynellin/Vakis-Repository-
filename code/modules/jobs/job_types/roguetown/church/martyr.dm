@@ -118,7 +118,7 @@
 			if(ishuman(M))
 				var/mob/living/carbon/human/H
 				var/type = H.patron?.type
-				if(istype(type, /datum/patron/balance))
+				if(istype(type, /datum/patron/peoples_pantheon))
 					H.electrocution_animation(20)
 
 //This gives a countdown to the user, it's pretty hacky
@@ -325,7 +325,7 @@
 		M.lightning_flashing = TRUE
 		M.update_sight()
 		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living/carbon, reset_lightning)), 2)
-		if(istype(M.patron, /datum/patron/balance))
+		if(istype(M.patron, /datum/patron/peoples_pantheon))
 			var/turf/T = get_step(get_step(M, NORTH), NORTH)
 			T.Beam(M, icon_state="lightning[rand(1,12)]", time = 5)
 			M.visible_message(span_warning("[M] gets struck down by the Nine!"), span_warning("The Nine curse you! You stood too close to one of their devout!"))
@@ -535,7 +535,7 @@
 		else if (H.job in GLOB.church_positions)
 			to_chat(user, span_warning("You feel a jolt of holy energies just for a split second, and then the sword slips from your grasp! You are not devout enough."))
 			return FALSE
-		else if(istype(H.patron, /datum/patron/balance)) 
+		else if(istype(H.patron, /datum/patron/peoples_pantheon)) 
 			var/datum/component/martyrweapon/marty = GetComponent(/datum/component/martyrweapon)
 			to_chat(user, span_warning("YOU FOOL! IT IS ANATHEMA TO YOU! GET AWAY!"))
 			H.Stun(40)

@@ -22,7 +22,7 @@
 	var/solarrites = list("Guiding Light")
 
 /obj/structure/ritualcircle/aeternus/attack_hand(mob/living/user) 
-	if((user.patron?.type) != /datum/patron/light/aeternus)
+	if((user.patron?.type) != /datum/patron/lording_three/aeternus)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -70,7 +70,7 @@
 	var/lunarrites = list("Moonlight Dance") // list for more to be added later
 
 /obj/structure/ritualcircle/zira/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/balance/zira)
+	if((user.patron?.type) != /datum/patron/lording_three/zira)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -113,7 +113,7 @@
 	var/bestialrites = list("Rite of the Lesser Wolf")
 
 /obj/structure/ritualcircle/tamari/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/change/tamari)
+	if((user.patron?.type) != /datum/patron/three_sisters/tamari)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -164,7 +164,7 @@
 	var/deathrites = list("Undermaiden's Bargain")
 
 /obj/structure/ritualcircle/tsoridys/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/balance/tsoridys)
+	if((user.patron?.type) != /datum/patron/lording_three/tsoridys)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -209,7 +209,7 @@
 	var/peacerites = list("Rite of Pacification")
 
 /obj/structure/ritualcircle/varielle/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/balance/varielle)
+	if((user.patron?.type) != /datum/patron/peoples_pantheon/varielle)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))

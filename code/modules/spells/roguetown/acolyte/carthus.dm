@@ -91,7 +91,7 @@
 
 /obj/effect/proc_holder/spell/self/call_to_arms/cast(list/targets,mob/living/user = usr)
 	for(var/mob/living/carbon/target in view(3, get_turf(user)))
-		if(istype(target.patron, /datum/patron/balance))
+		if(istype(target.patron, /datum/patron/peoples_pantheon))
 			target.apply_status_effect(/datum/status_effect/debuff/call_to_arms)	//Debuffs inhumen worshipers.
 			return
 		if(!user.faction_check_mob(target))

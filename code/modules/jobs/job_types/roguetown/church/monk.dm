@@ -34,31 +34,31 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/ritechalk)
 	switch(H.patron?.type)
-		if(/datum/patron/light/aeternus)
+		if(/datum/patron/lording_three/aeternus)
 			head = /obj/item/clothing/head/roguetown/roguehood/aeternus
 			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
-		if(/datum/patron/balance/zira)
+		if(/datum/patron/lording_three/zira)
 			head = /obj/item/clothing/head/roguetown/zirahood
 			neck = /obj/item/clothing/neck/roguetown/psicross/zira
 			wrists = /obj/item/clothing/wrists/roguetown/zirawrappings
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/zira
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/black
-		if(/datum/patron/change/cinella) // the deep calls!
+		if(/datum/patron/peoples_pantheon/cinella) // the deep calls!
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			pants = /obj/item/clothing/under/roguetown/tights
 			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
 			head = /obj/item/clothing/head/roguetown/roguehood/cinella		
-		if(/datum/patron/change/tamari) //Tamarites all busted. Play Druid.
+		if(/datum/patron/three_sisters/tamari) //Tamarites all busted. Play Druid.
 			head = /obj/item/clothing/head/roguetown/tamarimask
 			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
-		if(/datum/patron/balance/tsoridys)
+		if(/datum/patron/lording_three/tsoridys)
 			head = /obj/item/clothing/head/roguetown/tsoridyshood
 			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
 			shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -66,13 +66,13 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 			shirt = /obj/item/clothing/suit/roguetown/armor/leather/vest/black
 			cloak = /obj/item/clothing/cloak/raincloak/mortus
-		if(/datum/patron/balance/varielle)
+		if(/datum/patron/peoples_pantheon/varielle)
 			head = /obj/item/clothing/head/roguetown/variellemask
 			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/varielle
 			cloak = /obj/item/clothing/cloak/templar/variellian
-		if(/datum/patron/balance/nunos)
+		if(/datum/patron/three_sisters/nunos)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
 			shoes = /obj/item/clothing/shoes/roguetown/boots
@@ -80,14 +80,14 @@
 			pants = /obj/item/clothing/under/roguetown/trou
 			cloak = /obj/item/clothing/cloak/templar/nunite
 			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest
-		if(/datum/patron/balance/carthus)
+		if(/datum/patron/peoples_pantheon/carthus)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
 			cloak = /obj/item/clothing/cloak/templar/carthus
 			wrists = /obj/item/clothing/wrists/roguetown/wrappings
 			shoes = /obj/item/clothing/shoes/roguetown/boots
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/white
-		if(/datum/patron/change/kasmidian)
+		if(/datum/patron/three_sisters/kasmidian)
 			head = /obj/item/clothing/head/roguetown/roguehood
 			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
 			cloak = /obj/item/clothing/cloak/templar/kasmidian
@@ -121,7 +121,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 2, TRUE)
 		ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/balance/nunos)
+		if(H.patron?.type == /datum/patron/three_sisters/nunos)
 			H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/armorsmithing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/weaponsmithing, 2, TRUE)
@@ -138,12 +138,12 @@
 		H.change_stat("endurance", 2)
 		H.change_stat("speed", 1)
 		H.cmode_music = 'sound/music/combat_holy.ogg'
-		if(H.patron?.type == /datum/patron/balance/tsoridys)
+		if(H.patron?.type == /datum/patron/lording_three/tsoridys)
 			ADD_TRAIT(H, TRAIT_NOSTINK, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_SOUL_EXAMINE, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/balance/varielle)
+		if(H.patron?.type == /datum/patron/peoples_pantheon/varielle)
 			ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
-		if(H.patron?.type == /datum/patron/change/cinella)
+		if(H.patron?.type == /datum/patron/peoples_pantheon/cinella)
 			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 3, TRUE)
 			ADD_TRAIT(H, TRAIT_WATERBREATHING, TRAIT_GENERIC)
 

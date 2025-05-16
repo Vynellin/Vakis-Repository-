@@ -13,23 +13,23 @@
 
 	var/ritechoices = list()
 	switch (user.patron?.type)
-		if(/datum/patron/light/aeternus)
+		if(/datum/patron/lording_three/aeternus)
 			ritechoices+="Rune of Sun"
-		if(/datum/patron/balance/zira)
+		if(/datum/patron/lording_three/zira)
 			ritechoices+="Rune of Moon"
-		if(/datum/patron/change/tamari)
+		if(/datum/patron/three_sisters/tamari)
 			ritechoices+="Rune of Beasts"
-		if(/datum/patron/balance/nunos)
+		if(/datum/patron/three_sisters/nunos)
 			ritechoices+="Rune of Forge"
-		if(/datum/patron/change/kasmidian)
+		if(/datum/patron/three_sisters/kasmidian)
 			ritechoices+="Rune of Trickery"
-		if(/datum/patron/balance/tsoridys)
+		if(/datum/patron/lording_three/tsoridys)
 			ritechoices+="Rune of Death"
-		if(/datum/patron/balance/varielle)
+		if(/datum/patron/peoples_pantheon/varielle)
 			ritechoices+="Rune of Love"
-		if(/datum/patron/balance/carthus)
+		if(/datum/patron/peoples_pantheon/carthus)
 			ritechoices+="Rune of War"
-		if(/datum/patron/change/cinella)
+		if(/datum/patron/peoples_pantheon/cinella)
 			ritechoices+="Rune of Storm"
 
 	var/runeselection = input(user, "Which rune shall I inscribe?", src) as null|anything in ritechoices
