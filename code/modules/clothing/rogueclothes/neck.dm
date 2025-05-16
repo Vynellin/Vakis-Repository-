@@ -449,7 +449,7 @@
 
 /obj/item/clothing/neck/roguetown/collar/bell_collar
 	name = "bell collar"
-	desc = "A band of leather with a bell protects the local zads from the local catfolk."
+	desc = "A band of leather with a bell protects the local crows from the local catfolk."
 	icon_state = "bell_collar"
 
 /obj/item/clothing/neck/roguetown/collar/bell_collar/Initialize(mapload)

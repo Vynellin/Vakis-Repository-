@@ -1,5 +1,5 @@
 /obj/item/reagent_containers/food/snacks/crow
-	name = "zad"
+	name = "crow"
 	desc = "Pesky bird."
 	icon_state = "crow"
 	icon = 'icons/roguetown/mob/monster/crow.dmi'
@@ -19,7 +19,7 @@
 	fried_type = /obj/item/reagent_containers/food/snacks/rogue/friedcrow
 
 /obj/item/reagent_containers/food/snacks/rogue/friedcrow
-	name = "fried zad"
+	name = "fried crow"
 	desc = ""
 	icon = 'icons/roguetown/items/food.dmi'
 	icon_state = "fcrow"
