@@ -21,7 +21,7 @@
 	
 		if("Sentinel")
 			to_chat(H, span_warning("You are a ranger well-versed in traversing untamed lands, with years of experience taking odd jobs as a pathfinder and bodyguard in areas of wilderness untraversable to common soldiery."))
-			shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+			shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
 			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 			pants = /obj/item/clothing/under/roguetown/trou/leather

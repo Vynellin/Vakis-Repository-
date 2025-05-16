@@ -387,7 +387,7 @@
 
 /datum/advclass/knight/reiter
 	name = "Reiter"
-	tutorial = "You are a Reiter Cavalryman, a new type of heavily armed Grentzelhoftian knight, known for using pistols in coordinated volleys while wearing plate armor. They emphasize mobility and firepower over the traditional shock tactics of knights."
+	tutorial = "You are a Reiter Cavalryman, a new type of heavily armed knight, known for using pistols in coordinated volleys while wearing plate armor. They emphasize mobility and firepower over the traditional shock tactics of knights."
 	outfit = /datum/outfit/job/roguetown/knight/reiter
 
 	category_tags = list(CTAG_ROYALGUARD)
