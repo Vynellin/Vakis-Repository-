@@ -9,7 +9,7 @@
 
 /datum/outfit/job/roguetown/bandit/smokerat/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/leather/saiga/atgervi
+	head = /obj/item/clothing/head/roguetown/helmet/leather/saiga
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	mask = /obj/item/clothing/mask/rogue/wildguard
 	backl = /obj/item/gun/ballistic/handgonne
