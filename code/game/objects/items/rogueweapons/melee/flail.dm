@@ -93,7 +93,7 @@
 	smeltresult = /obj/item/ingot/steel
 	minstr = 5
 
-/obj/item/rogueweapon/flail/sflail/necraflail
+/obj/item/rogueweapon/flail/sflail/tsoridysflail
 	name = "swift journey"
 	desc = "The striking head is full of teeth, rattling viciously with ever strike, with every rotation. Each set coming from one the wielder has laid to rest. Carried alongside them as a great show of respect."
 	icon_state = "necraflail"
@@ -167,7 +167,7 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 
-/obj/item/rogueweapon/whip/xylix
+/obj/item/rogueweapon/whip/kasmidian
 	name = "cackle lash"
 	desc = "The chimes of this whip are said to sound as the trickster's laughter itself."
 	icon_state = "xylixwhip"

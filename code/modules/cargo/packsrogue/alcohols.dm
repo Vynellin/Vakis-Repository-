@@ -23,8 +23,8 @@
 	cost = 20
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/ratkept)
 
-/datum/supply_pack/rogue/alcohol/grenzelbeer
-	name = "Grenzelhoftian Bitter Beer"
+/datum/supply_pack/rogue/alcohol/hagwoodbitter
+	name = "Hagwood Bitters Beer"
 	cost = 25
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/hagwoodbitter)
 
@@ -54,22 +54,22 @@
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/voddena)
 
 /datum/supply_pack/rogue/alcohol/winezybantia
-	name = "Ranesheni Wine"
+	name = "Wine"
 	cost = 20
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/wine)
 
-/datum/supply_pack/rogue/alcohol/winegrenzel
-	name = "Grenzelhoftian Sour Wine"
+/datum/supply_pack/rogue/alcohol/winesour
+	name = "Sour Wine"
 	cost = 25
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/wine/sourwine)
 
 /datum/supply_pack/rogue/alcohol/winevalorred
-	name = "Otavan Red Wine"
+	name = "Red Wine"
 	cost = 30
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/redwine)
 
 /datum/supply_pack/rogue/alcohol/winevalorwhite
-	name = "Otavan White Wine"
+	name = "White Wine"
 	cost = 35
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/whitewine)
 
@@ -109,15 +109,15 @@
 	cost = 25
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/gronnmead)
 
-/datum/supply_pack/rogue/alcohol/avarmead
+/datum/supply_pack/rogue/alcohol/honeyedmead
 	name = "Zögiin Bal"
 	cost = 20
-	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/avarmead)
+	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/honeyedmead)
 
-/datum/supply_pack/rogue/alcohol/avarrice
+/datum/supply_pack/rogue/alcohol/whitericewine
 	name = "Makkolir"
 	cost = 30
-	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/avarrice)
+	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/whitericewine)
 
 /datum/supply_pack/rogue/alcohol/saigamilk
 	name = "Bökhiin Arkhi"

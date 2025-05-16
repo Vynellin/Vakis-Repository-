@@ -122,7 +122,7 @@
 		failed = TRUE
 /obj/item/organ/heart/construct
 	name = "construct core"
-	desc = "Swirling with a blessing of Astrata and pulsing with lux inside. This allows a construct to move."
+	desc = "Swirling with a blessing of Aeternus and pulsing with lux inside. This allows a construct to move."
 	icon_state = "heartcon-on"
 	icon_base = "heartcon"
 

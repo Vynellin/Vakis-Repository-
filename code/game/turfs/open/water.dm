@@ -87,7 +87,7 @@
 //				drained += (user.checkwornweight()*2)
 				if(!user.check_armor_skill())
 					drained += 40
-				if(HAS_TRAIT(user, TRAIT_ABYSSOR_SWIM))
+				if(HAS_TRAIT(user, TRAIT_CINELLA_SWIM))
 					drained -=5
 				if(!user.rogfat_add(drained))
 					user.Immobilize(30)
@@ -173,10 +173,6 @@
 				if(wash_in)
 					wash_atom(user, CLEAN_STRONG)
 				playsound(user, pick(wash), 100, FALSE)
-/*				if(water_reagent == /datum/reagent/water) //become shittified, checks so bath water can be naturally gross but not discolored
-					water_reagent = /datum/reagent/water/gross
-					water_color = "#a4955b"
-					update_icon()*/
 		else
 			user.visible_message(span_info("[user] starts to wash [item2wash] in [src]."))
 			if(do_after(L, 30, target = src))

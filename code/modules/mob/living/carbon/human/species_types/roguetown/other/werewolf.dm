@@ -12,7 +12,7 @@
 	gender = FEMALE
 
 /datum/species/werewolf
-	name = "verewolf"
+	name = "werewolf"
 	id = "werewolf"
 	species_traits = list(NO_UNDERWEAR, NO_ORGAN_FEATURES, NO_BODYPART_FEATURES)
 	inherent_traits = list(
@@ -25,7 +25,6 @@
 		TRAIT_STEELHEARTED,
 		TRAIT_BREADY,
 		TRAIT_TOXIMMUNE,
-		TRAIT_ORGAN_EATER,
 		TRAIT_NASTY_EATER,
 		TRAIT_NOSTINK,
 		TRAIT_CRITICAL_RESISTANCE,
@@ -76,10 +75,6 @@
 	H.update_damage_overlays()
 	return TRUE
 
-/datum/species/werewolf/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	. = ..()
-	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
-
 /datum/species/werewolf/update_damage_overlays(mob/living/carbon/human/H)
 	H.remove_overlay(DAMAGE_LAYER)
 	var/list/hands = list()
@@ -113,4 +108,4 @@
 	return TRUE
 
 /datum/species/werewolf/random_name(gender,unique,lastname)
-	return "VEREWOLF"
+	return "WEREWOLF"

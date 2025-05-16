@@ -156,7 +156,6 @@
 #define COOK		(1<<6)
 #define KNAVEWENCH (1<<7)
 #define GRABBER		(1<<8)
-#define NITEMASTER	(1<<9)
 #define WENCH		(1<<10)
 #define BEGGAR		(1<<11)
 #define ADVENTURER	(1<<12)
@@ -170,25 +169,23 @@
 #define COURTAGENT	(1<<20)
 #define WRETCH		(1<<21)
 
-#define YOUNGFOLK	(1<<6)
+#define SIDEFOLK	(1<<6)
 
 #define APPRENTICE	(1<<0)
 #define CHURCHLING	(1<<1)
 #define SQUIRE		(1<<2)
 #define SERVANT		(1<<3)
-#define ORPHAN		(1<<4)
-#define PRINCE		(1<<5)
+#define VAGABOND	(1<<4)
+#define NOBLEMAN		(1<<5)
 #define SHOPHAND	(1<<6)
 #define CLERK 		(1<<7)
 #define MAGEAPPRENTICE	(1<<8)
-#define APOTHECARY	(1<<9)
+#define APOTHICANT_APPRENTICE	(1<<9)
 
 #define MERCENARIES		(1<<7)
 
 #define VETERAN			(1<<1)
 #define MERCENARY		(1<<2)
-#define DESERT_RIDER	(1<<3)	//Unused
-#define GRENZELHOFT		(1<<4)	//Unused
 
 
 #define TRIBAL		(1<<8)
@@ -204,11 +201,6 @@
 #define DEATHKNIGHT (1<<1)
 #define SKELETON	(1<<2)
 
-#define INQUISITION (1<<10)
-
-#define PURITAN		(1<<0)
-#define ORTHODOXIST	(1<<1)
-
 
 #define JCOLOR_NOBLE "#aa83b9"
 #define JCOLOR_COURTIER "#81adc8"
@@ -217,14 +209,13 @@
 #define JCOLOR_YEOMAN "#819e82"
 #define JCOLOR_PEASANT "#b09262"
 #define JCOLOR_MERCENARY "#c86e3a"
-#define JCOLOR_INQUISITION "#FF0000"
 
 // job display orders //
 
 // Nobles
 #define JDO_LORD 1
 #define JDO_LADY 1.1
-#define JDO_PRINCE 1.2
+#define JDO_NOBLEMAN 1.2
 #define JDO_HAND 2
 #define JDO_STEWARD 3
 #define JDO_CLERK 3.1
@@ -235,7 +226,7 @@
 #define JDO_MAGICIAN 5
 #define JDO_MAGEAPPRENTICE 5.1
 #define JDO_PHYSICIAN 6
-#define JDO_APOTHECARY 6.1
+#define JDO_APOTHICANT_APPRENTICE 6.1
 #define JDO_JESTER 7
 #define JDO_BUTLER 7.1
 #define JDO_SERVANT 7.2
@@ -276,7 +267,6 @@
 
 #define JDO_BARKEEP 26
 #define JDO_COOK 27
-#define JDO_NITEMASTER 27.1
 #define JDO_KNAVEWENCH 27.2
 #define JDO_WENCH 27.3
 
@@ -291,12 +281,10 @@
 #define JDO_WRETCH 30.4
 
 #define JDO_MERCENARY 31
-#define JDO_GRENZELHOFT 31.1
-#define JDO_DESERT_RIDER 31.2
 #define JDO_VET 31.4
 
 #define JDO_VAGRANT 33
-#define JDO_ORPHAN 34
+#define JDO_VAGABOND 34
 
 #define JDO_PRISONERR 35
 #define JDO_PRISONERB 35.1
@@ -307,8 +295,6 @@
 #define JDO_TRIBALCOOK 37
 #define JDO_TRIBALGUARD 38
 #define JDO_TRIBALSMITH 39
-#define JDO_PURITAN 40
-#define JDO_ORTHODOXIST 40.1
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
@@ -318,11 +304,11 @@
 	/datum/job/roguetown/servant,\
 	/datum/job/roguetown/squire,\
 	/datum/job/roguetown/butler,\
-	/datum/job/roguetown/apothecary,\
+	/datum/job/roguetown/apothicant_apprentice,\
 	/datum/job/roguetown/magician
 
 #define NOBLE_ROLES \
-	/datum/job/roguetown/prince,\
+	/datum/job/roguetown/nobleman,\
 	/datum/job/roguetown/councillor,\
 	/datum/job/roguetown/physician,\
 	/datum/job/roguetown/marshal,\
@@ -346,23 +332,20 @@
 
 #define PEASANT_ROLES \
 	/datum/job/roguetown/villager,\
-	/datum/job/roguetown/nightmaiden,\
 	/datum/job/roguetown/beggar,\
 	/datum/job/roguetown/butcher,\
 	/datum/job/roguetown/cook,\
 	/datum/job/roguetown/knavewench,\
 	/datum/job/roguetown/lunatic,\
 	/datum/job/roguetown/farmer,\
-	/datum/job/roguetown/orphan,\
+	/datum/job/roguetown/vagabond,\
 	/datum/job/roguetown/shophand,\
 	/datum/job/roguetown/bapprentice,\
-	/datum/job/roguetown/prisonerb,\
 	/datum/job/roguetown/hostage,\
 	/datum/job/roguetown/prisonerr
 
 #define YEOMEN_ROLES \
 	/datum/job/roguetown/woodsman,\
-	/datum/job/roguetown/niteman,\
 	/datum/job/roguetown/archivist,\
 	/datum/job/roguetown/barkeep,\
 	/datum/job/roguetown/armorsmith,\
@@ -378,8 +361,6 @@
 #define WANDERER_ROLES \
 	/datum/job/roguetown/pilgrim,\
 	/datum/job/roguetown/adventurer,\
-	/datum/job/roguetown/mercenary/desert_rider,\
-	/datum/job/roguetown/mercenary/grenzelhoft,\
 	/datum/job/roguetown/bandit,\
 	/datum/job/roguetown/wretch
 
@@ -391,7 +372,3 @@
 	/datum/job/roguetown/manorguard,\
 	/datum/job/roguetown/sheriff,\
 	/datum/job/roguetown/guardsman
-
-#define INQUISITION_ROLES \
-	/datum/job/roguetown/puritan,\
-	/datum/job/roguetown/orthodoxist

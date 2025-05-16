@@ -213,7 +213,6 @@
 		"dumb" = 2,
 		"demonic" = 1,
 		"graggoid" = 1,
-		"zizoid" = 1,
 	)
 	var/static/list/all_descs = list(
 		"What a disgusting creature." = 10,
@@ -266,7 +265,7 @@
 
 /obj/item/natural/worms/leech/cheele
 	name = "cheele"
-	desc = "A beautiful, blood-infusing altruistic organism made by Pestra herself."
+	desc = "A beautiful, blood-infusing altruistic organism."
 	icon_state = "cheele"
 	color = null
 	consistent = TRUE

@@ -4,29 +4,12 @@
 	crate_name = "merchant guild's crate"
 	crate_type = /obj/structure/closet/crate/chest/merchant
 
-
-/datum/supply_pack/rogue/wardrobe/hat/witchhat
-	name = "Witch-Hunter's Hats"
-	cost = 10
-	contains = list(
-					/obj/item/clothing/head/roguetown/puritan,
-					/obj/item/clothing/head/roguetown/puritan,
-				)
-
 /datum/supply_pack/rogue/wardrobe/hat/physicianhat
 	name = "Physician's Hats"
 	cost = 10
 	contains = list(
 					/obj/item/clothing/head/roguetown/physician,
 					/obj/item/clothing/head/roguetown/physician,
-				)
-
-/datum/supply_pack/rogue/wardrobe/hat/nightmanhat
-	name = "Teller's Hats"
-	cost = 10
-	contains = list(
-					/obj/item/clothing/head/roguetown/nightman,
-					/obj/item/clothing/head/roguetown/nightman,
 				)
 
 /datum/supply_pack/rogue/wardrobe/hat/bardhat
@@ -115,14 +98,6 @@
 					/obj/item/clothing/suit/roguetown/shirt/robe/magegreen,
 					/obj/item/clothing/suit/roguetown/shirt/robe/mageorange,
 					/obj/item/clothing/suit/roguetown/shirt/robe/mageyellow,
-				)
-
-/datum/supply_pack/rogue/wardrobe/suits/formal
-	name = "Formal Silks"
-	cost = 20
-	contains = list(
-					/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
-					/obj/item/clothing/suit/roguetown/shirt/undershirt/puritan,
 				)
 
 /datum/supply_pack/rogue/wardrobe/gloves/fgloves

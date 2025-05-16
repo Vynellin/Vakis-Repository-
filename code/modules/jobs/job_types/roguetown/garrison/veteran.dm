@@ -244,12 +244,10 @@
 /datum/outfit/job/roguetown/vet/merc/pre_equip(mob/living/carbon/human/H)
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft // You do NOT get the BLACKSTEEL CUIRASS because yours BROKE & I hate you. Go on a personal quest to replace it or something.
-	head = /obj/item/clothing/head/roguetown/grenzelhofthat
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt // You do NOT get the BLACKSTEEL CUIRASS because yours BROKE & I hate you. Go on a personal quest to replace it or something.
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half
-	pants = /obj/item/clothing/under/roguetown/grenzelpants
-	shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
-	gloves = /obj/item/clothing/gloves/roguetown/grenzelgloves
+	pants = /obj/item/clothing/under/roguetown/tights/sailor
+	shoes = /obj/item/clothing/shoes/roguetown/boots
 	beltl = /obj/item/rogueweapon/sword/short
 	beltr = /obj/item/storage/keyring/guardcastle
 	backr = /obj/item/storage/backpack/rogue/satchel/black
@@ -300,7 +298,7 @@
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 		if("Halberd")
 			r_hand = /obj/item/rogueweapon/halberd
-			H.mind.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE) // SO, fun fact. The description of the grenzel halbardier says they specialize in axes, but they get no axe skill. Maybe this guy is where that rumor came from.
+			H.mind.adjust_skillrank(/datum/skill/combat/axes, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
 
 /datum/advclass/veteran/scout
@@ -379,7 +377,7 @@
 /datum/outfit/job/roguetown/vet/spy/pre_equip(mob/living/carbon/human/H)
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/white
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/tights/black
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather

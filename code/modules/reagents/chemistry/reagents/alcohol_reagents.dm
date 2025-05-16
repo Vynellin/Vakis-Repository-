@@ -2158,29 +2158,25 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	color = "#772C48"
 	quality = DRINK_GOOD
 
-//Avar boozes
-
-/datum/reagent/consumable/ethanol/beer/avarmead
+/datum/reagent/consumable/ethanol/beer/honeyedmead
 	name = "Zögiin bal"
 	boozepwr = 30
 	taste_description = "spicy honey"
 	color = "#e0a400"
 	quality = DRINK_GOOD
 
-/datum/reagent/consumable/ethanol/beer/avarrice
+/datum/reagent/consumable/ethanol/beer/makkolir
 	name = "Makkolir"
 	boozepwr = 30
 	taste_description = "tangy sweetness"
 	color = "#ddcbc9"
 	quality = DRINK_GOOD
 
-/datum/reagent/consumable/ethanol/beer/saigamilk //No way, kumys from avar!!!
+/datum/reagent/consumable/ethanol/beer/saigamilk
 	name = "Bökhiin Arkhi"
 	boozepwr = 15
 	taste_description = "bubbly, sour salt"
 	color = "#dddddd"
-
-//Kazengun boozes
 
 /datum/reagent/consumable/ethanol/beer/kgunlager
 	name = "Yamaguchi Pale"
@@ -2220,22 +2216,19 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	
 
 
-/datum/reagent/consumable/ethanol/beer/nocshine // wait, no, NOCSHINE
-	name = "noc's shine"
+/datum/reagent/consumable/ethanol/beer/moonshine // i'm not calling it zirashine
+	name = "moonshine"
 	boozepwr = 70  // YEEEEEHAAAWWWWWW
 	taste_description = "what might be my throat melting and nose hair burning"
 	color = "#d8fbfd63"
 	quality = DRINK_NICE
 
 
-/datum/reagent/consumable/ethanol/beer/nocshine/on_mob_life(mob/living/carbon/M)
-	M.apply_status_effect(/datum/status_effect/buff/nocshine)
-	if(HAS_TRAIT(M, TRAIT_CRACKHEAD))
-		M.adjustToxLoss(0.1, 0)
-	else
-		M.adjustToxLoss(0.75, 0)
+/datum/reagent/consumable/ethanol/beer/moonshine/on_mob_life(mob/living/carbon/M)
+	M.apply_status_effect(/datum/status_effect/buff/moonshine)
+	M.adjustToxLoss(0.75, 0)
 	..()
 	. = 1
 
-/datum/reagent/consumable/ethanol/beer/nocshine/on_mob_end_metabolize(mob/living/M)
-	M.remove_status_effect(/datum/status_effect/buff/nocshine)
+/datum/reagent/consumable/ethanol/beer/moonshine/on_mob_end_metabolize(mob/living/M)
+	M.remove_status_effect(/datum/status_effect/buff/moonshine)

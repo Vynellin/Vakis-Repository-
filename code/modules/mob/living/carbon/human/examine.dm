@@ -10,9 +10,9 @@
 		user.add_stress(/datum/stressevent/jesterphobia)
 	if(HAS_TRAIT(src, TRAIT_BEAUTIFUL))
 		user.add_stress(/datum/stressevent/beautiful)
-		// Apply Xylix buff when examining someone with the beautiful trait
-		if(HAS_TRAIT(user, TRAIT_XYLIX) && !user.has_status_effect(/datum/status_effect/buff/xylix_joy))
-			user.apply_status_effect(/datum/status_effect/buff/xylix_joy)
+		// Apply Varielle buff when examining someone with the beautiful trait
+		if(HAS_TRAIT(user, TRAIT_VARIELLE) && !user.has_status_effect(/datum/status_effect/buff/variellian_joy))
+			user.apply_status_effect(/datum/status_effect/buff/variellian_joy)
 			to_chat(user, span_info("Their beauty brings a smile to my face, and fortune to my steps!"))
 	if(HAS_TRAIT(src, TRAIT_UNSEEMLY))
 		if(!HAS_TRAIT(user, TRAIT_UNSEEMLY))
@@ -82,14 +82,6 @@
 		else
 			. = list(span_info("ø ------------ ø\nThis is the <EM>[used_name]</EM>, the [race_name]."))
 
-		if(HAS_TRAIT(src, TRAIT_WITCH))
-			if(HAS_TRAIT(user, TRAIT_NOBLE) || HAS_TRAIT(user, TRAIT_INQUISITION) || HAS_TRAIT(user, TRAIT_WITCH))
-				. += span_warning("A witch! Their presence brings an unsettling aura.")
-			else if(HAS_TRAIT(user, TRAIT_COMMIE) || HAS_TRAIT(user, TRAIT_CABAL) || HAS_TRAIT(user, TRAIT_HORDE) || HAS_TRAIT(user, TRAIT_DEPRAVED))
-				. += span_notice("A practitioner of the old ways.")
-			else
-				. += span_notice("Something about them seems... different.")
-
 		if(GLOB.lord_titles[name])
 			. += span_notice("[m3] been granted the title of \"[GLOB.lord_titles[name]]\".")
 
@@ -116,7 +108,7 @@
 		if(HAS_TRAIT(user, TRAIT_JUSTICARSIGHT) && !HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
 			for(var/datum/bounty/b in GLOB.head_bounties) //I hate this.
 				if(b.target == real_name)
-					. += span_syndradio("[m3] a bounty on [m2] head of [b.amount] mammon for [b.reason], issued by [b.employer].")
+					. += span_syndradio("[m3] a bounty on [m2] head of [b.amount] sunmarks for [b.reason], issued by [b.employer].")
 					break
 
 		if(name in GLOB.court_agents)
@@ -149,16 +141,6 @@
 			if(has_flaw(/datum/charflaw/addiction/sadist) && user.has_flaw(/datum/charflaw/masochist))
 				. += span_secradio("[m1] looking with eyes filled with a desire to inflict pain. So exciting.")
 
-		var/villain_text = get_villain_text(user)
-		if(villain_text)
-			. += villain_text
-		var/heretic_text = get_heretic_text(user)
-		if(heretic_text)
-			. += span_notice(heretic_text)
-		var/inquisition_text = get_inquisition_text(user)
-		if(inquisition_text)
-			. +=span_notice(inquisition_text)
-
 		if(leprosy == 1)
 			. += span_necrosis("A LEPER...")
 	
@@ -179,11 +161,6 @@
 					. += span_redtext("[m1] repugnant!")
 				if (THEY_THEM, THEY_THEM_F, IT_ITS)
 					. += span_redtext("[m1] repulsive!")
-
-	if(user != src && HAS_TRAIT(user, TRAIT_MATTHIOS_EYES))
-		var/atom/item = get_most_expensive()
-		if(item)
-			. += span_notice("You get the feeling [m2] most valuable possession is \a [item].")
 
 	var/is_stupid = FALSE
 	var/is_smart = FALSE
@@ -539,12 +516,7 @@
 				else
 					msg += span_bloody("[m1] [bleed_wording]!")
 		else
-			if(isliving(user))
-				var/mob/living/M = user
-				if(M.patron.type == /datum/patron/inhumen/graggar)
-					msg += span_bloody("[m1] shedding lyfe's blood, exposing weakness!")
-				else
-					msg += span_bloody("[m1] letting out the red stuff!")
+			msg += span_bloody("[m1] letting out the red stuff!")
 
 	// Missing limbs
 	var/missing_head = FALSE
@@ -787,89 +759,3 @@
 			dat += "[new_text]\n" //dat.Join("\n") doesn't work here, for some reason
 	if(dat.len)
 		return dat.Join()
-
-/// Returns patron-related examine text for the mob, if any. Can return null.
-/mob/living/proc/get_heretic_text(mob/examiner)
-	var/heretic_text
-	var/seer
-
-	if(HAS_TRAIT(src,TRAIT_DECEIVING_MEEKNESS))
-		return null
-
-	if(HAS_TRAIT(examiner, TRAIT_HERETIC_SEER))
-		seer = TRUE
-	
-	if(HAS_TRAIT(src, TRAIT_COMMIE))
-		if(seer)
-			heretic_text += "Matthiosan."
-			if(HAS_TRAIT(examiner, TRAIT_COMMIE))
-				heretic_text += " To share with. To take with. For all, and us."
-		else if(HAS_TRAIT(examiner, TRAIT_COMMIE))
-			heretic_text += "Comrade!"
-	else if((HAS_TRAIT(src, TRAIT_CABAL)))
-		if(seer)
-			heretic_text += "A member of Zizo's cabal."
-			if(HAS_TRAIT(examiner, TRAIT_CABAL))
-				heretic_text += " May their ambitions not interfere with mine."
-		else if(HAS_TRAIT(examiner, TRAIT_CABAL))
-			heretic_text += "Another of the Cabal!"
-	else if((HAS_TRAIT(src, TRAIT_HORDE)))
-		if(seer)
-			heretic_text += "Hardened by Graggar's Rituals."
-			if(HAS_TRAIT(examiner, TRAIT_HORDE))
-				heretic_text += " Mine were a glorious memory."
-		else if(HAS_TRAIT(examiner, TRAIT_HORDE))
-			heretic_text += "Anointed!"
-	else if((HAS_TRAIT(src, TRAIT_DEPRAVED)))
-		if(seer)
-			heretic_text += "Baotha's Touched."
-			if(HAS_TRAIT(examiner, TRAIT_DEPRAVED))
-				heretic_text += " She leads us to the greatest ends."
-		else if(HAS_TRAIT(examiner, TRAIT_DEPRAVED))
-			heretic_text += "Debased!"
-	
-	return heretic_text
-
-/// Same as get_heretic_text, but returns a simple symbol depending on the type of heretic!
-/mob/living/proc/get_heretic_symbol(mob/examiner)
-	var/heretic_text
-	if(HAS_TRAIT(src, TRAIT_DECEIVING_MEEKNESS))
-		return
-	if(HAS_TRAIT(src, TRAIT_COMMIE) && HAS_TRAIT(examiner, TRAIT_COMMIE))
-		heretic_text += "♠"
-	else if(HAS_TRAIT(src, TRAIT_CABAL) && HAS_TRAIT(examiner, TRAIT_CABAL))
-		heretic_text += "♦"
-	else if(HAS_TRAIT(src, TRAIT_HORDE) && HAS_TRAIT(examiner, TRAIT_HORDE))
-		heretic_text += "♠"
-	else if(HAS_TRAIT(src, TRAIT_DEPRAVED) && HAS_TRAIT(examiner, TRAIT_DEPRAVED))
-		heretic_text += "♥"
-	
-	return heretic_text
-
-
-// Used for Inquisition tags
-/mob/living/proc/get_inquisition_text(mob/examiner)
-	var/inquisition_text
-	if(HAS_TRAIT(src, TRAIT_INQUISITION) && HAS_TRAIT(examiner, TRAIT_INQUISITION))
-		inquisition_text += "Fellow Member of the Inquisition"
-
-	return inquisition_text
-
-/// Returns antagonist-related examine text for the mob, if any. Can return null.
-/mob/living/proc/get_villain_text(mob/examiner)
-	var/villain_text
-	if(mind)
-		if(mind.special_role == "Bandit")
-			if(HAS_TRAIT(examiner, TRAIT_COMMIE))
-				villain_text = span_notice("Free man!")
-			/*else
-				villain_text = span_userdanger("BANDIT!")*/
-		if(mind.special_role == "Vampire Lord")
-			var/datum/antagonist/vampirelord/VD = mind.has_antag_datum(/datum/antagonist/vampirelord)
-			if(VD) 
-				if(!VD.disguised)
-					villain_text += span_userdanger("A MONSTER!")
-		if(mind.assigned_role == "Lunatic")
-			villain_text += span_userdanger("LUNATIC!")
-
-	return villain_text

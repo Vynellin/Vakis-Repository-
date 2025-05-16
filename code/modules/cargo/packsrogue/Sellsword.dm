@@ -6,7 +6,7 @@
 
 
 /datum/supply_pack/rogue/Sellsword/dridersword
-	name = "Old Ranesheni package..."
+	name = "Shamsir"
 	cost = 10
 	contains = list(/obj/item/rogueweapon/sword/sabre/shamshir)
 
@@ -15,22 +15,6 @@
 	name = "Desert Rider headdress"
 	cost = 5
 	contains = list(/obj/item/clothing/head/roguetown/roguehood/shalal)
-
-
-/datum/supply_pack/rogue/Sellsword/grenzelhofthat
-	name = "Grenzel Hat"
-	cost = 5
-	contains = list(/obj/item/clothing/head/roguetown/grenzelhofthat)
-
-/datum/supply_pack/rogue/Sellsword/Grenzelpants
-	name = "Grenzel Pants"
-	cost = 5
-	contains = list(/obj/item/clothing/under/roguetown/grenzelpants)
-
-/datum/supply_pack/rogue/Sellsword/Grenzelshoes
-	name = "Grenzel Shoes"
-	cost = 5
-	contains = list(/obj/item/clothing/shoes/roguetown/grenzelhoft)
 
 /datum/supply_pack/rogue/Sellsword/coif/steel
 	name = "Steel Coif"
@@ -122,7 +106,7 @@
 /datum/supply_pack/rogue/Sellsword/wolfhelm
 	name = "Volf Plate Helm"
 	cost = 30
-	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/volfplate)
+	contains = list(/obj/item/clothing/head/roguetown/helmet/heavy/wolfplate)
 
 
 /datum/supply_pack/rogue/Sellsword/ssword

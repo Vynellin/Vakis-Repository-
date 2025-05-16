@@ -4,9 +4,6 @@
 	antagpanel_category = "Aspirant"
 	job_rank = ROLE_ASPIRANT
 	show_in_roundend = FALSE
-	confess_lines = list(
-		"THE CHOSEN MUST TAKE THE THRONE!",
-	)
 	increase_votepwr = FALSE
 	rogue_enabled = TRUE
 

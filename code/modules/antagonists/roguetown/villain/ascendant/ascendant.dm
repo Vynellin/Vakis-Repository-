@@ -2,16 +2,10 @@
 	name = "Ascendant"
 	roundend_category = "maniacs"
 	antagpanel_category = "LISTENER"
-	antag_memory = "<b>PSYDON IS DEAD. The Old Pantheon ARE WEAK, and the New Gods ARE FOOLISH. The WORLD IS DYING, AND I AM THE ONLY THING THAT MAY SAVE IT- COMET SYON'S BLADE BLOODY ME UNTIL IT IS DONE.</b>"
+	antag_memory = "<b>You heard them. Creaks, from the wreckage of one of the remnant structures of eras past. You know what must be done.</b>"
 	job_rank = ROLE_ASCENDANT
 	antag_hud_type = ANTAG_HUD_TRAITOR
 	antag_hud_name = "villain"
-	confess_lines = list(
-		"Hah- ahah- ahahah! You're LIVING ON A CORPSE!!",
-		"God is coming. God is here.",
-		"I AM GOD.",
-		"THE DECK IS LINED, AND THE RIVER TURNS.",
-	)
 	rogue_enabled = TRUE
 	/// Traits we apply to the owner
 	var/static/list/applied_traits = list(
@@ -25,32 +19,6 @@
 	var/STACON
 	var/STAEND
 
-/*
-var/psydon_artefact_one = psydon_pool[1]
-var/psydon_artefact_two = psydon_pool[2]
-var/psydon_capstone_one = psydon_pool[3]
-
-// revealed after cap one
-var/psydon_artefact_three = psydon_pool[4]
-var/psydon_artefact_four = psydon_pool[5]
-var/psydon_capstone_two = psydon_pool[6]
-
-//Roger, the deal is honored - you are blessed with entry to heaven.
-var/psydon_ascend = psydon_pool[7]
-
-
-	var/psydon_artefact_one
-	var/psydon_artefact_two
-	var/psydon_capstone_one
-
-//these are revealed after capstone one
-	var/psydon_artefact_three
-	var/psydon_artefact_four
-	var/psydon_capstone_two
-
-//ascension artefact
-	var/psydon_ascend
-*/
 	var/static/list/possible_weapons = list(
 		/obj/item/rogueweapon/sword/cutlass,
 		/obj/item/rogueweapon/sword/decorated,
@@ -89,4 +57,3 @@ var/psydon_ascend = psydon_pool[7]
 			SEND_SOUND(owner.current, 'sound/villain/ascendant_intro.ogg')
 			to_chat(owner.current, span_danger("[antag_memory]"))
 			owner.announce_objectives()
-

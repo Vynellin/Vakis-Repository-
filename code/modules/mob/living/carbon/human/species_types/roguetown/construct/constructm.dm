@@ -3,10 +3,13 @@
 	construct = 1
 
 /datum/species/construct/metal
-	name = "Metal Construct"
+	name = "Construct"
 	id = "constructm"
-	desc = "<b>Metallic Construct</b><br>\
-	Masterworks of artifice, metal constructs are as the name implies- entirely constructed by mortal hands. They are beings not of flesh and blood, but cold metal and the arcyne. Constructs are said to originate from works of Zizo, and they hail from the far-off lands of the Southern Empty- a great city of artifice, where the only artificers capable of understanding what is necessary to create the constructs live. For some reason, they have found themselves travelling out of the empty, as of late. Children of the Resonator Siphon.<br>\
+	desc = "<b>Construct</b><br>\
+	Life forged by mortal hands. These constructs are not men of flesh and blood but machines forged of stone, wood, artifice and intellect.\
+	Their place in the world was meant to be ones of war and servitude yet their war and its bloodshed is over.\
+	These ancient constructs, in the multitude of shapes they are formed, and those made by mortals of enterprise seek meaning in a world not meant for beings like them.\
+	<br>\
 	(+1 Endurance, -2 Speed)<br>\
 	(Insomnia, No hunger, no blood.)"
 
@@ -73,13 +76,19 @@
 
 /datum/species/construct/metal/check_roundstart_eligible()
 	return TRUE
-	
+
 /datum/species/construct/metal/get_skin_list()
 	return list(
-		"BRASS" = "dfbd6c",
+		"STEEL" = "8E8E8E",
 		"IRON" = "525352",
-		"STEEL" = "babbb9",
-		"BRONZE" = "e2a670"
+		"MITHRILLIC" = "9AA6A5",
+		"BURNISHED" = "665C53",
+		"DEEPSTONE" = "46445C",
+		"RUSTRED" = "8D6759",
+		"MAHOGONEY" = "553421",
+		"POLISHED" = "B7B5B2",
+		"SUNSTEEL" = "A18047",
+		"DARKIRON" = "3B393D",
 	)
 
 /datum/species/construct/metal/get_hairc_list()

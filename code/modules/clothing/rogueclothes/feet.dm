@@ -45,17 +45,6 @@
 			holdingknife = null
 			playsound(loc, 'sound/foley/equip/swordsmall1.ogg')
 			return TRUE
-	
-
-/obj/item/clothing/shoes/roguetown/boots/psydonboots
-	name = "psydonian boots"
-	desc = "Blacksteel-heeled boots. The leather refuses to be worn down, no matter how far you march through these lands."
-	icon_state = "psydonboots"
-	item_state = "psydonboots"
-	sewrepair = TRUE
-	armor = list("blunt" = 30, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
-	salvage_amount = 1
-	salvage_result = /obj/item/natural/hide/cured
 
 /obj/item/clothing/shoes/roguetown/boots/nobleboot
 	name = "noble boots"
@@ -177,56 +166,6 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/steel
 
-
-/obj/item/clothing/shoes/roguetown/boots/armor/matthios
-	max_integrity = 500
-	name = "gilded boots"
-	desc = "Gilded tombs do worm enfold."
-	icon_state = "matthiosboots"
-	armor = list("blunt" = 90, "slash" = 100, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/shoes/roguetown/boots/armor/matthios/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/shoes/roguetown/boots/armor/matthios/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-/obj/item/clothing/shoes/roguetown/boots/armor/zizo
-	max_integrity = 500
-	name = "darksteel boots"
-	desc = "Plate boots. Called forth from the edge of what should be known. In Her name."
-	icon_state = "zizoboots"
-	armor = list("blunt" = 90, "slash" = 100, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/shoes/roguetown/boots/armor/zizo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/shoes/roguetown/boots/armor/zizo/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-/obj/item/clothing/shoes/roguetown/boots/otavan
-	name = "otavan leather boots"
-	desc = "Boots of outstanding craft, your fragile feet have never felt so protected and comfortable before."
-	body_parts_covered = FEET
-	icon_state = "fencerboots"
-	item_state = "fencerboots"
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	blocksound = SOFTHIT
-	max_integrity = 200
-	armor = list("blunt" = 90, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 0, "acid" = 0)
-	allowed_race = NON_DWARVEN_RACE_TYPES
-	salvage_amount = 1
-	salvage_result = /obj/item/natural/hide/cured
-	sewrepair = TRUE
-
 /obj/item/clothing/shoes/roguetown/boots/armor/iron
 	name = "iron plated boots"
 	desc = "Boots with iron for added protection."
@@ -250,13 +189,6 @@
 /obj/item/clothing/shoes/roguetown/jester/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_JINGLE_BELLS)
-
-/obj/item/clothing/shoes/roguetown/grenzelhoft
-	name = "grenzelhoft boots"
-	icon_state = "grenzelboots"
-	item_state = "grenzelboots"
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
-	armor = list("blunt" = 15, "slash" = 15, "stab" = 15, "piercing" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/shoes/roguetown/boots/furlinedboots
 	name = "fur lined boots"
@@ -290,13 +222,6 @@
 	is_barefoot = TRUE
 	sewrepair = TRUE
 	armor = list("blunt" = 5, "slash" = 5, "stab" = 5, "piercing" = 0, "fire" = 0, "acid" = 0) //Thinks its fair for a piece of cloth and fiber.
-
-/obj/item/clothing/shoes/roguetown/boots/otavan/inqboots
-	name = "inquisitorial boots"
-	desc = "Finely crafted boots, made to stomp out darkness."
-	icon_state = "inqboots"
-	item_state = "inqboots"
-	allowed_race = ALL_RACES_TYPES
 
 
 // ----------------- BLACKSTEEL -----------------------

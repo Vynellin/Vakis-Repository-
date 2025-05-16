@@ -53,7 +53,7 @@
 
 /obj/item/rogue/painting/queen
 	icon_state = "queenpainting"
-	desc = "It's Queen Samantha I of Psydonia. Her late husband would be so proud of what she has accomplished in his realm. These mass-reproduced paintings are unfortunately devalued."
+	desc = "These mass-reproduced paintings are unfortunately devalued."
 	dropshrink = 0.5
 	sellprice = 40
 	deployed_structure = /obj/structure/fluff/walldeco/painting/queen

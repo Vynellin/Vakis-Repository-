@@ -1,5 +1,5 @@
 /obj/structure/roguemachine/lottery_roguetown
-	name = "XYLIX'S FORTUNE"
+	name = "BRASS AND STEEL"
 	desc = "An infinite, yawning hole that makes or breaks men. Come and play!"
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "lottery"
@@ -25,7 +25,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 
 /obj/structure/roguemachine/lottery_roguetown/attack_hand(mob/living/user) //empty hand
 
-	src.say("Your current tithe is [src.gamblingprice] mammons. Care to spin?")
+	src.say("Your current tithe is [src.gamblingprice] sunmarks. Care to spin?")
 	playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 	return
 
@@ -38,18 +38,18 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 
 	if(istype(P, /obj/item/roguecoin))
 		if(src.gamblingprice + (P.sellprice * P.quantity) > src.maxtithing)
-			say("This puts the starting tithe over [src.maxtithing] mammons.")
+			say("This puts the starting tithe over [src.maxtithing] sunmarks.")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
 		if(src.gamblingprice + (P.sellprice * P.quantity) < src.mintithing)
-			say("This is below [src.mintithing] mammons.")
+			say("This is below [src.mintithing] sunmarks.")
 			playsound(src, 'sound/misc/machineno.ogg', 100, FALSE, -1)
 			return
 
 		else
 			src.gamblingprice += (P.sellprice * P.quantity)
 			qdel(P)
-			src.say("Your current tithe is now [src.gamblingprice] mammons. Care to spin?")
+			src.say("Your current tithe is now [src.gamblingprice] sunmarks. Care to spin?")
 			playsound(src, 'sound/misc/machinequestion.ogg', 100, FALSE, -1)
 			return
 
@@ -59,7 +59,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 	if(src.stopgambling == 1)
 		return
 	if(src.gamblingprice == 0)
-		src.say(pick("Eager fool; you need mammons to gamble your life away.", "You are missing your tithe.", "A lord without land is no lord at all."))
+		src.say(pick("You are missing your tithe.", "A lord without land is no lord at all."))
 		src.stopgambling = 1
 		sleep(20)
 		src.stopgambling = 0
@@ -68,7 +68,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 
 	else
 		src.diceroll = rand(1,100)
-		src.say(pick("Around and around I go, where I stop, only I know.", "Xylix smiles upon your idiocy, child.", "The wheel of fate spins, and spins.", "Oh, you poor fool.", "This is going to hurt for one of us.", "I laugh, you cry; I weep, you cheer..", "I will be your fool; I'll perform for you...", "Let's go gambling!", "Around and around, folly abounds.", "Dance with ruin and wealth."))
+		src.say(pick("Around and around I go, where I stop, only I know.", "The wheel of fate spins, and spins.", "Let's go gambling!"))
 		playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		playsound(src, 'sound/misc/letsgogambling.ogg', 100, FALSE, -1)
 		src.gamblingprob += (user.STALUC - src.probpenalty)
@@ -91,7 +91,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 
 			peasant_betting()
 			letsgogamblinggamblers()
-			src.say(pick("Well-maneuvered, aristocrat! Your peasant's tithe is now [src.gamblingprice] mammons. Play again?", "A bountiful harvest, this year- the peasant's tithe rises to [src.gamblingprice] mammons. Spin me again?",))
+			src.say(pick("Well-maneuvered, aristocrat! Your peasant's tithe is now [src.gamblingprice] sunmarks. Play again?", "A bountiful harvest, this year- the peasant's tithe rises to [src.gamblingprice] sunmarks. Spin me again?",))
 
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 			src.gamblingprob = src.gamblingbaseprob
@@ -144,7 +144,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 			mod = 10
 		if(selection == "SILVER")
 			mod = 5
-		var/coin_amt = input(user, "Sayyid, you have [src.gamblingprice] mammon in tithes. You may withdraw [floor(gamblingprice/mod)] [selection] COINS.", src) as null|num
+		var/coin_amt = input(user, "Sayyid, you have [src.gamblingprice] sunmarks in tithes. You may withdraw [floor(gamblingprice/mod)] [selection] COINS.", src) as null|num
 		coin_amt = round(coin_amt)
 		if(coin_amt < 1)
 			return
@@ -201,10 +201,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/roguemachine/lottery_roguetown, 32)
 			src.say("...though 'tis difficult to argue what happened after that didn't benefit Her.")
 			playsound(src, 'sound/misc/bug.ogg', 100, FALSE, -1)
 		if(5)
-			src.say("Oh, Psydon?")
+			src.say("Oh, Pardon?")
 			playsound(src, 'sound/misc/machinequestion.ogg', 100, FALSE, -1)
 			sleep(30)
-			src.say("To be honest, I'm about PSY-DONE with this whole debate! Ha-ha-h- ...No? Too soon? Alright.")
+			src.say("Don't look at me for spending more!")
 			playsound(src, 'sound/misc/machinetalk.ogg', 100, FALSE, -1)
 		if(6)
 			src.say("You know, jester, those Ecclesials have the right idea.")

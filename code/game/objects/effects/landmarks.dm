@@ -101,7 +101,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	jobspawn_override = list("Beggar")
 	delete_after_roundstart = FALSE
 
-/obj/effect/landmark/start/orphanlate
+/obj/effect/landmark/start/vagabondlate
 	name = "Vagabondlate"
 	icon_state = "arrow"
 	jobspawn_override = list("Vagabond")
@@ -111,12 +111,6 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "DesertRiderlate"
 	icon_state = "arrow"
 	jobspawn_override = list("Desert Rider Mercenary")
-	delete_after_roundstart = FALSE
-
-/obj/effect/landmark/start/grenzelhoftlate
-	name = "Grenzelhoftlate"
-	icon_state = "arrow"
-	jobspawn_override = list("Grenzelhoft Mercenary")
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/mercenarylate
@@ -132,7 +126,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	delete_after_roundstart = FALSE
 
 /obj/effect/landmark/start/lord
-	name = "Grand Duke"
+	name = /datum/job/roguetown/lord::title
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/knight
@@ -239,24 +233,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Martyr"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/puritan
-	name = "Inquisitor"
-	icon_state = "arrow"
-
-/obj/effect/landmark/start/orthodoxist
-	name = "Orthodoxist"
-	icon_state = "arrow"
-
 /obj/effect/landmark/start/sergeant
 	name = "Sergeant"
-	icon_state = "arrow"
-
-/obj/effect/landmark/start/nightman
-	name = "Bathmaster"
-	icon_state = "arrow"
-
-/obj/effect/landmark/start/nightmaiden
-	name = "Bathhouse Attendant"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/merchant
@@ -336,20 +314,12 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Beggar"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/lady
-	name = "Consort"
-	icon_state = "arrow"
-
-/obj/effect/landmark/start/prince
-	name = "Prince"
+/obj/effect/landmark/start/nobleman
+	name = /datum/job/roguetown/nobleman::title
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/prisonerr
 	name = "Prisoner (Solaris Keep)"
-	icon_state = "arrow"
-
-/obj/effect/landmark/start/prisonerb
-	name = "Prisoner (Bog)"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/hostage
@@ -418,7 +388,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Churchling"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/orphan
+/obj/effect/landmark/start/vagabond
 	name = "Vagabond"
 	icon_state = "arrow"
 

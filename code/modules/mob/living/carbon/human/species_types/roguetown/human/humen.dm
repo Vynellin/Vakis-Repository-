@@ -2,19 +2,16 @@
 	race = /datum/species/human/northern
 
 /datum/species/human/northern
-	name = "Humen"
-	id = "humen"
-	desc = "<b>Humen</b><br>\
-	Humens (or \"Humans\") are the eldest of the Weeping God's creations. Noted for their\
-	tenacity and overwhelming population, humens are the most commonly seen race across the lands, \
-	at a rate of about ten to one in regions such as Grenzelhoft. However, to the west \
-	the opposite is true. Humens come from a vast swathe of cultures and ethnicities, most of which \
-	have historically been at odds with one another. Being the eldest creations of the Weeping God, humens \
-	tend to find fortune easier than the other races, and are so diverse that no other racial traits \
-	are dominant in their species.<br>\
+	name = "Human"
+	id = "human"
+	desc = "<b>Human</b><br>\
+	Humans remain. As it is, as it will always be. <br>\
+Empires may rise and fall and even Gods can come and go but Humanity always survives.\
+Ambition burns strongly in the heart of a Human. During the Dawn War’s desolation it was Human pragmatism that won battles that even radiant magic could not win. <br>\
+In every town and every province Humans are a common sight. The Dawn Era could not thrive without them, they are the glue that unites the many ranging hearts and minds of Sunmarch and always moves them forward.<br>\
 	(+1 Endurance, +1 Intelligence)"
 
-	skin_tone_wording = "Ancestry"
+	skin_tone_wording = "Skintone"
 
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE,OLDGREY)
@@ -72,29 +69,30 @@
 
 /datum/species/human/northern/check_roundstart_eligible()
 	return TRUE
-	
+
 /datum/species/human/northern/on_species_gain(mob/living/carbon/foreign, datum/species/old_species)
 	..()
 	languages(foreign)
-	
+
 /datum/species/human/northern/proc/languages(mob/living/carbon/human/foreign)
-	if(foreign.skin_tone == SKIN_COLOR_GRENZELHOFT)
-		foreign.grant_language(/datum/language/grenzelhoftian)
+	if(foreign.skin_tone == SKIN_COLOR_HEARTLAND)
+		foreign.grant_language(/datum/language/old_rasurian)
 
 /datum/species/human/northern/get_skin_list()
 	return list(
-		"Grenzelhoft" = SKIN_COLOR_GRENZELHOFT,
-		"Hammerhold" = SKIN_COLOR_HAMMERHOLD,
-		"Avar" = SKIN_COLOR_AVAR,
-		"Rockhill" = SKIN_COLOR_ROCKHILL,
-		"Otava" = SKIN_COLOR_OTAVA,
-		"Etrusca" = SKIN_COLOR_ETRUSCA,
-		"Gronn" = SKIN_COLOR_GRONN,
-		"North Raneshen (Chorodiaki)" = SKIN_COLOR_GIZA,
-		"West Raneshen (Vrdaqnan)" = SKIN_COLOR_SHALVISTINE,
-		"East Raneshen (Nshkormh)" = SKIN_COLOR_LALVESTINE,
-		"Naledi" = SKIN_COLOR_NALEDI,
-		"Kazengun" = SKIN_COLOR_KAZENGUN
+		"Sunless" = SKIN_COLOR_SUNLESS,
+		"Light" = SKIN_COLOR_LIGHT,
+		"Warm Ivory" = SKIN_COLOR_WARMIVORY,
+		"Heartland" = SKIN_COLOR_HEARTLAND,
+		"Cool Sand" = SKIN_COLOR_COOLSAND,
+		"South Sand" = SKIN_COLOR_SOUTHSAND,
+		"Dull" = SKIN_COLOR_DULL,
+		"Beach" = SKIN_COLOR_BEACH,
+		"Coastal" = SKIN_COLOR_COASTAL,
+		"Dark Gold" = SKIN_COLOR_DARKGOLD,
+		"Palm" = SKIN_COLOR_PALM,
+		"Walnut" = SKIN_COLOR_WALNUT,
+		"Vinegar" = SKIN_COLOR_VINEGAR
 	)
 
 /datum/species/human/northern/get_hairc_list()

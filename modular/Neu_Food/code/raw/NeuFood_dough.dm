@@ -322,7 +322,7 @@
 /*	.................   Breadslice & Toast   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/breadslice
 	name = "sliced bread"
-	desc = "A bit of comfort to start your dae."
+	desc = "A bit of comfort to start your day."
 	icon_state = "loaf_slice"
 	faretype = FARE_POOR
 	w_class = WEIGHT_CLASS_NORMAL
@@ -491,7 +491,7 @@
 
 /obj/item/reagent_containers/food/snacks/rogue/cheesebun
 	name = "fresh cheese bun"
-	desc = "A treat from the Grenzelhoft kitchen."
+	desc = "A treat. Cheese! For everyone!"
 	faretype = FARE_FINE
 	icon_state = "cheesebun"
 	list_reagents = list(/datum/reagent/consumable/nutriment = SMALLDOUGH_NUTRITION+FRESHCHEESE_NUTRITION)
@@ -706,8 +706,8 @@
 	rotprocess = SHELFLIFE_DECENT
 
 /obj/item/reagent_containers/food/snacks/rogue/hcake
-	name = "ranesheni cake"
-	desc = "Cake glazed with honey, in the famous Zybantu fashion, a delicious sweet treat."
+	name = "honeyed cake"
+	desc = "Cake glazed with honey, a delicious sweet treat."
 	icon_state = "honeycake"
 	slices_num = 8
 	slice_path = /obj/item/reagent_containers/food/snacks/rogue/hcakeslice
@@ -723,7 +723,7 @@
 	bitesize = 16
 
 /obj/item/reagent_containers/food/snacks/rogue/hcakeslice
-	name = "ranesheni cake slice"
+	name = "honeyed cake slice"
 	icon_state = "honeycakeslice"
 	slices_num = 0
 	list_reagents = list(/datum/reagent/consumable/nutriment = SNACK_DECENT)

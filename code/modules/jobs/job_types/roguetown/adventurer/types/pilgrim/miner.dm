@@ -1,7 +1,7 @@
 /datum/advclass/miner
 	name = "Miner"
 	tutorial = "You are a Miner, you mine for the local blacksmith, gathering rare ores. \
-	there are tales of ambitious dwarf miners building great forts in the lavalands, to harvest all of its hardly touched ores"
+	there are tales of ambitious dwarf miners building great forts in the northwest, to harvest all of its hardly touched ores."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/miner
@@ -50,4 +50,4 @@
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 2)
 		H.change_stat("fortune", 2)
-		ADD_TRAIT(H, TRAIT_NOCSIGHT, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_ZIRASIGHT, TRAIT_GENERIC)

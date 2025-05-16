@@ -30,7 +30,7 @@
 			beltl = /obj/item/rogueweapon/huntingknife
 			backl = /obj/item/storage/backpack/rogue/satchel
 			backr = /obj/item/rogueweapon/woodstaff
-			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/spellbook_unfinished/pre_arcyne = 1)
+			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/spellbook_unfinished/pre_arcane = 1)
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
@@ -40,7 +40,6 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
-			H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 			if(H.age == AGE_OLD)
 				H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 				H.mind.adjust_spellpoints(1)

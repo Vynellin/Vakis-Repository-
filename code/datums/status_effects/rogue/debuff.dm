@@ -93,7 +93,7 @@
 	duration = 1
 
 /datum/status_effect/debuff/uncookedfood/on_apply()
-	if(HAS_TRAIT(owner, TRAIT_NASTY_EATER) || HAS_TRAIT(owner, TRAIT_ORGAN_EATER) || HAS_TRAIT(owner, TRAIT_WILD_EATER))
+	if(HAS_TRAIT(owner, TRAIT_NASTY_EATER) || HAS_TRAIT(owner, TRAIT_WILD_EATER))
 		return ..()
 	if(iscarbon(owner))
 		var/mob/living/carbon/C = owner
@@ -129,7 +129,7 @@
 	duration = 1
 
 /datum/status_effect/debuff/rotfood/on_apply()
-	if(HAS_TRAIT(owner, TRAIT_NASTY_EATER) || HAS_TRAIT(owner, TRAIT_ROT_EATER))
+	if(HAS_TRAIT(owner, TRAIT_NASTY_EATER))
 		return ..()
 	owner.add_stress(/datum/stressevent/rotfood)
 	if(iscarbon(owner))
@@ -296,34 +296,17 @@
 	duration = 2.5 MINUTES
 
 /atom/movable/screen/alert/status_effect/debuff/call_to_arms
-	name = "Ravox's Call to Arms"
+	name = "Cathus' Call to Arms"
 	desc = "His voice keeps ringing in your ears, rocking your soul.."
 	icon_state = "call_to_arms"
 
-/datum/status_effect/debuff/ravox_burden
-	id = "ravox_burden"
-	alert_type = /atom/movable/screen/alert/status_effect/debuff/ravox_burden
+/datum/status_effect/debuff/carthus_burden
+	id = "carthus_burden"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/carthus_burden
 	effectedstats = list("speed" = -2, "endurance" = -3)
 	duration = 12 SECONDS
-/*
-/datum/status_effect/debuff/ravox_burden/on_apply()
-	if(owner.mob_biotypes & MOB_UNDEAD)
-		effectedstats = list("speed" -= 1,)
-		effectedstats = list("endurance" -= 1)
-	. = ..()
-*/
-/atom/movable/screen/alert/status_effect/debuff/ravox_burden
-	name = "Ravox's Burden"
+
+/atom/movable/screen/alert/status_effect/debuff/carthus_burden
+	name = "Carthus' Burden"
 	desc = "My arms and legs are restrained by divine chains!\n"
 	icon_state = "restrained"
-
-/datum/status_effect/debuff/call_to_slaughter
-	id = "call_to_slaughter"
-	alert_type = /atom/movable/screen/alert/status_effect/debuff/call_to_slaughter
-	effectedstats = list("endurance" = -2, "constitution" = -2)
-	duration = 2.5 MINUTES
-
-/atom/movable/screen/alert/status_effect/debuff/call_to_slaughter
-	name = "Call to Slaughter"
-	desc = "A putrid rotting scent fills your nose as Graggar's call for slaughter rattles you to your core.."
-	icon_state = "call_to_slaughter"

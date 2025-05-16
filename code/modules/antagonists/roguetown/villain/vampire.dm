@@ -14,11 +14,6 @@
 	job_rank = ROLE_VAMPIRE
 	antag_hud_type = ANTAG_HUD_TRAITOR
 	antag_hud_name = "vampire"
-	confess_lines = list(
-		"I WANT YOUR BLOOD!",
-		"DRINK THE BLOOD!",
-		"CHILD OF KAIN!",
-	)
 	rogue_enabled = TRUE
 	var/disguised = TRUE
 	var/vitae = 1000

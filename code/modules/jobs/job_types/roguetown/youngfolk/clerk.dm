@@ -1,7 +1,7 @@
 /datum/job/roguetown/clerk
 	title = "Clerk"
 	flag = CLERK
-	department_flag = YOUNGFOLK
+	department_flag = SIDEFOLK
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -10,7 +10,10 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
 
-	tutorial = "Clerk, tax-collector, blessed fool. You help the Steward with anything they need and perform their tasks when they are unavailable. Although you aren't a noble, it's not the worst position. The caveat? If money is misplaced or goes missing, a noble could probably weasel out of the stockades as punishment. You? Eh...well, Etrusca is lovely this time of year."
+	tutorial = "Clerk, tax-collector, blessed fool. You help the Steward with anything they need and \
+				perform their tasks when they are unavailable. Although you aren't a noble, it's not \
+				the worst position. The caveat? If money is misplaced or goes missing, a noble could \
+				probably weasel out of the stockades as punishment. You? Perhaps not so."
 
 	outfit = /datum/outfit/job/roguetown/clerk
 	display_order = JDO_CLERK

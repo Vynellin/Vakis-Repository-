@@ -48,7 +48,7 @@
 
 /obj/structure/roguemachine/musicbox
 	name = "wax music device"
-	desc = "A marvelous device invented to record sermons. Aleksandar Gemrald Sparks invented this machine to discover prophecies of Psydon's return but failed. It now brings us strange music from another realm."
+	desc = "Channels the arcane to manifest magicks into wax, then play such as sound in harmony of Nunos and Kasmidian's manifests."
 	icon = 'icons/roguetown/misc/machines.dmi'
 	icon_state = "music0"
 	density = TRUE

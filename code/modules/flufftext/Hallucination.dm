@@ -222,7 +222,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 				sleep(rand(2, 4))
 				target.playsound_local(target, 'sound/misc/bleed (1).ogg', 90, 1)
 				sleep(rand(CLICK_CD_MELEE, CLICK_CD_MELEE + 4))
-		if("grab") // Do you have a moment to talk about our lord and savior ZIZOZIZOZIZO
+		if("grab") // Y'KNOW WHAT.. C'MERE...
 			for(var/i in 1 to rand(3, 6))
 				target.playsound_local(target, 'sound/foley/grab.ogg', 100, 0)
 				sleep(rand(CLICK_CD_MELEE, CLICK_CD_MELEE + 8))
@@ -350,8 +350,8 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 				target.playsound_local(target, pick('sound/misc/heroin_rush.ogg'), 80, 1)
 				target.playsound_local(H, pick('sound/vo/mobs/ghost/whisper (1).ogg','sound/vo/mobs/ghost/whisper (2).ogg','sound/vo/mobs/ghost/whisper (3).ogg'), 100, 1)
 			if("monster")//Horror
-				A = image('icons/roguetown/mob/monster/horrors.dmi',H,"horror1")
-				A.name = "ZIZOZIZOZIZO"
+				A = image('icons/roguetown/mob/monster/horrors.dmi',H,"horror1") /// SOLARIS NOTE: undeclared goonsprites, FUCKING ROGUECODE. We're gonna have to come back to this
+				A.name = "Timothy" // the harbinger
 				target.playsound_local(H, pick('sound/combat/gib (1).ogg'), 80, 1)
 				target.playsound_local(target, pick('sound/misc/hel.ogg'), 80, 1)
 			if("skeleton")//skeleton
@@ -502,14 +502,14 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 		"[pick_list_replacements(HAL_LINES_FILE, "threat")] in [pick_list_replacements(HAL_LINES_FILE, "location")][prob(50)?"!":"!!"]",\
 		"[pick("[target.first_name()] is a heretic!", "Make [target.first_name()] an outlaw!")]",\
 		"[pick("I","Squire","Somebody","They")] killed the priest!",\
-		"Duke [pick("is a Zizoid", "is a heretic")]!!")
+		"Duke [pick("is a heretic")]!!")
 
 	/*var/radio_messages = list("[pick_list_replacements(HAL_LINES_FILE, "people")] is [pick_list_replacements(HAL_LINES_FILE, "accusations")]!",\
 		"Help!",\
 		"[pick_list_replacements(HAL_LINES_FILE, "threat")] in [pick_list_replacements(HAL_LINES_FILE, "location")][prob(50)?"!":"!!"]",\
 		"[pick("[target.first_name()] is a heretic!", "Make [target.first_name()] an outlaw!")]",\
 		"[pick("I","Squire","Somebody","They")] killed the priest!",\
-		"Duke [pick("is a Zizoid", "is a heretic")]!!")*/
+		"Duke [pick("is a heretic")]!!")*/
 
 	var/mob/living/carbon/person = null
 	var/datum/language/understood_language = target.get_random_understood_language()
@@ -709,7 +709,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	switch(message)
 		if("heretic")
 			to_chat(target, "<h1 class='alert'>SHAME</h1>") //Only uses first name, as a clue it's not real...and I suck at coding too much to figure out getting the full name.
-			to_chat(target, "<br><br><span class='alert'>The church has put Xylix's curse of woe on [target.first_name()] for offending the church!</span><br><br>")
+			to_chat(target, "<br><br><span class='alert'>The church has put thes curse of woe on [target.first_name()] for offending the church!</span><br><br>")
 			SEND_SOUND(target, 'sound/misc/excomm.ogg')
 		if("outlaw")
 			to_chat(target, "<h1 class='alert'>The [SSticker.rulertype] Decrees</h1>")

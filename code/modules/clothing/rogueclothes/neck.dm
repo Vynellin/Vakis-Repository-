@@ -261,48 +261,43 @@
 	grid_width = 32
 	grid_height = 32
 
-/obj/item/clothing/neck/roguetown/psicross/astrata
-	name = "amulet of Astrata"
+/obj/item/clothing/neck/roguetown/psicross/aeternus
+	name = "amulet of Aeternus"
 	desc = ""
 	icon_state = "astrata"
 
-/obj/item/clothing/neck/roguetown/psicross/noc
-	name = "amulet of Noc"
+/obj/item/clothing/neck/roguetown/psicross/zira
+	name = "amulet of Zira"
 	desc = ""
 	icon_state = "noc"
 
-/obj/item/clothing/neck/roguetown/psicross/abyssor
-	name = "amulet of Abyssor"
+/obj/item/clothing/neck/roguetown/psicross/cinella
+	name = "amulet of Cinella"
 	desc = ""
 	icon_state = "abyssor"
 
-/obj/item/clothing/neck/roguetown/psicross/dendor
-	name = "amulet of Dendor"
+/obj/item/clothing/neck/roguetown/psicross/tamari
+	name = "amulet of Tamari"
 	desc = ""
 	icon_state = "dendor"
 
-/obj/item/clothing/neck/roguetown/psicross/necra
-	name = "amulet of Necra"
+/obj/item/clothing/neck/roguetown/psicross/tsoridys
+	name = "amulet of Tsoridys"
 	desc = ""
 	icon_state = "necra"
 
-/obj/item/clothing/neck/roguetown/psicross/pestra
-	name = "amulet of Pestra"
-	desc = ""
-	icon_state = "pestra"
-
-/obj/item/clothing/neck/roguetown/psicross/ravox
-	name = "amulet of Ravox"
+/obj/item/clothing/neck/roguetown/psicross/carthus
+	name = "amulet of Carthus"
 	desc = ""
 	icon_state = "ravox"
 
-/obj/item/clothing/neck/roguetown/psicross/malum
-	name = "amulet of Malum"
+/obj/item/clothing/neck/roguetown/psicross/nunos
+	name = "amulet of Nunos"
 	desc = ""
 	icon_state = "malum"
 
-/obj/item/clothing/neck/roguetown/psicross/eora
-	name = "amulet of Eora"
+/obj/item/clothing/neck/roguetown/psicross/varielle
+	name = "amulet of Varielle"
 	desc = ""
 	icon_state = "eora"
 
@@ -444,12 +439,6 @@
 	sellprice = 100
 	anvilrepair = /datum/skill/craft/armorsmithing
 
-/obj/item/clothing/neck/roguetown/psicross/naledi
-	name = "naledian psy-bracelet"
-	desc = "A peculiar icon of worship from a foreign land. Forming the three-progned Psydonite cross in a circular ring, this bracelet embodies the Naledian belief of Psydon's eternity."
-	icon_state = "psybracelet"
-	item_state = null
-
 /obj/item/clothing/neck/roguetown/collar
 	name = "collar"
 	desc = "A band of leather which signifies bondage to another."
@@ -460,7 +449,7 @@
 
 /obj/item/clothing/neck/roguetown/collar/bell_collar
 	name = "bell collar"
-	desc = "A band of leather with a bell protects the local zads from the local catfolk."
+	desc = "A band of leather with a bell protects the local crows from the local catfolk."
 	icon_state = "bell_collar"
 
 /obj/item/clothing/neck/roguetown/collar/bell_collar/Initialize(mapload)

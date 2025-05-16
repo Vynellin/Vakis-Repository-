@@ -1,5 +1,5 @@
 /mob/living/carbon/human/species/goblin
-	name = "goblin"
+	name = "fetid imp"
 
 	icon = 'icons/roguetown/mob/monster/goblins.dmi'
 	icon_state = "goblin"
@@ -31,7 +31,7 @@
 	attack_speed = 2
 
 /mob/living/carbon/human/species/goblin/hell
-	name = "hell goblin"
+	name = "hell imp"
 	race = /datum/species/goblin/hell
 
 /mob/living/carbon/human/species/goblin/npc/hell
@@ -41,12 +41,12 @@
 	race = /datum/species/goblin/hell
 
 /datum/species/goblin/hell
-	name = "hell goblin"
+	name = "hell imp"
 	id = "goblin_hell"
 	raceicon = "goblin_hell"
 
 /mob/living/carbon/human/species/goblin/cave
-	name = "cave goblin"
+	name = "cave imp"
 	race = /datum/species/goblin/cave
 
 /mob/living/carbon/human/species/goblin/npc/cave
@@ -60,7 +60,7 @@
 	raceicon = "goblin_cave"
 
 /mob/living/carbon/human/species/goblin/sea
-	name = "sea goblin"
+	name = "sea imp"
 	race = /datum/species/goblin/sea
 /mob/living/carbon/human/species/goblin/npc/sea
 	race = /datum/species/goblin/sea
@@ -71,7 +71,7 @@
 	id = "goblin_sea"
 
 /mob/living/carbon/human/species/goblin/moon
-	name = "moon goblin"
+	name = "lunar imp"
 	race = /datum/species/goblin/moon
 /mob/living/carbon/human/species/goblin/npc/moon
 	race = /datum/species/goblin/moon
@@ -111,7 +111,7 @@
 
 
 /datum/species/goblin
-	name = "goblin"
+	name = "urgoblin"
 	id = "goblin"
 	species_traits = list(NO_UNDERWEAR,NOEYESPRITES)
 	inherent_traits = list(TRAIT_NOROGSTAM, TRAIT_RESISTCOLD, TRAIT_RESISTHIGHPRESSURE, TRAIT_RESISTLOWPRESSURE, TRAIT_RADIMMUNE, TRAIT_CRITICAL_WEAKNESS, TRAIT_NASTY_EATER)
@@ -336,7 +336,7 @@
 			if(prob(20))
 				r_hand = /obj/item/rogueweapon/flail
 				l_hand = /obj/item/rogueweapon/shield/wood
-        
+
 //////////////////   INVADER ZIM	//////////////////
 
 /obj/structure/gob_portal

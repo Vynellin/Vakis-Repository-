@@ -12,8 +12,8 @@
 	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation, /obj/effect/proc_holder/spell/invoked/projectile/fireball/greater)
 	display_order = JDO_MAGICIAN
 	tutorial = "Your creed is one dedicated to the conquering of the arcane arts and the constant thrill of knowledge. \
-		You owe your life to the Lord, for it was his coin that allowed you to continue your studies in these dark times. \
-		In return, you have proven time and time again as justicar and trusted advisor to their reign."
+		Hand-picked from your peers in the University, you were made comfortable; given lavish accomodations and luxurious study. \
+		In return, you have proven time and time again as justicar and trusted advisor to the court of Sunmarch."
 	outfit = /datum/outfit/job/roguetown/magician
 	whitelist_req = TRUE
 	give_bank_account = 47
@@ -71,8 +71,4 @@
 				cloak = null
 				head = /obj/item/clothing/head/roguetown/wizhat
 				armor = /obj/item/clothing/suit/roguetown/shirt/robe/wizard
-				H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
-		switch(H.patron?.type)
-			if(/datum/patron/inhumen/zizo)
-				H.cmode_music = 'sound/music/combat_cult.ogg'
-				backpack_contents += list(/obj/item/roguekey/inhumen = 1)
+

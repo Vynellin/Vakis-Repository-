@@ -1,7 +1,7 @@
 /datum/job/roguetown/churchling
 	title = "Churchling"
 	flag = CHURCHLING
-	department_flag = YOUNGFOLK
+	department_flag = SIDEFOLK
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
@@ -10,7 +10,10 @@
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT)
 
-	tutorial = "Your family were zealots. They scolded you with a studded belt and prayed like sinners every waking hour of the day they weren't toiling in the fields. You escaped them by becoming a churchling--and a guaranteed education isn't so bad."
+	tutorial = "Your family were zealots. They scolded you with a studded belt and prayed like \
+				sinners every waking hour of the day they weren't toiling in the fields. You escaped \
+				them by becoming a churchling - and a guaranteed education isn't so bad, though you find \
+				yourself pulling the duties of the Acolytes on regular enough occasion..."
 
 	outfit = /datum/outfit/job/roguetown/churchling
 	display_order = JDO_CHURCHLING

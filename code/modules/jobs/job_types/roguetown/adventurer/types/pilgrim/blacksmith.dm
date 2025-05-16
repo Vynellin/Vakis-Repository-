@@ -1,7 +1,7 @@
 /datum/advclass/blacksmith
 	name = "Blacksmith"
-	tutorial = "A skilled blacksmith, able to forge capable weapons for warriors in the bog, \
-	only after building a forge for themselves ofourse"
+	tutorial = "A skilled blacksmith, able to forge capable weapons for warriors... if only \
+	you had a forge. Perhaps you might create one?"
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/blacksmith
@@ -16,7 +16,7 @@
 	beltl = /obj/item/rogueweapon/tongs
 
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-	gloves = /obj/item/clothing/gloves/roguetown/grenzelgloves/blacksmith
+	gloves = /obj/item/clothing/gloves/roguetown/blacksmith
 	cloak = /obj/item/clothing/cloak/apron/blacksmith
 	mouth = /obj/item/rogueweapon/huntingknife
 	pants = /obj/item/clothing/under/roguetown/trou

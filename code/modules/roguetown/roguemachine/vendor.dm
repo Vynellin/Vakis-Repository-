@@ -149,13 +149,13 @@
 	if(canread)
 		contents = "<center>THE PEDDLER, THIRD ITERATION<BR>"
 		if(locked)
-			contents += "<a href='?src=[REF(src)];change=1'>Stored Mammon:</a> [budget]<BR>"
+			contents += "<a href='?src=[REF(src)];change=1'>Stored Sunmarks:</a> [budget]<BR>"
 		else
 			contents += "<a href='?src=[REF(src)];withdrawgain=1'>Stored Profits:</a> [wgain]<BR>"
 	else
 		contents = "<center>[stars("THE PEDDLER, THIRD ITERATION")]<BR>"
 		if(locked)
-			contents += "<a href='?src=[REF(src)];change=1'>[stars("Stored Mammon:")]</a> [budget]<BR>"
+			contents += "<a href='?src=[REF(src)];change=1'>[stars("Stored Sunmarks:")]</a> [budget]<BR>"
 		else
 			contents += "<a href='?src=[REF(src)];withdrawgain=1'>[stars("Stored Profits:")]</a> [wgain]<BR>"
 
@@ -261,9 +261,6 @@
 
 /obj/structure/roguemachine/vendor/inn
 	keycontrol = "tavern"
-
-/obj/structure/roguemachine/vendor/bathhouse
-	keycontrol = "nightman"
 
 /obj/structure/roguemachine/vendor/inn/Initialize()
     . = ..()

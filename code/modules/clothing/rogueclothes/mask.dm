@@ -79,7 +79,7 @@
 
 /obj/item/clothing/mask/rogue/wildguard
 	name = "wild guard"
-	desc = "A mask shaped after the beasts of dendor."
+	desc = "A mask shaped after the beasts of Tamari."
 	icon_state = "wildguard"
 	blocksound = PLATEHIT
 	break_sound = 'sound/foley/breaksound.ogg'
@@ -113,12 +113,6 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/iron
 
-/obj/item/clothing/mask/rogue/facemask/psydonmask
-	name = "psydonian mask"
-	desc = "A silver mask, forever locked in a rigor of uncontestable joy. The Order of Saint Xylix can't decide on whether it's meant to represent Psydon's 'mirthfulness', 'theatricality', or the unpredictable melding of both."
-	icon_state = "psydonmask"
-	item_state = "psydonmask"
-
 /obj/item/clothing/mask/rogue/facemask/prisoner
 	name = "cursed mask"
 	desc = "An iron mask that seals around the head, making it impossible to remove. It seems to be enchanted with some kind of vile magic..."
@@ -145,7 +139,7 @@
 	for(var/name in GLOB.outlawed_players)
 		if(user.real_name == name)
 			GLOB.outlawed_players -= user.real_name
-			priority_announce("[user.real_name] has completed their penance. Justice has been served in the eyes of Ravox.", "PENANCE", 'sound/misc/bell.ogg', "Captain")
+			priority_announce("[user.real_name] has completed their penance. Justice has been served in the eyes of Carthus.", "PENANCE", 'sound/misc/bell.ogg', "Captain")
 	playsound(src.loc, pick('sound/items/pickgood1.ogg','sound/items/pickgood2.ogg'), 5, TRUE)
 	if(QDELETED(src))
 		return
@@ -283,13 +277,6 @@
 				if(ishuman(user))
 					var/mob/living/carbon/H = user
 					H.update_inv_wear_mask()
-
-/obj/item/clothing/mask/rogue/lordmask/naledi
-	name = "war scholar's mask"
-	item_state = "naledimask"
-	icon_state = "naledimask"
-	desc = "Runes and wards, meant for daemons; the gold has somehow rusted in unnatural, impossible agony. The most prominent of these etchings is in the shape of the Naledian psycross."
-	sellprice = 0
 
 /obj/item/clothing/mask/rogue/exoticsilkmask
 	name = "exotic silk mask"

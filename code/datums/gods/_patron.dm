@@ -20,8 +20,6 @@ GLOBAL_LIST_EMPTY(preference_patrons)
 	var/preference_accessible = TRUE
 	/// Whether or not this patron hates undead - Mostly so we know whether miracles should actually harm
 	var/undead_hater = TRUE
-	/// Some gods have related confessions, if they're evil and such
-	var/list/confess_lines
 	/// Some patrons have related traits, why not?
 	var/list/mob_traits
 	/// Tier 0 spell
@@ -34,21 +32,17 @@ GLOBAL_LIST_EMPTY(preference_patrons)
 	var/t3
 	/// Final tier spell
 	var/t4
-	/// For patrons with more spells than tiers. eg. Malum's Fire
+	/// For patrons with more spells than tiers. eg. Nuno's Fire
 	var/extra_spell
 
 /datum/patron/proc/on_gain(mob/living/pious)
 	for(var/trait in mob_traits)
 		ADD_TRAIT(pious, trait, "[type]")
-	if(HAS_TRAIT(pious, TRAIT_XYLIX))
-		pious.grant_language(/datum/language/thievescant)
-	if (HAS_TRAIT(pious, TRAIT_CABAL))
-		pious.faction |= "cabal"
+	if(HAS_TRAIT(pious, TRAIT_KASMIDIAN))
+		pious.grant_language(/datum/language/grataarcana)
 
 /datum/patron/proc/on_loss(mob/living/pious)
-	if (HAS_TRAIT(pious, TRAIT_CABAL))
-		pious.faction -= "cabal"
-	if(HAS_TRAIT(pious, TRAIT_XYLIX))
-		pious.remove_language(/datum/language/thievescant)
+	if(HAS_TRAIT(pious, TRAIT_KASMIDIAN))
+		pious.remove_language(/datum/language/grataarcana)
 	for(var/trait in mob_traits)
 		REMOVE_TRAIT(pious, trait, "[type]")

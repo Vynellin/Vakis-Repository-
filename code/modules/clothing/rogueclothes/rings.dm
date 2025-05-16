@@ -126,7 +126,7 @@
 /obj/item/clothing/ring/signet
 	name = "Signet Ring"
 	icon_state = "signet"
-	desc = "A large golden ring engraved with the Symbol of Psydon."
+	desc = "A large golden ring, engraved 'To Err Sunmarch, DE74.'."
 	sellprice = 135
 
 //silver rings

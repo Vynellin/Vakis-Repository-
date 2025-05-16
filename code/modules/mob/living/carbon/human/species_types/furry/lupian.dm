@@ -5,12 +5,8 @@
 	name = "Lupian"
 	id = "lupian"
 	desc = "<b>Lupian</b><br>\
-	Lupians are the sons and daughters of Noc. They are a volf-like people hailing from the Northern Regions of the world. \
-	They are resilient, cunning and fight ready creachures capable of surviving the north thanks to their rugged pelts, \
-	sharp teeth and deep-rooted spirit of community. They are very dutiful individuals and make fantastic and fearsome \
-	warriors to those who earn their loyalty. Thanks to their pack minded nature they are slow to trust the other races \
-	but form deep connections with those they do. In recent years they have been driven from the forests by unrest and pressed \
-	into cohabitation with races they'd deem lesser.<br>\
+	Wise and keen canine folk. Lupian were driven from their great distant packs in the tundras and hills by the Dusk War.\
+	Made for a more wild world, Lupian turn their strength and the attuned senses of a hunter to the benefit of Sunmarch making Solaris Ridge their pack. <br>\
 	(+1 Constitution, +1 Intelligence)"
 	skin_tone_wording = "Pack"
 	species_traits = list(
@@ -127,14 +123,6 @@
 
 /datum/species/lupian/qualifies_for_rank(rank, list/features)
 	return TRUE
-
-/datum/species/lupian/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	. = ..()
-	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
-
-/datum/species/lupian/on_species_loss(mob/living/carbon/C)
-	. = ..()
-	UnregisterSignal(C, COMSIG_MOB_SAY)
 
 /datum/species/lupian/get_skin_list()
 	return list(

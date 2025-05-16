@@ -60,9 +60,8 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 	ROLE_PAI))
 
 GLOBAL_LIST_INIT(noble_positions, list(
-	"Grand Duke",
-	"Consort",
-	"Prince",
+	/datum/job/roguetown/lord::title,
+	"Nobleman",
 	"Hand",
 	"Knight Captain",
 	"Marshal",
@@ -97,12 +96,6 @@ GLOBAL_LIST_INIT(church_positions, list(
 	"Martyr",
 ))
 
-GLOBAL_LIST_INIT(inquisition_positions, list(
-	"Inquisitor",
-	"Orthodoxist",
-))
-
-
 GLOBAL_LIST_INIT(yeoman_positions, list(
 	"Merchant",
 	"Innkeeper",
@@ -115,7 +108,6 @@ GLOBAL_LIST_INIT(yeoman_positions, list(
 	"Artificer",
 	"Scribe",
 	"Town Elder",
-	"Bathmaster",
 ))
 
 GLOBAL_LIST_INIT(peasant_positions, list(
@@ -130,7 +122,6 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 	"Grabber",
 	"Nightmaster",
 	"Tapster",
-	"Bathhouse Attendant",
 	"Docker",
 	"Prisoner",
 	"Beggar",
@@ -143,7 +134,6 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 
 GLOBAL_LIST_INIT(mercenary_positions, list(
 	"Mercenary",
-	"Grenzelhoft Mercenary",
 	"Desert Rider Mercenary",
 	"Veteran",
 ))
@@ -192,7 +182,6 @@ GLOBAL_LIST_INIT(job_assignment_order, get_job_assignment_order())
 	sorting_order += GLOB.courtier_positions
 	sorting_order += GLOB.garrison_positions
 	sorting_order += GLOB.church_positions
-	sorting_order += GLOB.inquisition_positions
 	sorting_order += GLOB.yeoman_positions
 	sorting_order += GLOB.peasant_positions
 	sorting_order += GLOB.youngfolk_positions

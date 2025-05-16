@@ -328,7 +328,7 @@
 
 //scroll for giving the reader a spell point, this should be dungeon loot
 /obj/item/book/granter/spell_points
-	name = "Arcyne Insight"
+	name = "Arcane Insight"
 	icon_state = "scrollpurple"
 	icon = 'icons/roguetown/items/misc.dmi'
 	oneuse = TRUE

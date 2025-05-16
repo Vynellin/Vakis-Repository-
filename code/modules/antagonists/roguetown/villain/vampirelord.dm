@@ -14,11 +14,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	var/list/inherent_traits = list(TRAIT_STRONGBITE, TRAIT_NOBLE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOPAIN, TRAIT_TOXIMMUNE, TRAIT_STEELHEARTED, TRAIT_NOSLEEP, TRAIT_VAMPMANSION, TRAIT_VAMP_DREAMS, TRAIT_NOROGSTAM, TRAIT_HEAVYARMOR, TRAIT_COUNTERCOUNTERSPELL)
 	antag_hud_type = ANTAG_HUD_TRAITOR
 	antag_hud_name = "vampire lord"
-	confess_lines = list(
-		"I AM ANCIENT",
-		"I AM THE LAND",
-		"CHILD OF KAIN!",
-	)
 	rogue_enabled = TRUE
 	var/isspawn = FALSE
 	var/disguised = FALSE
@@ -114,7 +109,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	eyes = new /obj/item/organ/eyes/night_vision/zombie
 	eyes.Insert(owner.current)
 	H.equipOutfit(/datum/outfit/job/roguetown/vamplord)
-	H.set_patron(/datum/patron/inhumen/zizo)
 
 	return TRUE
 
@@ -163,7 +157,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	belt = /obj/item/storage/belt/rogue/leather/plaquegold
 	head  = /obj/item/clothing/head/roguetown/vampire
 	beltl = /obj/item/roguekey/vampire
-	cloak = /obj/item/clothing/cloak/cape/puritan
+	cloak = /obj/item/clothing/cloak/cape
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	H.ambushable = FALSE
@@ -347,7 +341,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 					if(T.get_lumcount() > 0.15)
 						if(!isspawn)
 							if(!disguised)
-								to_chat(H, span_warning("Astrata spurns me! I must get out of her rays!")) // VLord is more punished for daylight excursions.
+								to_chat(H, span_warning("Aeternus spurns me! I must get out of his rays!")) // VLord is more punished for daylight excursions.
 								var/turf/N = H.loc
 								if(N.can_see_sky())
 									if(N.get_lumcount() > 0.15)
@@ -464,11 +458,6 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	name = "Vampire Spawn"
 	antag_hud_name = "Vspawn"
 	inherent_traits = list(TRAIT_STRONGBITE, TRAIT_NOHUNGER, TRAIT_NOBREATH, TRAIT_NOPAIN, TRAIT_TOXIMMUNE, TRAIT_STEELHEARTED, TRAIT_NOSLEEP, TRAIT_VAMPMANSION, TRAIT_VAMP_DREAMS)
-	confess_lines = list(
-		"THE CRIMSON CALLS!",
-		"MY MASTER COMMANDS",
-		"THE SUN IS ENEMY!",
-	)
 	isspawn = TRUE
 
 /datum/antagonist/vampirelord/lesser/move_to_spawnpoint()
@@ -613,7 +602,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 	var/datum/antagonist/vampirelord/lord = user.mind.has_antag_datum(/datum/antagonist/vampirelord)
 	if(user.mind.special_role != "Vampire Lord")
 		return
-	var/choice = input(user,"What to do?", "ROGUETOWN") as anything in useoptions|null
+	var/choice = input(user,"What to do?", src.name) as anything in useoptions|null
 	switch(choice)
 		if("Grow Power")
 			if(lord.vamplevel == 4)
@@ -765,7 +754,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 		if(!unlocked)
 			to_chat(user, "I have yet to regain this aspect of my power!")
 			return
-		var/choice = input(user,"What to do?", "ROGUETOWN") as anything in useoptions|null
+		var/choice = input(user,"What to do?", src.name) as anything in useoptions|null
 		switch(choice)
 			if("Create Death Knight")
 				if(alert(user, "Create a Death Knight? Cost:5000","","Yes","No") == "Yes")
@@ -804,11 +793,11 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 						priority_announce("The Sun is torn from the sky!", "Terrible Omen", 'sound/misc/astratascream.ogg')
 						SSParticleWeather?.run_weather(/datum/particle_weather/blood_rain_storm)
 						addomen(OMEN_SUNSTEAL)
-						for(var/mob/living/carbon/human/astrater in GLOB.human_list)
-							if(!istype(astrater.patron, /datum/patron/divine/astrata) || !length(astrater.mind?.antag_datums))
+						for(var/mob/living/carbon/human/potential_aeternian in GLOB.human_list)
+							if(!istype(potential_aeternian.patron, /datum/patron/light/aeternus) || !length(potential_aeternian.mind?.antag_datums))
 								continue
-							to_chat(astrater, span_userdanger("You feel the pain of [astrater.patron.name]!"))
-							astrater.emote_scream()
+							to_chat(potential_aeternian, span_userdanger("You feel the pain of [potential_aeternian.patron.name]!"))
+							potential_aeternian.emote_scream()
 
 	if(user.mind.special_role == "Vampire Spawn")
 		to_chat(user, "I don't have the power to use this!")
@@ -895,7 +884,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 
 /datum/objective/vampirelord/ascend
 	name = "sun"
-	explanation_text = "Astrata has spurned me long enough. I must conquer the Sun."
+	explanation_text = "Aeternus has spurned me long enough. I must conquer the Sun."
 	team_explanation_text = ""
 	triumph_count = 5
 
@@ -923,7 +912,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 
 /datum/objective/vampirelord/infiltrate/two/check_completion()
 	var/datum/game_mode/chaosmode/C = SSticker.mode
-	var/list/noblejobs = list("Grand Duke", "Consort", "Prince", "Princess", "Hand", "Steward")
+	var/list/noblejobs = list(/datum/job/roguetown/lord::title, "Nobleman", "Hand", "Steward")
 	for(var/datum/mind/V in C.vampires)
 		if(V.current.job in noblejobs)
 			return TRUE

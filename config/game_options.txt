@@ -69,9 +69,9 @@ NO_INTERCEPT_REPORT
 ## Default probablity is 1, increase to make that mode more likely to be picked.
 ## Set to 0 to disable that mode.
 
-PROBABILITY ROGUELITE 40
-PROBABILITY ROGUEMEDIUM 40
-PROBABILITY ROGUEMODE 20
+PROBABILITY ROGUELITE 0
+PROBABILITY ROGUEMEDIUM 0
+PROBABILITY ROGUEMODE 100
 ## STANDARD SS13 GAMEMODES BELOW. These aren't generally compatibile with roguecode if they even exist on this codebase anymore. You most likely don't want to enable these.
 PROBABILITY TRAITOR 0
 PROBABILITY TRAITORBRO 0

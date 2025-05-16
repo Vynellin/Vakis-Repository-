@@ -6,22 +6,17 @@
 	id = "dwarfm"
 	clothes_id = "dwarf"
 	desc = "<b>Dwarf</b><br>\
-	A proud and robust race of short mountain folk, \
-	the dwarves are known for their pride in martial strength \
-	and the tenacity with which they adhere to their ancient traditions. \
-	A Dwarf, much like the rock that they carve their fortresses out of, \
-	is stubborn and ancient, with their race being the longest lived of all \
-	of the Weeping God's creations. They, like stone, also rarely change \
-	and tend to shun the modernization of the world around them. \
-	Instead, a Dwarf looks to their ancestorial heritage for guidance on \
-	the various challenges they face. Even if, ironically, this behaviour \
-	leads their kind towards technological advacement as they continue \
-	to improve their crafts, both in engineering workshops and the forges. \
-	Dwarves are hearty, but are not known for their speed or eyesight... \
-	Each dwarf hails from a ancient fortress named after the most plentiful mineral.<br>\
+	Dwarves are stout and sturdy people born of focus and industry. <br>\
+
+The stocky strength and natural bulk of a Dwarf is only matched by their single-minded focus, which is often mistaken for stubbornness.\ In truth Dwarves are outgoing and playful people fond of drink and roughhousing when there isn’t work on the line.\ In times of trouble you can always count on a dwarf to put their life on the line to aid their kin and comrades. <br>\
+
+The greatest empire of the Radiant Age was built with dwarven stone. Dwarves are deeply proud of that fact. <br>\
+
+Dwarven history is as much a series of brilliant buildings, crafts and contraptions as it is a legacy of kings, clans and honour. To a Dwarf a skill is to always be mastered.\
+If a job is to be done it must be done right. This has led Dwarves to being not only great craftsmen but the upper echelon of many careers be it labourers, merchants, warriors or scholars.<br>\
 	(+1 Constitution, +1 Endurance)"
 
-	skin_tone_wording = "Dwarf Fortress"
+	skin_tone_wording = "Skintone"
 
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,YOUNGBEARD,STUBBLE,OLDGREY)
@@ -91,7 +86,21 @@
 		"Malachite" = SKIN_COLOR_MALACHITE,
 		"Obsidian" = SKIN_COLOR_OBSIDIAN,
 		"Brimstone" = SKIN_COLOR_BRIMSTONE,
-		"Jade" = SKIN_COLOR_JADE
+		"Jade" = SKIN_COLOR_JADE,
+		"Ashen" = SKIN_COLOR_ASHEN,
+		"Underdusk" = SKIN_COLOR_UNDERDUSK,
+		"Light" = SKIN_COLOR_LIGHT,
+		"Warm Ivory" = SKIN_COLOR_WARMIVORY,
+		"Heartland" = SKIN_COLOR_HEARTLAND,
+		"Cool Sand" = SKIN_COLOR_COOLSAND,
+		"South Sand" = SKIN_COLOR_SOUTHSAND,
+		"Dull" = SKIN_COLOR_DULL,
+		"Beach" = SKIN_COLOR_BEACH,
+		"Coastal" = SKIN_COLOR_COASTAL,
+		"Dark Gold" = SKIN_COLOR_DARKGOLD,
+		"Palm" = SKIN_COLOR_PALM,
+		"Walnut" = SKIN_COLOR_WALNUT,
+		"Pyrite" = SKIN_COLOR_PYRITE,
 	)
 
 /datum/species/dwarf/mountain/get_hairc_list()

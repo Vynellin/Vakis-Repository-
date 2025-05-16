@@ -18,7 +18,7 @@
 	shapeshift_type = /mob/living/simple_animal/hostile/retaliate/gaseousform
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/crow
-	name = "Zad Form"
+	name = "Crow Form"
 	overlay_state = "zad"
 	desc = ""
 	invocation = ""

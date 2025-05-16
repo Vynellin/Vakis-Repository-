@@ -19,10 +19,10 @@
 /datum/outfit/job/roguetown/adventurer/cleric/pre_equip(mob/living/carbon/human/H)
 	..()
 
-	// Add druidic skill for Dendor followers
-	if(istype(H.patron, /datum/patron/divine/dendor))
+	// Add druidic skill for Tamari followers
+	if(istype(H.patron, /datum/patron/change/tamari))
 		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE)
-		to_chat(H, span_notice("As a follower of Dendor, you have innate knowledge of druidic magic."))
+		to_chat(H, span_notice("As a follower of Tamari, you have innate knowledge of druidic magic."))
 
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)
@@ -64,30 +64,27 @@
 				if("MY BARE HANDS!!!")
 					ADD_TRAIT(H, TRAIT_CIVILIZEDBARBARIAN, TRAIT_GENERIC)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					cloak = /obj/item/clothing/cloak/psydontabard
-					head = /obj/item/clothing/head/roguetown/roguehood/psydon
-				if(/datum/patron/divine/astrata)
-					head = /obj/item/clothing/head/roguetown/roguehood/astrata
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-				if(/datum/patron/divine/noc)
-					head =  /obj/item/clothing/head/roguetown/nochood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
-				if(/datum/patron/divine/abyssor)
-					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-				if(/datum/patron/divine/dendor)
-					head = /obj/item/clothing/head/roguetown/dendormask
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
-				if(/datum/patron/divine/necra)
-					head = /obj/item/clothing/head/roguetown/necrahood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
-				if (/datum/patron/divine/malum)
+				if(/datum/patron/light/aeternus)
+					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
+				if(/datum/patron/balance/zira)
+					head =  /obj/item/clothing/head/roguetown/zirahood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/zira
+				if(/datum/patron/change/cinella)
+					head = /obj/item/clothing/head/roguetown/roguehood/cinella
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
+				if(/datum/patron/change/tamari)
+					head = /obj/item/clothing/head/roguetown/tamarimask
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
+				if(/datum/patron/balance/tsoridys)
+					head = /obj/item/clothing/head/roguetown/tsoridyshood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
+				if (/datum/patron/balance/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
-					cloak = /obj/item/clothing/cloak/templar/malumite
-				if (/datum/patron/divine/eora)
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/eora
-					head = /obj/item/clothing/head/roguetown/eoramask
+					cloak = /obj/item/clothing/cloak/templar/nunite
+				if (/datum/patron/balance/varielle)
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/varielle
+					head = /obj/item/clothing/head/roguetown/variellemask
 				else
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe //placeholder, anyone who doesn't have cool patron drip sprites just gets generic robes
 					head = /obj/item/clothing/head/roguetown/roguehood
@@ -125,44 +122,36 @@
 			H.cmode_music = 'sound/music/combat_holy.ogg'
 			ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					armor = /obj/item/clothing/suit/roguetown/armor/plate/half/fluted
-					cloak = /obj/item/clothing/cloak/psydontabard
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/psydonhelm
-				if(/datum/patron/divine/astrata)
-					cloak = /obj/item/clothing/cloak/templar/astrata
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/astratan
-				if(/datum/patron/divine/noc)
-					cloak = /obj/item/clothing/cloak/templar/noc
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/nochelm
-				if(/datum/patron/divine/abyssor)
-					cloak = /obj/item/clothing/cloak/templar/abyssor
+				if(/datum/patron/light/aeternus)
+					cloak = /obj/item/clothing/cloak/templar/aeternus
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/aeternian
+				if(/datum/patron/balance/zira)
+					cloak = /obj/item/clothing/cloak/templar/zira
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
+				if(/datum/patron/change/cinella)
+					cloak = /obj/item/clothing/cloak/templar/cinella
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-				if(/datum/patron/divine/dendor)
-					cloak = /obj/item/clothing/cloak/templar/dendor
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/dendorhelm
-				if(/datum/patron/divine/necra)
-					cloak = /obj/item/clothing/cloak/templar/necra
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/necrahelm
-				if (/datum/patron/divine/malum)
-					cloak = /obj/item/clothing/cloak/templar/malum
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/malum
-				if (/datum/patron/divine/eora)
-					cloak = /obj/item/clothing/cloak/templar/eora
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/eoran
-				if (/datum/patron/divine/ravox)
-					cloak = /obj/item/clothing/cloak/templar/ravox
+				if(/datum/patron/change/tamari)
+					cloak = /obj/item/clothing/cloak/templar/tamari
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/tamarihelm
+				if(/datum/patron/balance/tsoridys)
+					cloak = /obj/item/clothing/cloak/templar/tsoridys
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/tsoridyshelm
+				if (/datum/patron/balance/nunos)
+					cloak = /obj/item/clothing/cloak/templar/nunos
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/nunos
+				if (/datum/patron/balance/varielle)
+					cloak = /obj/item/clothing/cloak/templar/varielle
+					head = /obj/item/clothing/head/roguetown/helmet/heavy/variellian
+				if (/datum/patron/balance/carthus)
+					cloak = /obj/item/clothing/cloak/templar/carthus
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket/gold
-				if (/datum/patron/divine/xylix)
-					cloak = /obj/item/clothing/cloak/templar/xylix
+				if (/datum/patron/change/kasmidian)
+					cloak = /obj/item/clothing/cloak/templar/kasmidian
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-				if (/datum/patron/divine/pestra)
-					cloak = /obj/item/clothing/cloak/templar/pestra
-					head = /obj/item/clothing/head/roguetown/helmet/heavy/pestran
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
 					head = /obj/item/clothing/head/roguetown/helmet/heavy/bucket
-			H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_spells_templar(H)
 			var/weapons = list("Bastard Sword","Mace","Flail")
@@ -216,28 +205,24 @@
 			H.change_stat("speed", 2)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					cloak = /obj/item/clothing/cloak/templar/psydon
-				if(/datum/patron/divine/astrata)
-					cloak = /obj/item/clothing/cloak/templar/astrata
-				if(/datum/patron/divine/noc)
-					cloak = /obj/item/clothing/cloak/templar/noc
-				if(/datum/patron/divine/abyssor)
-					cloak = /obj/item/clothing/cloak/templar/abyssor
-				if(/datum/patron/divine/dendor)
-					cloak = /obj/item/clothing/cloak/templar/dendor
-				if(/datum/patron/divine/necra)
-					cloak = /obj/item/clothing/cloak/templar/necra
-				if (/datum/patron/divine/malum)
-					cloak = /obj/item/clothing/cloak/templar/malum
-				if (/datum/patron/divine/eora)
-					cloak = /obj/item/clothing/cloak/templar/eora
-				if (/datum/patron/divine/ravox)
-					cloak = /obj/item/clothing/cloak/templar/ravox
-				if (/datum/patron/divine/xylix)
-					cloak = /obj/item/clothing/cloak/templar/xylix
-				if (/datum/patron/divine/pestra)
-					cloak = /obj/item/clothing/cloak/templar/pestra
+				if(/datum/patron/light/aeternus)
+					cloak = /obj/item/clothing/cloak/templar/aeternus
+				if(/datum/patron/balance/zira)
+					cloak = /obj/item/clothing/cloak/templar/zira
+				if(/datum/patron/change/cinella)
+					cloak = /obj/item/clothing/cloak/templar/cinella
+				if(/datum/patron/change/tamari)
+					cloak = /obj/item/clothing/cloak/templar/tamari
+				if(/datum/patron/balance/tsoridys)
+					cloak = /obj/item/clothing/cloak/templar/tsoridys
+				if (/datum/patron/balance/nunos)
+					cloak = /obj/item/clothing/cloak/templar/nunos
+				if (/datum/patron/balance/varielle)
+					cloak = /obj/item/clothing/cloak/templar/varielle
+				if (/datum/patron/balance/carthus)
+					cloak = /obj/item/clothing/cloak/templar/carthus
+				if (/datum/patron/change/kasmidian)
+					cloak = /obj/item/clothing/cloak/templar/kasmidian
 				else
 					cloak = /obj/item/clothing/cloak/cape/crusader
 			var/weapons = list("Harp","Lute","Accordion","Guitar","Hurdy-Gurdy","Viola","Vocal Talisman")
@@ -285,35 +270,28 @@
 			H.change_stat("perception", 2)
 			H.change_stat("speed", 1)
 			switch(H.patron?.type)
-				if(/datum/patron/old_god)
-					cloak = /obj/item/clothing/cloak/psydontabard
-					head = /obj/item/clothing/head/roguetown/roguehood/psydon
-				if(/datum/patron/divine/astrata)
-					head = /obj/item/clothing/head/roguetown/roguehood/astrata
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
-				if(/datum/patron/divine/noc)
-					head =  /obj/item/clothing/head/roguetown/nochood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/noc
-				if(/datum/patron/divine/abyssor)
-					head = /obj/item/clothing/head/roguetown/roguehood/abyssor
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/abyssor
-				if(/datum/patron/divine/dendor)
-					head = /obj/item/clothing/head/roguetown/dendormask
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
+				if(/datum/patron/light/aeternus)
+					head = /obj/item/clothing/head/roguetown/roguehood/aeternus
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/aeternus
+				if(/datum/patron/balance/zira)
+					head =  /obj/item/clothing/head/roguetown/zirahood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/zira
+				if(/datum/patron/change/cinella)
+					head = /obj/item/clothing/head/roguetown/roguehood/cinella
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/cinella
+				if(/datum/patron/change/tamari)
+					head = /obj/item/clothing/head/roguetown/tamarimask
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
 					H.cmode_music = 'sound/music/combat_druid.ogg'
-				if(/datum/patron/divine/necra)
-					head = /obj/item/clothing/head/roguetown/necrahood
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/necra
-				if (/datum/patron/divine/malum)
+				if(/datum/patron/balance/tsoridys)
+					head = /obj/item/clothing/head/roguetown/tsoridyshood
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
+				if (/datum/patron/balance/nunos)
 					head = /obj/item/clothing/head/roguetown/roguehood //placeholder
-					cloak = /obj/item/clothing/cloak/templar/malumite
-				if (/datum/patron/divine/eora)
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/eora
-					head = /obj/item/clothing/head/roguetown/eoramask
-				if(/datum/patron/inhumen/zizo)
-					cloak = /obj/item/clothing/suit/roguetown/shirt/robe 
-					head = /obj/item/clothing/head/roguetown/roguehood
-					H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/minion_order)
+					cloak = /obj/item/clothing/cloak/templar/nunite
+				if (/datum/patron/balance/varielle)
+					cloak = /obj/item/clothing/suit/roguetown/shirt/robe/varielle
+					head = /obj/item/clothing/head/roguetown/variellemask
 				else
 					cloak = /obj/item/clothing/suit/roguetown/shirt/robe //placeholder, anyone who doesn't have cool patron drip sprites just gets generic robes
 					head = /obj/item/clothing/head/roguetown/roguehood
@@ -322,43 +300,33 @@
 			START_PROCESSING(SSobj, C)
 
 	switch(H.patron?.type)
-		if(/datum/patron/old_god)
-			neck = /obj/item/clothing/neck/roguetown/psicross
-		if(/datum/patron/divine/astrata)
-			neck = /obj/item/clothing/neck/roguetown/psicross/astrata
-		if(/datum/patron/divine/noc)
-			neck = /obj/item/clothing/neck/roguetown/psicross/noc
-		if(/datum/patron/divine/abyssor)
-			neck = /obj/item/clothing/neck/roguetown/psicross/abyssor
-		if(/datum/patron/divine/dendor)
-			neck = /obj/item/clothing/neck/roguetown/psicross/dendor
-		if(/datum/patron/divine/necra)
-			neck = /obj/item/clothing/neck/roguetown/psicross/necra
-		if(/datum/patron/divine/pestra)
-			neck = /obj/item/clothing/neck/roguetown/psicross/pestra
-		if(/datum/patron/divine/ravox)
-			neck = /obj/item/clothing/neck/roguetown/psicross/ravox
-		if(/datum/patron/divine/malum)
-			neck = /obj/item/clothing/neck/roguetown/psicross/malum
-		if(/datum/patron/divine/eora)
-			neck = /obj/item/clothing/neck/roguetown/psicross/eora
-		if(/datum/patron/inhumen/zizo)
-			H.cmode_music = 'sound/music/combat_cult.ogg'
-			neck = /obj/item/roguekey/inhumen
-		if (/datum/patron/inhumen/matthios)
-			H.cmode_music = 'sound/music/combat_cult.ogg'
-		if(/datum/patron/divine/xylix) // Random pricross for Xylix
+		if(/datum/patron/light/aeternus)
+			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
+		if(/datum/patron/balance/zira)
+			neck = /obj/item/clothing/neck/roguetown/psicross/zira
+		if(/datum/patron/change/cinella)
+			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
+		if(/datum/patron/change/tamari)
+			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
+		if(/datum/patron/balance/tsoridys)
+			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
+		if(/datum/patron/balance/carthus)
+			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
+		if(/datum/patron/balance/nunos)
+			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
+		if(/datum/patron/balance/varielle)
+			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
+		if(/datum/patron/change/kasmidian) // SOLARIS NOTE: kasmidian would ideally have their own psicross but idc to change this off xylix behavior rn
 			var/list/psicross_options = list(
 			/obj/item/clothing/neck/roguetown/psicross,
-			/obj/item/clothing/neck/roguetown/psicross/astrata,
-			/obj/item/clothing/neck/roguetown/psicross/noc,
-			/obj/item/clothing/neck/roguetown/psicross/abyssor,
-			/obj/item/clothing/neck/roguetown/psicross/dendor,
-			/obj/item/clothing/neck/roguetown/psicross/necra,
-			/obj/item/clothing/neck/roguetown/psicross/pestra,
-			/obj/item/clothing/neck/roguetown/psicross/ravox,
-			/obj/item/clothing/neck/roguetown/psicross/malum,
-			/obj/item/clothing/neck/roguetown/psicross/eora
+			/obj/item/clothing/neck/roguetown/psicross/aeternus,
+			/obj/item/clothing/neck/roguetown/psicross/zira,
+			/obj/item/clothing/neck/roguetown/psicross/cinella,
+			/obj/item/clothing/neck/roguetown/psicross/tamari,
+			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
+			/obj/item/clothing/neck/roguetown/psicross/carthus,
+			/obj/item/clothing/neck/roguetown/psicross/nunos,
+			/obj/item/clothing/neck/roguetown/psicross/varielle
 			)
 			neck = pick(psicross_options)
 

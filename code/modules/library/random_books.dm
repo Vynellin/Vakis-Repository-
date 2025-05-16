@@ -102,7 +102,7 @@
 			if(istype(newbook, /obj/item/book/rogue/secret))
 				qdel(newbook)
 				continue
-			if(istype(newbook, /obj/item/book/rogue/bibble))
+			if(istype(newbook, /obj/item/book/rogue/solastra_lunata))
 				qdel(newbook)
 				continue
 

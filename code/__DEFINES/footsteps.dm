@@ -28,6 +28,7 @@
 #define FOOTSTEP_MOB_HUMAN 5 //Warning: Only works on /mob/living/carbon/human
 #define FOOTSTEP_MOB_SLIME 6
 
+
 /*
 
 id = list(

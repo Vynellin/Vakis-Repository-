@@ -847,12 +847,12 @@
 	verbage_simple = "tied"
 	verbage = "ties"
 
-/datum/crafting_recipe/roguetown/candle/eora
-	name = "eora's candle (x3)"
+/datum/crafting_recipe/roguetown/candle/varielle
+	name = "varielle's candle (x3)"
 	result = list(
-				/obj/item/candle/eora,
-				/obj/item/candle/eora,
-				/obj/item/candle/eora,
+				/obj/item/candle/varielle,
+				/obj/item/candle/varielle,
+				/obj/item/candle/varielle,
 				)
 	reqs = list(/obj/item/reagent_containers/food/snacks/tallow = 1,
 				/obj/item/alch/rosa = 1,

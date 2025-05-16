@@ -121,7 +121,7 @@
 
 /obj/item/rogueweapon/woodstaff/wise
 	name = "wise staff"
-	desc = "A staff for keeping the volfs at bay..."
+	desc = "A staff for keeping the wolfs at bay..."
 
 /obj/item/rogueweapon/woodstaff/aries
 	name = "staff of the shepherd"
@@ -177,14 +177,6 @@
 	thrown_bclass = BCLASS_STAB
 	throwforce = 25
 	resistance_flags = FLAMMABLE
-
-/obj/item/rogueweapon/spear/psyspear
-	name = "psydonian spear"
-	desc = "Silver spear, crafted to impale those the Inquisiton hunts."
-	icon_state = "psyspear"
-	is_silver = TRUE
-	max_blade_int = 150
-	wdefense = 6
 
 /obj/item/rogueweapon/spear/getonmobprop(tag)
 	. = ..()
@@ -292,7 +284,8 @@
 	throwforce = 35
 	resistance_flags = FLAMMABLE
 
-/obj/item/rogueweapon/fishspear/depthseek //DO NOT ADD RECIPE. MEANT TO BE AN ABYSSORITE RELIC. IDEA COURTESY OF LORDINQPLAS
+/// Depthseeker; a Cinellian Relic. Don't add a recipe for this; and craftable weaponry verse uncraftable should really be split apart filewise, bleh.
+/obj/item/rogueweapon/fishspear/depthseek
 	force = 45
 	name = "blessed depthseeker"
 	desc = "A beautifully crafted weapon, with handle carved of some beast's bone, inlaid with smooth seaglass at pommel and head, with two prongs smithed of fine dwarven steel. The seaglass carving at the head is a masterwork in and of itself, you can feel an abyssal energy radiating off it."
@@ -516,7 +509,7 @@
 
 /obj/item/rogueweapon/halberd/holysee
 	name = "eclipsum halberd"
-	desc = "A mutual effort of Noc and Astrata's followers, this halberd was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether dae or nite. The reinforced shaft provides greater durability."
+	desc = "A mutual effort of Zira and Aeternus' followers, this halberd was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether day or night. The reinforced shaft provides greater durability."
 	icon_state = "gsspear"
 	max_integrity = 600
 	force = 20
@@ -538,16 +531,6 @@
 	desc = "Summer's verdancy runs through the head of this scythe. All the more to sow."
 	icon_state = "dendorscythe"
 	gripped_intents = list(/datum/intent/spear/thrust/eaglebeak, /datum/intent/spear/cut/bardiche/scythe, /datum/intent/axe/chop/scythe, SPEAR_BASH)
-
-/obj/item/rogueweapon/halberd/psyhalberd
-	name = "psydonian halberd"
-	desc = "A silver halberd, forged by the inquisiton. Its construction lends it greater durability than a normal halberd."
-	max_blade_int = 250
-	icon_state = "psyhalberd"
-	max_integrity = 600
-	is_silver = TRUE
-	wdefense = 7
-	smeltresult = /obj/item/ingot/silver
 
 /obj/item/rogueweapon/halberd/glaive
 	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
@@ -699,15 +682,6 @@
 	smeltresult = /obj/item/ingot/steel
 	smelt_bar_num = 3
 
-/obj/item/rogueweapon/greatsword/psygsword
-	name = "psydonian greatsword"
-	desc = "Silverd, and able to cut apart foes of the inquisiton!"
-	icon_state = "psygsword"
-	max_blade_int = 350
-	wdefense = 6
-	is_silver = TRUE
-	smeltresult = /obj/item/ingot/silver
-
 /obj/item/rogueweapon/estoc
 	name = "estoc"
 	desc = "A sword possessed of a quite long and tapered blade that is intended to be thrust between the \
@@ -793,11 +767,3 @@
 					"wflip" = 8,
 					"eflip" = 0,
 					)
-
-/obj/item/rogueweapon/woodstaff/naledi
-	name = "naledian warstaff"
-	desc = "A staff carrying the crescent moon of Psydon's knowledge, as well as the black and gold insignia of the war scholars."
-	icon_state = "naledistaff"
-	force = 18
-	force_wielded = 22
-	max_integrity = 250

@@ -29,7 +29,7 @@
 		span_notice("[user] begins to burn the rot from [target]'s heart."))
 	return TRUE
 
-// calls the remove_rot which is shared with the pestra prayer to remove rot
+// calls the remove_rot which is shared with the former pestra prayer to remove rot
 /datum/surgery_step/burn_rot/success(mob/user, mob/living/target, target_zone, obj/item/tool, datum/intent/intent)
 	var/burndam = 20
 	if(user.mind)

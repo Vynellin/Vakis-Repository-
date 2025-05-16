@@ -1,7 +1,9 @@
 /datum/advclass/peasant
 	name = "Farmer"
-	tutorial = "As a Peasant, you are a skilled farmer, able to grow a variety of crops \
-	Join the local Soilsmen at their farm, or make your own little orchard."
+	tutorial = "As a Peasant, you are a skilled farmer, able to grow a variety of crops. \
+				It's doubtful the soilbridges will appreciate you butting into their farms and \
+				taking their own work for yourself, yet you must find some calling - lest \
+				you lose roof, or food."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/peasant

@@ -131,12 +131,10 @@
 	"accusations": [
 		"dead",
 		"the vampire",
-		"a Zizoid",
 		"a heretic",
 		"assassin",
 		"a Matthosian",
 		"a Baothian",
-		"a Graggarite",
 		"a bandit",
 		"a werewolf",
 		"a deddite",
@@ -157,7 +155,6 @@
 		"Spirits",
 		"Assassin",
 		"Goblins",
-		"Graggarites",
 		"Handsy Baothians",
 		"Help",
 		"%TARGETNAME%"
@@ -243,7 +240,6 @@
 		"Blood",
 		"Awesome",
 		"Infinity",
-		"Zizo",
 		"Time",
 		"Flesh",
 		"Pain",

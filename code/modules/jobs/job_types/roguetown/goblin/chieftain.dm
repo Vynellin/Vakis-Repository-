@@ -8,7 +8,6 @@
 	spawn_positions = 0
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list()
-	allowed_patrons = list(/datum/patron/inhumen/graggar)
 	tutorial = "Goblin King is a fatty lazy pig who wishes to do nothing but eat apple pies and fart while sitting on his stone throne."
 	whitelist_req = FALSE
 	outfit = /datum/outfit/job/roguetown/goblinking
@@ -26,7 +25,7 @@
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/goblin
 	head = /obj/item/clothing/head/roguetown/crown/surplus
-	cloak = /obj/item/clothing/cloak/heartfelt
+	cloak = /obj/item/clothing/cloak
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)

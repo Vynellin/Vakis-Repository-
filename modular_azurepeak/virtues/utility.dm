@@ -120,7 +120,7 @@
 		/datum/language/hellspeak,
 		/datum/language/draconic,
 		/datum/language/celestial,
-		/datum/language/grenzelhoftian
+		/datum/language/old_rasurian
 	)
 		
 	var/list/choices = list()
@@ -253,7 +253,7 @@
 
 /datum/virtue/utility/ugly
 	name = "Ugly"
-	desc = "Be it your family's habits in and out of womb, your own choices or Xylix's cruel roll of fate, you have been left unbearable to look at. Stuck to the unseen pits and crevices of the town, you've grown used to the foul odours of lyfe that often follow you. Corpses do not stink for you, and that is all the company you might find."
+	desc = "Be it your family's habits in and out of womb, your own choices or a cruel roll of fate, you have been left unbearable to look at. Stuck to the unseen pits and crevices of the town, you've grown used to the foul odours of life that often follow you. Corpses do not stink for you, and that is all the company you might find."
 	custom_text = "Incompatible with Beautiful virtue."
 	added_traits = list(TRAIT_UNSEEMLY, TRAIT_NOSTINK)
 

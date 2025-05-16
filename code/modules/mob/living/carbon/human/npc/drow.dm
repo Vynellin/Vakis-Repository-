@@ -131,7 +131,7 @@ GLOBAL_LIST_INIT(drowraider_aggro, world.file2list("strings/rt/drowaggrolines.tx
 	neck = /obj/item/clothing/neck/roguetown/bevor
 	if(prob(50))
 		neck = /obj/item/clothing/neck/roguetown/gorget
-	gloves = /obj/item/clothing/gloves/roguetown/chain/blk
+	gloves = /obj/item/clothing/gloves/roguetown/chain
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	H.STASTR = rand(16,18)
 	H.STASPD = rand(16,18)

@@ -42,7 +42,7 @@ GLOBAL_LIST_EMPTY(loadout_items)
 
 /datum/loadout_item/witchhat
 	name = "Witch Hat"
-	path = /obj/item/clothing/head/roguetown/witchhat
+	path = /obj/item/clothing/head/roguetown/apothecaryhat
 
 /datum/loadout_item/bardhat
 	name = "Bard Hat"
@@ -59,10 +59,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/headband
 	name = "Headband"
 	path = /obj/item/clothing/head/roguetown/headband
-
-/datum/loadout_item/buckled_hat
-	name = "Buckled Hat"
-	path = /obj/item/clothing/head/roguetown/puritan
 
 /datum/loadout_item/folded_hat
 	name = "Folded Hat"
@@ -163,10 +159,6 @@ GLOBAL_LIST_EMPTY(loadout_items)
 /datum/loadout_item/robe
 	name = "Robe"
 	path = /obj/item/clothing/suit/roguetown/shirt/robe
-
-/datum/loadout_item/formalsilks
-	name = "Formal Silks"
-	path = /obj/item/clothing/suit/roguetown/shirt/undershirt/puritan
 
 /datum/loadout_item/longshirt
 	name = "Shirt"

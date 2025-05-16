@@ -1,12 +1,12 @@
 /datum/virtue/combat/magical_potential
-	name = "Arcyne Potential"
-	desc = "I grasped the basics of arcyne magic at an early age, and have been able to prestidigitate for as long as I can remember."
+	name = "Arcane Potential"
+	desc = "I grasped the basics of arcane magic at an early age, and have been able to prestidigitate for as long as I can remember."
 	custom_text = "Combat classes receive a weaker version of this virtue -- they get fewer spellpoints."
 	added_skills = list(list(/datum/skill/magic/arcane, 1, 6))
 
 /datum/virtue/combat/magical_potential/apply_to_human(mob/living/carbon/human/recipient)
 	if (!recipient.mind?.get_skill_level(/datum/skill/magic/arcane)) // we can do this because apply_to is always called first
-		recipient.mind?.adjust_spellpoints(-4) // Limits skill gain through for non-initial arcynes
+		recipient.mind?.adjust_spellpoints(-4) // Limits skill gain through for non-initial arcanes
 		if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation))
 			recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	else
@@ -60,26 +60,22 @@
 			if (CLERIC_REQ_4)
 				our_faith.passive_devotion_gain += 1
 	switch(recipient.patron?.type)
-		if(/datum/patron/divine/astrata)
-			recipient.mind?.special_items["Astrata Psycross"] = /obj/item/clothing/neck/roguetown/psicross/astrata
-		if(/datum/patron/divine/abyssor)
-			recipient.mind?.special_items["Abyssor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/abyssor
-		if(/datum/patron/divine/dendor)
-			recipient.mind?.special_items["Dendor Psycross"] = /obj/item/clothing/neck/roguetown/psicross/dendor
-		if(/datum/patron/divine/necra)
-			recipient.mind?.special_items["Necra Psycross"] = /obj/item/clothing/neck/roguetown/psicross/necra
-		if(/datum/patron/divine/pestra)
-			recipient.mind?.special_items["Pestra Psycross"] = /obj/item/clothing/neck/roguetown/psicross/pestra
-		if(/datum/patron/divine/eora) 
-			recipient.mind?.special_items["Eora Psycross"] = /obj/item/clothing/neck/roguetown/psicross/eora
-		if(/datum/patron/divine/noc)
-			recipient.mind?.special_items["Noc Psycross"] = /obj/item/clothing/neck/roguetown/psicross/noc
-		if(/datum/patron/divine/ravox)
-			recipient.mind?.special_items["Ravox Psycross"] =/obj/item/clothing/neck/roguetown/psicross/ravox
-		if(/datum/patron/divine/malum)
-			recipient.mind?.special_items["Malum Psycross"] = /obj/item/clothing/neck/roguetown/psicross/malum
-		if(/datum/patron/old_god)
-			recipient.mind?.special_items["Psydon Psycross"] = /obj/item/clothing/neck/roguetown/psicross
+		if(/datum/patron/light/aeternus)
+			recipient.mind?.special_items["Aeternus Psycross"] = /obj/item/clothing/neck/roguetown/psicross/aeternus
+		if(/datum/patron/change/cinella)
+			recipient.mind?.special_items["Cinella Psycross"] = /obj/item/clothing/neck/roguetown/psicross/cinella
+		if(/datum/patron/change/tamari)
+			recipient.mind?.special_items["Tamari Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tamari
+		if(/datum/patron/balance/tsoridys)
+			recipient.mind?.special_items["Tsoridys Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tsoridys
+		if(/datum/patron/balance/varielle) 
+			recipient.mind?.special_items["Varielle Psycross"] = /obj/item/clothing/neck/roguetown/psicross/varielle
+		if(/datum/patron/balance/zira)
+			recipient.mind?.special_items["Zira Psycross"] = /obj/item/clothing/neck/roguetown/psicross/zira
+		if(/datum/patron/balance/carthus)
+			recipient.mind?.special_items["Carthus Psycross"] =/obj/item/clothing/neck/roguetown/psicross/carthus
+		if(/datum/patron/balance/nunos)
+			recipient.mind?.special_items["Nunos Psycross"] = /obj/item/clothing/neck/roguetown/psicross/nunos
 
 /datum/virtue/combat/duelist
 	name = "Duelist Apprentice"
@@ -159,6 +155,7 @@
 		recipient.mind?.adjust_skillrank_up_to(/datum/skill/combat/bows, SKILL_LEVEL_APPRENTICE, silent = TRUE)
 	else
 		added_skills = list(list(/datum/skill/combat/bows, 1, 6))
+		
 /*/datum/virtue/combat/tavern_brawler
 	name = "Tavern Brawler"
 	desc = "I've never met a problem my fists couldn't solve."
@@ -166,7 +163,7 @@
 
 /datum/virtue/combat/guarded
 	name = "Guarded"
-	desc = "I have long kept my true capabilities and vices a secret. Sometimes being deceptively weak can save one's lyfe."
+	desc = "I have long kept my true capabilities and vices a secret. Sometimes being deceptively weak can save one's life."
 	added_traits = list(TRAIT_DECEIVING_MEEKNESS)
 
 /*/datum/virtue/combat/impervious
@@ -178,7 +175,7 @@
 	name = "Rotcured"
 	desc = "I was once afflicted with the accursed rot, and was cured. It has left me changed: my limbs are weaker, but I feel no pain and have no need to breathe..."
 	custom_text = "Colors your body a distinct, sickly green."
-	// below is functionally equivalent to dying and being resurrected via astrata T4 - yep, this is what it gives you.
+	// below is functionally equivalent to dying and being resurrected via aeternus T4 - yep, this is what it gives you.
 	added_traits = list(TRAIT_EASYDISMEMBER, TRAIT_NOPAIN, TRAIT_NOPAINSTUN, TRAIT_NOBREATH, TRAIT_TOXIMMUNE, TRAIT_ZOMBIE_IMMUNE, TRAIT_ROTMAN)
 
 /datum/virtue/combat/rotcured/apply_to_human(mob/living/carbon/human/recipient)

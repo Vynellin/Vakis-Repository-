@@ -106,7 +106,6 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-			H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
 			var/turf/TU = get_turf(H)
 			if(TU)
 				new /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled(TU)

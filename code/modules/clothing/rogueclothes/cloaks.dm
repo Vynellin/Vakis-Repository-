@@ -33,9 +33,9 @@
 	var/picked
 	var/overarmor = TRUE
 
-/obj/item/clothing/cloak/abyssortabard
-	name = "abyssorite tabard"
-	desc = "A tabard worn by Abyssorite devouts."
+/obj/item/clothing/cloak/cinellatabard
+	name = "cinellian tabard"
+	desc = "A tabard worn by Cinellian devouts."
 	color = null
 	icon_state = "abyssortabard"
 	item_state = "abyssortabard"
@@ -47,7 +47,7 @@
 	flags_inv = HIDECROTCH|HIDEBOOB
 	var/overarmor = TRUE
 
-/obj/item/clothing/cloak/abyssortabard/MiddleClick(mob/user)
+/obj/item/clothing/cloak/cinellatabard/MiddleClick(mob/user)
 	overarmor = !overarmor
 	to_chat(user, span_info("I [overarmor ? "wear the tabard over my armor" : "wear the tabard under my armor"]."))
 	if(overarmor)
@@ -56,69 +56,6 @@
 		alternate_worn_layer = UNDER_ARMOR_LAYER
 	user.update_inv_cloak()
 	user.update_inv_armor()
-
-/obj/item/clothing/cloak/psydontabard
-	name = "psydonian tabard"
-	desc = "A tabard worn by Psydon's disciples. Delicate stitchwork professes the psycross with pride."
-	color = null
-	icon_state = "psydontabard"
-	item_state = "psydontabard"
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	alternate_worn_layer = TABARD_LAYER
-	body_parts_covered = CHEST|GROIN
-	boobed = TRUE
-	slot_flags = ITEM_SLOT_SHIRT|ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	flags_inv = HIDECROTCH|HIDEBOOB
-	var/open_wear = FALSE
-	var/overarmor = TRUE
-
-/obj/item/clothing/cloak/psydontabard/alt
-	name = "opened psydonian tabard"
-	desc = "A tabard worn by Psydon's disciples, peeled back to reveal its enduring innards."
-	body_parts_covered = GROIN
-	icon_state = "psydontabardalt"
-	item_state = "psydontabardalt"
-	flags_inv = HIDECROTCH
-	open_wear = TRUE
-
-
-/obj/item/clothing/cloak/psydontabard/MiddleClick(mob/user) 
-	overarmor = !overarmor
-	to_chat(user, span_info("I [overarmor ? "wear the tabard over my armor" : "wear the tabard under my armor"]."))
-	if(overarmor)
-		alternate_worn_layer = TABARD_LAYER
-	else
-		alternate_worn_layer = UNDER_ARMOR_LAYER
-	user.update_inv_cloak()
-	user.update_inv_armor()
-	user.update_inv_shirt()
-
-/obj/item/clothing/cloak/psydontabard/attack_right(mob/user)
-	switch(open_wear)
-		if(FALSE)
-			name = "opened psydonian tabard"
-			desc = "A tabard worn by Psydon's disciples, peeled back to reveal its enduring innards."
-			body_parts_covered = GROIN
-			icon_state = "psydontabardalt"
-			item_state = "psydontabardalt"
-			open_wear = TRUE
-			flags_inv = HIDECROTCH // BARE YOUR CHEST, NOT YOUR WEEN!
-			to_chat(usr, span_warning("ENDURING, like the MARTYRS who'll guide the faithful-and-pious to PARADISE."))
-		if(TRUE)
-			name = "psydonian tabard"
-			desc = "A tabard worn by Psydon's disciples. Delicate stitchwork professes the psycross with pride."
-			body_parts_covered = CHEST|GROIN
-			icon_state = "psydontabard"
-			item_state = "psydontabard"
-			flags_inv = HIDECROTCH|HIDEBOOB
-			open_wear = FALSE
-			to_chat(usr, span_warning("VEILED, like the CORPSES who've been shepherded by your steel to the AFTERLYFE."))
-	update_icon()
-	if(user)
-		if(ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_cloak()
-			H.update_inv_armor()
 
 /obj/item/clothing/cloak/tabard/update_icon()
 	cut_overlays()
@@ -262,45 +199,35 @@
 	color = CLOTHING_RED
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/tabard/crusader/astrata
+/obj/item/clothing/cloak/tabard/crusader/aeternus
 	color = "#9B7538"
 	detail_color = CLOTHING_WHITE
 
-/obj/item/clothing/cloak/tabard/crusader/ravox
+/obj/item/clothing/cloak/tabard/crusader/carthus
 	color = CLOTHING_RED
 	detail_color = CLOTHING_BLACK
 
-/obj/item/clothing/cloak/tabard/crusader/malum
+/obj/item/clothing/cloak/tabard/crusader/nunos
 	color = CLOTHING_RED
 	detail_color = CLOTHING_YELLOW
 
-/obj/item/clothing/cloak/tabard/crusader/abyssor
+/obj/item/clothing/cloak/tabard/crusader/cinella
 	color = "#373f69"
 	detail_color = "#974305"
 
-/obj/item/clothing/cloak/tabard/crusader/dendor
+/obj/item/clothing/cloak/tabard/crusader/tamari
 	color = "#4B5637"
 	detail_color = "#3D1D1C"
 
-/obj/item/clothing/cloak/tabard/crusader/necra
+/obj/item/clothing/cloak/tabard/crusader/tsoridys
 	color = "#222223"
 	detail_color = "#CACBC5"
-
-/obj/item/clothing/cloak/tabard/crusader/pestra
-	color = CLOTHING_WHITE
-	detail_color = CLOTHING_GREEN
 
 /obj/item/clothing/cloak/tabard/crusader/noc
 	color = "#2C2231"
 	detail_color = "#9AB0B0"
 
-/obj/item/clothing/cloak/tabard/crusader/psydon
-	color = CLOTHING_BLACK
-	detail_color = CLOTHING_WHITE
-
-//Eora content from Stonekeep
-
-/obj/item/clothing/cloak/tabard/crusader/eora
+/obj/item/clothing/cloak/tabard/crusader/varielle
 	color = "#4D1E49"
 	detail_color = "#A95650"
 
@@ -544,13 +471,6 @@
 	desc = "A tabard colored in a glorius green of the mighty protectors of the BOG." // THE BOG DESERVES A BETTER DESCRIPTION!
 	color = CLOTHING_GREEN
 	detail_color = CLOTHING_DARK_GREEN
-
-/obj/item/clothing/cloak/stabard/grenzelhoft
-	name = "grenzelhoft mercenary tabard"
-	desc = "A tabard bearing the colors of the Grenzelhoft emperiate mercenary guild."
-	color = CLOTHING_YELLOW
-	detail_color = CLOTHING_RED
-	detail_tag = "_box"
 
 /obj/item/clothing/cloak/stabard/dungeon
 	color = CLOTHING_BLACK
@@ -1002,11 +922,6 @@
 	GLOB.lordcolor -= src
 	return ..()
 
-
-/obj/item/clothing/cloak/cape/puritan
-	icon_state = "puritan_cape"
-	allowed_race = CLOTHED_RACES_TYPES
-
 /obj/item/clothing/cloak/cape/archivist
 	icon_state = "puritan_cape"
 	color = CLOTHING_BLACK
@@ -1078,19 +993,6 @@
 	sellprice = 50
 	nodismemsleeves = TRUE
 	salvage_result = /obj/item/natural/fur
-
-/obj/item/clothing/cloak/heartfelt
-	name = "red cloak"
-	desc = ""
-	icon_state = "heartfelt_cloak"
-	body_parts_covered = CHEST|GROIN|VITALS|ARMS
-	sleeved = 'icons/roguetown/clothing/onmob/cloaks.dmi'
-	sleevetype = "shirt"
-	slot_flags = ITEM_SLOT_CLOAK
-	allowed_sex = list(MALE, FEMALE)
-	allowed_race = NON_DWARVEN_RACE_TYPES
-	sellprice = 50
-	nodismemsleeves = TRUE
 
 /obj/item/clothing/cloak/half
 	name = "halfcloak"
@@ -1181,23 +1083,9 @@
 /obj/item/clothing/cloak/templar
 	var/overarmor = TRUE
 
-/obj/item/clothing/cloak/templar/psydon
-	name = "psydon tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Psydon on it."
-	icon_state = "tabard_weeping"
-	alternate_worn_layer = TABARD_LAYER
-	body_parts_covered = CHEST|GROIN
-	boobed = TRUE
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleevetype = "shirt"
-	nodismemsleeves = TRUE
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	flags_inv = HIDECROTCH|HIDEBOOB
-
-/obj/item/clothing/cloak/templar/astrata
-	name = "astratan tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Astrata on it."
+/obj/item/clothing/cloak/templar/aeternus
+	name = "aeternian tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Aeternus on it."
 	icon_state = "tabard_astrata_alt"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1209,9 +1097,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/noc
-	name = "noc tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Noc on it."
+/obj/item/clothing/cloak/templar/zira
+	name = "zira tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Zira on it."
 	icon_state = "tabard_noc"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1223,9 +1111,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/dendor
-	name = "dendor tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Dendor on it."
+/obj/item/clothing/cloak/templar/tamari
+	name = "tamari tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Tamari on it."
 	icon_state = "tabard_dendor"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1237,9 +1125,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/necra
-	name = "necra tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Necra on it."
+/obj/item/clothing/cloak/templar/tsoridys
+	name = "tsoridys tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Tsoridys on it."
 	icon_state = "tabard_necra"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1251,9 +1139,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/abyssor
-	name = "abyssor tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Abyssor on it."
+/obj/item/clothing/cloak/templar/cinella
+	name = "cinella tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Cinella on it."
 	icon_state = "tabard_abyssor"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1265,9 +1153,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/malum
-	name = "malum tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Malum on it."
+/obj/item/clothing/cloak/templar/nunos
+	name = "nunos tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Nunos on it."
 	icon_state = "tabard_malum"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1279,9 +1167,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/volfmantle
-	name = "volf mantle"
-	desc = "A warm cloak made using the hide and head of a slain volf. A status symbol if ever there was one."
+/obj/item/clothing/cloak/wolfmantle
+	name = "wolf mantle"
+	desc = "A warm cloak made using the hide and head of a slain wolf. A status symbol if ever there was one."
 	color = null
 	icon_state = "volfpelt"
 	item_state = "volfpelt"
@@ -1368,9 +1256,9 @@
 	user.update_inv_cloak()
 	user.update_inv_armor()
 
-/obj/item/clothing/cloak/templar/eora
-	name = "eora tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Eora on it."
+/obj/item/clothing/cloak/templar/varielle
+	name = "varielle tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Varielle on it."
 	icon_state = "tabard_eora"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1382,23 +1270,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/pestra
-	name = "pestra tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Pestra on it."
-	icon_state = "tabard_pestra"
-	alternate_worn_layer = TABARD_LAYER
-	body_parts_covered = CHEST|GROIN
-	boobed = TRUE
-	mob_overlay_icon = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleeved = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
-	sleevetype = "shirt"
-	nodismemsleeves = TRUE
-	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
-	flags_inv = HIDECROTCH|HIDEBOOB
-
-/obj/item/clothing/cloak/templar/ravox
-	name = "ravox tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Ravox on it."
+/obj/item/clothing/cloak/templar/carthus
+	name = "carthus tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Carthus on it."
 	icon_state = "tabard_ravox"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1410,9 +1284,9 @@
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_CLOAK
 	flags_inv = HIDECROTCH|HIDEBOOB
 
-/obj/item/clothing/cloak/templar/xylix
-	name = "xylix tabard"
-	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Xylix on it."
+/obj/item/clothing/cloak/templar/kasmidian
+	name = "kasmidian tabard"
+	desc = "An outer garment commonly worn by soldiers. This one has the symbol of Kasmidian on it."
 	icon_state = "tabard_xylix"
 	alternate_worn_layer = TABARD_LAYER
 	body_parts_covered = CHEST|GROIN
@@ -1481,7 +1355,7 @@
 	if(slot == SLOT_NECK)
 		active_item = TRUE
 		if(user.mind.special_role == "Bandit")
-			to_chat(user, span_notice("I feel bolstered by Matthios' Power!"))
+			to_chat(user, span_notice("I feel my focus shift inwards as the necklace is clasped."))
 			user.change_stat("strength", 2)
 			user.change_stat("perception", 2)
 			user.change_stat("intelligence", 2)
@@ -1499,7 +1373,7 @@
 		return
 	active_item = FALSE
 	if(user.mind.special_role == "Bandit")
-		to_chat(user, span_notice("I've removed the necklace of Matthios..."))
+		to_chat(user, span_notice("Something shifts as the necklace is removed."))
 		user.change_stat("strength", -2)
 		user.change_stat("perception", -2)
 		user.change_stat("intelligence", -2)
@@ -1591,12 +1465,6 @@
 /obj/item/clothing/cloak/stabard/guardhood/Destroy()
 	GLOB.lordcolor -= src
 	return ..()
-
-/obj/item/clothing/cloak/hierophant
-	name = "hierophant's sash"
-	icon_state = "naledisash"
-	item_state = "naledisash"
-	desc = "A limp piece of fabric traditionally used to fasten bags that are too baggy, but in modern days has become more of a fashion statement than anything."
 
 /obj/item/clothing/cloak/wardencloak
 	name = "warden cloak"

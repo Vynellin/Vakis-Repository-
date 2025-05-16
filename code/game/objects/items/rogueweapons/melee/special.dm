@@ -63,7 +63,7 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/HU = user
 
-		if((HU.job != "Grand Duke") && (HU.job != "Consort"))
+		if((HU.job != /datum/job/roguetown/lord::title))
 			to_chat(user, span_danger("The rod doesn't obey me."))
 			return
 
@@ -268,8 +268,8 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 
-/obj/item/rogueweapon/katar/abyssor
-	name = "barotrauma"
+/obj/item/rogueweapon/katar/cinella
+	name = "barotrauma" // both games about assistants beating people to death anyways
 	desc = "A gift from a creature of the sea. The claw is sharpened to a wicked edge."
 	icon_state = "abyssorclaw"
 	force = 20
@@ -359,7 +359,7 @@
 	item_d_type = "blunt"
 
 
-/obj/item/rogueweapon/knuckles/eora
+/obj/item/rogueweapon/knuckles/varielle
 	name = "close caress"
 	desc = "Some times call for a more intimate approach."
 	force = 20

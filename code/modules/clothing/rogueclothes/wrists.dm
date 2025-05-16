@@ -58,7 +58,7 @@
 	item_state = "wrappings"
 	sewrepair = TRUE
 
-/obj/item/clothing/wrists/roguetown/nocwrappings
+/obj/item/clothing/wrists/roguetown/zirawrappings
 	name = "moon wrappings"
 	slot_flags = ITEM_SLOT_WRISTS
 	icon_state = "nocwrappings"

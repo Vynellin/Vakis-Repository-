@@ -1,5 +1,5 @@
 /datum/job/roguetown/prisonerr
-	title = "Prisoner (Rockhill)"
+	title = "Prisoner (Solaris Keep)"
 	flag = PRISONERR
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -8,7 +8,7 @@
 
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "How does it feel to be the rat in the cage? You're alone and at the mercy of your captors, kept around as a hostage. You spend your days waiting for the oft chance someone comes to pay your ransom. Might as well start praying to whatever god you find solace in."
+	tutorial = "How does it feel to be the rat in the cage? You're alone and at the mercy of your captors - the Marquis of Sunmarch - kept around as a hostage. You spend your days waiting for the oft chance someone comes to pay your ransom. Might as well start praying to whatever god you find solace in."
 
 	outfit = /datum/outfit/job/roguetown/prisonerr
 	bypass_jobban = TRUE

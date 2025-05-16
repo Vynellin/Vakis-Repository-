@@ -36,7 +36,6 @@
 	loot = list(/obj/effect/temp_visual/lich_dying)
 	projectiletype = /obj/projectile/magic
 	var/allowed_projectile_types = list(/obj/projectile/magic/lightning, /obj/projectile/magic/sickness, /obj/projectile/magic/arcane_barrage, /obj/projectile/magic/acidsplash5e)
-	patron = /datum/patron/inhumen/zizo
 	footstep_type = FOOTSTEP_MOB_SHOE
 	stat_attack = UNCONSCIOUS
 
@@ -371,8 +370,7 @@
 		H.mind.adjust_skillrank_up_to(/datum/skill/combat/shields, 2, TRUE)
 		H.mind.adjust_skillrank_up_to(/datum/skill/combat/knives, 3, TRUE)
 		H.mind.adjust_skillrank_up_to(/datum/skill/misc/climbing, 2, TRUE)
-
-	H.set_patron(/datum/patron/inhumen/zizo)
+		
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 
 	H.possible_rmb_intents = list(/datum/rmb_intent/feint,\

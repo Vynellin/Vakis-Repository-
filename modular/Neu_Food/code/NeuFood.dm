@@ -282,15 +282,6 @@
 	icon_state = "s_platter"
 	sellprice = 30
 
-
-
-/obj/item/book/rogue/yeoldecookingmanual // new book with some tips to learn
-	name = "Ye olde ways of cookinge"
-	desc = "Penned by Svend Fatbeard, butler in the fourth generation"
-	icon_state ="book8_0"
-	base_icon_state = "book8"
-	bookfile = "Neu_cooking.json"
-
 /*	........   Reagents   ................ */// These are for the pot, if more vegetables are added and need to be integrated into the pot brewing you need to add them here
 /datum/reagent/consumable/soup // so you get hydrated without the flavor system messing it up. Works like water with less hydration
 	var/hydration = 6

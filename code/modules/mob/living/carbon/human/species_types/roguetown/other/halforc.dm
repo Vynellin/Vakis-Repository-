@@ -2,21 +2,19 @@
 	race = /datum/species/halforc
 
 /datum/species/halforc
-	name = "Half Orc"
+	name = "True Orc"
 	id = "halforc"
-	desc = "<b>Half Orcs</b><br>\
-	With the Ironmask clan on a centuries-long warpath to consolidate all orcs beneath their banner, \
-	crushed orc tribes have lost their menfolk, and war-widows have been scattered to the hinterlands. \
-	Between humen civilization and orc savagery, orc-women opting for exile over dishonor have become \
-	more common visitors to fur trading posts and prospecting camps, eventually leading to half-orcs \
-	being born in these rough places otherwise devoid of a fairer sex. Your mother-clan is in thrall \
-	to the Ironmask. True orcs would kill you on sight, seeing you as a mongrel dog, and non-orcish \
-	people cannot decide between regarding you with either mere distrust or outright disgust. Yet \
-	somehow your wandering feet came to Solaris, where half-orcs ply muscle and their hardiness \
-	in the rough underbelly or outer reaches of society.<br>\
-	(+1 Strength)"
+	desc = "<b>Orcs</b><br>\
+Orcs are a heavy-set warrior people from the far reaches of the world.\
 
-	skin_tone_wording = "Clan"
+Known for their size, strength and large canine tusks, it’s no wonder the Orcish visage inspires fear. Orcs have no shame in inspiring fear in their enemies, living in ever evolving wars for territory far from Sunmarch and it’s relative stability. <br>\
+Orcs survived the Dusk War through tooth blood and claw. They were never afraid to turn against fellow forces of the light one day if it meant securing a victory the next, unfortunately sowing distrust for their people that has never fully left.<br>\
+
+Those of Orcish blood still exist in Sunmarch, far away from their homelands that struggle in the most wartorn of the dusk damaged lands. They make a living as warriors, adventurers and the most hard working of laborers. <br>\
+
+	(+1 Strength and +1 Endurance)"
+
+	skin_tone_wording = "Skintone"
 
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE,OLDGREY)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
@@ -43,7 +41,7 @@
 	OFFSET_FACE_F = list(0,1), OFFSET_BELT_F = list(0,1), OFFSET_BACK_F = list(0,1), \
 	OFFSET_NECK_F = list(0,1), OFFSET_MOUTH_F = list(0,1), OFFSET_PANTS_F = list(0,1), \
 	OFFSET_SHIRT_F = list(0,1), OFFSET_ARMOR_F = list(0,1), OFFSET_UNDIES_F = list(0,1))
-	race_bonus = list(STAT_STRENGTH = 1)
+	race_bonus = list(STAT_STRENGTH = 1, STAT_ENDURANCE = 1)
 	enflamed_icon = "widefire"
 	organs = list(
 		ORGAN_SLOT_BRAIN = /obj/item/organ/brain,
@@ -90,32 +88,29 @@
 		/datum/language/orcish
 	)
 
-/datum/species/halforc/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	..()
-	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
-
 /datum/species/halforc/after_creation(mob/living/carbon/C)
 	..()
 	to_chat(C, "<span class='info'>I can speak Orcish with ,o before my speech.</span>")
-
-/datum/species/halforc/on_species_loss(mob/living/carbon/C)
-	. = ..()
-	UnregisterSignal(C, COMSIG_MOB_SAY)
 
 /datum/species/halforc/qualifies_for_rank(rank, list/features)
 	return TRUE
 
 /datum/species/halforc/get_skin_list()
 	return list(
-		"Shellcrest" = SKIN_COLOR_SHELLCREST,
-		"Bloodaxe" = SKIN_COLOR_BLOOD_AXE,
-		"Splitjaw" = SKIN_COLOR_GROONN, //Changed name from Gronn, which no longer aligned with lore here or elsewhere.
-		"Blackhammer" = SKIN_COLOR_BLACK_HAMMER,
-		"Skullseeker" = SKIN_COLOR_SKULL_SEEKER,
-		"Crescent Fang" = SKIN_COLOR_CRESCENT_FANG,
+		"Slate" = SKIN_COLOR_SLATE,
+		"Teak" = SKIN_COLOR_TEAK,
+		"Undergrowth" = SKIN_COLOR_UNDERGROWTH,
+		"Raw Blood" = SKIN_COLOR_RAWBLOOD,
+		"Water Moss" = SKIN_COLOR_WATERMOSS,
+		"Deep One" = SKIN_COLOR_DEEPONE,
+		"Cave Moss" = SKIN_COLOR_CAVEMOSS,
+		"Hobbe" = SKIN_COLOR_HOBBE,
 		"Murkwalker" = SKIN_COLOR_MURKWALKER,
-		"Shatterhorn" = SKIN_COLOR_SHATTERHORN,
-		"Spirit Crusher" = SKIN_COLOR_SPIRITCRUSHER
+		"Ice Blood" = SKIN_COLOR_ICEBLOOD,
+		"Rawhide" = SKIN_COLOR_RAWHIDE,
+		"Marine" = SKIN_COLOR_MARINE,
+		"Pyrite" = SKIN_COLOR_PYRITE,
+
 	)
 
 /datum/species/halforc/get_hairc_list()

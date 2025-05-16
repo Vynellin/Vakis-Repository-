@@ -8,9 +8,10 @@
 	selection_color = JCOLOR_CHURCH
 	f_title = "Priestess"
 	allowed_races = RACES_NO_CONSTRUCT		//Too recent arrivals to ascend to priesthood.
-	allowed_patrons = ALL_DIVINE_PATRONS
+	allowed_patrons = ALL_PATRONS
 	allowed_sexes = list(MALE, FEMALE)
-	tutorial = "The Divine is all that matters in a world of the immoral. The Weeping God left his children to rule over us mortals--and you will preach their wisdom to any who still heed their will. The faithless are growing in number. It is up to you to shepard them toward a Gods-fearing future; for you are a priest of Astrata."
+	tutorial = "The nine protect; and it is your watch that has kept the church comfortable under such, even through the debates of nobles and scholars, balance and change. Aeternus guides your hand, yet still; \
+				to keep this as it is, fraught as it may sometimes feel - and your own opinions therein..."
 	whitelist_req = FALSE
 
 	spells = list(/obj/effect/proc_holder/spell/invoked/cure_rot, /obj/effect/proc_holder/spell/self/convertrole/templar, /obj/effect/proc_holder/spell/self/convertrole/monk)
@@ -25,12 +26,9 @@
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
 
-/datum/outfit/job/roguetown/priest
-	allowed_patrons = list(/datum/patron/divine/astrata)
-
 /datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
 	..()
-	neck = /obj/item/clothing/neck/roguetown/psicross/astrata
+	neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 	head = /obj/item/clothing/head/roguetown/priestmask
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/priest
 	pants = /obj/item/clothing/under/roguetown/tights/black
@@ -42,7 +40,7 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/priest
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
-		/obj/item/needle/pestra = 1,
+		/obj/item/needle/infinite = 1,
 		/obj/item/natural/worms/leech/cheele = 1, //little buddy
 		/obj/item/ritechalk,
 	)
@@ -101,21 +99,19 @@
 		//Abdicate previous King
 		for(var/mob/living/carbon/human/HL in GLOB.human_list)
 			if(HL.mind)
-				if(HL.mind.assigned_role == "Grand Duke" || HL.mind.assigned_role == "Consort")
+				if(HL.mind.assigned_role == /datum/job/roguetown/lord::title)
 					HL.mind.assigned_role = "Towner" //So they don't get the innate traits of the king
 			//would be better to change their title directly, but that's not possible since the title comes from the job datum
-			if(HL.job == "Grand Duke")
-				HL.job = "Duke Emeritus"
-			if(HL.job == "Consort")
-				HL.job = "Consort Dowager"
+			if(HL.job == /datum/job/roguetown/lord::title)
+				HL.job = /datum/job/roguetown/exlord::title
 
 		//Coronate new King (or Queen)
-		HU.mind.assigned_role = "Grand Duke"
-		HU.job = "Grand Duke"
+		HU.mind.assigned_role = /datum/job/roguetown/lord::title
+		HU.job = /datum/job/roguetown/lord::title
 		if(should_wear_femme_clothes(HU))
-			SSticker.rulertype = "Grand Duchess"
+			SSticker.rulertype = /datum/job/roguetown/lord::f_title
 		else
-			SSticker.rulertype = "Grand Duke"
+			SSticker.rulertype = /datum/job/roguetown/lord::title
 		SSticker.rulermob = HU
 		var/dispjob = mind.assigned_role
 		removeomen(OMEN_NOLORD)
@@ -134,7 +130,7 @@
 			return FALSE
 		if(inputty in GLOB.excommunicated_players)
 			GLOB.excommunicated_players -= inputty
-			priority_announce("[real_name] has forgiven [inputty]. Once more walk in the light!", title = "Hail the Ten!", sound = 'sound/misc/bell.ogg')
+			priority_announce("[real_name] has forgiven [inputty]. Once more walk in the light!", title = "Hail the Nine!", sound = 'sound/misc/bell.ogg')
 			for(var/mob/living/carbon/human/H in GLOB.player_list)
 				if(H.real_name == inputty)
 					H.remove_stress(/datum/stressevent/psycurse)
@@ -149,7 +145,7 @@
 		if(!found)
 			return FALSE
 		GLOB.excommunicated_players += inputty
-		priority_announce("[real_name] has put Xylix's curse of woe on [inputty] for offending the church!", title = "SHAME", sound = 'sound/misc/excomm.ogg')
+		priority_announce("[real_name] has put the curse of woe on [inputty] for offending the church!", title = "SHAME", sound = 'sound/misc/excomm.ogg')
 
 /mob/living/carbon/human/proc/churchannouncement()
 	set name = "Announcement"
@@ -168,8 +164,8 @@
 	new_role = "Templar"
 	overlay_state = "recruit_templar"
 	recruitment_faction = "Templars"
-	recruitment_message = "Serve the ten, %RECRUIT!"
-	accept_message = "FOR THE TEN!"
+	recruitment_message = "Serve the Nine, %RECRUIT!"
+	accept_message = "FOR THE NINE!"
 	refuse_message = "I refuse."
 
 /obj/effect/proc_holder/spell/self/convertrole/monk
@@ -177,6 +173,6 @@
 	new_role = "Acolyte"
 	overlay_state = "recruit_acolyte"
 	recruitment_faction = "Church"
-	recruitment_message = "Serve the ten, %RECRUIT!"
-	accept_message = "FOR THE TEN!"
+	recruitment_message = "Serve the Nine, %RECRUIT!"
+	accept_message = "FOR THE NINE!"
 	refuse_message = "I refuse."

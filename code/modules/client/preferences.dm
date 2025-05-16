@@ -89,7 +89,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/datum/species/pref_species = new /datum/species/human/northern()	//Mutant race
 	var/static/datum/species/default_species = new /datum/species/human/northern()
 	var/datum/patron/selected_patron
-	var/static/datum/patron/default_patron = /datum/patron/divine/astrata
+	var/static/datum/patron/default_patron = /datum/patron/light/aeternus
 	var/list/features = MANDATORY_FEATURE_LIST
 	var/list/randomise = list(RANDOM_UNDERWEAR = TRUE, RANDOM_UNDERWEAR_COLOR = TRUE, RANDOM_UNDERSHIRT = TRUE, RANDOM_SOCKS = TRUE, RANDOM_BACKPACK = TRUE, RANDOM_JUMPSUIT_STYLE = FALSE, RANDOM_SKIN_TONE = TRUE, RANDOM_EYE_COLOR = TRUE)
 	var/list/friendlyGenders = list("male" = "masculine", "female" = "feminine")
@@ -163,8 +163,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/ooc_extra
 	var/list/descriptor_entries = list()
 	var/list/custom_descriptors = list()
-
-	var/char_accent = "No accent"
 
 	var/datum/loadout_item/loadout
 	var/datum/loadout_item/loadout2
@@ -428,7 +426,6 @@ GLOBAL_LIST_EMPTY(chosen_names)
 			dat += "<b>Voice Color: </b><a href='?_src_=prefs;preference=voice;task=input'>Change</a>"
 			dat += "<br><b>Nickname Color: </b> </b><a href='?_src_=prefs;preference=highlight_color;task=input'>Change</a>"
 			dat += "<br><b>Voice Pitch: </b><a href='?_src_=prefs;preference=voice_pitch;task=input'>[voice_pitch]</a>"
-			//dat += "<br><b>Accent:</b> <a href='?_src_=prefs;preference=char_accent;task=input'>[char_accent]</a>"
 			dat += "<br><b>Features:</b> <a href='?_src_=prefs;preference=customizers;task=menu'>Change</a>"
 			dat += "<br><b>Markings:</b> <a href='?_src_=prefs;preference=markings;task=menu'>Change</a>"
 			dat += "<br><b>Descriptors:</b> <a href='?_src_=prefs;preference=descriptors;task=menu'>Change</a>"
@@ -772,7 +769,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	popup.open(FALSE)
 	onclose(user, "capturekeypress", src)
 
-/datum/preferences/proc/SetChoices(mob/user, limit = 14, list/splitJobs = list("Court Magician", "Knight Captain", "Priest", "Merchant", "Archivist", "Towner", "Grenzelhoft Mercenary", "Beggar", "Prisoner", "Goblin King"), widthPerColumn = 295, height = 620) //295 620
+/datum/preferences/proc/SetChoices(mob/user, limit = 14, list/splitJobs = list("Court Magician", "Knight Captain", "Priest", "Merchant", "Archivist", "Towner", "Beggar", "Prisoner", "Goblin King"), widthPerColumn = 295, height = 620) //295 620
 	if(!SSjob)
 		return
 
@@ -1620,7 +1617,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					to_chat(user, "<span class='notice'>Successfully updated flavortext</span>")
 					log_game("[user] has set their flavortext'.")
 				if("ooc_notes")
-					to_chat(user, "<span class='notice'>["<span class='bold'>If you put 'anything goes' or 'no limits' here, do not be surprised if people take you up on it.</span>"]</span>")
+					to_chat(user, "<span class='notice'>["<span class='bold'>BE AWARE: Phrases such as \"no limits\" and \"anything goes\" are considered ban-baiting.</span>"]</span>")
 					var/new_ooc_notes = input(user, "Input your OOC preferences:", "OOC notes", ooc_notes) as message|null
 					if(new_ooc_notes == null)
 						return
@@ -1655,7 +1652,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						ShowChoices(user)
 						return
 					if(is_legacy)
-						dat += "<center><i><font color = '#b9b9b9'; font size = 1>This is a LEGACY Profile from naive days of Psydon.</font></i></center>"
+						dat += "<center><i><font color = '#b9b9b9'; font size = 1>This is a LEGACY Profile.</font></i></center>"
 					if(valid_headshot_link(null, headshot_link, TRUE))
 						dat += ("<div align='center'><img src='[headshot_link]' width='325px' height='325px'></div>")
 					if(flavortext && flavortext_display)
@@ -1814,7 +1811,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						if (V.name == virtue.name || V.name == virtuetwo.name)
 							continue
-						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/inhumen))
+						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/balance))
 							continue
 						if (istype(V, /datum/virtue/utility/noble) && (pref_species == /datum/species/construct/metal))		//Stops bypass of nobility for constructs.
 							continue
@@ -1834,7 +1831,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 							continue
 						if (V.name == virtue.name || V.name == virtuetwo.name)
 							continue
-						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/inhumen))
+						if (istype(V, /datum/virtue/heretic) && !istype(selected_patron, /datum/patron/balance))
 							continue
 						if (istype(V, /datum/virtue/utility/noble) && (pref_species == /datum/species/construct/metal))		//Stops bypass of nobility for constructs.
 							continue
@@ -1905,11 +1902,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						charflaw = new charflaw()
 						if(charflaw.desc)
 							to_chat(user, span_info("[charflaw.desc]"))
-
-				if("char_accent")
-					var/selectedaccent = input(user, "Choose your character's accent:", "Character Preference") as null|anything in GLOB.character_accents
-					if(selectedaccent)
-						char_accent = selectedaccent
 
 				if("ooccolor")
 					var/new_ooccolor = input(user, "Choose your OOC colour:", "Game Preference",ooccolor) as color|null
@@ -2415,8 +2407,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		character.update_body()
 		character.update_hair()
 		character.update_body_parts(redraw = TRUE)
-
-	character.char_accent = char_accent
 
 /datum/preferences/proc/get_default_name(name_id)
 	switch(name_id)

@@ -588,7 +588,7 @@
 
 /mob/living/carbon/human/is_literate()
 	if(mind)
-		if(mind.get_skill_level(/datum/skill/misc/reading) > 0)
+		if(mind.get_skill_level(/datum/skill/misc/reading) > -1) // Under most situations and without delibrate opt-in or a magical drain effect, literacy should be standard.
 			return TRUE
 		else
 			return FALSE
@@ -875,7 +875,7 @@
 	return testicles.virility
 
 /*/mob/living/carbon/human/proc/update_heretic_commune()
-	if(HAS_TRAIT(src, TRAIT_COMMIE) || HAS_TRAIT(src, TRAIT_CABAL) || HAS_TRAIT(src, TRAIT_HORDE) || HAS_TRAIT(src, TRAIT_DEPRAVED))
+	if(HAS_TRAIT(src, TRAIT_COMMIE))
 		verbs |= /mob/living/carbon/human/verb/commune
 		verbs |= /mob/living/carbon/human/verb/show_heretics
 		verbs |= /mob/living/carbon/human/verb/bad_omen

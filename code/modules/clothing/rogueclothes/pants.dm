@@ -150,20 +150,6 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
 	body_parts_covered = GROIN
 
-/obj/item/clothing/under/roguetown/trou/otavan
-	name = "otavan leather trousers"
-	desc = "padded leather armor made by Otavan tailors, its quality is remarkable."
-	icon_state = "fencerpants"
-	resistance_flags = FIRE_PROOF
-	armor = list("blunt" = 100, "slash" = 70, "stab" = 50, "piercing" = 20, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	blocksound = SOFTHIT
-	max_integrity = 200
-	blade_dulling = DULLING_BASHCHOP
-	sewrepair = TRUE
-	allowed_race = NON_DWARVEN_RACE_TYPES
-	salvage_result = /obj/item/natural/hide/cured
-
 /obj/item/clothing/under/roguetown/trou/leather/mourning
 	name = "mourning trousers"
 	icon_state = "leathertrou"
@@ -321,47 +307,6 @@
 	. = ..()
 	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_STEP)
 
-/obj/item/clothing/under/roguetown/platelegs/matthios
-	max_integrity = 600
-	name = "gilded leggings"
-	desc = "But my outside to behold:"
-	icon_state = "matthioslegs"
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_PICK)
-	armor = list("blunt" = 90, "slash" = 100, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
-
-/obj/item/clothing/under/roguetown/platelegs/matthios/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/under/roguetown/platelegs/matthios/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-
-/obj/item/clothing/under/roguetown/platelegs/zizo
-	max_integrity = 600
-	name = "darksteel garments"
-	desc = "Leg garments worn by true anointed of the Dame of Progress. In Her name."
-	icon_state = "zizocloth"
-	armor = list("blunt" = 90, "slash" = 100, "stab" = 80, "piercing" = 80, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_PICK)
-
-/obj/item/clothing/under/roguetown/platelegs/zizo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/under/roguetown/platelegs/zizo/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-/obj/item/clothing/under/roguetown/platelegs/zizo/Initialize(mapload)
-	. = ..()
-	AddComponent(/datum/component/item_equipped_movement_rustle, SFX_PLATE_STEP)
-
 /obj/item/clothing/under/roguetown/chainlegs/skirt
 	name = "steel chain skirt"
 	desc = "Interlinked metal rings that drape down to the crotch and no farther."
@@ -392,57 +337,6 @@
 
 /obj/item/clothing/under/roguetown/loincloth/pink
 	color = "#b98ae3"
-
-/obj/item/clothing/under/roguetown/grenzelpants
-	name = "grenzelhoftian paumpers"
-	desc = "Padded pants for extra comfort and protection, adorned in vibrant colors."
-	icon_state = "grenzelpants"
-	item_state = "grenzelpants"
-	sleeved = 'icons/roguetown/clothing/onmob/helpers/stonekeep_merc.dmi'
-	detail_tag = "_detail"
-	armor = list("blunt" = 30, "slash" = 10, "stab" = 20, "piercing" = 0, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_BLUNT)
-	var/picked = FALSE
-	armor_class = ARMOR_CLASS_LIGHT
-
-/obj/item/clothing/under/roguetown/grenzelpants/attack_right(mob/user)
-	..()
-	if(!picked)
-		var/list/colors = list(
-		"Swan White"="#ffffff",
-		"Lavender"="#865c9c",
-		"Royal Purple"="#5E4687",
-		"Wine Rouge"="#752B55",
-		"Sow's skin"="#CE929F",
-		"Knight's Red"="#933030",
-		"Madroot Red"="#AD4545",
-		"Marigold Orange"="#E2A844",
-		"Politely, Yuck"="#685542",
-		"Astrata's Yellow"="#FFFD8D",
-		"Bog Green"="#375B48",
-		"Seafoam Green"="#49938B",
-		"Woad Blue"="#395480",
-		"Cornflower Blue"="#749EE8",
-		"Blacksteel Grey"="#404040",)
-
-		var/choice = input(user, "Choose a color.", "Grenzelhoft colors") as anything in colors
-		var/playerchoice = colors[choice]
-		picked = TRUE
-		detail_color = playerchoice
-		detail_tag = "_detail"
-		update_icon()
-		if(loc == user && ishuman(user))
-			var/mob/living/carbon/H = user
-			H.update_inv_pants()
-
-/obj/item/clothing/under/roguetown/grenzelpants/update_icon()
-	cut_overlays()
-	if(get_detail_tag())
-		var/mutable_appearance/pic = mutable_appearance(icon(icon, "[icon_state][detail_tag]"))
-		pic.appearance_flags = RESET_COLOR
-		if(get_detail_color())
-			pic.color = get_detail_color()
-		add_overlay(pic)
 
 /obj/item/clothing/under/roguetown/chainlegs/kilt
 	name = "steel chain kilt"
@@ -475,11 +369,3 @@
 	anvilrepair = /datum/skill/craft/armorsmithing
 	smeltresult = /obj/item/ingot/blacksteel
 	smelt_bar_num = 2
-
-/obj/item/clothing/under/roguetown/trou/leather/pontifex
-	name = "pontifex's chaqchur"
-	desc = "A handmade pair of baggy, thin leather pants. They end in a tight stocking around the calf, ballooning out around the thigh."
-	icon_state = "monkpants"
-	item_state = "monkpants"
-	naledicolor = TRUE
-	salvage_result = /obj/item/natural/hide/cured

@@ -5,13 +5,9 @@
 	name = "Axian"
 	id = "akula"
 	desc = "<b>Axian</b><br>\
-	Axians are a proud, shark-like people that have a heritage founded in maritime trade, \
-	tax evasion, and piracy. They have a strong distaste for the nobility and taxation, \
-	making them a target of discrimination in Rasura. They are oftentimes scapegoats for crime. \
-	Due to their penchant for trade and travel, they can be found all over the world, oftentimes \
-	seeing places many could not even dream of. They look down at those they considered the 'settled' \
-	and often uproot themselves quite often in their lifetimes. However, due to the isolation in Solaris, many Axians \
-	find their sanity being clawed away as they find themselves stuck in one place.<br>\
+Axians are a rowdy, outgoing and tough creed of Shark-kin that pilot the seas around the Sunmarch.\
+Their seafaring bodies are more than equipped for rough lives of seafoam and toil, Axians as a whole preferring lives that are hard but free over the strict and rigid rules of Kingdoms and Empires. <br>\
+Axians are a curious people with a sense of wanderlust that leads them to lives of adventure, perfectly fitted for the crew of a ship. Their penchant for travel and affinity for sea leads the Axian trade cabals to have a great deal of influence in matters of coin. If only they united, formed Kingdoms of their own, Axians could be a major power in the world that remains. <br>\
 	(+1 Constitution, +1 Endurance)"
 	species_traits = list(EYECOLOR,LIPS,STUBBLE,MUTCOLORS)
 	species_traits = list(EYECOLOR,LIPS,STUBBLE,MUTCOLORS)
@@ -156,11 +152,3 @@
 		var/suffix = pick(world.file2list("strings/names/roguetown/axiansuffix.txt"))
 		randname = "[randname] [suffix]"
 	return randname
-
-/datum/species/akula/on_species_gain(mob/living/carbon/C, datum/species/old_species)
-	..()
-	RegisterSignal(C, COMSIG_MOB_SAY, PROC_REF(handle_speech))
-
-/datum/species/akula/on_species_loss(mob/living/carbon/C)
-	. = ..()
-	UnregisterSignal(C, COMSIG_MOB_SAY)

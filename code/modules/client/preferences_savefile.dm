@@ -497,10 +497,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["ooc_extra_link"]		>> ooc_extra_link
 	S["is_legacy"]			>> is_legacy
 
-	S["char_accent"]		>> char_accent
-	if (!char_accent)
-		char_accent = "No accent"
-
 	S["pronouns"] >> pronouns
 	S["voice_type"] >> voice_type
 	//try to fix any outdated data if necessary
@@ -651,7 +647,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["ooc_extra"],	ooc_extra)
 	WRITE_FILE(S["ooc_extra_link"],	ooc_extra_link)
 	WRITE_FILE(S["is_legacy"], is_legacy)
-	WRITE_FILE(S["char_accent"] , char_accent)
 	WRITE_FILE(S["voice_type"] , voice_type)
 	WRITE_FILE(S["pronouns"] , pronouns)
 	WRITE_FILE(S["statpack"] , statpack.type)

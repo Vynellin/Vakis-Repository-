@@ -169,12 +169,6 @@
 	sewrepair = TRUE
 	component_type = /datum/component/storage/concrete/roguetown/satchel
 
-/obj/item/storage/backpack/rogue/satchel/heartfelt
-	populate_contents = list(
-		/obj/item/natural/feather,
-		/obj/item/paper,
-	)
-
 /obj/item/storage/backpack/rogue/satchel/mule/PopulateContents()
 	for(var/i in 1 to 3)
 		switch(rand(1,4))
@@ -317,13 +311,6 @@
 	. = ..()
 	for(var/i in 1 to max_storage)
 		var/obj/item/rogueweapon/huntingknife/throwingknife/steel/K = new()
-		knives += K
-	update_icon()
-
-/obj/item/storage/belt/rogue/leather/knifebelt/black/psydon/Initialize()
-	. = ..()
-	for(var/i in 1 to max_storage)
-		var/obj/item/rogueweapon/huntingknife/throwingknife/psydon/K = new()
 		knives += K
 	update_icon()
 

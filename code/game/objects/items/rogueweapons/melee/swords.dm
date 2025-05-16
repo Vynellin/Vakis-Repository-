@@ -210,26 +210,11 @@
 			if("onback") return list("shrink" = 0.5, "sx" = -1, "sy" = 2, "nx" = 0, "ny" = 2, "wx" = 2, "wy" = 1, "ex" = 0, "ey" = 1, "nturn" = 0, "sturn" = 0, "wturn" = 70, "eturn" = 15, "nflip" = 1, "sflip" = 1, "wflip" = 1, "eflip" = 1, "northabove" = 1, "southabove" = 0, "eastabove" = 0, "westabove" = 0)
 			if("onbelt") return list("shrink" = 0.4, "sx" = -4, "sy" = -6, "nx" = 5, "ny" = -6, "wx" = 0, "wy" = -6, "ex" = -1, "ey" = -6, "nturn" = 100, "sturn" = 156, "wturn" = 90, "eturn" = 180, "nflip" = 0, "sflip" = 0, "wflip" = 0, "eflip" = 0, "northabove" = 0, "southabove" = 1, "eastabove" = 1, "westabove" = 0)
 
-/obj/item/rogueweapon/sword/long/malumflamm
+/obj/item/rogueweapon/sword/long/nunosflamm
 	name = "forgefiend"
 	desc = "This sword's creation took a riddle in its own making. A great sacrifice for perfect quality."
 	icon_state = "malumflamberge"
 	max_integrity = 200
-
-/obj/item/rogueweapon/sword/long/zizo
-	name = "darksteel longsword"
-	desc = "A wicked and red blade. Called forth from the edge of what should be known. In Her name."
-	force = 30
-	force_wielded = 35
-	icon_state = "zizosword"
-
-/obj/item/rogueweapon/sword/long/zizo/pickup(mob/living/user)
-	if(!HAS_TRAIT(user, TRAIT_CABAL))
-		to_chat(user, "<font color='purple'>UNWORTHY HANDS TOUCH THE SWORD, CEASE OR BE PUNISHED</font>")
-		user.adjust_fire_stacks(5)
-		user.IgniteMob()
-		user.Stun(40)
-	..()
 
 
 /obj/item/rogueweapon/sword/long/heirloom
@@ -322,8 +307,8 @@
 	item_state = "judgement"
 	lefthand_file = 'icons/mob/inhands/weapons/roguebig_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/roguebig_righthand.dmi'
-	name = "Psydonia Redentor"
-	desc = "...for the LORD is my tower, and HE gives me the power to tear down the works of the enemy..."
+	name = "Godsblood Striker"
+	desc = "Damnation upon them."
 	parrysound = "bladedmedium"
 	swingsound = BLADEWOOSH_LARGE
 	pickup_sound = 'sound/foley/equip/swordlarge2.ogg'
@@ -472,10 +457,10 @@
 	slot_flags = ITEM_SLOT_BACK //Too big for hip
 
 
-/obj/item/rogueweapon/sword/long/exe/astrata
-	name = "solar judge"
-	desc = "This wicked executioner's blade calls for order."
-	icon_state = "astratasword"
+/obj/item/rogueweapon/sword/long/exe/aeternus
+	name = "solus wicker"
+	desc = "This blade, wide and gilded - sits in honor of Aeternus."
+	icon_state = "aeternussword"
 	max_integrity = 200
 	possible_item_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike)
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/axe/chop)
@@ -501,15 +486,6 @@
 	SEND_SIGNAL(src, COMSIG_COMPONENT_CLEAN_ACT, CLEAN_STRONG)
 	user.visible_message(span_warning("[user] wipes [src] down with its cloth."),span_notice("I wipe [src] down with its cloth."))
 	return
-
-/obj/item/rogueweapon/sword/long/psysword
-	name = "psydonian sword"
-	desc = "a silver bastard sword, for the Inquisiton. For when you need to make a point."
-	icon_state = "psysword"
-	max_blade_int = 200
-	wdefense = 5
-	is_silver = TRUE
-	smeltresult = /obj/item/ingot/silver
 
 /obj/item/rogueweapon/sword/iron
 	name = "sword"
@@ -726,7 +702,7 @@
 	max_blade_int = 300
 	wdefense = 7
 
-/obj/item/rogueweapon/sword/rapier/eora
+/obj/item/rogueweapon/sword/rapier/varielle
 	name = "The Heartstring"
 	desc = "For when soft words cannot be spoken more, and hearts are to be pierced."
 	icon = 'icons/roguetown/weapons/32.dmi'
@@ -1020,11 +996,16 @@
 	gripped_intents = list(/datum/intent/sword/cut, /datum/intent/sword/thrust, /datum/intent/sword/strike, /datum/intent/sword/chop)
 	icon_state = "eclipsum"
 	name = "eclipsum sword"
-	desc = "A mutual effort of Noc and Astrata's followers, this blade was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether dae or nite."
+	desc = "A mutual effort of Zira and Aeternus' followers, this blade was forged with both Silver and Gold alike. Blessed to hold strength and bring hope. Whether day or night."
 	is_silver = TRUE
 	smeltresult = /obj/item/ingot/silver
 	smelt_bar_num = 2
 	max_integrity = 999
+
+/obj/item/rogueweapon/sword/long/holysee/Initialize()
+	. = ..()
+	if(SSevents.holidays && SSevents.holidays[APRIL_FOOLS])
+		name = "\improper planet buster" /// What a coincidence; I've a sword to Brandish, Two!
 
 /obj/item/rogueweapon/sword/long/holysee/getonmobprop(tag)
 	. = ..()

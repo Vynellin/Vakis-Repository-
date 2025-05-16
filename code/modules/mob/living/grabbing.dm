@@ -574,9 +574,8 @@
 				to_chat(user, "<span class='notice'>A strange, sweet taste tickles my throat.</span>")
 				addtimer(CALLBACK(user, .mob/living/carbon/human/proc/vampire_infect), 1 MINUTES) // I'll use this for succession later.
 			else */
-			if(!HAS_TRAIT(user, TRAIT_HORDE))
-				to_chat(user, "<span class='warning'>I'm going to puke...</span>")
-				addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
+			to_chat(user, "<span class='warning'>I'm going to puke...</span>")
+			addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
 	else
 		if(user.mind)
 			if(user.mind.has_antag_datum(/datum/antagonist/vampirelord))
@@ -589,8 +588,6 @@
 
 	C.blood_volume = max(C.blood_volume-15, 0)
 	C.handle_blood()
-	if(HAS_TRAIT(user, TRAIT_HORDE))
-		user.adjust_hydration(8)
 
 	playsound(user.loc, 'sound/misc/drink_blood.ogg', 100, FALSE, -4)
 

@@ -14,7 +14,7 @@
 	min_pq = -30
 	max_pq = null
 
-	tutorial = "The stench of your piss-laden clothes doesn't bug you anymore, the glances of disgust and loathing others give you is just a friendly greeting after all! The only reason you've not been killed already is because Volfs are known to be repelled by the stench of decaying flesh. You're going to be a solemn reminder what happens when something unwanted is born into this world."
+	tutorial = "Destitution is an unfortunate fact of life. Not all can earn stakes and fortune so easily; and you, unfortunately, are one such."
 	display_order = JDO_VAGRANT
 	show_in_credits = FALSE
 	can_random = FALSE
@@ -107,7 +107,7 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, rand(1,5), TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, rand(1,5), TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, pick (1,2,3,4,5), TRUE) // thug lyfe
+		H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, pick (1,2,3,4,5), TRUE) // thug life
 		H.STALUC = rand(1, 20)
 	if(prob(5))
 		r_hand = /obj/item/rogueweapon/mace/woodclub

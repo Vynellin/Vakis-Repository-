@@ -61,7 +61,6 @@
 	var/armor_class = ARMOR_CLASS_NONE
 
 	sellprice = 1
-	var/naledicolor = FALSE
 
 /obj/item
 	var/blocking_behavior

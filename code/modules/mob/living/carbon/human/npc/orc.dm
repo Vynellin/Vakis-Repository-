@@ -1,6 +1,6 @@
 /mob/living/carbon/human/species/orc/npc
 	name = "orc"
-	skin_tone = SKIN_COLOR_GROONN
+	skin_tone = SKIN_COLOR_UNDERGROWTH
 	hairstyle = "Bald"
 	facial_hairstyle = "Shaved"
 	var/orc_outfit = /datum/outfit/job/roguetown/orc/npc
@@ -56,7 +56,6 @@
 	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 
-	H.set_patron(/datum/patron/inhumen/graggar)
 	ADD_TRAIT(H, TRAIT_CRITICAL_RESISTANCE, TRAIT_GENERIC)
 
 	H.possible_rmb_intents = list(/datum/rmb_intent/feint,\

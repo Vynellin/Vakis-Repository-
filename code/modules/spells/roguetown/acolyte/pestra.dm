@@ -1,3 +1,5 @@
+/// SOLARIS NOTE - This file conforms to the old naming schema for a god we no longer have. Long-term it would be best to re-distribute it's contents.
+
 // Diagnose
 /obj/effect/proc_holder/spell/invoked/diagnose
 	name = "Diagnose"

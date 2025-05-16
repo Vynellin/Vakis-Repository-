@@ -53,7 +53,6 @@
 /obj/item/clothing/suit/roguetown/armor/armordress/alt
 	icon_state = "armordressalt"
 
-//otavan brute skin
 /obj/item/clothing/suit/roguetown/armor/skin_armor/monk_skin/Initialize(mapload)
 	. = ..()
 	name = "monk's skin"
@@ -136,7 +135,7 @@
 
 
 
-/obj/item/clothing/suit/roguetown/armor/gambeson/otavan
+/obj/item/clothing/suit/roguetown/armor/gambeson/fencer
 	slot_flags = ITEM_SLOT_ARMOR|ITEM_SLOT_SHIRT
 	name = "fencer gambeson"
 	desc = "A large shirt with heavy padding meant to be used below armor. Will probably stop an arrow, unlikely to stop a bolt."
@@ -258,7 +257,7 @@
 /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket
 	name = "artificer jacket"
 	icon_state = "artijacket"
-	desc = "A thick leather jacket adorned with fur and cog decals. The height of Heartfelt fashion."
+	desc = "A thick leather jacket adorned with fur and cog decals."
 
 /obj/item/clothing/suit/roguetown/armor/cuirass/iron/shadowplate
 	name = "scourge breastplate"
@@ -286,20 +285,6 @@
 	desc = "A thick robe in royal purple, befitting the hand, while remaining easy for them to slip about in.."
 	allowed_race = NON_DWARVEN_RACE_TYPES
 	icon_state = "shadowrobe"
-
-/obj/item/clothing/suit/roguetown/armor/gambeson/hierophant
-	name = "hierophant's shawl"
-	icon_state = "desertrobe"
-	item_state = "desertrobe"
-	desc = "A thick robe intervowen with spell-laced fabrics. Thick and protective while remaining light and breezy; the perfect gear for protecting one from the threats of the sun, the desert and the daemons, yet still allowing one to cast spells aptly."
-	naledicolor = TRUE
-
-/obj/item/clothing/suit/roguetown/armor/gambeson/heavy/pontifex
-	name = "pontifex's kaftan"
-	icon_state = "monkleather"
-	item_state = "monkleather"
-	desc = "Tight boiled leathers that stretch and fit to one's frame perfectly."
-	shiftable = FALSE
 
 //leather family
 
@@ -447,14 +432,6 @@
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/white
 	color = CLOTHING_WHITE
-
-/obj/item/clothing/suit/roguetown/armor/leather/vest/sailor/nightman
-	name = "silk jacket"
-	desc = "A soft and comfortable jacket."
-	icon_state = "nightman"
-	sleeved = 'icons/roguetown/clothing/onmob/armor.dmi'
-	allowed_sex = list(MALE, FEMALE)
-	allowed_race = NON_DWARVEN_RACE_TYPES
 
 
 /obj/item/clothing/suit/roguetown/armor/leather/vest/hand
@@ -624,7 +601,7 @@
 /obj/item/clothing/suit/roguetown/armor/plate/half/fluted
 	name = "fluted cuirass"
 	icon_state = "flutedcuirass"
-	desc = "An ornate steel cuirass with tassets, favored by both the Holy Otavan Inquisition and the Order of the Silver Psycross. Arrows may yet splinter against the steel, but a bolt will still punch straight through it."
+	desc = "An ornate steel cuirass with tassets. Arrows may yet splinter against the steel, but a bolt will still punch straight through it."
 	body_parts_covered = CHEST|VITALS|LEGS
 
 /obj/item/clothing/suit/roguetown/armor/plate/half/iron
@@ -691,41 +668,6 @@
 	strip_delay = 6 SECONDS
 	smelt_bar_num = 4
 
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/matthios
-	name = "gilded fullplate"
-	desc = "Often, you have heard that told,"
-	icon_state = "matthiosarmor"
-	max_integrity = 700	
-
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/matthios/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/matthios/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo
-	name = "darksteel fullplate"
-	desc = "Full plate. Called forth from the edge of what should be known. In Her name."
-	icon_state = "zizoplate"
-	max_integrity = 700
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
-
-/obj/item/clothing/suit/roguetown/armor/plate/full/zizo/dropped(mob/living/carbon/human/user)
-	. = ..()
-	if(QDELETED(src))
-		return
-	qdel(src)
-
-
 /obj/item/clothing/suit/roguetown/armor/plate/full/bikini
 	name = "fullplate bikini"
 	desc = "Full plate in bikini form, full package and full exposure."
@@ -737,86 +679,6 @@
 	equip_delay_other = 3 SECONDS
 	strip_delay = 6 SECONDS
 	smelt_bar_num = 3
-
-/obj/item/clothing/suit/roguetown/armor/heartfelt/lord
-	slot_flags = ITEM_SLOT_ARMOR
-	name = "coat of armor"
-	desc = "A lordly coat of armor."
-	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
-	icon_state = "heartfelt"
-	item_state = "heartfelt"
-	armor = list("blunt" = 90, "slash" = 90, "stab" = 80, "piercing" = 30, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	allowed_sex = list(MALE, FEMALE)
-	nodismemsleeves = TRUE
-	blocking_behavior = null
-	max_integrity = 400
-	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/steel
-	armor_class = ARMOR_CLASS_HEAVY
-	smelt_bar_num = 4
-
-/obj/item/clothing/suit/roguetown/armor/heartfelt/hand
-	slot_flags = ITEM_SLOT_ARMOR
-	name = "coat of armor"
-	desc = "A lordly coat of armor."
-	body_parts_covered = CHEST|GROIN|VITALS|LEGS|ARMS
-	icon_state = "heartfelt_hand"
-	item_state = "heartfelt_hand"
-	armor = list("blunt" = 90, "slash" = 90, "stab" = 80, "piercing" = 30, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	allowed_sex = list(MALE, FEMALE)
-	nodismemsleeves = TRUE
-	blocking_behavior = null
-	max_integrity = 400
-	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/steel
-	armor_class = ARMOR_CLASS_HEAVY
-	smelt_bar_num = 4
-
-/obj/item/clothing/suit/roguetown/armor/otavan
-	slot_flags = ITEM_SLOT_ARMOR
-	name = "otavan half-plate"
-	desc = "Half-plate armor with pauldrons. Recommended to layer with the otavan gambeson."
-	body_parts_covered = CHEST|GROIN|VITALS
-	icon_state = "corsethalfplate"
-	item_state = "corsethalfplate"
-	adjustable = CAN_CADJUST
-	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 20, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	nodismemsleeves = TRUE
-	max_integrity = 500
-	allowed_sex = list(MALE, FEMALE)
-	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/steel
-	equip_delay_self = 4 SECONDS
-	unequip_delay_self = 4 SECONDS
-	armor_class = ARMOR_CLASS_HEAVY
-	smelt_bar_num = 3
-	allowed_race = NON_DWARVEN_RACE_TYPES
-
-/obj/item/clothing/suit/roguetown/armor/otavan/AdjustClothes(mob/user)
-	if(loc == user)
-		playsound(user, "sound/foley/dropsound/cloth_drop.ogg", 100, TRUE, -1)
-		if(adjustable == CAN_CADJUST)
-			adjustable = CADJUSTED
-			icon_state = "fancyhalfplate"
-			body_parts_covered = CHEST|GROIN|VITALS
-			flags_cover = null
-			emote_environment = 0
-			update_icon()
-			if(ishuman(user))
-				var/mob/living/carbon/H = user
-				H.update_inv_armor()
-			block2add = null
-		else if(adjustable == CADJUSTED)
-			ResetAdjust(user)
-			emote_environment = 3
-			update_icon()
-			if(user)
-				if(ishuman(user))
-					var/mob/living/carbon/H = user
-					H.update_inv_armor()
 
 /obj/item/clothing/suit/roguetown/armor/brigandine
 	slot_flags = ITEM_SLOT_ARMOR
@@ -944,23 +806,6 @@
 	equip_delay_self = 40
 	armor_class = ARMOR_CLASS_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
-
-/obj/item/clothing/suit/roguetown/armor/plate/scale/inqcoat
-	slot_flags = ITEM_SLOT_ARMOR
-	name = "inquisitorial duster"
-	desc = "Metal plates reinforce this heavy coat, only the finest for the inquisition."
-	body_parts_covered = CHEST|VITALS|GROIN|LEGS|ARMS
-	allowed_sex = list(MALE, FEMALE)
-	icon_state = "inqcoat"
-	item_state = "inqcoat"
-	sleevetype = "shirt"
-	max_integrity = 200
-	anvilrepair = /datum/skill/craft/armorsmithing
-	smeltresult = /obj/item/ingot/steel
-	equip_delay_self = 4 SECONDS
-	armor_class = ARMOR_CLASS_MEDIUM
-	smelt_bar_num = 2
-	blocksound = SOFTHIT
 
  //--------------- BLACKSTEEL ---------------------
 

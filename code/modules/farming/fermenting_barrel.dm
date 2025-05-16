@@ -145,7 +145,7 @@
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/blackgoat,900)
 
 /obj/structure/fermenting_barrel/hagwoodbitter
-	desc = "A barrel marked with the Hagwood Bitters emblem. The least bitter thing to be exported from the Grenzelhoft occupied state of Zorn."
+	desc = "A barrel marked with the Hagwood Bitters emblem."
 
 /obj/structure/fermenting_barrel/hagwoodbitter/Initialize()
 	. = ..()
@@ -154,14 +154,14 @@
 
 
 /obj/structure/fermenting_barrel/jagt
-	desc = "A barrel with a Saigabuck mark. This dark liquid is the strongest alcohol coming out of Grenzelhoft available. A herbal schnapps, sure to burn out any disease."
+	desc = "A barrel with a Saigabuck mark. A herbal schnapps, sure to burn out any disease."
 
 /obj/structure/fermenting_barrel/jagt/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/jagdtrunk,900)
 
 /obj/structure/fermenting_barrel/sourwine
-	desc = "A barrel that contains a Grenzelhoftian classic. An extremely sour wine that is watered down with mineral water."
+	desc = "A barrel that contains an extremely sour wine that is watered down with mineral water."
 
 /obj/structure/fermenting_barrel/sourwine/Initialize()
 	. = ..()
@@ -183,23 +183,23 @@
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/saigamilk,900)
 
 /obj/structure/fermenting_barrel/kgsunsake
-	desc = "A barrel with a Golden Swan mark. A translucient, pale-blue liquid made from rice. A favourite drink of the warlords and nobles of Kazengun."
+	desc = "A barrel with a Golden Swan mark. A translucient, pale-blue liquid made from rice."
 
 /obj/structure/fermenting_barrel/kgsunsake/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/kgunsake,900)
 
 
-/obj/structure/fermenting_barrel/avarrice
-	desc = "A barrel with a simple mark. A murky, white wine made from rice grown in the steppes of Avar."
+/obj/structure/fermenting_barrel/whitericewine
+	desc = "A barrel with a simple mark. A murky, white wine made from rice."
 
-/obj/structure/fermenting_barrel/avarrice/Initialize()
+/obj/structure/fermenting_barrel/whitericewine/Initialize()
 	. = ..()
-	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/avarrice,900)
+	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/makkolir,900)
 
 
 /obj/structure/fermenting_barrel/gronmead
-	desc = "A barrel with a Shieldmaiden Brewery mark. A deep red honey-wine, refined with the red berries native to Gronns highlands."
+	desc = "A barrel with a Shieldmaiden Brewery mark. A deep red honey-wine, refined with the red berries."
 
 /obj/structure/fermenting_barrel/gronmead/Initialize()
 	. = ..()
@@ -207,15 +207,15 @@
 
 
 /obj/structure/fermenting_barrel/murkwine
-	desc = "A barrel with a Possumtail Brewery mark. Two Volk tails interlace with eachother upon the seal in a dance. A country tradition from Heartfelt."
+	desc = "A barrel with a Possumtail Brewery mark. Two Volk tails interlace with eachother upon the seal in a dance."
 
 /obj/structure/fermenting_barrel/murkwine/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/murkwine,900)
 
-/obj/structure/fermenting_barrel/nocshine
+/obj/structure/fermenting_barrel/moonshine
 	desc = "A barrel with a blue, Crescent moon mark. Not the wisest choice of drinks, but certainly the strongest."
 
-/obj/structure/fermenting_barrel/nocshine/Initialize()
+/obj/structure/fermenting_barrel/moonshine/Initialize()
 	. = ..()
-	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/nocshine,900)
+	reagents.add_reagent(/datum/reagent/consumable/ethanol/beer/moonshine,900)

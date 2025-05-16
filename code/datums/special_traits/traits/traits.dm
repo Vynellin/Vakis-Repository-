@@ -72,7 +72,7 @@
 
 /datum/special_trait/night_owl
 	name = "Night Owl"
-	greet_text = span_notice("I've always preferred Noc over his other half.")
+	greet_text = span_notice("The night beckons, where others would shirk it.")
 	weight = 100
 
 /datum/special_trait/night_owl/on_apply(mob/living/carbon/human/character, silent)
@@ -80,7 +80,7 @@
 
 /datum/special_trait/beautiful
 	name = "Beautiful"
-	greet_text = span_notice("My face is a work of art")
+	greet_text = span_notice("My face is a work of art.")
 	weight = 100
 
 /datum/special_trait/beautiful/on_apply(mob/living/carbon/human/character, silent)
@@ -192,22 +192,6 @@
 	character.mind.special_items["Whip"] = /obj/item/rogueweapon/whip
 	character.mind.adjust_skillrank_up_to(/datum/skill/combat/whipsflails, 6, TRUE)
 
-/datum/special_trait/psydons_rider
-	name = "Psydon's Drunkest Rider"
-	greet_text = span_notice("I ride! None of the laws shall stop me for that is Psydon's divine will!")
-	req_text = "Worship Psydon"
-	allowed_patrons = list(/datum/patron/old_god)
-	weight = 100
-
-/datum/special_trait/psydons_rider/on_apply(mob/living/carbon/human/character, silent)
-	character.drunkenness = 50
-	for(var/i in 1 to 2)
-		var/obj/item/bottle = new /obj/item/reagent_containers/glass/bottle/rogue/wine(get_turf(character))
-		character.put_in_hands(bottle, forced = TRUE)
-
-	character.mind.adjust_skillrank_up_to(/datum/skill/misc/riding, 4, TRUE)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled(get_turf(character))
-
 /datum/special_trait/spring_in_my_step
 	name = "Spring in my Step"
 	greet_text = span_notice("My legs are quite strong and where most have to climb, I can just jump")
@@ -286,7 +270,7 @@
 
 /datum/special_trait/richpouch
 	name = "Rich Pouch"
-	greet_text = span_notice("I've recently found a pouch filled with mammons, probably belonging to some noble.")
+	greet_text = span_notice("I've recently found a pouch filled with sunmarks, probably belonging to some noble.")
 	weight = 100
 
 /datum/special_trait/richpouch/on_apply(mob/living/carbon/human/character, silent)
@@ -313,9 +297,9 @@
 
 /datum/special_trait/lucky
 	name = "Fortune's Grace"
-	greet_text = span_notice("Xylix favor me, I am extremely lucky.")
-	req_text = "Have Xylix as your Patron"
-	allowed_patrons = list(/datum/patron/divine/xylix)
+	greet_text = span_notice("Kasmidian favor me, I am extremely lucky.")
+	req_text = "Have Kasmidian as your Patron"
+	allowed_patrons = list(/datum/patron/change/kasmidian)
 	weight = 7
 
 /datum/special_trait/lucky/on_apply(mob/living/carbon/human/character, silent)
@@ -359,7 +343,7 @@
 
 /datum/special_trait/nopouch
 	name = "No Pouch"
-	greet_text = span_boldwarning("I lost my pouch recently, I'm without a zenny..")
+	greet_text = span_boldwarning("I lost my pouch recently, I'm without a sunmark...")
 	weight = 200
 
 /datum/special_trait/nopouch/on_apply(mob/living/carbon/human/character, silent)
@@ -372,16 +356,6 @@
 		character.beltr = null
 	qdel(pouch)
 
-/datum/special_trait/hussite
-	name = "Known Heretic"
-	greet_text = span_boldwarning("I've been denounced by the church for either reasons legitimate or not!")
-	req_text = "Non-church role"
-	weight = 20
-	restricted_jobs = list(CHURCH_ROLES)
-
-/datum/special_trait/hussite/on_apply(mob/living/carbon/human/character, silent)
-	GLOB.excommunicated_players += character.real_name
-
 /datum/special_trait/bounty
 	name = "Hunted Man"
 	greet_text = span_boldwarning("Someone put a bounty on my head!")
@@ -391,7 +365,7 @@
 	var/reason = ""
 	var/employer = "unknown employer"
 	var/employer_gender
-	if(prob(65))
+	if(prob(50))
 		employer_gender = MALE
 	else
 		employer_gender = FEMALE
@@ -492,43 +466,6 @@
 
 /datum/special_trait/nude_sleeper/on_apply(mob/living/carbon/human/character, silent)
 	ADD_TRAIT(character, TRAIT_NUDE_SLEEPER, "[type]")
-
-//job specials
-/datum/special_trait/punkprincess //I think everyone will like the Rebellous Prince-Like Princess. I'd love to do one for the prince as well that gives him princess loadout, but, up to you!
-	name = "Rebellous Daughter"
-	greet_text = span_notice("I am quite rebellious for a princess. Screw Noble Customs!")
-	req_text = "Be a princess"
-	allowed_sexes = list(FEMALE)
-	allowed_jobs = list(/datum/job/roguetown/prince)
-	weight = 50
-
-/datum/special_trait/punkprincess/on_apply(mob/living/carbon/human/character, silent)
-	QDEL_NULL(character.wear_pants)
-	QDEL_NULL(character.wear_shirt)
-	QDEL_NULL(character.wear_armor)
-	QDEL_NULL(character.shoes)
-	QDEL_NULL(character.belt)
-	QDEL_NULL(character.beltl)
-	QDEL_NULL(character.beltr)
-	QDEL_NULL(character.backr)
-	QDEL_NULL(character.head)
-	character.equip_to_slot_or_del(new /obj/item/clothing/under/roguetown/tights/random(character), SLOT_PANTS)
-	character.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/shirt/undershirt/guard(character), SLOT_SHIRT)
-	character.equip_to_slot_or_del(new /obj/item/clothing/suit/roguetown/armor/chainmail(character), SLOT_ARMOR)
-	character.equip_to_slot_or_del(new /obj/item/storage/belt/rogue/leather(character), SLOT_BELT)
-	character.equip_to_slot_or_del(new /obj/item/storage/belt/rogue/pouch/coins/rich(character), SLOT_BELT_R)
-	character.equip_to_slot_or_del(new /obj/item/storage/backpack/rogue/satchel(character), SLOT_BACK_R)
-	character.equip_to_slot_or_del(new /obj/item/clothing/shoes/roguetown/boots/nobleboot(character), SLOT_SHOES)
-	character.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/misc/reading, -2, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/misc/sneaking, -2, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/misc/stealing, -2, TRUE)
 
 /datum/special_trait/vengantbum
 	name = "Vengant Bum"

@@ -6,7 +6,7 @@
 	total_positions = 5
 	spawn_positions = 5
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "Somewhere in your lyfe, you fell to the wrong side of civilization. Hounded by the consequences of your actions, you now threaten the peace of those who still heed the authority that condemned you."
+	tutorial = "Somewhere in your life, you fell to the wrong side of civilization. Hounded by the consequences of your actions, you now threaten the peace of those who still heed the authority that condemned you."
 	outfit = null
 	outfit_female = null
 	display_order = JDO_WRETCH
@@ -59,7 +59,6 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	var/weapons = list("Estoc","Mace + Shield","Flail + Shield","Lucerne","Battle Axe")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
@@ -246,77 +245,6 @@
 	bounty_total = rand(151, 250)
 	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Rasura")
 
-/datum/advclass/wretch/heretic
-	name = "Heretic"
-	tutorial = "You are a heretic, spurned by the church, cast out from society - frowned upon by Psydon and his children for your faith."
-	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/wretch/heretic
-	category_tags = list(CTAG_WRETCH)
-	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_OUTLANDER, TRAIT_HEAVYARMOR, TRAIT_RITUALIST, TRAIT_OUTLAW)
-
-
-/datum/outfit/job/roguetown/wretch/heretic/pre_equip(mob/living/carbon/human/H)
-	if (!(istype(H.patron, /datum/patron/inhumen/zizo) || istype(H.patron, /datum/patron/inhumen/matthios) || istype(H.patron, /datum/patron/inhumen/graggar) || istype(H.patron, /datum/patron/inhumen/baotha)))
-		to_chat(H, span_warning("My former deity frowned upon my practices. I have since turned to a new god."))
-		H.set_patron(pick(/datum/patron/inhumen/zizo, /datum/patron/inhumen/matthios, /datum/patron/inhumen/graggar, /datum/patron/inhumen/baotha))
-	H.mind.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/reading, 3, TRUE)
-	H.set_blindness(0)
-	var/weapons = list("Bastard Sword","Mace","Flail")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
-	switch(weapon_choice)
-		if("Bastard Sword")
-			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-			beltr = /obj/item/rogueweapon/sword/long
-		if("Mace")
-			H.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
-			beltr = /obj/item/rogueweapon/mace/steel
-		if("Flail")
-			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
-			beltr = /obj/item/rogueweapon/flail/sflail
-	H.change_stat("strength", 2)
-	H.change_stat("constitution", 2)
-	H.change_stat("endurance", 1)
-	if (istype (H.patron, /datum/patron/inhumen/zizo))
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/minion_order)
-		ADD_TRAIT(H, TRAIT_GRAVEROBBER, TRAIT_GENERIC)
-	head = /obj/item/clothing/head/roguetown/helmet/heavy/knight/black
-	cloak = /obj/item/clothing/cloak/cape/crusader
-	gloves = /obj/item/clothing/gloves/roguetown/chain/blk
-	pants = /obj/item/clothing/under/roguetown/chainlegs/blk
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/blk
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/blk
-	belt = /obj/item/storage/belt/rogue/leather/steel
-	backl = /obj/item/storage/backpack/rogue/satchel
-	backr = /obj/item/rogueweapon/shield/tower/metal
-	beltl = /obj/item/roguekey/inhumen
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/ritechalk = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
-	var/datum/devotion/C = new /datum/devotion(H, H.patron)
-	C.grant_spells(H)
-	START_PROCESSING(SSobj, C)
-	GLOB.excommunicated_players += H.real_name
-	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
-	if (!my_crime)
-		my_crime = "crimes against the Crown"
-	var/bounty_total
-	bounty_total = rand(151, 250)
-	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Holy See")
-	H.cmode_music = 'sound/music/combat_cult.ogg'
-	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
-
 /datum/advclass/wretch/necromancer
 	name = "Necromancer"
 	tutorial = "You have been ostracized and hunted by society for your dark magics and perversion of life."
@@ -328,7 +256,6 @@
 
 
 /datum/outfit/job/roguetown/wretch/necromancer/pre_equip(mob/living/carbon/human/H)
-	H.set_patron(/datum/patron/inhumen/zizo)
 	head = /obj/item/clothing/head/roguetown/roguehood/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
@@ -341,7 +268,7 @@
 	beltl = /obj/item/rogueweapon/huntingknife
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/rogueweapon/woodstaff
-	backpack_contents = list(/obj/item/spellbook_unfinished/pre_arcyne = 1, /obj/item/roguegem/amethyst = 1, /obj/item/roguekey/inhumen = 1, /obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
+	backpack_contents = list(/obj/item/spellbook_unfinished/pre_arcane = 1, /obj/item/roguegem/amethyst = 1, /obj/item/roguekey/inhumen = 1, /obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
 	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
@@ -351,7 +278,6 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/magic/arcane, 4, TRUE)
-	H.dna.species.soundpack_m = new /datum/voicepack/male/wizard()
 	H.cmode_music = 'sound/music/combat_cult.ogg'
 	if(H.age == AGE_OLD)
 		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
@@ -412,7 +338,6 @@
 	H.mind.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
 	H.cmode_music = 'sound/music/combat_berserker.ogg'
-	H.dna.species.soundpack_m = new /datum/voicepack/male/warrior()
 	var/weapons = list("Katar","Steel Knuckles","MY BARE HANDS!!!","Battle Axe","Mace","Sword")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)

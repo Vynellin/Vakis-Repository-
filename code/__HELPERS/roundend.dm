@@ -240,20 +240,19 @@
 
 	if(istype(SSticker.mode, /datum/game_mode/chaosmode))
 		var/datum/game_mode/chaosmode/C = SSticker.mode
-		end_reason = pick("So concluded another chapter of the story. Another begins shortly.",
-						"A blank page is filled; a new canvas presented.",
-						"Our actors hang up their masks. A new cast begins to rehearse.",
-						"Thus the week's events have taken place. Eventful or mundane, life continues.",
-						"Pawns of gods, preachers of nite, all come together to recite this tale.",
-						"Whether with loss or life, the duchy survives... for now.",
-						"The people of Sunmarch prepare to look forward; their actions locked in the impermeable past.")
-//		if(C.not_enough_players)
-//			end_reason = "The town was abandoned."
+		end_reason = pick("So ends more of the bustle in Rasura.",
+						"And so, as the wheel turnt the axle; life would move again, just as it paused.",
+						"The bards will sing on this day, long from now.",
+						"The dawn era marches on...",
+						"Yours is a fate few share.",
+						"The heartland will hear of your accomplishments on this day.",
+						"The people of Sunmarch prepare to look forward; their actions locked in the impermeable past.", \
+						)
 
 		if(C.vampire_werewolf() == "vampire")
 			end_reason = "When the Vampires finished sucking the town dry, they moved on to the next one."
 		if(C.vampire_werewolf() == "werewolf")
-			end_reason = "The Werevolves formed an unholy clan, marauding Sunmarch until the end of its daes."
+			end_reason = "The Werevolves formed an unholy clan, marauding Sunmarch until the end of its days."
 
 		if(C.headrebdecree)
 			end_reason = "The peasant rebels took control of the throne, hail the new community!"
