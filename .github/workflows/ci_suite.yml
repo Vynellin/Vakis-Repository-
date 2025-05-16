@@ -66,7 +66,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y make gcc unzip
-          wget --user-agent="Solaris/0.5 CI Script" http://www.byond.com/download/build/${{ env.BYOND_MAJOR }}/${{ env.BYOND_MAJOR }}.${{ env.BYOND_MINOR }}_byond_linux.zip
+          wget --user-agent="tgstation/1.0 CI Script" http://www.byond.com/download/build/${{ env.BYOND_MAJOR }}/${{ env.BYOND_MAJOR }}.${{ env.BYOND_MINOR }}_byond_linux.zip
           unzip ${BYOND_MAJOR}.${BYOND_MINOR}_byond_linux.zip
           bash tools/ci/install_byond.sh
 
