@@ -134,19 +134,21 @@
 
 		if("Arquebusier")
 			to_chat(H, span_warning("You are a arquebusier, a nobleman traveling from far off; with the most modern and powerful equipment money can buy. You trained hard with this new technology and wish to tame this wild frontier may it be for honor, something to prove, or to claim the treasures of long dead empires."))
-			shoes = /obj/item/clothing/shoes/roguetown/grenzelhoft
-			shirt = /obj/item/clothing/suit/roguetown/shirt/grenzelhoft
+			shoes = /obj/item/clothing/shoes/roguetown/boots/nobleboot
+			shirt = /obj/item/clothing/suit/roguetown/shirt/tunic
 			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
-			pants = /obj/item/clothing/under/roguetown/grenzelpants
-			gloves = /obj/item/clothing/gloves/roguetown/grenzelgloves
+			pants = /obj/item/clothing/under/roguetown/trou/beltpants
+			gloves = /obj/item/clothing/gloves/roguetown/leather
+			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			belt = /obj/item/storage/belt/rogue/leather
-			armor = /obj/item/clothing/suit/roguetown/armor/gambeson/otavan
+			armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 			cloak = /obj/item/clothing/cloak/cape
 			backr = /obj/item/storage/backpack/rogue/satchel
 			backl = /obj/item/gun/ballistic/arquebus
 			beltr = /obj/item/flashlight/flare/torch/lantern
 			beltl = /obj/item/ammopouch/bullets
-			head = /obj/item/clothing/head/roguetown/grenzelhofthat
+			head = /obj/item/clothing/head/roguetown/helmet/tricorn
+
 			backpack_contents = list(/obj/item/bait = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/powderhorn = 1)
 			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)

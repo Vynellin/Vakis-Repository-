@@ -25,7 +25,6 @@
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/darkgreen
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
-	id = /obj/item/mattcoin
 
 	H.mind.adjust_skillrank(/datum/skill/combat/axes, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
