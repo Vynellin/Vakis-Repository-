@@ -5,9 +5,11 @@
 
 /datum/patron/three_sisters/tamari
 	name = "Tamari"
-	domain = "Whimsical Goddess of the Wild"
-	desc = "Placeholder"
-	worshippers = "Placeholder Description - Tamari serves as faithful watchman over the circles and cycles that comprise all life."
+	domain = "Nature, Growth, Evolution, Earth"
+	desc = "Fickle and stubborn, the Earthmother Tamari has long been worshipped by druids, farmers, and those who find their home far away from metropolitan civilization. \
+			It is said that she stole light from the sun and created life, and it is under her guiding hand that life was free to change, to adapt, to grow, to alter the world around \
+			it and permit itself be altered. There are ancient and wild places of the earth still yet untouched by civilization, and it is in these places that Tamari's primal song of creation may yet still be heard."
+	worshippers = "Druids, Nomads, Naturalists, Outsiders, and Wanderers."
 	mob_traits = list(TRAIT_KNEESTINGER_IMMUNITY, TRAIT_LEECHIMMUNE)
 	t1 = /obj/effect/proc_holder/spell/targeted/blesscrop
 	t2 = /obj/effect/proc_holder/spell/self/tamari_shapeshift
