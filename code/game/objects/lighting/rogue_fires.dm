@@ -169,7 +169,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/rogue/torchholder, 0)
 
 /obj/machinery/light/rogue/torchholder/OnCrafted(dirin, user)
 	. = ..()
-	if(dir == SOUTH)
+	if(dir == NORTH)
 		pixel_y = 32
 
 /obj/machinery/light/rogue/torchholder/directional/north
