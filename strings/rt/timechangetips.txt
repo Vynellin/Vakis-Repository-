@@ -19,3 +19,19 @@ Take care - taking up arms with any cause is sure to net you friends... and enem
 Deft hands are all well and good, but thieves aren't well appreciated in any homestead.
 The righteous seek wisdom and blessings from the gods at the altars within the chapel.
 You must find a bed and rest in order raise your level.
+Sunmarks are said to reflect the light of each Sun's Grasp in such way to bring fortune to those without.
+The Three Sisters are the patron gods of the alchemical field, though each therein is of dramatically different temperance.
+Nunos, Nuvelle, or Nardám - they sit the only god to have never been recorded speaking in mortal history.
+Kasmidian is the god of knowledge arcana, though her students have often wandered to other deities' call in times of strife.
+A popular rumor in the Rasurian Heartland asserts that Cinella can be heard in the echoes of rolling rapids.
+The Marquis of Sunmarch still ultimately answers to their superiors in the heartland - as in-step every other territory under the Rasurian throne.
+By default, "H" toggles bite intent. Middle-mouse clicking a source of water will allow you to drink from it with varying efficiency.
+Your eye intent governs both rotation locking and sleeping. The arrows will allow you to purposefully open or close your eyes, while the eye itself allows you to toggle rotation lock.
+The longer the weapon, the more effective it is to wield it dual-handed! You're likely to miss more attacks without a strong grip.
+A week is broken up into the following days: Sun's Grasp, Moon's Light, Certainty's Flip, Innovation's Hope, Ambition's Light, Love's Sight, Nature's Boon, Sea's Wave, and finally, Rift's Watch.
+Stuck in a ditch? You likely have the physical prowess to climb back out...
+Those proficient in Climbing have the ability to mantle man-made structures with ease.
+Those proficient in Athletics have slower metabolism than their peers.
+Those proficient in Sneaking can effectively traverse the wilderness without getting caught - by their fellow men, or beast alike.
+You don't have to be proficient in lockpicking to use one to open a locked door - you just have to be to avoid getting caught.
+Those proficient in Music can counteract most other's negative moodles just by playing their instrument of choice.
