@@ -8428,12 +8428,11 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/manor)
 "dHJ" = (
-/obj/effect/landmark/start/adventurerlate{
-	dir = 1
-	},
-/obj/effect/landmark/start/courtagent,
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/mountains)
+/obj/structure/bed/rogue/inn/hay,
+/obj/machinery/light/rogue/wallfire/candle/directional/east,
+/obj/effect/landmark/start/mercenarylate,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors)
 "dHP" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/ausbushes/ppflowers,
@@ -30300,6 +30299,7 @@
 "mWd" = (
 /obj/structure/bed/rogue/inn/hay,
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
+/obj/effect/landmark/start/mercenarylate,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors)
 "mWk" = (
@@ -37222,12 +37222,10 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors)
 "pMF" = (
-/obj/effect/landmark/start/adventurerlate{
-	dir = 1
-	},
-/obj/effect/landmark/start/courtagent,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains)
+/obj/structure/bed/rogue/inn/hay,
+/obj/effect/landmark/start/adventurerlate,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors)
 "pMG" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/rogue/grass,
@@ -37399,7 +37397,6 @@
 /area/rogue/under/cave/dungeon1/gethsmane/inner)
 "pRe" = (
 /obj/effect/landmark/latejoin,
-/obj/effect/landmark/start/mercenarylate,
 /obj/effect/landmark/start/courtagent,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/beach)
@@ -50596,11 +50593,10 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "vxQ" = (
-/obj/effect/landmark/start/mercenarylate{
-	dir = 1
-	},
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/outdoors/mountains)
+/obj/structure/bed/rogue/inn/hay,
+/obj/effect/landmark/start/mercenarylate,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors)
 "vxV" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cobbleedge{
@@ -52176,9 +52172,11 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "weu" = (
-/obj/structure/chair/stool/rogue,
-/obj/effect/landmark/start/courtagent,
-/turf/open/floor/rogue/ruinedwood,
+/obj/structure/bed/rogue/inn/hay,
+/obj/effect/landmark/start/adventurerlate{
+	dir = 4
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors)
 "weQ" = (
 /turf/open/floor/rogue/cobble,
@@ -56935,9 +56933,12 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
 "yko" = (
-/obj/effect/landmark/start/courtagent,
-/turf/open/floor/rogue/naturalstone,
-/area/rogue/outdoors/mountains)
+/obj/structure/bed/rogue/inn/hay,
+/obj/effect/landmark/start/adventurerlate{
+	dir = 1
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors)
 "ykz" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/mask/cigarette/pipe/westman,
@@ -133240,9 +133241,9 @@ tXb
 tXb
 bwv
 pMy
-dVE
+weu
 bwv
-dVE
+weu
 pMy
 bwv
 tXb
@@ -133691,11 +133692,11 @@ tXb
 tXb
 tXb
 bwv
-dVE
+pMF
 gXW
 bwv
 gXW
-dVE
+yko
 bwv
 tXb
 tXb
@@ -140922,7 +140923,7 @@ tXb
 tXb
 tXb
 ika
-dVE
+vxQ
 gXW
 gXW
 gXW
@@ -141827,7 +141828,7 @@ tXb
 tXb
 tXb
 bwv
-vIy
+dHJ
 gXW
 gXW
 gXW
@@ -197918,7 +197919,7 @@ tVb
 kLo
 usj
 pfz
-weu
+pfz
 pfz
 pfz
 pfz
@@ -410033,7 +410034,7 @@ bhJ
 bhJ
 bhJ
 bCN
-yko
+fZN
 ogs
 ogs
 ogs
@@ -410485,7 +410486,7 @@ rnW
 bhJ
 vBH
 lZK
-pMF
+fZN
 ogs
 ogs
 ogs
@@ -410937,7 +410938,7 @@ bSX
 lZK
 lZK
 lZK
-dHJ
+lZK
 aTU
 ogs
 ogs
@@ -411389,7 +411390,7 @@ lZK
 lZK
 lZK
 lZK
-vxQ
+lZK
 aTU
 ogs
 ogs
@@ -411841,7 +411842,7 @@ lZK
 lZK
 lZK
 lZK
-dHJ
+lZK
 aTU
 ogs
 ogs
@@ -412293,7 +412294,7 @@ hJB
 lZK
 lZK
 fZN
-pMF
+fZN
 ogs
 ogs
 ogs
@@ -412745,7 +412746,7 @@ bSX
 lZK
 vBH
 lZK
-yko
+fZN
 ogs
 ogs
 ogs
