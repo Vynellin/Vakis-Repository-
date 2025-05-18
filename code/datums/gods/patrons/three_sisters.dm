@@ -18,12 +18,12 @@
 
 /datum/patron/three_sisters/nunos
 	name = "Nunos"
-	domain = "Contested God of Toil"
-	desc = "Placeholder Description - Nunos is split apart into three divergent interpretations. The human-borne interpretation considers Nunos \
-	to be the god of Technology, Alchemy, Industry, Forces, Toil, and Metal - the elven-borne interpretation, Nuvelle, is the god of Fire, Renewal, \
-	Transformation, Rebirth, and Toil - and the dwarven-borne interpretation, Nardám, is the god of Fire, Metallurgy, Craftsdwarfship, Industry, Hammers, \
-	and Toil. Nunos' exact place in the balance pantheon is heavily debated, as is their details - being the only one incapable of verbal communion with mortals."
-	worshippers = "Artisans, Mages, The Reformed, Thugs and Smithys"
+	domain = "Fire, Technology, Labour, the Forge, Metal"
+	desc = "The most contested of the Three Sisters, it is unknown if Nunos is even still considered divinely 'female' - let alone if they prefer the human name Nunos. \
+			The goddess who the elves know as the Sister of Flame Nuvelle and who the dwarves know as the Forge-Lady Nardám is most broadly known for one thing: their refusal to speak. \
+			It is actions that speak louder than words, and it is this principle that guides the voiceless, nameless Sister of Technology as she guides her craftsfolk to divine inspiration \
+			and gifts dreams of great workings to those who most diligently follow her."
+	worshippers = "Craftsfolk, Smiths, Masons, Carpenters, Scientists, and Engineers."
 	mob_traits = list(TRAIT_FORGEBLESSED, TRAIT_BETTER_SLEEP)
 	t1 = /obj/effect/proc_holder/spell/invoked/vigorousexchange
 	t2 = /obj/effect/proc_holder/spell/invoked/heatmetal
@@ -34,8 +34,11 @@
 /datum/patron/three_sisters/kasmidian
 	name = "Kasmidian"
 	domain = "Enchanting Goddess of the Arcane"
-	desc = "Placeholder Description - Kasmidian serves as the keeper of all knowledge arcane."
-	worshippers = "Placeholder"
+	desc = "Magic is just as much an art as it is a science, and Kasmidian fancies herself an artist; unchained, untamed, unbound. It is she that whispers deep secrets of magic to scholars that \
+			toil in her libraries; it is her that hides secrets of magic among the stars for astronomers to find; it is her that embodies the ideal that change will come, and it is one's duty to \
+			understand that change so that they may act with it. It is unknown if she first gifted magic to mortalkind, but many faiths of other churches contest that her gifts are well-intentioned, \
+			or may end well at all - though most wizards, divorced from the church, care not, and worship the Astral Muse as they see fit."
+	worshippers = "Wizards, Astrologers, Scholars, Artists, and Eccentrists."
 	mob_traits = list(TRAIT_KASMIDIAN)
 	t1 = /obj/effect/proc_holder/spell/invoked/wheel
 	t2 = /obj/effect/proc_holder/spell/invoked/mockery
