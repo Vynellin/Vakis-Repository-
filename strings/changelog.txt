@@ -1,2 +1,5 @@
-Welcome to Solaris! This initial version is catered to the first scrappings of our lore put to paper to bounce off of you, in particular the gods.
-We hope you have fun with your time in Sunmarch, and remember - yours is a fate few share.
+Welcome back to Solaris!
+God lore has been heavily reworked and expanded. If your god had a placeholder description - check it out now!
+Torches no longer are busted when you douse or craft them. My bad.
+Timechange tips have been significantly expanded and should feel more prescient!
+Adventurers were moved into town for the time being.
