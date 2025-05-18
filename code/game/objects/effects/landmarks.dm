@@ -376,8 +376,8 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = "Magicians Associate"
 	icon_state = "arrow"
 
-/obj/effect/landmark/start/apothecary
-	name = "Apothecary"
+/obj/effect/landmark/start/apothicant_apprentice
+	name = "Apothicant Apprentice"
 	icon_state = "arrow"
 
 /obj/effect/landmark/start/servant

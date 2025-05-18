@@ -2888,7 +2888,7 @@
 "blG" = (
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/cloth,
-/obj/effect/landmark/start/apothecary,
+/obj/effect/landmark/start/apothicant_apprentice,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/physician)
 "blX" = (
