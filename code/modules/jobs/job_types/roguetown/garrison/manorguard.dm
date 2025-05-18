@@ -163,7 +163,7 @@
 			H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
 		if("Bow") // They can head down to the armory to sideshift into one of the other bows.
 			beltr = /obj/item/quiver/arrows
-			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
+			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 		if("Sling")
 			beltr = /obj/item/quiver/sling/iron
