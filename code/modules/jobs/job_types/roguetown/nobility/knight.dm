@@ -401,7 +401,7 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
 	belt = /obj/item/storage/belt/rogue/leather/black
-	beltl = /obj/item/rogueweapon/sword/long
+	beltl = /obj/item/rogueweapon/sword/sabre
 	beltr = /obj/item/ammopouch/bullets
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	pants = /obj/item/clothing/under/roguetown/chainlegs
@@ -409,7 +409,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	id = /obj/item/scomstone/bad/garrison
 	backpack_contents = list(/obj/item/gun/ballistic/arquebus_pistol = 1, /obj/item/powderhorn = 1, /obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/bait/doe = 1)
-	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE) 
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE) 
 	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)	
 	H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)	
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)		
