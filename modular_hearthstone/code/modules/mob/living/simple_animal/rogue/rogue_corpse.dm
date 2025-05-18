@@ -22,11 +22,13 @@
 	outfit = /datum/outfit/savageorc2
 
 /datum/outfit/savageorc
+	name = "Savage Orc Outfit"
 	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag
 	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
 	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
 
 /datum/outfit/savageorc2
+	name = "Savage Orc Outfit - Alt"
 	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag
 	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
 	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
@@ -41,6 +43,7 @@
 	outfit = /datum/outfit/orcmarauder
 
 /datum/outfit/orcmarauder
+	name = "Marauder Orc Outfit"
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	pants =	/obj/item/clothing/under/roguetown/chainlegs
 	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
@@ -55,6 +58,7 @@
 	outfit = /datum/outfit/orcravager
 
 /datum/outfit/orcravager
+	name = "Orc Ravager Outfit"
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	pants =	/obj/item/clothing/under/roguetown/chainlegs
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/iron

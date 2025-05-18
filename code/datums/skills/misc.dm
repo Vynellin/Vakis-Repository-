@@ -5,7 +5,7 @@
 
 /datum/skill/misc/alchemy
 	name = "Lesser Alchemy"
-	desc = "Determins whether you can perform transmutation and stone mortar alchemy recipes."
+	desc = "Determines whether you can perform transmutation and stone mortar alchemy recipes."
 	dreams = list(
 		"...your mind spins as the great tome before you unfurls. One part in two hundred and fifty is salt, and it can be extracted from the flesh with a bit of ash. You pick up the pestle...",
 		"...a wizened man quaffs a blue liquid from a bottle, letting out a satisfied burp, 'A bottle of blue can sate your manna twice; once when emptied and once when filled with alchemist's spice.' He sets about grinding brimstone into the bottle before stuffing it with some cloth..."
@@ -80,7 +80,7 @@
 
 /datum/skill/misc/music
 	name = "Music"
-	desc = "Increases the effects of your music on reducing stresses per level. At Level 4 or above, allows you to play a custom song."
+	desc = "Increases the effects of your music on reducing stresses per level."
 	dreams = list(
 		"...offstage, anxiety grips you, sweat beading on your brow. But onstage, you are as still as a winter night, your voice steady and clear. Curiosity pulls your audience in as you begin to sing...",
 		"...you raise your hands to the strings and draw the crowds attention unto yourself. The music comes easily out of you, and your lyre is like a second voice...",

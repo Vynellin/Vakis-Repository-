@@ -794,7 +794,7 @@ GLOBAL_LIST_EMPTY(vampire_objects)
 						SSParticleWeather?.run_weather(/datum/particle_weather/blood_rain_storm)
 						addomen(OMEN_SUNSTEAL)
 						for(var/mob/living/carbon/human/potential_aeternian in GLOB.human_list)
-							if(!istype(potential_aeternian.patron, /datum/patron/light/aeternus) || !length(potential_aeternian.mind?.antag_datums))
+							if(!istype(potential_aeternian.patron, /datum/patron/lording_three/aeternus) || !length(potential_aeternian.mind?.antag_datums))
 								continue
 							to_chat(potential_aeternian, span_userdanger("You feel the pain of [potential_aeternian.patron.name]!"))
 							potential_aeternian.emote_scream()

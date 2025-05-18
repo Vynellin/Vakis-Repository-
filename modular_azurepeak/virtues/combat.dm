@@ -60,21 +60,21 @@
 			if (CLERIC_REQ_4)
 				our_faith.passive_devotion_gain += 1
 	switch(recipient.patron?.type)
-		if(/datum/patron/light/aeternus)
+		if(/datum/patron/lording_three/aeternus)
 			recipient.mind?.special_items["Aeternus Psycross"] = /obj/item/clothing/neck/roguetown/psicross/aeternus
-		if(/datum/patron/change/cinella)
+		if(/datum/patron/peoples_pantheon/cinella)
 			recipient.mind?.special_items["Cinella Psycross"] = /obj/item/clothing/neck/roguetown/psicross/cinella
-		if(/datum/patron/change/tamari)
+		if(/datum/patron/three_sisters/tamari)
 			recipient.mind?.special_items["Tamari Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tamari
-		if(/datum/patron/balance/tsoridys)
+		if(/datum/patron/lording_three/tsoridys)
 			recipient.mind?.special_items["Tsoridys Psycross"] = /obj/item/clothing/neck/roguetown/psicross/tsoridys
-		if(/datum/patron/balance/varielle) 
+		if(/datum/patron/peoples_pantheon/varielle) 
 			recipient.mind?.special_items["Varielle Psycross"] = /obj/item/clothing/neck/roguetown/psicross/varielle
-		if(/datum/patron/balance/zira)
+		if(/datum/patron/lording_three/zira)
 			recipient.mind?.special_items["Zira Psycross"] = /obj/item/clothing/neck/roguetown/psicross/zira
-		if(/datum/patron/balance/carthus)
+		if(/datum/patron/peoples_pantheon/carthus)
 			recipient.mind?.special_items["Carthus Psycross"] =/obj/item/clothing/neck/roguetown/psicross/carthus
-		if(/datum/patron/balance/nunos)
+		if(/datum/patron/three_sisters/nunos)
 			recipient.mind?.special_items["Nunos Psycross"] = /obj/item/clothing/neck/roguetown/psicross/nunos
 
 /datum/virtue/combat/duelist

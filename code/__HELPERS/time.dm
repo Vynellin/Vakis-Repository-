@@ -109,7 +109,7 @@ GLOBAL_VAR_INIT(dayspassed, FALSE)
 			if(5)
 				text_to_show = "DAWN OF THE FIFTH DAY\nAMBITION'S LIGHT" // Carthus
 			if(6)
-				text_to_show = "DAWN OF THE SIXTH DAY\nLOVE'S SIGHT" // SOLARIS PLACHEOLDER : /datum/patron/balance/varielle
+				text_to_show = "DAWN OF THE SIXTH DAY\nLOVE'S SIGHT" // Varielle
 			if(7)
 				text_to_show = "DAWN OF THE SEVENTH DAY\nNATURE'S BOON" // Tamari
 			if(8)

@@ -145,28 +145,16 @@
 	/datum/species/construct/metal,\
 )
 
-#define ALL_BALANCE_PATRONS list(/datum/patron/balance/zira, \
-	/datum/patron/balance/tsoridys, \
-	/datum/patron/balance/nunos, \
-	/datum/patron/balance/carthus, \
-	/datum/patron/balance/varielle, \
-	)
-
-#define ALL_CHANGE_PATRONS list(\
-	/datum/patron/change/tamari, \
-	/datum/patron/change/cinella, \
-	/datum/patron/change/kasmidian, \
-	)
-
 #define ALL_PATRONS  list(\
-	/datum/patron/light/aeternus, \
-	/datum/patron/balance/tsoridys, \
-	/datum/patron/balance/nunos, \
-	/datum/patron/balance/carthus, \
-	/datum/patron/balance/varielle, \
-	/datum/patron/change/tamari, \
-	/datum/patron/change/cinella, \
-	/datum/patron/change/kasmidian, \
+	/datum/patron/lording_three/aeternus, \
+	/datum/patron/lording_three/zira, \
+	/datum/patron/lording_three/tsoridys, \
+	/datum/patron/peoples_pantheon/carthus, \
+	/datum/patron/peoples_pantheon/varielle, \
+	/datum/patron/peoples_pantheon/cinella, \
+	/datum/patron/three_sisters/tamari, \
+	/datum/patron/three_sisters/kasmidian, \
+	/datum/patron/three_sisters/nunos, \
 	)
 
 #define PLATEHIT "plate"

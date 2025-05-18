@@ -299,7 +299,7 @@
 	name = "Fortune's Grace"
 	greet_text = span_notice("Kasmidian favor me, I am extremely lucky.")
 	req_text = "Have Kasmidian as your Patron"
-	allowed_patrons = list(/datum/patron/change/kasmidian)
+	allowed_patrons = list(/datum/patron/three_sisters/kasmidian)
 	weight = 7
 
 /datum/special_trait/lucky/on_apply(mob/living/carbon/human/character, silent)

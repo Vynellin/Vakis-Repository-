@@ -20,7 +20,7 @@ GLOBAL_LIST_INIT(character_flaws, list(
 	"Wood Arm (L)"=/datum/charflaw/limbloss/arm_l,
 	"Sleepless"=/datum/charflaw/sleepless,
 	"Random or No Flaw"=/datum/charflaw/randflaw,
-	"No Flaw (3 TRIUMPHS)"=/datum/charflaw/noflaw,
+	"No Flaw"=/datum/charflaw/eznoflaw,
 	))
 
 /datum/charflaw
@@ -72,10 +72,10 @@ GLOBAL_LIST_INIT(character_flaws, list(
 				var/flawz = GLOB.character_flaws.Copy()
 				var/charflaw = pick_n_take(flawz)
 				charflaw = GLOB.character_flaws[charflaw]
-				if((charflaw == type) || (charflaw == /datum/charflaw/noflaw))
+				if((charflaw == type) || (charflaw == /datum/charflaw/eznoflaw))
 					charflaw = pick_n_take(flawz)
 					charflaw = GLOB.character_flaws[charflaw]
-				if((charflaw == type) || (charflaw == /datum/charflaw/noflaw))
+				if((charflaw == type) || (charflaw == /datum/charflaw/eznoflaw))
 					charflaw = pick_n_take(flawz)
 					charflaw = GLOB.character_flaws[charflaw]
 				H.charflaw = new charflaw()
@@ -88,34 +88,6 @@ GLOBAL_LIST_INIT(character_flaws, list(
 /datum/charflaw/eznoflaw
 	name = "No Flaw"
 	desc = "I'm a normal person, how rare!"
-
-/datum/charflaw/noflaw
-	name = "No Flaw (3 TRI)"
-	desc = "I'm a normal person, how rare! (Consumes 3 triumphs or gives a random flaw.)"
-	var/nochekk = TRUE
-
-/datum/charflaw/noflaw/flaw_on_life(mob/user)
-	if(!nochekk)
-		return
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.ckey)
-			if(H.get_triumphs() < 3)
-				nochekk = FALSE
-				var/flawz = GLOB.character_flaws.Copy()
-				var/charflaw = pick_n_take(flawz)
-				charflaw = GLOB.character_flaws[charflaw]
-				if((charflaw == type) || (charflaw == /datum/charflaw/randflaw))
-					charflaw = pick_n_take(flawz)
-					charflaw = GLOB.character_flaws[charflaw]
-				if((charflaw == type) || (charflaw == /datum/charflaw/randflaw))
-					charflaw = pick_n_take(flawz)
-					charflaw = GLOB.character_flaws[charflaw]
-				H.charflaw = new charflaw()
-				H.charflaw.on_mob_creation(H)
-			else
-				nochekk = FALSE
-				H.adjust_triumphs(-3)
 
 /datum/charflaw/badsight
 	name = "Bad Eyesight"
