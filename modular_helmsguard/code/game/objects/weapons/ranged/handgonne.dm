@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/handgonne
 	name = "handgonne"
-	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
+	desc = "A gunpowder weapon that shoots an armor piercing metal ball. There is a ramrod tucked underneath the barrel.  Right click to pull it out."
 	icon = 'modular_helmsguard/icons/weapons/handgonne.dmi'
 	icon_state = "handgonne"
 	item_state = "handgonne"

@@ -419,7 +419,7 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/firearms, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/firearms, 3, TRUE)
 
 
 	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()

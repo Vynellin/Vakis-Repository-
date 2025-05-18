@@ -1,7 +1,7 @@
 //By HELMSGUARD, by Stoned Elf https://github.com/Feralape
 /obj/item/gun/ballistic/arquebus
 	name = "arquebus rifle"
-	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
+	desc = "A gunpowder weapon that shoots an armor piercing metal ball. There is a ramrod tucked underneath the barrel.  Right click to pull it out."
 	icon = 'modular_helmsguard/icons/weapons/arquebus.dmi'
 	icon_state = "arquebus"
 	item_state = "arquebus"
@@ -288,7 +288,7 @@
 /// PISTOLS
 /obj/item/gun/ballistic/arquebus_pistol
 	name = "arquebus pistol"
-	desc = "A gunpowder weapon that shoots an armor piercing metal ball."
+	desc = "A gunpowder weapon that shoots an armor piercing metal ball. There is a ramrod tucked underneath the barrel.  Right click to pull it out."
 	icon = 'icons/roguetown/weapons/32.dmi'
 	icon_state = "pistol"
 	item_state = "pistol"

@@ -543,7 +543,7 @@
 	embedchance = 100
 	woundclass = BCLASS_STAB
 	flag = "piercing"
-	armor_penetration = 75
+	armor_penetration = 80
 	speed = 0.1
 
 /obj/projectile/bullet/reusable/bullet/steel
