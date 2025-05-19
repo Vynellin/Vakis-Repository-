@@ -5,7 +5,7 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/mercenary/warscholar
 	category_tags = list(CTAG_MERCENARY)
-	cmode_music = 'sound/music/warscholar.ogg'
+	cmode_music = 'sound/music/combat_warscholar.ogg'
 	traits_applied = list(TRAIT_OUTLANDER)
 
 /datum/outfit/job/roguetown/mercenary/warscholar
@@ -155,7 +155,7 @@
 			shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
 
 			backpack_contents = list(/obj/item/roguekey/mercenary,/obj/item/rogueweapon/huntingknife)
-			
+
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_spells_monk(H)
 			H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
