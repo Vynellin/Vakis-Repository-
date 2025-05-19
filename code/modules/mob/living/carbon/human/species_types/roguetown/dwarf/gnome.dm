@@ -17,7 +17,6 @@ Gnomes gladly congregate wherever other beings gather with a special friendship 
 
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,YOUNGBEARD,STUBBLE,OLDGREY)
-	inherent_traits = list(TRAIT_DRUNK_HEALING)
 	possible_ages = ALL_AGES_LIST
 	default_features = MANDATORY_FEATURE_LIST
 	use_skintones = 1
@@ -28,10 +27,11 @@ Gnomes gladly congregate wherever other beings gather with a special friendship 
 	limbs_icon_f = 'icons/roguetown/mob/bodies/f/fd.dmi'
 	dam_icon = 'icons/roguetown/mob/bodies/dam/dam_male.dmi'
 	dam_icon_f = 'icons/roguetown/mob/bodies/dam/dam_female.dmi'
-	clothes_id = "dwarf"
 	soundpack_m = /datum/voicepack/male/elf
 	soundpack_f = /datum/voicepack/female/elf
+	use_f = TRUE
 	custom_clothes = TRUE
+	clothes_id = "dwarf"
 	offset_features = list(
 		OFFSET_ID = list(0,0), OFFSET_GLOVES = list(0,0), OFFSET_WRISTS = list(0,0),\
 		OFFSET_CLOAK = list(0,0), OFFSET_FACEMASK = list(0,-5), OFFSET_HEAD = list(0,-5), \
