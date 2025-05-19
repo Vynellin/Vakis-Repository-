@@ -3,8 +3,8 @@
 	flag = PILGRIM
 	department_flag = PEASANTS
 	faction = "Station"
-	total_positions = 0
-	spawn_positions = 0 //disables round-start spawn of pilgrims but allows migrant waves
+	total_positions = 20
+	spawn_positions = 15 //No longer disables pilgrim roundstart spawn, but does limit it (not that we'll ever reach the pop for it to matter)
 	allowed_races = RACES_ALL_KINDS
 	tutorial = "Fleeing misfortune you head your way towards Sunmarch. You're not a soldier or an explorer, but a humble migrant trying to look for a better life - if you get to survive the trip that is."
 

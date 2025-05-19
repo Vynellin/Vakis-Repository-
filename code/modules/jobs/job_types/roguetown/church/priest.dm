@@ -25,6 +25,7 @@
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
 	virtue_restrictions = list(/datum/virtue/utility/noble)
+	virtue_restrictions = list(/datum/virtue/utility/outlander) //Local priests probably shouldn't be from Not Here, though monks and the like make sense.
 
 /datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
 	..()

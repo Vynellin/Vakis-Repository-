@@ -86,6 +86,17 @@
 					recipient.forceMove(spawn_loc)
 					to_chat(recipient, span_notice("As a resident of Solaris Ridge, you find yourself in the local tavern."))
 
+/datum/virtue/utility/outlander
+	name = "Outlander"
+	desc = "I have travelled far to The Ridge, and the journey has written itself into my body. Anyone who sees me will know I am from elsewhere."
+	custom_text = "Incompatible with the Resident Virtue and certain jobs."
+	added_traits = list(TRAIT_OUTLANDER)
+	added_stashed_items = list("pouch of rations" = /obj/item/storage/belt/rogue/pouch/food)
+	added_skills = list(list(/datum/skill/misc/climbing, 2, 4), //traversal skills because you've travelled here from elsewhere.
+						list(/datum/skill/misc/swimming, 2, 4),
+						list(/datum/skill/misc/athletics, 2, 4),
+	)
+	
 /datum/virtue/utility/failed_squire
 	name = "Failed Squire"
 	desc = "I was once a squire in training, but failed to achieve knighthood. Though my dreams of glory were dashed, I retained my knowledge of equipment maintenance and repair."
