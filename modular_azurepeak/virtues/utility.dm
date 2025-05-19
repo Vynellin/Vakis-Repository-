@@ -92,9 +92,9 @@
 	custom_text = "Incompatible with the Resident Virtue and certain jobs."
 	added_traits = list(TRAIT_OUTLANDER)
 	added_stashed_items = list("pouch of rations" = /obj/item/storage/belt/rogue/pouch/food)
-	added_skills = list(list(/datum/skill/misc/climbing, 2, 4), //traversal skills because you've travelled here from elsewhere.
+	added_skills = list(list(/datum/skill/misc/climbing, 2, 3), //traversal skills because you've travelled here from elsewhere.
 						list(/datum/skill/misc/swimming, 2, 4),
-						list(/datum/skill/misc/athletics, 2, 4),
+						list(/datum/skill/misc/athletics, 2, 3),
 	)
 	
 /datum/virtue/utility/failed_squire
