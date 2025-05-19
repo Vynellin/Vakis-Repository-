@@ -64,7 +64,7 @@
 		prefix = "LOOC (WP)"
 
 	var/our_message = "<font color='["#6699CC"]'><b><span class='prefix'>[prefix]:</span> <EM>[src.mob.name]:</EM> <span class='message'>[msg]</span></b></font>"
-	message_admins("[ADMIN_LOOKUPFLW(src)] [prefix]: [msg]")
+	message_admins("[prefix]: [ADMIN_LOOKUPFLW(src)] [msg]")
 	for(var/mob/M in range(7,src))
 		var/client/C = M.client
 		if(!M.client)
