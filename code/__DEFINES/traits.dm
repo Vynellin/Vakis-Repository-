@@ -46,7 +46,7 @@
 #define TRAIT_GUARDSMAN "Vigilant Guardsman"
 #define TRAIT_KNIGHTSMAN "Royal Defiance"
 #define TRAIT_WOODSMAN "Talented Woodsman"
-#define TRAIT_DEATHBARGAIN "Death Bargain" // Used by UNDERMAIDEN'S BARGAIN
+#define TRAIT_DEATHBARGAIN "Death Bargain" // Used by Death Bargain
 #define TRAIT_RITUALIST "Ritualist"  // Allows use of ritual chalk
 #define TRAIT_GOODTRAINER "Good Trainer"
 #define TRAIT_OUTDOORSMAN "Outdoorsman"
@@ -201,7 +201,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_CINELLA_SWIM = span_info("I get far less tired when swimming than my peers."),
 	TRAIT_LONGSTRIDER = span_info("Each of my steps finds it's footing no matter how treacherous the terrain is."),
 	TRAIT_TRAINED_SMITH = span_info("I've spent long training, and with some more, I will be able to smith legendary items."),
-	TRAIT_DEATHSIGHT = span_info("I can feel when someone nearby draws the Undermaiden's attention."),
+	TRAIT_DEATHSIGHT = span_info("I can feel when someone nearby draws Tsoridys' attention."),
 	TRAIT_FORGEBLESSED = span_info("Countless long nights spent forging metal have honed my endurance, allowing me to work an anvil far longer than most without tiring."),
 	TRAIT_KASMIDIAN = span_info("The gifts of arcana speak to me, and I speak them in kind. A language lost to history was bestowed upon me..."),
 	TRAIT_VARIELLE = span_info("Varielle's gift of music makes me feel ever-the-more alive."),

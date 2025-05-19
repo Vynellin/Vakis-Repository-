@@ -4,7 +4,7 @@
 
 /obj/effect/proc_holder/spell/invoked/avert
 	name = "Borrowed Time"
-	desc = "Shield your fellow man from the Undermaiden's gaze, preventing them from slipping into death for as long as your faith and fatigue may muster."
+	desc = "Shield your fellow man from the Tsoridys' gaze, preventing them from slipping into death for as long as your faith and fatigue may muster."
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	associated_skill = /datum/skill/magic/holy
 	miracle = TRUE
@@ -30,7 +30,7 @@
 		return FALSE
 	
 	// add the no-death trait to them....
-	user.visible_message(span_notice("Whispering motes gently bead from [user]'s fingers as [user.p_they()] place a hand near [living_target], scriptures of the Undermaiden spilling from their lips..."), span_notice("I stand beside [living_target] and utter the hallowed words of Aeon's Intercession, staying Her grasp for just a little while longer..."))
+	user.visible_message(span_notice("Whispering motes gently bead from [user]'s fingers as [user.p_they()] place a hand near [living_target], scriptures of Tsoridys spilling from their lips..."), span_notice("I stand beside [living_target] and utter the hallowed words of Aeon's Intercession, staying Her grasp for just a little while longer..."))
 	to_chat(user, span_small("I must remain still and at [living_target]'s side..."))
 	to_chat(living_target, span_warning("An odd sensation blossoms in my chest, cold and unknown..."))
 
@@ -73,7 +73,7 @@
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/churn.ogg'
 	associated_skill = /datum/skill/magic/holy
-	invocation = "The Undermaiden rebukes!"
+	invocation = "Tsoridys rebukes!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	miracle = TRUE
 	devotion_cost = 20

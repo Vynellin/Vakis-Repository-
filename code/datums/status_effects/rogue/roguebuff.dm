@@ -556,30 +556,30 @@
 	REMOVE_TRAIT(owner, TRAIT_DARKVISION, MAGIC_TRAIT)
 
 
-/atom/movable/screen/alert/status_effect/buff/undermaidenbargain
-	name = "Undermaiden's Bargain"
+/atom/movable/screen/alert/status_effect/buff/deathbargain
+	name = "Death Bargain"
 	desc = "A horrible deal was struck in my name..."
 	icon_state = "buff"
 
-/datum/status_effect/buff/undermaidenbargain
-	id = "undermaidenbargain"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/undermaidenbargain
+/datum/status_effect/buff/deathbargain
+	id = "deathbargain"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/deathbargain
 	duration = 30 MINUTES
 
-/datum/status_effect/buff/undermaidenbargain/on_apply()
+/datum/status_effect/buff/deathbargain/on_apply()
 	. = ..()
 	to_chat(owner, span_danger("You feel as though some horrible deal has been prepared in your name. May you never see it fulfilled..."))
 	playsound(owner, 'sound/misc/bell.ogg', 100, FALSE, -1)
 	ADD_TRAIT(owner, TRAIT_DEATHBARGAIN, TRAIT_GENERIC)
 
-/datum/status_effect/buff/undermaidenbargain/on_remove()
+/datum/status_effect/buff/deathbargain/on_remove()
 	. = ..()
 	REMOVE_TRAIT(owner, TRAIT_DEATHBARGAIN, TRAIT_GENERIC)
 
 
-/datum/status_effect/buff/undermaidenbargainheal/on_apply()
+/datum/status_effect/buff/deathbargainheal/on_apply()
 	. = ..()
-	owner.remove_status_effect(/datum/status_effect/buff/undermaidenbargain)
+	owner.remove_status_effect(/datum/status_effect/buff/deathbargain)
 	to_chat(owner, span_warning("You feel the deal struck in your name is being fulfilled..."))
 	playsound(owner, 'sound/misc/deadbell.ogg', 100, FALSE, -1)
 	ADD_TRAIT(owner, TRAIT_NODEATH, TRAIT_GENERIC)
@@ -599,19 +599,19 @@
 			if(6)
 				to_chat(owner, span_cultsmall("A woman begs at a Headstone. It is your fault."))
 
-/datum/status_effect/buff/undermaidenbargainheal/on_remove()
+/datum/status_effect/buff/deathbargainheal/on_remove()
 	. = ..()
 	to_chat(owner, span_warning("The Bargain struck in my name has been fulfilled... I am thrown from Tsoridys' embrace, another in my place..."))
 	playsound(owner, 'sound/misc/deadbell.ogg', 100, FALSE, -1)
 	REMOVE_TRAIT(owner, TRAIT_NODEATH, TRAIT_GENERIC)
 
-/datum/status_effect/buff/undermaidenbargainheal
-	id = "undermaidenbargainheal"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/undermaidenbargainheal
+/datum/status_effect/buff/deathbargainheal
+	id = "deathbargainheal"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/deathbargainheal
 	duration = 10 SECONDS
 	var/healing_on_tick = 20
 
-/datum/status_effect/buff/undermaidenbargainheal/tick()
+/datum/status_effect/buff/deathbargainheal/tick()
 	var/list/wCount = owner.get_wounds()
 	if(owner.blood_volume < BLOOD_VOLUME_NORMAL)
 		owner.blood_volume = min(owner.blood_volume+60, BLOOD_VOLUME_NORMAL)
@@ -625,7 +625,7 @@
 	owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing_on_tick)
 	owner.adjustCloneLoss(-healing_on_tick, 0)
 
-/atom/movable/screen/alert/status_effect/buff/undermaidenbargainheal
+/atom/movable/screen/alert/status_effect/buff/deathbargainheal
 	name = "The Fulfillment"
 	desc = "My bargain is being fulfilled..."
 	icon_state = "buff"
