@@ -77,4 +77,4 @@
 				var/turf/sourceturf = get_turf(usr)
 				if((speakturf in get_hear(7, sourceturf)) || wp == 1)
 					to_chat(C, our_message)
-	to_chat(usr, "<font color='["#6699CC"]'><b><span class='prefix'>[prefix]:</span> <EM>[src.mob.name]:</EM> <span class='message'>[msg]</span></b></font>")
+	to_chat(usr, our_message)
