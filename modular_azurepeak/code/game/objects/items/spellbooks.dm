@@ -25,7 +25,7 @@
 		"Staring at the pages' contents, I catch a glimpse of another chapter ahead through the page. I flip back and forth, but it stays hidden...", \
 		"This particular passage chooses it hide it's wiles, a puzzle imperceptible yet lost...", \
 		"This passage seems almost to sink into the very parchment as I pour through the book...", \
-		"This particular chapter illustrates the effectives of destruction magic with very - [span_bold("colorful")] illusionary inscryption. It hurts to keep my hand near...", \
+		"This particular chapter illustrates the effectives of destruction magic with very - colorful - illusionary inscryption. It hurts to keep my hand near...", \
 		"Huh? This page is blank, sans for a vivid picture of a rather lavish hall of the Mage's University...", \
 		"This chapter goes into 'sealing' rites and magicks, speaking of a fabled stone as prime example...", \
 		"The words of this page seem almost to run away from my gaze...", \
