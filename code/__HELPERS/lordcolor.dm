@@ -23,7 +23,7 @@ GLOBAL_VAR(lordsecondary)
 	var/list/lordcolors = list(
 "PURPLE"="#8747b1",
 "DEEP PURPLE"="#8747B1",
-"MAGENTA"="#962e5c"
+"MAGENTA"="#962e5c",
 "ROYAL RED"="#FF1021",
 "BLOOD RED"="#8A040E",
 "SILVER"="#A9C4CA",
