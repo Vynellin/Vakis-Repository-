@@ -149,9 +149,9 @@
 			beltl = /obj/item/ammopouch/bullets
 			head = /obj/item/clothing/head/roguetown/helmet/tricorn
 
-			backpack_contents = list(/obj/item/bait = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/powderhorn = 1)
+			backpack_contents = list(/obj/item/bait = 1, /obj/item/rogueweapon/huntingknife/idagger = 1, /obj/item/powderhorn = 1)
 			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-			H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)

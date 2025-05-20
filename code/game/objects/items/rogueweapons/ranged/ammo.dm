@@ -542,7 +542,7 @@
 
 /obj/projectile/bullet/reusable/bullet/iron
 	name = "iron ball"
-	damage = 32
+	damage = 35
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
@@ -562,7 +562,7 @@
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
 	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
-	range = 20
+	range = 16
 	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
 	embedchance = 100
 	woundclass = BCLASS_STAB

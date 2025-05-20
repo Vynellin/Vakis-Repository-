@@ -48,6 +48,7 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
 			H.cmode_music = 'sound/music/combat_treasurehunter.ogg'
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
