@@ -159,9 +159,9 @@
 		accident_chance =80
 
 	if(firearm_skill < 2)
-		accident_chance =65
+		accident_chance =50
 	if(firearm_skill >= 2 && firearm_skill <= 5)
-		accident_chance =10
+		accident_chance =7
 	if(firearm_skill >= 5)
 		accident_chance =0
 	if(user.client)

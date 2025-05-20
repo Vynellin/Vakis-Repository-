@@ -213,12 +213,11 @@
 	var/turf/knockback = get_ranged_target_turf(user, turn(user.dir, 180), rand(1,2))
 	spread = (spread_num - firearm_skill)
 	if(firearm_skill < 1)
-		accident_chance =60
-
+		accident_chance =70
 	if(firearm_skill < 2)
 		accident_chance =40
 	if(firearm_skill >= 2 && firearm_skill <= 5)
-		accident_chance =10
+		accident_chance =7
 	if(firearm_skill >= 5)
 		accident_chance =0
 	if(user.client)
@@ -479,9 +478,9 @@
 	var/turf/knockback = get_ranged_target_turf(user, turn(user.dir, 180), rand(1,2))
 	spread = (spread_num - firearm_skill)
 	if(firearm_skill < 1)
-		accident_chance =80
+		accident_chance =70
 	if(firearm_skill < 2)
-		accident_chance =50
+		accident_chance =40
 	if((firearm_skill >= 2) && (firearm_skill <= 5))
 		accident_chance =10
 	if(firearm_skill >= 5)
