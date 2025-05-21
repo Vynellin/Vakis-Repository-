@@ -99,7 +99,7 @@
 		target.apply_status_effect(/datum/status_effect/buff/moonlightdance)
 
 /obj/structure/ritualcircle/kasmidian
-	name = "Rune of Pryamore"
+	name = "Rune of Rifts"
 	desc = "A Holy Rune of Kasmidian"
 
 /obj/structure/ritualcircle/carthus
