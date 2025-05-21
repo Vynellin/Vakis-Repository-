@@ -1098,7 +1098,7 @@
 		var/mob/M = locate(href_list["sendmob"])
 		usr.client.sendmob(M)
 	
-		else if(href_list["increase_skill"])
+	else if(href_list["increase_skill"])
 		var/mob/M = locate(href_list["increase_skill"])
 		var/datum/skill/skill = href_list["skill"]
 		M.mind?.adjust_skillrank(text2path(skill), 1)
