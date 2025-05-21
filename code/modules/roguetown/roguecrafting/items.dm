@@ -1019,7 +1019,7 @@
 	name = "iron bullets (x5)"
 	reqs = list(/obj/item/ingot/iron = 1)
 	result = list(/obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet)
-	skillcraft = /datum/skill/craft/engineering
+	skillcraft = /datum/skill/craft/weaponsmithing
 	craftdiff = 3
 
 
@@ -1027,5 +1027,5 @@
 	name = "steel bullets (x5)"
 	reqs = list(/obj/item/ingot/steel = 1)
 	result = list(/obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel)
-	skillcraft = /datum/skill/craft/engineering
+	skillcraft = /datum/skill/craft/weaponsmithing
 	craftdiff = 4
