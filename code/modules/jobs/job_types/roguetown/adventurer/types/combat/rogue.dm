@@ -224,6 +224,7 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/music, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/firearms, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
 			ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 			ADD_TRAIT (H, TRAIT_DECEIVING_MEEKNESS, TRAIT_GENERIC)
 			H.change_stat("perception", 1)
