@@ -20,23 +20,23 @@
 	desc = "A crackling, glowing book, filled with runes and symbols that hurt the mind to stare at."
 	pages_to_mastery = 7
 	remarks = list(\
-		"Recall that place of white and black, so cold after its season of heat...", \
-		"Time slips away as I devour each pictograph and sigil...", \
-		"Kasmidian is a shrewd God, and his followers’ writings are no different...", \
-		"The smell of wet rain fills the room with every turned page...", \
-		"Helical text spans the page like a winding puzzle...", \
-		"Tracing a finger over one rune renders my hand paralyzed, if only for a moment...", \
-		"This page clearly details the benefits of swampweed on one's capacity to conceptualize the arcane...", \
-		"Conceptualize. Theorize. Feel. Flow. Manifest...", \
-		"Passion. Strength. Power. Victory. The tenets through which we break the chains of reality...", \
-		"Didn’t I just read this page...?", \
-		"A lone illustration of Kasmidian's visage fills this page, his stony gaze boring into my soul...", \
-		"My eyes begin to lid as I finish this chapter. These symbols cast a heavy fog over my mind...", \
-		"This chapter focuses on the scholars of Naledi, and their abstruse traditions on daemon-hunting...", \
+		"Fliping through the pages, I sense myself in another time, another place...", \
+		"Turning the page, I catch shrewd glimpse of another's thread on Kasmidian's grace...", \
+		"Staring at the pages' contents, I catch a glimpse of another chapter ahead through the page. I flip back and forth, but it stays hidden...", \
+		"This particular passage chooses it hide it's wiles, a puzzle imperceptible yet lost...", \
+		"This passage seems almost to sink into the very parchment as I pour through the book...", \
+		"This particular chapter illustrates the effectives of destruction magic with very - colorful - illusionary inscryption. It hurts to keep my hand near...", \
+		"Huh? This page is blank, sans for a vivid picture of a rather lavish hall of the Mage's University...", \
+		"This chapter goes into 'sealing' rites and magicks, speaking of a fabled stone as prime example...", \
+		"The words of this page seem almost to run away from my gaze...", \
+		"This page is familiar, and yet... distinct, in an unsettling fashion...", \
+		"Blessed by Kasmidian, keeper of secrets beyond our realm...", \
+		"By the time I realized that chapter was luring me to another, it was too late...", \
+		"I sense a chill run through me as I turn the page; with no obvious source...", \
 		"Silver. Blade. Mana. Blood. These are the ingredients I’ll need to imbibe the very ground with arcane abilities...", \
-		"Elysium incants speak to me in an extinct tongue immortalized on parchment...", \
-		"I am the Root. The Root is me. I must reach it, and the Tree...", \
-		"I feel the arcane circuits running through my body, empowered with each word I read...", \
+		"A throbbing pain overtakes my head as I flip pages, yet I press on...", \
+		"Something calls to me as I mull over a page I panickedly flip, though nothing comes...", \
+		"I feel attuned to the very whim of Kasmidian; and her realm at large...", \
 		"Am I reading? Are these words, symbols or inane scribbles? I cannot be sure, yet with each one my eyes glaze over, I can feel the arcane pulse within me...", \
 		"A mystery is revealed before my very eyes. I do not read it, yet I am aware. Gems are the Root's natural arcane energy, manifest. Perhaps I can use them to better my conceptualization..."\
 	)

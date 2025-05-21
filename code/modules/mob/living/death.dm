@@ -134,7 +134,7 @@
 				if (player.stat == DEAD || isbrain(player))
 					continue
 				if (HAS_TRAIT(player, TRAIT_DEATHSIGHT))
-					to_chat(player, span_warning("Veiled whispers herald the Undermaiden's gaze in my mind's eye as it turn towards [locale] for but a brief, singular moment."))
+					to_chat(player, span_warning("Veiled whispers herald Tsoridys' gaze in my mind's eye as it turn towards [locale] for but a brief, singular moment."))
 	// AZURE EDIT END
 
 	return TRUE

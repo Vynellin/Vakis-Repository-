@@ -1322,6 +1322,9 @@
 	},
 /turf/open/floor/carpet/inn,
 /area/rogue/indoors)
+"eh" = (
+/turf/closed/wall/mineral/rogue/decostone/cand,
+/area/centcom/prison)
 "fi" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1345,6 +1348,9 @@
 	icon_state = "chess"
 	},
 /area/rogue/indoors)
+"hx" = (
+/turf/open/floor/rogue/herringbone,
+/area/centcom/prison)
 "hQ" = (
 /turf/open/floor/rogue/blocks,
 /area/rogue)
@@ -1359,10 +1365,6 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
-"jg" = (
-/obj/effect/landmark/start/new_player,
-/turf/closed,
-/area/start)
 "jH" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1402,6 +1404,10 @@
 "lw" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"nb" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/north,
+/turf/open/floor/rogue/herringbone,
+/area/centcom/prison)
 "nh" = (
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/herringbone,
@@ -1496,6 +1502,10 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
+"tj" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/south,
+/turf/open/floor/rogue/herringbone,
+/area/centcom/prison)
 "tN" = (
 /turf/closed,
 /area/rogue/under)
@@ -1536,6 +1546,10 @@
 "wO" = (
 /turf/closed,
 /area/rogue/outdoors)
+"wY" = (
+/obj/effect/landmark/start/new_player,
+/turf/closed,
+/area/start)
 "xi" = (
 /obj/effect/proc_holder/spell/invoked/heal,
 /turf/open/floor/rogue/blocks,
@@ -1587,6 +1601,10 @@
 "Ba" = (
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
+"BD" = (
+/obj/effect/landmark/prisonwarp,
+/turf/open/floor/rogue/blocks,
+/area/centcom/prison)
 "BY" = (
 /obj/effect/landmark/mapGenerator/rogue/forest{
 	endTurfX = 128;
@@ -1633,6 +1651,9 @@
 /obj/item/rogueweapon/huntingknife/idagger/silver,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"EV" = (
+/turf/closed/wall/mineral/rogue/craftstone,
+/area/centcom/prison)
 "Gs" = (
 /obj/structure/fluff/walldeco/chains,
 /obj/structure/closet/crate/coffin/vampire,
@@ -1674,6 +1695,9 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue)
+"Jo" = (
+/turf/closed/indestructible/riveted,
+/area/centcom/prison)
 "Jp" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1694,6 +1718,14 @@
 /obj/item/quiver/arrows,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"JB" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/west,
+/obj/effect/decal/herringbone,
+/obj/effect/decal/herringbone{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/centcom/prison)
 "JJ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1705,6 +1737,13 @@
 /obj/item/rogueweapon/pick,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"Kk" = (
+/obj/effect/decal/herringbone,
+/obj/effect/decal/herringbone{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/centcom/prison)
 "Le" = (
 /obj/effect/landmark/events/testportal{
 	aportalloc = "bog"
@@ -1721,6 +1760,9 @@
 /obj/item/rogueweapon/spear/billhook,
 /turf/open/floor/rogue/cobble,
 /area/rogue)
+"LU" = (
+/turf/closed/indestructible/riveted/boss/see_through,
+/area/centcom/prison)
 "MM" = (
 /obj/structure/mineral_door/wood{
 	lockid = "mansionvampire"
@@ -1741,6 +1783,17 @@
 "Ph" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"PC" = (
+/turf/open/floor/rogue/blocks,
+/area/centcom/prison)
+"PK" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/east,
+/obj/effect/decal/herringbone,
+/obj/effect/decal/herringbone{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/centcom/prison)
 "QP" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/tile{
@@ -2583,15 +2636,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
 kB
 kB
 kB
@@ -2713,16 +2766,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+Jo
+Jo
+EV
+eh
+EV
+Jo
+Jo
+Jo
 kB
 kB
 kB
@@ -2843,16 +2896,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+PC
+LU
+hx
+JB
+hx
+LU
+PC
+Jo
 kB
 kB
 kB
@@ -2973,16 +3026,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+BD
+LU
+hx
+Kk
+hx
+LU
+BD
+Jo
 kB
 kB
 kB
@@ -3103,16 +3156,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+Jo
+Jo
+hx
+Kk
+hx
+Jo
+Jo
+Jo
 kB
 kB
 kB
@@ -3233,16 +3286,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+PC
+LU
+hx
+Kk
+hx
+LU
+PC
+Jo
 kB
 pr
 pr
@@ -3363,16 +3416,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+BD
+LU
+hx
+Kk
+hx
+LU
+BD
+Jo
 kB
 pr
 pr
@@ -3493,16 +3546,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+Jo
+Jo
+nb
+Kk
+tj
+Jo
+Jo
+Jo
 kB
 pr
 pr
@@ -3623,16 +3676,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+PC
+LU
+hx
+Kk
+hx
+LU
+PC
+Jo
 kB
 pr
 pr
@@ -3753,16 +3806,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+BD
+LU
+hx
+Kk
+hx
+LU
+BD
+Jo
 kB
 Do
 pr
@@ -3883,16 +3936,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+Jo
+Jo
+hx
+Kk
+hx
+Jo
+Jo
+Jo
 kB
 Do
 Do
@@ -4013,16 +4066,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+PC
+LU
+hx
+Kk
+hx
+LU
+PC
+Jo
 kB
 Do
 Do
@@ -4143,16 +4196,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+BD
+LU
+hx
+PK
+hx
+LU
+BD
+Jo
 kB
 Do
 Do
@@ -4273,16 +4326,16 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
 kB
+Jo
+Jo
+Jo
+EV
+eh
+EV
+Jo
+Jo
+Jo
 kB
 Do
 RH
@@ -5445,7 +5498,7 @@ RX
 RX
 RX
 RX
-jg
+wY
 RX
 RX
 RX

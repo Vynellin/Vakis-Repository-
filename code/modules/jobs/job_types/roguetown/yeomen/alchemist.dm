@@ -25,10 +25,9 @@
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-		if(H.age == AGE_OLD)
-			H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 6, TRUE)
-		else
-			H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 5, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 6, TRUE)
+		H.change_stat("intelligence", 3)
+		H.change_stat("speed", -1)
 //Requires a lot of sprites, so this is just a placeholder
 	if(should_wear_masc_clothes(H))
 		pants = /obj/item/clothing/under/roguetown/trou
@@ -37,8 +36,6 @@
 		belt = /obj/item/storage/belt/rogue/leather
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 		cloak = /obj/item/clothing/cloak/apron/brown
-		H.change_stat("intelligence", 3)
-		H.change_stat("speed", -1)
 	else if(should_wear_femme_clothes(H))
 		pants = /obj/item/clothing/under/roguetown/trou
 		shoes = /obj/item/clothing/shoes/roguetown/boots/leather
@@ -46,5 +43,3 @@
 		belt = /obj/item/storage/belt/rogue/leather
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 		cloak = /obj/item/clothing/cloak/apron/brown
-		H.change_stat("intelligence", 2)
-		H.change_stat("speed", -2)

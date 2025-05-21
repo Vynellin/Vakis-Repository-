@@ -76,7 +76,7 @@
 				conditional_buff = TRUE
 			if(/datum/patron/lording_three/tsoridys)
 				message_out = span_info("A sense of quiet respite radiates from [target]!")
-				message_self = span_notice("I feel the Undermaiden's gaze turn from me for now!")
+				message_self = span_notice("I feel Tsoridys' gaze turn from me for now!")
 				if (iscarbon(target))
 					var/mob/living/carbon/C = target
 					// if the target is "close to death" (at or below 25% health)

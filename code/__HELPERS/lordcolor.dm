@@ -21,18 +21,29 @@ GLOBAL_VAR(lordsecondary)
 		addtimer(CALLBACK(src, PROC_REF(lord_color_choice)), 50)
 		return
 	var/list/lordcolors = list(
-"PURPLE"="#8747b1", //RED AND BLACK
-"RED"="#8b2323", 	//	 I DRESS
-"BLACK"="#2b292e", 	//	  EAGLE
-"BROWN"="#61462c", 	// ON MY CHEST
-"GREEN"="#264d26", 	//IT'S GOOD TO BE
-"BLUE"="#173266", 	// AN ALBANIAN
-"YELLOW"="#ffcd43", // KEEP MY HEAD
-"TEAL"="#249589", 	//	 UP HIGH
-"AZURE"="#007fff", 	// FOR THE FLAG
-"WHITE"="#ffffff",	//	  I DIE
-"ORANGE"="#df8405",	//I'M PROUD TO BE
-"MAGENTA"="#962e5c")// AN ALBANIAN
+"PURPLE"="#8747b1",
+"DEEP PURPLE"="#8747B1",
+"MAGENTA"="#962e5c",
+"ROYAL RED"="#FF1021",
+"BLOOD RED"="#8A040E",
+"SILVER"="#A9C4CA",
+"SLATE"="#707279",
+"BLACK"="#2b292e",
+"MUD"="#61462c",
+"ORANGE"="#df8405",
+"CLAY"="#CE7A45",
+"MAHOGANEY"="#522000",
+"LIME"="#7BFF4E",
+"FOREST GREEN"="#00AA00",
+"DARK GREEN"="#003900",
+"AZURE"="#007fff",
+"ULTRAMARINE BLUE"="#0035FF",
+"NAVY BLUE"="#173266",
+"YELLOW"="#FFD500",
+"GOLD"="#FFA400",
+"TEAL"="#249589",
+"CYAN"="#4BE0A6",
+"WHITE"="#ffffff",)
 	var/prim
 	var/sec
 	var/choice = input(src, "Choose a Primary Color", "ROGUETOWN") as anything in lordcolors
@@ -55,7 +66,7 @@ GLOBAL_VAR(lordsecondary)
 		GLOB.lordcolor -= T
 
 /proc/lord_color_default()
-	GLOB.lordprimary = "#007fff" //AZURE
+	GLOB.lordprimary = "#FFA400" //GOLD
 	GLOB.lordsecondary = "#ffffff" //WHITE
 	for(var/obj/O in GLOB.lordcolor)
 		O.lordcolor(GLOB.lordprimary,GLOB.lordsecondary)
