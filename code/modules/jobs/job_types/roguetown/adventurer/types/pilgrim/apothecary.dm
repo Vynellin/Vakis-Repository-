@@ -24,7 +24,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/shortboots
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(
-						/obj/item/mortar = 1,
+						/obj/item/reagent_containers/glass/mortar = 1,
 						/obj/item/pestle = 1,
 						/obj/item/ritechalk = 1,
 						/obj/item/candle/yellow = 2,
