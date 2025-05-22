@@ -183,11 +183,10 @@
 
 /datum/virtue/combat/dualwielder
 	name = "Dual Wielder"
-	desc = "Whether it was by the Naledi scholars, Etruscan privateers or even the Kazengan senseis. I've been graced with the knowledge of how to wield two weapons at once."
+	desc = "I've been graced with the knowledge of how to wield two weapons at once."
 	added_traits = list(TRAIT_DUALWIELDER)
 
 /datum/virtue/combat/sharp
 	name = "Sentinel of Wits"
 	desc = "Whether it's by having an annoying sibling that kept prodding me with a stick, or years of study and observation, I've become adept at both parrying and dodging stronger opponents, by learning their moves and studying them."
 	added_traits = list(TRAIT_SENTINELOFWITS)
-

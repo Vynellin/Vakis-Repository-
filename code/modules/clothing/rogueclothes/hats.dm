@@ -92,7 +92,7 @@
 /obj/item/clothing/head/roguetown/roguehood/shalal/hijab
 	name = "hijab"
 	flags_inv = null
-	desc = "Flowing like blood from a wound, this tithe of cloth-and-silk spills out to the shoulders. It carries the telltale mark of Naledian stitcheries."
+	desc = "Flowing like blood from a wound, this tithe of cloth-and-silk spills out to the shoulders."
 	item_state = "hijab"
 	icon_state = "deserthood"
 

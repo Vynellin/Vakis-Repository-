@@ -115,3 +115,15 @@
 /obj/item/seeds/garlick
 	seed_identity = "garlick seeds"
 	plant_def_type = /datum/plant_def/garlick
+
+/obj/item/seeds/sugarcane
+	seed_identity = "sugarcane seeds"
+	plant_def_type = /datum/plant_def/sugarcane
+
+/obj/item/seeds/pumpkin
+	seed_identity = "pumpkin seeds"
+	plant_def_type = /datum/plant_def/pumpkin
+
+/obj/item/seeds/carrot
+	seed_identity = "carrot seeds"
+	plant_def_type = /datum/plant_def/carrot

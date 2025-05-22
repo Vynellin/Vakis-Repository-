@@ -472,3 +472,8 @@
 	M.adjustOxyLoss(4, 0)
 	..()
 	. = 1
+
+/datum/reagent/sugar
+	name = "sugar"
+	description = ""
+	color = "#FFFFFF" // rgb: 96, 165, 132

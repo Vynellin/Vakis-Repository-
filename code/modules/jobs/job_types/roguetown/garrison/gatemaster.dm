@@ -18,6 +18,7 @@
 	round_contrib_points = 2
 
 	cmode_music = 'sound/music/combat_guard2.ogg'
+	virtue_restrictions = list(/datum/virtue/utility/outlander)//trusted guard of the Marquis should *probably* not be a traveller from a foreign land
 
 /datum/job/roguetown/gatemaster/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
 	..()

@@ -2888,7 +2888,7 @@
 "blG" = (
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/cloth,
-/obj/effect/landmark/start/apothecary,
+/obj/effect/landmark/start/apothicant_apprentice,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/physician)
 "blX" = (
@@ -19930,6 +19930,9 @@
 /obj/item/seeds/onion,
 /obj/item/seeds/onion,
 /obj/structure/closet/crate/chest/wicker,
+/obj/item/seeds/pumpkin,
+/obj/item/seeds/pumpkin,
+/obj/item/seeds/pumpkin,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "horzw"
 	},
@@ -56762,6 +56765,12 @@
 /obj/item/seeds/wheat/oat,
 /obj/item/seeds/wheat/oat,
 /obj/structure/closet/crate/chest/wicker,
+/obj/item/seeds/carrot,
+/obj/item/seeds/carrot,
+/obj/item/seeds/carrot,
+/obj/item/seeds/sugarcane,
+/obj/item/seeds/sugarcane,
+/obj/item/seeds/sugarcane,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "horzw"
 	},

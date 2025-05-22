@@ -389,3 +389,42 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = 0)
 	dropshrink = 0.5
 	rotprocess = null
+
+/obj/item/reagent_containers/food/snacks/grown/sugarcane
+	seed = /obj/item/seeds/sugarcane
+	name = "sugarcane"
+	desc = ""
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "sugarcane"
+	gender = PLURAL
+	dropshrink = 0.75
+	filling_color = "#f5f2d9"
+	bitesize_mod = 2
+	mill_result = /obj/item/reagent_containers/powder/sugar
+	foodtype = SUGAR
+	tastes = list("sugar" = 1)
+	grind_results = list(/datum/reagent/sugar = 10)
+	distill_reagent = /datum/reagent/consumable/ethanol/beer/rum
+
+/obj/item/reagent_containers/food/snacks/grown/pumpkin
+	seed = /obj/item/seeds/pumpkin
+	name = "pumpkin"
+	desc = ""
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "pumpkin"
+	mill_result = /obj/item/reagent_containers/food/snacks/rogue/pumpkinspice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3)
+	tastes = list("pumpkin" = 1)
+	dropshrink = 0.75
+	bitesize_mod = 3
+
+/obj/item/reagent_containers/food/snacks/grown/carrot
+	seed = /obj/item/seeds/carrot
+	name = "carrot"
+	desc = ""
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "carrot"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	tastes = list("carrot" = 1)
+	dropshrink = 0.75
+	bitesize_mod = 2

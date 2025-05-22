@@ -1485,6 +1485,10 @@
 /obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/banditcamp)
+"gA" = (
+/obj/effect/landmark/prisonwarp,
+/turf/open/floor/rogue/blocks,
+/area/centcom/prison)
 "gD" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
@@ -1533,6 +1537,14 @@
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/banditcamp)
+"iL" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/west,
+/obj/effect/decal/herringbone,
+/obj/effect/decal/herringbone{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/centcom/prison)
 "jg" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/banditcamp)
@@ -1599,6 +1611,9 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/banditcamp)
+"lb" = (
+/turf/open/floor/rogue/blocks,
+/area/centcom/prison)
 "lw" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue)
@@ -1624,6 +1639,9 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/banditcamp)
+"mZ" = (
+/turf/closed/indestructible/riveted,
+/area/centcom/prison)
 "na" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
@@ -1783,6 +1801,10 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors)
+"qE" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/south,
+/turf/open/floor/rogue/herringbone,
+/area/centcom/prison)
 "qF" = (
 /obj/structure/fluff/railing/fence{
 	dir = 8
@@ -1833,6 +1855,13 @@
 "tN" = (
 /turf/closed,
 /area/rogue/under)
+"tO" = (
+/obj/effect/decal/herringbone,
+/obj/effect/decal/herringbone{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/centcom/prison)
 "un" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/reagent_containers/powder/ozium,
@@ -2059,6 +2088,9 @@
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/banditcamp)
+"yA" = (
+/turf/closed/wall/mineral/rogue/craftstone,
+/area/centcom/prison)
 "yF" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/reagent_containers/glass/bucket/pot,
@@ -2108,6 +2140,9 @@
 	dir = 4
 	},
 /area/rogue/indoors/banditcamp)
+"zW" = (
+/turf/closed/wall/mineral/rogue/decostone/cand,
+/area/centcom/prison)
 "As" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/flashlight/flare/torch/metal,
@@ -2453,6 +2488,14 @@
 /obj/item/quiver/arrows,
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"JE" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/east,
+/obj/effect/decal/herringbone,
+/obj/effect/decal/herringbone{
+	dir = 1
+	},
+/turf/open/floor/rogue/cobble,
+/area/centcom/prison)
 "JJ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -2579,6 +2622,10 @@
 "Ph" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors)
+"Pk" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/north,
+/turf/open/floor/rogue/herringbone,
+/area/centcom/prison)
 "Pp" = (
 /obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/rogue/dirt,
@@ -2648,6 +2695,9 @@
 "Ra" = (
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/rogue/outdoors/banditcamp)
+"RB" = (
+/turf/open/floor/rogue/herringbone,
+/area/centcom/prison)
 "RC" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/herringbone,
@@ -2807,8 +2857,8 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/banditcamp)
 "Wf" = (
-/turf/open/floor/rogue/cobblerock,
-/area/rogue/indoors/banditcamp)
+/turf/closed/mineral/rogue/bedrock,
+/area/centcom/prison)
 "Wg" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/rogue/herringbone,
@@ -2831,6 +2881,9 @@
 /obj/structure/rack/rogue,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/banditcamp)
+"Xc" = (
+/turf/closed/indestructible/riveted/boss/see_through,
+/area/centcom/prison)
 "Xi" = (
 /obj/structure/fluff/statue/gargoyle,
 /turf/open/floor/rogue/blocks,
@@ -6932,7 +6985,7 @@ gs
 aP
 aP
 Ay
-Wf
+kJ
 Ay
 Ay
 Ay
@@ -17759,17 +17812,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
 "}
 (115,1,1) = {"
 rQ
@@ -17889,17 +17942,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+mZ
+mZ
+yA
+zW
+yA
+mZ
+mZ
+mZ
+Wf
 "}
 (116,1,1) = {"
 rQ
@@ -18019,17 +18072,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+lb
+Xc
+RB
+iL
+RB
+Xc
+lb
+mZ
+Wf
 "}
 (117,1,1) = {"
 rQ
@@ -18149,17 +18202,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+gA
+Xc
+RB
+tO
+RB
+Xc
+gA
+mZ
+Wf
 "}
 (118,1,1) = {"
 rQ
@@ -18279,17 +18332,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+mZ
+mZ
+RB
+tO
+RB
+mZ
+mZ
+mZ
+Wf
 "}
 (119,1,1) = {"
 rQ
@@ -18409,17 +18462,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+lb
+Xc
+RB
+tO
+RB
+Xc
+lb
+mZ
+Wf
 "}
 (120,1,1) = {"
 rQ
@@ -18539,17 +18592,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+gA
+Xc
+RB
+tO
+RB
+Xc
+gA
+mZ
+Wf
 "}
 (121,1,1) = {"
 rQ
@@ -18669,17 +18722,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+mZ
+mZ
+Pk
+tO
+qE
+mZ
+mZ
+mZ
+Wf
 "}
 (122,1,1) = {"
 rQ
@@ -18799,17 +18852,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+lb
+Xc
+RB
+tO
+RB
+Xc
+lb
+mZ
+Wf
 "}
 (123,1,1) = {"
 rQ
@@ -18929,17 +18982,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+gA
+Xc
+RB
+tO
+RB
+Xc
+gA
+mZ
+Wf
 "}
 (124,1,1) = {"
 rQ
@@ -19059,17 +19112,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+mZ
+mZ
+RB
+tO
+RB
+mZ
+mZ
+mZ
+Wf
 "}
 (125,1,1) = {"
 rQ
@@ -19189,17 +19242,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+lb
+Xc
+RB
+tO
+RB
+Xc
+lb
+mZ
+Wf
 "}
 (126,1,1) = {"
 tN
@@ -19319,17 +19372,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+gA
+Xc
+RB
+JE
+RB
+Xc
+gA
+mZ
+Wf
 "}
 (127,1,1) = {"
 wO
@@ -19449,17 +19502,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+mZ
+mZ
+mZ
+yA
+zW
+yA
+mZ
+mZ
+mZ
+Wf
 "}
 (128,1,1) = {"
 yK
@@ -19579,15 +19632,15 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
+Wf
 "}
