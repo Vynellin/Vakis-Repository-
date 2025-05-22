@@ -542,7 +542,7 @@
 
 /obj/projectile/bullet/reusable/bullet/iron
 	name = "iron ball"
-	damage = 35
+	damage = 37
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
@@ -557,7 +557,7 @@
 
 /obj/projectile/bullet/reusable/bullet/steel
 	name = "steel ball"
-	damage = 40
+	damage = 42
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
