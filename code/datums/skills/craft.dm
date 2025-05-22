@@ -16,7 +16,7 @@
 	desc = "Determines whether you can smith various weapons. Required to repair weapons successfully on tables."
 	dreams = list(
 		"...tempered in gold and void, sharpened only by the sun and moon, your creation is finally complete. This one... This one will pierce the heavens...",
-		"...sweat drips down your brow and your arms ache with every strike, but at last, the blade is forged. A masterpiece of steel and gold, adorned with rontz gems...",
+		"...sweat drips down your brow and your arms ache with every strike, but at last, the blade is forged. A masterpiece of steel and gold, adorned with ruby gems...",
 		"...an old hunter stands in front of your counter and demands two dozen arrows. He hands you a bundle of sticks with a smile on his face..."
 	)
 
