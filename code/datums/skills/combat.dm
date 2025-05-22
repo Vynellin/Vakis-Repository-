@@ -21,7 +21,7 @@
 	dreams = list(
 		"...your heavy blade swings in a wide arc, cleaving through the air with a roar. Each landed strike hits with bone shattering force. Your opponent's shield crumples under the weight, and your blade finds its mark - crushing through armor, flesh, and will alike...",
 		"...a shining length of ivory steel. A token. A symbol. More than just a weapon. Blood runs thick in the wash-bin. Sparks fly from the grindstone. You maintain the blade and it maintains your honour...",
-		"...a terrible beast unfurls from the echo of man as you point your blade further within the crumbling chamber, the dorpel that led you here crumbling to dust in it's visage - another madman off the rails...",
+		"...a terrible beast unfurls from the echo of man as you point your blade further within the crumbling chamber, the jewel that led you here crumbling to dust in it's visage - another madman off the rails...",
 		"...the rapier dances in your hand, a whisper of steel cutting through the air. Every thrust is precise, every parry and riposte flowing in perfect rhythm, simply awaiting the moment to seal your their fate with a single, fatal strike..."
 	)
 

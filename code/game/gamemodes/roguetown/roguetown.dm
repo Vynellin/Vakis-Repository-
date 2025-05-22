@@ -151,9 +151,6 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 				log_game("Major Antagonist: Rebellion")
 			*/
 			/*
-			if(1 to 25)
-				pick_bandits()
-				log_game("Antagonists: Bandits")
 			if(26 to 50)
 				//"pick_vampires() was removed from here, normally they spawn together
 				pick_werewolves()
@@ -170,7 +167,10 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 				pick_vampires()
 				log_game("Antagonists: Vampyr")
 			*/
-			if(1 to 100)
+			if(1 to 50)
+				pick_bandits()
+				log_game("Antagonists: Bandits")
+			if(51 to 100)
 				log_game("Major Antagonist: Extended") //gotta put something here.
 
 		/* removing the "minor antagonist" system as we currently need them as major antagonist gamemodes while waiting for our own custom antags
@@ -197,7 +197,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 	"Knight")
 	var/num_bandits = 0
 	if(num_players() >= 10)
-		num_bandits = CLAMP(round(num_players() / 5), 4, 6)
+		num_bandits = CLAMP(round(num_players() / 6), 3, 5)
 		var/datum/job/bandit_job = SSjob.GetJob("Bandit")
 		bandit_job.total_positions = num_bandits
 		bandit_job.spawn_positions = num_bandits

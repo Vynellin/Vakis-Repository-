@@ -763,7 +763,7 @@
 	force_wielded = 32
 	icon_state = "blackflamb"
 	name = "blacksteel flamberge"
-	desc = "A strange sword with a winding blade forged of blacksteel and a rontz pommel."
+	desc = "A strange sword with a winding blade forged of blacksteel and a ruby pommel."
 	smeltresult = /obj/item/ingot/blacksteel
 	max_integrity = 200
 
