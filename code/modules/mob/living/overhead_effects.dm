@@ -35,7 +35,7 @@
 					var/turf/T = get_turf(src)
 					M.playsound_local(T, soundin, 100, FALSE)
 		if(ispath(private, /datum/patron))	//Patron signs.
-			var/icon_plane = WEATHER_EFFECT_PLANE	//Will show up through the cone.
+			//var/icon_plane = WEATHER_EFFECT_PLANE	//Will show up through the cone.
 			if(!ispath(private, /datum/patron/godless))
 				for(var/mob/living/carbon/human/H in viewers(world.view, src))
 					var/pass = FALSE
