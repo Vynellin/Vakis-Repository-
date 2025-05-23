@@ -635,6 +635,7 @@
 			if(do_after(user,long_cooktime, target = src))
 				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
 				new /obj/item/reagent_containers/food/snacks/rogue/uncookedappletart(loc)
+				new /obj/item/reagent_containers/glass/beaker/jar(loc)
 				qdel(I)
 				qdel(src)
 		else
@@ -646,6 +647,7 @@
 			if(do_after(user,long_cooktime, target = src))
 				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
 				new /obj/item/reagent_containers/food/snacks/rogue/uncookedberrytart(loc)
+				new /obj/item/reagent_containers/glass/beaker/jar(loc)
 				qdel(I)
 				qdel(src)
 		else
