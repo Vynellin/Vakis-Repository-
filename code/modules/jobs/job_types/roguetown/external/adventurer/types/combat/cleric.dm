@@ -11,7 +11,8 @@
 	classes = list("Monk" = "You are a wandering acolyte, versed in both miracles and martial arts. You forego the heavy armor paladins wear in favor of a more nimble approach to combat, utilizing your fists.",
 					"Paladin" = "A holy warrior. Where others of the clergy may have spent their free time studying scriptures, you have instead honed your skills with a blade.",
 					"Missionary" = "You are a devout worshipper of the divine with a strong connection to your patron god. You've spent years studying scriptures and serving your deity - now you wander into foreign lands, spreading the word of your faith.",
-					"Cantor" = "You were a bard once - but you've found a new calling. Your eyes have been opened to the divine, now you wander from city to city singing songs and telling tales of your patron's greatness.")
+					"Cantor" = "You were a bard once - but you've found a new calling. Your eyes have been opened to the divine, now you wander from city to city singing songs and telling tales of your patron's greatness.",
+					"Druid" = "You are a specialized acolyte of Tamari, poised to wander and protect the land of Sunmarch in her name - having traded the comforts of the walled cities and towers for her wisdom.")
 
 /datum/outfit/job/roguetown/adventurer/cleric
 	allowed_patrons = ALL_PATRONS
@@ -20,14 +21,15 @@
 	..()
 
 	// Add druidic skill for Tamari followers
+	var/classes = list("Monk","Paladin","Missionary","Cantor")
 	if(istype(H.patron, /datum/patron/three_sisters/tamari))
 		H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE)
 		to_chat(H, span_notice("As a follower of Tamari, you have innate knowledge of druidic magic."))
+		classes |= list("Druid") // We follow Tamari! Unlock Druid as an option.
+	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	// CLASS ARCHETYPES
 	H.adjust_blindness(-3)
-	var/classes = list("Monk","Paladin","Cantor","Missionary")
-	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 
 	switch(classchoice)
 
@@ -298,6 +300,54 @@
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_spells(H)
 			START_PROCESSING(SSobj, C)
+		if("Druid")
+			if(!istype(H.patron, /datum/patron/three_sisters/tamari)) // I see your bitchass
+				message_admins("ADMIN LOG: [H] attempted to bypass class protection to play druid as a non-tamari worshipper.")
+				return // eat shit and live, bill
+			H.set_blindness(0)
+			to_chat(H, span_warning("You are a specialized acolyte of Tamari, poised to wander and protect the land of Sunmarch in her name - having traded the comforts of the walled cities and towers for her wisdom."))
+			allowed_patrons = list(/datum/patron/three_sisters/tamari)
+			default_patron = /datum/patron/three_sisters/tamari
+			belt = /obj/item/storage/belt/rogue/leather/rope
+			beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
+			beltl = /obj/item/rogueweapon/whip //The whip itself is not often associated to many jobs. Druids feel like a thematic choice to have a self-defense whip
+			backl = /obj/item/storage/backpack/rogue/satchel
+			head = /obj/item/clothing/head/roguetown/tamarimask
+			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
+			backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
+			H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
+			if(H.mind) // Mostly based off the old druid job with some minor tweaks and cuts. THESE druids are still ambushable
+				H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/magic/holy, 4, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/craft/crafting, 3, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/labor/farming, 3, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/magic/druidic, 3, TRUE) //Shapeshifting.
+				H.mind.adjust_skillrank(/datum/skill/misc/tracking, 4, TRUE) //Druids know the forest and when it has been disturbed
+				H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
+				H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE) //To help them defend themselves with parrying
+				H.change_stat("intelligence", 1)
+				H.change_stat("endurance", 1)
+				H.change_stat("speed", 1)
+				if(H.age == AGE_OLD)
+					H.mind.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
+					H.mind.adjust_skillrank(/datum/skill/magic/druidic, 1, TRUE)
+				H.change_stat("intelligence", 1)
+				H.change_stat("endurance", 1)
+				H.change_stat("perception", -1)
+			ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
+			ADD_TRAIT(H, TRAIT_OUTDOORSMAN, TRAIT_GENERIC)
+			ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
+			var/datum/devotion/C = new /datum/devotion(H, H.patron)
+			C.grant_spells_monk(H) // Equivalent skills to an acolyte rather than the priest
 
 	switch(H.patron?.type)
 		if(/datum/patron/lording_three/aeternus)
