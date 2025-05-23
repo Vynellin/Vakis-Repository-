@@ -32764,6 +32764,9 @@
 /obj/item/cooking/platter,
 /obj/item/cooking/platter,
 /obj/item/cooking/platter,
+/obj/item/reagent_containers/glass/beaker/jar,
+/obj/item/reagent_containers/glass/beaker/jar,
+/obj/item/reagent_containers/glass/beaker/jar,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -41126,6 +41129,9 @@
 	dir = 8
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
+/obj/item/reagent_containers/powder/sugar,
+/obj/item/reagent_containers/powder/sugar,
+/obj/item/reagent_containers/powder/sugar,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -41403,6 +41409,9 @@
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /obj/item/reagent_containers/food/snacks/grown/wheat,
+/obj/item/reagent_containers/powder/sugar,
+/obj/item/reagent_containers/powder/sugar,
+/obj/item/reagent_containers/powder/sugar,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement)
 "rLl" = (
@@ -50650,6 +50659,9 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
+/obj/item/reagent_containers/glass/beaker/jar,
+/obj/item/reagent_containers/glass/beaker/jar,
+/obj/item/reagent_containers/glass/beaker/jar,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/tavern)
 "vMm" = (

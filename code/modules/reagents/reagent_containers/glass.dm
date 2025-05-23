@@ -256,6 +256,8 @@
 		return
 	..()
 */
+
+
 /obj/item/reagent_containers/glass/bucket/wooden/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -305,3 +307,4 @@
 		slot_equipment_priority.Insert(index, SLOT_HEAD)
 		return
 	return ..()
+
