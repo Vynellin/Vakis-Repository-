@@ -4,7 +4,7 @@
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
 /datum/patron/lording_three/aeternus
-	name = "Aeturnus"
+	name = "Aeternus"
 	domain = "Ascendant; Sun, Fire, Light, Permanence, Justice, Hope, and Order"
 	desc = "The Dawnfather, the Lord of Day, Aeternus is one half of the two Prime Deities alongside his Sister, Zira. \
 			His domain is light, his voice is fire, and his word has been law among the kingdoms of the Dawn that rose \
