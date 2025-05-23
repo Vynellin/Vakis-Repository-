@@ -40,7 +40,7 @@
 				for(var/mob/living/carbon/human/H in viewers(world.view, src))
 					var/pass = FALSE
 					if(H.patron?.type == private)
-						vis_contents += new /obj/effect/temp_visual/stress_event/invisible(null, H, icon_path, "sign_[H.patron.name]", offset_list, y_offset, icon_plane)
+						#vis_contents += new /obj/effect/temp_visual/stress_event/invisible(null, H, icon_path, "sign_[H.patron.name]", offset_list, y_offset, icon_plane) // NEED ICONS / ANIMATION FOR GODS
 						pass = TRUE
 					if(soundin && pass)
 						var/turf/T = get_turf(src)
