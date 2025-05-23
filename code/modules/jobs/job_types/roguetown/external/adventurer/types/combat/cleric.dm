@@ -45,7 +45,7 @@
 			belt = /obj/item/storage/belt/rogue/leather
 			beltr = /obj/item/flashlight/flare/torch/lantern
 			beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
-			backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
+			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/roguekey/adventurers_guild = 1)
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_spells_templar(H)
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)

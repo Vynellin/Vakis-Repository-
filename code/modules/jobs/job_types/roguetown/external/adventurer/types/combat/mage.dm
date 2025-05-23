@@ -30,7 +30,7 @@
 			beltl = /obj/item/rogueweapon/huntingknife
 			backl = /obj/item/storage/backpack/rogue/satchel
 			backr = /obj/item/rogueweapon/woodstaff
-			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/spellbook_unfinished/pre_arcane = 1)
+			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/spellbook_unfinished/pre_arcane = 1, /obj/item/roguekey/mages_university = 1)
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
@@ -63,7 +63,7 @@
 			beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			beltr = /obj/item/rogueweapon/sword/sabre
-			backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
+			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/roguekey/mages_university = 1)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery)
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)

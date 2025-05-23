@@ -33,7 +33,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	neck = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltl = /obj/item/storage/belt/rogue/surgery_bag/full/deacon
-	beltr = /obj/item/roguekey/deacon
+	beltr = /obj/item/storage/keyring/mages_university
 	id = /obj/item/scomstone/bad
 	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 	backr = /obj/item/storage/backpack/rogue/satchel

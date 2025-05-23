@@ -39,6 +39,7 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 		belt = /obj/item/storage/belt/rogue/leather
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+		beltr = /obj/item/storage/keyring/mages_university
 		cloak = /obj/item/clothing/cloak/apron/brown
 	else if(should_wear_femme_clothes(H))
 		pants = /obj/item/clothing/under/roguetown/trou
@@ -46,4 +47,5 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt
 		belt = /obj/item/storage/belt/rogue/leather
 		beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+		beltr = /obj/item/storage/keyring/mages_university
 		cloak = /obj/item/clothing/cloak/apron/brown

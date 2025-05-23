@@ -26,6 +26,7 @@
 			belt = /obj/item/storage/belt/rogue/leather/black
 			beltr = /obj/item/flashlight/flare/torch/lantern
 			backl = /obj/item/storage/backpack/rogue/satchel
+			backpack_contents = list(/obj/item/roguekey/adventurers_guild = 1)
 			neck = /obj/item/storage/belt/rogue/pouch/coins/rich
 			id = /obj/item/clothing/ring/silver
 			beltl = /obj/item/rogueweapon/sword/sabre/dec
@@ -92,7 +93,7 @@
 			belt = /obj/item/storage/belt/rogue/leather/plaquegold
 			backl = /obj/item/storage/backpack/rogue/satchel
 			beltl = /obj/item/flashlight/flare/torch/lantern
-			backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1)
+			backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/roguekey/adventurers_guild = 1)
 			H.mind.adjust_skillrank(/datum/skill/misc/riding, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/maces, 2, TRUE)
@@ -147,7 +148,7 @@
 			belt = /obj/item/storage/belt/rogue/leather
 			backr = /obj/item/storage/backpack/rogue/satchel
 			beltl = /obj/item/flashlight/flare/torch/lantern
-			backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/rogueweapon/hammer = 1, /obj/item/rogueweapon/tongs = 1)
+			backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/rogueweapon/hammer = 1, /obj/item/rogueweapon/tongs = 1, /obj/item/roguekey/adventurers_guild = 1)
 			var/armors = list("Light Armor","Medium Armor")
 			var/armor_choice = input("Choose your armor.", "TAKE UP ARMS") as anything in armors
 			switch(armor_choice)
