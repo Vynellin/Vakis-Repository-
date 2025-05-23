@@ -812,7 +812,7 @@
 
 /datum/crafting_recipe/roguetown/sewing/buttonedlongcoat
 	name = "buttoned longcoat (2 fibers, 3 cloth)"
-	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/physician)
+	result = list(/obj/item/clothing/suit/roguetown/shirt/robe/deacon)
 	reqs = list(/obj/item/natural/cloth = 3,
 	            /obj/item/natural/fibers = 2)
 	tools = list(/obj/item/needle)

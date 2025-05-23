@@ -219,9 +219,9 @@
 	icon_state = "shadowmask"
 	desc = "For when one wants to conceal their face while performing dastardly deeds in the name of the crown."
 
-/obj/item/clothing/mask/rogue/physician
-	name = "plague mask"
-	desc = "What better laboratory than the blood-soaked battlefield?"
+/obj/item/clothing/mask/rogue/deacon
+	name = "beaked mask"
+	desc = "A physician's favorite."
 	icon_state = "physmask"
 	flags_inv = HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDEEARS|HIDESNOUT
 	body_parts_covered = FACE|EARS|EYES|MOUTH|NECK

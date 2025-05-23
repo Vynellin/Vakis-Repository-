@@ -16,7 +16,6 @@
 #define ROLE_ASPIRANT			"Aspirant"
 #define ROLE_LICH				"Lich"
 #define ROLE_ASCENDANT			"Ascendant"
-#define ROLE_WRETCH				"Wretch"
 
 #define ROLE_SYNDICATE			"Syndicate"
 #define ROLE_TRAITOR			"Traitor"

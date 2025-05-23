@@ -8,8 +8,8 @@
 	name = "Physician's Hats"
 	cost = 10
 	contains = list(
-					/obj/item/clothing/head/roguetown/physician,
-					/obj/item/clothing/head/roguetown/physician,
+					/obj/item/clothing/head/roguetown/deacon,
+					/obj/item/clothing/head/roguetown/deacon,
 				)
 
 /datum/supply_pack/rogue/wardrobe/hat/bardhat

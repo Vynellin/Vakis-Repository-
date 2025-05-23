@@ -124,8 +124,7 @@
 		return
 		
 	var/list/spelllist = list(patron.extra_spell, /obj/effect/proc_holder/spell/targeted/touch/orison, patron.t0)
-	if(istype(patron,/datum/patron/lording_three))
-		spelllist += /obj/effect/proc_holder/spell/targeted/abrogation
+	spelllist += /obj/effect/proc_holder/spell/targeted/abrogation
 	for(var/spell_type in spelllist)
 		if(!spell_type || H.mind.has_spell(spell_type))
 			continue

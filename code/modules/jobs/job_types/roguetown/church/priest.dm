@@ -2,6 +2,7 @@
 	title = "Priest"
 	flag = PRIEST
 	department_flag = CHURCHMEN
+	selection_color = JCOLOR_CHURCH
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1

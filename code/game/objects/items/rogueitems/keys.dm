@@ -170,6 +170,12 @@
 	icon_state = "greenkey"
 	lockid = "innkeep"
 
+/obj/item/roguekey/janitor
+	name = "janitor key"
+	desc = "The key to the janitor's very own abode."
+	icon_state = "greenkey"
+	lockid = "janitor"
+
 /obj/item/roguekey/velder
 	name = "elder's key"
 	desc = "This key should open and close the elder's home."
@@ -354,14 +360,14 @@
 	icon_state = "brownkey"
 	lockid = "tailor"
 
-/obj/item/roguekey/mercenary
-	name = "mercenary key"
-	desc = "Why, a mercenary would not kick doors down."
+/obj/item/roguekey/adventurers_guild
+	name = "adventurer's guild key"
+	desc = "Largely ceremonial - the proliferation of these keys mean most guildhalls end up open-access."
 	icon_state = "greenkey"
 	lockid = "merc"
 
-/obj/item/roguekey/physician
-	name = "physician key"
+/obj/item/roguekey/deacon
+	name = "deacon key"
 	desc = "The key smells of herbs, feeling soothing to the touch."
 	icon_state = "greenkey"
 	lockid = "physician"

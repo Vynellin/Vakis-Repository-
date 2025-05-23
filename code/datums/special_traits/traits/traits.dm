@@ -467,38 +467,6 @@
 /datum/special_trait/nude_sleeper/on_apply(mob/living/carbon/human/character, silent)
 	ADD_TRAIT(character, TRAIT_NUDE_SLEEPER, "[type]")
 
-/datum/special_trait/vengantbum
-	name = "Vengant Bum"
-	greet_text = span_notice("I was once a nobleman, high on life until my father was murdered right in front of me. Thankfully, my mentor took me to safety and taught me all I needed to survive in these disgusting lands. They think I am a lowlife, but that's just an advantage.")
-	req_text = "Be a beggar"
-	allowed_jobs = list(/datum/job/roguetown/beggar)
-	weight = 7
-
-/datum/special_trait/vengantbum/on_apply(mob/living/carbon/human/character, silent)
-	ADD_TRAIT(character, TRAIT_DECEIVING_MEEKNESS, "[type]")
-	character.mind.adjust_skillrank(/datum/skill/combat/wrestling, 6, TRUE)
-	character.mind.adjust_skillrank(/datum/skill/combat/unarmed, 6, TRUE)
-	character.mind.adjust_skillrank_up_to(/datum/skill/misc/reading, 3, TRUE)
-	character.STASTR = 20
-	character.STACON = 20
-	character.STAEND = 20
-
-/datum/special_trait/my_precious
-	name = "My Precious"
-	greet_text = span_notice("The ring, it's so shiny.. so valuable, I can feel it's power. It's all mine!")
-	req_text = "Be a beggar"
-	allowed_jobs = list(/datum/job/roguetown/beggar)
-	weight = 50
-
-/datum/special_trait/my_precious/on_apply(mob/living/carbon/human/character, silent)
-	QDEL_NULL(character.wear_pants)
-	QDEL_NULL(character.wear_shirt)
-	QDEL_NULL(character.wear_armor)
-	QDEL_NULL(character.shoes)
-	QDEL_NULL(character.head)
-	var/obj/item/ring = new /obj/item/clothing/ring/dragon_ring(get_turf(character))
-	character.put_in_hands(ring, forced = TRUE)
-
 /datum/special_trait/illicit_merchant
 	name = "Illicit Merchant"
 	greet_text = span_notice("I'm sick of working as an underling, I will start my own trade emporium. I've got my hands on a hidden merchant key and a curious magical device")
