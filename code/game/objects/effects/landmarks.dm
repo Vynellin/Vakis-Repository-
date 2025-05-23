@@ -205,6 +205,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = /datum/job/roguetown/knavewench::title
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/janitor
+	name = /datum/job/roguetown/janitor::title
+	icon_state = "arrow"
+
 /obj/effect/landmark/start/nobleman
 	name = /datum/job/roguetown/nobleman::title
 	icon_state = "arrow"

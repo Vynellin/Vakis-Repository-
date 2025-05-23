@@ -364,13 +364,20 @@
 	name = "adventurer's guild key"
 	desc = "Largely ceremonial - the proliferation of these keys mean most guildhalls end up open-access."
 	icon_state = "greenkey"
-	lockid = "merc"
+	lockid = "adventurersguild"
+
+/obj/item/roguekey/mages_university
+	name = "mage's university key"
+	desc = "While somewhat more exclusive than their adventurer's guild counterparts, the keys to each mage's university guildhall are \
+			still commonplace finds for the road-wary - no doubt by design."
+	icon_state = "greenkey"
+	lockid = "magesuniversity"
 
 /obj/item/roguekey/deacon
 	name = "deacon key"
 	desc = "The key smells of herbs, feeling soothing to the touch."
 	icon_state = "greenkey"
-	lockid = "physician"
+	lockid = "deacon"
 
 /obj/item/roguekey/undercroft
 	name = "undercroft key"
