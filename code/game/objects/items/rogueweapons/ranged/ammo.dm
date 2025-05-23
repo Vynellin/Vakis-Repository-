@@ -540,6 +540,60 @@
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
 
+/obj/projectile/bullet/reusable/bullet/iron
+	name = "iron ball"
+	damage = 37
+	damage_type = BRUTE
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "musketball_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
+	range = 12
+	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
+	embedchance = 100
+	woundclass = BCLASS_STAB
+	flag = "piercing"
+	armor_penetration = 80
+	speed = 0.1
+
+/obj/projectile/bullet/reusable/bullet/steel
+	name = "steel ball"
+	damage = 42
+	damage_type = BRUTE
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "musketball_proj"
+	ammo_type = /obj/item/ammo_casing/caseless/rogue/bullet
+	range = 16
+	hitsound = 'sound/combat/hits/hi_arrow2.ogg'
+	embedchance = 100
+	woundclass = BCLASS_STAB
+	flag = "piercing"
+	armor_penetration = 100
+	speed = 0.1
+
+/obj/item/ammo_casing/caseless/rogue/bullet
+	name = "iron sphere"
+	desc = "A small iron sphere. This should go well with firepowder."
+	projectile_type = /obj/projectile/bullet/reusable/bullet/iron
+	caliber = "musketball"
+	icon = 'icons/roguetown/weapons/ammo.dmi'
+	icon_state = "musketball"
+	dropshrink = 0.5
+	possible_item_intents = list(/datum/intent/use)
+	max_integrity = 0
+
+	armor_penetration = 70
+	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/ammo_casing/caseless/rogue/bullet/steel
+	name = "steel sphere"
+	desc = "A small iron sphere. This should go well with firepowder."
+	projectile_type = /obj/projectile/bullet/reusable/bullet/steel
+	dropshrink = 0.5
+	possible_item_intents = list(/datum/intent/use)
+	max_integrity = 0
+	armor_penetration = 85
+	w_class = WEIGHT_CLASS_TINY
+
 #undef ARROW_DAMAGE
 #undef BOLT_DAMAGE
 #undef BULLET_DAMAGE
