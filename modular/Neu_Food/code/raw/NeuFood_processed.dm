@@ -700,6 +700,7 @@
 	foodtype = SUGAR
 	bitesize = 6
 	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_FINE
 
 
 /obj/item/reagent_containers/food/snacks/rogue/applecandy/On_Consume(mob/living/eater)
@@ -726,6 +727,7 @@
 	foodtype = SUGAR
 	bitesize = 6
 	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_FINE
 
 /obj/item/reagent_containers/food/snacks/rogue/berrycandy/On_Consume(mob/living/eater)
 	..()
@@ -751,6 +753,7 @@
 	foodtype = SUGAR
 	bitesize = 6
 	rotprocess = null
+	faretype = FARE_FINE
 
 /obj/item/reagent_containers/food/snacks/rogue/pumpkincandy/On_Consume(mob/living/eater)
 	..()
@@ -764,3 +767,141 @@
 		icon_state = "pumpkincandy2"
 	if(bitecount == 5)
 		icon_state = "pumpkincandy1"
+
+
+// -------------- JAMS -----------------
+/obj/item/reagent_containers/glass/beaker/jar
+	name = "Jar"
+	desc = ""
+	icon = 'modular/Neu_Food/icons/cooking.dmi'
+	icon_state = "jar"
+	dropshrink = 0.50
+
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledberries
+	name = "Jar of berries"
+	desc = ""
+	icon_state = "jarfilledberries"
+	dropshrink = 0.50
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	foodtype = SUGAR
+	bitesize = 1
+	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_NEUTRAL
+
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledapples
+	name = "Jar of apples"
+	desc = ""
+	icon_state = "jarfilledapples"
+	dropshrink = 0.50
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	foodtype = SUGAR
+	bitesize = 1
+	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_NEUTRAL
+
+/obj/item/reagent_containers/food/snacks/rogue/uncookedberryjam
+	name = "uncooked berry jam"
+	desc = ""
+	icon_state = "uncookedberryjam"
+	w_class = WEIGHT_CLASS_NORMAL
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/berryjam
+	bitesize = 3
+	rotprocess = null	
+	dropshrink = 0.60
+	faretype = FARE_POOR
+
+/obj/item/reagent_containers/food/snacks/rogue/uncookedapplejam
+	name = "uncooked apple jam"
+	desc = ""
+	icon_state = "uncookedapplejam"
+	w_class = WEIGHT_CLASS_NORMAL
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/applejam
+	bitesize = 3
+	rotprocess = null	
+	dropshrink = 0.60
+	faretype = FARE_POOR
+
+/obj/item/reagent_containers/food/snacks/rogue/berryjam
+	name = "berry jam"
+	desc = ""
+	icon_state = "berryjam"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweetened berry" = 1)
+	foodtype = SUGAR
+	bitesize = 3
+	rotprocess = null
+	dropshrink = 0.60
+	trash = /obj/item/reagent_containers/glass/beaker/jar
+	faretype = FARE_NEUTRAL
+
+/obj/item/reagent_containers/food/snacks/rogue/applejam
+	name = "apple jam"
+	desc = ""
+	icon_state = "applejam"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweetened apple" = 1)
+	foodtype = SUGAR
+	bitesize = 3
+	rotprocess = null
+	dropshrink = 0.60
+	trash = /obj/item/reagent_containers/glass/beaker/jar
+	faretype = FARE_NEUTRAL
+
+//When berries or apples are added to the jar it will create a filled jar
+/obj/item/reagent_containers/glass/beaker/jar/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/berries/rogue))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding berries to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/jarfilledberries(loc)
+				qdel(I)
+				qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/apple))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding apples to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/jarfilledapples(loc)
+				qdel(I)
+				qdel(src)
+	else
+		return ..()
+
+//When the jar is filled with berries or apples it can then have sugar added to it to make jam
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledberries/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(istype(I, /obj/item/reagent_containers/powder/sugar))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding sugar to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/uncookedberryjam(loc)
+				qdel(I)
+				qdel(src)
+	else
+		return ..()
+
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledapples/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(istype(I, /obj/item/reagent_containers/powder/sugar))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding sugar to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/uncookedapplejam(loc)
+				qdel(I)
+				qdel(src)
+	else
+		return ..()
