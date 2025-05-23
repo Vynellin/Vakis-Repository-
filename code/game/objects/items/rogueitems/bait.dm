@@ -108,3 +108,17 @@
 	icon_state = "baitb"
 	attracted_types = list(/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 20,
 						/mob/living/simple_animal/hostile/retaliate/rogue/bigrat = 10)
+
+// Gunpowder Expansion
+
+/obj/item/bait/buck
+	name = "bag of saiga buck mount bait"
+	desc = "A combination of dried fruits and grains that saiga bucks can't resist"
+	icon_state = "bait"
+	attracted_types = list (/mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame/saddled = 100)
+
+/obj/item/bait/doe
+	name = "bag of saiga doe mount bait"
+	desc = "A combination of dried fruits and grains that saiga bucks can't resist"
+	icon_state = "bait"
+	attracted_types = list (/mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled = 100)

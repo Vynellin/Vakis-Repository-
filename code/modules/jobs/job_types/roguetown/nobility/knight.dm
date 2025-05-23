@@ -383,3 +383,51 @@
 	if(helmchoice != "None")
 		head = helmets[helmchoice]
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1)
+
+
+/datum/advclass/knight/reiter
+	name = "Reiter"
+	tutorial = "You are a Reiter Cavalryman, a new type of heavily armed knight, known for using pistols in coordinated volleys while wearing plate armor. They emphasize mobility and firepower over the traditional shock tactics of knights."
+	outfit = /datum/outfit/job/roguetown/knight/reiter
+
+	category_tags = list(CTAG_ROYALGUARD)
+
+/datum/outfit/job/roguetown/knight/reiter/pre_equip(mob/living/carbon/human/H)
+	..()
+	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored	
+	cloak = /obj/item/clothing/cloak/tabard
+	neck = /obj/item/clothing/neck/roguetown/bevor
+	gloves = /obj/item/clothing/gloves/roguetown/chain
+	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
+	belt = /obj/item/storage/belt/rogue/leather/black
+	beltl = /obj/item/rogueweapon/sword/sabre
+	beltr = /obj/item/ammopouch/bullets
+	backr = /obj/item/storage/backpack/rogue/satchel/black
+	pants = /obj/item/clothing/under/roguetown/chainlegs
+	armor = /obj/item/clothing/suit/roguetown/armor/plate/half
+	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
+	id = /obj/item/scomstone/bad/garrison
+	backpack_contents = list(/obj/item/gun/ballistic/arquebus_pistol = 1, /obj/item/powderhorn = 1, /obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/bait/doe = 1)
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE) 
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)	
+	H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)	
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)		
+	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/tracking, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/firearms, 3, TRUE)
+
+
+	H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
+	H.verbs |= /mob/proc/haltyell
+
+	H.change_stat("endurance", 1)
+	H.change_stat("perception", 2)
+	H.change_stat("speed", 2)
+	H.change_stat("intelligence", 1)
+	
+	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

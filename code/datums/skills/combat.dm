@@ -112,3 +112,11 @@
 	"...the perched archers ruthlessly repel the peasant rebellion. Hope for fairness is almost forlorn, until with a soft crack, a hailing of iron bullets clatter against the foe's helmets...",
 	"...your arm tires from the toils of practice. Swinging rapidly has left your arm numb. With weary eyes, you glance aside to witness a hunter practice their craft with a brief overhand toss. Absorbing the technique, you mimic it, and effortlessly cast a powerful stone square onto the target..."
 	)
+
+/datum/skill/combat/firearms
+	name = "Firearms"
+	desc= "Alongside perception, increases your spead to aim.  This does not impact time to reload."
+	dreams = list(
+	"...You recall the countless hours drilling and marching in practice for battle.  Hold position, shoulder arquebus, fire...",
+	"..."
+	)

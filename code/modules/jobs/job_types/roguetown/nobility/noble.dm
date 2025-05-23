@@ -29,8 +29,8 @@
 		Q.become_blind("advsetup")
 
 /datum/advclass/nobleman/daring
-	name = "Daring Twit"
-	tutorial = "You're a somebody, someone important. It only makes sense you want to make a name for yourself, to gain your own glory so people see how great you really are beyond your bloodline. Plus, if you're beloved by the people for your exploits you'll be chosen! Probably. Shame you're as useful and talented as a squire, despite your delusions to the contrary."
+	name = "Boastful Count"
+	tutorial = "Long ago you were, allegedly, pivotal in a minor skirmish. You have since never let the rest of the court forget about your daring exploits and valiant first-hand command methods."
 	outfit = /datum/outfit/job/roguetown/heir/daring
 	category_tags = list(CTAG_NOBLEMAN)
 
@@ -67,8 +67,8 @@
 		ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 
 /datum/advclass/nobleman/bookworm
-	name = "Introverted Bookworm"
-	tutorial = "Despite your standing, sociability is not your strong suit, and you have kept mostly to yourself and your books. This hardly makes you a favourite among the court, and an exit from your room is often met with amusement from nobility and servants alike. But maybe... just maybe, some of your reading interests may be bearing fruit."
+	name = "Scholar Baron"
+	tutorial = "Instead of focusing on expanding your holdings you worked to expand your knowledge. Esoteric lore and trivia bubble from your mind freely, thanks to the ample free time afforded by your blood."
 	outfit = /datum/outfit/job/roguetown/heir/bookworm
 	category_tags = list(CTAG_NOBLEMAN)
 
@@ -107,8 +107,8 @@
 	H.change_stat("fortune", 1)
 
 /datum/advclass/nobleman/aristocrat
-	name = "Sheltered Aristocrat"
-	tutorial = "Life has been kind to you; you've an entire keep at your disposal, servants to wait on you, and a whole retinue of guards to guard you. You've nothing to prove; just live the good life. A lack of ambition translates into a lacking skillset beyond schooling, though, and your breaks from boredom consist of court gossip."
+	name = "Voivode Aspirant"
+	tutorial = "Your meagre holdings and adeptness at negotiation has managed you a seat at the sunmarch. It matters not where in Rasura you come from, what matters now is the start of your ambitions."
 	outfit = /datum/outfit/job/roguetown/heir/aristocrat
 	category_tags = list(CTAG_NOBLEMAN)
 

@@ -9,12 +9,13 @@
 	classes = list("Treasure Hunter" = "You are a treasure hunter trained in hunting for valuables. Discern what is treasure or not, your fortune could be hidden anywhere.",
 					"Thief" = "You are a scoundrel and a thief. A master in getting into places you shouldn't be and taking things that aren't rightfully yours.",
 					"Bard" = "You make your fortune in brothels, flop houses, and taverns – gaining fame for your songs and legends. If there is any truth to them, that is.",
-					"Swashbuckler" = "You are a daring rogue of the seas! Swashbucklers wield agile swordplay and acrobatic prowess - fighting dirty to outmaneuver foes with flair.")
+					"Swashbuckler" = "You are a daring rogue of the seas! Swashbucklers wield agile swordplay and acrobatic prowess - fighting dirty to outmaneuver foes with flair.",
+					"Buccaneer" = "You are a daring rogue of the seas! Bucaneers wield arquebus and swordplay to their advanntage - fighting dirty to outmaneuver foes with flair."				)
 
 /datum/outfit/job/roguetown/adventurer/rogue/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.adjust_blindness(-3)
-	var/classes = list("Treasure Hunter","Thief","Bard","Swashbuckler")
+	var/classes = list("Treasure Hunter","Thief","Bard","Swashbuckler", "Buccaneer")
 	var/classchoice = input("Choose your archetypes", "Available archetypes") as anything in classes
 	switch(classchoice)
 	
@@ -47,6 +48,7 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/craft/traps, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
 			H.cmode_music = 'sound/music/combat_treasurehunter.ogg'
 			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
@@ -189,5 +191,42 @@
 			ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 			ADD_TRAIT (H, TRAIT_DECEIVING_MEEKNESS, TRAIT_GENERIC)
 			H.change_stat("strength", 1)
+			H.change_stat("endurance", 1)
+			H.change_stat("speed", 2)
+
+
+		if("Buccaneer")
+			to_chat(H, span_warning("You are a Buccaneer, a pirate who made a decent living elsewhere in the world. you spent your fortunes on clothes, whores and guns; but at least you still have the gun and dirty moves that make you truly a scoundrel."))
+			head = /obj/item/clothing/head/roguetown/helmet/bandana
+			pants = /obj/item/clothing/under/roguetown/trou/leathertights
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
+			shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+			backr = /obj/item/storage/backpack/rogue/satchel
+			backl = /obj/item/rogueweapon/sword/cutlass
+			belt = /obj/item/storage/belt/rogue/leather
+			shoes = /obj/item/clothing/shoes/roguetown/boots
+			neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+			beltl = /obj/item/flashlight/flare/torch/lantern
+			beltr = /obj/item/ammopouch/bullets
+			backpack_contents = list(/obj/item/powderhorn, /obj/item/gun/ballistic/arquebus_pistol, /obj/item/rogueweapon/huntingknife)
+			H.cmode_music = 'sound/music/jukeboxes/oldschool/Sea_Shanty2.ogg'
+			H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/music, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/firearms, 3, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
+			ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
+			ADD_TRAIT (H, TRAIT_DECEIVING_MEEKNESS, TRAIT_GENERIC)
+			H.change_stat("perception", 1)
 			H.change_stat("endurance", 1)
 			H.change_stat("speed", 2)

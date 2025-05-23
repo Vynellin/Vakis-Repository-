@@ -955,3 +955,77 @@
 	reqs = list(/obj/item/natural/bone = 1)
 	tools = list(/obj/item/rogueweapon/huntingknife)
 	craftdiff = 3
+
+//gunmaking slop
+/*/datum/crafting_recipe/roguetown/firingpim
+	name = "Firing pin"
+	reqs = list(/obj/item/ingot/iron = 1)
+	result = list(/obj/item/firing_pin)
+	skillcraft = /datum/skill/craft/engineering
+	structurecraft = /obj/machinery/light/rogue/smelter
+	craftdiff = 2
+*/ 
+/datum/crafting_recipe/roguetown/firearmstock
+	name = "Firearm stock"
+	tools = (/obj/item/rogueweapon/huntingknife)
+	reqs = list(/obj/item/grown/log/tree/small = 1)
+	result = list(/obj/item/weaponcrafting/stock)
+	skillcraft = /datum/skill/craft/engineering
+	craftdiff = 2
+
+/datum/crafting_recipe/roguetown/firearmparts
+	name = "Firearm parts"
+	reqs = list(/obj/item/ingot/steel = 2)
+	result = list(/obj/item/weaponcrafting/receiver)
+	skillcraft = /datum/skill/craft/engineering
+	craftdiff = 4
+
+/datum/crafting_recipe/roguetown/firearmbarrel
+	name = "Firearm barrel"
+	reqs = list(/obj/item/ingot/iron = 2)
+	result = list(/obj/item/weaponcrafting/barrel)
+	skillcraft = /datum/skill/craft/engineering
+	craftdiff = 3
+
+/datum/crafting_recipe/roguetown/arquebus
+	name = "Arquebus"
+	reqs = list(/obj/item/ingot/steel = 16, /obj/item/ingot/bronze = 2, /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1, /obj/item/weaponcrafting/stock = 1)
+	result = list(/obj/item/gun/ballistic/arquebus)
+	skillcraft = /datum/skill/craft/engineering
+	craftdiff = 5 //le ultimate challenge
+
+/datum/crafting_recipe/roguetown/handgonne
+	name = "Handgonne"
+	reqs = list(/obj/item/ingot/iron = 8, /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1, /obj/item/weaponcrafting/stock = 1)
+	result = list(/obj/item/gun/ballistic/handgonne)
+	skillcraft = /datum/skill/craft/engineering
+	craftdiff = 3
+
+/datum/crafting_recipe/roguetown/arquebuspistol
+	name = "Arquebus pistol"
+	reqs = list(/obj/item/ingot/steel = 8, /obj/item/ingot/bronze = 1 , /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1)
+	result = list(/obj/item/gun/ballistic/arquebus_pistol)
+	skillcraft = /datum/skill/craft/engineering
+	craftdiff = 4
+
+/datum/crafting_recipe/roguetown/firearmramrod
+	name = "replacement ramrod"
+	reqs = list(/obj/item/ingot/iron = 1)
+	result = list(/obj/item/ramrod)
+	skillcraft = /datum/skill/craft/engineering
+	craftdiff = 3
+
+/datum/crafting_recipe/roguetown/ironbullet
+	name = "iron bullets (x5)"
+	reqs = list(/obj/item/ingot/iron = 1)
+	result = list(/obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet)
+	skillcraft = /datum/skill/craft/weaponsmithing
+	craftdiff = 3
+
+
+/datum/crafting_recipe/roguetown/steelbullet
+	name = "steel bullets (x5)"
+	reqs = list(/obj/item/ingot/steel = 1)
+	result = list(/obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel)
+	skillcraft = /datum/skill/craft/weaponsmithing
+	craftdiff = 4
