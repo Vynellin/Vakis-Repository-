@@ -158,11 +158,12 @@
 
 #define MAGES_UNIVERSITY			(1<<7)
 
-#define ALCHEMIST				(1<<0)
-#define ARCHIVIST				(1<<1)
-#define ARTIFICER				(1<<2)
-#define APOTHICANT_APPRENTICE	(1<<3)
-#define MAGEAPPRENTICE			(1<<4)
+#define HEAD_MAGE				(1<<0)
+#define ALCHEMIST				(1<<1)
+#define ARCHIVIST				(1<<2)
+#define ARTIFICER				(1<<3)
+#define APOTHICANT_APPRENTICE	(1<<4)
+#define MAGEAPPRENTICE			(1<<5)
 
 #define SLOP						(1<<8)
 
@@ -211,41 +212,42 @@
 #define JDO_HOSTAGE 22
 
 /// Mage's University
-#define JDO_ARTIFICER 23
-#define JDO_ALCHEMIST 24
-#define JDO_ARCHIVIST 25
-#define JDO_MAGEAPPRENTICE 26
-#define JDO_APOTHICANT_APPRENTICE 27
+#define JDO_HEAD_MAGE 23
+#define JDO_ARTIFICER 24
+#define JDO_ALCHEMIST 25
+#define JDO_ARCHIVIST 26
+#define JDO_MAGEAPPRENTICE 27
+#define JDO_APOTHICANT_APPRENTICE 28
 
 /// Church
-#define JDO_PRIEST 28
-#define JDO_MONK 29
-#define JDO_SOILSON 30
-#define JDO_TEMPLAR 31
-#define JDO_CHURCHLING 32
+#define JDO_PRIEST 29
+#define JDO_MONK 30
+#define JDO_SOILSON 31
+#define JDO_TEMPLAR 32
+#define JDO_CHURCHLING 33
 
 /// Town
-#define JDO_MERCHANT 33
-#define JDO_SHOPHAND 34
+#define JDO_MERCHANT 34
+#define JDO_SHOPHAND 35
 
-#define JDO_CHIEF 35
-#define JDO_BLACKSMITH 36
-#define JDO_APPRENTICE 37
+#define JDO_CHIEF 36
+#define JDO_BLACKSMITH 37
+#define JDO_APPRENTICE 38
 
-#define JDO_BARKEEP 38
-#define JDO_KNAVEWENCH 39
-#define JDO_JANITOR 40
+#define JDO_BARKEEP 39
+#define JDO_KNAVEWENCH 40
+#define JDO_JANITOR 41
 
-#define JDO_VILLAGER 41
+#define JDO_VILLAGER 42
 
 /// External
-#define JDO_ADVENTURER 42
-#define JDO_PILGRIM 43
-#define JDO_MIGRANT 44
-#define JDO_BANDIT 45
-#define JDO_COURTAGENT 46
+#define JDO_ADVENTURER 43
+#define JDO_PILGRIM 44
+#define JDO_MIGRANT 45
+#define JDO_BANDIT 46
+#define JDO_COURTAGENT 47
 
-#define JDO_LUNATIC 47 // ALWAYS keep lunatic last. It's a reward role for being a true sport.
+#define JDO_LUNATIC 48 // ALWAYS keep lunatic last. It's a reward role for being a true sport.
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
@@ -315,6 +317,7 @@
 	/datum/job/roguetown/guardsman
 
 #define MAGES_UNIVERSITY_ROLES \
+	/datum/job/roguetown/head_mage, \
 	/datum/job/roguetown/archivist,\
 	/datum/job/roguetown/artificer,\
 	/datum/job/roguetown/wapprentice,\

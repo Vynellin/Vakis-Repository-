@@ -1330,6 +1330,7 @@
 #include "code\modules\jobs\job_types\roguetown\mages_university\alchemist.dm"
 #include "code\modules\jobs\job_types\roguetown\mages_university\archivist.dm"
 #include "code\modules\jobs\job_types\roguetown\mages_university\artificer.dm"
+#include "code\modules\jobs\job_types\roguetown\mages_university\head_mage.dm"
 #include "code\modules\jobs\job_types\roguetown\mages_university\sidefolk\apothicant_apprentice.dm"
 #include "code\modules\jobs\job_types\roguetown\mages_university\sidefolk\mage_apprentice.dm"
 #include "code\modules\jobs\job_types\roguetown\town\lunatic.dm"

@@ -197,6 +197,10 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark)
 	name = /datum/job/roguetown/artificer::title
 	icon_state = "arrow"
 
+/obj/effect/landmark/start/head_mage
+	name = /datum/job/roguetown/head_mage::title
+	icon_state = "arrow"
+
 /obj/effect/landmark/start/soilson
 	name = /datum/job/roguetown/soilson::title
 	icon_state = "arrow"
