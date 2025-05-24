@@ -56,6 +56,17 @@
 				qdel(src)
 		else
 			to_chat(user, span_warning("You need to put [src] on a table to roll it out!"))
+	if(istype(I, /obj/item/reagent_containers/powder/sugar))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading_alt.ogg', 90, TRUE, -1)
+			to_chat(user, "<span class='notice'>Mixing sugar into the dough...</span>")
+			if(do_after(user,long_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/sweetdough(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, "<span class='warning'>You need to put [src] on a table to roll it out!</span>")
 	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/raisins))
 		if(isturf(loc)&& (found_table))
 			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
@@ -525,6 +536,260 @@
 	rotprocess = SHELFLIFE_EXTREME
 	eat_effect = /datum/status_effect/buff/foodbuff
 
+/obj/item/reagent_containers/food/snacks/rogue/sweetdough
+	name = "sweet dough"
+	desc = ""
+	icon_state = "sweetdough"
+	slices_num = 4
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/uncookedfinecake
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/plaincake
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweetened dough" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	rotprocess = SHELFLIFE_SHORT
+
+/obj/item/reagent_containers/food/snacks/rogue/uncookedfinecake
+	name = "uncooked fine cake"
+	desc = ""
+	icon_state = "finecake"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/finecake
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("dough" = 1,"sugar" = 1)
+	foodtype = GRAIN
+	slice_batch = FALSE
+	rotprocess = SHELFLIFE_SHORT
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+
+/obj/item/reagent_containers/food/snacks/rogue/finecake
+	name = "finecake"
+	desc = ""
+	icon_state = "finecake3"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("delicate, melt in your mouth sweetness" = 1)
+	foodtype = GRAIN
+	bitesize = 3
+	rotprocess = SHELFLIFE_EXTREME
+	eat_effect = /datum/status_effect/buff/foodbuff
+	faretype = FARE_FINE
+
+/obj/item/reagent_containers/food/snacks/rogue/finecake/On_Consume(mob/living/eater)
+	..()
+	if(bitecount == 1)
+		icon_state = "finecake2"
+	if(bitecount == 2)
+		icon_state = "finecake1"
+
+/obj/item/reagent_containers/food/snacks/rogue/plaincake
+	name = "plain cake"
+	desc = ""
+	icon_state = "plaincake"
+	slices_num = 6
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/plaincakeslice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 40)
+	w_class = WEIGHT_CLASS_BULKY
+	tastes = list("crispy sweetened dough with a sugar glaze and hints of rosewater" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 6
+	rotprocess = SHELFLIFE_EXTREME
+	dropshrink = 0.80
+
+/obj/item/reagent_containers/food/snacks/rogue/plaincakeslice
+	name = "plain cake slice"
+	desc = ""
+	icon_state = "plaincakeslice"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 7)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("crispy sweetened dough with a sugar glaze and hints of rosewater" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 3
+	rotprocess = null
+	dropshrink = 0.60
+
+/obj/item/reagent_containers/food/snacks/rogue/sweetdough/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(user.mind)
+		short_cooktime = (60 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*5))
+		long_cooktime = (100 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*10))
+	if(istype(I, /obj/item/reagent_containers/food/snacks/egg))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
+			to_chat(user, "<span class='notice'>Working cackleberry into the dough, shaping it into a cake...</span>")
+			playsound(get_turf(user), 'modular/Neu_Food/sound/eggbreak.ogg', 100, TRUE, -1)
+			if(do_after(user,long_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/cake_base(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, "<span class='warning'>You need to put [src] on a table to work it!</span>")
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/applejam))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
+			to_chat(user, "<span class='notice'>Working apple jam into the dough, shaping it into a tart...</span>")
+			if(do_after(user,long_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/uncookedappletart(loc)
+				new /obj/item/reagent_containers/glass/beaker/jar(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, "<span class='warning'>You need to put [src] on a table to work it!</span>")
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/berryjam))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
+			to_chat(user, "<span class='notice'>Working berry jam into the dough, shaping it into a tart...</span>")
+			if(do_after(user,long_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/uncookedberrytart(loc)
+				new /obj/item/reagent_containers/glass/beaker/jar(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, "<span class='warning'>You need to put [src] on a table to work it!</span>")
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/pumpkinspice))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'sound/foley/dropsound/food_drop.ogg', 40, TRUE, -1)
+			to_chat(user, "<span class='notice'>Working pumpkin spice into the dough...</span>")
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading_alt.ogg', 100, TRUE, -1)
+			if(do_after(user,long_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/pumpkindough(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, "<span class='warning'>You need to put [src] on a table to work it!</span>")
+	else
+		return ..()
+
+/*	.................      Tarts    ................... */
+
+/obj/item/reagent_containers/food/snacks/rogue/uncookedappletart
+	name = "uncooked apple tart"
+	desc = ""
+	icon_state = "uncookedappletart"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/appletart
+	w_class = WEIGHT_CLASS_BULKY
+	tastes = list("crispy sweetened dough with a sugar glaze and hints of rosewater" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	bitesize = 6
+	rotprocess = 30 MINUTES
+	dropshrink = 0.80
+
+/obj/item/reagent_containers/food/snacks/rogue/appletart
+	name = "apple tart"
+	desc = ""
+	icon_state = "appletart"
+	slices_num = 6
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/appletartslice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 48)
+	w_class = WEIGHT_CLASS_BULKY
+	tastes = list("A crispy dough with delicate, sweet apple filling" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 6
+	dropshrink = 0.80
+	faretype = FARE_LAVISH
+
+/obj/item/reagent_containers/food/snacks/rogue/appletartslice
+	name = "apple tart slice"
+	desc = ""
+	icon_state = "appletartslice"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 8)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("Soft, sweet filling, with a flaky dough" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 3
+	rotprocess = null
+	dropshrink = 0.60
+	faretype = FARE_LAVISH
+
+/obj/item/reagent_containers/food/snacks/rogue/uncookedberrytart
+	name = "uncooked berry tart"
+	desc = ""
+	icon_state = "uncookedberrytart"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/berrytart
+	w_class = WEIGHT_CLASS_BULKY
+	tastes = list("crispy sweetened dough with a sugar glaze and hints of rosewater" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	bitesize = 6
+	rotprocess = 30 MINUTES
+	dropshrink = 0.80
+	faretype = FARE_LAVISH
+
+/obj/item/reagent_containers/food/snacks/rogue/berrytart
+	name = "berry tart"
+	desc = ""
+	icon_state = "berrytart"
+	slices_num = 6
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/berrytartslice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 48)
+	w_class = WEIGHT_CLASS_BULKY
+	tastes = list("A crispy dough with delicate, sweet berry filling" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 6
+	dropshrink = 0.80
+	faretype = FARE_LAVISH
+
+/obj/item/reagent_containers/food/snacks/rogue/berrytartslice
+	name = "berry tart slice"
+	desc = ""
+	icon_state = "berrytartslice"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 8)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("Soft, sweet filling, with a flaky dough" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 3
+	rotprocess = null
+	dropshrink = 0.60
+	faretype = FARE_LAVISH
+
+/*	.................   Sweetroll   ................... */
+
+/obj/item/reagent_containers/food/snacks/rogue/sweetroll
+	name = "sweetroll"
+	desc = ""
+	icon_state = "sweetroll"
+	dropshrink = 0.75
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sugar and crispy dough" = 1)
+	foodtype = SUGAR
+	rotprocess = SHELFLIFE_EXTREME
+	eat_effect = /datum/status_effect/buff/foodbuff
+	faretype = FARE_FINE
+
+/obj/item/reagent_containers/food/snacks/rogue/pastry/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(user.mind)
+		short_cooktime = (60 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*5))
+		long_cooktime = (100 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*10))
+	if(istype(I, /obj/item/reagent_containers/powder/sugar))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding the sugar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/sweetroll(loc)
+				qdel(I)
+				qdel(src)
+		else
+			to_chat(user, "<span class='warning'>You need to put [src] on a table to work it.</span>")
+	else
+		return ..()	
+
 /*	.................   Biscuit   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/foodbase/biscuit_raw
 	name = "uncooked raisin biscuit"
@@ -655,6 +920,51 @@
 	rotprocess = SHELFLIFE_LONG
 	eat_effect = /datum/status_effect/buff/foodbuff
 	dropshrink = 0.8
+
+/*	.................   Pumpkin Bread   ................... */
+/obj/item/reagent_containers/food/snacks/rogue/pumpkindough
+	name = "pumpkin dough"
+	desc = "A sweetened dough with pumpkin spice."
+	icon_state = "pumpkindough"
+	slices_num = 0
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/pumpkinbread
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	w_class = WEIGHT_CLASS_NORMAL
+	foodtype = GRAIN | SUGAR
+	rotprocess = SHELFLIFE_SHORT
+
+/obj/item/reagent_containers/food/snacks/rogue/pumpkinbread
+	name = "pumpkin bread"
+	desc = "A sweetened bread with pumpkin spice."
+	icon_state = "pumpkinbread"
+	slices_num = 6
+	slice_path = /obj/item/reagent_containers/food/snacks/rogue/pumpkinbreadslice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 48)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweetened dough with pumpkin spice"=1)
+	foodtype = GRAIN | SUGAR
+	faretype = FARE_LAVISH
+	slice_batch = TRUE
+	slice_sound = TRUE
+	rotprocess = SHELFLIFE_LONG
+	eat_effect = /datum/status_effect/buff/foodbuff
+	bitesize = 16
+
+/obj/item/reagent_containers/food/snacks/rogue/pumpkinbreadslice
+	name = "pumpkin bread slice"
+	desc = "A slice of sweetened bread with pumpkin spice."
+	icon_state = "pumpkinbreadslice"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 8)
+	faretype = FARE_FINE
+	w_class = WEIGHT_CLASS_NORMAL
+	cooked_type = null
+	tastes = list("sweetened dough with pumpkin spice"=1)
+	foodtype = GRAIN | SUGAR
+	bitesize = 3
+	eat_effect = /datum/status_effect/buff/foodbuff
+	rotprocess = SHELFLIFE_LONG
+	plateable = TRUE
+
 
 /*	.................   Cake   ................... */
 /obj/item/reagent_containers/food/snacks/rogue/cake_base
