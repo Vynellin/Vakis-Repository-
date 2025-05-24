@@ -373,6 +373,19 @@
 	icon_state = "greenkey"
 	lockid = "magesuniversity"
 
+/obj/item/roguekey/mages_university/private
+	name = "mage's university private key"
+	desc = "More exclusive than it's nigh-public counterpart, the private key for the university denotes a scholar's more permanent residence \
+			for it's assigned branch. This particular key allow access to more exclusive portions of Sunmarch's Mages University."
+	icon_state = "ekey"
+	lockid = "magesuniversity_private"
+
+/obj/item/roguekey/mages_university/head_mage
+	name = "head mage key"
+	desc = "The one key in each university branch that isn't as prolific as the rest - the head mage's own key for the office and private quarters."
+	icon_state = "spikekey"
+	lockid = "head_mage"
+
 /obj/item/roguekey/deacon
 	name = "deacon key"
 	desc = "The key smells of herbs, feeling soothing to the touch."
