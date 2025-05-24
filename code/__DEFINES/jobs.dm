@@ -123,8 +123,7 @@
 #define PRIEST					(1<<0)
 #define MONK					(1<<1)
 #define TEMPLAR					(1<<2)
-#define SOILSON					(1<<3)
-#define CHURCHLING				(1<<4)
+#define CHURCHLING				(1<<3)
 
 #define COURTIERS					(1<<3)
 
@@ -150,11 +149,12 @@
 #define ADVENTURER				(1<<1)
 #define PILGRIM					(1<<2)
 #define VILLAGER				(1<<3)
-#define LUNATIC					(1<<4)
-#define MIGRANT					(1<<5)
-#define BANDIT					(1<<6)
-#define COURTAGENT				(1<<7)
-#define ELDER					(1<<8)
+#define SOILSON					(1<<4)
+#define LUNATIC					(1<<5)
+#define MIGRANT					(1<<6)
+#define BANDIT					(1<<7)
+#define COURTAGENT				(1<<8)
+#define ELDER					(1<<9)
 
 #define MAGES_UNIVERSITY			(1<<7)
 
@@ -222,20 +222,20 @@
 /// Church
 #define JDO_PRIEST 29
 #define JDO_MONK 30
-#define JDO_SOILSON 31
-#define JDO_TEMPLAR 32
-#define JDO_CHURCHLING 33
+#define JDO_TEMPLAR 31
+#define JDO_CHURCHLING 32
 
 /// Town
-#define JDO_MERCHANT 34
-#define JDO_SHOPHAND 35
+#define JDO_MERCHANT 33
+#define JDO_SHOPHAND 34
 
-#define JDO_CHIEF 36
-#define JDO_BLACKSMITH 37
-#define JDO_APPRENTICE 38
+#define JDO_CHIEF 35
+#define JDO_BLACKSMITH 36
+#define JDO_APPRENTICE 37
 
-#define JDO_BARKEEP 39
-#define JDO_KNAVEWENCH 40
+#define JDO_BARKEEP 38
+#define JDO_KNAVEWENCH 39
+#define JDO_SOILSON 40
 #define JDO_JANITOR 41
 
 #define JDO_VILLAGER 42
@@ -278,12 +278,11 @@
 	/datum/job/roguetown/churchling,\
 	/datum/job/roguetown/acolyte,\
 	/datum/job/roguetown/priest,\
-	/datum/job/roguetown/templar, \
-	/datum/job/roguetown/soilson,\
+	/datum/job/roguetown/templar
 
 #define PEASANT_ROLES \
 	/datum/job/roguetown/towner,\
-	/datum/job/roguetown/butcher,\
+	/datum/job/roguetown/soilson,\
 	/datum/job/roguetown/cook,\
 	/datum/job/roguetown/knavewench,\
 	/datum/job/roguetown/lunatic,\

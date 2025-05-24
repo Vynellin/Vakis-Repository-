@@ -2,13 +2,12 @@
 	title = "Soilson"
 	f_title = "Soilbride"
 	flag = SOILSON
-	department_flag = CHURCHMEN
-	selection_color = JCOLOR_CHURCH
+	department_flag = PEASANTS
+	selection_color = JCOLOR_PEASANT
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 5
 	display_order = JDO_SOILSON
-	selection_color = JCOLOR_CHURCH
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
 
