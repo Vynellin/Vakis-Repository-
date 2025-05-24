@@ -153,7 +153,7 @@
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 
 	H.adjust_blindness(-3)
-	var/weapons = list("Crossbow","Bow","Sling")
+	var/weapons = list("Crossbow","Bow","Sling","Handgonner")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
 	switch(weapon_choice)
@@ -169,6 +169,11 @@
 			beltr = /obj/item/quiver/sling/iron
 			r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/sling // Both are belt slots and it's not worth setting where the cugel goes for everyone else, sad.
 			H.mind.adjust_skillrank(/datum/skill/combat/slings, 1, TRUE)
+		if("Handgonner")
+			r_hand = /obj/item/powderhorn 
+			beltr =  /obj/item/ammopouch/bullets
+			backl = /obj/item/gun/ballistic/handgonne
+			H.mind.adjust_skillrank(/datum/skill/combat/firearms, 3, TRUE)
 
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/storage/keyring/guardcastle)
 	H.verbs |= /mob/proc/haltyell
