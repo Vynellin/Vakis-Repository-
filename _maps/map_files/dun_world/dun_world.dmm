@@ -11655,7 +11655,8 @@
 	},
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "eZA" = (
-/turf/closed/mineral/random/rogue,
+/obj/effect/spawner/lootdrop/roguetown/sewers,
+/turf/open/floor/rogue/dirt,
 /area/rogue/under/town/sewer)
 "eZF" = (
 /obj/structure/rack/rogue/shelf/biggest,
@@ -12480,6 +12481,9 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement)
+"fra" = (
+/turf/closed/mineral/random/rogue,
+/area/rogue/under/town/sewer)
 "frc" = (
 /obj/structure/fluff/railing/wood{
 	layer = 4.51
@@ -23127,6 +23131,10 @@
 	},
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/under/cave)
+"jRp" = (
+/obj/structure/bed/rogue/shit,
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/under/town/sewer)
 "jRq" = (
 /obj/structure/fluff/walldeco/bsmith{
 	name = "DWARVEN KEEP"
@@ -45293,6 +45301,12 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town/manor)
+"thQ" = (
+/obj/structure/chair/wood/rogue{
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/town/sewer)
 "til" = (
 /obj/structure/bars/passage/shutter{
 	redstone_id = "scary_manor"
@@ -46038,6 +46052,10 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/under/town/basement/keep)
+"tyW" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/under/town/sewer)
 "tzc" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -54133,6 +54151,10 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/misc,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/under/town/basement)
+"wZf" = (
+/obj/structure/fermenting_barrel/random/beer,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/town/sewer)
 "wZk" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/cobblerock,
@@ -134563,7 +134585,7 @@ bhJ
 bhJ
 xAN
 ylh
-ylh
+mMx
 ylh
 urZ
 ylh
@@ -135013,10 +135035,10 @@ bhJ
 bhJ
 bhJ
 bhJ
-pby
-opX
-opX
-tWT
+xAN
+ylh
+mMx
+tUX
 opX
 opX
 opX
@@ -135465,9 +135487,9 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
+xAN
+urZ
+mMx
 xAN
 cHC
 vbQ
@@ -135500,7 +135522,7 @@ eUx
 eUx
 eUx
 eUx
-eZA
+fra
 dlK
 dlK
 qpC
@@ -135917,9 +135939,9 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
+xAN
+ylh
+mMx
 xAN
 fyw
 lTv
@@ -135950,9 +135972,9 @@ eUx
 eUx
 eUx
 eUx
-eZA
-eZA
-eZA
+fra
+fra
+fra
 xAN
 ylh
 mMx
@@ -136360,18 +136382,18 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
+tUX
+opX
+opX
+opX
+opX
+opX
+opX
+opX
+opX
+jgd
+ylh
+mMx
 xAN
 cHC
 cHC
@@ -136401,10 +136423,10 @@ eUx
 xCK
 eUx
 eUx
-eZA
-eZA
-eZA
-eZA
+fra
+fra
+fra
+fra
 xAN
 ylh
 mMx
@@ -136812,18 +136834,18 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
+xAN
+ylh
+ylh
+ylh
+urZ
+ylh
+urZ
+ylh
+urZ
+dxA
+ylh
+mMx
 xAN
 cCn
 cHC
@@ -136853,10 +136875,10 @@ xCK
 xCK
 xCK
 xCK
-eZA
-eZA
-eZA
-eZA
+fra
+fra
+fra
+fra
 xAN
 ylh
 mMx
@@ -137264,18 +137286,18 @@ jEk
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
+xAN
+ylh
+mMx
+mMx
+mMx
+wDz
+wDz
+wDz
+mMx
+wDz
+mMx
+mMx
 xAN
 uUL
 hOJ
@@ -137716,19 +137738,19 @@ xAN
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-pby
+xAN
+urZ
+mMx
+tUX
+opX
+opX
+opX
+opX
+opX
+opX
+opX
+opX
+oVh
 opX
 opX
 opX
@@ -138168,9 +138190,9 @@ xAN
 bhJ
 bhJ
 bhJ
-tUX
-opX
-opX
+xAN
+ylh
+mMx
 dlK
 leX
 fAm
@@ -139972,11 +139994,11 @@ lhY
 mMx
 mMx
 mMx
-xAN
-bhJ
-bhJ
-bhJ
-xAN
+fAc
+opX
+opX
+opX
+wvi
 urZ
 mMx
 xAN
@@ -140425,9 +140447,9 @@ mMx
 mMx
 ylh
 xAN
-bhJ
-bhJ
-bhJ
+wZf
+wZf
+eZA
 xAN
 urZ
 mMx
@@ -140877,10 +140899,10 @@ ylh
 mMx
 ylh
 xAN
-bhJ
-bhJ
-bhJ
-xAN
+ylh
+daP
+tyW
+dlK
 urZ
 mMx
 xAN
@@ -141329,10 +141351,10 @@ ylh
 mMx
 ylh
 xAN
-bhJ
-bhJ
-bhJ
-xAN
+daP
+sMT
+thQ
+pPu
 ylh
 mMx
 xAN
@@ -141781,10 +141803,10 @@ urZ
 mMx
 ylh
 xAN
-bhJ
-bhJ
-bhJ
-xAN
+jRp
+daP
+daP
+dlK
 ylh
 mMx
 xAN
