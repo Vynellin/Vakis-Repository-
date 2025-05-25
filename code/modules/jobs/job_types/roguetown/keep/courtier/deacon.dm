@@ -73,5 +73,5 @@
 			H.change_stat("intelligence", 1)
 			H.change_stat("perception", 1)
 	var/datum/devotion/C = new /datum/devotion(H, H.patron) // This creates the cleric holder used for devotion spells
-	C.grant_spells_monk(H) // There can only be one true priest, so you're acolyte-tier.
+	C.grant_spells_deacon(H) // There can only be one true priest, so you're not as good.
 	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
