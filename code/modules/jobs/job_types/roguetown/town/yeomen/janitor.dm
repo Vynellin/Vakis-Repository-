@@ -5,14 +5,15 @@
 	department_flag = YEOMEN
 	selection_color = JCOLOR_YEOMAN
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 1
+	spawn_positions = 1
+	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation) // No soap no problem. Man's gotta clean...
 
 	allowed_races = RACES_ALL_KINDS
 	tutorial = "Yours is a creed most would never imagine to take - laid logs and fundation, cobble and wall. Tasked to maintain and clean the Marquis' township, \
 				you now serve as a trusted handyman around town; wherever all or none would dare tread."
 
-	min_pq = null
+	min_pq = -5
 	max_pq = null
 
 	outfit = /datum/outfit/job/roguetown/janitor
