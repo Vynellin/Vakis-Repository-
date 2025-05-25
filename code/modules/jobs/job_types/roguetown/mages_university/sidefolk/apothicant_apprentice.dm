@@ -9,6 +9,7 @@
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT)
+	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 
 	tutorial = "You're a novice study on Alchemy under the Mage's University, doing your best to learn and hone your \
 				craft under the tutelage of Sunmarch's guildhall for the Mage's University and it's leader therein. \

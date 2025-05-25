@@ -13,6 +13,7 @@
 				While you tutor understudies in a handful of Apothicant Apprentices, it's a rewarding craft that's helped \
 				Solaris Ridge - and your own coin, goodness knows - more times than you can fathom remembering."
 
+	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	outfit = /datum/outfit/job/roguetown/alchemist
 	display_order = JDO_ALCHEMIST
 	display_order = 6

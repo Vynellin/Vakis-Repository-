@@ -7,6 +7,7 @@
 	total_positions = 3
 	spawn_positions = 2
 
+	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)
 

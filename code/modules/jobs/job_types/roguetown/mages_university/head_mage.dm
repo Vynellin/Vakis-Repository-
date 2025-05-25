@@ -9,6 +9,7 @@
 
 	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)
+	spells = list(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation, /obj/effect/proc_holder/spell/invoked/projectile/fireball/greater)
 
 	tutorial = "You are the highest-ranking member of the local branch of the Mage's University, having honed your skills for years upon years \
 				in every field of study that even berefts Kasmidian's realm - and yet in spite of your stature, in spite of the micromanaging and \
