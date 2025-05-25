@@ -315,7 +315,6 @@
 			head = /obj/item/clothing/head/roguetown/tamarimask
 			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
 			backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
-			H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
 			if(H.mind) // Mostly based off the old druid job with some minor tweaks and cuts. THESE druids are still ambushable
 				H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 				H.mind.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
@@ -345,9 +344,9 @@
 				H.change_stat("perception", -1)
 			ADD_TRAIT(H, TRAIT_SEEDKNOW, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_OUTDOORSMAN, TRAIT_GENERIC)
-			ADD_TRAIT(H, TRAIT_RITUALIST, TRAIT_GENERIC)
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_spells_monk(H) // Equivalent skills to an acolyte rather than the priest
+			H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
 
 	switch(H.patron?.type)
 		if(/datum/patron/lording_three/aeternus)
