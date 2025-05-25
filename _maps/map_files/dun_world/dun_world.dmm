@@ -2211,6 +2211,12 @@
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/woods)
+"aWR" = (
+/obj/structure/fluff/littlebanners/bluewhite{
+	pixel_y = -6
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "aWS" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -2730,6 +2736,9 @@
 "bhX" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4
+	},
+/obj/structure/fluff/littlebanners/bluewhite{
+	pixel_y = -6
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
@@ -10974,6 +10983,10 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/mountains)
+"eLz" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/under/town/sewer)
 "eLL" = (
 /obj/item/natural/stone{
 	icon_state = "stone5"
@@ -11655,8 +11668,7 @@
 	},
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "eZA" = (
-/obj/effect/spawner/lootdrop/roguetown/sewers,
-/turf/open/floor/rogue/dirt,
+/turf/closed/mineral/random/rogue,
 /area/rogue/under/town/sewer)
 "eZF" = (
 /obj/structure/rack/rogue/shelf/biggest,
@@ -12481,9 +12493,6 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/basement)
-"fra" = (
-/turf/closed/mineral/random/rogue,
-/area/rogue/under/town/sewer)
 "frc" = (
 /obj/structure/fluff/railing/wood{
 	layer = 4.51
@@ -12548,6 +12557,9 @@
 "fsi" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
+	},
+/obj/structure/fluff/littlebanners/bluewhite{
+	pixel_y = -6
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
@@ -13151,6 +13163,12 @@
 /obj/item/natural/stone,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/beach/forest)
+"fGj" = (
+/obj/structure/chair/wood/rogue{
+	dir = 1
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/town/sewer)
 "fGm" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1
@@ -21015,6 +21033,10 @@
 /obj/item/natural/stone,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
+"iXb" = (
+/obj/effect/spawner/lootdrop/roguetown/sewers,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/town/sewer)
 "iXc" = (
 /turf/open/floor/rogue/twig,
 /area/rogue/outdoors/town/roofs/keep)
@@ -23131,10 +23153,6 @@
 	},
 /turf/closed/mineral/rogue/bedrock,
 /area/rogue/under/cave)
-"jRp" = (
-/obj/structure/bed/rogue/shit,
-/turf/open/floor/rogue/blocks/green,
-/area/rogue/under/town/sewer)
 "jRq" = (
 /obj/structure/fluff/walldeco/bsmith{
 	name = "DWARVEN KEEP"
@@ -27073,6 +27091,10 @@
 /obj/structure/stairs,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/shelter/woods)
+"lBb" = (
+/obj/structure/fermenting_barrel/random/beer,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/town/sewer)
 "lBp" = (
 /mob/living/carbon/human/species/skeleton/npc,
 /turf/open/floor/rogue/carpet/lord/right,
@@ -45301,12 +45323,6 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town/manor)
-"thQ" = (
-/obj/structure/chair/wood/rogue{
-	dir = 1
-	},
-/turf/open/floor/rogue/dirt,
-/area/rogue/under/town/sewer)
 "til" = (
 /obj/structure/bars/passage/shutter{
 	redstone_id = "scary_manor"
@@ -46052,10 +46068,6 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/under/town/basement/keep)
-"tyW" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/open/floor/rogue/blocks/green,
-/area/rogue/under/town/sewer)
 "tzc" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -46281,6 +46293,9 @@
 	},
 /obj/effect/decal/cobbleedge{
 	dir = 5
+	},
+/obj/structure/fluff/littlebanners/bluewhite{
+	pixel_y = -6
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
@@ -51665,6 +51680,10 @@
 	},
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/shelter)
+"vRP" = (
+/obj/structure/bed/rogue/shit,
+/turf/open/floor/rogue/blocks/green,
+/area/rogue/under/town/sewer)
 "vRU" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/orc/spear2,
 /turf/open/floor/rogue/blocks,
@@ -54151,10 +54170,6 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/misc,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/under/town/basement)
-"wZf" = (
-/obj/structure/fermenting_barrel/random/beer,
-/turf/open/floor/rogue/dirt,
-/area/rogue/under/town/sewer)
 "wZk" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/cobblerock,
@@ -135522,7 +135537,7 @@ eUx
 eUx
 eUx
 eUx
-fra
+eZA
 dlK
 dlK
 qpC
@@ -135972,9 +135987,9 @@ eUx
 eUx
 eUx
 eUx
-fra
-fra
-fra
+eZA
+eZA
+eZA
 xAN
 ylh
 mMx
@@ -136423,10 +136438,10 @@ eUx
 xCK
 eUx
 eUx
-fra
-fra
-fra
-fra
+eZA
+eZA
+eZA
+eZA
 xAN
 ylh
 mMx
@@ -136875,10 +136890,10 @@ xCK
 xCK
 xCK
 xCK
-fra
-fra
-fra
-fra
+eZA
+eZA
+eZA
+eZA
 xAN
 ylh
 mMx
@@ -140447,9 +140462,9 @@ mMx
 mMx
 ylh
 xAN
-wZf
-wZf
-eZA
+lBb
+lBb
+iXb
 xAN
 urZ
 mMx
@@ -140901,7 +140916,7 @@ ylh
 xAN
 ylh
 daP
-tyW
+eLz
 dlK
 urZ
 mMx
@@ -141353,7 +141368,7 @@ ylh
 xAN
 daP
 sMT
-thQ
+fGj
 pPu
 ylh
 mMx
@@ -141803,7 +141818,7 @@ urZ
 mMx
 ylh
 xAN
-jRp
+vRP
 daP
 daP
 dlK
@@ -236738,7 +236753,7 @@ vcy
 xNi
 xNi
 xNi
-vcy
+gEW
 qyR
 wyE
 qyR
@@ -237190,8 +237205,8 @@ vcy
 nvV
 nvV
 nvV
-nvV
-vcy
+wfd
+roa
 nea
 qyR
 oPT
@@ -238998,8 +239013,8 @@ vcy
 nvV
 nvV
 nvV
-nvV
-vcy
+wfd
+roa
 nea
 nJH
 sns
@@ -239450,7 +239465,7 @@ vcy
 rry
 rry
 rry
-vcy
+oxE
 jQT
 nJH
 sns
@@ -248025,7 +248040,7 @@ dQI
 qok
 sns
 sns
-sns
+vOG
 sns
 sns
 sns
@@ -248477,7 +248492,7 @@ sns
 wND
 sns
 sns
-sns
+vOG
 sns
 sns
 ygS
@@ -248929,7 +248944,7 @@ sns
 sns
 qfA
 qfA
-sns
+vOG
 sns
 sns
 sns
@@ -248940,7 +248955,7 @@ sns
 sns
 sns
 exD
-exD
+aWR
 exD
 sns
 lyL
@@ -249381,7 +249396,7 @@ sns
 sns
 sns
 sns
-sns
+vOG
 qxe
 sns
 sns
@@ -249392,7 +249407,7 @@ sns
 sns
 exD
 sns
-exD
+aWR
 exD
 sns
 exD
@@ -249844,7 +249859,7 @@ sns
 klm
 sns
 sns
-exD
+aWR
 exD
 sns
 sns
@@ -250296,7 +250311,7 @@ hrc
 cDX
 exD
 exD
-sns
+vOG
 sns
 exD
 exD
@@ -268870,7 +268885,7 @@ sns
 sns
 sns
 sns
-sns
+vOG
 qok
 njB
 lKo
@@ -269322,7 +269337,7 @@ sns
 sns
 sns
 sns
-sns
+vOG
 sns
 kkc
 cDX
