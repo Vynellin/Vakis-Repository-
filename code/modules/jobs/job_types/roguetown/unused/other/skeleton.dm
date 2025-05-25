@@ -87,5 +87,6 @@
 	H.STASPD = rand(7,10)
 	H.STAINT = 1
 	H.STACON = 3
-	var/datum/antagonist/new_antag = new /datum/antagonist/skeleton()
-	H.mind.add_antag_datum(new_antag)
+	if(H.mind)
+		var/datum/antagonist/new_antag = new /datum/antagonist/skeleton()
+		H.mind.add_antag_datum(new_antag)
