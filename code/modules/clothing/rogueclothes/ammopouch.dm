@@ -60,6 +60,8 @@
 	else
 		icon_state = "pouch0"
 
+// Experimental code from quivers to try to get scooping to work
+
 /obj/item/ammopouch/bullets/Initialize()
 	..()
 	for(var/i in 1 to max_storage)
@@ -67,3 +69,37 @@
 		bullets += A
 	update_icon()
 
+/obj/item/ammopouch/attack_turf(turf/T, mob/living/user)
+	if(bullets.len >= max_storage)
+		to_chat(user, span_warning("My [src.name] is full!"))
+		return
+	to_chat(user, span_notice("I begin to gather the ammunition..."))
+	for(var/obj/item/ammo_casing/caseless/rogue/bullets in T.contents)
+		if(do_after(user, 5))
+			if(!eatarrow(bullets))
+				break
+
+
+/obj/item/ammopouch/proc/eatarrow(obj/A)
+	if(A.type in subtypesof(/obj/item/ammo_casing/caseless/rogue))
+		if(bullets.len < max_storage)
+			A.forceMove(src)
+			bullets += A
+			update_icon()
+			return TRUE
+		else
+			return FALSE
+
+/obj/item/ammopouch/attack_self(mob/living/user)
+	..()
+
+	if (!bullets.len)
+		return
+	to_chat(user, span_warning("I begin to take out the shot from [src], one by one..."))
+	for(var/obj/item/ammo_casing/caseless/rogue/bullets in bullets)
+		if(!do_after(user, 0.5 SECONDS))
+			return
+		bullets.forceMove(user.loc)
+		bullets -= bullets
+
+	update_icon()
