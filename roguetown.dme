@@ -1343,6 +1343,7 @@
 #include "code\modules\jobs\job_types\roguetown\town\yeomen\blacksmith.dm"
 #include "code\modules\jobs\job_types\roguetown\town\yeomen\janitor.dm"
 #include "code\modules\jobs\job_types\roguetown\town\yeomen\merchant.dm"
+#include "code\modules\jobs\job_types\roguetown\town\yeomen\tailor.dm"
 #include "code\modules\jobs\job_types\roguetown\unused\other\deathknight.dm"
 #include "code\modules\jobs\job_types\roguetown\unused\other\skeleton.dm"
 #include "code\modules\jobs\job_types\roguetown\unused\other\tester.dm"
