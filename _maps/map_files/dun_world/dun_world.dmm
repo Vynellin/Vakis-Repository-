@@ -11482,7 +11482,9 @@
 /turf/open/floor/carpet/red,
 /area/rogue/under/cave/undeadmanor)
 "eTl" = (
-/obj/structure/stairs,
+/obj/structure/stairs{
+	dir = 1
+	},
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
