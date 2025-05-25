@@ -27455,10 +27455,6 @@
 /obj/effect/decal/cobbleedge,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/town/basement)
-"lCY" = (
-/obj/machinery/light/rogue/lanternpost,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/rtfield)
 "lDb" = (
 /obj/effect/spawner/roguemap/hauntpile,
 /turf/open/floor/rogue/dirt,
@@ -285248,7 +285244,7 @@ ebU
 ebU
 ebU
 ebU
-lCY
+ebU
 ebU
 ebU
 ebU
