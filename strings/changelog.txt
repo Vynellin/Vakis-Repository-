@@ -1,9 +1,7 @@
 Welcome back to Solaris!
-What's not a gnelf? Not a gnoblin? GNOMES! Now playable!
-Pilgrims are now selectable roundstart and via latejoin directly rather than being migrant locked.
-Flag color selection has been expanded significantly, with the default colors now white and gold.
-Botany has been expanded heavily with new crops to work on and with - treats blooming from from each!
-Combat music has been overhauled, alongside more area tracks!
-Potion's color significance has been inverted, and their descriptions less made grim-dark-ish.
+The job reshuffle is (currently being) tested! Come muck about in the new time!
+As a result of the job reshuffling, the town has been massively shifted around! Peek around, have fun, and get silly.
+With Varielle's description completed, all in-game god lore is finished!
+Food has been expanded again! The inn's going to be eating well...
 
 Have fun!
