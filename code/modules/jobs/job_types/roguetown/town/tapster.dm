@@ -5,8 +5,8 @@
 	department_flag = PEASANTS
 	selection_color = JCOLOR_PEASANT
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 5
+	spawn_positions = 5
 
 	allowed_races = RACES_ALL_KINDS
 	tutorial = "You have a simple role at the Rasurian Pint; please. You wait tables and help guests, clean the rooms, grow and brew more drink, and assist in the kitchens as need be. Bring a smile to the masses - and those cheapsake townsfolk and adventurers might just give you an extra coin..."
