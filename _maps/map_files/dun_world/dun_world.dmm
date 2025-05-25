@@ -8148,7 +8148,9 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "dBz" = (
-/obj/structure/chair/wood/rogue/fancy,
+/obj/structure/chair/wood/rogue/fancy{
+	dir = 1
+	},
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
@@ -15916,9 +15918,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "gNv" = (
-/obj/structure/chair/wood/rogue{
-	dir = 1
-	},
+/obj/structure/chair/wood/rogue,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/magician)
 "gNL" = (
