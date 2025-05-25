@@ -4427,6 +4427,12 @@
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/beach/forest)
+"bTs" = (
+/obj/structure/roguemachine/mail/directional/south{
+	mailtag = "Janitor's Abode"
+	},
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/town)
 "bTy" = (
 /obj/structure/closet/crate/chest,
 /obj/item/paper/scroll,
@@ -25432,6 +25438,12 @@
 /obj/structure/fermenting_barrel,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
+"kSq" = (
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/item/soap,
+/obj/item/soap,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/town)
 "kSt" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobble,
@@ -28686,7 +28698,9 @@
 	icon_state = "longtable"
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
-/obj/item/reagent_containers/glass/bucket/wooden,
+/obj/item/reagent_containers/glass/bucket/wooden{
+	pixel_y = 11
+	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town)
 "mlM" = (
@@ -35866,6 +35880,10 @@
 /obj/structure/bars,
 /turf/open/floor/rogue/tile,
 /area/rogue/under/town/basement/keep)
+"pnB" = (
+/obj/structure/roguemachine/withdraw/directional/south,
+/turf/open/floor/rogue/ruinedwood/turned,
+/area/rogue/indoors/town)
 "pnE" = (
 /obj/structure/mineral_door/wood/donjon{
 	lockid = "garrison";
@@ -38452,6 +38470,10 @@
 /area/rogue/outdoors/woods)
 "qou" = (
 /turf/closed/wall/mineral/rogue/pipe,
+/area/rogue/indoors/town)
+"qoQ" = (
+/obj/structure/roguemachine/stockpile/directional/south,
+/turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/town)
 "qpd" = (
 /obj/structure/rack/rogue,
@@ -271531,7 +271553,7 @@ iFR
 pWT
 njB
 uBc
-xsM
+kSq
 sLj
 sGO
 uBc
@@ -273341,7 +273363,7 @@ uBc
 uBc
 cDX
 vMX
-sLj
+bTs
 uBc
 gyu
 cDX
@@ -273793,7 +273815,7 @@ kDM
 sLj
 uBc
 sLj
-sLj
+pnB
 uBc
 lKO
 lKo
@@ -274245,7 +274267,7 @@ wpN
 sLj
 xdc
 sLj
-sLj
+qoQ
 uBc
 phl
 phl
