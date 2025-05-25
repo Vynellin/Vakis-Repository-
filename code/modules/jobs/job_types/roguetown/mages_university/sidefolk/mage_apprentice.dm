@@ -78,10 +78,10 @@
 		H.change_stat("perception", 1)
 		
 /datum/advclass/wapprentice/apprentice
-	name = "Panicked Scholar"
-	tutorial = "You had the odd habit of performing tricks with the spells you'd learnt in the town square - and one day enough, that work led to a Noble's attention.\
-				Promised a position in the court should you continue your studies, your once carefree attitude has been slammed against the realities of achieving your \
-				dreams -- though you're quite sure that you're not going down without a fight... after a nap, or two."
+	name = "Associtate Magician"
+	tutorial = "You've studied hard and found some semblance of path in Kasmidian's realm. The years have been \
+				hard, they've been gruelling - but you've managed well enough. All the hours studying late into \
+				the night have cut at you, though, and physical tasks seem all-the-harder than they used to..."
 	outfit = /datum/outfit/job/roguetown/wapprentice/apprentice
 	
 	category_tags = list(CTAG_WAPPRENTICE)
