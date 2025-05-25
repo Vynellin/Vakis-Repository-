@@ -19472,6 +19472,10 @@
 /obj/structure/spacevine,
 /turf/open/water/swamp/deep,
 /area/rogue/under/cavewet/bogcaves)
+"ira" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/west,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/rogue/indoors/town/physician)
 "irb" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/rogue/blocks,
@@ -32541,6 +32545,7 @@
 /obj/effect/decal/herringbone{
 	dir = 8
 	},
+/obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/physician)
 "nQL" = (
@@ -34676,6 +34681,7 @@
 /obj/effect/decal/herringbone{
 	dir = 4
 	},
+/obj/machinery/light/rogue/wallfire/candle/directional/west,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/physician)
 "oNs" = (
@@ -56195,6 +56201,7 @@
 	dir = 9
 	},
 /obj/structure/fluff/railing/border,
+/obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/physician)
 "xUz" = (
@@ -272444,7 +272451,7 @@ vRV
 nbL
 eEy
 dJo
-dJo
+ira
 dJo
 dJo
 dhV
@@ -377308,7 +377315,7 @@ bGf
 bGf
 bGf
 bGf
-gPs
+bGf
 bGf
 bGf
 bGf
@@ -484873,7 +484880,7 @@ bGf
 bGf
 bGf
 bGf
-pFA
+bGf
 bGf
 bGf
 cDX

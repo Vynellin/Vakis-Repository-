@@ -19,7 +19,7 @@
 	give_bank_account = 8
 	min_pq = 4 // Head of the damn "department"
 	max_pq = null
-	round_contrib_points = 2
+	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_bandit_mage.ogg'
 
 /datum/outfit/job/roguetown/head_mage/pre_equip(mob/living/carbon/human/H)
