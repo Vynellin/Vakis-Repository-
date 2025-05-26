@@ -33109,8 +33109,7 @@
 "nVe" = (
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1;
-	lockid = "undercroft";
-	name = "Chapel Undercroft"
+	lockid = "church"
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/church)

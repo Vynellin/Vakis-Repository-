@@ -392,12 +392,6 @@
 	icon_state = "greenkey"
 	lockid = "deacon"
 
-/obj/item/roguekey/undercroft
-	name = "undercroft key"
-	desc = "This key opens the doors leading into the church's undercroft."
-	icon_state = "brownkey"
-	lockid = "undercroft"
-
 /obj/item/roguekey/inhumen
 	name = "ancient key"
 	desc = "A ancient, rusty key. There's no telling where this leads."
