@@ -18581,6 +18581,14 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/town/garrison)
+"hUf" = (
+/obj/structure/mineral_door/wood/fancywood{
+	name = "Established Mage Hall";
+	lockid = "magesuniversity_private";
+	locked = 1
+	},
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/rogue/indoors/town)
 "hUo" = (
 /obj/structure/closet/crate/chest{
 	base_icon_state = "woodchestalt";
@@ -38122,7 +38130,7 @@
 /area/rogue/outdoors/town/roofs)
 "pYV" = (
 /obj/structure/table/wood{
-	dir = 8;
+	dir = 4;
 	icon_state = "largetable"
 	},
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -45192,7 +45200,7 @@
 /turf/open/floor/rogue/blocks/newstone,
 /area/rogue/indoors/town/church)
 "sVw" = (
-/obj/structure/roguewindow/openclose/reinforced{
+/obj/structure/roguewindow/openclose{
 	dir = 1
 	},
 /turf/open/floor/rogue/tile/brick,
@@ -54199,14 +54207,6 @@
 "wLk" = (
 /turf/closed/wall/mineral/rogue/decostone/long,
 /area/rogue/indoors/cave)
-"wLs" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Established Mage Hall";
-	lockid = "magesuniversity_private";
-	locked = 1
-	},
-/turf/open/floor/rogue/ruinedwood/herringbone,
-/area/rogue/indoors/town)
 "wLN" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -55798,7 +55798,7 @@
 /area/rogue/indoors/town/dwarfin)
 "xsW" = (
 /obj/structure/table/wood{
-	dir = 10;
+	dir = 6;
 	icon_state = "largetable"
 	},
 /turf/open/floor/rogue/herringbone,
@@ -371596,7 +371596,7 @@ bGf
 bGf
 fGz
 uBc
-wLs
+hUf
 fGz
 ins
 dFo
@@ -372040,7 +372040,7 @@ afK
 oBp
 wBe
 oxB
-cnq
+vFf
 jBr
 lir
 bGf
@@ -372492,7 +372492,7 @@ afK
 wzs
 wBe
 oxB
-vFf
+cnq
 jBr
 afK
 bGf
