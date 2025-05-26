@@ -27103,14 +27103,6 @@
 /obj/structure/mineral_door/wood/deadbolt,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/underdark)
-"luc" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Established Mage Hall";
-	lockid = "magesuniversity_private";
-	locked = 1
-	},
-/turf/open/floor/rogue/ruinedwood/herringbone,
-/area/rogue/indoors/town)
 "lue" = (
 /obj/structure/spacevine,
 /turf/open/floor/rogue/dirt,
@@ -54208,8 +54200,13 @@
 /turf/closed/wall/mineral/rogue/decostone/long,
 /area/rogue/indoors/cave)
 "wLs" = (
-/turf/closed,
-/area/rogue/outdoors/town)
+/obj/structure/mineral_door/wood/fancywood{
+	name = "Established Mage Hall";
+	lockid = "magesuniversity_private";
+	locked = 1
+	},
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/rogue/indoors/town)
 "wLN" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -268094,8 +268091,8 @@ dgy
 tut
 pBk
 fGz
-wLs
-wLs
+sns
+sns
 eKH
 lSO
 jdu
@@ -371599,7 +371596,7 @@ bGf
 bGf
 fGz
 uBc
-luc
+wLs
 fGz
 ins
 dFo
