@@ -24711,6 +24711,13 @@
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/pond,
 /area/rogue/outdoors/mountains)
+"kvW" = (
+/obj/structure/mineral_door/wood/donjon/stone{
+	locked = 1;
+	lockid = "priest"
+	},
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town/church/chapel)
 "kwe" = (
 /obj/structure/table/wood,
 /turf/open/floor/rogue/churchmarble,
@@ -469199,7 +469206,7 @@ tqD
 ncx
 ncx
 rkY
-bfd
+kvW
 gQx
 gQx
 gQx
