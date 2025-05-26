@@ -43,8 +43,10 @@
 		H.become_blind("advsetup")
 		
 /datum/advclass/wapprentice/associate
-	name = "Apprentice Magician"
-	tutorial = /datum/job/roguetown/wapprentice::tutorial
+	name = "Associtate Magician"
+	tutorial = "You've studied hard and found some semblance of path in Kasmidian's realm. The years have been \
+				hard, they've been gruelling - but you've managed well enough. All the hours studying late into \
+				the night have cut at you, though, and physical tasks seem all-the-harder than they used to..."
 	outfit = /datum/outfit/job/roguetown/wapprentice/associate
 		
 	category_tags = list(CTAG_WAPPRENTICE)
@@ -78,10 +80,8 @@
 		H.change_stat("perception", 1)
 		
 /datum/advclass/wapprentice/apprentice
-	name = "Associtate Magician"
-	tutorial = "You've studied hard and found some semblance of path in Kasmidian's realm. The years have been \
-				hard, they've been gruelling - but you've managed well enough. All the hours studying late into \
-				the night have cut at you, though, and physical tasks seem all-the-harder than they used to..."
+	name = "Apprentice Magician"
+	tutorial = /datum/job/roguetown/wapprentice::tutorial
 	outfit = /datum/outfit/job/roguetown/wapprentice/apprentice
 	
 	category_tags = list(CTAG_WAPPRENTICE)
