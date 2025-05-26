@@ -11339,7 +11339,7 @@
 /turf/closed/wall/mineral/rogue/decostone/end{
 	dir = 8
 	},
-/area/rogue/outdoors/town/roofs/keep)
+/area/rogue/indoors/town)
 "eQT" = (
 /obj/structure/roguewindow/openclose/reinforced{
 	dir = 1
@@ -11726,7 +11726,7 @@
 /turf/closed/wall/mineral/rogue/decostone/end{
 	dir = 4
 	},
-/area/rogue/outdoors/town/roofs/keep)
+/area/rogue/indoors/town)
 "eYN" = (
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/blocks,
@@ -18581,10 +18581,6 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/town/garrison)
-"hUf" = (
-/obj/structure/roguewindow,
-/turf/open/floor/rogue/ruinedwood/turned,
-/area/rogue/indoors/town)
 "hUo" = (
 /obj/structure/closet/crate/chest{
 	base_icon_state = "woodchestalt";
@@ -27108,13 +27104,12 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/underdark)
 "luc" = (
-/obj/structure/mineral_door/wood/donjon{
-	dir = 1;
-	locked = 1;
-	lockid = "archive";
-	name = "Archivist's Office"
+/obj/structure/mineral_door/wood/fancywood{
+	name = "Established Mage Hall";
+	lockid = "magesuniversity_private";
+	locked = 1
 	},
-/turf/open/floor/rogue/herringbone,
+/turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "lue" = (
 /obj/structure/spacevine,
@@ -27510,6 +27505,7 @@
 /area/rogue/outdoors/mountains/decap)
 "lDV" = (
 /obj/structure/roguemachine/scomm/directional/east,
+/obj/structure/roguemachine/withdraw/directional/south,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town)
 "lEl" = (
@@ -38861,9 +38857,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
 "qom" = (
-/obj/structure/roguewindow/openclose/reinforced{
-	dir = 1
-	},
+/obj/structure/roguewindow,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/physician)
 "qon" = (
@@ -40447,6 +40441,9 @@
 "qVB" = (
 /obj/structure/roguemachine/atm/directional/south{
 	location_tag = "Archivist"
+	},
+/obj/structure/chair/wood/rogue{
+	dir = 8
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town)
@@ -43160,6 +43157,7 @@
 	dir = 8;
 	icon_state = "longtable"
 	},
+/obj/item/roguekey/vault,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "sdC" = (
@@ -47293,6 +47291,13 @@
 /obj/structure/fluff/walldeco/rpainting/forest{
 	pixel_x = -32
 	},
+/obj/structure/closet/crate/roguecloset,
+/obj/item/clothing/under/roguetown/tights/black,
+/obj/item/clothing/under/roguetown/tights/stockings/silk/black,
+/obj/item/clothing/shoes/roguetown/shortboots,
+/obj/item/clothing/suit/roguetown/shirt/tunic/random,
+/obj/item/clothing/suit/roguetown/shirt/tunic/random,
+/obj/item/clothing/cloak/half,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town)
 "tQS" = (
@@ -49700,13 +49705,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
-"uQw" = (
-/obj/structure/roguemachine/withdraw/directional/north,
-/obj/structure/chair/wood/rogue{
-	dir = 8
-	},
-/turf/open/floor/rogue/herringbone,
-/area/rogue/indoors/town)
 "uQE" = (
 /obj/item/reagent_containers/food/snacks/rogue/meat/mince,
 /turf/open/floor/rogue/dirt/road,
@@ -54210,16 +54208,8 @@
 /turf/closed/wall/mineral/rogue/decostone/long,
 /area/rogue/indoors/cave)
 "wLs" = (
-/obj/structure/closet/crate/roguecloset,
-/obj/item/clothing/cloak/half,
-/obj/item/clothing/suit/roguetown/shirt/tunic/random,
-/obj/item/clothing/suit/roguetown/shirt/tunic/random,
-/obj/item/clothing/shoes/roguetown/shortboots,
-/obj/item/clothing/under/roguetown/tights/stockings/silk/black,
-/obj/item/clothing/under/roguetown/tights/black,
-/obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
-/turf/open/floor/rogue/herringbone,
-/area/rogue/indoors/town)
+/turf/closed,
+/area/rogue/outdoors/town)
 "wLN" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -266747,7 +266737,7 @@ eZb
 xOt
 tdy
 sYZ
-ixf
+iHO
 sns
 nvQ
 uau
@@ -268099,13 +268089,13 @@ jWw
 fGz
 ins
 fGz
+cJw
+dgy
 tut
 pBk
-dgy
-cJw
 fGz
-sns
-sns
+wLs
+wLs
 eKH
 lSO
 jdu
@@ -268551,7 +268541,7 @@ ssq
 jWw
 tVe
 afK
-uQw
+wBe
 wBe
 wBe
 qVB
@@ -269007,7 +268997,7 @@ wBe
 qDB
 wBe
 wBe
-ixf
+iHO
 sns
 sns
 cDX
@@ -269459,7 +269449,7 @@ oID
 dkS
 xzE
 lDV
-luc
+afK
 sns
 sns
 sns
@@ -367548,8 +367538,8 @@ fGz
 fGz
 eja
 afK
-iJD
-iJD
+lKo
+lKo
 afK
 oTH
 fGz
@@ -368456,7 +368446,7 @@ bzY
 wBS
 tkB
 tkB
-hUf
+gyu
 gcG
 oiu
 aDs
@@ -368908,7 +368898,7 @@ bzY
 wBS
 fCk
 fCk
-hUf
+gyu
 gcG
 tYe
 aDs
@@ -370717,7 +370707,7 @@ xWk
 xWk
 krR
 krR
-hUf
+gyu
 tYe
 aDs
 skf
@@ -371609,7 +371599,7 @@ bGf
 bGf
 fGz
 uBc
-neQ
+luc
 fGz
 ins
 dFo
@@ -386977,7 +386967,7 @@ cNt
 kav
 nSc
 xcp
-wLs
+xzE
 sVw
 jdI
 eJy
