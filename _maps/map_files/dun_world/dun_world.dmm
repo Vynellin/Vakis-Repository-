@@ -2880,6 +2880,12 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
+"bkJ" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 8
+	},
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town/church/chapel)
 "bkK" = (
 /obj/effect/decal/remains/saiga,
 /turf/open/floor/rogue/dirt/road,
@@ -46065,6 +46071,12 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town)
+"tog" = (
+/obj/structure/chair/bench/church/smallbench{
+	dir = 4
+	},
+/turf/open/floor/rogue/tile/masonic/single,
+/area/rogue/indoors/town/church/chapel)
 "tor" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/floor/rogue/dirt/road,
@@ -349925,7 +349937,7 @@ vYC
 qBL
 wUh
 qBL
-qBL
+tog
 oKc
 oKc
 bGf
@@ -358061,7 +358073,7 @@ vYC
 qBL
 jus
 qBL
-qBL
+bkJ
 oKc
 oKc
 uBc
