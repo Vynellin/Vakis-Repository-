@@ -1259,6 +1259,7 @@
 #include "code\modules\jobs\job_types\roguetown\external\adventurer\bandit.dm"
 #include "code\modules\jobs\job_types\roguetown\external\adventurer\pilgrim.dm"
 #include "code\modules\jobs\job_types\roguetown\external\adventurer\towner.dm"
+#include "code\modules\jobs\job_types\roguetown\external\adventurer\wretch.dm"
 #include "code\modules\jobs\job_types\roguetown\external\adventurer\types\_advclass.dm"
 #include "code\modules\jobs\job_types\roguetown\external\adventurer\types\antag\brigand.dm"
 #include "code\modules\jobs\job_types\roguetown\external\adventurer\types\antag\hedgeknight.dm"

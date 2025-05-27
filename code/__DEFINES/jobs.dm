@@ -156,6 +156,7 @@
 #define BANDIT					(1<<7)
 #define COURTAGENT				(1<<8)
 #define ELDER					(1<<9)
+#define WRETCH					(1<<10)
 
 #define MAGES_UNIVERSITY			(1<<7)
 
@@ -248,8 +249,9 @@
 #define JDO_MIGRANT 46
 #define JDO_BANDIT 47
 #define JDO_COURTAGENT 48
+#define JDO_WRETCH 49
 
-#define JDO_LUNATIC 49 // ALWAYS keep lunatic last. It's a reward role for being a true sport.
+#define JDO_LUNATIC 50 // ALWAYS keep lunatic last. It's a reward role for being a true sport.
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
