@@ -12,6 +12,7 @@
 		log_mapping("[src] at [AREACOORD(src)] tried to set lockid, but lockid was already set!")
 		return
 	our_door.lockid = our_lockid
+	our_door.keylock = TRUE
 
 /// ANTAGONIST ///
 /obj/effect/mapping_helpers/access/antag
