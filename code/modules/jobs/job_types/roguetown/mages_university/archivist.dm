@@ -23,7 +23,7 @@
 
 /datum/outfit/job/roguetown/archivist/pre_equip(mob/living/carbon/human/H)
 	..()
-	backpack_contents = list(/obj/structure/mineral_door/wood/towner = 1)
+	backpack_contents = list(/obj/item/book/granter/spellbook/magician = 1)
 	if(should_wear_femme_clothes(H))
 		shirt = /obj/item/clothing/suit/roguetown/shirt/robe/archivist
 		pants = /obj/item/clothing/under/roguetown/tights/stockings/black
