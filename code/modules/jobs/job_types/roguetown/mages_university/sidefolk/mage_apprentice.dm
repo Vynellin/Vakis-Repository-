@@ -29,7 +29,6 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	belt = /obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/book/granter/spellbook/magician
 	beltr = /obj/item/storage/keyring/mages_university
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backr = /obj/item/rogueweapon/woodstaff
