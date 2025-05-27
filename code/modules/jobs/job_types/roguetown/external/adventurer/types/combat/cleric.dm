@@ -312,6 +312,7 @@
 			beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 			beltl = /obj/item/rogueweapon/whip //The whip itself is not often associated to many jobs. Druids feel like a thematic choice to have a self-defense whip
 			backl = /obj/item/storage/backpack/rogue/satchel
+			backr = /obj/item/rogueweapon/woodstaff
 			head = /obj/item/clothing/head/roguetown/tamarimask
 			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
 			backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
@@ -346,7 +347,6 @@
 			ADD_TRAIT(H, TRAIT_OUTDOORSMAN, TRAIT_GENERIC)
 			var/datum/devotion/C = new /datum/devotion(H, H.patron)
 			C.grant_spells_monk(H) // Equivalent skills to an acolyte rather than the priest
-			H.put_in_hands(new /obj/item/rogueweapon/woodstaff(H), TRUE) //To encourage them to wander the forests and to help defend themselves
 
 	switch(H.patron?.type)
 		if(/datum/patron/lording_three/aeternus)
