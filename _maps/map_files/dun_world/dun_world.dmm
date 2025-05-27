@@ -9428,8 +9428,8 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/shelter)
 "dYp" = (
-/obj/structure/roguemachine/scomm/directional/east,
-/turf/open/floor/rogue/tile/masonic/single,
+/obj/structure/roguemachine/scomm/directional/west,
+/turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/church/chapel)
 "dYq" = (
 /obj/structure/flora/newtree,
@@ -17316,10 +17316,6 @@
 	icon_state = "horzw"
 	},
 /area/rogue/outdoors/town)
-"hmH" = (
-/obj/structure/roguemachine/scomm/directional/east,
-/turf/open/floor/rogue/cobble,
-/area/rogue/indoors/town/church/chapel)
 "hmI" = (
 /obj/structure/well/fountain{
 	pixel_x = -16
@@ -22966,7 +22962,6 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
-/obj/structure/roguemachine/scomm/directional/north,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "jyb" = (
@@ -27288,10 +27283,7 @@
 /area/rogue/indoors/shelter)
 "lpD" = (
 /obj/structure/roguemachine/scomm/directional/west,
-/obj/effect/decal/cobbleedge{
-	dir = 5
-	},
-/turf/open/floor/rogue/cobble/mossy,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "lpG" = (
 /turf/closed/wall/mineral/rogue/decostone/end{
@@ -50717,13 +50709,6 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/licharena)
-"vfd" = (
-/obj/structure/roguemachine/scomm/directional/east,
-/obj/effect/decal/cobbleedge{
-	dir = 4
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/outdoors/town)
 "vfu" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -57338,9 +57323,6 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/orcdungeon)
-"yeo" = (
-/turf/open/floor/carpet/red,
-/area/rogue/under/cave)
 "yes" = (
 /obj/structure/closet/crate/roguecloset/dark{
 	locked = 1;
@@ -140258,7 +140240,7 @@ smL
 bhJ
 bhJ
 bhJ
-yeo
+bhJ
 bhJ
 bhJ
 bhJ
@@ -234244,7 +234226,7 @@ kEP
 nlW
 qyR
 oTQ
-lpD
+ass
 sns
 kfC
 bbG
@@ -235600,7 +235582,7 @@ gTY
 oKc
 oKc
 oKc
-sns
+iBJ
 sns
 bVy
 dQI
@@ -250531,7 +250513,7 @@ sns
 mME
 cne
 exD
-vfd
+btK
 rgb
 exD
 sns
@@ -258666,7 +258648,7 @@ exD
 exD
 exD
 exD
-exD
+lpD
 exD
 exD
 exD
@@ -358088,7 +358070,7 @@ wuO
 pze
 rPk
 bro
-dYp
+bro
 bro
 gqZ
 oKc
@@ -469739,7 +469721,7 @@ ixY
 lzC
 cdF
 gQx
-hmH
+gQx
 rhw
 bGf
 bGf
@@ -471084,7 +471066,7 @@ oKc
 oKc
 hjq
 qbd
-uDs
+dYp
 vzt
 oKc
 oKc
