@@ -12,7 +12,14 @@
 		log_mapping("[src] at [AREACOORD(src)] tried to set lockid, but lockid was already set!")
 		return
 	our_door.lockid = our_lockid
-	our_door.keylock = TRUE
+	if(GLOB.lockids[our_lockid])
+		our_door.lockhash = GLOB.lockids[our_lockid]
+	else
+		our_door.lockhash = rand(100,999)
+		while(our_door.lockhash in GLOB.lockhashes)
+			our_door.lockhash = rand(100,999)
+		GLOB.lockhashes += our_door.lockhash
+		GLOB.lockids[our_lockid] = our_door.lockhash
 
 /// ANTAGONIST ///
 /obj/effect/mapping_helpers/access/antag
