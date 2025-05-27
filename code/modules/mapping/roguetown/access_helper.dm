@@ -8,9 +8,6 @@
 	if(!our_lockid)
 		CRASH("No lockid configured for [src]!")
 	var/obj/structure/mineral_door/our_door = locate(/obj/structure/mineral_door) in loc
-	payload(our_door)
-
-/obj/effect/mapping_helpers/access/payload(obj/structure/mineral_door/our_door)
 	if(our_door.lockid != null)
 		log_mapping("[src] at [AREACOORD(src)] tried to set lockid, but lockid was already set!")
 		return
