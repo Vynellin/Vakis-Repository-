@@ -94,7 +94,6 @@ GLOBAL_LIST_INIT(church_positions, list(
 	/datum/job/roguetown/priest::title,
 	/datum/job/roguetown/acolyte::title,
 	/datum/job/roguetown/templar::title,
-	/datum/job/roguetown/soilson::title,
 	/datum/job/roguetown/churchling::title
 ))
 
@@ -117,6 +116,7 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 	/datum/job/roguetown/knavewench::title,
 	/datum/job/roguetown/woodsman::title,
 	/datum/job/roguetown/adventurer/courtagent::title
+	/datum/job/roguetown/soilson::title,
 ))
 
 GLOBAL_LIST_INIT(mages_university_positions, list(
