@@ -40747,7 +40747,7 @@
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "qTr" = (
 /obj/structure/roguemachine/mail/directional/north{
-	mailtag = "Grand Duke's Suite"
+	mailtag = "Marquis' Suite"
 	},
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
