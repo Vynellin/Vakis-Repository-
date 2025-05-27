@@ -6699,6 +6699,12 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/town/basement)
+"cPA" = (
+/obj/structure/fluff/walldeco/customflag{
+	pixel_x = 32
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/town)
 "cPF" = (
 /obj/structure/mineral_door/wood/fancywood{
 	locked = 1;
@@ -9428,9 +9434,11 @@
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/shelter)
 "dYp" = (
-/obj/structure/roguemachine/scomm/directional/west,
-/turf/open/floor/carpet/royalblack,
-/area/rogue/indoors/town/church/chapel)
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/town)
 "dYq" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassyel,
@@ -17315,6 +17323,10 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "horzw"
 	},
+/area/rogue/outdoors/town)
+"hmH" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/north,
+/turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
 "hmI" = (
 /obj/structure/well/fountain{
@@ -50709,6 +50721,12 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/licharena)
+"vfd" = (
+/obj/structure/fluff/walldeco/customflag{
+	pixel_x = 32
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "vfu" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -53549,9 +53567,9 @@
 /turf/closed/wall/mineral/rogue/decostone/long,
 /area/rogue/indoors/town/manor)
 "wss" = (
-/obj/machinery/light/rogue/wallfire/candle/directional/north,
-/turf/open/transparent/openspace,
-/area/rogue/indoors/town)
+/obj/structure/roguemachine/scomm/directional/west,
+/turf/open/floor/carpet/royalblack,
+/area/rogue/indoors/town/church/chapel)
 "wsv" = (
 /mob/living/carbon/human/species/goblin/npc/ambush,
 /turf/open/floor/rogue/twig,
@@ -54864,6 +54882,10 @@
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town/manor)
+"xbv" = (
+/obj/machinery/light/rogue/lanternpost,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/town)
 "xbB" = (
 /obj/structure/fluff/signage{
 	name = "SOLARIS RIDGE - EAST"
@@ -57323,6 +57345,12 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/cave/orcdungeon)
+"yeo" = (
+/obj/structure/chair/bench{
+	dir = 8
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/town)
 "yes" = (
 /obj/structure/closet/crate/roguecloset/dark{
 	locked = 1;
@@ -256808,7 +256836,7 @@ lKo
 cDX
 pWT
 nKf
-pWT
+jhP
 pWT
 njB
 exD
@@ -257258,7 +257286,7 @@ jiQ
 njB
 pWT
 pWT
-pWp
+pWT
 rYO
 yhF
 pWT
@@ -258614,13 +258642,13 @@ pxc
 vAX
 exD
 pWT
-pWT
+pWp
 rYO
-yhF
-fpx
-jhP
-njB
 exD
+cPA
+pWT
+njB
+vfd
 exD
 sns
 sns
@@ -259069,10 +259097,10 @@ gyu
 cDX
 nKf
 qyR
-fpx
+cne
 fpx
 exD
-eCc
+cne
 exD
 exD
 crS
@@ -259533,7 +259561,7 @@ fpx
 exD
 exD
 exD
-qyR
+fpx
 pWT
 pWT
 avX
@@ -259977,14 +260005,14 @@ phl
 phl
 phl
 phl
-exD
+hmH
 fpx
 exD
 fpx
 exD
 exD
 exD
-qyR
+fpx
 qyR
 eCc
 pWT
@@ -260426,7 +260454,7 @@ lKo
 lVE
 fpx
 phl
-wss
+bzY
 bSF
 gIW
 exD
@@ -260435,8 +260463,8 @@ fpx
 fpx
 pWT
 pWT
-pWT
-pWT
+exD
+exD
 pWT
 pWT
 pWT
@@ -260886,9 +260914,9 @@ fpx
 fpx
 jhP
 fpx
-pWT
-pWT
-pWT
+yeo
+dYp
+yeo
 jhP
 pWT
 jlj
@@ -261332,14 +261360,14 @@ gBc
 fpx
 fpx
 rcz
-fpx
+xbv
 pWT
 fpx
 fpx
 fpx
 fpx
 fpx
-pWT
+pWp
 pWT
 pWT
 jlj
@@ -374330,10 +374358,10 @@ lKo
 cDX
 bGf
 bGf
-bGf
-bGf
-bGf
-bGf
+vzV
+vzV
+vzV
+vzV
 bGf
 bGf
 bGf
@@ -374782,10 +374810,10 @@ cDX
 gyu
 bGf
 bGf
-bGf
-bGf
-bGf
-bGf
+vzV
+vzV
+vzV
+vzV
 bGf
 bGf
 bGf
@@ -375234,10 +375262,10 @@ bzY
 gyu
 bGf
 bGf
-kSK
-kSK
-kSK
-kSK
+vzV
+vzV
+vzV
+vzV
 bGf
 bGf
 bGf
@@ -375686,10 +375714,10 @@ spk
 gyu
 bGf
 bGf
-kSK
-kSK
-kSK
-kSK
+sfl
+sfl
+sfl
+sfl
 bGf
 bGf
 bGf
@@ -376138,10 +376166,10 @@ sYZ
 gyu
 bGf
 bGf
-kSK
-kSK
-kSK
-kSK
+dKo
+dKo
+dKo
+dKo
 bGf
 bGf
 bGf
@@ -471066,7 +471094,7 @@ oKc
 oKc
 hjq
 qbd
-dYp
+wss
 vzt
 oKc
 oKc
