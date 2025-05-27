@@ -21400,6 +21400,7 @@
 	pixel_y = 7
 	},
 /obj/item/rogueweapon/huntingknife/cleaver,
+/obj/structure/roguemachine/withdraw/directional/south,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church/chapel)
 "iYS" = (
@@ -25671,10 +25672,6 @@
 /mob/living/carbon/human/species/skeleton/npc/ambush,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/shelter)
-"kOB" = (
-/obj/structure/roguemachine/withdraw/directional/north,
-/turf/open/floor/rogue/tile,
-/area/rogue/indoors/town/church/chapel)
 "kOG" = (
 /turf/open/floor/rogue/tile,
 /area/rogue/under/cave/undeadmanor)
@@ -28444,7 +28441,7 @@
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/mountains)
 "lWO" = (
-/obj/machinery/light/rogue/oven/east,
+/obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church/chapel)
 "lWX" = (
@@ -242358,9 +242355,9 @@ cas
 bvf
 hix
 qAY
-kOB
+czt
 ncx
-lWO
+ncx
 isn
 qAY
 vIC
@@ -242810,7 +242807,7 @@ qeA
 iml
 iml
 qAY
-czt
+lWO
 ncx
 rkO
 iYI
