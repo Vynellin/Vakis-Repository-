@@ -11130,7 +11130,8 @@
 /obj/structure/mineral_door/wood/donjon{
 	lockid = "deacon";
 	name = "Deacon's Clinic";
-	dir = 1
+	dir = 1;
+	locked = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town/physician)
@@ -12143,7 +12144,8 @@
 "faE" = (
 /obj/structure/mineral_door/wood/donjon{
 	lockid = "deacon";
-	name = "Deacon's Clinic"
+	name = "Deacon's Clinic";
+	locked = 1
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town/physician)
