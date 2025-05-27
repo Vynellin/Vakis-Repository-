@@ -44722,6 +44722,10 @@
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/sewer)
+"sWp" = (
+/obj/structure/brewers_press,
+/turf/open/floor/rogue/blocks,
+/area/rogue/under/town/basement)
 "sWE" = (
 /turf/closed/wall/mineral/rogue/decostone/long,
 /area/rogue/under/cave/dukecourt)
@@ -120988,7 +120992,7 @@ xPZ
 mmJ
 vsI
 mzk
-vsI
+sWp
 wir
 vsI
 nWE

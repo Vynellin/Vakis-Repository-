@@ -591,8 +591,8 @@
 	desc = ""
 	gender = PLURAL
 	icon_state = "sugar"
-	list_reagents = list(/datum/reagent/sugar = 1)
-	grind_results = list(/datum/reagent/sugar = 10)
+	list_reagents = list(/datum/reagent/consumable/sugar = 1)
+	grind_results = list(/datum/reagent/consumable/sugar = 10)
 	volume = 1
 	sellprice = 0
 	var/water_added

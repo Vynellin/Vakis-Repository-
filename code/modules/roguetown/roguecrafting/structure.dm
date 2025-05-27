@@ -84,6 +84,17 @@
 	verbage = "makes"
 	skillcraft = /datum/skill/craft/carpentry
 
+/datum/crafting_recipe/roguetown/structure/brewers_press
+	name = "brewers press"
+	result = /obj/structure/brewers_press
+	reqs = list(/obj/item/grown/log/tree/small = 2,
+				/obj/item/roguegear = 1,
+				/obj/item/ingot/iron = 1)
+	verbage_simple = "construct"
+	verbage = "constructs"
+	skillcraft = /datum/skill/craft/cooking
+	craftdiff = 2
+
 /obj/structure/fermenting_barrel/crafted
 	sellprice = 6
 
