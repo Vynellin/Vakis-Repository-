@@ -164,7 +164,7 @@
 
 /datum/reagent/medicine/antidote
 	name = "Poison Antidote"
-	description = ""
+	description = "A mild detoxifying agent."
 	reagent_state = LIQUID
 	color = "#ccccff"
 	taste_description = "cleansing river water"
@@ -178,7 +178,7 @@
 
 /datum/reagent/medicine/diseasecure
 	name = "Disease Cure"
-	description = ""
+	description = "A potent detoxifying agent."
 	reagent_state = LIQUID
 	color = "#cc99ff"
 	taste_description = "sweet salvation"
@@ -303,9 +303,9 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/berrypoison	// Weaker poison, balanced to make you wish for death and incapacitate but not kill
 	name = "Berry Poison"
-	description = ""
+	description = "A sickening liquid that decently toxifies."
 	reagent_state = LIQUID
-	color = "#47b2e0"
+	color = "#264670"
 	taste_description = "bitterness"
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 
@@ -322,9 +322,9 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/strongpoison		// Strong poison, meant to be somewhat difficult to produce using alchemy or spawned with select antags. Designed to kill in one full dose (5u) better drink antidote fast
 	name = "Strong Poison"
-	description = ""
+	description = "An extremely potent liquid that kills quickly."
 	reagent_state = LIQUID
-	color = "#1a1616"
+	color = "#06151c"
 	taste_description = "burning"
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 
@@ -355,7 +355,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/stampoison
 	name = "Stamina Poison"
-	description = ""
+	description = "Gradually drains your stamina."
 	reagent_state = LIQUID
 	color = "#083b1c"
 	taste_description = "breathlessness"
@@ -368,7 +368,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/strongstampoison
 	name = "Strong Stamina Poison"
-	description = ""
+	description = "Quickly drains your stamina."
 	reagent_state = LIQUID
 	color = "#041d0e"
 	taste_description = "frozen air"

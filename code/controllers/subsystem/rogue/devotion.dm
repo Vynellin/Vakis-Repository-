@@ -124,8 +124,7 @@
 		return
 		
 	var/list/spelllist = list(patron.extra_spell, /obj/effect/proc_holder/spell/targeted/touch/orison, patron.t0)
-	if(istype(patron,/datum/patron/lording_three))
-		spelllist += /obj/effect/proc_holder/spell/targeted/abrogation
+	spelllist += /obj/effect/proc_holder/spell/targeted/abrogation
 	for(var/spell_type in spelllist)
 		if(!spell_type || H.mind.has_spell(spell_type))
 			continue
@@ -167,6 +166,22 @@
 	devotion = max_devotion
 	update_devotion(300, CLERIC_REQ_4, silent = TRUE)
 	START_PROCESSING(SSobj, src)
+
+/datum/devotion/proc/grant_spells_deacon(mob/living/carbon/human/H)
+	if(!H || !H.mind || !patron)
+		return
+
+	granted_spells = list()
+	var/list/spelllist = list(patron.extra_spell, /obj/effect/proc_holder/spell/targeted/touch/orison, patron.t0, patron.t1, patron.t2) // Not as powerful. Do your job!
+	for(var/spell_type in spelllist)
+		if(!spell_type || H.mind.has_spell(spell_type))
+			continue
+		var/newspell = new spell_type
+		H.mind.AddSpell(newspell)
+		LAZYADD(granted_spells, newspell)
+	level = CLERIC_T2
+	devotion = max_devotion
+	update_devotion(150, CLERIC_REQ_2, silent = TRUE)
 
 /datum/devotion/proc/grant_spells_monk(mob/living/carbon/human/H) //added to give acolytes passive regen like priests
 	if(!H || !H.mind || !patron)

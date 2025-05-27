@@ -239,7 +239,6 @@
 							"Courtiers" = GLOB.courtier_positions,
 							"Garrison" = GLOB.garrison_positions,
 							"Church" = GLOB.church_positions,
-							"Mercenaries" = GLOB.mercenary_positions,
 							"Abstract" = list("Appearance", "Emote", "Deadchat", "OOC", "LOOC"))
 		for(var/department in headless_job_lists)
 			output += "<div class='column'><label class='rolegroup [ckey(department)]'><input type='checkbox' name='[department]' class='hidden' [usr.client.prefs.tgui_fancy ? " onClick='toggle_checkboxes(this, \"_com\")'" : ""]>[department]</label><div class='content'>"
@@ -255,12 +254,11 @@
 			output += "</div></div>"
 		var/list/long_job_lists = list("Peasants" = GLOB.peasant_positions,
 									"Yeomen" = GLOB.yeoman_positions,
-									"Youngfolk" = GLOB.youngfolk_positions,
 									"Ghost and Other Roles" = list(ROLE_NECRO_SKELETON),
 									"Antagonist Positions" = list(ROLE_MANIAC, ROLE_WEREWOLF,
 									ROLE_VAMPIRE, ROLE_NBEAST, ROLE_BANDIT,
 									ROLE_DELF, ROLE_PREBEL, ROLE_ASPIRANT,
-									ROLE_LICH, ROLE_ASCENDANT, ROLE_WRETCH))
+									ROLE_LICH, ROLE_ASCENDANT))
 		for(var/department in long_job_lists)
 			output += "<div class='column'><label class='rolegroup long [ckey(department)]'><input type='checkbox' name='[department]' class='hidden' [usr.client.prefs.tgui_fancy ? " onClick='toggle_checkboxes(this, \"_com\")'" : ""]>[department]</label><div class='content'>"
 			break_counter = 0

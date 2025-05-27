@@ -170,6 +170,12 @@
 	icon_state = "greenkey"
 	lockid = "innkeep"
 
+/obj/item/roguekey/janitor
+	name = "janitor key"
+	desc = "The key to the janitor's very own abode."
+	icon_state = "greenkey"
+	lockid = "janitor"
+
 /obj/item/roguekey/velder
 	name = "elder's key"
 	desc = "This key should open and close the elder's home."
@@ -354,23 +360,37 @@
 	icon_state = "brownkey"
 	lockid = "tailor"
 
-/obj/item/roguekey/mercenary
-	name = "mercenary key"
-	desc = "Why, a mercenary would not kick doors down."
+/obj/item/roguekey/adventurers_guild
+	name = "adventurer's guild key"
+	desc = "Largely ceremonial - the proliferation of these keys mean most guildhalls end up open-access."
 	icon_state = "greenkey"
-	lockid = "merc"
+	lockid = "adventurersguild"
 
-/obj/item/roguekey/physician
-	name = "physician key"
+/obj/item/roguekey/mages_university
+	name = "mage's university key"
+	desc = "While somewhat more exclusive than their adventurer's guild counterparts, the keys to each mage's university guildhall are \
+			still commonplace finds for the road-wary - no doubt by design."
+	icon_state = "greenkey"
+	lockid = "magesuniversity"
+
+/obj/item/roguekey/mages_university/private
+	name = "mage's university private key"
+	desc = "More exclusive than it's nigh-public counterpart, the private key for the university denotes a scholar's more permanent residence \
+			for it's assigned branch. This particular key allow access to more exclusive portions of Sunmarch's Mages University."
+	icon_state = "ekey"
+	lockid = "magesuniversity_private"
+
+/obj/item/roguekey/mages_university/head_mage
+	name = "head mage key"
+	desc = "The one key in each university branch that isn't as prolific as the rest - the head mage's own key for the office and private quarters."
+	icon_state = "spikekey"
+	lockid = "head_mage"
+
+/obj/item/roguekey/deacon
+	name = "deacon key"
 	desc = "The key smells of herbs, feeling soothing to the touch."
 	icon_state = "greenkey"
-	lockid = "physician"
-
-/obj/item/roguekey/undercroft
-	name = "undercroft key"
-	desc = "This key opens the doors leading into the church's undercroft."
-	icon_state = "brownkey"
-	lockid = "undercroft"
+	lockid = "deacon"
 
 /obj/item/roguekey/inhumen
 	name = "ancient key"
@@ -380,7 +400,7 @@
 
 /obj/item/roguekey/hand
 	name = "hand's key"
-	desc = "This regal key belongs to the Grand Duke's Right Hand."
+	desc = "This regal key belongs to the Marquis' Right Hand."
 	icon_state = "cheesekey"
 	lockid = "hand"
 

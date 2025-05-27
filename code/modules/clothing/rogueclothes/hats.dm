@@ -1632,7 +1632,7 @@
 	desc = "For the merry men."
 	icon_state = "archercap"
 
-/obj/item/clothing/head/roguetown/physician
+/obj/item/clothing/head/roguetown/deacon
 	name = "doctor's hat"
 	desc = "My cure is most effective."
 	icon_state = "physhat"

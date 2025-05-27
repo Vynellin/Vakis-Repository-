@@ -73,17 +73,59 @@
 /datum/reagent/consumable/berryjuice
 	name = "Berry Juice"
 	description = "A delicious blend of several different kinds of berries."
-	color = "#863333" // rgb: 134, 51, 51
+	color = "#4a4b8d" 
 	taste_description = "berries"
 	glass_icon_state = "berryjuice"
 	glass_name = "glass of berry juice"
 	glass_desc = ""
+	hydration_factor = 10
 
 /datum/reagent/consumable/applejuice
 	name = "Apple Juice"
 	description = "The sweet juice of an apple, fit for all ages."
 	color = "#ECFF56" // rgb: 236, 255, 86
 	taste_description = "apples"
+	hydration_factor = 10
+
+/datum/reagent/consumable/sugarcanejuice
+	name = "Sugarcane Juice"
+	description = "A sweet juice made from sugarcane, a staple of many tropical diets."
+	color = "#D2B48C" // rgb: 210, 180, 140
+	taste_description = "sweetness"
+	glass_icon_state = "sugarcanejuice"
+	glass_name = "glass of sugarcane juice"
+	glass_desc = ""
+	hydration_factor = 10
+
+/datum/reagent/consumable/maltwheat
+	name = "Malt Wheat Juice"
+	description = "A sweet juice made from malted wheat, a staple of many diets."
+	color = "#D2B48C" // rgb: 210, 180, 140
+	taste_description = "sweetness"
+	glass_icon_state = "maltwheatjuice"
+	glass_name = "glass of malt wheat juice"
+	glass_desc = ""
+	hydration_factor = 10
+
+/datum/reagent/consumable/malted_oats
+	name = "Malted Oats Juice"
+	description = "A sweet juice made from malted oats, a staple of many temperate diets."
+	color = "#D2B48C" // rgb: 210, 180, 140
+	taste_description = "sweetness"
+	glass_icon_state = "malted_oatsjuice"
+	glass_name = "glass of malted oats juice"
+	glass_desc = ""
+	hydration_factor = 10
+
+/datum/reagent/consumable/rice_milk
+	name = "Rice Milk"
+	description = "A sweet juice made from rice, a staple of many tropical diets."
+	color = "#D2B48C" // rgb: 210, 180, 140
+	taste_description = "sweetness"
+	glass_icon_state = "ricemilk"
+	glass_name = "glass of rice milk"
+	glass_desc = ""
+	hydration_factor = 10
 
 /datum/reagent/consumable/poisonberryjuice
 	name = "Poison Berry Juice"

@@ -66,38 +66,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		M.adjust_fire_stacks(reac_volume / 15)
 
 	return ..()
-
-/datum/reagent/consumable/ethanol/beer
-	name = "Beer"
-	description = ""
-	color = "#a17c10" // rgb: 102, 67, 0
-	nutriment_factor = 0.1
-	boozepwr = 25
-	taste_description = "ale"
-	glass_name = "glass of beer"
-	glass_desc = ""
-	hydration_factor = 10
-
-/datum/reagent/consumable/ethanol/beer/cider
-	name = "Cider"
-	boozepwr = 40
-	taste_description = "cider"
-	glass_name = "glass of cider"
-	color = "#6aa945"
-
-/datum/reagent/consumable/ethanol/beer/wine
-	name = "Wine"
-	boozepwr = 30
-	taste_description = "wine"
-	glass_name = "glass of wine"
-	color = "#8a0b0b"
-
-/datum/reagent/consumable/ethanol/beer/rum
-	name = "Rum"
-	boozepwr = 40
-	taste_description = "rum"
-	glass_name = "glass of rum"
-	color = "#ef7f16"
 	
 /datum/reagent/consumable/ethanol/beer/light
 	name = "Light Beer"
@@ -368,16 +336,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		M.heal_bodypart_damage(1,1)
 		. = 1
 	return ..() || .
-
-/datum/reagent/consumable/ethanol/ale
-	name = "Ale"
-	description = "A dark alcoholic beverage made with malted barley and yeast."
-	color = "#664300" // rgb: 102, 67, 0
-	boozepwr = 65
-	taste_description = "hearty barley ale"
-	glass_icon_state = "aleglass"
-	glass_name = "glass of ale"
-	glass_desc = ""
 
 /datum/reagent/consumable/ethanol/goldschlager
 	name = "Goldschlager"
@@ -1524,16 +1482,6 @@ All effects don't start immediately, but rather get worse over time; the rate is
 
 /datum/reagent/consumable/ethanol/crevice_spike/on_mob_metabolize(mob/living/L) //damage only applies when drink first enters system and won't again until drink metabolizes out
 	L.adjustBruteLoss(3 * min(5,volume)) //minimum 3 brute damage on ingestion to limit non-drink means of injury - a full 5 unit gulp of the drink trucks you for the full 15
-
-/datum/reagent/consumable/ethanol/sake
-	name = "Sake"
-	description = "A sweet rice wine of questionable legality and extreme potency."
-	color = "#DDDDDD"
-	boozepwr = 70
-	taste_description = "sweet rice wine"
-	glass_icon_state = "sakecup"
-	glass_name = "cup of sake"
-	glass_desc = ""
 
 /datum/reagent/consumable/ethanol/peppermint_patty
 	name = "Peppermint Patty"

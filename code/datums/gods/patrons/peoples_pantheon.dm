@@ -36,9 +36,15 @@
 
 /datum/patron/peoples_pantheon/varielle
 	name = "Varielle"
-	domain = "Goddess of Love, Music and Harmony"
-	desc = "Placeholder Description - Varielle guides mortals and thought in lock-step, be it in wed or in echoes of music."
-	worshippers = "Placeholder"
+	domain = "Harmony, Music, Hearth, Healing, and Love"
+	desc = "Amongst the many mighty gods of the Light, none are more humble than the songstress Varielle, goddess of home, healing, and love. \
+			Known as the most compassionate of the Nine, her gentility and affection for mortalkind almost motherly, she has seen fit to bear \
+			herself as a caretaker of the lands her tender gaze watches over. She is the song of passion in one's heart; she is the impulse of \
+			compassion and generosity that turns one's hand; she is the mercy and sensitivity towards the sick and the dying. Hers' is the \
+			smouldering flame of love for others; love of the world, love of mortalkind, love of life, love of song, love of family, and the \
+			love between romantics - a declaration that life is to be lived to its fullest in service of others, and that the truest self is \
+			one that is kind."
+	worshippers = "Caretakers, Bards, Minstrels, Healers, Homebodies, and Lovers."
 	mob_traits = list(TRAIT_VARIELLE, TRAIT_EMPATH, TRAIT_EXTEROCEPTION)
 	t1 = /obj/effect/proc_holder/spell/invoked/bud
 	t2 = /obj/effect/proc_holder/spell/invoked/variellecurse

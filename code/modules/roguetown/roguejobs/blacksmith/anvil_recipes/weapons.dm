@@ -193,7 +193,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/steel/combatknife
-	name = "Combat Knife (+1 Steel)"
+	name = "Seax (+1 Steel)"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
 	created_item = /obj/item/rogueweapon/huntingknife/combat
