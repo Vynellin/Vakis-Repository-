@@ -315,7 +315,7 @@
 			backr = /obj/item/rogueweapon/woodstaff
 			head = /obj/item/clothing/head/roguetown/tamarimask
 			shirt = /obj/item/clothing/suit/roguetown/shirt/robe/tamari
-			backpack_contents = list(/obj/item/flashlight/flare/torch = 1)
+			backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife/stoneknife = 1)
 			if(H.mind) // Mostly based off the old druid job with some minor tweaks and cuts. THESE druids are still ambushable
 				H.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
 				H.mind.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
