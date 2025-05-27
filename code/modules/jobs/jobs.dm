@@ -115,7 +115,7 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 	/datum/job/roguetown/lunatic::title,
 	/datum/job/roguetown/knavewench::title,
 	/datum/job/roguetown/woodsman::title,
-	/datum/job/roguetown/adventurer/courtagent::title
+	/datum/job/roguetown/adventurer/courtagent::title,
 	/datum/job/roguetown/soilson::title,
 ))
 
