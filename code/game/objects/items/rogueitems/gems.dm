@@ -35,7 +35,7 @@
 
 /obj/item/roguegem/blue
 	name = "quartz"
-	icon_state = "blortz_cut"
+	icon_state = "quartz_cut"
 	sellprice = 88
 	desc = "Pale blue, like a frozen tear." // i am not sure if this is really quartz.
 
