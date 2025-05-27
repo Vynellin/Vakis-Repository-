@@ -195,6 +195,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	icon_state = "net"
 	breakouttime = 35//easy to apply, easy to break out of
+    slipouttime = 45 //freeballing a number here - please adjust
 	gender = NEUTER
 	var/knockdown = 0
 
