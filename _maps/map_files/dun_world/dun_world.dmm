@@ -8264,6 +8264,10 @@
 /obj/structure/fluff/statue/knight/r,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cave/goblinfort)
+"dzD" = (
+/obj/structure/fermenting_barrel,
+/turf/open/floor/rogue/blocks/newstone,
+/area/rogue/under/town/basement)
 "dzS" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/carpet/red,
@@ -25745,8 +25749,13 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/garrison)
 "kJD" = (
-/obj/structure/brewers_press,
-/turf/open/floor/rogue/blocks,
+/obj/effect/decal/cleanable/dirt/cobweb,
+/obj/item/roguebin/water,
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/turf/open/floor/rogue/blocks/newstone,
 /area/rogue/under/town/basement)
 "kJS" = (
 /obj/structure/winch{
@@ -29490,9 +29499,11 @@
 	},
 /area/rogue/indoors)
 "mmJ" = (
-/obj/effect/decal/cleanable/dirt/cobweb,
-/obj/item/roguebin/water,
-/turf/open/floor/rogue/blocks,
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/turf/open/floor/rogue/blocks/newstone,
 /area/rogue/under/town/basement)
 "mmZ" = (
 /obj/structure/closet/dirthole/grave,
@@ -33020,6 +33031,10 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/naturalstone,
+/area/rogue/under/town/basement)
+"nGF" = (
+/obj/structure/brewers_press,
+/turf/open/floor/rogue/blocks/newstone,
 /area/rogue/under/town/basement)
 "nHm" = (
 /mob/living/carbon/human/species/goblin/npc/ambush/cave,
@@ -120353,11 +120368,11 @@ bhJ
 qHj
 qHj
 qHj
-qHj
-qHj
-bhJ
-bhJ
-bhJ
+xPZ
+xPZ
+xPZ
+xPZ
+xPZ
 bhJ
 bhJ
 orc
@@ -120804,13 +120819,13 @@ bhJ
 bhJ
 bhJ
 bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
-bhJ
+xPZ
+xPZ
+dzD
+nGF
+dzD
+xPZ
+xPZ
 bhJ
 bhJ
 uvk
@@ -121257,11 +121272,11 @@ bhJ
 bhJ
 xPZ
 xPZ
-xPZ
-xPZ
-xPZ
-xPZ
-xPZ
+kJD
+mmJ
+mmJ
+mmJ
+mmJ
 xPZ
 xPZ
 bhJ
@@ -121708,12 +121723,12 @@ bhJ
 bhJ
 bhJ
 xPZ
-mmJ
-vsI
-mzk
-kJD
 wir
-vsI
+hSR
+hSR
+hSR
+hSR
+hSR
 nWE
 xPZ
 bhJ
@@ -125777,7 +125792,7 @@ xPZ
 bhJ
 xPZ
 oGu
-hSR
+gPw
 hhO
 nAK
 gBu
