@@ -1409,6 +1409,10 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/garrison)
+"aED" = (
+/obj/machinery/light/rogue/campfire,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/rtfield)
 "aER" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -8145,6 +8149,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/rogue/wood,
 /area/rogue/under/cave/dukecourt)
+"dCc" = (
+/obj/effect/landmark/start/wretch{
+	dir = 8
+	},
+/obj/structure/bed/rogue/shit,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/town/sewer)
 "dCq" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/beach/forest)
@@ -9890,6 +9901,10 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/dungeon1/gethsmane)
+"eoB" = (
+/obj/machinery/light/rogue/campfire,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/under/town/sewer)
 "eoF" = (
 /obj/structure/bars/passage{
 	redstone_id = "tourneytop"
@@ -15420,6 +15435,12 @@
 /obj/item/cooking/pan,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/shelter)
+"gDi" = (
+/obj/effect/landmark/start/wretch{
+	dir = 4
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/rtfield)
 "gDu" = (
 /obj/structure/globe,
 /turf/open/floor/rogue/dirt,
@@ -22520,6 +22541,13 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/orcdungeon)
+"jvP" = (
+/obj/structure/bed/rogue/shit,
+/obj/effect/landmark/start/wretch{
+	dir = 4
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/town)
 "jvS" = (
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border{
@@ -39782,6 +39810,10 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
 /area/rogue/indoors/shelter/woods)
+"qGs" = (
+/obj/structure/bed/rogue/shit,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/rtfield)
 "qGA" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/dirt/road,
@@ -48580,6 +48612,12 @@
 /obj/effect/decal/mossy,
 /turf/open/floor/rogue/hay,
 /area/rogue/indoors/town)
+"upT" = (
+/obj/effect/landmark/start/wretch{
+	dir = 4
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/rtfield)
 "upU" = (
 /obj/item/roguegem/random,
 /turf/open/floor/rogue/dirt,
@@ -52219,6 +52257,9 @@
 /area/rogue/indoors/shelter)
 "vRP" = (
 /obj/structure/bed/rogue/shit,
+/obj/effect/landmark/start/wretch{
+	dir = 8
+	},
 /turf/open/floor/rogue/blocks/green,
 /area/rogue/under/town/sewer)
 "vRU" = (
@@ -130238,7 +130279,7 @@ xCK
 xCK
 xCK
 xCK
-tQC
+eoB
 tQC
 tQC
 bhJ
@@ -131143,7 +131184,7 @@ bhJ
 bhJ
 bhJ
 bhJ
-orc
+dCc
 bhJ
 bhJ
 tQC
@@ -148239,10 +148280,10 @@ bhJ
 bhJ
 miF
 miF
-ogs
-ogs
-ogs
-ogs
+miF
+miF
+miF
+miF
 miF
 miF
 ogs
@@ -148691,10 +148732,10 @@ bhJ
 bhJ
 miF
 miF
-ogs
-ogs
+miF
+miF
 fju
-ogs
+miF
 miF
 miF
 ogs
@@ -149143,10 +149184,10 @@ bhJ
 miF
 miF
 miF
-ogs
+miF
 fju
 fju
-ogs
+miF
 miF
 miF
 ogs
@@ -149595,10 +149636,10 @@ bhJ
 miF
 miF
 miF
-ogs
+miF
 fju
-ogs
-ogs
+miF
+miF
 miF
 qHj
 qHj
@@ -150047,9 +150088,9 @@ bhJ
 miF
 miF
 miF
-ogs
-ogs
-ogs
+miF
+miF
+miF
 miF
 miF
 qHj
@@ -235483,7 +235524,7 @@ exD
 woH
 pWT
 hOs
-wcO
+jvP
 rcz
 hOs
 exD
@@ -252198,7 +252239,7 @@ nBX
 pSg
 pSg
 pWT
-pWT
+fpx
 pWT
 uBc
 kRg
@@ -252650,7 +252691,7 @@ pSg
 pSg
 pSg
 pSg
-pWT
+fpx
 qyR
 uBc
 nwZ
@@ -253555,7 +253596,7 @@ pSg
 pSg
 pSg
 pWT
-pWT
+fpx
 uBc
 cDX
 nNP
@@ -254007,7 +254048,7 @@ pSg
 pSg
 pSg
 sNZ
-sNZ
+rZO
 cDX
 cDX
 sCm
@@ -254459,7 +254500,7 @@ pSg
 pSg
 pSg
 sNZ
-sNZ
+rZO
 sNZ
 cDX
 uBc
@@ -255364,7 +255405,7 @@ pSg
 sNZ
 sNZ
 ibp
-sNZ
+rZO
 sNZ
 ibp
 seL
@@ -255816,7 +255857,7 @@ ebU
 sNZ
 sNZ
 sNZ
-sNZ
+rZO
 sNZ
 ibp
 sNZ
@@ -257173,7 +257214,7 @@ sNZ
 sNZ
 seL
 sNZ
-sNZ
+rZO
 sNZ
 yjq
 sNZ
@@ -257624,7 +257665,7 @@ sNZ
 sNZ
 sNZ
 sNZ
-sNZ
+rZO
 sNZ
 sNZ
 sNZ
@@ -258528,7 +258569,7 @@ sNZ
 sNZ
 sNZ
 sNZ
-sNZ
+rZO
 sNZ
 sNZ
 sNZ
@@ -258980,7 +259021,7 @@ ibp
 sNZ
 sNZ
 seL
-sNZ
+rZO
 sNZ
 sNZ
 sNZ
@@ -260337,7 +260378,7 @@ sNZ
 seL
 sNZ
 sNZ
-sNZ
+rZO
 sNZ
 sNZ
 sNZ
@@ -260788,8 +260829,8 @@ sNZ
 sNZ
 sNZ
 sNZ
-sNZ
-sNZ
+wxw
+rZO
 sNZ
 sNZ
 sNZ
@@ -261241,7 +261282,7 @@ sNZ
 sNZ
 ibp
 ibp
-sNZ
+rZO
 yjq
 sNZ
 sNZ
@@ -261692,8 +261733,8 @@ sNZ
 sNZ
 sNZ
 ibp
-ibp
-sNZ
+rZO
+rZO
 sNZ
 sNZ
 sNZ
@@ -262144,7 +262185,7 @@ sNZ
 seL
 sNZ
 sNZ
-sNZ
+rZO
 sNZ
 sNZ
 sNZ
@@ -263048,7 +263089,7 @@ sNZ
 sNZ
 sNZ
 sNZ
-sNZ
+upT
 sNZ
 sNZ
 sNZ
@@ -277976,8 +278017,8 @@ sNZ
 pLh
 pLh
 phl
-rZO
-rZO
+qGs
+gDi
 rZO
 rZO
 ebU
@@ -278882,7 +278923,7 @@ asY
 asY
 asY
 rZO
-rZO
+aED
 pxF
 pxF
 sNZ
