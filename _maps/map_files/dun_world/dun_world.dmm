@@ -50206,6 +50206,9 @@
 /area/rogue/indoors/town/manor)
 "uZm" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
+/obj/structure/stairs{
+	dir = 1
+	},
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
