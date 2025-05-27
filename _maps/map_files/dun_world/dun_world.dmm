@@ -20633,6 +20633,11 @@
 /obj/item/rogueweapon/sword/sabre/elf,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dragonden)
+"iIV" = (
+/obj/structure/roguewindow,
+/obj/structure/bars,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors/town)
 "iIW" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -252758,7 +252763,7 @@ eyK
 cSf
 sns
 exD
-jOX
+iIV
 puO
 puO
 eGS
@@ -253217,7 +253222,7 @@ puO
 puO
 puO
 puO
-jOX
+iIV
 xAF
 exD
 exD
@@ -253662,7 +253667,7 @@ xHV
 xHV
 sns
 lsU
-jOX
+iIV
 tpg
 puO
 puO
