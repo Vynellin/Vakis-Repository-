@@ -12523,6 +12523,10 @@
 	},
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/under/cave/mazedungeon)
+"flV" = (
+/mob/living/simple_animal/hostile/rogue/dragger,
+/turf/open/floor/rogue/twig,
+/area/rogue/under/cave/dukecourt)
 "flZ" = (
 /obj/structure/spider/stickyweb{
 	dir = 8;
@@ -20866,6 +20870,10 @@
 "iMd" = (
 /turf/closed/mineral/random/rogue/high,
 /area/rogue/outdoors/rtfield)
+"iMe" = (
+/obj/item/clothing/suit/roguetown/shirt/dress/royal/noblewoman,
+/turf/open/floor/rogue/twig,
+/area/rogue/under/cave/dukecourt)
 "iMr" = (
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/closed/wall/mineral/rogue/stone,
@@ -23231,6 +23239,10 @@
 	},
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town)
+"jLC" = (
+/obj/item/clothing/suit/roguetown/shirt/dress/royal/nobleman,
+/turf/open/floor/rogue/grass,
+/area/rogue/under/cave/dukecourt)
 "jLI" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
@@ -50833,6 +50845,10 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
+"vBb" = (
+/obj/item/clothing/wrists/roguetown/royalsleeves,
+/turf/open/floor/rogue/dirt/ambush,
+/area/rogue/under/cave/dukecourt)
 "vBd" = (
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 8
@@ -56865,12 +56881,11 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/town)
 "ykx" = (
-/obj/structure/bars/passage{
-	density = 0;
-	icon_state = "passage1"
-	},
 /obj/structure/bars/passage/shutter{
 	redstone_id = "fuckedupandevilmanorentrance"
+	},
+/obj/structure/mineral_door/wood{
+	locked = 1
 	},
 /turf/open/floor/rogue/church,
 /area/rogue/under/cave/dukecourt)
@@ -224689,7 +224704,7 @@ cgP
 gIu
 gIu
 gIu
-iVz
+iMe
 cEd
 gFX
 gFX
@@ -227842,7 +227857,7 @@ aeA
 aPk
 aau
 ctJ
-iVz
+flV
 iVz
 ctJ
 fCm
@@ -228293,7 +228308,7 @@ duF
 aeA
 aeA
 ctJ
-ctJ
+jLC
 aeA
 ltK
 ctJ
@@ -229655,7 +229670,7 @@ duF
 szI
 szI
 ikt
-fCm
+vBb
 olD
 gDc
 gFX
