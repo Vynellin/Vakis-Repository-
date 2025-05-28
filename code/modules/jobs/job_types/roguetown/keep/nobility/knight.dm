@@ -6,7 +6,7 @@
 	faction = "Station"
 	total_positions = 3
 	spawn_positions = 3
-	allowed_races = RACES_NO_CONSTRUCT
+	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	tutorial = "Having proven yourself both loyal and capable, you have been knighted to serve the realm as the royal family's sentry. You listen to your Liege and the Knight Captain, defending your Lord and realm - a beacon of chivalry."
@@ -65,9 +65,9 @@
 
 /datum/outfit/job/roguetown/knight/pre_equip(mob/living/carbon/human/H)
 	..()
-	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)	
+	ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_KNIGHTSMAN, TRAIT_GENERIC) 
+	ADD_TRAIT(H, TRAIT_KNIGHTSMAN, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_GOODTRAINER, TRAIT_GENERIC)
 
 /datum/advclass/knight/heavy
@@ -159,9 +159,9 @@
 	..()
 	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE) 
+	H.mind.adjust_skillrank(/datum/skill/combat/maces, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/shields, 4, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)	
+	H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
@@ -188,7 +188,7 @@
 			beltr = /obj/item/rogueweapon/flail/sflail
 		if ("Warhamer")
 			beltr = /obj/item/rogueweapon/mace/warhammer //Iron warhammer. This is one-handed and pairs well with shields. They can upgrade to steel in-round.
-	
+
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	pants = /obj/item/clothing/under/roguetown/chainlegs
 	backl = /obj/item/rogueweapon/shield/tower/metal
@@ -309,15 +309,15 @@
 	category_tags = list(CTAG_ROYALGUARD)
 
 /datum/outfit/job/roguetown/knight/irregularknight/pre_equip(mob/living/carbon/human/H)
-	..()	
+	..()
 	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE) //Swords and knives class.
-	H.mind.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)	
-	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE) //Whips can work as a light class weapon.	
-	H.mind.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)	
-	H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)	
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 4, TRUE) //Whips can work as a light class weapon.
+	H.mind.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 4, TRUE) //Bows fit a light/speedy class pretty well, gave them ranged options.
 	H.mind.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)		
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
@@ -340,7 +340,7 @@
 	var/armor_choice = input("Choose your armor.", "TAKE UP ARMS") as anything in armor_options
 	H.set_blindness(0)
 	switch(weapon_choice)
-		if("Rapier + Longbow") 
+		if("Rapier + Longbow")
 			beltl = /obj/item/rogueweapon/sword/rapier
 			backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/longbow
 			beltr = /obj/item/quiver/arrows
@@ -350,7 +350,7 @@
 			backl = /obj/item/gwstrap
 			beltr = /obj/item/quiver/arrows
 			beltl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve
-		
+
 		if("Sabre + Buckler")
 			beltl = /obj/item/rogueweapon/sword/sabre
 			backl = /obj/item/rogueweapon/shield/buckler
@@ -379,7 +379,7 @@
 		"Etruscan Bascinet" 	= /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan,
 		"None"
 	)
-	
+
 	var/helmchoice = input("Choose your Helm.", "TAKE UP HELMS") as anything in helmets
 	if(helmchoice != "None")
 		head = helmets[helmchoice]
@@ -395,7 +395,7 @@
 
 /datum/outfit/job/roguetown/knight/reiter/pre_equip(mob/living/carbon/human/H)
 	..()
-	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored	
+	head = /obj/item/clothing/head/roguetown/helmet/sallet/visored
 	cloak = /obj/item/clothing/cloak/tabard
 	neck = /obj/item/clothing/neck/roguetown/bevor
 	gloves = /obj/item/clothing/gloves/roguetown/chain
@@ -410,10 +410,10 @@
 	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
 	id = /obj/item/scomstone/bad/garrison
 	backpack_contents = list(/obj/item/gun/ballistic/arquebus_pistol = 1, /obj/item/powderhorn = 1, /obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/rope/chain = 1, /obj/item/bait/doe = 1)
-	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE) 
-	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)	
-	H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)	
-	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)		
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/riding, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
@@ -430,5 +430,5 @@
 	H.change_stat("perception", 2)
 	H.change_stat("speed", 2)
 	H.change_stat("intelligence", 1)
-	
+
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

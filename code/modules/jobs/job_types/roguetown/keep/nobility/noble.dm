@@ -8,7 +8,7 @@
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	allowed_races = RACES_NO_CONSTRUCT
+	allowed_races = RACES_ALL_KINDS
 	advclass_cat_rolls = list(CTAG_NOBLEMAN = 20)
 
 	tutorial = "Rasurian politics demand the rotation of several noblemen throughout their counties and marches; and you are no exception - commanding respect and high praise whereever you go for your presence in the court alone. Sunmarch is no different, now that you've settled in..."
@@ -20,7 +20,7 @@
 	max_pq = null
 	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_noble.ogg'
-	
+
 /datum/job/roguetown/nobleman/after_spawn(mob/living/H, mob/M, latejoin)
 	. = ..()
 	if(ishuman(H))

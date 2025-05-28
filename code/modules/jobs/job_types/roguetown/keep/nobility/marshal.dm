@@ -7,7 +7,7 @@
 	total_positions = 1
 	spawn_positions = 1
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = RACES_NO_CONSTRUCT
+	allowed_races = RACES_ALL_KINDS
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	display_order = JDO_MARSHAL
 	tutorial = "You are an agent of the crown in matters of law and military, making sure that laws are pushed, verified and carried out by the retinue upon the citizenry of the realm. While you preside over the knights and men-at-arms, much of your work happens behind a desk, deferring to the Knight Captain to make sure your will is carried out in the field."
@@ -36,7 +36,7 @@
 	id = /obj/item/scomstone/garrison
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel/special = 1, /obj/item/signal_horn = 1)
 	if(H.mind)
-		
+
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
