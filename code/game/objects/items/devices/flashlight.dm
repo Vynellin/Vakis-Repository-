@@ -342,9 +342,9 @@
 	name = "bronze lamptern"
 	icon_state = "bronzelamp"
 	item_state = "bronzelamp"
-	desc = "A marvel of engineering that emits a strange green glow."
+	desc = "A marvel of engineering that emits a pale green glow."
 	light_outer_range = 8
-	light_color ="#4ac77e"
+	light_color ="#bdf4d4"
 	on = FALSE
 
 /obj/item/flashlight/flare/torch/lantern/copper
