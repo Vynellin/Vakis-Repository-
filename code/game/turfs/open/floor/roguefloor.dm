@@ -1247,3 +1247,20 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	landsound = 'sound/foley/jumpland/grassland.wav'
+
+/turf/open/floor/rogue/walltree_floor
+	icon = 'icons/roguetown/misc/tree.dmi'
+	icon_state = "dwalltree"
+	footstep = FOOTSTEP_WOOD
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_WOOD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+	landsound = 'sound/foley/jumpland/woodland.wav'
+
+/turf/open/floor/rogue/walltree_floor/outercorner
+	icon_state = "dwalltree_outercorner"
+
+/turf/open/floor/rogue/walltree_floor/innercorner
+	icon_state = "dwalltree_innercorner"
+
