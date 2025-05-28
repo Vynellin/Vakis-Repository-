@@ -7589,7 +7589,8 @@
 /area/rogue/indoors/cave)
 "dmw" = (
 /obj/structure/mineral_door/wood/window{
-	name = "Alchemy Lab"
+	name = "Alchemy Lab";
+	locked = 1
 	},
 /obj/effect/mapping_helpers/access/mages_university/private,
 /turf/open/floor/rogue/twig,
@@ -17157,6 +17158,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/mountains)
+"hiI" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/under/cave)
 "hiM" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /obj/structure/bed/rogue/inn,
@@ -295194,7 +295199,7 @@ htN
 htN
 htN
 htN
-htN
+hiI
 htN
 ogs
 ogs
