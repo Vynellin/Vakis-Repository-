@@ -169,9 +169,9 @@
 	color = null
 	sellprice = 100
 
-/obj/item/clothing/suit/roguetown/shirt/robe/physician
-	name = "plague coat"
-	desc = "Medicum morbo adhibere."
+/obj/item/clothing/suit/roguetown/shirt/robe/deacon
+	name = "heavy coat"
+	desc = "Not all-too-unalike from a warm hug in the midst of any procedure."
 	icon = 'icons/roguetown/clothing/armor.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/armor.dmi'
 	icon_state = "physcoat"

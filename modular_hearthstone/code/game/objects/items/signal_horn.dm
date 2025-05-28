@@ -72,45 +72,20 @@
 			else
 				disttext = " very far" 
 		
-		var/placetext
-		var/area/localarea = get_area_name(src)
-		switch(localarea)
-			if("mountains")
-				placetext = " In the Mountains!"
-			if("mt decapitation")
-				placetext = " from Mt Decapitation!"
-			if("solar basin")
-				placetext = " in the The Solar Basin!"
-			if("wilderness")
-				placetext = " in the The Solar Grove!"
-			if("bog", "dense bog")
-				placetext = " in the The Terrorbog!"
-			if("coast", "coastforest")
-				placetext = " on the Solar Coast!"
-			if("indoors", "Shop", "Physician", "outdoors", "roofs")
-				placetext = " somewhere in town!"
-			if("Manor", "Wizard's Tower")
-				placetext = " from the Keep!"
-			if("Garrison", "dungeon cell")
-				placetext = " from the Garrison!"
-			if("Baths", "tavern")
-				placetext = " from the Inn!"
-			if("church")
-				placetext = " from the Church!"
-			else
-				placetext = " I cannot discern where it came from exactly!"
+		var/area/our_area = get_area(src)
+		var/placetext = our_area.general_location
 
 		//sound played for other players
 		switch(user.job)
 			if("Warden")
 				player.playsound_local(get_turf(player), 'modular_hearthstone/sound/items/bogguardhorn.ogg', 35, FALSE, pressure_affected = FALSE)
-				to_chat(player, span_warning("I hear the horn of the Wardens somewhere[disttext],[dirtext],[placetext]"))
+				to_chat(player, span_warning("I hear the horn of the Wardens somewhere[disttext],[dirtext], [placetext]"))
 			if("Marshall", "Watchman", "Sergeant", "Man at Arms")
 				player.playsound_local(get_turf(player), 'modular_hearthstone/sound/items/watchhorn.ogg', 35, FALSE, pressure_affected = FALSE)
-				to_chat(player, span_warning("I hear the horn of the Garrison somewhere[disttext],[dirtext],[placetext]"))
+				to_chat(player, span_warning("I hear the horn of the Garrison somewhere[disttext],[dirtext], [placetext]"))
 			if("Knight Captain", "Knight")
 				player.playsound_local(get_turf(player), 'modular_hearthstone/sound/items/rghorn.ogg', 35, FALSE, pressure_affected = FALSE)
-				to_chat(player, span_warning("I hear the horn of the Royal Guard somewhere[disttext],[dirtext],[placetext]"))
+				to_chat(player, span_warning("I hear the horn of the Royal Guard somewhere[disttext],[dirtext], [placetext]"))
 			else
 				player.playsound_local(get_turf(player), 'modular_hearthstone/sound/items/signalhorn.ogg', 35, FALSE, pressure_affected = FALSE)
-				to_chat(player, span_warning("I hear the signal horn somewhere[disttext], [dirtext],[placetext]"))
+				to_chat(player, span_warning("I hear the signal horn somewhere[disttext], [dirtext], [placetext]"))

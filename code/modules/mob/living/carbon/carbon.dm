@@ -982,7 +982,7 @@
 		return
 	if(stat != DEAD)
 		if(health <= HEALTH_THRESHOLD_NEARDEATH && HAS_TRAIT(src, TRAIT_DEATHBARGAIN))
-			src.apply_status_effect(/datum/status_effect/buff/undermaidenbargainheal)
+			src.apply_status_effect(/datum/status_effect/buff/deathbargainheal)
 			return
 		if(health <= HEALTH_THRESHOLD_DEAD && !HAS_TRAIT(src, TRAIT_NODEATH))
 			INVOKE_ASYNC(src, PROC_REF(emote), "deathgurgle")

@@ -216,7 +216,7 @@
 					blockme = TRUE
 				if(rebelguy.assigned_role in GLOB.noble_positions)
 					blockme = TRUE
-				if(rebelguy.assigned_role in GLOB.youngfolk_positions)
+				if(rebelguy.assigned_role in GLOB.sidefolk_positions)
 					blockme = TRUE
 				if(rebelguy.assigned_role in GLOB.church_positions)
 					blockme = TRUE
@@ -237,7 +237,6 @@
 	restricted_jobs = list("King",
 	"Queen",
 	"Prisoner",
-	"Dungeoneer",
 	"Inquisitor",
 	"Confessor",
 	"Watchman",
@@ -252,7 +251,7 @@
 		var/blockme = FALSE
 		if(!(villain in allantags))
 			blockme = TRUE
-		if(villain.assigned_role in GLOB.youngfolk_positions)
+		if(villain.assigned_role in GLOB.sidefolk_positions)
 			blockme = TRUE
 		if(villain.current)
 			if(villain.current.gender == FEMALE)
@@ -281,7 +280,7 @@
 		var/blockme = FALSE
 		if(!(vampire in allantags))
 			blockme = TRUE
-		if(vampire.assigned_role in GLOB.youngfolk_positions)
+		if(vampire.assigned_role in GLOB.sidefolk_positions)
 			blockme = TRUE
 		if(blockme)
 			return
@@ -308,7 +307,7 @@
 		var/blockme = FALSE
 		if(!(werewolf in allantags))
 			blockme = TRUE
-		if(werewolf.assigned_role in GLOB.youngfolk_positions)
+		if(werewolf.assigned_role in GLOB.sidefolk_positions)
 			blockme = TRUE
 		if(blockme)
 			return

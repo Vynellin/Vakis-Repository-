@@ -2,7 +2,9 @@
 
 /datum/job/roguetown/templar
 	title = "Templar"
+	flag = TEMPLAR
 	department_flag = CHURCHMEN
+	selection_color = JCOLOR_CHURCH
 	faction = "Station"
 	tutorial = "Templars are warriors who have forsaken wealth and title in lieu of service to the church, due to either zealotry or a past shame. They guard the church and its priest; largely ceremonially."
 	allowed_sexes = list(MALE, FEMALE)

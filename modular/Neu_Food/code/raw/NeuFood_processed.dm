@@ -585,3 +585,323 @@
 
 
 
+// -------------- CANDY -----------------
+/obj/item/reagent_containers/powder/sugar
+	name = "sugar"
+	desc = ""
+	gender = PLURAL
+	icon_state = "sugar"
+	list_reagents = list(/datum/reagent/consumable/sugar = 1)
+	grind_results = list(/datum/reagent/consumable/sugar = 10)
+	volume = 1
+	sellprice = 0
+	var/water_added
+
+/obj/item/reagent_containers/powder/sugar/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	var/obj/item/reagent_containers/R = I
+	if(user.mind)
+		short_cooktime = (60 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*5))
+		long_cooktime = (100 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*10))
+	if(!istype(R) || (water_added))
+		return ..()
+	if(isturf(loc)&& (!found_table))
+		to_chat(user, "<span class='notice'>Need a table...</span>")
+		return ..()	
+	if(!R.reagents.has_reagent(/datum/reagent/water, 10))
+		to_chat(user, "<span class='notice'>Needs more water to work it.</span>")
+		return TRUE
+	to_chat(user, "<span class='notice'>Adding water, now its time to knead it...</span>")
+	playsound(get_turf(user), 'modular/Neu_Food/sound/splishy.ogg', 100, TRUE, -1)
+	if(do_after(user,2 SECONDS, target = src))
+		user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+		name = "sticky sugar"
+		desc = "Destined for greatness, at your hands."
+		R.reagents.remove_reagent(/datum/reagent/water, 10)
+		water_added = TRUE
+		color = "#d9d0cb"	
+	return TRUE
+
+/obj/item/reagent_containers/powder/sugar/attack_hand(mob/living/user)
+	if(water_added)
+		playsound(get_turf(user), 'modular/Neu_Food/sound/kneading_alt.ogg', 90, TRUE, -1)
+		if(do_after(user,3 SECONDS, target = src))
+			user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+			new /obj/item/reagent_containers/food/snacks/rogue/candybase(loc)
+			qdel(src)
+	else ..()
+
+/obj/item/reagent_containers/food/snacks/rogue/pumpkinspice
+	name = "pumpkin spice"
+	desc = "A warm, spicy blend of cinnamon, nutmeg, and cloves."
+	icon = 'icons/roguetown/items/food.dmi'
+	icon_state = "pumpkinspice"
+	bitesize = 1
+	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	w_class = WEIGHT_CLASS_TINY
+	tastes = list("an overwhelming flavor of pumpkin and other herbs." = 1)
+	eat_effect = /datum/status_effect/debuff/badmeal
+	rotprocess = null
+
+/obj/item/reagent_containers/food/snacks/rogue/candybase
+	name = "candy base"
+	desc = ""
+	icon = 'icons/roguetown/items/food.dmi'
+	icon_state = "candybase"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweet, sticky, and malleable" = 1)
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+
+/obj/item/reagent_containers/food/snacks/rogue/candybase/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(user.mind)
+		short_cooktime = (60 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*5))
+		long_cooktime = (100 - ((user.mind.get_skill_level(/datum/skill/craft/cooking))*10))
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/apple))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 90, TRUE, -1)
+			to_chat(user, "<span class='notice'>Breaking the apple down into the base...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/applecandy(loc)
+				qdel(I)
+				qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/berries/rogue))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Breaking the berries down into the base...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/berrycandy(loc)
+				qdel(I)
+				qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/rogue/pumpkinspice))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Mixing the pumpkin spice into the base...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/pumpkincandy(loc)
+				qdel(I)
+				qdel(src)
+	else
+		return ..()	
+
+/obj/item/reagent_containers/food/snacks/rogue/applecandy
+	name = "apple candy"
+	desc = ""
+	icon = 'icons/roguetown/items/food.dmi'
+	icon_state = "applecandy6"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 12)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweet, tart apple candy" = 1)
+	foodtype = SUGAR
+	bitesize = 6
+	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_FINE
+
+
+/obj/item/reagent_containers/food/snacks/rogue/applecandy/On_Consume(mob/living/eater)
+	..()
+	if(bitecount == 1)
+		icon_state = "applecandy5"
+	if(bitecount == 2)
+		icon_state = "applecandy4"
+	if(bitecount == 3)
+		icon_state = "applecandy3"
+	if(bitecount == 4)
+		icon_state = "applecandy2"
+	if(bitecount == 5)
+		icon_state = "applecandy1"
+
+/obj/item/reagent_containers/food/snacks/rogue/berrycandy
+	name = "berry candy"
+	desc = ""
+	icon = 'icons/roguetown/items/food.dmi'
+	icon_state = "berrycandy6"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 12)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweet, tart berry candy" = 1)
+	foodtype = SUGAR
+	bitesize = 6
+	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_FINE
+
+/obj/item/reagent_containers/food/snacks/rogue/berrycandy/On_Consume(mob/living/eater)
+	..()
+	if(bitecount == 1)
+		icon_state = "berrycandy5"
+	if(bitecount == 2)
+		icon_state = "berrycandy4"
+	if(bitecount == 3)
+		icon_state = "berrycandy3"
+	if(bitecount == 4)
+		icon_state = "berrycandy2"
+	if(bitecount == 5)
+		icon_state = "berrycandy1"
+
+/obj/item/reagent_containers/food/snacks/rogue/pumpkincandy
+	name = "pumpkin candy"
+	desc = ""
+	icon = 'icons/roguetown/items/food.dmi'
+	icon_state = "pumpkincandy6"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 12)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweet, spiced pumpkin candy" = 1)
+	foodtype = SUGAR
+	bitesize = 6
+	rotprocess = null
+	faretype = FARE_FINE
+
+/obj/item/reagent_containers/food/snacks/rogue/pumpkincandy/On_Consume(mob/living/eater)
+	..()
+	if(bitecount == 1)
+		icon_state = "pumpkincandy5"
+	if(bitecount == 2)
+		icon_state = "pumpkincandy4"
+	if(bitecount == 3)
+		icon_state = "pumpkincandy3"
+	if(bitecount == 4)
+		icon_state = "pumpkincandy2"
+	if(bitecount == 5)
+		icon_state = "pumpkincandy1"
+
+
+// -------------- JAMS -----------------
+/obj/item/reagent_containers/glass/beaker/jar
+	name = "Jar"
+	desc = ""
+	icon = 'modular/Neu_Food/icons/cooking.dmi'
+	icon_state = "jar"
+	dropshrink = 0.50
+
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledberries
+	name = "Jar of berries"
+	desc = ""
+	icon_state = "jarfilledberries"
+	dropshrink = 0.50
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	foodtype = SUGAR
+	bitesize = 1
+	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_NEUTRAL
+
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledapples
+	name = "Jar of apples"
+	desc = ""
+	icon_state = "jarfilledapples"
+	dropshrink = 0.50
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	foodtype = SUGAR
+	bitesize = 1
+	rotprocess = SHELFLIFE_EXTREME
+	faretype = FARE_NEUTRAL
+
+/obj/item/reagent_containers/food/snacks/rogue/uncookedberryjam
+	name = "uncooked berry jam"
+	desc = ""
+	icon_state = "uncookedberryjam"
+	w_class = WEIGHT_CLASS_NORMAL
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/berryjam
+	bitesize = 3
+	rotprocess = null	
+	dropshrink = 0.60
+	faretype = FARE_POOR
+
+/obj/item/reagent_containers/food/snacks/rogue/uncookedapplejam
+	name = "uncooked apple jam"
+	desc = ""
+	icon_state = "uncookedapplejam"
+	w_class = WEIGHT_CLASS_NORMAL
+	foodtype = SUGAR
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	cooked_type = /obj/item/reagent_containers/food/snacks/rogue/applejam
+	bitesize = 3
+	rotprocess = null	
+	dropshrink = 0.60
+	faretype = FARE_POOR
+
+/obj/item/reagent_containers/food/snacks/rogue/berryjam
+	name = "berry jam"
+	desc = ""
+	icon_state = "berryjam"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweetened berry" = 1)
+	foodtype = SUGAR
+	bitesize = 3
+	rotprocess = null
+	dropshrink = 0.60
+	trash = /obj/item/reagent_containers/glass/beaker/jar
+	faretype = FARE_NEUTRAL
+
+/obj/item/reagent_containers/food/snacks/rogue/applejam
+	name = "apple jam"
+	desc = ""
+	icon_state = "applejam"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 10)
+	w_class = WEIGHT_CLASS_NORMAL
+	tastes = list("sweetened apple" = 1)
+	foodtype = SUGAR
+	bitesize = 3
+	rotprocess = null
+	dropshrink = 0.60
+	trash = /obj/item/reagent_containers/glass/beaker/jar
+	faretype = FARE_NEUTRAL
+
+//When berries or apples are added to the jar it will create a filled jar
+/obj/item/reagent_containers/glass/beaker/jar/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/berries/rogue))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding berries to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/jarfilledberries(loc)
+				qdel(I)
+				qdel(src)
+	if(istype(I, /obj/item/reagent_containers/food/snacks/grown/apple))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding apples to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/jarfilledapples(loc)
+				qdel(I)
+				qdel(src)
+	else
+		return ..()
+
+//When the jar is filled with berries or apples it can then have sugar added to it to make jam
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledberries/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(istype(I, /obj/item/reagent_containers/powder/sugar))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding sugar to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/uncookedberryjam(loc)
+				qdel(I)
+				qdel(src)
+	else
+		return ..()
+
+/obj/item/reagent_containers/food/snacks/rogue/jarfilledapples/attackby(obj/item/I, mob/living/user, params)
+	var/found_table = locate(/obj/structure/table) in (loc)
+	if(istype(I, /obj/item/reagent_containers/powder/sugar))
+		if(isturf(loc)&& (found_table))
+			playsound(get_turf(user), 'modular/Neu_Food/sound/kneading.ogg', 100, TRUE, -1)
+			to_chat(user, "<span class='notice'>Adding sugar to the jar...</span>")
+			if(do_after(user,short_cooktime, target = src))
+				user.mind.adjust_experience(/datum/skill/craft/cooking, user.STAINT * 0.8)
+				new /obj/item/reagent_containers/food/snacks/rogue/uncookedapplejam(loc)
+				qdel(I)
+				qdel(src)
+	else
+		return ..()

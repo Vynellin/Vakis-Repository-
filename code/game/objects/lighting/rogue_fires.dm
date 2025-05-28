@@ -167,6 +167,11 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/rogue/wallfire/candle/weak, 32)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/light/rogue/torchholder, 0)
 
+/obj/machinery/light/rogue/torchholder/OnCrafted(dirin, user)
+	. = ..()
+	if(dir == NORTH)
+		pixel_y = 32
+
 /obj/machinery/light/rogue/torchholder/directional/north
 	pixel_y = 32 /// SOLARIS NOTE: hack workaround for now; I'm not dedicating too much time to this
 

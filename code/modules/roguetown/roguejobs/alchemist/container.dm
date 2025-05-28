@@ -133,8 +133,8 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/beer/apfelweinheim = 48)
 	desc = "A bottle with a small drawing of an apple upon it's cork-seal."
 
-/obj/item/reagent_containers/glass/bottle/rogue/beer/rtoper
-	list_reagents = list(/datum/reagent/consumable/ethanol/beer/rtoper = 48)
+/obj/item/reagent_containers/glass/bottle/rogue/beer/rtopaz
+	list_reagents = list(/datum/reagent/consumable/ethanol/beer/rtopaz = 48)
 	desc = "A bottle with the cork-seal inexplicably made out in the image of a fogged bog."
 
 /obj/item/reagent_containers/glass/bottle/rogue/beer/nred

@@ -2215,7 +2215,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					widescreenpref = !widescreenpref
 					user.client.change_view(CONFIG_GET(string/default_view))
 
-				if("BE_MENTOR")
+				if("mentor_help")
 					toggles ^= BE_MENTOR
 					if(toggles & BE_MENTOR)
 						to_chat(user, "<span class='warning'>You are now a voice.\n\

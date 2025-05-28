@@ -114,8 +114,6 @@ Pyrite
 Pyrolusite
 Quake
 Quarry
-Quartz
-Quartzite
 Realgar
 Reservoir
 Rhyolite

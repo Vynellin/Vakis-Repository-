@@ -149,8 +149,6 @@
 	if(!fou)
 		to_chat(AM, "<b>It is a dead end.</b>")
 
-/obj/structure/fluff/traveltile/bandit
-	required_trait = TRAIT_BANDITCAMP
 /obj/structure/fluff/traveltile/vampire
 	required_trait = TRAIT_VAMPMANSION
 /obj/structure/fluff/traveltile/dungeon

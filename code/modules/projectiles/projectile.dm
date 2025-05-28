@@ -80,6 +80,7 @@
 	var/ignore_source_check = FALSE
 
 	var/damage = 10
+	var/npc_damage_mult = 1 // Multiplicative bonus damage.
 	var/damage_type = BRUTE //BRUTE, BURN, TOX, OXY, CLONE are the only things that should be in here
 	var/nodamage = FALSE //Determines if the projectile will skip any damage inflictions
 	var/flag = "piercing" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb
@@ -186,6 +187,8 @@
 
 	var/mob/living/L = target
 
+	if (!L.mind)
+		damage *= npc_damage_mult // bonus damage against NPCs.
 	if(blocked != 100) // not completely blocked
 		if(damage && L.blood_volume && damage_type == BRUTE)
 			var/splatter_dir = dir

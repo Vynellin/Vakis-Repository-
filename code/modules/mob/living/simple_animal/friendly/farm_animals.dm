@@ -366,7 +366,7 @@
 
 /mob/living/simple_animal/grenchensnacker
 	name = "grenchensnacker"
-	desc = "Why is it smiling like that"
+	desc = "Why is it smiling like that...?"
 	icon_state = "grenchen"
 	icon_living = "grenchen"
 	icon_dead = "grenchen_dead"
@@ -379,7 +379,6 @@
 	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
-	butcher_results = list(/obj/item/roguekey/porta = 1)
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"

@@ -2,6 +2,7 @@
 	title = "Priest"
 	flag = PRIEST
 	department_flag = CHURCHMEN
+	selection_color = JCOLOR_CHURCH
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
@@ -24,7 +25,7 @@
 	round_contrib_points = 3
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
-	virtue_restrictions = list(/datum/virtue/utility/noble)
+	virtue_restrictions = list(/datum/virtue/utility/noble, /datum/virtue/utility/outlander) //Local priests probably shouldn't be from Not Here, though monks and the like make sense.
 
 /datum/outfit/job/roguetown/priest/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -60,7 +61,6 @@
 		H.mind.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/holy, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/alchemy, 3, TRUE)
 		if(H.age == AGE_OLD)
 			H.mind.adjust_skillrank(/datum/skill/magic/holy, 1, TRUE)
 		H.change_stat("strength", -1)
@@ -89,7 +89,7 @@
 	for(var/mob/living/carbon/human/HU in get_step(src, src.dir))
 		if(!HU.mind)
 			continue
-		if(HU.mind.assigned_role == "Grand Duke")
+		if(HU.mind.assigned_role == "Marquis")
 			continue
 		if(!HU.head)
 			continue

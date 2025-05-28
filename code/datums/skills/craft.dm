@@ -13,10 +13,10 @@
 
 /datum/skill/craft/weaponsmithing
 	name = "Weaponsmithing"
-	desc = "Determins whether you can smith various weapons. Required to repair weapons successfully on tables."
+	desc = "Determines whether you can smith various weapons. Required to repair weapons successfully on tables."
 	dreams = list(
 		"...tempered in gold and void, sharpened only by the sun and moon, your creation is finally complete. This one... This one will pierce the heavens...",
-		"...sweat drips down your brow and your arms ache with every strike, but at last, the blade is forged. A masterpiece of steel and gold, adorned with rontz gems...",
+		"...sweat drips down your brow and your arms ache with every strike, but at last, the blade is forged. A masterpiece of steel and gold, adorned with ruby gems...",
 		"...an old hunter stands in front of your counter and demands two dozen arrows. He hands you a bundle of sticks with a smile on his face..."
 	)
 
@@ -100,9 +100,11 @@
 	
 /datum/skill/craft/alchemy
 	name = "Alchemy"
-	desc = "Used to help you determine what ingredients do."
+	desc = "Determines what kind of potions you can brew and the types of transmutation and alchemy recipes you have access to."
 	dreams = list(
-		"...the smell of sulfur singes your nostrils... you taste iron... the smoke clears as you stare down at the reflection in your cauldron... the Queen stares back at you... she looks like she's crying..."
+		"...the smell of sulfur singes your nostrils... you taste iron... the smoke clears as you stare down at the reflection in your cauldron... the Queen stares back at you... she looks like she's crying...",
+		"...your mind spins as the great tome before you unfurls. One part in two hundred and fifty is salt, and it can be extracted from the flesh with a bit of ash. You pick up the pestle...",
+		"...a wizened man quaffs a blue liquid from a bottle, letting out a satisfied burp, 'A bottle of blue can sate your manna twice; once when emptied and once when filled with alchemist's spice.' He sets about grinding brimstone into the bottle before stuffing it with some cloth..."
 	)
 
 /datum/skill/craft/alchemy/skill_level_effect(level, datum/mind/mind)

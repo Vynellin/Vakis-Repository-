@@ -1,4 +1,4 @@
-// Necrite
+// Tsoridian
 /obj/effect/proc_holder/spell/targeted/burialrite
 	name = "Burial Rites"
 	range = 5
@@ -10,7 +10,7 @@
 	cast_without_targets = TRUE
 	sound = 'sound/magic/churn.ogg'
 	associated_skill = /datum/skill/magic/holy
-	invocation = "Undermaiden grant thee passage forth and spare the trials of the forgotten."
+	invocation = "Tsoridys grant thee passage forth and spare the trials of the forgotten."
 	invocation_type = "whisper" //can be none, whisper, emote and shout
 	miracle = TRUE
 	devotion_cost = 5 //very weak spell, you can just make a grave marker with a literal stick
@@ -42,7 +42,7 @@
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/churn.ogg'
 	associated_skill = /datum/skill/magic/holy
-	invocation = "The Undermaiden rebukes!"
+	invocation = "Tsoridys rebukes!"
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	miracle = TRUE
 	devotion_cost = 50

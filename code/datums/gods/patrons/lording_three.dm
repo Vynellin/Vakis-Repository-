@@ -4,7 +4,7 @@
 	t0 = /obj/effect/proc_holder/spell/invoked/lesser_heal
 
 /datum/patron/lording_three/aeternus
-	name = "Aeturnus"
+	name = "Aeternus"
 	domain = "Ascendant; Sun, Fire, Light, Permanence, Justice, Hope, and Order"
 	desc = "The Dawnfather, the Lord of Day, Aeternus is one half of the two Prime Deities alongside his Sister, Zira. \
 			His domain is light, his voice is fire, and his word has been law among the kingdoms of the Dawn that rose \
@@ -30,9 +30,11 @@
 
 /datum/patron/lording_three/tsoridys
 	name = "Tsoridys"
-	domain = "Death; Time, and Entropy"
-	desc = "Placeholder Description. Tsoridys shepherds the end of Tamari's reign on life, ensuring safe passage for mortals."
-	worshippers = "Mourners, The World-Weary, Gravediggers & Burialmen"
+	domain = "Death, Time, Fate, and Endings"
+	desc = "Tsoridys is the primordial force of ending; older than even Light, all things that Are were destined to End, to grant divine purpose and permit perpetuity and legacy. \
+			In times long past, Tsoridys was once feared and even spurned - but his compassion for those who passed and mercy for those whose time had not yet come during the Dusk War \
+			saw fit to elevate him to the head of the pantheon following the loss of so many other Gods."
+	worshippers = "Mourners, Healers, Diviners, The Forsaken, The Forgotten, and Hermits"
 	mob_traits = list(TRAIT_SOUL_EXAMINE, TRAIT_NOSTINK)	//No stink is generic but they deal with dead bodies so.. makes sense, I suppose?
 	t1 = /obj/effect/proc_holder/spell/invoked/avert
 	t2 = /obj/effect/proc_holder/spell/targeted/abrogation
