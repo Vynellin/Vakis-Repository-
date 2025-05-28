@@ -17158,6 +17158,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/mountains)
+"hiI" = (
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/under/cave)
 "hiM" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /obj/structure/bed/rogue/inn,
@@ -295195,7 +295199,7 @@ htN
 htN
 htN
 htN
-htN
+hiI
 htN
 ogs
 ogs
