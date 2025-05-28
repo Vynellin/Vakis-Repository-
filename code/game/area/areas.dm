@@ -108,6 +108,11 @@
 	var/list/ambush_mobs
 	var/list/ambush_times
 
+	/// What does this area generally look like? Used in deathsight to describe it.
+	var/brief_descriptor = "a locale wreathed in enigmatic fog"
+	/// Where is our general location? Used by the signal horn to describe a blanket area of where it comes from.
+	var/general_location = "I cannot discern where it came from exactly!"
+
 	var/converted_type
 
 
