@@ -236,7 +236,7 @@
 	keys = list(/obj/item/roguekey/shop, /obj/item/roguekey/merchant)
 
 /obj/item/storage/keyring/mage
-	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/tower, /obj/item/roguekey/mage, /obj/item/roguekey/mages_university, /obj/item/roguekey/mages_university/private)
+	keys = list(/obj/item/roguekey/manor, /obj/item/roguekey/tower, /obj/item/roguekey/mages_university, /obj/item/roguekey/mages_university/private)
 
 /obj/item/storage/keyring/mages_university
 	keys = list(/obj/item/roguekey/mages_university, /obj/item/roguekey/mages_university/private)
