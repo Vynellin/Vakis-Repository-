@@ -237,6 +237,9 @@
 /turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner/ground
 	icon_state = "walltree_outercorner_ground"
 
+/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner/tree
+	icon_state = "walltree_outercorner_tree"
+
 /turf/closed/wall/mineral/rogue/decowood
 	name = "decorated wooden wall"
 	desc = "Meticulously designed by an professional carpenter."

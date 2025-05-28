@@ -1250,7 +1250,7 @@
 
 /turf/open/floor/rogue/walltree_floor
 	icon = 'icons/roguetown/misc/tree.dmi'
-	icon_state = "walltree"
+	icon_state = "dwalltree"
 	footstep = FOOTSTEP_WOOD
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_WOOD_CLAW
@@ -1259,11 +1259,8 @@
 	landsound = 'sound/foley/jumpland/woodland.wav'
 
 /turf/open/floor/rogue/walltree_floor/outercorner
-	icon_state = "walltree_outercorner"
-
-/turf/open/floor/rogue/walltree_floor/outercorner/ground
-	icon_state = "walltree_outercorner_ground"
+	icon_state = "dwalltree_outercorner"
 
 /turf/open/floor/rogue/walltree_floor/innercorner
-	icon_state = "walltree_innercorner"
+	icon_state = "dwalltree_innercorner"
 

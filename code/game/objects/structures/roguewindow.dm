@@ -71,6 +71,12 @@
 	max_integrity = 200
 	integrity_failure = 0.5
 
+/obj/structure/roguewindow/openclose/tree
+	icon = 'icons/roguetown/misc/tree.dmi'
+	desc = "A window inserted into the trunk of a giant tree."
+	icon_state = "tree_window"
+	base_state = "tree_window"
+
 /obj/structure/roguewindow/openclose/reinforced
 	desc = "A glass window. This one looks reinforced with a metal mesh."
 	icon_state = "reinforcedwindowdir"
