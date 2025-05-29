@@ -6524,7 +6524,9 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/town/basement)
 "cOb" = (
-/mob/living/simple_animal/hostile/retaliate/rogue/mole,
+/mob/living/simple_animal/hostile/retaliate/rogue/mole{
+	faction = list("wolfs","undead")
+	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/dungeon/vulnafir)
 "cOm" = (
@@ -11622,7 +11624,9 @@
 /area/rogue/under/cave/dungeon/abandoned_manor)
 "eTl" = (
 /obj/structure/fluff/railing/border,
-/mob/living/simple_animal/hostile/rogue/dragger,
+/mob/living/simple_animal/hostile/rogue/dragger{
+	faction = list("undead","spiders")
+	},
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/rogue/under/cave/dungeon/vulnafir)
 "eTA" = (
@@ -32526,7 +32530,9 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/dungeon/goblinfort)
 "nFf" = (
-/mob/living/simple_animal/hostile/retaliate/rogue/mole,
+/mob/living/simple_animal/hostile/retaliate/rogue/mole{
+	faction = list("wolfs","undead")
+	},
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/rogue/under/cave/dungeon/vulnafir)
 "nFm" = (
