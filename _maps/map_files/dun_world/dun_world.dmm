@@ -36058,14 +36058,6 @@
 "phl" = (
 /turf/closed/wall/mineral/rogue/stone,
 /area/rogue/indoors/town)
-"phq" = (
-/obj/structure/plasticflaps,
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Knight's Chamber";
-	locked = 1
-	},
-/turf/open/water/sewer,
-/area/rogue/under/town/sewer)
 "phz" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobble,
@@ -145323,7 +145315,7 @@ bhJ
 bhJ
 jfN
 dlK
-phq
+qpC
 dlK
 opX
 opX
