@@ -1,5 +1,5 @@
 /obj/item/ammopouch
-	name = "bullet pouch"
+	name = "shot pouch"
 	desc = ""
 	icon_state = "pouch0"
 	item_state = "pouch"
@@ -53,6 +53,7 @@
 	. = ..()
 	if(bullets.len)
 		. += span_notice("[bullets.len] inside.")
+	. += span_notice("Click on the ground to pick up shot on the floor.")
 
 /obj/item/ammopouch/update_icon()
 	if(bullets.len)
