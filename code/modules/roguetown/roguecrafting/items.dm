@@ -1018,7 +1018,7 @@
 /datum/crafting_recipe/roguetown/ironbullet
 	name = "iron bullets (x10)"
 	reqs = list(/obj/item/ingot/iron = 1)
-	result = list(/obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet)
+	result = list(/obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet, /obj/item/ammo_casing/caseless/rogue/bullet)
 	skillcraft = /datum/skill/craft/blacksmithing
 	craftdiff = 3
 
@@ -1026,6 +1026,6 @@
 /datum/crafting_recipe/roguetown/steelbullet
 	name = "steel bullets (x10)"
 	reqs = list(/obj/item/ingot/steel = 1)
-	result = list(/obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel)
+	result = list(/obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel, /obj/item/ammo_casing/caseless/rogue/bullet/steel)
 	skillcraft = /datum/skill/craft/blacksmithing
 	craftdiff = 4
