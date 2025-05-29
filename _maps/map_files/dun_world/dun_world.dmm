@@ -6523,6 +6523,10 @@
 "cNS" = (
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/under/town/basement)
+"cOb" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/mole,
+/turf/open/floor/rogue/dirt,
+/area/rogue/under/cave/dukecourt)
 "cOm" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 8
@@ -10019,6 +10023,14 @@
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/dungeon1/gethsmane)
+"eoy" = (
+/obj/structure/winch{
+	dir = 4;
+	gid = "forgotten_thronegate_three";
+	redstone_id = "forgotten_thronegate_three"
+	},
+/turf/open/water/swamp,
+/area/rogue/under/cave/dukecourt)
 "eoE" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -23416,6 +23428,9 @@
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/town/cell)
+"jPj" = (
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/rogue/under/cave/dukecourt)
 "jPs" = (
 /obj/machinery/light/roguestreet{
 	dir = 1
@@ -31172,6 +31187,13 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/mountains/decap)
+"nfW" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/remains/human,
+/turf/open/floor/rogue/tile/masonic{
+	dir = 8
+	},
+/area/rogue/under/cave/dukecourt)
 "nfZ" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -32503,6 +32525,10 @@
 /obj/effect/decal/cleanable/blood/gibs,
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/goblinfort)
+"nFf" = (
+/mob/living/simple_animal/hostile/retaliate/rogue/mole,
+/turf/open/floor/rogue/tile/masonic/inverted,
+/area/rogue/under/cave/dukecourt)
 "nFm" = (
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /obj/structure/closet/crate/chest/crate,
@@ -43953,8 +43979,12 @@
 	},
 /area/rogue/indoors/town)
 "syS" = (
-/obj/effect/decal/remains/human,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/winch{
+	dir = 8;
+	gid = "forgotten_thronegate_two";
+	redstone_id = "forgotten_thronegate_two"
+	},
 /turf/open/floor/rogue/tile/masonic,
 /area/rogue/under/cave/dukecourt)
 "szn" = (
@@ -47495,6 +47525,9 @@
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/hay,
 /area/rogue/indoors/town)
+"ufg" = (
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/under/cave/dukecourt)
 "ufw" = (
 /obj/structure/bars{
 	alpha = 190
@@ -52828,6 +52861,15 @@
 	dir = 4;
 	icon_state = "iron_line"
 	},
+/area/rogue/under/cave/dukecourt)
+"wtA" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/winch{
+	dir = 4;
+	gid = "forgotten_thronegate";
+	redstone_id = "forgotten_thronegate"
+	},
+/turf/open/water/swamp/deep,
 /area/rogue/under/cave/dukecourt)
 "wtC" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
@@ -111265,7 +111307,7 @@ tfT
 aYd
 fbh
 xmi
-aYd
+wtA
 ikt
 tKy
 hAw
@@ -113518,7 +113560,7 @@ pqB
 jDW
 ijY
 aMK
-mXX
+nfW
 tRl
 xmi
 aYd
@@ -221972,12 +222014,12 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
+duF
+duF
+duF
+duF
+duF
+duF
 szI
 szI
 szI
@@ -222423,15 +222465,15 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+duF
+duF
+aeA
+aeA
+sFL
+aeA
+duF
+jPj
+duF
 szI
 szI
 szI
@@ -222875,16 +222917,16 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+qlD
+aeA
+ltK
+aeA
+aeA
+aeA
+aeA
+fCm
+duF
+duF
 szI
 szI
 szI
@@ -223327,17 +223369,17 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+ikt
+kMe
+aeA
+ctJ
+ctJ
+aeA
+aeA
+ctJ
+ctJ
+duF
+duF
 szI
 szI
 szI
@@ -223779,18 +223821,18 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+ikt
+jSC
+aPk
+aau
+cGH
+flV
+iVz
+ctJ
+geR
+geR
+duF
+duF
 szI
 szI
 szI
@@ -224231,18 +224273,18 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+ikt
+aeA
+aeA
+ctJ
+jLC
+aeA
+ltK
+geR
+geR
+ctJ
+geR
+jPj
 szI
 szI
 szI
@@ -224683,18 +224725,18 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+qlD
+aeA
+aeA
+ltK
+aeA
+aeA
+aeA
+aeA
+duF
+geR
+geR
+duF
 szI
 szI
 szI
@@ -225135,18 +225177,18 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+duF
+duF
+aeA
+aeA
+aeA
+aeA
+duF
+duF
+jPj
+geR
+duF
+duF
 szI
 szI
 szI
@@ -225588,18 +225630,18 @@ szI
 szI
 szI
 szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
-szI
+duF
+duF
+duF
+duF
+duF
+duF
+duF
+duF
+ctJ
+ctJ
+geR
+duF
 szI
 szI
 duF
@@ -226045,15 +226087,15 @@ szI
 szI
 szI
 szI
-szI
+duF
+ctJ
+ctJ
+geR
+geR
+ctJ
+ctJ
 duF
 duF
-duF
-duF
-duF
-duF
-szI
-szI
 ikt
 eBK
 pZq
@@ -226495,16 +226537,16 @@ szI
 szI
 szI
 szI
-szI
-szI
 duF
 duF
-aeA
-aeA
-sFL
-aeA
 duF
-duF
+hAw
+hAw
+iVz
+hAw
+hAw
+hAw
+hAw
 duF
 ikt
 eBK
@@ -226947,17 +226989,17 @@ szI
 szI
 szI
 szI
-szI
-szI
-qlD
-aeA
-ltK
-aeA
-aeA
-aeA
-aeA
-fCm
-qlD
+duF
+hAw
+hAw
+hAw
+hAw
+iVz
+hAw
+geR
+geR
+hAw
+eoy
 qlD
 kll
 olD
@@ -227399,16 +227441,16 @@ szI
 szI
 szI
 szI
-szI
-szI
-ikt
-kMe
-aeA
-ctJ
-ctJ
-aeA
-aeA
-ctJ
+duF
+geR
+cOb
+geR
+geR
+geR
+oQP
+ufg
+ufg
+oQP
 oQP
 jQx
 kVe
@@ -227851,16 +227893,16 @@ szI
 szI
 szI
 szI
-szI
-szI
-ikt
-jSC
-aPk
-aau
-cGH
-flV
-iVz
-ctJ
+duF
+geR
+geR
+geR
+mJi
+geR
+geR
+geR
+ufg
+ufg
 oQP
 oQP
 lff
@@ -228303,17 +228345,17 @@ szI
 szI
 szI
 szI
-szI
-szI
-ikt
-aeA
-aeA
-ctJ
-jLC
-aeA
-ltK
-ctJ
+duF
+duF
+geR
+geR
+mJi
+mJi
+geR
+nFf
 oQP
+geR
+geR
 oQP
 doD
 hCC
@@ -228757,15 +228799,15 @@ szI
 szI
 szI
 szI
-qlD
-aeA
-aeA
-ltK
-aeA
-aeA
-aeA
-ctJ
-qlD
+duF
+duF
+geR
+geR
+mJi
+mJi
+geR
+duF
+duF
 qlD
 kll
 olD
@@ -229209,15 +229251,15 @@ szI
 szI
 szI
 szI
-duF
-duF
-aeA
-aeA
-aeA
-aeA
+szI
 duF
 duF
 duF
+duF
+duF
+duF
+duF
+szI
 ikt
 olD
 olD
@@ -229662,12 +229704,12 @@ szI
 szI
 szI
 szI
-duF
-duF
-duF
-duF
-duF
-duF
+szI
+szI
+szI
+szI
+szI
+szI
 szI
 szI
 ikt
