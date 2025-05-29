@@ -182,6 +182,7 @@
 #define JCOLOR_YEOMAN "#819e82" // Service
 #define JCOLOR_PEASANT "#cfbb9a" // Service but also Greytiders
 #define JCOLOR_SLOP "#71c980" // Deathsquad
+#define JCOLOR_ANTAG "#9c0000" // Syndies
 
 // job display orders //
 

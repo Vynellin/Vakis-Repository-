@@ -57,14 +57,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	soundenv = 2
 	plane = INDOOR_PLANE
 	converted_type = /area/rogue/outdoors
-
-
+	brief_descriptor = "a place where the very walls surround a quiet end"
+	general_location = "Somewhere muffling it's sound!"
 
 /area/rogue/indoors/banditcamp
 	name = "bandit camp indoors"
 	droning_sound = 'sound/music/area/banditcamp.ogg'
 	droning_sound_dusk = 'sound/music/area/banditcamp.ogg'
 	droning_sound_night = 'sound/music/area/banditcamp.ogg'
+	brief_descriptor = "where through brief windowed glance - there's glimpse of palisade"
+	general_location = "Somewhere far from town!"
 
 /area/rogue/indoors/cave
 	name = "latejoin cave"
@@ -72,6 +74,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambientsounds = AMB_GENCAVE
 	ambientnight = AMB_GENCAVE
 	soundenv = 8
+	brief_descriptor = "where the rocks tower above"
+	general_location = "Somewhere below!"
 
 /area/rogue/indoors/cave/late/can_craft_here()
 	return FALSE
@@ -94,6 +98,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
 	converted_type = /area/rogue/indoors/shelter
 	soundenv = 16
+	brief_descriptor = "in the fields of Sunmarch"
+	general_location = "Somewhere in the wilds!"
 
 
 /area/rogue/outdoors/banditcamp
@@ -101,12 +107,15 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound = 'sound/music/area/banditcamp.ogg'
 	droning_sound_dusk = 'sound/music/area/banditcamp.ogg'
 	droning_sound_night = 'sound/music/area/banditcamp.ogg'
+	brief_descriptor = "in a camp, wicked and wild."
 
 /area/rogue/indoors/shelter
 	icon_state = "shelter"
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	brief_descriptor = "in a makeshift shelter from the world around"
+	general_location = "Somewhere barely muffling it's call!"
 
 /area/rogue/outdoors/mountains
 	name = "mountains"
@@ -121,17 +130,23 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	warden_area = TRUE
 	soundenv = 17
 	converted_type = /area/rogue/indoors/shelter/mountains
+	brief_descriptor = "in a makeshift shelter from the world around"
+	general_location = "Up in the mountains!"
 
 /area/rogue/indoors/shelter/mountains
 	icon_state = "mountains"
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	brief_descriptor = "in a makeshift shelter, above the clouds"
+	general_location = "Muffled, yet above us!" // ඞ
 
 /area/rogue/outdoors/mountains/deception
 	name = "deception"
 	icon_state = "deception"
 	first_time_text = "THE CANYON OF DECEPTION"
+	brief_descriptor = "surrounded by rock, all but above"
+	general_location = "Somewhere below me, yet clear as day!"
 
 /area/rogue/outdoors/mountains/decap
 	name = "mt decapitation"
@@ -148,11 +163,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	first_time_text = "MOUNT DECAPITATION"
 	ambush_times = list("night","dawn","dusk","day")
 	converted_type = /area/rogue/indoors/shelter/mountains/decap
+	brief_descriptor = "in a land of magma and arid air"
+	general_location = "High above, in the mountaintops!"
+
 /area/rogue/indoors/shelter/mountains/decap
 	icon_state = "decap"
 	droning_sound = 'sound/music/area/decap.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
+	brief_descriptor = "in a lowly structure in a land that wishes to ravage it"
+	general_location = "Muffled, yet high above!"
 
 
 /area/rogue/outdoors/mountains/decap/stepbelow
@@ -170,6 +190,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	first_time_text = "TARICHEA, VALLEY OF LOSS"
 	ambush_times = list("night","dawn","dusk","day")
 	converted_type = /area/rogue/indoors/shelter/mountains/decap
+	brief_descriptor = "the base of a treacherous mountain"
+	general_location = "From the base of the mountains!"
 
 /area/rogue/outdoors/rtfield
 	name = "solar basin"
@@ -180,12 +202,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = 'sound/music/area/fieldsdusk.ogg'
 	droning_sound_night = 'sound/music/area/fieldsnight.ogg'
 	converted_type = /area/rogue/indoors/shelter/rtfield
+	brief_descriptor = "where the forests and ocean converge"
+	general_location = "From the fields outside of town!"
 
 /area/rogue/indoors/shelter/rtfield
 	icon_state = "rtfield"
 	droning_sound = 'sound/music/area/field.ogg'
 	droning_sound_dusk = 'sound/music/area/fieldsdusk.ogg'
 	droning_sound_night = 'sound/music/area/fieldsnight.ogg'
+	brief_descriptor = "where walls keep out the wilds of the basin"
+	general_location = "Muffled, yet from the fields!"
 
 
 /area/rogue/outdoors/woods
@@ -210,12 +236,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/goblin/npc/ambush = 30)
 	first_time_text = "THE SOLAR GROVE"
 	converted_type = /area/rogue/indoors/shelter/woods
+	brief_descriptor = "where trees line all view, and all thought"
+	general_location = "From the Solar Grove!"
 
 /area/rogue/indoors/shelter/woods
 	icon_state = "woods"
 	droning_sound = 'sound/music/area/forest.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/forestnight.ogg'
+	brief_descriptor = "where shelter is plentiful, yet built regardless"
+	general_location = "Muffled, but unmistakably the Solar Grove!"
 
 
 /area/rogue/outdoors/river
@@ -230,6 +260,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/forestnight.ogg'
 	converted_type = /area/rogue/indoors/shelter/woods
+	brief_descriptor = "a brief glimpse of Cinella's realm in the Underking's grave"
 
 /area/rogue/outdoors/bog
 	name = "bog"
@@ -256,15 +287,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/goblin/npc/ambush/cave = 30)
 	first_time_text = "THE TERRORBOG"
 	converted_type = /area/rogue/indoors/shelter/bog
+	brief_descriptor = "a terrible place of wilt and willow"
+	general_location = span_danger("It's from the terrorbog.") // You are in danger.
 
 /area/rogue/indoors/shelter/bog
 	icon_state = "bog"
 	droning_sound = 'sound/music/area/bog.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
-
-/area/rogue/outdoors/bog/dense
-	name = "dense bog"
+	brief_descriptor = "where brief shelter can be found from the bog's nightmare"
+	general_location = span_danger("It's from the terrorbog, yet's... muffled.")
 
 /area/rogue/outdoors/beach
 	name = "coast"
@@ -276,6 +308,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
 	converted_type = /area/rogue/under/lake
+	brief_descriptor = "the edge of Cinella's realm"
+	general_location = "From the coast!"
 
 /area/rogue/outdoors/beach/forest
 	name = "coastforest"
@@ -299,6 +333,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/goblin/npc/ambush/sea = 40)
 	first_time_text = "THE SOLAR COAST"
 	converted_type = /area/rogue/indoors/shelter/woods
+	brief_descriptor = "the edge of Cinella's realm verse the bounty of nature"
 
 //// UNDER AREAS (no indoor rain sound usually)
 
@@ -312,6 +347,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	soundenv = 8
 	plane = INDOOR_PLANE
 	converted_type = /area/rogue/outdoors/exposed
+	brief_descriptor = "walls and ceiling abound, yet no window's to be found"
+	general_location = "From somewhere below!"
+
 /area/rogue/outdoors/exposed
 	icon_state = "exposed"
 	droning_sound = 'sound/music/area/towngen.ogg'
@@ -338,11 +376,15 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/skeleton/npc/ambush = 10,
 				/mob/living/simple_animal/hostile/retaliate/rogue/minotaur = 5)
 	converted_type = /area/rogue/outdoors/caves
+	brief_descriptor = "where rock and murk intermingle"
+
 /area/rogue/outdoors/caves
 	icon_state = "caves"
 	droning_sound = 'sound/music/area/caves.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
+	brief_descriptor = "where rock and murk intermingle"
+	general_location = "From somewhere below!"
 
 /area/rogue/under/cavewet
 	name = "cavewet"
@@ -365,6 +407,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/goblin/npc/sea = 20,
 				/mob/living/simple_animal/hostile/retaliate/rogue/troll = 15)
 	converted_type = /area/rogue/outdoors/caves
+	brief_descriptor = "a sea, entrenched in the Underking's former realm"
 
 /area/rogue/under/underdark
 	name = "The Underdark"
@@ -388,9 +431,12 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 				/mob/living/carbon/human/species/goblin/npc/ambush/moon = 30,
 				/mob/living/simple_animal/hostile/retaliate/rogue/troll = 15)
 	converted_type = /area/rogue/outdoors/caves
+	brief_descriptor = "where dusk elves once stood as monuments"
 
 /area/rogue/under/cavewet/bogcaves
 	first_time_text = "The Undergrove"
+	brief_descriptor = "beneath the bog's nightmare"
+	general_location = span_danger("From below the bog.")
 
 /area/rogue/under/cavewet/bogcaves/sunkencity
 	first_time_text = "MELTED UNDERCITY"
@@ -399,6 +445,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound = 'sound/music/area/underdark.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
+	brief_descriptor = "where men roamed so long ago"
 
 /area/rogue/under/cave/spider
 	icon_state = "spider"
@@ -409,26 +456,15 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/spidercave
-/area/rogue/outdoors/spidercave
-	icon_state = "spidercave"
-	droning_sound = 'sound/music/area/spidercave.ogg'
-	droning_sound_dusk = null
-	droning_sound_night = null
+	brief_descriptor = "where web and rock weave together"
 
-/area/rogue/under/spiderbase
-	name = "spiderbase"
-	ambientsounds = AMB_BASEMENT
-	ambientnight = AMB_BASEMENT
-	icon_state = "spiderbase"
-	droning_sound = 'sound/music/area/spidercave.ogg'
-	droning_sound_dusk = null
-	droning_sound_night = null
-	converted_type = /area/rogue/outdoors/spidercave
 /area/rogue/outdoors/spidercave
 	icon_state = "spidercave"
 	droning_sound = 'sound/music/area/spidercave.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
+	brief_descriptor = /area/rogue/under/cave/spider::brief_descriptor
+	general_location = "From somewhere below!"
 
 /area/rogue/under/cavelava
 	name = "cavelava"
@@ -450,11 +486,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/decap
+	brief_descriptor = "a place arid in the former brother sun's embrace"
+	general_location = "From the mountains!"
+
 /area/rogue/outdoors/exposed/decap
 	icon_state = "decap"
 	droning_sound = 'sound/music/area/decap.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
+	brief_descriptor = "a place arid in the former brother sun's embrace"
+	general_location = "From the mountains!"
 
 /area/rogue/under/lake
 	name = "underground lake"
@@ -463,6 +504,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambientnight = AMB_BEACH
 	spookysounds = SPOOKY_CAVE
 	spookynight = SPOOKY_GEN
+	brief_descriptor = "a respite in rock, murky as it is."
+	general_location = "From below!"
 
 /area/rogue/under/cave/dungeon1
 	name = "smalldungeon1"
@@ -480,6 +523,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
+	brief_descriptor = "where a wicked beast dwelled"
 
 /area/rogue/under/cave/dragonden
 	name = "dragonnest"
@@ -489,6 +533,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
+	brief_descriptor = "where a wicked beast dwelled"
 
 /area/rogue/under/cave/goblinfort
 	name = "goblinfort"
@@ -498,6 +543,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
+	brief_descriptor = "where wicked beasts dwell"
 
 /area/rogue/under/cave/scarymaze
 	name = "hauntedlabyrinth"
@@ -507,6 +553,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
+	brief_descriptor = "a maze eternal"
 
 /area/rogue/under/cave/undeadmanor
 	name = "skelemansion"
@@ -516,6 +563,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
+	brief_descriptor = "where the bones walk earth"
 
 /area/rogue/outdoors/dungeon1
 	name = "smalldungeonoutdoors"
@@ -527,12 +575,13 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 /area/rogue/under/cave/mazedungeon
 	name = "mazedungeon"
 	icon_state = "under"
-	first_time_text = "TEMPLE OF THE SHATTERED GOD"
+	first_time_text = "THE WINDING HALLS"
 	droning_sound = 'sound/music/area/dungeon2.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
 	ceiling_protected = TRUE
+	brief_descriptor = "a wretched place far below"
 
 /area/rogue/under/cave/orcdungeon
 	name = "orcdungeon"
@@ -543,6 +592,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
 	ceiling_protected = TRUE
+	brief_descriptor = "where marauders lurk"
 
 /area/rogue/under/cave/dukecourt
 	name = "dukedungeon"
@@ -552,6 +602,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
+	brief_descriptor = "where royalty bled"
 
 //////
 /////
@@ -570,6 +621,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
 	converted_type = /area/rogue/outdoors/exposed/town
 	town_area = TRUE
+	brief_descriptor = "nestled within walls of walls inside Solaris Ridge."
+	general_location = "Inside the town of Solaris Ridge!"
 
 
 /area/rogue/outdoors/exposed/town
@@ -577,6 +630,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound = 'sound/music/area/towngen.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
+	brief_descriptor = "nestled within the walls of Solaris Ridge."
+	general_location = "Inside the town of Solaris Ridge!"
 
 /area/rogue/outdoors/exposed/town/keep
 	name = "Keep"
@@ -584,6 +639,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound = 'sound/music/area/manorgarri.ogg'
 	keep_area = TRUE
 	town_area = TRUE
+	brief_descriptor = "nestled within the keep of Solaris Ridge."
+	general_location = "Inside the keep!"
 
 /area/rogue/indoors/town/manor
 	name = "Manor"
@@ -594,6 +651,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/outdoors/exposed/manorgarri
 	first_time_text = "THE KEEP OF SOLARIS RIDGE"
 	keep_area = TRUE
+	brief_descriptor = "nestled within the keep of Solaris Ridge."
+	general_location = "Inside the keep!"
 
 /area/rogue/outdoors/exposed/manorgarri
 	icon_state = "manorgarri"
@@ -601,6 +660,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	keep_area = TRUE
+	brief_descriptor = "nestled within the garrison of Solaris Ridge."
+	general_location = "Inside the Garrison!"
 
 /area/rogue/indoors/town/magician
 	name = "Wizard's Tower"
@@ -612,6 +673,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/magiciantower
 	keep_area = TRUE
+	brief_descriptor = "where the university sent dignitary to persuade the Marquis."
+	general_location = "Inside the Dignitary's Quarter!"
 
 /area/rogue/outdoors/exposed/magiciantower
 	icon_state = "magiciantower"
@@ -619,6 +682,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	keep_area = TRUE
+	brief_descriptor = "where the university sent dignitary to persuade the Marquis."
+	general_location = "Inside the Dignitary's Quarter!"
 
 /area/rogue/indoors/town/shop
 	name = "Shop"
@@ -627,16 +692,19 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/shop
+
 /area/rogue/outdoors/exposed/shop
 	icon_state = "shop"
 	droning_sound = 'sound/music/area/shop.ogg'
 
 /area/rogue/indoors/town/physician
-	name = "Physician"
+	name = "Deacon"
 	icon_state = "physician"
 	droning_sound = 'sound/music/area/shop.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
+	brief_descriptor = "where the chapel of lights sent dignitary to persuade the Marquis."
+	general_location = "Inside the Dignitary's Quarter!"
 
 /area/rogue/indoors/town/garrison
 	name = "Garrison"
@@ -648,6 +716,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/manorgarri
 	keep_area = TRUE
+	brief_descriptor = "where soldiers haunt and drinks are poured"
+	general_location = "Inside the Garrison!"
 
 /area/rogue/indoors/town/cell
 	name = "dungeon cell"
@@ -659,6 +729,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/manorgarri
 	keep_area = TRUE
+	brief_descriptor = "where men rot and hope dwindles"
+	general_location = "Inside the Garrison!"
 
 
 /area/rogue/indoors/town/tavern
@@ -670,6 +742,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/tavern
+	brief_descriptor = "where merriment sparks and bards play"
+
 /area/rogue/outdoors/exposed/tavern
 	icon_state = "tavern"
 	droning_sound = 'sound/silence.ogg'
@@ -684,6 +758,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	droning_sound_dawn = 'sound/music/area/churchdawn.ogg'
 	converted_type = /area/rogue/outdoors/exposed/church
+	brief_descriptor = "hallowed ground of the nine"
+	general_location = "Inside the Chapel of Lights!"
+
 /area/rogue/outdoors/exposed/church
 	icon_state = "church"
 	droning_sound = 'sound/music/area/church.ogg'
@@ -712,6 +789,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 /area/rogue/indoors/town/warehouse
 	name = "dock warehouse import"
 	icon_state = "warehouse"
+	brief_descriptor = "where the steward imports goods"
+	general_location = "Below town!"
 
 /area/rogue/indoors/town/warehouse/can_craft_here()
 	return FALSE
@@ -720,13 +799,11 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	name = "vault"
 	icon_state = "vault"
 	keep_area = TRUE
+	brief_descriptor = "where the realm's riches lie so safe"
+	general_location = span_danger("It's from the vault!") // RUN FORREST RUN
 
 /area/rogue/indoors/town/vault/can_craft_here()
 	return FALSE
-
-/area/rogue/indoors/town/entrance
-	first_time_text = "Roguetown"
-	icon_state = "entrance"
 
 /area/rogue/indoors/town/dwarfin
 	name = "dwarven quarter"
@@ -736,6 +813,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	first_time_text = "The Dwarven Quarter"
 	converted_type = /area/rogue/outdoors/exposed/dwarf
+	brief_descriptor = "where craftsmen toil and legends are prepared"
+
 /area/rogue/outdoors/exposed/dwarf
 	icon_state = "dwarf"
 	droning_sound = 'sound/music/area/dwarf.ogg'
@@ -754,29 +833,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/indoors/shelter/town
 	first_time_text = "THE CITY OF SOLARIS RIDGE"
 	town_area = TRUE
+	brief_descriptor = "inside the walls of Solaris Ridge"
+	general_location = "From Solaris Ridge!"
 
 /area/rogue/indoors/shelter/town
 	icon_state = "town"
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
-
-
-/area/rogue/outdoors/town/sargoth
-	name = "outdoors"
-	icon_state = "sargoth"
-	soundenv = 16
-	droning_sound = 'sound/music/area/sargoth.ogg'
-	droning_sound_dusk = null
-	droning_sound_night = null
-	converted_type = /area/rogue/indoors/shelter/town/sargoth
-	first_time_text = "SARGOTH"
-/area/rogue/indoors/shelter/town/sargoth
-	icon_state = "sargoth"
-	droning_sound = 'sound/music/area/sargoth.ogg'
-	droning_sound_dusk = null
-	droning_sound_night = null
-	first_time_text = "SARGOTH"
+	brief_descriptor = "inside walls of walls, honed on Solaris Ridge"
+	general_location = "Muffled, yet from Solaris Ridge!"
 
 /area/rogue/outdoors/town/roofs
 	name = "roofs"
@@ -796,27 +862,14 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	icon_state = "manor"
 	keep_area = TRUE
 	town_area = TRUE
+	brief_descriptor = "the very rooftops of the keep"
+	general_location = "From the keep!"
 
 /area/rogue/indoors/shelter/town/roofs
 	icon_state = "roofs"
 	droning_sound = 'sound/music/area/field.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
-
-/area/rogue/outdoors/town/dwarf
-	name = "dwarven quarter"
-	icon_state = "dwarf"
-	droning_sound = 'sound/music/area/dwarf.ogg'
-	droning_sound_dusk = null
-	droning_sound_night = null
-	first_time_text = "The Dwarven Quarter"
-	soundenv = 16
-	converted_type = /area/rogue/indoors/shelter/town/dwarf
-/area/rogue/indoors/shelter/town/dwarf
-	icon_state = "dwarf"
-	droning_sound = 'sound/music/area/dwarf.ogg'
-	droning_sound_dusk = null
-	droning_sound_night = null
 
 /// under
 
@@ -828,6 +881,9 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/under/town
+	brief_descriptor = "beneath the bustle of the city"
+	general_location = "From below Solaris Ridge!"
+
 /area/rogue/outdoors/exposed/under/town
 	icon_state = "town"
 	droning_sound = 'sound/music/area/catacombs.ogg'
@@ -847,6 +903,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ambientrain = RAIN_SEWER
 	soundenv = 21
 	converted_type = /area/rogue/outdoors/exposed/under/sewer
+	brief_descriptor = "where rat and murk mingle twice-over"
+
 /area/rogue/outdoors/exposed/under/sewer
 	icon_state = "sewer"
 	droning_sound = 'sound/music/area/sewers.ogg'
@@ -864,6 +922,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/exposed/under/caves
+
 /area/rogue/outdoors/exposed/under/caves
 	icon_state = "caves"
 	droning_sound = 'sound/music/area/caves.ogg'
@@ -889,6 +948,8 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	icon_state = "basement"
 	keep_area = TRUE
 	town_area = TRUE
+	brief_descriptor = "beneath the bustle of the keep"
+	general_location = "From below the Keep!"
 
 /area/rogue/outdoors/exposed/under/basement
 	icon_state = "basement"
@@ -904,3 +965,5 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 	first_time_text = "The Forest of Repentence"
+	brief_descriptor = "a place out of time"
+	general_location = "From... from. Nowhere."

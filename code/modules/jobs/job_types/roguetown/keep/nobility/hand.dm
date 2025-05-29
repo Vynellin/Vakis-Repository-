@@ -7,7 +7,7 @@
 	total_positions = 1
 	spawn_positions = 1
 
-	allowed_races = RACES_NO_CONSTRUCT	//No noble constructs.
+	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)
 	outfit = /datum/outfit/job/roguetown/hand
 	advclass_cat_rolls = list(CTAG_HAND = 20)
@@ -21,7 +21,7 @@
 	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_noble.ogg'
 	virtue_restrictions = list(/datum/virtue/utility/outlander)//Command roles probably shouldn't be from Not Here
-	
+
 /*
 /datum/job/roguetown/hand/special_job_check(mob/dead/new_player/player)
 	if(!player)
@@ -45,7 +45,7 @@
 		H.advsetup = 1
 		H.invisibility = INVISIBILITY_MAXIMUM
 		H.become_blind("advsetup")
-	
+
 		addtimer(CALLBACK(src, PROC_REF(know_agents), H), 50)
 
 /datum/job/roguetown/hand/proc/know_agents(var/mob/living/carbon/human/H)
@@ -65,7 +65,7 @@
 
 	category_tags = list(CTAG_HAND)
 
-//Classical hand start - same as before, nothing changed. 
+//Classical hand start - same as before, nothing changed.
 /datum/outfit/job/roguetown/hand/handclassic/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 	backr = /obj/item/storage/backpack/rogue/satchel/black
@@ -100,7 +100,7 @@
 
 	category_tags = list(CTAG_HAND)
 
-//Spymaster start. More similar to the rogue adventurer - loses heavy armor and sword skills for more sneaky stuff. 
+//Spymaster start. More similar to the rogue adventurer - loses heavy armor and sword skills for more sneaky stuff.
 /datum/outfit/job/roguetown/hand/spymaster/pre_equip(mob/living/carbon/human/H)
 	backr = /obj/item/storage/backpack/rogue/satchel/black
 	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/dtace = 1, /obj/item/storage/keyring/hand = 1, /obj/item/lockpickring/mundane)
@@ -151,7 +151,7 @@
 
 	category_tags = list(CTAG_HAND)
 
-//Advisor start. Trades combat skills for more knowledge and skills - for older hands, hands that don't do combat - people who wanna play wizened old advisors. 
+//Advisor start. Trades combat skills for more knowledge and skills - for older hands, hands that don't do combat - people who wanna play wizened old advisors.
 /datum/outfit/job/roguetown/hand/advisor/pre_equip(mob/living/carbon/human/H)
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/guard
 	backr = /obj/item/storage/backpack/rogue/satchel/black

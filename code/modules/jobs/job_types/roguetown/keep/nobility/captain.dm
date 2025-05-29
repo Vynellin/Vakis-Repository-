@@ -6,7 +6,7 @@
 	faction = "Station"
 	total_positions = 1
 	spawn_positions = 1
-	allowed_races = RACES_NO_CONSTRUCT
+	allowed_races = RACES_ALL_KINDS
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
 	tutorial = "Your lineage is noble, and generations of strong, loyal knights have come before you. You served your time \
@@ -25,7 +25,7 @@
 	round_contrib_points = 3
 	cmode_music = 'sound/music/combat_knight.ogg'
 	virtue_restrictions = list(/datum/virtue/utility/outlander)//Command roles probably shouldn't be from Not Here
-	
+
 /datum/outfit/job/roguetown/captain
 	neck = /obj/item/clothing/neck/roguetown/chaincoif
 	armor = /obj/item/clothing/suit/roguetown/armor/plate
