@@ -989,21 +989,21 @@
 
 /datum/crafting_recipe/roguetown/arquebus
 	name = "Arquebus"
-	reqs = list(/obj/item/ingot/steel = 16, /obj/item/ingot/bronze = 2, /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1, /obj/item/weaponcrafting/stock = 1)
+	reqs = list(/obj/item/ingot/steel = 8, /obj/item/ingot/bronze = 2, /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1, /obj/item/weaponcrafting/stock = 1)
 	result = list(/obj/item/gun/ballistic/arquebus)
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 5 //le ultimate challenge
 
 /datum/crafting_recipe/roguetown/handgonne
 	name = "Handgonne"
-	reqs = list(/obj/item/ingot/iron = 8, /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1, /obj/item/weaponcrafting/stock = 1)
+	reqs = list(/obj/item/ingot/iron = 4, /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1, /obj/item/weaponcrafting/stock = 1)
 	result = list(/obj/item/gun/ballistic/handgonne)
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/arquebuspistol
 	name = "Arquebus pistol"
-	reqs = list(/obj/item/ingot/steel = 8, /obj/item/ingot/bronze = 1 , /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1)
+	reqs = list(/obj/item/ingot/steel = 4, /obj/item/ingot/bronze = 1 , /obj/item/weaponcrafting/barrel = 1, /obj/item/weaponcrafting/receiver = 1, /obj/item/grown/log/tree/small = 1)
 	result = list(/obj/item/gun/ballistic/arquebus_pistol)
 	skillcraft = /datum/skill/craft/engineering
 	craftdiff = 4
