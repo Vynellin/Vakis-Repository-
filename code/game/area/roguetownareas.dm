@@ -507,7 +507,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	brief_descriptor = "a respite in rock, murky as it is."
 	general_location = "From below!"
 
-/area/rogue/under/cave/dungeon1
+/area/rogue/under/cave/dungeon/dungeon1
 	name = "smalldungeon1"
 	icon_state = "spider"
 	droning_sound = 'sound/music/area/dungeon.ogg'
@@ -515,7 +515,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
 
-/area/rogue/under/cave/licharena
+/area/rogue/under/cave/dungeon/licharena
 	name = "licharena"
 	icon_state = "under"
 	first_time_text = "LICH'S DOMAIN"
@@ -525,7 +525,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/outdoors/dungeon1
 	brief_descriptor = "where a wicked beast dwelled"
 
-/area/rogue/under/cave/dragonden
+/area/rogue/under/cave/dungeon/dragonden
 	name = "dragonnest"
 	icon_state = "under"
 	first_time_text = "DEN OF DRAGONS"
@@ -535,7 +535,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/outdoors/dungeon1
 	brief_descriptor = "where a wicked beast dwelled"
 
-/area/rogue/under/cave/goblinfort
+/area/rogue/under/cave/dungeon/goblinfort
 	name = "goblinfort"
 	icon_state = "spidercave"
 	first_time_text = "GOBLIN FORTRESS"
@@ -545,7 +545,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/outdoors/dungeon1
 	brief_descriptor = "where wicked beasts dwell"
 
-/area/rogue/under/cave/scarymaze
+/area/rogue/under/cave/dungeon/cursed_labyrinth
 	name = "hauntedlabyrinth"
 	icon_state = "spidercave"
 	first_time_text = "CURSED LABYRINTH"
@@ -555,7 +555,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/outdoors/dungeon1
 	brief_descriptor = "a maze eternal"
 
-/area/rogue/under/cave/undeadmanor
+/area/rogue/under/cave/dungeon/abandoned_manor
 	name = "skelemansion"
 	icon_state = "spidercave"
 	first_time_text = "ABANDONED MANOR"
@@ -572,7 +572,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_dusk = null
 	droning_sound_night = null
 
-/area/rogue/under/cave/mazedungeon
+/area/rogue/under/cave/dungeon/winding_halls
 	name = "mazedungeon"
 	icon_state = "under"
 	first_time_text = "THE WINDING HALLS"
@@ -583,7 +583,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ceiling_protected = TRUE
 	brief_descriptor = "a wretched place far below"
 
-/area/rogue/under/cave/orcdungeon
+/area/rogue/under/cave/dungeon/old_ruin
 	name = "orcdungeon"
 	icon_state = "under"
 	first_time_text = "OLD RUIN"
@@ -594,15 +594,15 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	ceiling_protected = TRUE
 	brief_descriptor = "where marauders lurk"
 
-/area/rogue/under/cave/dukecourt
-	name = "dukedungeon"
+/area/rogue/under/cave/dungeon/vulnafir
+	name = "Vulnafir"
 	icon_state = "duke"
-	first_time_text = "FORGOTTEN COURT"
+	first_time_text = "VULNAFIR"
 	droning_sound = 'sound/music/area/dungeon2.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
 	converted_type = /area/rogue/outdoors/dungeon1
-	brief_descriptor = "where royalty bled"
+	brief_descriptor = "in old sunmarch, cast beneath the mountains of scordris"
 
 //////
 /////
