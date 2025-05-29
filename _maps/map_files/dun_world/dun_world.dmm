@@ -6204,6 +6204,10 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/bog)
+"cGH" = (
+/mob/living/simple_animal/hostile/rogue/skeleton/bow,
+/turf/open/floor/rogue/grass,
+/area/rogue/under/cave/dukecourt)
 "cGI" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -23573,12 +23577,9 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "jSC" = (
-/obj/structure/mineral_door/wood{
-	locked = 1;
-	name = "deacon's bedroom"
-	},
-/turf/closed/mineral/rogue/bedrock,
-/area/rogue/outdoors/mountains/decap)
+/obj/machinery/light/rogue/wallfire/candle/weak/directional/north,
+/turf/open/water/cleanshallow,
+/area/rogue/under/cave/dukecourt)
 "jSJ" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobble,
@@ -224248,8 +224249,8 @@ szI
 qlD
 duF
 duF
-iDL
-iDL
+duF
+qlD
 iDL
 iDL
 iDL
@@ -226948,7 +226949,7 @@ szI
 szI
 szI
 szI
-duF
+qlD
 aeA
 ltK
 aeA
@@ -226956,7 +226957,7 @@ aeA
 aeA
 aeA
 fCm
-duF
+qlD
 qlD
 kll
 olD
@@ -227400,7 +227401,7 @@ szI
 szI
 szI
 szI
-duF
+ikt
 kMe
 aeA
 ctJ
@@ -227408,7 +227409,7 @@ ctJ
 aeA
 aeA
 ctJ
-ctJ
+oQP
 jQx
 kVe
 xzI
@@ -227852,15 +227853,15 @@ szI
 szI
 szI
 szI
-duF
-aeA
+ikt
+jSC
 aPk
 aau
-ctJ
+cGH
 flV
 iVz
 ctJ
-fCm
+oQP
 oQP
 lff
 hkR
@@ -228304,7 +228305,7 @@ szI
 szI
 szI
 szI
-duF
+ikt
 aeA
 aeA
 ctJ
@@ -228312,7 +228313,7 @@ jLC
 aeA
 ltK
 ctJ
-fCm
+oQP
 oQP
 doD
 hCC
@@ -228756,7 +228757,7 @@ szI
 szI
 szI
 szI
-duF
+qlD
 aeA
 aeA
 ltK
@@ -228764,7 +228765,7 @@ aeA
 aeA
 aeA
 ctJ
-duF
+qlD
 qlD
 kll
 olD
@@ -231478,10 +231479,10 @@ tsB
 tsB
 ujm
 qlD
-duF
-duF
-iDL
-iDL
+fCm
+fCm
+fCm
+qlD
 iDL
 iDL
 iDL
@@ -459270,7 +459271,7 @@ wHi
 wHi
 wHi
 wHi
-jSC
+wHi
 wHi
 wHi
 wHi
