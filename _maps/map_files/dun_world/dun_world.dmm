@@ -38603,6 +38603,15 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/town)
+"qmQ" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/turf/open/floor/rogue/twig,
+/area/rogue/under/cave/dungeon/vulnafir)
 "qmS" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -227901,7 +227910,7 @@ eTl
 gFX
 hwD
 gFX
-iVz
+qmQ
 gFX
 gFX
 gFX
