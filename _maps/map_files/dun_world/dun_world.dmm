@@ -37156,9 +37156,9 @@
 /obj/structure/mineral_door/swing_door{
 	keylock = 1;
 	locked = 1;
-	lockid = "adventurersguild";
-	name = "Mercenaries stable"
+	name = "stables"
 	},
+/obj/effect/mapping_helpers/access/peasant/adventurers_guild,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town)
 "pFh" = (
@@ -42750,7 +42750,6 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church/chapel)
 "rYX" = (
-/obj/machinery/light/rogue/wallfire/candle/directional/east,
 /obj/structure/bed/rogue,
 /obj/item/bedsheet/rogue/cloth,
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
@@ -52843,9 +52842,9 @@
 /obj/structure/mineral_door/swing_door{
 	keylock = 1;
 	locked = 1;
-	lockid = "manor";
 	name = "stables"
 	},
+/obj/effect/mapping_helpers/access/noble,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/garrison)
 "wtn" = (
