@@ -209,8 +209,8 @@
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			beltl = /obj/item/flashlight/flare/torch/lantern
 			beltr = /obj/item/ammopouch/bullets
-			backpack_contents = list(/obj/item/powderhorn, /obj/item/gun/ballistic/arquebus_pistol, /obj/item/rogueweapon/huntingknife, /obj/item/roguekey/adventurers_guild = 1)
-			H.cmode_music = 'sound/music/jukeboxes/oldschool/Sea_Shanty2.ogg'
+			backpack_contents = list(/obj/item/powderhorn, /obj/item/gun/ballistic/arquebus_pistol, /obj/item/rogueweapon/huntingknife)
+			H.cmode_music = 'sound/music/combat_buccaneer.ogg'
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)

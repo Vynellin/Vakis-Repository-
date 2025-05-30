@@ -30,7 +30,7 @@
 	reqs = list(/obj/item/natural/cloth = 1,
 				/obj/item/natural/silk = 1)
 	craftdiff = 1
-	sellprice = 30
+	sellprice = 12
 
 /datum/crafting_recipe/roguetown/weaving/aeternus
 	name = "aeternus robes (3 cloth, 1 silk)"
