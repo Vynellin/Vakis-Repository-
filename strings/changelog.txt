@@ -1,7 +1,15 @@
-Welcome back to Solaris!
-The job reshuffle is (currently being) tested! Come muck about, see all that's new!
-As a result of the job reshuffling, the town has been massively shifted around! Peek around, have fun, and get silly.
-With Varielle's description completed, all in-game god lore is finished!
-Food has been expanded again! The inn's going to be eating well...
+Welcome back to Solaris Ridge!
 
-Have fun!
+Your... pintle, should you have one. Should look slightly more refined. If you can be after saying the word 'Pintle', anyways. Pintle.
+The 'People I Know' menu now displays remembered species.
+Salted fish now have sprites! Oops.
+A significant expansion to drinks and brewing has been merged!
+Characters with low strength can no longer immediately slip out of nets.
+The keep is no longer AA. How did I miss that?!
+Doors now rely on mapping access helpers for their lockid!
+Deathsight and Signal Horns should be slightly more specific, if not cryptic.
+Constructs can now play any job!
+Werewolves are back in rotation!
+Mappers are getting whimsical with new tree-based turfs to play with.
+Gunsmithing has become significantly more proficient - and less expensive - QOL-wise.
+And, finally - one of the dungeons has been moved, made harder, and redesigned. I see you.

@@ -210,7 +210,7 @@
 	name = "Cooling backpack"
 	desc = "A leather backpack with complex pipework coursing through it. It hums and vibrates constantly."
 	icon_state = "artibackpack"
-	item_state = "artibackpack" 
+	item_state = "artibackpack"
 	icon = 'icons/roguetown/clothing/storage.dmi'
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK_L
@@ -250,7 +250,7 @@
 				break
 
 /obj/item/storage/belt/rogue/leather/knifebelt/proc/eatknife(obj/A)
-	if(A.type in subtypesof(/obj/item/rogueweapon/huntingknife/throwingknife))
+	if(A.type in typesof(/obj/item/rogueweapon/huntingknife/throwingknife))
 		if(knives.len < max_storage)
 			A.forceMove(src)
 			knives += A
@@ -260,7 +260,7 @@
 			return FALSE
 
 /obj/item/storage/belt/rogue/leather/knifebelt/attackby(obj/A, loc, params)
-	if(A.type in subtypesof(/obj/item/rogueweapon/huntingknife/throwingknife))
+	if(A.type in typesof(/obj/item/rogueweapon/huntingknife/throwingknife))
 		if(knives.len < max_storage)
 			if(ismob(loc))
 				var/mob/M = loc
@@ -288,6 +288,7 @@
 	. = ..()
 	if(knives.len)
 		. += span_notice("[knives.len] inside.")
+	. += span_notice("Click on the ground to pick up tossblades on the floor.")
 
 /obj/item/storage/belt/rogue/leather/knifebelt/iron/Initialize()
 	. = ..()
