@@ -493,19 +493,23 @@
 		var/day = "... actually, WHAT day is it?"
 		switch(GLOB.dayspassed)
 			if(1)
-				day = "Moon's day."
+				day = "Sun's Grasp."
 			if(2)
-				day = "Tiw's day."
+				day = "Moon's Light."
 			if(3)
-				day = "Wedding's day."
+				day = "Certainty's Flip."
 			if(4)
-				day = "Thule's day."
+				day = "Innovation's Hope."
 			if(5)
-				day = "Freyja's day."
+				day = "Ambition's Light."
 			if(6)
-				day = "Saturn's day."
+				day = "Love's Sight."
 			if(7)
-				day = "Sun's day."
+				day = "Nature's Boon."
+			if(8)
+				day = "Sea's Wave."
+			if(9)
+				day = "Rift's Watch."
 		. += "Oh no, it's [station_time_timestamp("hh:mm")] on a [day]"
 //		if(SSshuttle.emergency.mode == SHUTTLE_DOCKED)
 //			if(SSshuttle.emergency.timeLeft() < 30 MINUTES)
@@ -549,7 +553,7 @@
 		var/day = "... actually, WHAT day is it?"
 		switch(GLOB.dayspassed)
 			if(1)
-				day = "Sun's Grasp." // SOLARIS NOTE: Lorepass; adjust these
+				day = "Sun's Grasp."
 			if(2)
 				day = "Moon's Light."
 			if(3)
