@@ -6360,7 +6360,6 @@
 /area/rogue/outdoors/exposed/town/keep)
 "cLu" = (
 /obj/structure/chair/bench/couch,
-/obj/structure/fireaxecabinet/south,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
 "cLA" = (
@@ -12683,7 +12682,15 @@
 /area/rogue/outdoors/beach/forest)
 "fpF" = (
 /obj/structure/fluff/walldeco/chains,
-/turf/open/floor/rogue/cobble,
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	pixel_x = -6
+	},
+/turf/open/floor/rogue/hay,
 /area/rogue/indoors/town)
 "fpG" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
@@ -17518,6 +17525,13 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors/town)
+"htL" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
+	},
+/turf/open/floor/rogue/hay,
 /area/rogue/indoors/town)
 "htN" = (
 /turf/open/floor/rogue/dirt/road,
@@ -47488,6 +47502,12 @@
 /obj/effect/decal/cobbleedge,
 /turf/closed/wall/mineral/rogue/decowood/vert,
 /area/rogue/indoors/town/shop)
+"uee" = (
+/obj/effect/decal/cobbleedge{
+	dir = 8
+	},
+/turf/open/floor/rogue/hay,
+/area/rogue/indoors/town)
 "ueg" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/south,
 /obj/structure/fluff/railing/border{
@@ -357774,7 +357794,7 @@ oKc
 mKy
 oKc
 oKc
-gHV
+htL
 fpF
 vGV
 eUk
@@ -358226,8 +358246,8 @@ oKc
 rPk
 oKc
 jdu
-jdu
-jdu
+uee
+uee
 aTR
 apZ
 twr
