@@ -71,6 +71,8 @@ INITIALIZE_IMMEDIATE(/mob/dead)
 		dat += "Time To Start: DELAYED<br>"
 	else
 		dat += "Time To Start: SOON<br>"
+	if(SSticker.launch_queued)
+		dat += "Waiting on [CONFIG_GET(number/minimum_ready_players)] players to be ready!<br>"
 
 	dat += "Total players ready: [SSticker.totalPlayersReady]<br>"
 	dat += "<B>Classes:</B><br>"

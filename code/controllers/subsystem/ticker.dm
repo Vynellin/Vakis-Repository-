@@ -12,6 +12,8 @@ SUBSYSTEM_DEF(ticker)
 	runlevels = RUNLEVEL_LOBBY | RUNLEVEL_SETUP | RUNLEVEL_GAME
 
 	var/current_state = GAME_STATE_STARTUP	//state of current round (used by process()) Use the defines GAME_STATE_* !
+	/// Did we broadcast at players to hurry up?
+	var/launch_queued = FALSE
 	var/force_ending = 0					//Round was ended by admin intervention
 	// If true, there is no lobby phase, the game starts immediately.
 	var/start_immediately = FALSE
@@ -205,6 +207,19 @@ SUBSYSTEM_DEF(ticker)
 				send_tip_of_the_round()
 #endif
 				tipped = TRUE
+
+			if(timeLeft <= 0 && !CONFIG_GET(flag/setup_bypass_player_check) && totalPlayersReady < CONFIG_GET(number/minimum_ready_players))
+				if(!launch_queued)
+					to_chat(world, span_warning("Game setup delayed! The game will start when [CONFIG_GET(number/minimum_ready_players)] players are readied up."))
+					message_admins("Game setup delayed due to lack of players.")
+					log_game("Game setup delayed due to lack of players.")
+					launch_queued = TRUE
+				return // 'SOON' waiting for players
+
+			if(timeLeft <= 0 && launch_queued && (totalPlayersReady >= CONFIG_GET(number/minimum_ready_players)))
+				timeLeft = 94 SECONDS
+				start_at = world.time + 94 SECONDS
+				launch_queued = FALSE
 
 			if(timeLeft <= 0)
 				if(!checkreqroles())
