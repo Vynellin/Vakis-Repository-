@@ -36,6 +36,7 @@
 	beltl = /obj/item/book/granter/spellbook/magician
 	r_hand = /obj/item/rogueweapon/woodstaff
 	backl = /obj/item/storage/backpack/rogue/satchel
+	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/rich)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, "[type]")
 	ADD_TRAIT(H, TRAIT_INTELLECTUAL, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)

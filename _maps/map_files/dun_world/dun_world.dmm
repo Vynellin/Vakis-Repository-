@@ -19120,6 +19120,11 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
+"iaC" = (
+/obj/structure/closet/crate/drawer,
+/obj/item/scomstone,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town)
 "iaL" = (
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
@@ -252971,7 +252976,7 @@ kRg
 aMb
 eRr
 lpt
-wSH
+iaC
 whG
 whG
 pnn
