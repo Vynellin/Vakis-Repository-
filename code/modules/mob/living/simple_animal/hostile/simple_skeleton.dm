@@ -113,12 +113,12 @@
 			return pick('sound/vo/mobs/skel/skeleton_idle (1).ogg','sound/vo/mobs/skel/skeleton_idle (2).ogg','sound/vo/mobs/skel/skeleton_idle (3).ogg')
 
 
-/mob/living/simple_animal/hostile/rogue/skeleton/Initialize(mapload, mob/user, cabal_affine = FALSE)
+/mob/living/simple_animal/hostile/rogue/skeleton/Initialize(mapload, mob/user, is_summoned = FALSE)
 	. = ..()
 	if(user)
 		summoner = user.name
-		if (cabal_affine)
-			faction |= "cabal"
+		if (is_summoned)
+			faction |= "[summoner]_faction"
 
 /mob/living/simple_animal/hostile/rogue/skeleton/Life()
 	. = ..()
