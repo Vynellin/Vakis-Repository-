@@ -212,23 +212,23 @@
 	exp_light = 2
 	exp_flash = 2
 	exp_fire = 0
-
+	
 /obj/effect/proc_holder/spell/targeted/gravemark
 	name = "Mark of the Gravebound"
-	desc =  "Adds or removes a target from the list of allies exempt from your undead's aggression."
+	desc = "Adds or removes a target from the list of allies exempt from your undead's aggression."
 
 /obj/effect/proc_holder/spell/targeted/gravemark/cast(list/targets, mob/user)
 	. = ..()
 	for (var/mob/living/mob in targets)
 		if (!mob?.mind)
-			to_chat(user, span_warning("This one lacks the spark of sentience"))
+			to_chat(user, span_warning("This one lacks the spark of sentience."))
 			continue
-		if (mob == usr)
-			to_chat(user, span_warning("It would be unwise to make an enemy of my skeletons."))
+		if (mob == user) // You used `usr` — prefer `user` for clarity in spells.
+			to_chat(user, span_warning("It would be unwise to make an enemy of your own skeletons."))
 			continue
-		if ("[usr.name]_faction" in mob.mind.current.faction)
-			mob.mind.current.faction -= "[usr.name]_faction"
-			usr.say("Your safety is forfeit, your fate bone-bound.")
+		if ("[user.name]_faction" in mob.mind.current.faction)
+			mob.mind.current.faction -= "[user.name]_faction"
+			user.say("Your safety is forfeit, your fate bone-bound.")
 		else
-			mob.mind.current.faction += "[usr.name]_faction"
-			usr.say("Marked by bone and spared by death.")
+			mob.mind.current.faction += "[user.name]_faction"
+			user.say("Marked by bone and spared by death.")
