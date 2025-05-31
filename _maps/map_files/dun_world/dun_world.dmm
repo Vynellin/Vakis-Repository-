@@ -42662,8 +42662,7 @@
 /area/rogue/indoors/shelter)
 "rXg" = (
 /obj/structure/mineral_door/wood/deadbolt{
-	dir = 4;
-	locked = 1
+	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/rogue/indoors/town)
