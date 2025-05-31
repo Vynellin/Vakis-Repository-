@@ -20,7 +20,8 @@
 			appearance.appearance_flags = RESET_COLOR
 			overlays_standing[OBJ_LAYER] = appearance
 			apply_overlay(OBJ_LAYER)
-			addtimer(CALLBACK(humie, PROC_REF(clear_overhead_indicator), appearance), clear_time)
+			if(clear_time)
+				addtimer(CALLBACK(humie, PROC_REF(clear_overhead_indicator), appearance), clear_time)
 			playsound(src, soundin, 100, FALSE, extrarange = -1, ignore_walls = FALSE)
 		if(!ispath(private, /datum/patron))	//Trait-exclusivity. At the moment it's only TRAIT_EMPATH for stress indicators.
 			var/list/can_see = list(src)
