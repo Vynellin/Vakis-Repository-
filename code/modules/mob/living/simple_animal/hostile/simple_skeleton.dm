@@ -116,9 +116,9 @@
 /mob/living/simple_animal/hostile/rogue/skeleton/Initialize(mapload, mob/user, is_summoned = FALSE)
 	. = ..()
 	if(user)
-		summoner = user.name
+		summoner = user.mind.name
 		if (is_summoned)
-			faction |= "[summoner]_faction"
+			faction = "[user.mind.name]_[user.ckey]_faction"
 
 /mob/living/simple_animal/hostile/rogue/skeleton/Life()
 	. = ..()
