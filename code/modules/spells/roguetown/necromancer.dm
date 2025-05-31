@@ -226,9 +226,9 @@
 		if (mob == user) // You used `usr` — prefer `user` for clarity in spells.
 			to_chat(user, span_warning("It would be unwise to make an enemy of your own skeletons."))
 			continue
-		if ("[user.name]_faction" in mob.mind.current.faction)
-			mob.mind.current.faction -= "[user.name]_faction"
+		if ("[user.mind.name]_[user.ckey]_faction" in mob.mind.current.faction)
+			mob.mind.current.faction -= "[user.mind.name]_[user.ckey]_faction"
 			user.say("Your safety is forfeit, your fate bone-bound.")
 		else
-			mob.mind.current.faction += "[user.name]_faction"
+			mob.mind.current.faction += "[user.mind.name]_[user.ckey]_faction"
 			user.say("Marked by bone and spared by death.")

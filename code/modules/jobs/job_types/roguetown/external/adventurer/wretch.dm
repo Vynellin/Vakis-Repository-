@@ -257,7 +257,7 @@
 
 
 /datum/outfit/job/roguetown/wretch/necromancer/pre_equip(mob/living/carbon/human/H)
-	H.mind.current.faction += "[H.name]_faction"
+	H.mind.current.faction += "[H.mind.name]_[H.ckey]_faction"
 	head = /obj/item/clothing/head/roguetown/roguehood/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
