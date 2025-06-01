@@ -36,6 +36,7 @@
 	beltl = /obj/item/book/granter/spellbook/magician
 	r_hand = /obj/item/rogueweapon/woodstaff
 	backl = /obj/item/storage/backpack/rogue/satchel
+	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/rich)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, "[type]")
 	ADD_TRAIT(H, TRAIT_INTELLECTUAL, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
@@ -44,7 +45,7 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 4, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)

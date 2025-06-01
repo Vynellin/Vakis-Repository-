@@ -115,7 +115,7 @@
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
 	charge_max = 30 SECONDS
-	var/cabal_affine = FALSE
+	var/is_summoned = FALSE
 
 /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/cast(list/targets, mob/living/user)
 	. = ..()
@@ -124,22 +124,22 @@
 	if(isopenturf(T))
 		switch(skeleton_roll)
 			if(1 to 20)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/axe(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/axe(T, user, is_summoned)
 			if(21 to 40)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/spear(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/spear(T, user, is_summoned)
 			if(41 to 60)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/guard(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/guard(T, user, is_summoned)
 			if(61 to 80)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/bow(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/bow(T, user, is_summoned)
 			if(81 to 100)
-				new /mob/living/simple_animal/hostile/rogue/skeleton(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton(T, user, is_summoned)
 		return TRUE
 	else
 		to_chat(user, span_warning("The targeted location is blocked. My summon fails to come forth."))
 		return FALSE
 
 /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/necromancer
-	cabal_affine = TRUE
+	is_summoned = TRUE
 	charge_max = 45 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/projectile/sickness
@@ -212,3 +212,23 @@
 	exp_light = 2
 	exp_flash = 2
 	exp_fire = 0
+	
+/obj/effect/proc_holder/spell/targeted/gravemark
+	name = "Mark of the Gravebound"
+	desc = "Adds or removes a target from the list of allies exempt from your undead's aggression."
+
+/obj/effect/proc_holder/spell/targeted/gravemark/cast(list/targets, mob/user)
+	. = ..()
+	for (var/mob/living/mob in targets)
+		if (!mob?.mind)
+			to_chat(user, span_warning("This one lacks the spark of sentience."))
+			continue
+		if (mob == user) // You used `usr` — prefer `user` for clarity in spells.
+			to_chat(user, span_warning("It would be unwise to make an enemy of your own skeletons."))
+			continue
+		if ("[user.mind.name]_[user.ckey]_faction" in mob.mind.current.faction)
+			mob.mind.current.faction -= "[user.mind.name]_[user.ckey]_faction"
+			user.say("Your safety is forfeit, your fate bone-bound.")
+		else
+			mob.mind.current.faction += "[user.mind.name]_[user.ckey]_faction"
+			user.say("Marked by bone and spared by death.")

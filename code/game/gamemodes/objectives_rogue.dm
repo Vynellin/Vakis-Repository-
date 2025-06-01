@@ -19,8 +19,8 @@
 
 /datum/objective/werewolf
 	name = "conquer"
-	explanation_text = "You are a werewolf, a monsterous beast that walks the night in search of prey. Work with your fellow werewolves and protect the pack from all threats by any means necessary. Survival means blood."
-	team_explanation_text = "You are a werewolf, a monsterous beast that walks the night in search of prey. Work with your fellow werewolves and protect the pack from all threats by any means necessary. Survival means blood."
+	explanation_text = "Fear not the moon and Zira's light."
+	team_explanation_text = "Lycanthropy is a terrible disease that's been recorded in scattered accounts going back hundreds of years. Nightly transformations and prodigious increses in mass drive the body into an active state of insatiable starvation, driving animalistic, rabid behavior."
 	triumph_count = 5
 
 /datum/objective/werewolf/check_completion()

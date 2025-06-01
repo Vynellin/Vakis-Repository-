@@ -107,7 +107,7 @@
 
 /obj/item/clothing/ring/quartz
 	name = "quartz ring"
-	icon_state = "g_ring_blortz"
+	icon_state = "g_ring_quartz"
 	desc = "A beautiful golden ring with a polished Quartz set into it."
 	sellprice = 245
 
@@ -147,7 +147,7 @@
 
 /obj/item/clothing/ring/quartzs
     name = "quartz ring"
-    icon_state = "s_ring_blortz"
+    icon_state = "s_ring_quartz"
     sellprice = 205
 
 /obj/item/clothing/ring/sapphires

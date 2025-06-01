@@ -28,6 +28,7 @@
 	desc = "the head of a fearsome wolf."
 	icon_state = "volfhead"
 	layer = 3.1
+	sellprice = 15
 
 //RTD make this a storage item and make clickign on animals with things put it in storage
 /obj/item/natural/saddle
@@ -78,6 +79,7 @@
 	desc = "The meatless remains of the dead. Whether it came from an animal or a person it all looks the same now."
 	blade_dulling = 0
 	max_integrity = 20
+	sellprice = 5
 	static_debris = null
 	obj_flags = null
 	firefuel = null

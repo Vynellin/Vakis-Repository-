@@ -61,7 +61,7 @@
 
 
 /datum/crafting_recipe/roguetown/leather/ammopouch
-	name = "ammo pouch"
+	name = "shot pouch (4 leather, 3 fiber)"
 	result = /obj/item/ammopouch
 	reqs = list (/obj/item/natural/hide/cured = 4,
 				/obj/item/natural/fibers = 3)
