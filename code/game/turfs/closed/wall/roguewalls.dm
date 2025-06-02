@@ -233,6 +233,7 @@
 
 /turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner
 	icon_state = "walltree_outercorner"
+	smooth = SMOOTH_TRUE|SMOOTH_DIAGONAL
 
 /turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner/ground
 	icon_state = "walltree_outercorner_ground"

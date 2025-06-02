@@ -1782,6 +1782,8 @@
 #include "code\modules\roguetown\roguestock\bounties.dm"
 #include "code\modules\roguetown\roguestock\import.dm"
 #include "code\modules\roguetown\roguestock\stockpile.dm"
+#include "code\modules\shelters\shelter_pod.dm"
+#include "code\modules\shelters\shelters_map_template.dm"
 #include "code\modules\spells\spell.dm"
 #include "code\modules\spells\roguetown\_roguetown.dm"
 #include "code\modules\spells\roguetown\confessor.dm"

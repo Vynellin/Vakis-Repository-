@@ -114,6 +114,9 @@
 	destroy_sound = 'sound/combat/hits/onwood/destroyfurniture.ogg'
 	attacked_sound = "woodimpact"
 
+/obj/structure/chair/wood/rogue/tree
+	icon_state = "chair_tree"
+
 /obj/structure/chair/wood/rogue/throne
 	icon_state = "thronechair"
 	icon = 'icons/roguetown/misc/structure.dmi'
