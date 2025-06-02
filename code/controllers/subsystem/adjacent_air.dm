@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(adjacent_air)
 	name = "Atmos Adjacency"
-	flags = SS_BACKGROUND
+	flags = SS_NO_FIRE
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 	wait = 10
 	priority = FIRE_PRIORITY_ATMOS_ADJACENCY
@@ -14,6 +14,9 @@ SUBSYSTEM_DEF(adjacent_air)
 	#endif
 
 /datum/controller/subsystem/adjacent_air/Initialize()
+	if(flags & SS_NO_FIRE)
+		return ..()
+
 	while(length(queue))
 		fire(mc_check = FALSE)
 	return ..()
