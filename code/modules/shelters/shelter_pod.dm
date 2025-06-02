@@ -38,7 +38,7 @@
 /obj/item/shelter_pod/examine(mob/user)
 	. = ..()
 	get_template()
-	. += "This [src] should turn into \an [template.name]."
+	. += "[src] should turn into \an [template.name]."
 	. += template.description
 
 /obj/item/shelter_pod/interact(mob/living/user)
