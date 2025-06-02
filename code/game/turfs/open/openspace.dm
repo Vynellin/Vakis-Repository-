@@ -45,6 +45,9 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 
 /turf/open/transparent/openspace/airless
 
+/// This is here just for some map_template stuff, so that ceilings don't generate inside.
+/turf/open/transparent/openspace/inside
+
 /turf/open/transparent/openspace/debug/update_multiz()
 	..()
 	return TRUE

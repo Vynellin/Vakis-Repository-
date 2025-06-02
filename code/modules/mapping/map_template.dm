@@ -11,6 +11,9 @@
 	///if true, turfs loaded from this template are placed on top of the turfs already there, defaults to TRUE
 	var/should_place_on_top = TRUE
 
+	/// How many z-levels does this template affect? 
+	var/z_level_count = 1
+
 	///If true, any openspace turfs above the template will be replaced with ceiling_turf when loading. Should probably be FALSE for lower levels of multi-z ruins.
 	var/has_ceiling = FALSE
 	///What turf to replace openspace with when has_ceiling is true
@@ -132,7 +135,7 @@
 	for (var/turf/turf in affected_turfs)
 		var/turf/ceiling = get_step_multiz(turf, UP)
 		if (ceiling)
-			if (istype(ceiling, /turf/open/transparent/openspace))
+			if (istype(ceiling, /turf/open/transparent/openspace) && !istype(ceiling, /turf/open/transparent/openspace/inside))
 				ceiling.ChangeTurf(ceiling_turf, ceiling_baseturfs, CHANGETURF_INHERIT_AIR)
 
 /datum/map_template/proc/get_affected_turfs(turf/T, centered = FALSE)
@@ -141,7 +144,7 @@
 		var/turf/corner = locate(placement.x - round(width/2), placement.y - round(height/2), placement.z)
 		if(corner)
 			placement = corner
-	return block(placement, locate(placement.x+width-1, placement.y+height-1, placement.z))
+	return block(placement, locate(placement.x+width-1, placement.y+height-1, placement.z + (z_level_count - 1)))
 
 
 //for your ever biggening badminnery kevinz000
