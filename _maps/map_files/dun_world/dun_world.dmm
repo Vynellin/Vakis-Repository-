@@ -6360,7 +6360,6 @@
 /area/rogue/outdoors/exposed/town/keep)
 "cLu" = (
 /obj/structure/chair/bench/couch,
-/obj/structure/fireaxecabinet/south,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
 "cLA" = (
@@ -12367,12 +12366,6 @@
 "fii" = (
 /turf/closed/mineral/random/rogue/med,
 /area/rogue/outdoors/rtfield)
-"fiE" = (
-/obj/effect/landmark/start/wardenlate{
-	dir = 4
-	},
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/under/cave)
 "fiK" = (
 /obj/structure/stairs{
 	dir = 8
@@ -12689,7 +12682,15 @@
 /area/rogue/outdoors/beach/forest)
 "fpF" = (
 /obj/structure/fluff/walldeco/chains,
-/turf/open/floor/rogue/cobble,
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 5;
+	pixel_x = -6
+	},
+/turf/open/floor/rogue/hay,
 /area/rogue/indoors/town)
 "fpG" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
@@ -17072,10 +17073,6 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/mountains)
-"hiI" = (
-/obj/machinery/light/rogue/firebowl/stump,
-/turf/open/floor/rogue/dirt/road,
-/area/rogue/under/cave)
 "hiM" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /obj/structure/bed/rogue/inn,
@@ -17528,6 +17525,13 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors/town)
+"htL" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
+	},
+/turf/open/floor/rogue/hay,
 /area/rogue/indoors/town)
 "htN" = (
 /turf/open/floor/rogue/dirt/road,
@@ -19116,6 +19120,11 @@
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
+"iaC" = (
+/obj/structure/closet/crate/drawer,
+/obj/item/scomstone,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town)
 "iaL" = (
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
@@ -37156,9 +37165,9 @@
 /obj/structure/mineral_door/swing_door{
 	keylock = 1;
 	locked = 1;
-	lockid = "adventurersguild";
-	name = "Mercenaries stable"
+	name = "stables"
 	},
+/obj/effect/mapping_helpers/access/peasant/adventurers_guild,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town)
 "pFh" = (
@@ -38613,6 +38622,15 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/outdoors/town)
+"qmQ" = (
+/obj/structure/stairs/stone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/turf/open/floor/rogue/twig,
+/area/rogue/under/cave/dungeon/vulnafir)
 "qmS" = (
 /obj/structure/stairs/stone{
 	dir = 8
@@ -42649,8 +42667,7 @@
 /area/rogue/indoors/shelter)
 "rXg" = (
 /obj/structure/mineral_door/wood/deadbolt{
-	dir = 4;
-	locked = 1
+	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/rogue/indoors/town)
@@ -42750,7 +42767,6 @@
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town/church/chapel)
 "rYX" = (
-/obj/machinery/light/rogue/wallfire/candle/directional/east,
 /obj/structure/bed/rogue,
 /obj/item/bedsheet/rogue/cloth,
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
@@ -46612,6 +46628,9 @@
 /obj/effect/landmark/start/adventurerlate{
 	dir = 1
 	},
+/obj/effect/landmark/start/wardenlate{
+	dir = 1
+	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/rtfield)
 "tKI" = (
@@ -47487,6 +47506,12 @@
 /obj/effect/decal/cobbleedge,
 /turf/closed/wall/mineral/rogue/decowood/vert,
 /area/rogue/indoors/town/shop)
+"uee" = (
+/obj/effect/decal/cobbleedge{
+	dir = 8
+	},
+/turf/open/floor/rogue/hay,
+/area/rogue/indoors/town)
 "ueg" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/south,
 /obj/structure/fluff/railing/border{
@@ -52843,9 +52868,9 @@
 /obj/structure/mineral_door/swing_door{
 	keylock = 1;
 	locked = 1;
-	lockid = "manor";
 	name = "stables"
 	},
+/obj/effect/mapping_helpers/access/noble,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/garrison)
 "wtn" = (
@@ -227909,7 +227934,7 @@ eTl
 gFX
 hwD
 gFX
-iVz
+qmQ
 gFX
 gFX
 gFX
@@ -252951,7 +252976,7 @@ kRg
 aMb
 eRr
 lpt
-wSH
+iaC
 whG
 whG
 pnn
@@ -290585,16 +290610,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-ogs
-ogs
-ogs
-ogs
-ogs
-ogs
-ogs
-ogs
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -291037,16 +291062,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-ogs
-ogs
-fiE
-fiE
-fiE
-fiE
-ogs
-ogs
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -291489,16 +291514,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-ogs
-htN
-htN
-htN
-htN
-htN
-htN
-ogs
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -291941,16 +291966,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-ogs
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -292393,16 +292418,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-ogs
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -292845,16 +292870,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -293297,16 +293322,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -293749,16 +293774,16 @@ cxA
 cxA
 cxA
 cxA
-ogs
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -294200,18 +294225,18 @@ aBB
 aBB
 aBB
 cxA
-ogs
-ogs
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-htN
-ogs
-ogs
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -294652,18 +294677,18 @@ aBB
 aBB
 aBB
 aBB
-etx
-etx
-etx
-etx
-htN
-htN
-htN
-htN
-hiI
-htN
-ogs
-ogs
+aBB
+aBB
+aBB
+aBB
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 cxA
@@ -295104,18 +295129,18 @@ aBB
 aBB
 aBB
 aBB
-etx
-etx
-etx
-etx
-etx
-etx
-htN
-htN
-htN
-htN
-ogs
-ogs
+aBB
+aBB
+aBB
+aBB
+aBB
+aBB
+cxA
+cxA
+cxA
+cxA
+cxA
+cxA
 cxA
 cxA
 aBB
@@ -295559,15 +295584,15 @@ aBB
 aBB
 aBB
 aBB
-etx
-etx
-etx
-etx
-etx
-etx
-etx
-etx
-etx
+aBB
+aBB
+aBB
+aBB
+aBB
+aBB
+aBB
+aBB
+aBB
 aBB
 aBB
 aBB
@@ -296013,13 +296038,13 @@ aBB
 aBB
 aBB
 aBB
-etx
-etx
-etx
-etx
-etx
-etx
-etx
+aBB
+aBB
+aBB
+aBB
+aBB
+aBB
+aBB
 aBB
 aBB
 aBB
@@ -357773,7 +357798,7 @@ oKc
 mKy
 oKc
 oKc
-gHV
+htL
 fpF
 vGV
 eUk
@@ -358225,8 +358250,8 @@ oKc
 rPk
 oKc
 jdu
-jdu
-jdu
+uee
+uee
 aTR
 apZ
 twr

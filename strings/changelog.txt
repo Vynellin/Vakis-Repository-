@@ -9,7 +9,6 @@ The keep is no longer AA. How did I miss that?!
 Doors now rely on mapping access helpers for their lockid!
 Deathsight and Signal Horns should be slightly more specific, if not cryptic.
 Constructs can now play any job!
-Werewolves are back in rotation!
 Mappers are getting whimsical with new tree-based turfs to play with.
 Gunsmithing has become significantly more proficient - and less expensive - QOL-wise.
 And, finally - one of the dungeons has been moved, made harder, and redesigned. I see you.
