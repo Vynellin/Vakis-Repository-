@@ -8,6 +8,16 @@
 	var/datum/parsed_map/cached_map
 	var/keep_cached_map = FALSE
 
+	///if true, turfs loaded from this template are placed on top of the turfs already there, defaults to TRUE
+	var/should_place_on_top = TRUE
+
+	///If true, any openspace turfs above the template will be replaced with ceiling_turf when loading. Should probably be FALSE for lower levels of multi-z ruins.
+	var/has_ceiling = FALSE
+	///What turf to replace openspace with when has_ceiling is true
+	var/turf/ceiling_turf = /turf/open/floor/rogue/rooftop
+	///What baseturfs to set when replacing openspace when has_ceiling is true
+	var/list/ceiling_baseturfs = list()
+
 /datum/map_template/New(path = null, rename = null, cache = FALSE)
 	if(path && !mappath)
 		mappath = path
@@ -21,6 +31,7 @@
 		name = id
 	if(!id && name)
 		id = name
+	ceiling_baseturfs.Insert(1, /turf/baseturf_bottom)
 
 /datum/map_template/proc/preload_size(path, cache = FALSE)
 	var/datum/parsed_map/parsed = new(file(path))
@@ -58,7 +69,14 @@
 	var/y = round((world.maxy - height)/2)
 
 	var/datum/space_level/level = SSmapping.add_new_zlevel(name, list(ZTRAIT_AWAY = TRUE))
-	var/datum/parsed_map/parsed = load_map(file(mappath), x, y, level.z_value, no_changeturf=(SSatoms.initialized == INITIALIZATION_INSSATOMS), placeOnTop=TRUE)
+	var/datum/parsed_map/parsed = load_map(
+		file(mappath),
+		x,
+		y,
+		level.z_value,
+		no_changeturf = (SSatoms.initialized == INITIALIZATION_INSSATOMS),
+		placeOnTop = TRUE,
+	)
 	var/list/bounds = parsed.bounds
 	if(!bounds)
 		return FALSE
@@ -103,8 +121,19 @@
 	//initialize things that are normally initialized after map load
 	parsed.initTemplateBounds()
 
+	if(has_ceiling)
+		var/affected_turfs = get_affected_turfs(T, FALSE)
+		generate_ceiling(affected_turfs)
+
 	log_game("[name] loaded at [T.x],[T.y],[T.z]")
 	return bounds
+
+/datum/map_template/proc/generate_ceiling(affected_turfs)
+	for (var/turf/turf in affected_turfs)
+		var/turf/ceiling = get_step_multiz(turf, UP)
+		if (ceiling)
+			if (istype(ceiling, /turf/open/transparent/openspace))
+				ceiling.ChangeTurf(ceiling_turf, ceiling_baseturfs, CHANGETURF_INHERIT_AIR)
 
 /datum/map_template/proc/get_affected_turfs(turf/T, centered = FALSE)
 	var/turf/placement = T
