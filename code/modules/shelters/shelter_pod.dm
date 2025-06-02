@@ -13,7 +13,7 @@
 	icon = 'icons/obj/hydroponics/seeds.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	/// The id we use to fetch the template datum
-	var/template_id = "shelter_tree"
+	var/template_id = "shelter_tree_medium"
 	/// The template datum we use to load the shelter
 	var/datum/map_template/shelter/template
 	/// If true, this capsule is active and will deploy the area if conditions are met.
@@ -124,3 +124,7 @@
 /obj/item/shelter_pod/small
 	name = "small shelter acorn"
 	template_id = "shelter_tree_small"
+
+/obj/item/shelter_pod/big
+	name = "big shelter acorn"
+	template_id = "shelter_tree_big"
