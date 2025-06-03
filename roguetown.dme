@@ -816,6 +816,7 @@
 #include "code\game\objects\items\hot_potato.dm"
 #include "code\game\objects\items\hourglass.dm"
 #include "code\game\objects\items\kitchen.dm"
+#include "code\game\objects\items\magic_staffs.dm"
 #include "code\game\objects\items\scrolls.dm"
 #include "code\game\objects\items\sharpener.dm"
 #include "code\game\objects\items\shooting_range.dm"
