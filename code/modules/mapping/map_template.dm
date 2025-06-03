@@ -11,7 +11,7 @@
 	///if true, turfs loaded from this template are placed on top of the turfs already there, defaults to TRUE
 	var/should_place_on_top = TRUE
 
-	/// How many z-levels does this template affect? 
+	/// How many z-levels does this template affect (not counting the ceiling if it has one)? 
 	var/z_level_count = 1
 
 	///If true, any openspace turfs above the template will be replaced with ceiling_turf when loading. Should probably be FALSE for lower levels of multi-z ruins.
@@ -146,6 +146,10 @@
 			placement = corner
 	return block(placement, locate(placement.x+width-1, placement.y+height-1, placement.z + (z_level_count - 1)))
 
+/// Returns the amount of z-levels that are affected by this template, based on whether it has a
+/// ceiling or not. Not included in z_level_count so that it's agnostic from ceilings being a thing.
+/datum/map_template/proc/get_affected_z_level_count()
+	return has_ceiling ? z_level_count + 1 : z_level_count
 
 //for your ever biggening badminnery kevinz000
 //❤ - Cyberboss

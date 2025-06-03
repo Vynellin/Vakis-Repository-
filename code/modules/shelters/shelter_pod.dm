@@ -16,12 +16,38 @@
 	var/template_id = "shelter_tree_medium"
 	/// The template datum we use to load the shelter
 	var/datum/map_template/shelter/template
-	/// If true, this capsule is active and will deploy the area if conditions are met.
+	/// If true, this pod is active and will deploy the area if conditions are met.
 	var/used = FALSE
-	/// Will this capsule yeet mobs back once the area is deployed?
+	/// Will this pod yeet mobs back once the area is deployed?
 	var/yeet_back = TRUE
 	/// The deployment action displayed as part of the warning message shown when the pod is about to grow.
 	var/deployment_action = "takes root and quickly starts to grow"
+	/// The icon file to use when the acorn is planted.
+	var/icon/planted_icon = 'icons/roguetown/misc/crops.dmi'
+	/// The icon_state to use when the acorn is planted.
+	var/planted_icon_state = "shelter"
+	/// Time it takes for the pod to grow into a shelter, once it's been planted/shaken.
+	var/growth_duration = 5 SECONDS
+	/// Turfs this acorn can be planted into. If empty, can be planted everywhere and has to be used in-hand
+	/// and thrown, just like SS13 bluespace capsules. Turns into a typecache on Initialize().
+	var/list/plantable_turfs = list(
+		/turf/open/floor/rogue/dirt,
+		/turf/open/floor/rogue/grass,
+		/turf/open/floor/rogue/grasscold,
+		/turf/open/floor/rogue/grassyel,
+		/turf/open/floor/rogue/grassred,
+	)
+
+/obj/item/shelter_pod/Initialize()
+	. = ..()
+	if(!LAZYLEN(plantable_turfs))
+		return
+
+	plantable_turfs = typecacheof(plantable_turfs)
+
+/obj/item/shelter_pod/Destroy()
+	template = null // without this, capsules would be one use. per round.
+	. = ..()
 
 /obj/item/shelter_pod/proc/get_template()
 	if(template)
@@ -31,51 +57,88 @@
 		WARNING("Shelter template ([template_id]) not found!")
 		qdel(src)
 
-/obj/item/shelter_pod/Destroy()
-	template = null // without this, capsules would be one use. per round.
-	. = ..()
-
 /obj/item/shelter_pod/examine(mob/user)
 	. = ..()
 	get_template()
 	. += "[src] should turn into \an [template.name]."
 	. += template.description
+	. += span_info("It needs to be <b>[LAZYLEN(plantable_turfs) ? "planted" : "shaken, then thrown"]</b> before it can expand.")
 
 /obj/item/shelter_pod/interact(mob/living/user)
 	. = ..()
 	if(.)
 		return .
 
-	//Can't grab when capsule is New() because templates aren't loaded then
+	//Can't grab when pod is in New() or Initialize() because templates aren't loaded then
 	get_template()
 	if(used)
 		return FALSE
 
+	if(plantable_turfs)
+		return plant(user, get_turf(user))
+
 	loc.visible_message(span_warning("[src] [deployment_action]. Stand back!"))
 	used = TRUE
-	addtimer(CALLBACK(src, PROC_REF(expand), user), 5 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(expand), user), growth_duration)
+
 	if(iscarbon(user))
 		var/mob/living/carbon/carbon = user
 		carbon.throw_mode_on()
+
 	return TRUE
 
-/// Expands the capsule into a full shelter, placing the template at the item's location (NOT triggerer's location)
+/obj/item/shelter_pod/attack_turf(turf/target_turf, mob/living/user, multiplier)
+	if(!plantable_turfs)
+		return FALSE
+	
+	get_template()
+	return plant(target_turf, user)
+
+/// Plants the pod into the ground, allowing it to start growing and expand into a full-blown shelter!
+/obj/item/shelter_pod/proc/plant(turf/target_turf, mob/planter)
+	if(!plantable_turfs[target_turf.type])
+		planter?.visible_message(span_warning("[src] cannot be planted on [target_turf], it needs soil to grow!"))
+		return FALSE
+
+	forceMove(target_turf)
+	loc.visible_message(span_warning("[src] [deployment_action]. Stand back!"))
+	used = TRUE
+	anchored = TRUE
+	icon = planted_icon
+	icon_state = planted_icon_state
+	update_icon()
+	addtimer(CALLBACK(src, PROC_REF(expand), planter), growth_duration)
+	return TRUE
+
+/// Uproots the pod, allowing it to be planted once more.
+/obj/item/shelter_pod/proc/uproot()
+	icon = initial(icon)
+	icon_state = initial(icon_state)
+	update_icon()
+	anchored = FALSE
+	used = FALSE
+
+/// Expands the pod into a full shelter, placing the template at the item's location (NOT triggerer's location)
 /obj/item/shelter_pod/proc/expand(mob/triggerer)
 	if(QDELETED(src))
+		return
+
+	if(!used)
 		return
 
 	var/turf/deploy_location = get_turf(src)
 	var/status = template.check_deploy(deploy_location, src, get_ignore_flags())
 	if(status != SHELTER_DEPLOY_ALLOWED)
 		fail_feedback(status)
-		used = FALSE
+		uproot()
 		return
 
 	if(yeet_back)
 		yote_nearby(deploy_location)
+
 	template.load(deploy_location, centered = TRUE)
 	playsound(src, 'sound/magic/charged.ogg', 100, TRUE)
-	new /obj/effect/particle_effect/smoke(get_turf(src))
+	new /obj/effect/particle_effect/smoke/transparent/quick(get_turf(src))
 	qdel(src)
 
 /// Returns a bitfield used to ignore some checks in template.check_deploy()
@@ -88,7 +151,7 @@
 		if(SHELTER_DEPLOY_BAD_AREA)
 			loc.visible_message(span_warning("[src] will not function in this area."))
 		if(SHELTER_DEPLOY_BAD_TURFS, SHELTER_DEPLOY_ANCHORED_OBJECTS, SHELTER_DEPLOY_OUTSIDE_MAP, SHELTER_DEPLOY_BANNED_OBJECTS)
-			loc.visible_message(span_warning("[src] doesn't have room to deploy! You need to clear a [template.width]x[template.height] area!"))
+			loc.visible_message(span_warning("[src] doesn't have room to deploy! You need to clear a [template.width]x[template.height]x[template.z_level_count] area!"))
 
 /// Throws any mobs near the deployed location away from the item / shelter
 /// Does some math to make closer mobs get thrown further
@@ -128,3 +191,7 @@
 /obj/item/shelter_pod/big
 	name = "big shelter acorn"
 	template_id = "shelter_tree_big"
+
+/obj/item/shelter_pod/tall
+	name = "tall shelter acorn"
+	template_id = "shelter_tree_tall"
