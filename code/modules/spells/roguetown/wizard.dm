@@ -175,7 +175,6 @@
 	projectile_type = /obj/projectile/magic/aoe/fireball/rogue
 	overlay_state = "fireball"
 	sound = list('sound/magic/fireball.ogg')
-	active = FALSE
 	releasedrain = 30
 	chargedrain = 1
 	chargetime = 15

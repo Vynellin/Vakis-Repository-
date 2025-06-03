@@ -9,6 +9,7 @@
 	chargedloop = null
 	sound = 'sound/magic/whiteflame.ogg'
 	associated_skill = /datum/skill/magic/arcane
+	gesture_required = TRUE // Potential offensive use, need a target
 	antimagic_allowed = TRUE
 	charge_max = 15 SECONDS
 	miracle = FALSE
@@ -45,6 +46,7 @@
 	chargedloop = null
 	sound = 'sound/items/beartrap.ogg'
 	associated_skill = /datum/skill/magic/arcane
+	gesture_required = TRUE // Offensive spell
 	antimagic_allowed = TRUE
 	charge_max = 15 SECONDS
 	miracle = FALSE
@@ -73,6 +75,7 @@
 	no_early_release = TRUE
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
+	gesture_required = TRUE // Summon spell
 	associated_skill = /datum/skill/magic/arcane
 	charge_max = 60 SECONDS
 
@@ -113,6 +116,7 @@
 	no_early_release = TRUE
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
+	gesture_required = TRUE // Summon spell
 	associated_skill = /datum/skill/magic/arcane
 	charge_max = 30 SECONDS
 	var/is_summoned = FALSE

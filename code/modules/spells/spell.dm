@@ -161,6 +161,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 	var/selection_type = "view" //can be "range" or "view"
 	var/cooldown_min = 0 //This defines what spell quickened four times has as a cooldown. Make sure to set this for every spell
 	var/player_lock = TRUE //If it can be used by simple mobs
+	var/gesture_required = FALSE // Can it be cast while cuffed? Rule of thumb: Offensive spells + Mobility cannot be cast
 	var/spell_tier = 1 // Tier of the spell, used to determine whether you can learn it based on your spell. Starts at 1.
 	var/refundable = FALSE // If true, the spell can be refunded. This is modified at the point it is added to the user's mind by learnspell.
 
@@ -274,6 +275,9 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 
 		if(miracle && !H.devotion?.check_devotion(src))
 			to_chat(H, span_warning("I don't have enough devotion!"))
+			return FALSE
+		if(H.handcuffed && gesture_required)
+			to_chat(user, span_warning("[name] cannot be cast with my hands tied up!"))
 			return FALSE
 	else
 		if(clothes_req || human_req)

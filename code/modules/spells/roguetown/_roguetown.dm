@@ -75,6 +75,7 @@
 	var/projectile_amount = 1	//Projectiles per cast.
 	var/current_amount = 0	//How many projectiles left.
 	var/projectiles_per_fire = 1		//Projectiles per fire. Probably not a good thing to use unless you override ready_projectile().
+	gesture_required = TRUE // Projectiles need to be aimed, and is mostly offensive.
 	ignore_los = TRUE
 
 /obj/effect/proc_holder/spell/invoked/projectile/proc/ready_projectile(obj/projectile/P, atom/target, mob/user, iteration)

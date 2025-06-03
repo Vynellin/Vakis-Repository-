@@ -486,6 +486,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
 	overlay_state = "blade_burst"
+	gesture_required = TRUE
 	spell_tier = 2 // AOE, but this is essential for PVE
 	invocation = "Erumpere Gladios!"
 	invocation_type = "shout"
@@ -857,6 +858,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
 	range = 7
+	gesture_required = TRUE // Offensive spell
 	spell_tier = 3
 	invocation = "Congelare Subitus!"
 	invocation_type = "shout"
@@ -930,6 +932,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
+	gesture_required = TRUE // Mobility spell
 	antimagic_allowed = FALSE //can you use it if you are antimagicked?
 	charging_slowdown = 3
 	spell_tier = 2
@@ -1544,6 +1547,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
+	gesture_required = TRUE // Mobility spell
 	spell_tier = 2
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/invokegen
