@@ -224,8 +224,8 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	school = "transmutation"
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 15
-	charge_max = 35 SECONDS
+	chargetime = 10
+	charge_max = 30 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
@@ -254,7 +254,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')
 	opacity = 0
 	density = TRUE
-	max_integrity = 100
+	max_integrity = 150
 	CanAtmosPass = ATMOS_PASS_DENSITY
 	var/timeleft = 20 SECONDS
 
@@ -299,7 +299,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	xp_gain = TRUE
 	releasedrain = 20
 	chargedrain = 1
-	chargetime = 20
+	chargetime = 10
 	charge_max = 25 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
@@ -359,7 +359,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	spell_tier = 1
 	associated_skill = /datum/skill/magic/arcane
 	overlay_state = "message"
-	var/identify_difficulty = 15 //the stat threshold needed to pass the identify check
+	var/identify_difficulty = 14 //the stat threshold needed to pass the identify check
 
 /obj/effect/proc_holder/spell/self/message/cast(list/targets, mob/user)
 	. = ..()
@@ -459,7 +459,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 			if(isliving(AM))
 				var/mob/living/M = AM
 				M.Paralyze(10)
-				M.adjustBruteLoss(5)
+				M.adjustBruteLoss(20)
 				to_chat(M, "<span class='danger'>You're slammed into the floor by [user]!</span>")
 		else
 			new sparkle_path(get_turf(AM), get_dir(user, AM)) //created sparkles will disappear on their own
@@ -543,7 +543,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	drawmessage = "I prepare to form a magical shroud."
 	dropmessage = "I release my arcane focus."
 	school = "abjuration"
-	charge_max = 30 SECONDS
+	charge_max = 10 SECONDS
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
 	hand_path = /obj/item/melee/touch_attack/nondetection
@@ -619,7 +619,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	invocation = "Nox Oculus"
 	invocation_type = "whisper"
 	xp_gain = TRUE
-	cost = 2
+	cost = 1
 
 /obj/item/melee/touch_attack/darkvision
 	name = "\improper arcane focus"
@@ -763,7 +763,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 /datum/status_effect/buff/acidsplash5e/tick()
 	var/mob/living/target = owner
-	target.adjustFireLoss(3)
+	target.adjustFireLoss(5)
 
 /atom/movable/screen/alert/status_effect/buff/acidsplash5e
 	name = "Acid Burn"
@@ -785,7 +785,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	desc = "Freeze your enemy with an icy blast that does low damage, but reduces the target's Speed for a considerable length of time."
 	overlay_state = "null"
 	releasedrain = 50
-	chargetime = 3
+	chargetime = 8
 	charge_max = 25 SECONDS
 	range = 7
 	warnie = "spellwarning"
@@ -849,8 +849,8 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	overlay = 'icons/effects/effects.dmi'
 	overlay_state = "shieldsparkles"
 	chargedrain = 1
-	chargetime = 15
-	charge_max = 13 SECONDS
+	chargetime = 20
+	charge_max = 20 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
@@ -926,7 +926,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 3
+	chargetime = 8
 	charge_max = 13 SECONDS //cooldown
 
 	warnie = "spellwarning"
@@ -957,7 +957,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	damage_type = BURN
 	flag = "magic"
 	range = 10
-	speed = 12 //higher is slower
+	speed = 10 //higher is slower
 	var/aoe_range = 0
 
 /obj/projectile/magic/frostbolt/on_hit(target)
@@ -985,27 +985,27 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	overlay_state = "force_dart"
 	sound = list('sound/magic/vlightning.ogg')
 	active = FALSE
-	releasedrain = 20
+	releasedrain = 15
 	chargedrain = 1
-	chargetime = 7
-	charge_max = 20 SECONDS
+	chargetime = 0
+	charge_max = 3.5 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
-	spell_tier = 2
+	spell_tier = 3
 	invocation = "Magicae Sagitta!"
 	invocation_type = "shout"
 	charging_slowdown = 3
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
-	cost = 1
+	cost = 2
 
 /obj/projectile/energy/rogue3
 	name = "Arcane Bolt"
 	icon_state = "arcane_barrage"
-	damage = 30
+	damage = 25
 	damage_type = BRUTE
-	armor_penetration = 10
+	armor_penetration = 40
 	woundclass = BCLASS_SMASH
 	nodamage = FALSE
 	flag = "magic"
@@ -1021,7 +1021,6 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 			playsound(get_turf(target), 'sound/magic/magic_nulled.ogg', 100)
 			qdel(src)
 			return BULLET_ACT_BLOCK
-		M.confused += 3
 		playsound(get_turf(target), 'sound/combat/hits/blunt/shovel_hit2.ogg', 100) //CLANG
 	else
 		return
@@ -1034,8 +1033,8 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	xp_gain = TRUE
 	releasedrain = 20
 	chargedrain = 1
-	chargetime = 7
-	charge_max = 15 SECONDS
+	chargetime = 10
+	charge_max = 20 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
@@ -1069,7 +1068,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 				playsound(get_turf(L), 'sound/magic/magic_nulled.ogg', 100)
 				return 
 
-			if(L.STASTR <= 11)
+			if(L.STASTR <= 15)
 				L.adjustBruteLoss(30)
 				L.Knockdown(5)
 				to_chat(L, "<span class='userdanger'>You're magically weighed down, losing your footing!</span>")
@@ -1163,7 +1162,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	overlay_state = "null"
 	releasedrain = 50
 	chargetime = 3
-	charge_max = 20 SECONDS
+	charge_max = 30 SECONDS
 	//chargetime = 10
 	//charge_max = 30 SECONDS
 	range = 6
@@ -1255,7 +1254,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	cost = 1
 	releasedrain = 35
 	chargedrain = 1
-	chargetime = 30
+	chargetime = 15
 	charge_max = 80 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
@@ -1378,7 +1377,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	clothes_req = FALSE
 	charge_type = "recharge"
 	associated_skill = /datum/skill/magic/arcane
-	cost = 2
+	cost = 1
 	xp_gain = TRUE
 	// Fix invoked spell variables
 	releasedrain = 35
@@ -1542,7 +1541,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	cost = 1
 	releasedrain = 30
 	chargedrain = 1
-	chargetime = 1.5 SECONDS
+	chargetime = 3
 	charge_max = 10 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
