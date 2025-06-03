@@ -34,7 +34,7 @@
 	beltr = /obj/item/storage/keyring/mage
 	beltl = /obj/item/book/spellbook
 	id = /obj/item/clothing/ring/gold
-	r_hand = /obj/item/rogueweapon/woodstaff/prepared/diamond
+	r_hand = /obj/item/rogueweapon/woodstaff/diamond
 	backl = /obj/item/storage/backpack/rogue/satchel
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/poison,/obj/item/reagent_containers/glass/bottle/rogue/healthpot)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, "[type]")
