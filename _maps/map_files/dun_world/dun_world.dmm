@@ -51584,7 +51584,7 @@
 /obj/effect/spawner/lootdrop/potion_vitals,
 /obj/item/ingot/blacksteel,
 /obj/item/ingot/blacksteel,
-/obj/item/book/granter/spellbook/magician,
+/obj/item/book/spellbook,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/under/cave/dungeon/dragonden)
 "vQt" = (
@@ -53917,7 +53917,7 @@
 /area/rogue/under/town/sewer)
 "wXe" = (
 /obj/structure/bookcase,
-/obj/item/book/granter/spellbook,
+/obj/item/book/spellbook,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/dungeon/winding_halls)
 "wXm" = (
