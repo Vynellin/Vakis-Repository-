@@ -16906,11 +16906,11 @@
 "heT" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
-/obj/item/reagent_containers/glass/bottle/rogue/manapot,
-/obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /obj/item/reagent_containers/glass/bottle/rogue/manapot,
 /obj/item/reagent_containers/glass/bottle/rogue/manapot,
+/obj/item/reagent_containers/glass/bottle/rogue/stampot,
+/obj/item/reagent_containers/glass/bottle/rogue/stampot,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/shop)
 "hff" = (
@@ -17178,6 +17178,10 @@
 /obj/effect/mapping_helpers/access/garrison,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/indoors/town)
+"hlR" = (
+/obj/item,
+/turf/open/floor/rogue/cobble,
+/area/rogue/outdoors/town)
 "hlU" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -252018,7 +252022,7 @@ phl
 pfQ
 exD
 ehB
-sns
+hlR
 tEq
 pPy
 tvm
