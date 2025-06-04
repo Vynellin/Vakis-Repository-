@@ -219,16 +219,46 @@
 
 /obj/effect/proc_holder/spell/targeted/gravemark/cast(list/targets, mob/user)
 	. = ..()
+	var/faction_tag = "[user.mind.name]_[user.ckey]_faction"
+
 	for (var/mob/living/mob in targets)
 		if (!mob?.mind)
 			to_chat(user, span_warning("This one lacks the spark of sentience."))
 			continue
-		if (mob == user) // You used `usr` — prefer `user` for clarity in spells.
+
+		if (mob == user)
 			to_chat(user, span_warning("It would be unwise to make an enemy of your own skeletons."))
 			continue
-		if ("[user.mind.name]_[user.ckey]_faction" in mob.mind.current.faction)
-			mob.mind.current.faction -= "[user.mind.name]_[user.ckey]_faction"
+
+		var/adding = TRUE
+
+		if (faction_tag in mob.mind.current.faction)
+			mob.mind.current.faction -= faction_tag
+			mob.mind.summons_additional_factions -= faction_tag
 			user.say("Your safety is forfeit, your fate bone-bound.")
+			adding = FALSE
 		else
-			mob.mind.current.faction += "[user.mind.name]_[user.ckey]_faction"
+			mob.mind.current.faction |= faction_tag
+			mob.mind.summons_additional_factions |= faction_tag
 			user.say("Marked by bone and spared by death.")
+
+		// Update the target's summons
+		if (islist(mob.mind.summons_list))
+			for (var/mob/living/summon in mob.mind.summons_list)
+				if (!summon || QDELETED(summon))
+					continue
+				if (adding)
+					summon.faction |= faction_tag
+				else
+					summon.faction -= faction_tag
+
+		// Update the caster's summons to respect or remove the target
+		var/target_tag = "[mob.mind.name]_[mob.ckey]_faction"
+		if (islist(user.mind.summons_list))
+			for (var/mob/living/summon in user.mind.summons_list)
+				if (!summon || QDELETED(summon))
+					continue
+				if (adding)
+					summon.faction |= target_tag
+				else
+					summon.faction -= target_tag

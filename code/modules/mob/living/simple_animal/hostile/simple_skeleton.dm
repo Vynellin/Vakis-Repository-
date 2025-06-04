@@ -119,6 +119,9 @@
 		summoner = user.mind.name
 		if (is_summoned)
 			faction |= "[user.mind.name]_[user.ckey]_faction"
+			user.mind.summons_list += src
+			for (var/faction_to_add in user.mind.summons_additional_factions)
+				faction |= faction_to_add
 			if (!("undead" in user.faction)) //We don't want the lich antag to get murdered by its own minion
 				name = "Deathbound"
 				faction -= "undead"
