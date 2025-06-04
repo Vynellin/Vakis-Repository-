@@ -264,7 +264,11 @@
 	"Motus" = 'sound/music/instruments/hurdy (3).ogg',
 	"Becalmed" = 'sound/music/instruments/hurdy (4).ogg',
 	"The Bloody Throne" = 'sound/music/instruments/hurdy (5).ogg',
-	"We Shall Sail Together" = 'sound/music/instruments/hurdy (6).ogg')
+	"We Shall Sail Together" = 'sound/music/instruments/hurdy (6).ogg',
+	"Antescriptum" = 'sound/music/instruments/hurdy (7).ogg',
+	"Sword dance" = 'sound/music/instruments/hurdy (8).ogg',
+	"Dark ritual" = 'sound/music/instruments/hurdy (9).ogg')
+	
 
 /obj/item/rogue/instrument/viola
 	name = "viola"
