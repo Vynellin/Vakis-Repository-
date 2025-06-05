@@ -88,6 +88,13 @@
 			return FALSE
 		return TRUE
 
+
+
+/datum/intent/shoot/arquebus/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('sound/foley/musketcock.ogg'), 100, FALSE)
+
 /datum/intent/shoot/arquebus/get_chargetime()
 	if(mastermob && chargetime)
 		var/newtime = chargetime
@@ -116,6 +123,11 @@
 		if(mastermob.get_inactive_held_item())
 			return FALSE*/
 		return TRUE
+
+/datum/intent/arc/arquebus/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('sound/foley/musketcock.ogg'), 100, FALSE)
 
 /datum/intent/arc/arquebus/get_chargetime()
 	if(mastermob && chargetime)
@@ -231,6 +243,7 @@
 	for(var/obj/item/ammo_casing/CB in get_ammo_list(FALSE, TRUE))
 		var/obj/projectile/BB = CB.BB
 		BB.damage = BB.damage * damfactor
+		BB.firer = user
 	gunpowder = FALSE
 	reloaded = FALSE
 	user.mind.adjust_experience(/datum/skill/combat/firearms, (user.STAINT*5))
@@ -344,7 +357,12 @@
 /datum/intent/shoot/arquebus_pistol/can_charge()
 	if(mastermob)
 		return TRUE
-		
+
+/datum/intent/shoot/arquebus_pistol/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('sound/foley/musketcock.ogg'), 100, FALSE)
+
 /datum/intent/shoot/arquebus_pistol/get_chargetime()
 	if(mastermob && chargetime)
 		var/newtime = chargetime
@@ -373,6 +391,11 @@
 		if(mastermob.get_inactive_held_item())
 			return FALSE*/
 	return TRUE
+
+/datum/intent/arc/arquebus_pistol/prewarning()
+	if(mastermob)
+		mastermob.visible_message(span_warning("[mastermob] prepares [masteritem] to fire!"))
+		playsound(mastermob, pick('sound/foley/musketcock.ogg'), 100, FALSE)
 
 /datum/intent/arc/arquebus_pistol/get_chargetime()
 	if(mastermob && chargetime)
@@ -496,6 +519,7 @@
 	for(var/obj/item/ammo_casing/CB in get_ammo_list(FALSE, TRUE))
 		var/obj/projectile/BB = CB.BB
 		BB.damage = BB.damage * damfactor
+		BB.firer = user
 	gunpowder = FALSE
 	reloaded = FALSE
 	flick("flintstrike", src)

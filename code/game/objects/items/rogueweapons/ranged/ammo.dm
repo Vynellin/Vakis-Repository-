@@ -555,6 +555,21 @@
 	armor_penetration = 80
 	speed = 0.1
 
+/obj/projectile/bullet/reusable/bullet/on_hit(atom/target, mob/living/shooter)
+	. = ..()
+
+	if(!shooter)
+		shooter = src.firer
+
+	if(ismob(target))
+		var/mob/living/M = target
+
+		if(shooter && shooter.client)
+			target.visible_message(
+				span_danger("[shooter] hits [M] with a [src.name]!"),
+				span_warning("You shoot [M] with your [src.name]!")
+			)
+
 /obj/item/ammo_casing/caseless/rogue/bullet
 	name = "iron sphere"
 	desc = "A small iron sphere. This should go well with firepowder."
