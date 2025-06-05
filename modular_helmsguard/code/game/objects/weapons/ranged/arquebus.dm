@@ -627,7 +627,7 @@
 	desc = "A powderhorn of gunpowder used for reloading a firearm."
 	icon_state = "powderhorn"
 	item_state = "powderhorn"
-	slot_flags = SLOT_BELT_L | SLOT_BELT_R | ITEM_SLOT_NECK | ITEM_SLOT_HIP
+	slot_flags = SLOT_BELT_L | SLOT_BELT_R | ITEM_SLOT_HIP
 	w_class = WEIGHT_CLASS_TINY
 
 
