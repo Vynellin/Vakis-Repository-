@@ -56,6 +56,7 @@ All foods are distributed among various categories. Use common sense.
 	/// If false, this will inflict mood debuffs on nobles who eat it without being near a table.
 	var/portable = TRUE
 	var/fried_type = null	//instead of becoming
+	var/deep_fried_type = null //for deep frying, like in a fryer
 	var/filling_color = "#FFFFFF" //color to use when added to custom food.
 	var/custom_food_type = null  //for food customizing. path of the custom food to create
 	var/junkiness = 0  //for junk food. used to lower human satiety.
@@ -78,8 +79,6 @@ All foods are distributed among various categories. Use common sense.
 	var/become_rot_type = null
 
 	var/plateable = FALSE //if it can be plated or not
-
-	var/mill_result = null
 
 	var/fertamount = 50
 
