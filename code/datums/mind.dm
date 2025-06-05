@@ -97,6 +97,9 @@
 
 	var/heretic_nickname   // Nickname used for heretic commune
 
+	var/list/summons_list = list() //List of summons, used to quickly update their factions in case of a faction change.
+	var/list/summons_additional_factions = list() //saves any factions added by the "Mark of the Gravebound" spell so future summons get those added too.
+
 /datum/mind/New(key)
 	src.key = key
 	soulOwner = src
