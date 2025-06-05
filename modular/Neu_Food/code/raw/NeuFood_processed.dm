@@ -90,6 +90,11 @@
 	tastes = list("sweetness and spiderwebs" = 1)
 	eat_effect = null
 	rotprocess = null
+	can_press = TRUE
+	can_distill = TRUE
+	distill_reagent = /datum/reagent/consumable/ethanol/mead
+	press_reagent = /datum/reagent/consumable/meadbase
+	press_amt = 12
 
 
 /*	........   Drying Rack recipes   ................ */

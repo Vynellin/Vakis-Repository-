@@ -89,6 +89,14 @@ All foods are distributed among various categories. Use common sense.
 
 	var/cooked_smell
 
+	var/can_distill = FALSE //If FALSE, this object cannot be distilled into an alcohol.
+	var/distill_reagent //If NULL and this object can be distilled, it uses a generic fruit_wine reagent and adjusts its variables.
+	var/distill_amt = 12 
+
+	var/can_press = FALSE //If FALSE, this object cannot be pressed into a juice.
+	var/press_reagent //If NULL and this object can be pressed, it uses a generic fruit juice reagent and adjusts its variables.
+	var/press_amt = 12 //Amount of reagent produced when pressing this item.
+
 
 /datum/intent/food
 	name = "feed"
