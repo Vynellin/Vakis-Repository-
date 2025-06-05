@@ -92,7 +92,7 @@
 	overlay_state = "tamebeast"
 	releasedrain = 60
 	recharge_time = 60 SECONDS
-	invocation = "Treefather grant me your form!"
+	invocation = "Tamari grant me your form!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	devotion_cost = 80
