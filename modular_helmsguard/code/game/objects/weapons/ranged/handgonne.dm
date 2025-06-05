@@ -37,7 +37,7 @@
 	var/spread_num = 10
 	var/damfactor = 2
 	var/reloaded = FALSE
-	var/load_time = 45
+	var/load_time = 40
 	var/gunpowder = FALSE
 	var/obj/item/ramrod/myrod = null
 	var/gunchannel

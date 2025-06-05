@@ -38,7 +38,7 @@
 	var/spread_num = 10
 	var/damfactor = 3.5
 	var/reloaded = FALSE
-	var/load_time = 45
+	var/load_time = 40
 	var/gunpowder = FALSE
 	var/obj/item/ramrod/myrod = null
 	var/gunchannel
@@ -327,7 +327,7 @@
 	slot_flags = ITEM_SLOT_HIP
 	var/damfactor = 3
 	var/reloaded = FALSE
-	var/load_time = 40
+	var/load_time = 35
 	var/gunpowder = FALSE
 	var/obj/item/ramrod/myrod = null
 	var/spread_num = 10
