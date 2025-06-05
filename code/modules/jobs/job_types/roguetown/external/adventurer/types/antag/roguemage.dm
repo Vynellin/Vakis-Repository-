@@ -43,7 +43,7 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 4, TRUE)
 		ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
-		ADD_TRAIT(H, TRAIT_ARCYNE_T3, TRAIT_GENERIC)
+		ADD_TRAIT(H, TRAIT_ARCANE_T3, TRAIT_GENERIC)
 		if(H.age == AGE_OLD)
 			head = /obj/item/clothing/head/roguetown/wizhat/gen
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe

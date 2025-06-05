@@ -9,7 +9,7 @@
 		if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation))
 			recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		if (!HAS_TRAIT(recipient, TRAIT_MEDIUMARMOR) && !HAS_TRAIT(recipient, TRAIT_HEAVYARMOR) && !HAS_TRAIT(recipient, TRAIT_DODGEEXPERT) && !HAS_TRAIT(recipient, TRAIT_CRITICAL_RESISTANCE))
-			ADD_TRAIT(recipient, TRAIT_ARCYNE_T1, TRAIT_GENERIC)
+			ADD_TRAIT(recipient, TRAIT_ARCANE_T1, TRAIT_GENERIC)
 			recipient.mind?.adjust_spellpoints(2)
 	else
 		recipient.mind?.adjust_spellpoints(2) // 2 extra spellpoints since you don't get any spell point from the skill anymore

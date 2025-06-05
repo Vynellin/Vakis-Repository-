@@ -1,12 +1,12 @@
 // Get what tier of spells is the user allowed to access
 /proc/get_user_spell_tier(mob/target)
-	if(HAS_TRAIT(target, TRAIT_ARCYNE_T4))
+	if(HAS_TRAIT(target, TRAIT_ARCANE_T4))
 		return 4
-	if(HAS_TRAIT(target, TRAIT_ARCYNE_T3))
+	if(HAS_TRAIT(target, TRAIT_ARCANE_T3))
 		return 3
-	if(HAS_TRAIT(target, TRAIT_ARCYNE_T2))
+	if(HAS_TRAIT(target, TRAIT_ARCANE_T2))
 		return 2
-	if(HAS_TRAIT(target, TRAIT_ARCYNE_T1))
+	if(HAS_TRAIT(target, TRAIT_ARCANE_T1))
 		return 1
 	return 0
 
@@ -37,7 +37,7 @@ GLOBAL_LIST_INIT(learnable_spells, (list(/obj/effect/proc_holder/spell/invoked/p
 		/obj/effect/proc_holder/spell/invoked/fortitude,
 		/obj/effect/proc_holder/spell/invoked/snap_freeze,
 		/obj/effect/proc_holder/spell/invoked/projectile/frostbolt,
-		/obj/effect/proc_holder/spell/invoked/projectile/arcynebolt,
+		/obj/effect/proc_holder/spell/invoked/projectile/arcanebolt,
 		/obj/effect/proc_holder/spell/invoked/gravity,
 		/obj/effect/proc_holder/spell/invoked/projectile/repel,
 		/obj/effect/proc_holder/spell/invoked/aerosolize,

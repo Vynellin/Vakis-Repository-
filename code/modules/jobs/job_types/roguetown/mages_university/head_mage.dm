@@ -39,7 +39,7 @@
 	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/rich)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, "[type]")
 	ADD_TRAIT(H, TRAIT_INTELLECTUAL, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_ARCYNE_T4, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_ARCANE_T4, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 6, TRUE)

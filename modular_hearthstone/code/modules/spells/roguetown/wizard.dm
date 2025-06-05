@@ -693,7 +693,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 
 //ports -- todo: sfx
 
-/obj/effect/proc_holder/spell/invoked/projectile/acidsplash5e
+/obj/effect/proc_holder/spell/invoked/projectile/acidsplash
 	name = "Acid Splash"
 	desc = "A slow-moving glob of acid that sprays over an area upon impact."
 	range = 8
@@ -1156,7 +1156,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 					throw_target = get_edge_target_turf(firer, get_dir(firer, target))
 			I.throw_at(throw_target, 7, 4)
 
-/obj/effect/proc_holder/spell/invoked/poisonspray5e
+/obj/effect/proc_holder/spell/invoked/aerosolize
 	name = "Aerosolize" //once again renamed to fit better :)
 	desc = "Turns a container of liquid into a smoke containing the reagents of that liquid."
 	overlay_state = "null"
@@ -1184,7 +1184,7 @@ GLOBAL_LIST_EMPTY(wizard_spells_list)
 	invocation = ""
 	invocation_type = "shout" //can be none, whisper, emote and shout
 	
-/obj/effect/proc_holder/spell/invoked/poisonspray5e/cast(list/targets, mob/living/user)
+/obj/effect/proc_holder/spell/invoked/aerosolize/cast(list/targets, mob/living/user)
 	var/turf/T = get_turf(targets[1]) //check for turf
 	if(T)
 		var/obj/item/held_item = user.get_active_held_item() //get held item

@@ -8,7 +8,7 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/adventurer/apothecary
 	category_tags = list(CTAG_PILGRIM, CTAG_TOWNER)
-	traits_applied = list(TRAIT_RITUALIST, TRAIT_DEATHSIGHT, TRAIT_ARCYNE_T1)
+	traits_applied = list(TRAIT_RITUALIST, TRAIT_DEATHSIGHT, TRAIT_ARCANE_T1)
 	cmode_music = 'sound/music/combat_bog.ogg'
 
 /datum/outfit/job/roguetown/adventurer/apothecary/pre_equip(mob/living/carbon/human/H)
