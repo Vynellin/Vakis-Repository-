@@ -11,7 +11,7 @@
 	associated_skill = /datum/skill/magic/arcane
 	gesture_required = TRUE // Potential offensive use, need a target
 	antimagic_allowed = TRUE
-	charge_max = 15 SECONDS
+	recharge_time = 15 SECONDS
 	miracle = FALSE
 
 /obj/effect/proc_holder/spell/invoked/bonechill/cast(list/targets, mob/living/user)
@@ -48,8 +48,9 @@
 	associated_skill = /datum/skill/magic/arcane
 	gesture_required = TRUE // Offensive spell
 	antimagic_allowed = TRUE
-	charge_max = 15 SECONDS
+	recharge_time = 15 SECONDS
 	miracle = FALSE
+	hide_charge_effect = TRUE
 
 /obj/effect/proc_holder/spell/invoked/eyebite/cast(list/targets, mob/living/user)
 	. = ..()
@@ -77,7 +78,7 @@
 	chargedloop = /datum/looping_sound/invokegen
 	gesture_required = TRUE // Summon spell
 	associated_skill = /datum/skill/magic/arcane
-	charge_max = 60 SECONDS
+	recharge_time = 60 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/raise_undead/cast(list/targets, mob/living/user)
 	. = ..()
@@ -118,7 +119,8 @@
 	chargedloop = /datum/looping_sound/invokegen
 	gesture_required = TRUE // Summon spell
 	associated_skill = /datum/skill/magic/arcane
-	charge_max = 30 SECONDS
+	recharge_time = 30 SECONDS
+	hide_charge_effect = TRUE
 	var/is_summoned = FALSE
 
 /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/cast(list/targets, mob/living/user)
@@ -144,7 +146,7 @@
 
 /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/necromancer
 	is_summoned = TRUE
-	charge_max = 45 SECONDS
+	recharge_time = 45 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/projectile/sickness
 	name = "Ray of Sickness"
@@ -162,7 +164,7 @@
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
-	charge_max = 15 SECONDS
+	recharge_time = 15 SECONDS
 
 /obj/effect/proc_holder/spell/self/suicidebomb
 	name = "Calcic Outburst"
@@ -170,7 +172,7 @@
 	overlay_state = "tragedy"
 	chargedrain = 0
 	chargetime = 0
-	charge_max = 10 SECONDS
+	recharge_time = 10 SECONDS
 	sound = 'sound/magic/swap.ogg'
 	warnie = "spellwarning"
 	chargedloop = /datum/looping_sound/invokegen

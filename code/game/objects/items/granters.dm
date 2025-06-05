@@ -289,14 +289,14 @@
 
 /obj/item/book/granter/spell/blackstone/ensnare
 	name = "Scroll of Ensnare"
-	spell = /obj/effect/proc_holder/spell/invoked/slowdown_spell_aoe
+	spell = /obj/effect/proc_holder/spell/invoked/ensnare
 	spellname = "Ensnare"
 	icon_state ="scrolldarkred"
 	remarks = list("Qui intrat..", "Radices in tenebris..", "Nexus occultus..")
 
 /obj/item/book/granter/spell/blackstone/forcewall_weak
 	name = "Scroll of Forcewall"
-	spell = /obj/effect/proc_holder/spell/invoked/forcewall_weak
+	spell = /obj/effect/proc_holder/spell/invoked/forcewall
 	spellname = "Forcewall"
 	icon_state ="scrolldarkred"
 	remarks = list("Murus non solum hostem..", "Manus invisibiles saxa invicem..", "Infracta moenia..")

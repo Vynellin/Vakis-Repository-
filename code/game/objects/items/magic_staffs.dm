@@ -78,103 +78,103 @@
 
 //slapcrafting stuff
 
-/obj/item/rogueweapon/woodstaff/attackby(obj/item/arcyne_focus, mob/living/carbon/human/user, params)
-	if(istype(arcyne_focus, /obj/item/roguegem/yellow))
+/obj/item/rogueweapon/woodstaff/attackby(obj/item/arcane_focus, mob/living/carbon/human/user, params)
+	if(istype(arcane_focus, /obj/item/roguegem/yellow))
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/toper(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/roguegem/amethyst))
+	else if(istype(arcane_focus, /obj/item/roguegem/amethyst))
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/amethyst(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/roguegem/green))
+	else if(istype(arcane_focus, /obj/item/roguegem/green))
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/emerald(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/roguegem/violet))
+	else if(istype(arcane_focus, /obj/item/roguegem/violet))
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/sapphire(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/roguegem/blue))
+	else if(istype(arcane_focus, /obj/item/roguegem/blue))
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/quartz(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/roguegem/blue))
+	else if(istype(arcane_focus, /obj/item/roguegem/blue))
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/quartz(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/roguegem/diamond))
+	else if(istype(arcane_focus, /obj/item/roguegem/diamond))
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/diamond(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/roguegem)) //has to be checked last because someone made the ruby also the base gem object
+	else if(istype(arcane_focus, /obj/item/roguegem)) //has to be checked last because someone made the ruby also the base gem object
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/ruby(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return
-	else if(istype(arcyne_focus, /obj/item/riddleofsteel)) 
+	else if(istype(arcane_focus, /obj/item/riddleofsteel)) 
 		var/crafttime = (100 - ((user.mind?.get_skill_level(/datum/skill/magic/arcane))*5))
 		if(do_after(user, crafttime, target = src))
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-			user.visible_message(span_warning("[user] slots [user.p_their()] [arcyne_focus] into the staff!"), \
-				span_notice("I empower the staff with an arcyne-focus!"))
+			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
+				span_notice("I empower the staff with an arcane-focus!"))
 			new /obj/item/rogueweapon/woodstaff/riddle_of_steel(loc)
-			qdel(arcyne_focus)
+			qdel(arcane_focus)
 			qdel(src)
 		else
 			return

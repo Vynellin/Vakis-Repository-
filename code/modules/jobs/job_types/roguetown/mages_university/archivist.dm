@@ -78,7 +78,7 @@
 	releasedrain = 50
 	chargedrain = 0
 	chargetime = 0
-	charge_max = 30 SECONDS
+	recharge_time = 30 SECONDS
 	antimagic_allowed = TRUE
 
 /obj/effect/proc_holder/spell/invoked/teach/cast(list/targets, mob/user = usr)
