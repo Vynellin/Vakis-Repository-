@@ -11,9 +11,9 @@
 			it and permit itself be altered. There are ancient and wild places of the earth still yet untouched by civilization, and it is in these places that Tamari's primal song of creation may yet still be heard."
 	worshippers = "Druids, Nomads, Naturalists, Outsiders, and Wanderers."
 	mob_traits = list(TRAIT_KNEESTINGER_IMMUNITY, TRAIT_LEECHIMMUNE)
-	t1 = /obj/effect/proc_holder/spell/self/howl/call_of_the_moon
+	t1 = /obj/effect/proc_holder/spell/self/tamari_shapeshift
 	t2 = /obj/effect/proc_holder/spell/targeted/conjure_glowshroom
-	t3 = null
+	t3 = /obj/effect/proc_holder/spell/self/howl/call_of_the_moon
 	t4 = null
 
 /datum/patron/three_sisters/nunos
