@@ -35,7 +35,6 @@
 		"Iron Warhammer" = /obj/item/rogueweapon/mace/warhammer,
 		"Iron Dagger" = /obj/item/rogueweapon/huntingknife/idagger,
 		"Iron Axe" = /obj/item/rogueweapon/stoneaxe/woodcut,
-		"Iron Greataxe" = /obj/item/rogueweapon/greataxe,
 		"Iron Flail" = /obj/item/rogueweapon/flail,
 		"Iron Spear" = /obj/item/rogueweapon/spear,
 		"Whip" = /obj/item/rogueweapon/whip,
