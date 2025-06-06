@@ -5,7 +5,7 @@
 	added_skills = list(list(/datum/skill/magic/arcane, 1, 6))
 
 /datum/virtue/combat/magical_potential/apply_to_human(mob/living/carbon/human/recipient)
-	if (!recipient.mind?.get_skill_level(/datum/skill/magic/arcane)) // we can do this because apply_to is always called first
+	if (!is_arcane(recipient)) // we can do this because apply_to is always called first
 		if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation))
 			recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		if (!is_combat_class(recipient))

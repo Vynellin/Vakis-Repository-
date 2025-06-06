@@ -614,3 +614,9 @@ GLOBAL_LIST_EMPTY(species_list)
 		return FALSE
 	else
 		return TRUE
+
+/proc/is_arcane(mob/living/carbon/human/recipient)
+	if (!recipient.mind?.get_skill_level(/datum/skill/magic/arcane)) //placed here because if in the future we want to check in a different manner, we can and we wont have so much trouble.
+		return FALSE
+	else
+		return TRUE
