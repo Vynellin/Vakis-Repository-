@@ -23,7 +23,7 @@
 /datum/virtue/combat/devotee/apply_to_human(mob/living/carbon/human/recipient)
 	if (!recipient.mind)
 		return
-	if (!recipient.devotion)
+	if (!is_divine(recipient))
 		// only give non-devotionists orison... and t0 for some reason (this is probably a bad idea)
 		var/datum/devotion/new_faith = new /datum/devotion(recipient, recipient.patron)
 		var/datum/patron/our_patron = new_faith.patron

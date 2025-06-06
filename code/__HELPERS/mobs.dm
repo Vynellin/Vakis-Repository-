@@ -620,3 +620,9 @@ GLOBAL_LIST_EMPTY(species_list)
 		return FALSE
 	else
 		return TRUE
+
+/proc/is_divine(mob/living/carbon/human/recipient)
+	if (!recipient.devotion) //placed here because if in the future we want to check in a different manner, we can and we wont have so much trouble.
+		return FALSE
+	else
+		return TRUE
