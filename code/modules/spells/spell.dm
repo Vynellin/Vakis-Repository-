@@ -1,6 +1,6 @@
 #define TARGET_CLOSEST 1
 #define TARGET_RANDOM 2
-#define MAGIC_XP_MULTIPLIER 0.3 //used to miltuply the amount of xp gained from spells
+#define MAGIC_XP_MULTIPLIER 0.6 //used to miltuply the amount of xp gained from spells
 #define SPELL_SCALING_THRESHOLD 10 // The threshold at which the spell scaling starts to kick in
 #define SPELL_POSITIVE_SCALING_THRESHOLD 15 // The threshold at which spell scaling stop
 #define FATIGUE_REDUCTION_PER_INT 0.05 // The amount of fatigue reduction per point of intelligence above / below threshold
@@ -506,9 +506,8 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 		var/mob/living/carbon/human/devotee = user
 		devotee.devotion?.update_devotion(-devotion_cost)
 		to_chat(devotee, "<font color='purple'>I [devotion_cost > 0 ? "lost" : "gained"] [abs(devotion_cost)] devotion.</font>")
-	//Add xp based on the fatigue used -- AZURE EDIT: REMOVED!! THIS SHIT WAS TINY AND SUUUUCKED
-	/* if(xp_gain)
-		adjust_experience(usr, associated_skill, round(get_fatigue_drain() * MAGIC_XP_MULTIPLIER)) */
+	if(xp_gain && user.mind.get_skill_level(associated_skill) > 0) //We check the spell gives XP AND that the user has at least 1 level.
+		adjust_experience(usr, associated_skill, round(get_fatigue_drain() * MAGIC_XP_MULTIPLIER))
 
 /obj/effect/proc_holder/spell/proc/view_or_range(distance = world.view, center=usr, type="view")
 	switch(type)
