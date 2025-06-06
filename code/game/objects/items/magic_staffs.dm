@@ -73,8 +73,8 @@
 			if("wielded")
 				return list("shrink" = 0.6,"sx" = 4,"sy" = -2,"nx" = -3,"ny" = -2,"wx" = -5,"wy" = -1,"ex" = 3,"ey" = -2,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 7,"sturn" = -7,"wturn" = 16,"eturn" = -22,"nflip" = 8,"sflip" = 0,"wflip" = 8,"eflip" = 0)
 
-/obj/item/rogueweapon/woodstaff/toper
-	name = "toper-focused staff"
+/obj/item/rogueweapon/woodstaff/topaz
+	name = "topaz-focused staff"
 	desc = "An amber focus-gem hewn by pressure immense sits nestled in crown of this staff."
 	icon_state = "topazstaff"
 	cast_time_reduction = TOPAZ_CAST_TIME_REDUCTION
@@ -88,35 +88,35 @@
 	resistance_flags = FIRE_PROOF
 
 /obj/item/rogueweapon/woodstaff/emerald
-	name = "gemerald-focused staff"
+	name = "emerald-focused staff"
 	desc = "A glistening green focus-gem hewn by pressure immense sits nestled in crown of this staff."
 	icon_state = "emeraldstaff"
 	cast_time_reduction = EMERALD_CAST_TIME_REDUCTION
 	resistance_flags = FIRE_PROOF
 
 /obj/item/rogueweapon/woodstaff/sapphire
-	name = "saffira-focused staff"
+	name = "sapphire-focused staff"
 	desc = "A beautiful blue focus-gem hewn by pressure immense sits nestled in crown of this staff."
 	icon_state = "sapphirestaff"
 	cast_time_reduction = SAPPHIRE_CAST_TIME_REDUCTION
 	resistance_flags = FIRE_PROOF
 
 /obj/item/rogueweapon/woodstaff/quartz
-	name = "blortz-focused staff"
+	name = "quartz-focused staff"
 	desc = "A crystal-clear focus-gem hewn by pressure immense sits nestled in crown of this staff."
 	icon_state = "quartzstaff"
 	cast_time_reduction = QUARTZ_CAST_TIME_REDUCTION
 	resistance_flags = FIRE_PROOF
 
 /obj/item/rogueweapon/woodstaff/ruby
-	name = "ronts-focused staff"
+	name = "ruby-focused staff"
 	desc = "A sanguine focus-gem hewn by pressure immense sits nestled in crown of this staff."
 	icon_state = "rubystaff"
 	cast_time_reduction = RUBY_CAST_TIME_REDUCTION
 	resistance_flags = FIRE_PROOF
 
 /obj/item/rogueweapon/woodstaff/diamond
-	name = "dorpel-focused staff"
+	name = "diamond-focused staff"
 	desc = "A beautifully faceted focus-gem hewn by pressure immense sits nestled in crown of this staff."
 	icon_state = "diamondstaff"
 	cast_time_reduction = DIAMOND_CAST_TIME_REDUCTION
@@ -134,7 +134,9 @@
 	name = "\improper Staff of the Head Mage"
 	icon_state = "courtstaff"
 
-/obj/item/rogueweapon/woodstaff/naledi
+/obj/item/rogueweapon/woodstaff/halfs_moon
+	name = "staff of the halfs-moon"
+	icon_state = "naledistaff"
 	cast_time_reduction = DIAMOND_CAST_TIME_REDUCTION
 	resistance_flags = FIRE_PROOF
 
@@ -147,7 +149,7 @@
 			playsound(loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
 			user.visible_message(span_warning("[user] slots [user.p_their()] [arcane_focus] into the staff!"), \
 				span_notice("I empower the staff with an arcane-focus!"))
-			new /obj/item/rogueweapon/woodstaff/toper(get_turf(src))
+			new /obj/item/rogueweapon/woodstaff/topaz(get_turf(src))
 			qdel(arcane_focus)
 			qdel(src)
 		else
