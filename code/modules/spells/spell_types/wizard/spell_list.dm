@@ -20,7 +20,7 @@ GLOBAL_LIST_INIT(learnable_spells, (list(/obj/effect/proc_holder/spell/invoked/p
 		/obj/effect/proc_holder/spell/invoked/blindness,
 		/obj/effect/proc_holder/spell/invoked/projectile/acidsplash,
 		/obj/effect/proc_holder/spell/invoked/projectile/fireball/greater,
-//		/obj/effect/proc_holder/spell/invoked/frostbite,
+		/obj/effect/proc_holder/spell/invoked/frostbite,
 		/obj/effect/proc_holder/spell/invoked/guidance,
 		/obj/effect/proc_holder/spell/invoked/fortitude,
 		/obj/effect/proc_holder/spell/invoked/snap_freeze,
