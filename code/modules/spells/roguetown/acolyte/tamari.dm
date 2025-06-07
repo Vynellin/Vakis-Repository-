@@ -234,6 +234,7 @@ var/static/list/druid_forms = list(
 	shape.melee_damage_lower = initial(shape.melee_damage_lower)
 	shape.melee_damage_upper = initial(shape.melee_damage_upper)
 	shape.dodgetime = 20 // Allow dodging for all forms
+	shape.breedchildren = 0 // Fuck off
 
 	// Enable combat capabilities
 	shape.dextrous = TRUE
