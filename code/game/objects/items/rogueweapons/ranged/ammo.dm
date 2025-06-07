@@ -542,7 +542,7 @@
 
 /obj/projectile/bullet/reusable/bullet/iron
 	name = "iron ball"
-	damage = 40
+	damage = 38
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
@@ -586,7 +586,7 @@
 
 /obj/projectile/bullet/reusable/bullet/steel
 	name = "steel ball"
-	damage = 45
+	damage = 43
 	damage_type = BRUTE
 	icon = 'icons/roguetown/weapons/ammo.dmi'
 	icon_state = "musketball_proj"
@@ -596,7 +596,7 @@
 	embedchance = 100
 	woundclass = BCLASS_STAB
 	flag = "piercing"
-	armor_penetration = 100
+	armor_penetration = 90
 	speed = 0.1
 
 /obj/item/ammo_casing/caseless/rogue/bullet/steel
