@@ -27,7 +27,7 @@
 
 	r_hand = /obj/item/rogueweapon/woodstaff/diamond
 	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
@@ -56,5 +56,5 @@
 		H.change_stat("endurance", -1)
 		H.change_stat("fortune", 2)
 		H.change_stat("speed", 1) //ohhh sweetie this is NOT gonna help
-		H.mind.adjust_spellpoints(5)
+		H.mind.adjust_spellpoints(7)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)

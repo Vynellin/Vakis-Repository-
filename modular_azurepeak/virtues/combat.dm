@@ -1,18 +1,20 @@
 /datum/virtue/combat/magical_potential
-	name = "Arcane Potential"
-	desc = "I am talented in the Arcane arts, expanding my capacity for magic. Its effects depends on what training I chose to focus on at a later age."
-	custom_text = "Classes that has a combat trait (Medium / Heavy Armor Training, Dodge Expert or Critical Resistance) get only prestidigitation. Everyone else get +2 spellpoints and T1 Arcane Potential if they don't have any Arcane."
+	name = "Arcane Training"
+	desc = "Either by natural talent or limited formal training, I posess a modicum sum of Arcane knowledge, which aids me on my day to day chores."
+	custom_text = "+1 to Arcane, Up to Legendary. Arcane and Classes that has a combat trait (Medium / Heavy Armor Training, Dodge Expert or Critical Resistance) get only 1 spellpoint, while everyone else get +2 spellpoints. Everyone also gets T1 Arcane Potential if they don't have any Arcane."
 	added_skills = list(list(/datum/skill/magic/arcane, 1, 6))
 
 /datum/virtue/combat/magical_potential/apply_to_human(mob/living/carbon/human/recipient)
 	if (!is_arcane(recipient)) // we can do this because apply_to is always called first
 		if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation))
 			recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
+		ADD_TRAIT(recipient, TRAIT_ARCANE_T1, TRAIT_GENERIC)
 		if (!is_combat_class(recipient))
-			ADD_TRAIT(recipient, TRAIT_ARCANE_T1, TRAIT_GENERIC)
 			recipient.mind?.adjust_spellpoints(2)
+		else
+			recipient.mind?.adjust_spellpoints(1)	
 	else
-		recipient.mind?.adjust_spellpoints(2) // 2 extra spellpoints since you don't get any spell point from the skill anymore
+		recipient.mind?.adjust_spellpoints(1)
 
 /datum/virtue/combat/devotee
 	name = "Devotee"

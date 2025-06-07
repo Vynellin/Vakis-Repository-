@@ -65,6 +65,8 @@
 		H.change_stat("strength", -1)
 		H.change_stat("constitution", -1)
 		H.change_stat("intelligence", 4)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/guidance)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/teach)
 		if(H.age == AGE_OLD)
 			H.change_stat("speed", -1)
