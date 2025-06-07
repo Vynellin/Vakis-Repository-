@@ -333,6 +333,12 @@
 		if(known_skills[S] > old_level)
 			to_chat(current, span_nicegreen("My [S.name] grows to [SSskills.level_names[known_skills[S]]]!"))
 			S.skill_level_effect(src, known_skills[S])
+			if (skill == /datum/skill/magic/arcane && get_skill_level(skill) == SKILL_LEVEL_LEGENDARY)
+				if (!HAS_TRAIT(current, TRAIT_MAGIC_TALENT))
+					ADD_TRAIT(current, TRAIT_ARCANE_GATES, TRAIT_GENERIC)
+					to_chat(current, span_nicegreen("I have peeked into the arcane gates and obtained an important truth!"))
+				if (HAS_TRAIT(current, TRAIT_ARCANE_T3))
+					adjust_spellpoints(1)
 	else
 		to_chat(current, span_warning("My [S.name] has weakened to [SSskills.level_names[known_skills[S]]]!"))
 
@@ -392,6 +398,12 @@
 		to_chat(current, span_nicegreen("I feel like I've become more proficient at [lowertext(S.name)]!"))
 	else
 		to_chat(current, span_warning("I feel like I've become worse at [lowertext(S.name)]!"))
+	if (skill == /datum/skill/magic/arcane && get_skill_level(skill) == SKILL_LEVEL_LEGENDARY)
+		if (!HAS_TRAIT(current, TRAIT_MAGIC_TALENT))
+			ADD_TRAIT(current, TRAIT_ARCANE_GATES, TRAIT_GENERIC)
+			to_chat(current, span_nicegreen("I have peeked into the arcane gates and obtained an important truth!"))
+		if (HAS_TRAIT(current, TRAIT_ARCANE_T3))
+			adjust_spellpoints(1)
 
 // adjusts the amount of available spellpoints
 /datum/mind/proc/adjust_spellpoints(points)

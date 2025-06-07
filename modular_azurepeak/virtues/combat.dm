@@ -8,7 +8,7 @@
 	if (!is_arcane(recipient)) // we can do this because apply_to is always called first
 		if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation))
 			recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
-		ADD_TRAIT(recipient, TRAIT_ARCANE_T1, TRAIT_GENERIC)
+		ADD_TRAIT(recipient, TRAIT_MAGIC_TALENT, TRAIT_GENERIC)
 		recipient.mind?.adjust_spellpoints(2)
 	else
 		recipient.change_stat("intelligence", 1)
