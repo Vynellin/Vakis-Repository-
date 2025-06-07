@@ -120,18 +120,6 @@ var/static/list/druid_forms = list(
 		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/mudcrab,
 		"level" = 1
 	),
-	"goat" = list(
-		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/goat,
-		"level" = 1
-	),
-	"chicken" = list(
-		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/chicken,
-		"level" = 1
-	),
-	"pig" = list(
-		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/trufflepig,
-		"level" = 1
-	),
 	// Intermediate forms (Level 2-3)
 	"wolf" = list(
 		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
@@ -271,33 +259,6 @@ var/static/list/druid_forms = list(
 			shape.base_intents = list(/datum/intent/unarmed/claw, /datum/intent/simple/bite)
 			shape.melee_damage_lower = 25
 			shape.melee_damage_upper = 35
-			shape.rot_type = null
-
-		if(/mob/living/simple_animal/hostile/retaliate/rogue/chicken)
-			shape.attack_verb_continuous = "kicks"
-			shape.attack_verb_simple = "kick"
-			shape.attack_sound = list('sound/combat/wooshes/blunt/wooshhuge (1).ogg','sound/combat/wooshes/blunt/wooshhuge (2).ogg')
-			shape.base_intents = list(/datum/intent/unarmed/claw, /datum/intent/simple/bite)
-			shape.melee_damage_lower = 1
-			shape.melee_damage_upper = 8
-			shape.rot_type = null
-
-		if(/mob/living/simple_animal/hostile/retaliate/rogue/goat)
-			shape.attack_verb_continuous = "headbutts"
-			shape.attack_verb_simple = "headbutt"
-			shape.attack_sound = list('sound/combat/wooshes/blunt/wooshhuge (1).ogg','sound/combat/wooshes/blunt/wooshhuge (2).ogg')
-			shape.base_intents = list(/datum/intent/simple/spear, /datum/intent/simple/headbutt)
-			shape.melee_damage_lower = 10
-			shape.melee_damage_upper = 25
-			shape.rot_type = null
-
-		if(/mob/living/simple_animal/hostile/retaliate/rogue/trufflepig)
-			shape.attack_verb_continuous = "bites"
-			shape.attack_verb_simple = "bite"
-			shape.attack_sound = list('sound/combat/wooshes/blunt/wooshhuge (1).ogg','sound/combat/wooshes/blunt/wooshhuge (2).ogg')
-			shape.base_intents = list(/datum/intent/unarmed/claw, /datum/intent/simple/headbutt)
-			shape.melee_damage_lower = 8
-			shape.melee_damage_upper = 14
 			shape.rot_type = null
 
 		if(/mob/living/simple_animal/hostile/retaliate/rogue/wolf)
