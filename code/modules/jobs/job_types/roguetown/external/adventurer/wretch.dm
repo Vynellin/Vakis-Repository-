@@ -292,7 +292,8 @@
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/minion_order)
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/necromancer)
 	H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/gravemark)
-	H.mind.adjust_spellpoints(7)
+	H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/nondetection)
+	H.mind.adjust_spellpoints(6)
 	GLOB.excommunicated_players += H.real_name
 	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
 	if (!my_crime)

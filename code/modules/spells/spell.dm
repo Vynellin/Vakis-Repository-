@@ -507,7 +507,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 		devotee.devotion?.update_devotion(-devotion_cost)
 		to_chat(devotee, "<font color='purple'>I [devotion_cost > 0 ? "lost" : "gained"] [abs(devotion_cost)] devotion.</font>")
 	if(xp_gain && user.mind.get_skill_level(associated_skill) > 0) //We check the spell gives XP AND that the user has at least 1 level.
-		adjust_experience(usr, associated_skill, round(get_fatigue_drain() * MAGIC_XP_MULTIPLIER))
+		add_sleep_experience(usr, associated_skill, round(get_fatigue_drain() * MAGIC_XP_MULTIPLIER))
 
 /obj/effect/proc_holder/spell/proc/view_or_range(distance = world.view, center=usr, type="view")
 	switch(type)

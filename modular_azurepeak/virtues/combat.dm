@@ -1,7 +1,7 @@
 /datum/virtue/combat/magical_potential
-	name = "Arcane Training"
+	name = "Arcane Potential"
 	desc = "Either by natural talent or limited formal training, I posess a modicum sum of Arcane knowledge, which aids me on my day to day chores."
-	custom_text = "+1 to Arcane, Up to Legendary. Arcane and Classes that has a combat trait (Medium / Heavy Armor Training, Dodge Expert or Critical Resistance) get only 1 spellpoint, while everyone else get +2 spellpoints. Everyone also gets T1 Arcane Potential if they don't have any Arcane."
+	custom_text = "+1 to Arcane, Up to Legendary. if they don't have any Arcane prior, they get 2 spell points and access to Tier 1 spells. If they do, they get +1 Intelligence. "
 	added_skills = list(list(/datum/skill/magic/arcane, 1, 6))
 
 /datum/virtue/combat/magical_potential/apply_to_human(mob/living/carbon/human/recipient)
@@ -9,12 +9,9 @@
 		if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation))
 			recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 		ADD_TRAIT(recipient, TRAIT_ARCANE_T1, TRAIT_GENERIC)
-		if (!is_combat_class(recipient))
-			recipient.mind?.adjust_spellpoints(2)
-		else
-			recipient.mind?.adjust_spellpoints(1)	
+		recipient.mind?.adjust_spellpoints(2)
 	else
-		recipient.mind?.adjust_spellpoints(1)
+		recipient.change_stat("intelligence", 1)
 
 /datum/virtue/combat/devotee
 	name = "Devotee"

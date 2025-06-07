@@ -36,7 +36,7 @@
 				/obj/item/roguegem/amethyst = 1, \
 				/obj/item/roguekey/adventurers_guild = 1, \
 				)
-			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+			H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
