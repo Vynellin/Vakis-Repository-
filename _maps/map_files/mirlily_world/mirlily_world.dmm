@@ -1616,6 +1616,9 @@
 /obj/item/rope/chain,
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/town/garrison)
+"jE" = (
+/turf/closed/wall/mineral/rogue/decostone/fluffstone,
+/area/rogue/indoors/town/garrison)
 "jF" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/rogue/wood,
@@ -1976,8 +1979,11 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/under/town/basement/keep)
 "lI" = (
-/obj/structure/chair/stool/rogue,
-/turf/open/floor/rogue/ruinedwood/herringbone,
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/obj/structure/closet/crate/chest/wicker,
+/turf/open/floor/rogue/metal/barograte,
 /area/rogue/indoors/town/garrison)
 "lK" = (
 /obj/structure/chair/wood/rogue{
@@ -2328,10 +2334,16 @@
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/indoors/town/manor)
 "nS" = (
-/obj/structure/fluff/walldeco/med{
-	pixel_x = 32
+/obj/effect/decal/wood/herringbone{
+	dir = 8
 	},
-/turf/open/water/cleanshallow,
+/obj/effect/decal/wood/herringbone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border{
+	dir = 6
+	},
+/turf/open/floor/rogue/metal/barograte/open,
 /area/rogue/indoors/town/garrison)
 "nT" = (
 /obj/structure/rack/rogue,
@@ -2575,6 +2587,14 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
+"pI" = (
+/obj/structure/chair/stool/rogue,
+/obj/effect/decal/wood/herringbone{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/garrison)
 "pJ" = (
 /obj/item/roguebin/water,
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
@@ -2695,6 +2715,9 @@
 	dir = 4
 	},
 /area/rogue/indoors/town/manor)
+"qr" = (
+/turf/closed/wall/mineral/rogue/decostone/end,
+/area/rogue/indoors/town/garrison)
 "qs" = (
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /obj/structure/closet/crate/chest/old_crate,
@@ -3600,6 +3623,13 @@
 "vG" = (
 /turf/open/floor/rogue/tile/bfloorz,
 /area/rogue/under/town/basement/keep)
+"vJ" = (
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/obj/structure/chair/stool/rogue,
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/garrison)
 "vN" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/ausbushes/stalkybush,
@@ -4328,6 +4358,15 @@
 /obj/structure/chair/bench/couch/r,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
+"zz" = (
+/obj/effect/decal/wood/herringbone{
+	dir = 8
+	},
+/obj/structure/fluff/railing/border{
+	dir = 5
+	},
+/turf/open/floor/rogue/metal/barograte/open,
+/area/rogue/indoors/town/garrison)
 "zB" = (
 /turf/closed/wall/mineral/rogue/pipe{
 	icon_state = "iron_line"
@@ -4508,6 +4547,15 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/manor)
+"AA" = (
+/obj/effect/decal/wood/herringbone{
+	dir = 8
+	},
+/obj/structure/fluff/railing/border{
+	dir = 4
+	},
+/turf/open/floor/rogue/metal/barograte,
+/area/rogue/indoors/town/garrison)
 "AF" = (
 /obj/structure/mirror{
 	pixel_x = -32;
@@ -6691,6 +6739,13 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/under/town/basement/keep)
+"MU" = (
+/obj/structure/fluff/walldeco/med{
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/rogue/indoors/town/garrison)
 "MV" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/cobble,
@@ -7369,6 +7424,10 @@
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
+"Ri" = (
+/obj/structure/bars,
+/turf/open/water/cleanshallow,
+/area/rogue/indoors/town/garrison)
 "Rj" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/spear/billhook,
@@ -99776,7 +99835,7 @@ Fm
 Fm
 Fm
 Fm
-NO
+iv
 NO
 NO
 NO
@@ -100033,7 +100092,7 @@ Fm
 Fm
 Fm
 Fm
-NO
+tY
 KZ
 KZ
 NO
@@ -100044,8 +100103,8 @@ KZ
 KZ
 NO
 NO
-NO
-NO
+dT
+jE
 NO
 Br
 Br
@@ -100290,7 +100349,7 @@ Fm
 Fm
 Fm
 Fm
-NO
+me
 KZ
 KZ
 KZ
@@ -100300,7 +100359,7 @@ KZ
 KZ
 KZ
 Cn
-iK
+MU
 yh
 iK
 TB
@@ -100547,15 +100606,15 @@ Fm
 Fm
 Fm
 Fm
-NO
+me
 KZ
 KZ
 KZ
 KZ
-KZ
-KZ
-KZ
-KZ
+nS
+AA
+AA
+zz
 kM
 qS
 iK
@@ -100804,15 +100863,15 @@ Fm
 Fm
 Fm
 Fm
-NO
+tY
 KZ
 KZ
 KZ
 KZ
-lI
-KZ
-KZ
-KZ
+pI
+DF
+DF
+vJ
 qW
 qS
 iK
@@ -101061,14 +101120,14 @@ Fm
 Fm
 Fm
 Fm
-NO
-NO
+qr
+Bn
 XS
 MJ
 qW
 qW
 ps
-KZ
+DF
 lI
 qW
 dC
@@ -101325,9 +101384,9 @@ ym
 ym
 sR
 eO
-me
-lo
-iv
+Ri
+qr
+Bn
 DF
 DF
 DF
@@ -101585,7 +101644,7 @@ DF
 DF
 tp
 DF
-nS
+DF
 DF
 DF
 aI
