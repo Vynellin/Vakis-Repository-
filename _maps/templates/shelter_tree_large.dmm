@@ -1,0 +1,102 @@
+"bu" = (/obj/structure/rack/rogue/shelf/big/tree{pixel_y = 3},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"cT" = (/obj/structure/fluff/railing/border{dir = 9; pixel_x = -5},/turf/open/transparent/openspace/inside,/area/rogue)
+"dh" = (/obj/structure/closet/crate/chest/crate/tree,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"dl" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner{dir = 8},/area/rogue/indoors/shelter)
+"dI" = (/obj/structure/chair/wood/rogue/tree{dir = 4},/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"eg" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner{dir = 8},/area/rogue)
+"es" = (/obj/structure/roguewindow/openclose/tree,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"gq" = (/obj/structure/chair/wood/rogue/tree{dir = 8},/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"gK" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner{dir = 8},/area/rogue)
+"gL" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner,/area/rogue/indoors/shelter)
+"hC" = (/turf/closed/wall/mineral/rogue/roofwall/treewall{dir = 1},/area/rogue/indoors/shelter)
+"hP" = (/obj/structure/chair/wood/rogue/tree{dir = 8},/obj/structure/fluff/railing/border{dir = 4},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"kH" = (/obj/structure/closet/crate/chest/crate/tree,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"lk" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner,/area/rogue/indoors/shelter)
+"lJ" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner{dir = 4},/area/rogue/indoors/shelter)
+"me" = (/obj/structure/table/wood/tree,/obj/structure/rack/rogue/shelf/tree,/obj/machinery/light/rogue/wallfire/candle/tree/directional/west,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"mH" = (/turf/closed/wall/mineral/rogue/roofwall/treewall{dir = 4},/area/rogue/indoors/shelter)
+"rr" = (/obj/structure/chair/wood/rogue/tree,/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"sd" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner{dir = 1},/area/rogue/indoors/shelter)
+"uc" = (/obj/item/bedsheet/rogue/tree_double,/obj/structure/bed/rogue/double/tree,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"uT" = (/obj/structure/table/wood/tree,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"xI" = (/obj/structure/fluff/railing/border{dir = 10},/obj/structure/rack/rogue/shelf/big/tree{pixel_y = 3},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"zh" = (/turf/closed/wall/mineral/rogue/roofwall/treewall{dir = 8},/area/rogue/indoors/shelter)
+"zp" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner{dir = 4},/area/rogue)
+"Az" = (/obj/structure/fluff/railing/border{dir = 1},/obj/machinery/light/rogue/wallfire/candle/tree/directional/west,/turf/open/transparent/openspace/inside,/area/rogue)
+"Ba" = (/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace/inside,/area/rogue)
+"Bm" = (/obj/structure/fluff/railing/border{dir = 8},/obj/machinery/light/rogue/wallfire/candle/tree/directional/east,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"BJ" = (/obj/structure/fluff/railing/border{dir = 5; pixel_x = -27; pixel_y = -32},/obj/structure/rack/rogue/shelf/biggest/tree,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"Co" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner{dir = 1},/area/rogue/indoors/shelter)
+"Dw" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner{dir = 1},/area/rogue)
+"ET" = (/obj/structure/fluff/railing/border{dir = 9},/obj/structure/closet/crate/chest/crate/tree,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"Fm" = (/obj/structure/fluff/railing/border{dir = 8},/turf/open/transparent/openspace/inside,/area/rogue)
+"Fz" = (/obj/structure/fluff/railing/border{dir = 6},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"FQ" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner{dir = 8},/area/rogue/indoors/shelter)
+"FR" = (/turf/closed/wall/mineral/rogue/roofwall/treewall{dir = 4},/area/rogue)
+"Gt" = (/turf/closed/wall/mineral/rogue/roofwall/treewall,/area/rogue)
+"GO" = (/obj/structure/rack/rogue/shelf/biggest/tree,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"GX" = (/turf/template_noop,/area/rogue)
+"Hi" = (/obj/structure/chair/wood/rogue/tree{dir = 1},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"HG" = (/obj/structure/rack/rogue/shelf/biggest/tree,/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"IP" = (/obj/structure/roguewindow/openclose/tree{dir = 4},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"Jg" = (/obj/structure/chair/wood/rogue/tree{dir = 1},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"Jv" = (/obj/structure/stairs{dir = 1},/obj/structure/fluff/railing/border{dir = 8; pixel_x = -5},/obj/structure/fluff/railing/border{dir = 4; pixel_x = 5},/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"Kx" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner,/area/rogue)
+"KW" = (/obj/structure/fluff/railing/border{dir = 8},/obj/structure/fluff/railing/border{dir = 1},/obj/structure/fluff/railing/border{dir = 9},/turf/open/transparent/openspace/inside,/area/rogue)
+"Mj" = (/obj/structure/rack/rogue/shelf/big/tree,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"MP" = (/obj/structure/roguewindow/openclose/tree{dir = 1},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"Nm" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/outercorner{dir = 4},/area/rogue)
+"Nt" = (/obj/machinery/light/rogue/wallfire/candle/tree/directional/west,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"Ob" = (/turf/closed/wall/mineral/rogue/roofwall/treewall{dir = 8},/area/rogue)
+"OB" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner,/area/rogue)
+"OW" = (/obj/structure/roguewindow/openclose/tree{dir = 8},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue)
+"Qi" = (/obj/structure/roguewindow/openclose/tree{dir = 8},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"Qj" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner{dir = 1},/area/rogue)
+"Qn" = (/obj/structure/stairs{dir = 1},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"QQ" = (/obj/machinery/light/rogue/oven/tree/south,/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"Ra" = (/obj/structure/table/wood/tree,/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"Sm" = (/obj/structure/mineral_door/wood/deadbolt{dir = 1},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"SY" = (/obj/structure/rack/rogue/shelf/tree,/obj/machinery/light/rogue/wallfire/candle/tree/directional/west,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"Te" = (/turf/closed/wall/mineral/rogue/roofwall/treewall{dir = 1},/area/rogue)
+"Ti" = (/obj/structure/chair/wood/rogue/tree,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"To" = (/obj/structure/roguewindow/openclose/tree{dir = 1},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue)
+"TA" = (/obj/structure/roguewindow/openclose/tree{dir = 4},/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue)
+"TS" = (/turf/template_noop,/area/template_noop)
+"Uo" = (/obj/machinery/light/rogue/oven/tree/south,/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"Uy" = (/obj/structure/chair/wood/rogue/tree{dir = 8},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"UC" = (/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"UX" = (/obj/structure/chair/wood/rogue/tree{dir = 1},/obj/structure/fluff/railing/border,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"Vt" = (/obj/structure/roguewindow/openclose/tree,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue)
+"VU" = (/obj/structure/fluff/railing/border{dir = 1},/obj/machinery/light/rogue/wallfire/candle/tree/directional/east,/turf/open/transparent/openspace/inside,/area/rogue)
+"Wh" = (/turf/open/transparent/openspace/inside,/area/rogue)
+"Wu" = (/obj/structure/chair/wood/rogue/tree{dir = 4},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"Xe" = (/turf/closed/wall/mineral/rogue/roofwall/treewall/innercorner{dir = 4},/area/rogue/indoors/shelter)
+"Xm" = (/obj/structure/rack/rogue/shelf/tree,/obj/structure/fluff/railing/border{dir = 10; pixel_x = -5},/obj/structure/fluff/railing/border{dir = 6; pixel_x = 5},/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"Xo" = (/obj/structure/table/wood/tree,/obj/structure/rack/rogue/shelf/tree,/turf/open/floor/rogue/ruinedwood/herringbone,/area/rogue/indoors/shelter)
+"Xw" = (/turf/open/floor/rogue/ruinedwood,/area/rogue)
+"Xz" = (/obj/structure/chair/wood/rogue/tree{dir = 8},/obj/structure/fluff/railing/border{dir = 5},/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+"XF" = (/obj/structure/fluff/railing/border{dir = 1},/turf/open/transparent/openspace/inside,/area/rogue)
+"Zd" = (/turf/open/floor/rogue/ruinedwood/turned,/area/rogue/indoors/shelter)
+
+(1,1,1) = {"
+TSTSCoeshCeslJTSTS
+TSCosdHGQQHGXelJTS
+CosdmeUyZdWuXoXelJ
+zhbuJgZdrrFzUXxIQi
+IPUCUCWuRahPQnBmmH
+zhkHUCWuRaXzUCETQi
+FQdlNtZdHiZdUClkgL
+TSFQdlZdZdZdlkgLTS
+TSTSFQMPSmMPgLTSTS
+"}
+(1,1,2) = {"
+GXGXDwVtTeVtNmGXGX
+GXDwQjMjUoMjzpNmGX
+DwQjSYXwTiXwXmzpNm
+ObGOXwdIuTgqJvBJOW
+TAuTXwucKWXFcTVUFR
+ObGOXwdhFmWhWhWhOW
+gKegAzXFBaWhWhOBKx
+GXgKegWhWhWhOBKxGX
+GXGXgKGtToGtKxGXGX
+"}
