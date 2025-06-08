@@ -49,4 +49,3 @@
 	to_chat(user, "<span class='notice'>You deploy the folding table.</span>")
 	new /obj/structure/table/wood/folding(location)
 	qdel(src)
-	
