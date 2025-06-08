@@ -1,12 +1,25 @@
 Welcome back to Solaris Ridge!
-What a week, huh? -- What do you mean it's tuesday?!
 
-Playtime Tracking has been re-enabled; pending further usage. The initial month's worth of uptime was not backdated.
-THE SKELETON ARMY APPEARS... Necromancers have been fixed up quite substantially.
-Becoming a deadite no longer makes you non-organic. Or non-synthetic. Or just non anything, really.
-Clocks no longer incorrectly refer to days of the week that are not real, and cannot hurt you.
-Another new dungeon has been added to the map! Surely, nothing nefarious lurks inside...
-It would be really funny if you aerosolized the fixed-up stamina potions.
-QUARTZ RINGS ARE NO LONGER INVISIBLE...
+Gee, Bill, how come Solaris let you have TWO magic reworks? A quick breakdown:
+All the magic updates we missed out on from Azure Peak have been backported.
+Fatigue-Based XP Grinding has been reworked!
+The SCOM requires some familiarity with magic to craft.
+Spell point's exact allocation have been shifted about the town a bit!
+Arcane Potential was reworked... Again! Again!
+Master-Level Arcanists can entrust their knowledge to a pupil... or two. Or three.
+Staffs now drop their components upon destruction. Don't get any funny ideas about how to use this...
+Adventurer Clerics & Mages were let into the Adventurer's Guild following a lawsuit. Quoting the Archmagister, "POWER WORD: CEDE".
+Adventurer Clerics were therein buffed significantly WRT their magics.
+The Alchemist jobrole in the Mage's University has been disabled for the moment.
+
+Asides from Magic:
+Deacons & Iconoclasts now get Psycrosses, oopsies.
+Cooking has been expANDED AGAIN?!
+I loved it when the alchemical mortar went "it's mortarin' time" and mortar'd all over the place with the flour and whatnot
+One (1) orc skintone has been recolored
+A new issue with wildshape was solemnly added to Fuckup Of The Year 2025.
+Templar and Acolyte Tamarites were buffed.
+The default laws of the land have been rewritten to be feasible in-setting.
+Don't get any funny ideas with the new mess kit, Alchemists... oh; wait.
 
 Have fun!
