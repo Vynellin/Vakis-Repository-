@@ -72,7 +72,8 @@
 	name = "living tree-house"
 	id = "shelter_tree_medium"
 	description = "A magical yet homely shelter, with a distinct natural feel."
-	mappath = "_maps/templates/shelter_tree.dmm"
+	ceiling_turf = /turf/open/floor/rogue/leaves
+	mappath = "_maps/templates/shelter_tree_medium.dmm"
 
 /datum/map_template/shelter/tree/small
 	name = "small living tree-house"
@@ -80,11 +81,11 @@
 	description = "A magical yet homely shelter, with a distinct natural feel. You got a feeling this one won't be so big."
 	mappath = "_maps/templates/shelter_tree_small.dmm"
 
-/datum/map_template/shelter/tree/big
-	name = "big living tree-house"
-	id = "shelter_tree_big"
-	description = "A magical yet homely shelter, with a distinct natural feel. You got a feeling this one will be rather big."
-	mappath = "_maps/templates/shelter_tree_big.dmm"
+/datum/map_template/shelter/tree/large
+	name = "large living tree-house"
+	id = "shelter_tree_large"
+	description = "A magical yet homely shelter, with a distinct natural feel. You got a feeling this one will be rather large."
+	mappath = "_maps/templates/shelter_tree_large.dmm"
 
 /datum/map_template/shelter/tree/tall
 	name = "tall living tree-house"

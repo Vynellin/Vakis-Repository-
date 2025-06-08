@@ -189,10 +189,10 @@
 	icon_state = "acorn_small"
 	template_id = "shelter_tree_small"
 
-/obj/item/shelter_pod/big
-	name = "big shelter acorn"
-	icon_state = "acorn_big"
-	template_id = "shelter_tree_big"
+/obj/item/shelter_pod/large
+	name = "large shelter acorn"
+	icon_state = "acorn_large"
+	template_id = "shelter_tree_large"
 
 /obj/item/shelter_pod/tall
 	name = "tall shelter acorn"
