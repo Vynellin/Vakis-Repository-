@@ -47,11 +47,5 @@
 
 /obj/item/folding_table_stored/proc/deploy_folding_table(mob/user, atom/location)
 	to_chat(user, "<span class='notice'>You deploy the folding table.</span>")
-	var/obj/structure/table/wood/folding/fable = new /obj/structure/table/wood/folding(location)
-	//fable.add_fingerprint(user)
+	new /obj/structure/table/wood/folding(location)
 	qdel(src)
-	
-
-// /obj/item/folding_table_stored/deploy_folding_table(mob/user, atom/location)
-// 	if(!istype(location, /turf))
-// 		to_chat(user, "<span class='warning'>You can only deploy the folding table on the ground.</span>")
