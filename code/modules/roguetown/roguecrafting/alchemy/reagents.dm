@@ -118,9 +118,10 @@
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
+//Turns out that Stamina is in reality the Blue bar.
 /datum/reagent/medicine/manapot/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(30)
+		M.rogstam_add(30) //15 oz of mana potion = 45u. With default metabolism ticking 1u, you can regen 1350 rogstam in one bottle. A 10 Endurance character has by default 1000 rogstam maximum
 	..()
 
 /datum/reagent/medicine/strongmana
@@ -130,6 +131,7 @@
 	taste_description = "raw power"
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
+//Turns out that Stamina is in reality the Blue bar.
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
 		M.rogstam_add(120)
@@ -145,9 +147,10 @@
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
+//Despite the name, the green bar is actually Fatigue in the code.
 /datum/reagent/medicine/stampot/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(30)
+		M.rogfat_add(-20) //The less rogfat you have, the fuller the green bar is. This should make sprinting last longer, and mitigate combat consumption. Your maximum rogfat is a tenth of your maximum rogstam
 	..()
 
 /datum/reagent/medicine/strongstam
@@ -157,9 +160,10 @@
 	taste_description = "sparkling static"
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
+//Despite the name, the green bar is actually Fatigue in the code.
 /datum/reagent/medicine/strongstam/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(120)
+		M.rogfat_add(-50)  //The less rogfat you have, the fuller the green bar is. Should make sprinting last forever while you chug this. But metabolizes only twice per sip. More like of a second wind if using mid combat.
 	..()
 
 /datum/reagent/medicine/antidote
@@ -363,7 +367,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/stampoison/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(-45) //Slowly leech stamina
+		M.rogfat_add(2) //Slowly leech the green bar. Sort of similar at how fast sprinting drains your stamina. With a slow metabolization, this poison is more of a stamina blocker. Can still lock someone in stam crit if thex exhert too much while this poison is active.
 	return ..()
 
 /datum/reagent/strongstampoison
@@ -376,7 +380,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/strongstampoison/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(-180) //Rapidly leech stamina
+		M.rogfat_add(20) //Rapidly leech stamina. Drains faster, but lasts less. Should ideally be able to neutralize someone out of combat in one application.
 	return ..()
 
 

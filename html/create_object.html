@@ -55,6 +55,7 @@
 	<script language="JavaScript">
 		var old_search = "";
 		var object_list = document.spawner.object_list;
+		var object_paths = null /* object types */;
 		var object_names = null /* object names */;
 		var objects = object_paths == null ? new Array() : object_paths.split(";");
 		var objects_by_name = object_names == null ? new Array() : object_names.split(";")
@@ -98,6 +99,7 @@
 			if (!old_search)
 				return;
 			
+			var filtered = new Array();
 			var filterednames = new Array();
 			var i;
 			for (i in objects)
@@ -107,12 +109,11 @@
 					caseInsensitiveItem = objects_by_name[i].toLowerCase();
 				else
 					caseInsensitiveItem = objects[i].toLowerCase();
-
+				
 				if(caseInsensitiveItem.search(old_search) < 0)
 				{
 					continue;
 				}
-				
 				filtered.push(objects[i]);
 				filterednames.push(objects_by_name[i]);
 			}
