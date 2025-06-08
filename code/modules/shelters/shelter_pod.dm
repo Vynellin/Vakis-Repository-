@@ -186,12 +186,15 @@
 
 /obj/item/shelter_pod/small
 	name = "small shelter acorn"
+	icon_state = "acorn_small"
 	template_id = "shelter_tree_small"
 
 /obj/item/shelter_pod/big
 	name = "big shelter acorn"
+	icon_state = "acorn_big"
 	template_id = "shelter_tree_big"
 
 /obj/item/shelter_pod/tall
 	name = "tall shelter acorn"
+	icon_state = "acorn_tall"
 	template_id = "shelter_tree_tall"

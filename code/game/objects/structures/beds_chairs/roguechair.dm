@@ -403,3 +403,8 @@
 	can_buckle = TRUE
 	buckle_lying = 90
 	sleepy = 3
+
+/obj/structure/bed/rogue/double/tree
+	name = "bed"
+	desc = "This one doesn't seem man-made... Wait, are those leaves?"
+	icon_state = "double_tree"
