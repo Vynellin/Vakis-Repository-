@@ -58,6 +58,7 @@
 			H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
 			ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 			ADD_TRAIT(H, TRAIT_ARCANE_T3, TRAIT_GENERIC)
+			ADD_TRAIT(H, TRAIT_MAGIC_TUTOR, TRAIT_GENERIC)
 		if("Spellsinger")
 			to_chat(H, span_warning("You belong to a school of bards renowned for their study of both the arcane and the arts."))
 			head = /obj/item/clothing/head/roguetown/bucklehat

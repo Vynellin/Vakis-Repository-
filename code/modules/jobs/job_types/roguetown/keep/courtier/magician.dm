@@ -39,6 +39,7 @@
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/poison,/obj/item/reagent_containers/glass/bottle/rogue/healthpot, /obj/item/storage/belt/rogue/pouch/coins/mid)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, "[type]")
 	ADD_TRAIT(H, TRAIT_ARCANE_T3, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_MAGIC_TUTOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_INTELLECTUAL, TRAIT_GENERIC)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
