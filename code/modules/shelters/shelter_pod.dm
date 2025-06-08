@@ -9,7 +9,7 @@
 /obj/item/shelter_pod
 	name = "shelter acorn"
 	desc = "A magical acorn said to provide shelter to those that know how to cater to it."
-	icon_state = "acorn"
+	icon_state = "acorn_medium"
 	icon = 'icons/obj/hydroponics/seeds.dmi'
 	w_class = WEIGHT_CLASS_TINY
 	/// The id we use to fetch the template datum
