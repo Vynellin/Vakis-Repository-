@@ -1,19 +1,19 @@
-/obj/effect/proc_holder/spell/self/findfamiliar
+/obj/effect/proc_holder/spell/invoked/findfamiliar
 	name = "Find Familiar"
-	desc = "Summon a loyal magical companion to aid you in your adventures."
+	desc = "Summon a loyal magical companion to aid you in your adventures. Reusing the spell on a familiar might awaken them to sentience."
 	overlay_state = "null"
 	sound = list('sound/magic/whiteflame.ogg')
 	active = FALSE
 
-	recharge_time = 1 HOURS
+	recharge_time = 5 SECONDS
+	chargetime = 1 SECONDS
 
 	warnie = "spellwarning"
 
 	chargedloop = /datum/looping_sound/invokegen
-	associated_skill = /datum/skill/magic/arcane //can be arcane, druidic, blood, holy
+	associated_skill = /datum/skill/magic/arcane
 
-	xp_gain = FALSE
-	miracle = FALSE
+	xp_gain = TRUE
 	spell_tier = 1
 	cost = 1
 
@@ -31,11 +31,11 @@
 		"Hollow Antlerling (+1 Luck)" = /mob/living/simple_animal/pet/familiar/hollow_antlerling,
 	)
 
-/obj/effect/proc_holder/spell/self/findfamiliar/warlock/
-	name = "Find Familiar (Warlock)"
+/obj/effect/proc_holder/spell/invoked/findfamiliar/empowered/
+	name = "Empowered Find Familiar"
 	invocation = "Tegos, nemetos trēwos."
 
-/obj/effect/proc_holder/spell/self/findfamiliar/empowered/Initialize()
+/obj/effect/proc_holder/spell/invoked/findfamiliar/empowered/Initialize()
 	. = ..()
 	// Extended list offered in some conditions.
 	familiars += list(
@@ -47,38 +47,50 @@
 		"Thornback Turtle (+1 Strength, +1 Constitution)" = /mob/living/simple_animal/pet/familiar/thornback_turtle,
 	)
 
-/obj/effect/proc_holder/spell/self/findfamiliar/cast(mob/user = usr)
+/obj/effect/proc_holder/spell/invoked/findfamiliar/cast(list/targets, mob/user)
 	..()
-	for(var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.player_list)
-		if(familiar_check.familiar_summoner == user)
-			to_chat(user, span_notice("You alread have a familiar."))
-			revert_cast()
-			return
-	var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
-	var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
-	fam = new familiar_type(user.loc)
-	fam.familiar_summoner = user
-	user.visible_message(span_notice("[fam.summoning_emote]"))
-	fam.fully_replace_character_name(null, "[user]'s familiar")	
-
-/mob/living/simple_animal/pet/familiar/AltClick(mob/user)
-	. = ..()
-	if(!familiar_summoner == user)
-		to_chat(user, span_notice("You are not this familiar's master."))
+	var/atom/target = targets[1]
+	if(!(istype(target, /turf/open)) || !(istype(target, /mob/living/simple_animal/pet/familiar)))
 		return
-	var/list/candidate = pollGhostCandidates("Do you want to play as [span_notice("[src.name]")]?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
-	if(LAZYLEN(candidate))
-		var/mob/chosen_one =  pick(candidate)
-		var/fam = src
-		fam.key = chosen_one.key
-		chosen_one.mind.transfer_to(fam)
-		fam.grant_all_languages(omnitongue=TRUE)
-		var/new_name = input(fam.current, "What is your name?", "Name") as text|null
-		fam.fully_replace_character_name(null, new_name)
-		fam.give_spell(/obj/effect/proc_holder/spell/self/message/message_summoner)
-		user.give_spell(/obj/effect/proc_holder/spell/self/message/message_familiar)
-	else
-		to_chat(user, span_notice("The familiar didn't awaken."))
+	if(istype(target, /turf/open/))
+		for(var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.player_list)
+			if(familiar_check.familiar_summoner == user)
+				to_chat(user, span_notice("You alread have a familiar."))
+				revert_cast()
+				return
+		var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
+		var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
+		fam = new familiar_type(get_turf(target))
+		fam.familiar_summoner = user
+		user.visible_message(span_notice("[fam.summoning_emote]"))
+		fam.fully_replace_character_name(null, "[user]'s familiar")	
+	else 
+		var/mob/living/simple_animal/pet/familiar/targeted_familiar
+		if(!targeted_familiar.familiar_summoner == user)
+			to_chat(user, span_notice("You are not this familiar's master."))
+			return
+		var/list/mob/candidate = pollGhostCandidates("Do you want to play as [span_notice("[targeted_familiar.name]")]?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
+		if(LAZYLEN(candidate))
+			var/mob/chosen_one =  pick(candidate)
+			var/mob/living/simple_animal/pet/familiar/awakener = target
+			awakener.key = chosen_one.key
+			chosen_one.mind.transfer_to(awakener)
+			awakener.grant_all_languages(omnitongue=TRUE)
+			var/new_name = input(awakener, "What is your name?", "Name") as text|null
+			awakener.fully_replace_character_name(null, new_name)
+			awakener.mind.AddSpell(/obj/effect/proc_holder/spell/self/message/message_summoner)
+			awakener.mind.AddSpell(/obj/effect/proc_holder/spell/self/message/message_familiar)
+			if(awakener.inherent_spell)
+				for(var/spell_path in awakener.inherent_spell)
+					awakener.mind.AddSpell(spell_path)
+			//Disabling the AI
+			awakener.can_have_ai = FALSE
+			awakener.AIStatus = AI_OFF
+			awakener.stop_automated_movement = TRUE  // Stop automated movement
+			awakener.stop_automated_movement_when_pulled = TRUE  // Stop movement when pulled
+			awakener.wander = FALSE  // Disable wandering
+		else
+			to_chat(user, span_notice("The familiar didn't awaken."))
 
 /obj/effect/proc_holder/spell/self/message/message_familiar
 	name = "Message Familiar"
@@ -103,8 +115,8 @@
 	if(!message)
 		revert_cast()
 		return
-	to_chat(familiar, "Arcane whispers fill the back of my head, resolving into [user]'s voice: <font color=#7246ff>[message]</font>")
+	to_chat_immediate(familiar, "Arcane whispers fill the back of my head, resolving into [user]'s voice: <font color=#7246ff>[message]</font>")
 	user.visible_message("[user] mutters an incantation and their mouth briefly flashes white.")
 	user.whisper(message)
-	log_game("[key_name(user)] sent a message to [key_name(HL)] with contents [message]")
+	log_game("[key_name(user)] sent a message to [key_name(familiar)] with contents [message]")
 	return TRUE

@@ -40,7 +40,8 @@
 	desc = "The spirit of what makes a familiar (You shouldn't be seeing this.)"
 	var/mob/living/carbon/familiar_summoner = null
 	var/summoning_emote = null
-	var/buff_given = null
+	var/buff_given = list()
+	var/inherent_spell = null
 	speak_chance = 1
 	turns_per_move = 5
 	ventcrawler = VENTCRAWLER_ALWAYS
@@ -60,7 +61,11 @@
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1)
-	icon = 'icons/roguetown/mob/monster/familiar.dmi'
+	icon = 'icons/roguetown/mob/familiars.dmi'
+	faction = list("rogueanimal")
+	melee_damage_lower = 1
+	melee_damage_upper = 2
+	footstep_type = FOOTSTEP_MOB_CLAW
 
 /datum/status_effect/buff/familiar
 	duration = -1
@@ -91,10 +96,10 @@
 	icon_dead = "pondstone_dead"
 
 	//vars used for this familiar's ability
-	var/icon/original_icon
-	var/icon_state/original_icon_state
-	var/icon_state/original_icon_living
-	var/name/original_name
+	var/icon/original_icon = null
+	var/original_icon_state = ""
+	var/original_icon_living = ""
+	var/original_name = ""
 	var/stoneform = FALSE
 	
 /datum/status_effect/buff/familiar/settled_weight
@@ -122,6 +127,8 @@
 	emote_hear = list("lets out a soft yowl.", "whispers almost silently.")
 	emote_see = list("pads in a circle.", "vanishes briefly, then reappears.")
 
+	see_invisible = SEE_INVISIBLE_LIVING
+
 /datum/status_effect/buff/familiar/silver_glance
 	id = "silver_glance"
 	effectedstats = list("perception" = 1)
@@ -136,6 +143,7 @@
 	desc = "This rat leaves fading runes in the air as it twitches. The smell of old paper clings to its fur."
 	summoning_emote = "A faint spark dances through the air. A rat with a softly glowing tail scampers into existence."
 	buff_given = /datum/status_effect/buff/familiar/threaded_thoughts
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/inscription_cache, /obj/effect/proc_holder/spell/self/recall_cache)
 
 	icon_state = "runerat"
 	icon_living = "runerat"
@@ -145,6 +153,8 @@
 	speak_emote = list("squeaks", "chatters")
 	emote_hear = list("squeaks thoughtfully.", "sniffs the air.")
 	emote_see = list("twitches its tail in patterns.", "skitters in a loop.")
+	var/stored_books = list()
+	var/storage_limit = 5
 
 /datum/status_effect/buff/familiar/threaded_thoughts
 	id = "threaded_thoughts"
@@ -188,6 +198,7 @@
 	desc = "This long-bodied snake coils slowly, like a heated rope. Its breath carries a faint scent of burnt herbs."
 	summoning_emote = "Dust rises and circles before coiling into a gray-scaled creature that radiates dry, residual warmth."
 	buff_given = /datum/status_effect/buff/familiar/desert_bred_tenacity
+	inherent_spell = /obj/effect/proc_holder/spell/self/smolder_shroud
 
 	icon_state = "ashcoiler"
 	icon_living = "ashcoiler"
@@ -212,6 +223,7 @@
 	desc = "A quick, nervy creature. Light bends strangely around its translucent body."
 	summoning_emote = "The air glints, and a translucent hare twitches into existence."
 	buff_given = /datum/status_effect/buff/familiar/lightstep
+	inherent_spell = /obj/effect/proc_holder/spell/invoked/blink/glimmer_hare
 
 	alpha = 125
 	icon_state = "glimmer"
@@ -261,6 +273,7 @@
 	desc = "Its scales are flecked with lichen and grave-dust. Wherever it passes, roots twitch faintly in the soil."
 	summoning_emote = "The ground heaves faintly as a long, moss-veiled serpent uncoils from it."
 	buff_given = /datum/status_effect/buff/familiar/burdened_coil
+	inherent_spell = /obj/effect/proc_holder/spell/self/scent_of_the_grave
 
 	icon_state = "gravemoss"
 	icon_living = "gravemoss"
@@ -339,6 +352,7 @@
 	desc = "It flickers when not directly observed. Leaves no tracks. You're not always sure it's still nearby."
 	summoning_emote = "A ripple in the air becomes a sleek fox, its fur twitching between shades of color as it pads forth."
 	buff_given = /datum/status_effect/buff/familiar/subtle_slip
+	footstep_type = null
 
 	icon_state = "ripple"
 	icon_living = "ripple"
