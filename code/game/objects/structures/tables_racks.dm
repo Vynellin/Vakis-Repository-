@@ -384,7 +384,7 @@
 
 /obj/structure/table/wood/folding/attack_right(mob/user)
 	user.visible_message(span_notice("[user] folds [src]."), span_notice("You fold [src]."))
-	var/obj/item/folding_table_stored/F = new /obj/item/folding_table_stored(drop_location())
+	new /obj/item/folding_table_stored(drop_location())
 	qdel(src)
 	return ..()
 
