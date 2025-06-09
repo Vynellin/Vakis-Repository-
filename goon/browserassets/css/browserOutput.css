@@ -7,10 +7,10 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%;
-	color: #c9c1ba;
+	color: #3b2e22;
 }
 body {
-	background: #000000;
+	background: #1a1a1a;
 	font-family: Pterra;
 	font-size: 13px;
 	color: #c9c1ba;
@@ -29,6 +29,7 @@ body {
   font-family: "Pterra";
   src: url('pterra.ttf');
 }
+
 @font-face { 
   font-family: "Honoka Mincho"; 
   src: url('HonokaMincho.ttf'); 
