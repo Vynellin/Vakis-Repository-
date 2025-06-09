@@ -1,8 +1,6 @@
 /*
 	Familiar list and buffs below. 
-	Sprites
-	Pondstone, Gravemoss, Vaporoot, Runerat, Starfield Crow (edit of the existing crow), Vaporroot Wisp, Whisper Stoat, Thornback Turtle: Diltyrr
-	Mist Ashcoiler, Emberdrake, Glimmer Hare and Hollow Antlerling : elibuddybear
+	Sprites by Diltyrr
 
 	Quick AI pictures idea for each of them : https://imgbox.com/g/MvanomKazA
 
@@ -377,6 +375,7 @@
 	desc = "Its gaze is too knowing. It tilts its head as if listening to something inside your skull."
 	summoning_emote = "A thought twists into form, a tiny stoat slinks into view."
 	buff_given = /datum/status_effect/buff/familiar/noticed_thought
+	inherent_spell = /obj/effect/proc_holder/spell/invoked/invisibility
 
 	icon_state = "whisper"
 	icon_living = "whisper"
