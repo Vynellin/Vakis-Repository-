@@ -286,6 +286,9 @@
 	},
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town/manor)
+"bR" = (
+/turf/open/floor/rogue/wood/herringbone,
+/area/rogue/indoors/town/physician)
 "bS" = (
 /obj/structure/chair/bench/couchablack,
 /obj/structure/fluff/walldeco/bigpainting{
@@ -1376,6 +1379,12 @@
 	dir = 4
 	},
 /area/rogue/indoors/town/manor)
+"ia" = (
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/turf/open/floor/rogue/wood/herringbone,
+/area/rogue/indoors/town/physician)
 "ib" = (
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
@@ -1831,6 +1840,12 @@
 /obj/structure/closet/crate/drawer/random,
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
+"kI" = (
+/obj/structure/fluff/railing/border{
+	dir = 5
+	},
+/turf/open/floor/rogue/wood/herringbone,
+/area/rogue/indoors/town/physician)
 "kJ" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
@@ -2464,12 +2479,29 @@
 /obj/effect/decal/remains/bigrat,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/manor)
+"oq" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/north,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/physician)
 "or" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/huntingknife/idagger/steel/special,
 /obj/item/rogueweapon/huntingknife/idagger/steel/special,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
+"os" = (
+/obj/structure/table/wood{
+	dir = 6;
+	icon_state = "largetable"
+	},
+/obj/item/paper{
+	pixel_y = 7
+	},
+/obj/item/natural/feather{
+	pixel_y = 9
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "ot" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -2753,6 +2785,14 @@
 /obj/structure/chair/bench/church,
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/town/garrison)
+"qk" = (
+/obj/item/bedsheet/rogue/double_pelt,
+/obj/structure/bed/rogue/inn/wooldouble,
+/obj/effect/landmark/start/deacon{
+	dir = 8
+	},
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/physician)
 "qm" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -3225,6 +3265,13 @@
 /obj/item/clothing/cloak/tabard/knight/guard,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
+"sY" = (
+/obj/structure/table/wood{
+	icon_state = "largetable";
+	dir = 10
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "sZ" = (
 /obj/structure/bed/rogue/inn/double,
 /obj/item/bedsheet/rogue/double_pelt,
@@ -4249,6 +4296,10 @@
 	dir = 1
 	},
 /area/rogue/outdoors/exposed/town/keep)
+"yk" = (
+/obj/structure/roguemachine/scomm/directional/north,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/physician)
 "yl" = (
 /obj/structure/rack/rogue,
 /obj/item/clothing/under/roguetown/chainlegs/iron,
@@ -4451,6 +4502,10 @@
 /obj/machinery/light/rogue/wallfire/candle/directional/south,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/under/town/basement/keep)
+"zl" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/west,
+/turf/open/floor/rogue/wood/herringbone,
+/area/rogue/indoors/town/physician)
 "zo" = (
 /obj/machinery/gear_painter,
 /turf/open/floor/rogue/blocks,
@@ -4778,6 +4833,12 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/exposed/town/keep)
+"Bb" = (
+/obj/structure/roguemachine/mail/directional/south{
+	mailtag = "Deacon"
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "Bd" = (
 /turf/open/floor/rogue/rooftop/green,
 /area/rogue/outdoors/exposed/town/keep)
@@ -5247,6 +5308,10 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/rogue/under/town/basement/keep)
+"DI" = (
+/obj/structure/rack/rogue/shelf/notdense,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "DK" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
@@ -6898,6 +6963,14 @@
 /obj/structure/fluff/statue/knight,
 /turf/open/floor/rogue/tile/masonic/spiral,
 /area/rogue/under/town/basement/keep)
+"MH" = (
+/obj/structure/closet/crate/drawer,
+/obj/item/clothing/under/roguetown/tights/black,
+/obj/item/clothing/under/roguetown/tights/black,
+/obj/item/clothing/under/roguetown/trou/leather/mourning,
+/obj/item/clothing/under/roguetown/trou/leather/mourning,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/physician)
 "MJ" = (
 /obj/structure/roguemachine/vendor{
 	keycontrol = "deacon"
@@ -7099,6 +7172,20 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/outdoors/town/roofs/keep)
+"NI" = (
+/obj/structure/closet/crate/roguecloset/inn,
+/obj/item/clothing/suit/roguetown/shirt/tunic,
+/obj/item/clothing/suit/roguetown/shirt/tunic,
+/obj/item/clothing/suit/roguetown/shirt/tunic,
+/obj/item/clothing/suit/roguetown/shirt/tunic,
+/obj/item/clothing/suit/roguetown/shirt/tunic/black,
+/obj/item/clothing/suit/roguetown/shirt/tunic/black,
+/obj/item/clothing/suit/roguetown/shirt/tunic/black,
+/obj/item/clothing/suit/roguetown/shirt/tunic/black,
+/obj/item/flashlight/flare/torch/lantern,
+/obj/item/flashlight/flare/torch/lantern,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "NK" = (
 /obj/structure/gate/bars{
 	name = "deacon's office gate";
@@ -7811,6 +7898,23 @@
 /obj/item/paper,
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
+"Se" = (
+/obj/structure/table/wood{
+	icon_state = "tablewood1"
+	},
+/obj/item/reagent_containers/glass/bottle/rogue/poison{
+	pixel_x = -8;
+	pixel_y = 18
+	},
+/obj/item/roguekey/deacon{
+	pixel_y = 9
+	},
+/obj/item/roguekey/deacon{
+	pixel_y = 9
+	},
+/obj/structure/fluff/wallclock/directional/east,
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/physician)
 "Sg" = (
 /obj/structure/chair/bench/couchablack/r,
 /turf/open/floor/carpet/royalblack,
@@ -8115,6 +8219,21 @@
 	icon_state = "bfloorz"
 	},
 /area/rogue/indoors/town/manor)
+"TR" = (
+/obj/structure/table/wood{
+	icon_state = "largetable";
+	dir = 4
+	},
+/obj/item/reagent_containers/glass/cup/steel{
+	pixel_x = -6;
+	pixel_y = 20
+	},
+/obj/item/reagent_containers/glass/bottle/rogue/redwine{
+	pixel_x = 5;
+	pixel_y = 11
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "TS" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/sword/iron,
@@ -8285,6 +8404,9 @@
 /obj/structure/fermenting_barrel/water,
 /turf/open/floor/rogue/church,
 /area/rogue/indoors/town/physician)
+"UX" = (
+/turf/open/floor/carpet/purple,
+/area/rogue/indoors/town/physician)
 "UY" = (
 /obj/structure/flora/rock/jungle,
 /turf/open/floor/rogue/grass,
@@ -8344,6 +8466,12 @@
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/manor)
+"Vo" = (
+/obj/structure/chair/wood/rogue{
+	dir = 8
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "Vq" = (
 /obj/effect/decal/wood/herringbone2{
 	dir = 1
@@ -8514,6 +8642,12 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/blocks/green,
 /area/rogue/indoors/town/manor)
+"Wj" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/west,
+/obj/structure/bookcase,
+/obj/item/book/rogue/axian_my_sweet,
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/physician)
 "Wo" = (
 /turf/open/floor/rogue/carpet,
 /area/rogue/under/town/basement/keep)
@@ -163879,13 +164013,13 @@ wB
 wB
 wB
 wB
-fG
-fG
-fG
-fG
-fG
-wB
-wB
+vW
+jE
+vW
+yI
+jE
+yI
+vW
 wB
 wB
 wB
@@ -164135,14 +164269,14 @@ wB
 wB
 wB
 wB
-fG
-fG
-yN
 vW
-yN
+vW
+Wj
+yI
+bR
+zl
+bR
 fG
-wB
-wB
 wB
 wB
 wB
@@ -164391,15 +164525,15 @@ wB
 wB
 wB
 wB
-fG
-fG
-yN
+vW
+vW
+sY
 yN
 tU
-yN
+bR
+kI
+bR
 fG
-wB
-wB
 wB
 wB
 wB
@@ -164648,15 +164782,15 @@ wB
 wB
 wB
 wB
-fG
-yN
-yN
-yN
-vW
+Py
+TR
+os
+Bb
+yI
 Jf
+ia
+bR
 fG
-wB
-wB
 wB
 wB
 wB
@@ -164904,16 +165038,16 @@ wB
 wB
 wB
 wB
-fG
-fG
+vW
+vW
+DI
+Vo
 yN
-yN
-yN
-yI
+AJ
 hL
+ia
+bR
 fG
-wB
-wB
 wB
 wB
 wB
@@ -165161,16 +165295,16 @@ wB
 wB
 wB
 wB
-fG
+Py
+yk
+UX
+UX
 yN
-yN
-yN
-yN
-AJ
+yI
 hL
+ia
+bR
 fG
-wB
-wB
 wB
 wB
 wB
@@ -165418,10 +165552,10 @@ wB
 wB
 wB
 wB
-fG
-yN
-yN
-yN
+jE
+oq
+UX
+UX
 yN
 AJ
 hL
@@ -165675,11 +165809,11 @@ wB
 wB
 wB
 wB
-fG
-yN
-yN
-yN
-yN
+Py
+qk
+MH
+Se
+NI
 yI
 hL
 fG
@@ -165932,12 +166066,12 @@ wB
 wB
 wB
 wB
-fG
-fG
-fG
-fG
-fG
-fG
+vW
+tz
+tz
+tz
+tz
+vW
 fG
 fG
 PB
