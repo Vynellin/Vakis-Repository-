@@ -359,6 +359,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 			else
 				user.whisper(invocation)
 		if("emote")
+			invocation = replacetext(invocation, "%user%", user.name) // Regex since we can't natively pass this along
 			user.visible_message(invocation, invocation_emote_self) //same style as in mob/living/emote.dm
 
 /obj/effect/proc_holder/spell/proc/playMagSound()

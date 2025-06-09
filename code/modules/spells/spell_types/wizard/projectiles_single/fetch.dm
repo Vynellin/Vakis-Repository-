@@ -21,7 +21,6 @@
 	associated_skill = /datum/skill/magic/arcane
 	cost = 1
 	xp_gain = TRUE
-	isquiet = TRUE
 
 /obj/projectile/magic/fetch/on_hit(target)
 	. = ..()
