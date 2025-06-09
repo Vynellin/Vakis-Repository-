@@ -20,6 +20,7 @@
 	/datum/species/halforc,\
 	/datum/species/kobold,\
 	/datum/species/goblinp,\
+	/datum/species/dwarf/gnome\
 )
 
 #define RACES_RESPECTED \
@@ -31,7 +32,8 @@
 	/datum/species/lupian,\
 	/datum/species/vulpkanin,\
 	/datum/species/moth,\
-	/datum/species/dracon,
+	/datum/species/dracon,\
+	/datum/species/dwarf/gnome\
 
 #define RACES_TOLERATED \
 	/datum/species/elf/dark,\
@@ -107,6 +109,7 @@
 	/datum/species/kobold,\
 	/datum/species/goblinp,\
 	/datum/species/construct/metal,\
+	/datum/species/dwarf/gnome\
 )
 // Non-dwarf non-kobold non-goblin mostly
 #define NON_DWARVEN_RACE_TYPES list(\
@@ -145,28 +148,16 @@
 	/datum/species/construct/metal,\
 )
 
-#define ALL_BALANCE_PATRONS list(/datum/patron/balance/zira, \
-	/datum/patron/balance/tsoridys, \
-	/datum/patron/balance/nunos, \
-	/datum/patron/balance/carthus, \
-	/datum/patron/balance/varielle, \
-	)
-
-#define ALL_CHANGE_PATRONS list(\
-	/datum/patron/change/tamari, \
-	/datum/patron/change/cinella, \
-	/datum/patron/change/kasmidian, \
-	)
-
 #define ALL_PATRONS  list(\
-	/datum/patron/light/aeternus, \
-	/datum/patron/balance/tsoridys, \
-	/datum/patron/balance/nunos, \
-	/datum/patron/balance/carthus, \
-	/datum/patron/balance/varielle, \
-	/datum/patron/change/tamari, \
-	/datum/patron/change/cinella, \
-	/datum/patron/change/kasmidian, \
+	/datum/patron/lording_three/aeternus, \
+	/datum/patron/lording_three/zira, \
+	/datum/patron/lording_three/tsoridys, \
+	/datum/patron/peoples_pantheon/carthus, \
+	/datum/patron/peoples_pantheon/varielle, \
+	/datum/patron/peoples_pantheon/cinella, \
+	/datum/patron/three_sisters/tamari, \
+	/datum/patron/three_sisters/kasmidian, \
+	/datum/patron/three_sisters/nunos, \
 	)
 
 #define PLATEHIT "plate"
@@ -236,24 +227,22 @@ GLOBAL_LIST_EMPTY(round_join_times)
 #define CTAG_ANTAG 			"CAT_ANTAG"  		// Antag class - results in an antag
 #define CTAG_BANDIT			"CAT_BANDIT"		// Bandit class - Tied to the bandit antag really
 #define CTAG_CHALLENGE 		"CAT_CHALLENGE"  	// Challenge class - Meant to be free for everyone
-#define CTAG_VAGABOND		"CAT_VAGABOND"		// Vagabond class - start with nothing and work your way up
-#define CTAG_COURTAGENT		"CAT_COURTAGENT"	//Court agent classes
-#define CTAG_WRETCH			"CAT_WRETCH"		// Wretch classes untethered from adventurer
+#define CTAG_COURTAGENT		"CAT_COURTAGENT"	// Court agent classes
+#define CTAG_WRETCH			"CAT_WRETCH"		// Wretch Classes
 
 #define CTAG_WATCH			"CAT_WATCH"			// Watch class - Handles Town Watch class selector
 #define CTAG_MENATARMS		"CAT_MENATARMS"		// Men-at-Arms class - Handles Men-at-Arms class selector
 #define CTAG_ROYALGUARD		"CAT_ROYALGUARD"	// Royal Guard class - Handles Royal Guard class selector
-#define CTAG_MERCENARY		"CAT_MERCENARY"		// Mercenary class - Handles Mercenary class selector
 #define CTAG_HAND			"CAT_HAND"			// Hand class - Handles Hand class selector
 #define CTAG_TEMPLAR		"CAT_TEMPLAR"		// Templar class - Handles Templar class selector
 #define CTAG_NOBLEMAN		"CAT_HEIR"			// Nobleman Class - Handles Nobleman class selector
 #define CTAG_SQUIRE			"CAT_SQUIRE"		// Squire class - Handles Squire class selector
 #define CTAG_VETERAN		"CAT_VETERAN"		// Veteran class - Handles Veteran class selector
 #define CTAG_MARSHAL		"CAT_MARSHAL"		// Marshal class
-#define CTAG_SENESCHAL		"CAT_SENESCHAL"		// Seneschal's aesthetic choices. 
+#define CTAG_SENESCHAL		"CAT_SENESCHAL"		// Seneschal's aesthetic choices.
 #define CTAG_SERVANT		"CAT_SERVANT"		// Servant's aesthetic choices.
 #define CTAG_CAPTAIN		"CAT_CAPTAIN"		// Handles Captain class selector
-#define CTAG_WAPPRENTICE	"CTAG_WAPPRENTICE"	// Mage Apprentice Classes - Handles Mage Apprentices class selector 
+#define CTAG_WAPPRENTICE	"CTAG_WAPPRENTICE"	// Mage Apprentice Classes - Handles Mage Apprentices class selector
 
 /*
 	Defines for the triumph buy datum categories

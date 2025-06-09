@@ -38,10 +38,6 @@
 		to_chat(user, span_warning("I do not have the divine knowledge to properly apply [src]."))
 		return
 
-	if(user.patron in ALL_BALANCE_PATRONS)
-		to_chat(user, span_warning("This whole anointing stuff seems like TEN nonsense. Why prevent the chaos? Besides, this paste burns my fingers."))
-		return
-
 	if(user == M)
 		to_chat(user, span_warning("I cannot anoint myself with this. I must find someone else to perform the rites."))
 		return

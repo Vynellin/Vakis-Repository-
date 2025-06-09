@@ -2,7 +2,7 @@
 	req_table = FALSE
 	tools = list(/obj/item/reagent_containers/glass/mortar, /obj/item/pestle)
 	verbage_simple = "mix"
-	skillcraft = /datum/skill/misc/alchemy
+	skillcraft = /datum/skill/craft/alchemy
 	subtype_reqs = TRUE
 	structurecraft = /obj/structure/fluff/alch
 
@@ -140,42 +140,42 @@
 	verbage_simple = "transmute"
 
 /datum/crafting_recipe/roguetown/alchemy/g2top
-	name = "gold to toper"
+	name = "gold to topaz"
 	result = list(/obj/item/roguegem/yellow = 1)
 	reqs = list(/obj/item/rogueore/gold = 2, /obj/item/natural/stone = 1)
 	craftdiff = 4
 	verbage_simple = "transmute"
 
 /datum/crafting_recipe/roguetown/alchemy/t2gem
-	name = "toper to gemerald"
+	name = "topaz to emerald"
 	result = list(/obj/item/roguegem/green = 1)
 	reqs = list(/obj/item/roguegem/yellow = 1, /obj/item/rogueore/gold = 2)
 	craftdiff = 4
 	verbage_simple = "transmute"
 
 /datum/crafting_recipe/roguetown/alchemy/g2saf
-	name = "gemerald to saffira"
+	name = "emerald to sapphire"
 	result = list(/obj/item/roguegem/violet = 1)
 	reqs = list(/obj/item/roguegem/green = 1, /obj/item/rogueore/gold = 2)
 	craftdiff = 4
 	verbage_simple = "transmute"
 
 /datum/crafting_recipe/roguetown/alchemy/s2blo
-	name = "saffira to blortz"
+	name = "sapphire to quartz"
 	result = list(/obj/item/roguegem/blue = 1)
 	reqs = list(/obj/item/roguegem/violet = 1, /obj/item/rogueore/gold = 2)
 	craftdiff = 4
 	verbage_simple = "transmute"
 
 /datum/crafting_recipe/roguetown/alchemy/r2dia
-	name = "blortz to diamond"
+	name = "quartz to diamond"
 	result = list(/obj/item/roguegem/diamond = 1)
 	reqs = list(/obj/item/roguegem/blue = 2, /obj/item/rogueore/gold = 2)
 	craftdiff = 5
 	verbage_simple = "transmute"
 
 /datum/crafting_recipe/roguetown/alchemy/d2ros
-	name = "diamond to riddle of steel" /// holy grail requires legendary. (sell price on average is 350. rontz and diamond worth 100 each. you get to legndary you deserve 150-200 profit)
+	name = "diamond to riddle of steel" /// holy grail requires legendary. (sell price on average is 350. ruby and diamond worth 100 each. you get to legndary you deserve 150-200 profit)
 	result = list(/obj/item/riddleofsteel = 1)
 	reqs = list(/obj/item/roguegem/diamond = 2, /obj/item/rogueore/iron = 1, /obj/item/rogueore/coal = 1)
 	craftdiff = 6
@@ -184,7 +184,16 @@
 /datum/crafting_recipe/roguetown/alchemy/alchmort
 	name = "alchemical mortar"
 	tools = list()
-	result = list(/obj/item/mortar = 1)
+	result = list(/obj/item/reagent_containers/glass/mortar = 1)
 	reqs = list(/obj/item/natural/stone = 3, /obj/item/rogueore/iron = 1)
 	verbage_simple = "fabricate"
 	verbage = "fabricates"
+
+// Gunpowder
+
+/datum/crafting_recipe/roguetown/alchemy/alchmort
+	name = "firepowder flask"
+	tools = list()
+	result = list(/obj/item/powderhorn = 1)
+	reqs = list(/obj/item/alch/coaldust = 1, /obj/item/alch/firedust = 1, /obj/item/natural/bone = 2, /obj/item/natural/fibers = 1)
+	craftdiff = 3

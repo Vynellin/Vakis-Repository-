@@ -66,6 +66,7 @@
 /obj/item/alch/viscera
 	name = "viscera"
 	icon_state = "viscera"
+	sellprice = 3
 	major_pot = /datum/alch_cauldron_recipe/big_health_potion
 	med_pot = /datum/alch_cauldron_recipe/health_potion
 	minor_pot = /datum/alch_cauldron_recipe/antidote
@@ -130,6 +131,7 @@
 	name = "sinew"
 	icon_state = "sinew"
 	dropshrink = 0.9
+	sellprice = 7
 	major_pot = /datum/alch_cauldron_recipe/stam_poison
 	med_pot = /datum/alch_cauldron_recipe/end_potion
 	minor_pot = /datum/alch_cauldron_recipe/health_potion
@@ -178,6 +180,7 @@
 	w_class = WEIGHT_CLASS_SMALL
 	grid_width = 32
 	grid_height = 64
+	sellprice = 5
 
 	major_pot = /datum/alch_cauldron_recipe/disease_cure
 	med_pot = /datum/alch_cauldron_recipe/health_potion
@@ -192,6 +195,7 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	grid_width = 64
 	grid_height = 64
+	sellprice = 30
 
 	major_pot = /datum/alch_cauldron_recipe/str_potion
 	med_pot = /datum/alch_cauldron_recipe/con_potion
@@ -389,6 +393,7 @@
 	spitoutmouth = FALSE
 	muteinmouth = FALSE
 	alternate_worn_layer  = 8.9 //On top of helmet
+	//mill_result = /obj/item/reagent_containers/food/snacks/grown/rogue/rosa_petals
 
 	major_pot = /datum/alch_cauldron_recipe/rosewater_potion
 	med_pot = /datum/alch_cauldron_recipe/rosewater_potion

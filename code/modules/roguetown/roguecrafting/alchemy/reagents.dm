@@ -112,24 +112,26 @@
 	name = "Mana Potion"
 	description = "Gradually regenerates energy."
 	reagent_state = LIQUID
-	color = "#000042"
+	color = "#0000ff"
 	taste_description = "sweet mana"
 	overdose_threshold = 0
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
+//Turns out that Stamina is in reality the Blue bar.
 /datum/reagent/medicine/manapot/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(30)
+		M.rogstam_add(30) //15 oz of mana potion = 45u. With default metabolism ticking 1u, you can regen 1350 rogstam in one bottle. A 10 Endurance character has by default 1000 rogstam maximum
 	..()
 
 /datum/reagent/medicine/strongmana
 	name = "Strong Mana Potion"
 	description = "Rapidly regenerates energy."
-	color = "#0000ff"
+	color = "#000080"
 	taste_description = "raw power"
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
+//Turns out that Stamina is in reality the Blue bar.
 /datum/reagent/medicine/strongmana/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
 		M.rogstam_add(120)
@@ -139,35 +141,37 @@
 	name = "Stamina Potion"
 	description = "Gradually regenerates stamina."
 	reagent_state = LIQUID
-	color = "#129c00"
+	color = "#13df00"
 	taste_description = "sweet tea"
 	overdose_threshold = 0
 	metabolization_rate = REAGENTS_METABOLISM
 	alpha = 173
 
+//Despite the name, the green bar is actually Fatigue in the code.
 /datum/reagent/medicine/stampot/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(30)
+		M.rogfat_add(-20) //The less rogfat you have, the fuller the green bar is. This should make sprinting last longer, and mitigate combat consumption. Your maximum rogfat is a tenth of your maximum rogstam
 	..()
 
 /datum/reagent/medicine/strongstam
 	name = "Strong Stamina Potion"
 	description = "Rapidly regenerates stamina."
-	color = "#13df00"
-	taste_description = "sparkly static"
+	color = "#129c00"
+	taste_description = "sparkling static"
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
+//Despite the name, the green bar is actually Fatigue in the code.
 /datum/reagent/medicine/strongstam/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(120)
+		M.rogfat_add(-50)  //The less rogfat you have, the fuller the green bar is. Should make sprinting last forever while you chug this. But metabolizes only twice per sip. More like of a second wind if using mid combat.
 	..()
 
 /datum/reagent/medicine/antidote
 	name = "Poison Antidote"
-	description = ""
+	description = "A mild detoxifying agent."
 	reagent_state = LIQUID
-	color = "#00ff00"
-	taste_description = "sickly sweet"
+	color = "#ccccff"
+	taste_description = "cleansing river water"
 	metabolization_rate = REAGENTS_METABOLISM
 
 /datum/reagent/medicine/antidote/on_mob_life(mob/living/carbon/M)
@@ -178,10 +182,10 @@
 
 /datum/reagent/medicine/diseasecure
 	name = "Disease Cure"
-	description = ""
+	description = "A potent detoxifying agent."
 	reagent_state = LIQUID
-	color = "#004200"
-	taste_description = "dirt"
+	color = "#cc99ff"
+	taste_description = "sweet salvation"
 	metabolization_rate = REAGENTS_METABOLISM * 3
 
 /datum/reagent/medicine/diseasecure/on_mob_life(mob/living/carbon/M)
@@ -198,8 +202,8 @@
 
 /datum/reagent/buff/strength
 	name = "Strength"
-	color = "#ff9000"
-	taste_description = "old meat"
+	color = "#800000"
+	taste_description = "burning fire and invigoration"
 
 /datum/reagent/buff/strength/on_mob_add(mob/living/carbon/M)
 	testing("str pot in system")
@@ -212,8 +216,8 @@
 
 /datum/reagent/buff/perception
 	name = "Perception"
-	color = "#ffff00"
-	taste_description = "cat piss"
+	color = "##ffc34d"
+	taste_description = "a chalky, bitter awareness"
 
 /datum/reagent/buff/perception/on_mob_life(mob/living/carbon/M)
 	testing("per pot in system")
@@ -226,8 +230,8 @@
 
 /datum/reagent/buff/intelligence
 	name = "Intelligence"
-	color = "#438127"
-	taste_description = "bog water"
+	color = "#00b386"
+	taste_description = "a spark of enlightenment"
 
 /datum/reagent/buff/intelligence/on_mob_life(mob/living/carbon/M)
 	testing("int pot in system")
@@ -240,8 +244,8 @@
 
 /datum/reagent/buff/constitution
 	name = "Constitution"
-	color = "#130604"
-	taste_description = "bile"
+	color = "#d9bfcc"
+	taste_description = "the will to persevere"
 
 /datum/reagent/buff/constitution/on_mob_life(mob/living/carbon/M)
 	testing("con pot in system")
@@ -254,8 +258,8 @@
 
 /datum/reagent/buff/endurance
 	name = "Endurance"
-	color = "#ffff00"
-	taste_description = "gote urine"
+	color = "#5c8a8a"
+	taste_description = "a blessed second wind"
 
 /datum/reagent/buff/endurance/on_mob_life(mob/living/carbon/M)
 	testing("end pot in system")
@@ -268,8 +272,8 @@
 
 /datum/reagent/buff/speed
 	name = "Speed"
-	color = "#ffff00"
-	taste_description = "raw egg yolk"
+	color = "#99ddff"
+	taste_description = "carbonated, energized herbs"
 
 /datum/reagent/buff/speed/on_mob_life(mob/living/carbon/M)
 	testing("spd pot in system")
@@ -282,8 +286,8 @@
 
 /datum/reagent/buff/fortune
 	name = "Fortune"
-	color = "#ffff00"
-	taste_description = "pig urine"
+	color = "#ff9900"
+	taste_description = "lavish riches on the tongue"
 
 /datum/reagent/buff/fortune/on_mob_life(mob/living/carbon/M)
 	testing("luck pot in system")
@@ -303,9 +307,9 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/berrypoison	// Weaker poison, balanced to make you wish for death and incapacitate but not kill
 	name = "Berry Poison"
-	description = ""
+	description = "A sickening liquid that decently toxifies."
 	reagent_state = LIQUID
-	color = "#47b2e0"
+	color = "#264670"
 	taste_description = "bitterness"
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 
@@ -322,9 +326,9 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/strongpoison		// Strong poison, meant to be somewhat difficult to produce using alchemy or spawned with select antags. Designed to kill in one full dose (5u) better drink antidote fast
 	name = "Strong Poison"
-	description = ""
+	description = "An extremely potent liquid that kills quickly."
 	reagent_state = LIQUID
-	color = "#1a1616"
+	color = "#06151c"
 	taste_description = "burning"
 	metabolization_rate = 0.1 * REAGENTS_METABOLISM
 
@@ -355,7 +359,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/stampoison
 	name = "Stamina Poison"
-	description = ""
+	description = "Gradually drains your stamina."
 	reagent_state = LIQUID
 	color = "#083b1c"
 	taste_description = "breathlessness"
@@ -363,12 +367,12 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/stampoison/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(-45) //Slowly leech stamina
+		M.rogfat_add(2) //Slowly leech the green bar. Sort of similar at how fast sprinting drains your stamina. With a slow metabolization, this poison is more of a stamina blocker. Can still lock someone in stam crit if thex exhert too much while this poison is active.
 	return ..()
 
 /datum/reagent/strongstampoison
 	name = "Strong Stamina Poison"
-	description = ""
+	description = "Quickly drains your stamina."
 	reagent_state = LIQUID
 	color = "#041d0e"
 	taste_description = "frozen air"
@@ -376,7 +380,7 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 
 /datum/reagent/strongstampoison/on_mob_life(mob/living/carbon/M)
 	if(!HAS_TRAIT(M,TRAIT_NOROGSTAM))
-		M.rogstam_add(-180) //Rapidly leech stamina
+		M.rogfat_add(20) //Rapidly leech stamina. Drains faster, but lasts less. Should ideally be able to neutralize someone out of combat in one application.
 	return ..()
 
 
@@ -500,4 +504,4 @@ If you want to expand on poisons theres tons of fun effects TG chemistry has tha
 		M.reagents.add_reagent(src, rand(1,3))
 		to_chat(M, span_small("I feel even worse..."))
 	return ..()
-	
+

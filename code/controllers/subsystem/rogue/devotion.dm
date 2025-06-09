@@ -42,12 +42,12 @@
 	src.holder = holder
 	holder?.devotion = src
 	src.patron = patron
-	if (patron.type == /datum/patron/balance/tsoridys)
+	if (patron.type == /datum/patron/lording_three/tsoridys)
 		ADD_TRAIT(holder, TRAIT_DEATHSIGHT, "devotion")
 
 /datum/devotion/Destroy(force)
 	. = ..()
-	if (patron.type == /datum/patron/balance/tsoridys)
+	if (patron.type == /datum/patron/lording_three/tsoridys)
 		REMOVE_TRAIT(holder, TRAIT_DEATHSIGHT, "devotion")
 	holder?.devotion = null
 	holder = null
@@ -124,8 +124,7 @@
 		return
 		
 	var/list/spelllist = list(patron.extra_spell, /obj/effect/proc_holder/spell/targeted/touch/orison, patron.t0)
-	if(istype(patron,/datum/patron/light))
-		spelllist += /obj/effect/proc_holder/spell/targeted/abrogation
+	spelllist += /obj/effect/proc_holder/spell/targeted/abrogation
 	for(var/spell_type in spelllist)
 		if(!spell_type || H.mind.has_spell(spell_type))
 			continue
@@ -134,6 +133,7 @@
 		LAZYADD(granted_spells, newspell)
 	level = CLERIC_T0
 	max_devotion = CLERIC_REQ_1 //Max devotion limit - Paladins are stronger but cannot pray to gain all abilities beyond t1
+	devotion = max_devotion
 	max_progression = CLERIC_REQ_1
 
 /datum/devotion/proc/grant_spells_churchling(mob/living/carbon/human/H)
@@ -149,6 +149,7 @@
 		LAZYADD(granted_spells, newspell)
 	level = CLERIC_T0
 	max_devotion = CLERIC_REQ_1 //Max devotion limit - Churchlings only get diagnose and lesser miracle.
+	devotion = max_devotion
 	max_progression = CLERIC_REQ_0
 
 /datum/devotion/proc/grant_spells_priest(mob/living/carbon/human/H)
@@ -167,6 +168,22 @@
 	devotion = max_devotion
 	update_devotion(300, CLERIC_REQ_4, silent = TRUE)
 	START_PROCESSING(SSobj, src)
+
+/datum/devotion/proc/grant_spells_deacon(mob/living/carbon/human/H)
+	if(!H || !H.mind || !patron)
+		return
+
+	granted_spells = list()
+	var/list/spelllist = list(patron.extra_spell, /obj/effect/proc_holder/spell/targeted/touch/orison, patron.t0, patron.t1, patron.t2) // Not as powerful. Do your job!
+	for(var/spell_type in spelllist)
+		if(!spell_type || H.mind.has_spell(spell_type))
+			continue
+		var/newspell = new spell_type
+		H.mind.AddSpell(newspell)
+		LAZYADD(granted_spells, newspell)
+	level = CLERIC_T2
+	devotion = max_devotion
+	update_devotion(150, CLERIC_REQ_2, silent = TRUE)
 
 /datum/devotion/proc/grant_spells_monk(mob/living/carbon/human/H) //added to give acolytes passive regen like priests
 	if(!H || !H.mind || !patron)

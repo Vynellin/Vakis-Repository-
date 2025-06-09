@@ -1,2 +1,25 @@
-Welcome to Solaris! This initial version is catered to the first scrappings of our lore put to paper to bounce off of you, in particular the gods.
-We hope you have fun with your time in Sunmarch, and remember - yours is a fate few share.
+Welcome back to Solaris Ridge!
+
+Gee, Bill, how come Solaris let you have TWO magic reworks? A quick breakdown:
+All the magic updates we missed out on from Azure Peak have been backported.
+Fatigue-Based XP Grinding has been reworked!
+The SCOM requires some familiarity with magic to craft.
+Spell point's exact allocation have been shifted about the town a bit!
+Arcane Potential was reworked... Again! Again!
+Master-Level Arcanists can entrust their knowledge to a pupil... or two. Or three.
+Staffs now drop their components upon destruction. Don't get any funny ideas about how to use this...
+Adventurer Clerics & Mages were let into the Adventurer's Guild following a lawsuit. Quoting the Archmagister, "POWER WORD: CEDE".
+Adventurer Clerics were therein buffed significantly WRT their magics.
+The Alchemist jobrole in the Mage's University has been disabled for the moment.
+
+Asides from Magic:
+Deacons & Iconoclasts now get Psycrosses, oopsies.
+Cooking has been expANDED AGAIN?!
+I loved it when the alchemical mortar went "it's mortarin' time" and mortar'd all over the place with the flour and whatnot
+One (1) orc skintone has been recolored
+A new issue with wildshape was solemnly added to Fuckup Of The Year 2025.
+Templar and Acolyte Tamarites were buffed.
+The default laws of the land have been rewritten to be feasible in-setting.
+Don't get any funny ideas with the new mess kit, Alchemists... oh; wait.
+
+Have fun!

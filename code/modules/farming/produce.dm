@@ -3,9 +3,6 @@
 	dried_type = null
 	resistance_flags = FLAMMABLE
 	w_class = WEIGHT_CLASS_SMALL
-	var/can_distill = FALSE //If FALSE, this object cannot be distilled into an alcohol.
-	var/distill_reagent //If NULL and this object can be distilled, it uses a generic fruit_wine reagent and adjusts its variables.
-	var/distill_amt = 12
 	var/list/pipe_reagents = list()
 	var/seed
 	var/bitesize_mod = 0
@@ -57,6 +54,9 @@
 	distill_amt = 24
 	grind_results = list(/datum/reagent/floure = 10)
 	mill_result = /obj/item/reagent_containers/powder/flour
+	can_press = TRUE //Wheat can be pressed into maltwheat.
+	press_reagent = /datum/reagent/consumable/maltwheat //Pressing wheat produces maltwheat.
+	press_amt = 12
 
 /obj/item/reagent_containers/food/snacks/grown/oat
 	seed = /obj/item/seeds/wheat/oat
@@ -74,6 +74,9 @@
 	distill_amt = 24
 	grind_results = list(/datum/reagent/floure = 10)
 	mill_result = /obj/item/reagent_containers/powder/flour
+	can_press = TRUE //Oats can be pressed into malted oats.
+	press_reagent = /datum/reagent/consumable/malted_oats //Pressing oats produces malted oats.
+	press_amt = 12
 
 /obj/item/reagent_containers/food/snacks/grown/rice
 	seed = /obj/item/seeds/rice
@@ -90,6 +93,9 @@
 	distill_reagent = /datum/reagent/consumable/ethanol/sake
 	distill_amt = 12
 	grind_results = list(/datum/reagent/floure = 10)
+	can_press = TRUE //Rice can be pressed into rice milk.
+	press_reagent = /datum/reagent/consumable/rice_milk //Pressing rice produces rice milk.
+	press_amt = 12
 
 /obj/item/reagent_containers/food/snacks/grown/apple
 	seed = /obj/item/seeds/apple
@@ -112,6 +118,9 @@
 	distill_reagent = /datum/reagent/consumable/ethanol/beer/cider
 	var/equippedloc = null
 	var/list/bitten_names = list()
+	can_press = TRUE //Apples can be pressed into juice.
+	press_reagent = /datum/reagent/consumable/applejuice //Pressing an apple produces apple juice.
+	press_amt = 12 //Pressing an apple produces 12 units of apple juice.
 
 /obj/item/reagent_containers/food/snacks/grown/apple/On_Consume(mob/living/eater)
 	..()
@@ -161,6 +170,9 @@
 	can_distill = TRUE
 	distill_reagent = /datum/reagent/consumable/ethanol/beer/jackberrywine
 	rotprocess = 15 MINUTES
+	can_press = TRUE //Jacksberries can be pressed into juice.
+	press_reagent = /datum/reagent/consumable/berryjuice //Pressing jacksberries produces berry juice.
+	press_amt = 12 //Pressing jacksberries produces 12 units of berry juice.
 
 /obj/item/reagent_containers/food/snacks/grown/berries/rogue/Initialize()
 	if(GLOB.berrycolors[color_index])
@@ -363,6 +375,9 @@
 	distill_reagent = /datum/reagent/consumable/ethanol/beer/voddena
 	rotprocess = null
 	seed = /obj/item/seeds/potato
+	can_press = TRUE //Potatoes can be pressed into juice.
+	press_reagent = /datum/reagent/consumable/potato_juice
+	press_amt = 12 //Pressing a potato produces 12 units of potato juice.
 
 /obj/item/reagent_containers/food/snacks/grown/garlick/rogue
 	name = "garlick bulb"
@@ -389,3 +404,53 @@
 	list_reagents = list(/datum/reagent/consumable/nutriment = 0)
 	dropshrink = 0.5
 	rotprocess = null
+
+/obj/item/reagent_containers/food/snacks/grown/sugarcane
+	seed = /obj/item/seeds/sugarcane
+	name = "sugarcane"
+	desc = ""
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "sugarcane"
+	gender = PLURAL
+	dropshrink = 0.75
+	filling_color = "#f5f2d9"
+	bitesize_mod = 2
+	mill_result = /obj/item/reagent_containers/powder/sugar
+	foodtype = SUGAR
+	tastes = list("sugar" = 1)
+	grind_results = list(/datum/reagent/consumable/sugar = 10)
+	can_distill = TRUE
+	distill_amt = 12
+	distill_reagent = /datum/reagent/consumable/ethanol/beer/rum
+	can_press = TRUE //Sugarcane can be pressed into juice.
+	press_reagent = /datum/reagent/consumable/sugarcanejuice //Pressing sugarcane produces sugarcane juice.
+	press_amt = 12 //Pressing sugarcane produces 12 units of sugarcane juice.
+
+/obj/item/reagent_containers/food/snacks/grown/pumpkin
+	seed = /obj/item/seeds/pumpkin
+	name = "pumpkin"
+	desc = ""
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "pumpkin"
+	mill_result = /obj/item/reagent_containers/food/snacks/rogue/pumpkinspice
+	list_reagents = list(/datum/reagent/consumable/nutriment = 3)
+	tastes = list("pumpkin" = 1)
+	dropshrink = 0.75
+	bitesize_mod = 3
+	can_press = TRUE //Pumpkins can be pressed into juice.
+	press_reagent = /datum/reagent/consumable/pumpkinjuice
+	press_amt = 24 //Pressing a pumpkin produces 24 units of pumpkin juice.
+
+/obj/item/reagent_containers/food/snacks/grown/carrot
+	seed = /obj/item/seeds/carrot
+	name = "carrot"
+	desc = ""
+	icon = 'icons/roguetown/items/produce.dmi'
+	icon_state = "carrot"
+	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	tastes = list("carrot" = 1)
+	dropshrink = 0.75
+	bitesize_mod = 2
+	can_press = TRUE //Carrots can be pressed into juice.
+	press_reagent = /datum/reagent/consumable/carrotjuice
+	press_amt = 12 //Pressing a carrot produces 12 units of carrot juice.

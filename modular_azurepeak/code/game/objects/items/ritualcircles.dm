@@ -22,7 +22,7 @@
 	var/solarrites = list("Guiding Light")
 
 /obj/structure/ritualcircle/aeternus/attack_hand(mob/living/user) 
-	if((user.patron?.type) != /datum/patron/light/aeternus)
+	if((user.patron?.type) != /datum/patron/lording_three/aeternus)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -60,7 +60,7 @@
 		target.apply_status_effect(/datum/status_effect/buff/guidinglight) // applies the status effect
 		to_chat(target,span_cultsmall("Aeternus' light guides me forward, drawn to me in my time of need!"))
 		playsound(target, 'sound/magic/holyshield.ogg', 80, FALSE, -1) // Cool sound!
-// If you want to review a more complicated one, Undermaiden's Bargain is probs the most complicated of the starting set. - Have fun! - Onutsio 🏳️‍⚧️
+// If you want to review a more complicated one, Death Bargain is probs the most complicated of the starting set. - Have fun! - Onutsio 🏳️‍⚧️
 
 
 /obj/structure/ritualcircle/zira
@@ -70,7 +70,7 @@
 	var/lunarrites = list("Moonlight Dance") // list for more to be added later
 
 /obj/structure/ritualcircle/zira/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/balance/zira)
+	if((user.patron?.type) != /datum/patron/lording_three/zira)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -99,7 +99,7 @@
 		target.apply_status_effect(/datum/status_effect/buff/moonlightdance)
 
 /obj/structure/ritualcircle/kasmidian
-	name = "Rune of Pryamore"
+	name = "Rune of Rifts"
 	desc = "A Holy Rune of Kasmidian"
 
 /obj/structure/ritualcircle/carthus
@@ -113,7 +113,7 @@
 	var/bestialrites = list("Rite of the Lesser Wolf")
 
 /obj/structure/ritualcircle/tamari/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/change/tamari)
+	if((user.patron?.type) != /datum/patron/three_sisters/tamari)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -161,10 +161,10 @@
 	name = "Rune of Death"
 	desc = "A Holy Rune of Tsoridys"
 	icon_state = "necra_chalky"
-	var/deathrites = list("Undermaiden's Bargain")
+	var/deathrites = list("Death Bargain")
 
 /obj/structure/ritualcircle/tsoridys/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/balance/tsoridys)
+	if((user.patron?.type) != /datum/patron/lording_three/tsoridys)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
@@ -175,7 +175,7 @@
 		return
 	var/riteselection = input(user, "Rituals of Death", src) as null|anything in deathrites
 	switch(riteselection) // put ur rite selection here
-		if("Undermaiden's Bargain")
+		if("Death Bargain")
 			loc.visible_message(span_warning("[user] sways before the rune, they open their mouth, though no words come out..."))
 			playsound(user, 'sound/vo/mobs/ghost/whisper (3).ogg', 100, FALSE, -1)
 			if(do_after(user, 60))
@@ -188,17 +188,17 @@
 					if(do_after(user, 20))
 						icon_state = "necra_active"
 						user.say("Forgive me, the bargain is intoned!!")
-						to_chat(user,span_cultsmall("My devotion to the Undermaiden has allowed me to strike a bargain for these souls...."))
+						to_chat(user,span_cultsmall("My devotion to Tsoridys has allowed me to strike a bargain for these souls...."))
 						playsound(loc, 'sound/vo/mobs/ghost/moan (1).ogg', 100, FALSE, -1)
-						undermaidenbargain(src)
+						deathbargain(src)
 						user.apply_status_effect(/datum/status_effect/debuff/ritesexpended)
 						spawn(120)
 							icon_state = "necra_chalky"
 
-/obj/structure/ritualcircle/tsoridys/proc/undermaidenbargain(src)
+/obj/structure/ritualcircle/tsoridys/proc/deathbargain(src)
 	var/ritualtargets = view(7, loc)
 	for(var/mob/living/carbon/human/target in ritualtargets)
-		target.apply_status_effect(/datum/status_effect/buff/undermaidenbargain)
+		target.apply_status_effect(/datum/status_effect/buff/deathbargain)
 	
 
 /obj/structure/ritualcircle/varielle
@@ -209,7 +209,7 @@
 	var/peacerites = list("Rite of Pacification")
 
 /obj/structure/ritualcircle/varielle/attack_hand(mob/living/user)
-	if((user.patron?.type) != /datum/patron/balance/varielle)
+	if((user.patron?.type) != /datum/patron/peoples_pantheon/varielle)
 		to_chat(user,span_smallred("I don't know the proper rites for this..."))
 		return
 	if(!HAS_TRAIT(user, TRAIT_RITUALIST))

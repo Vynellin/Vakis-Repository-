@@ -692,10 +692,11 @@
 	sellprice = 140
 
 /obj/item/rogueweapon/sword/rapier/lord
-	name = "sword of the Mad Duke"
-	desc = "A royal heirloom whose spiraling basket hilt is inlaid with fine cut gems. It bears the burnish of \
-	time, where once sharply defined features have been worn down by so many hands. An old rumor ties this implement \
-	to the siege that smashed the Mad Duke's keep to rubble, and burnt the Duke himself to cinders."
+	name = "house-rapier of sunmarch"
+	desc = "An heirloom of the first expedetion to Sunmarch - this weapon was bestowed upon great warriors \
+			who performed services for the Marquis in times of strife - one rumored to have been the so-called \
+			\"beacon of artmour\", from so long ago in Rasurian folk-history. Whilst the golden hilt pays tribute \
+			to Aeternus' grace, subtle silver inlets guide resemblance of Zira's visage."
 	icon_state = "lordrap"
 	sellprice = 300
 	max_integrity = 300
@@ -763,7 +764,7 @@
 	force_wielded = 32
 	icon_state = "blackflamb"
 	name = "blacksteel flamberge"
-	desc = "A strange sword with a winding blade forged of blacksteel and a rontz pommel."
+	desc = "A strange sword with a winding blade forged of blacksteel and a ruby pommel."
 	smeltresult = /obj/item/ingot/blacksteel
 	max_integrity = 200
 

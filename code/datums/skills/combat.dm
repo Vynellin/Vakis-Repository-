@@ -21,7 +21,7 @@
 	dreams = list(
 		"...your heavy blade swings in a wide arc, cleaving through the air with a roar. Each landed strike hits with bone shattering force. Your opponent's shield crumples under the weight, and your blade finds its mark - crushing through armor, flesh, and will alike...",
 		"...a shining length of ivory steel. A token. A symbol. More than just a weapon. Blood runs thick in the wash-bin. Sparks fly from the grindstone. You maintain the blade and it maintains your honour...",
-		"...a terrible beast unfurls from the echo of man as you point your blade further within the crumbling chamber, the dorpel that led you here crumbling to dust in it's visage - another madman off the rails...",
+		"...a terrible beast unfurls from the echo of man as you point your blade further within the crumbling chamber, the jewel that led you here crumbling to dust in it's visage - another madman off the rails...",
 		"...the rapier dances in your hand, a whisper of steel cutting through the air. Every thrust is precise, every parry and riposte flowing in perfect rhythm, simply awaiting the moment to seal your their fate with a single, fatal strike..."
 	)
 
@@ -111,4 +111,12 @@
 	"...you recall an old maxim you read in a dusty tome within the archives: if you can throw, you can sling...",
 	"...the perched archers ruthlessly repel the peasant rebellion. Hope for fairness is almost forlorn, until with a soft crack, a hailing of iron bullets clatter against the foe's helmets...",
 	"...your arm tires from the toils of practice. Swinging rapidly has left your arm numb. With weary eyes, you glance aside to witness a hunter practice their craft with a brief overhand toss. Absorbing the technique, you mimic it, and effortlessly cast a powerful stone square onto the target..."
+	)
+
+/datum/skill/combat/firearms
+	name = "Firearms"
+	desc= "Alongside perception, increases your spead to aim.  Each level reduces your reload time further."
+	dreams = list(
+	"...You recall the countless hours drilling and marching in practice for battle.  Hold position, shoulder arquebus, fire...",
+	"..."
 	)

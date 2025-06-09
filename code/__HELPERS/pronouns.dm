@@ -363,3 +363,12 @@
 	if((SLOT_PANTS in obscured) && skipface)
 		temp_gender = PLURAL
 	return ..()
+
+
+// Gunpowder
+
+/datum/proc/p_themselves(capitalized, temp_gender)
+	. = p_them(capitalized, temp_gender)
+	if(lowertext(.) == "them")
+		return "[.]selves"
+	return "[.]self"

@@ -131,3 +131,10 @@
 
 /turf/open/proc/ClearWet()//Nuclear option of immediately removing slipperyness from the tile instead of the natural drying over time
 	qdel(GetComponent(/datum/component/wet_floor))
+
+/turf/open/greenscreen
+	name = "greenscreen"
+	desc = "This shouldn't be mapped. I mean, if I was a mapper and I mapped in a greenscreen on my fantasy server, I'd have to start thinking about my priorities. \
+			Who the hell would do such a thing? Are they stupid?"
+	icon = 'icons/turf/floors.dmi'
+	icon_state = "greenscreen"

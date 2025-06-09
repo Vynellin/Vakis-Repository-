@@ -22,7 +22,7 @@
 	can_parry = TRUE
 	associated_skill = /datum/skill/combat/shields		//Trained via blocking or attacking dummys with; makes better at parrying w/ shields.
 	wdefense = 10										//should be pretty baller
-	var/coverage = 90
+	var/coverage = 50
 	parrysound = "parrywood"
 	attacked_sound = "parrywood"
 	max_integrity = 150
@@ -47,15 +47,20 @@
 
 /obj/item/rogueweapon/shield/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the projectile", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
 	SEND_SIGNAL(src, COMSIG_ITEM_HIT_REACT, args)
-	if(attack_type == THROWN_PROJECTILE_ATTACK || attack_type == PROJECTILE_ATTACK)
-		if(owner.client?.chargedprog == 100 && owner.used_intent?.tranged)
-			owner.visible_message(span_danger("[owner] blocks [hitby] with [src]!"))
-			return 1
-		else
-			if(prob(coverage))
-				owner.visible_message(span_danger("[owner] blocks [hitby] with [src]!"))
-				return 1
-	return 0
+	var/mob/attacker
+	if(attack_type == THROWN_PROJECTILE_ATTACK)
+		var/obj/item/I = hitby
+		attacker = I.thrownby
+	if(attack_type == PROJECTILE_ATTACK)
+		var/obj/projectile/P = hitby
+		attacker = P.firer
+	if(attacker && istype(attacker))
+		if (!owner.can_see_cone(attacker))
+			return FALSE
+		if((owner.client?.chargedprog == 100 && owner.used_intent?.tranged) || prob(coverage))
+			owner.visible_message(span_danger("[owner] expertly blocks [hitby] with [src]!"))
+			return TRUE
+	return FALSE
 
 /datum/intent/shield/bash
 	name = "bash"
@@ -85,7 +90,7 @@
 	desc = "A sturdy wooden shield. Will block anything you can imagine."
 	icon_state = "woodsh"
 	dropshrink = 0.8
-	coverage = 40
+	coverage = 30
 
 /obj/item/rogueweapon/shield/wood/attack_right(mob/user)
 	if(!overlays.len)
@@ -124,7 +129,7 @@
 	wlength = WLENGTH_NORMAL
 	resistance_flags = FLAMMABLE
 	wdefense = 10
-	coverage = 70
+	coverage = 40
 	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	max_integrity = 200
 
@@ -134,7 +139,7 @@
 	icon_state = "gsshield"
 	wdefense = 13
 	max_integrity = 300
-	coverage = 80
+	coverage = 50
 	wlength = WLENGTH_NORMAL
 	resistance_flags = null
 	flags_1 = CONDUCT_1
@@ -167,7 +172,7 @@
 	resistance_flags = null
 	flags_1 = CONDUCT_1
 	wdefense = 11
-	coverage = 70
+	coverage = 50
 	attacked_sound = list('sound/combat/parry/shield/metalshield (1).ogg','sound/combat/parry/shield/metalshield (2).ogg','sound/combat/parry/shield/metalshield (3).ogg')
 	parrysound = list('sound/combat/parry/shield/metalshield (1).ogg','sound/combat/parry/shield/metalshield (2).ogg','sound/combat/parry/shield/metalshield (3).ogg')
 	max_integrity = 300
@@ -251,7 +256,7 @@
 	force = 15
 	throwforce = 10
 	dropshrink = 0.8
-	coverage = 60
+	coverage = 30
 	attacked_sound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	parrysound = list('sound/combat/parry/shield/towershield (1).ogg','sound/combat/parry/shield/towershield (2).ogg','sound/combat/parry/shield/towershield (3).ogg')
 	max_integrity = 200

@@ -94,10 +94,10 @@
 	cost = 30
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/apfelweinheim)
 
-/datum/supply_pack/rogue/alcohol/rtoper
-	name = "Rockhill Toper"
+/datum/supply_pack/rogue/alcohol/rtopaz
+	name = "Rockhill Topaz"
 	cost = 20
-	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/rtoper)
+	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/beer/rtopaz)
 
 /datum/supply_pack/rogue/alcohol/nred
 	name = "Norwandine Red"
