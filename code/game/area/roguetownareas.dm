@@ -604,6 +604,16 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	converted_type = /area/rogue/outdoors/dungeon1
 	brief_descriptor = "in old sunmarch, cast beneath the mountains of scordris"
 
+/area/rogue/under/cave/dungeon/fort_dusk
+	name = "The Forsaken Bastille"
+	icon_state = "duke"
+	first_time_text = "THE FORSAKEN BASTILLE"
+	droning_sound = 'sound/music/area/dungeon2.ogg'
+	droning_sound_dusk = null
+	droning_sound_night = null
+	converted_type = /area/rogue/outdoors/dungeon1
+	brief_descriptor = "in old sunmarch, where only the 'gulls remain to cry out"
+
 //////
 /////
 ////     TOWN AREAS

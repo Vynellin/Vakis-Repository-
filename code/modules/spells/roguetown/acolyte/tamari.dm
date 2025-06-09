@@ -6,7 +6,7 @@
 	range = 5
 	overlay_state = "tamebeast"
 	releasedrain = 30
-	charge_max = 30 SECONDS
+	recharge_time = 30 SECONDS
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	max_targets = 0
 	cast_without_targets = TRUE
@@ -40,7 +40,7 @@
 	range = 1
 	overlay_state = "blesscrop"
 	releasedrain = 30
-	charge_max = 30 SECONDS
+	recharge_time = 30 SECONDS
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	max_targets = 0
 	cast_without_targets = TRUE
@@ -64,7 +64,7 @@
 	desc = "Draw upon the the secrets of the hidden firmament to converse with the mooncursed."
 	overlay_state = "howl"
 	antimagic_allowed = FALSE
-	charge_max = 600
+	recharge_time = 600
 	ignore_cockblock = TRUE
 	use_language = TRUE
 	var/first_cast = FALSE
@@ -81,7 +81,7 @@
 		to_chat(user, span_boldnotice("The vestige of the hidden moon high above reveals His truth: the knowledge of beast-tongue was in me all along."))
 	
 	if (!first_cast)
-		to_chat(user, span_boldwarning("So it is murmured in the Earth and Air: the Call of the Moon is sacred, and to share knowledge gleaned from it with those not of Him is a SIN."))
+		to_chat(user, span_boldwarning("So it is murmured in the Earth and Air: the Call of the Moon is sacred, and to share knowledge gleaned from it with those not of Her is a SIN."))
 		to_chat(user, span_boldwarning("Ware thee well, child of Tamari."))
 		first_cast = TRUE
 	. = ..()
@@ -91,8 +91,8 @@
 	desc = "Take on the form of one of Tamari's sacred beasts."
 	overlay_state = "tamebeast"
 	releasedrain = 60
-	charge_max = 60 SECONDS
-	invocation = "Treefather grant me your form!"
+	recharge_time = 60 SECONDS
+	invocation = "Tamari grant me your form!"
 	invocation_type = "shout"
 	associated_skill = /datum/skill/magic/holy
 	devotion_cost = 80
@@ -120,13 +120,13 @@ var/static/list/druid_forms = list(
 		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/mudcrab,
 		"level" = 1
 	),
-	"rous" = list(
-		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
-		"level" = 2
-	),
 	// Intermediate forms (Level 2-3)
 	"wolf" = list(
 		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
+		"level" = 2
+	),
+	"rous" = list(
+		"path" = /mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
 		"level" = 2
 	),
 	"spider" = list(
@@ -163,8 +163,8 @@ var/static/list/druid_forms = list(
 /obj/effect/proc_holder/spell/self/tamari_shapeshift/Initialize()
 	. = ..()
 	charge_type = "recharge"
-	charge_counter = charge_max
-	charge_max = 60 SECONDS
+	charge_counter = recharge_time
+	recharge_time = 60 SECONDS
 	recharging = FALSE
 	still_recharging_msg = span_warning("[name] is still recharging!")
 
@@ -234,6 +234,7 @@ var/static/list/druid_forms = list(
 	shape.melee_damage_lower = initial(shape.melee_damage_lower)
 	shape.melee_damage_upper = initial(shape.melee_damage_upper)
 	shape.dodgetime = 20 // Allow dodging for all forms
+	shape.breedchildren = 0 // Fuck off
 
 	// Enable combat capabilities
 	shape.dextrous = TRUE
@@ -422,7 +423,7 @@ var/static/list/druid_forms = list(
 
 	if(was_dead)
 		charge_counter = 0
-		charge_max = death_cooldown
+		recharge_time = death_cooldown
 		recharging = TRUE  // Ensure recharging is set to true
 	else
 		charge_counter = 0  // Start the normal cooldown
@@ -445,8 +446,8 @@ var/static/list/druid_forms = list(
 /obj/effect/proc_holder/spell/self/tamari_shapeshift/process(delta_time)
 	if(recharging && charge_type == "recharge")
 		charge_counter += delta_time * 1  // Change from 10 to 1 since SECONDS macro already handles conversion
-		if(charge_counter >= charge_max)
-			charge_counter = charge_max
+		if(charge_counter >= recharge_time)
+			charge_counter = recharge_time
 			recharging = FALSE
 			STOP_PROCESSING(SSfastprocess, src)  // Stop processing when cooldown is complete
 			if(action)
@@ -472,7 +473,7 @@ var/static/list/druid_forms = list(
 	if(recharging)
 		to_chat(user, still_recharging_msg)
 		return FALSE
-	if(charge_counter < charge_max)
+	if(charge_counter < recharge_time)
 		to_chat(user, still_recharging_msg)
 		return FALSE
 	return TRUE
@@ -486,7 +487,7 @@ var/static/list/druid_forms = list(
 
 	// Set cooldown before restoration
 	charge_counter = 0
-	charge_max = death_cooldown  // Set to long cooldown
+	recharge_time = death_cooldown  // Set to long cooldown
 	recharging = TRUE  // Ensure recharging is set to true
 	START_PROCESSING(SSfastprocess, src)  // Ensure the spell is being processed
 

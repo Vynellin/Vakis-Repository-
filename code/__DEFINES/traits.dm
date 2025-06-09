@@ -73,6 +73,7 @@
 #define TRAIT_CHOSEN "Aeternus' Chosen"
 #define TRAIT_CINELLA_SWIM "Blessing of Cinella" //less base fatigue drain when swimming
 #define TRAIT_KASMIDIAN "Blessing of Kasmidian" //secret thieves cant language
+#define TRAIT_BEASTKIN "Tamari's Howl" // ww/beast language for tamari devotees
 #define TRAIT_VARIELLE "Blessing of Varielle" //Overjoyed by music
 #define TRAIT_FORGEBLESSED "Blessing of Nunos" //Reduces the fatigue cost of smithing a bit.
 #define TRAIT_APRICITY	"Apricity" //Decreased stamina regen time during "day"
@@ -130,6 +131,10 @@
 #define TRAIT_SLEUTH	"Sleuth"
 #define TRAIT_HARDSHELL "Hardshell"
 #define TRAIT_WOODWALKER "Woodwalker"
+#define TRAIT_ARCANE_T1 "Arcane Training (Novice)"
+#define TRAIT_ARCANE_T2 "Arcane Training (Apprentice)"
+#define TRAIT_ARCANE_T3 "Arcane Training (Expert)"
+#define TRAIT_ARCANE_T4 "Arcane Training (Master)"
 
 
 GLOBAL_LIST_INIT(roguetraits, list(
@@ -203,6 +208,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_DEATHSIGHT = span_info("I can feel when someone nearby draws Tsoridys' attention."),
 	TRAIT_FORGEBLESSED = span_info("Countless long nights spent forging metal have honed my endurance, allowing me to work an anvil far longer than most without tiring."),
 	TRAIT_KASMIDIAN = span_info("The gifts of arcana speak to me, and I speak them in kind. A language lost to history was bestowed upon me..."),
+	TRAIT_BEASTKIN = span_info("Tamari's howls on the wind sing to me, and I sing in kind. A language at the heart of all beasts was bestowed upon me..."),
 	TRAIT_VARIELLE = span_info("Varielle's gift of music makes me feel ever-the-more alive."),
 	TRAIT_APRICITY = span_info("Aeternus' light blesses and rejuvenates me, allowing me to regain my stamina quicker during the day."),
 	TRAIT_SHARPER_BLADES = span_info("My blades go dull slower, ensuring they stay sharp longer."),
@@ -242,8 +248,12 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_NOMOOD = span_info("I feel no sorrow, no joy, and no stress."),
 	TRAIT_SUNMARCHNATIVE = span_info("I've grown up and lived all my life in these lands. I can only trigger ambushes if I sprint through them."),
 	TRAIT_SLEUTH = span_info("I can spot my tracked Mark's trail without needing to approach it, and can spot them at a distance. I can track more frequently, and the act is not impaired by movement. I can examine tracks right away."),
-  TRAIT_HARDSHELL = span_info("The bulk of this armor prevents me from parrying effectively, but I can still move out of the way."),
-	TRAIT_WOODWALKER = span_notice("I can climb trees quicker, and gain climbing experience twice as quickly. I can step on thorns and branches safely in the woods. I can get twice as many things from searching bushes, and I can stand on leaves in trees safely.")
+ 	TRAIT_HARDSHELL = span_info("The bulk of this armor prevents me from parrying effectively, but I can still move out of the way."),
+	TRAIT_WOODWALKER = span_notice("I can climb trees quicker, and gain climbing experience twice as quickly. I can step on thorns and branches safely in the woods. I can get twice as many things from searching bushes, and I can stand on leaves in trees safely."),
+	TRAIT_ARCANE_T1 = span_notice("I have received basic training in the arcane arts, allowing me access to a small variety of spells useful outside of combat."),
+	TRAIT_ARCANE_T2 = span_notice("I have received advanced training in the arcane arts, allowing me to learn basic combat spells"),
+	TRAIT_ARCANE_T3 = span_notice("I am a full-fledged mage, and have access to devastating spells that affects a wide area."),
+	TRAIT_ARCANE_T4 = span_notice("I'm a master of the arcane arts, and has access to some of the most powerful spells ever devised."),
 ))
 
 // trait accessor defines

@@ -11,7 +11,7 @@
 
 
 /datum/supply_pack/rogue/Things/stampot
-	name = "Stamina potion"
+	name = "Manna potion"
 	cost = 10
 	contains = list(/obj/item/reagent_containers/glass/bottle/rogue/manapot)
 
