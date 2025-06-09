@@ -77,6 +77,7 @@
 	var/projectiles_per_fire = 1		//Projectiles per fire. Probably not a good thing to use unless you override ready_projectile().
 	gesture_required = TRUE // Projectiles need to be aimed, and is mostly offensive.
 	ignore_los = TRUE
+	var/isquiet = FALSE
 
 /obj/effect/proc_holder/spell/invoked/projectile/proc/ready_projectile(obj/projectile/P, atom/target, mob/user, iteration)
 	return
@@ -89,6 +90,8 @@
 	if(!isturf(U) || !isturf(T))
 		return FALSE
 	fire_projectile(user, target)
+	if(!isquiet)
+		user.visible_message(span_warning("[user] casts [name]!"))
 	user.newtonian_move(get_dir(U, T))
 	update_icon()
 	start_recharge()
