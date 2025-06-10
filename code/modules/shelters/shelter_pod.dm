@@ -9,8 +9,8 @@
 /obj/item/shelter_pod
 	name = "shelter acorn"
 	desc = "A magical acorn said to provide shelter to those that know how to cater to it."
-	icon_state = "acorn_medium"
 	icon = 'icons/obj/hydroponics/seeds.dmi'
+	icon_state = "shelter_acorn_medium"
 	w_class = WEIGHT_CLASS_TINY
 	/// The id we use to fetch the template datum
 	var/template_id = "shelter_tree_medium"
@@ -186,15 +186,15 @@
 
 /obj/item/shelter_pod/small
 	name = "small shelter acorn"
-	icon_state = "acorn_small"
+	icon_state = "shelter_acorn_small"
 	template_id = "shelter_tree_small"
 
 /obj/item/shelter_pod/large
 	name = "large shelter acorn"
-	icon_state = "acorn_large"
+	icon_state = "shelter_acorn_large"
 	template_id = "shelter_tree_large"
 
 /obj/item/shelter_pod/tall
 	name = "tall shelter acorn"
-	icon_state = "acorn_tall"
+	icon_state = "shelter_acorn_tall"
 	template_id = "shelter_tree_tall"
