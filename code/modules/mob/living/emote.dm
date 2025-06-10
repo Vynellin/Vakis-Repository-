@@ -1755,8 +1755,6 @@
 	key = "quest"
 	key_third_person = "looks like they need help."
 	message = "looks like they need help."
-	sound = 'sound/magic/inspire_02.ogg'
-	snd_range = 9
 	emote_type = EMOTE_VISIBLE
 	show_runechat = FALSE
 	var/toggled = FALSE
@@ -1764,10 +1762,18 @@
 /datum/emote/living/quest/run_emote(mob/living/user, params, type_override, intentional, targetted, animal)
 	. = ..()
 	if(!toggled)
-		user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "questmarker", null, MUTATIONS_LAYER, soundin = null, y_offset = 32)
+		user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "questmarker", null, MUTATIONS_LAYER, soundin = null, y_offset = 32, fadein_time = 4)
+		playsound(user, 'sound/magic/inspire_02.ogg', 100, FALSE, 9)
+		key_third_person = "no longer needs help."
+		message = "no longer needs help."
+		toggled = TRUE
 	else
-		user.clear_overhead_indicator("questmarker")
-		playsound(user, 'sound/misc/portal_enter.ogg', snd_vol, FALSE, snd_range, soundping = soundping, animal_pref = animal)
+		CALLBACK(user, TYPE_PROC_REF(/mob/living, clear_overhead_indicator), "questmarker")
+		key_third_person = initial(key_third_person)
+		playsound(user, 'sound/misc/portal_enter.ogg', 100, FALSE, 9)
+		message = initial(message)
+		sound = initial(sound)
+		toggled = FALSE
 
 /mob/living/carbon/human/verb/emote_quest()
 	set name = "Quest Marker"
