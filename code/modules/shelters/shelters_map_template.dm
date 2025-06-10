@@ -27,7 +27,6 @@
 		/obj/structure/flora/newbranch,
 		/obj/structure/flora/newleaf,
 		/obj/structure/flora/roguetree,
-		/obj/structure/flora/roguegrass/maneater,
 	)
 	/// If any objects in this list is found in the affected turfs, they will get deleted when
 	/// the shelter deploys. Contents of banned_objects get removed from this list automatically.
