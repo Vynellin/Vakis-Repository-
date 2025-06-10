@@ -10,7 +10,9 @@
 	name = "[Creature's name]"
 	desc = "[Creature's description]"
 	summoning_emote = "[Emote that will be played at the time of summoning]"
-	buff_given = /datum/status_effect/buff/familiar/[buff_id]
+	buff_given = datum of the given buff
+	inherent_spell = list of given spell(s)
+
 
 	speak = list("[random speech that the ai will do.]")
 	speak_emote = list("[how will the creature speak, aka the text between the chat and the name.]")
@@ -34,6 +36,7 @@
 */
 
 /mob/living/simple_animal/pet/familiar
+	dextrous = TRUE
 	name = "Generic Wizard familiar"
 	desc = "The spirit of what makes a familiar (You shouldn't be seeing this.)"
 	var/mob/living/carbon/familiar_summoner = null
@@ -47,7 +50,6 @@
 	mob_size = MOB_SIZE_SMALL
 	density = FALSE
 	see_in_dark = 6
-	pass_flags = PASSMOB
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	minbodytemp = 200
 	maxbodytemp = 400
@@ -58,31 +60,38 @@
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1)
 	icon = 'icons/roguetown/mob/familiars.dmi'
 	faction = list("rogueanimal")
 	melee_damage_lower = 1
 	melee_damage_upper = 2
-	footstep_type = FOOTSTEP_MOB_CLAW
+	footstep_type = FOOTSTEP_MOB_BAREFOOT
+	butcher_results = list(/obj/item/natural/stone = 1)
+	speed = 0.8
+	breedchildren = 0 //Yeah no, I'm not falling for this one.
+	base_intents = list(INTENT_HELP, INTENT_GRAB)
+	dodgetime = 20
+	held_items = list(null, null)
+
+//As far as I am aware, you cannot pat out fire as a familiar, if you add their really low HP, this seems fair.
+/mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
+	. = ..()
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living, ExtinguishMob)), 1 SECONDS)
 
 /datum/status_effect/buff/familiar
 	duration = -1
 
-/mob/living/simple_animal/pet/familiar/Initialize(mapload, mob/living/carbon/familiar_summoner)
-	. = ..()
-	familiar_summoner.apply_status_effect(buff_given)
-	desc +=(" (alt+click on the familiar to try and awaken its sentience.)")
-
 /mob/living/simple_animal/pet/familiar/death()
 	. = ..()
 	familiar_summoner.remove_status_effect(buff_given)
-
+	familiar_summoner.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_familiar)
 
 /mob/living/simple_animal/pet/familiar/pondstone_toad
 	name = "Pondstone Toad"
 	desc = "This damp, heavy toad pulses with unseen strength. Its skin is cool and lined with mineral veins."
 	summoning_emote = "A deep thrum echoes beneath your feet, and a mossy toad pushes itself free from the earth, humming low."
 	buff_given = /datum/status_effect/buff/familiar/settled_weight
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/stillness_of_stone)
+	pass_flags = PASSTABLE | PASSMOB
 
 	speak = list("Hrrrm.", "Grrup.", "Blorp.")
 	speak_emote = list("croaks low", "grumbles")
@@ -114,8 +123,9 @@
 	desc = "A ghostlike lynx, its eyes gleaming like twin moons. It never seems to blink, even when you're not looking."
 	summoning_emote = "Mist coils into feline shape, resolving into a lynx with pale fur and unblinking silver eyes."
 	buff_given = /datum/status_effect/buff/familiar/silver_glance
+	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 
-	alpha = 125
+	alpha = 100
 	icon_state = "mist"
 	icon_living = "mist"
 	icon_dead = "mist_dead"
@@ -124,8 +134,6 @@
 	speak_emote = list("purrs softly", "whispers")
 	emote_hear = list("lets out a soft yowl.", "whispers almost silently.")
 	emote_see = list("pads in a circle.", "vanishes briefly, then reappears.")
-
-	see_invisible = SEE_INVISIBLE_LIVING
 
 /datum/status_effect/buff/familiar/silver_glance
 	id = "silver_glance"
@@ -142,6 +150,7 @@
 	summoning_emote = "A faint spark dances through the air. A rat with a softly glowing tail scampers into existence."
 	buff_given = /datum/status_effect/buff/familiar/threaded_thoughts
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/inscription_cache, /obj/effect/proc_holder/spell/self/recall_cache)
+	pass_flags = PASSTABLE | PASSMOB
 
 	icon_state = "runerat"
 	icon_living = "runerat"
@@ -168,8 +177,11 @@
 	desc = "This vaporroot wisp shimmers and shifts like smoke but feels solid enough to lean on."
 	summoning_emote = "A swirl of silvery mist gathers, coalescing into a small wisp of vaporroot."
 	buff_given = /datum/status_effect/buff/familiar/quiet_resilience
+	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
+	movement_type = FLYING
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/soothing_bloom)
 
-	alpha = 125
+	alpha = 100
 	icon_state = "vaporoot"
 	icon_living = "vaporoot"
 
@@ -196,7 +208,9 @@
 	desc = "This long-bodied snake coils slowly, like a heated rope. Its breath carries a faint scent of burnt herbs."
 	summoning_emote = "Dust rises and circles before coiling into a gray-scaled creature that radiates dry, residual warmth."
 	buff_given = /datum/status_effect/buff/familiar/desert_bred_tenacity
-	inherent_spell = /obj/effect/proc_holder/spell/self/smolder_shroud
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/smolder_shroud)
+	butcher_results = list(/obj/item/ash = 1)
+	pass_flags = PASSTABLE | PASSMOB
 
 	icon_state = "ashcoiler"
 	icon_living = "ashcoiler"
@@ -221,7 +235,8 @@
 	desc = "A quick, nervy creature. Light bends strangely around its translucent body."
 	summoning_emote = "The air glints, and a translucent hare twitches into existence."
 	buff_given = /datum/status_effect/buff/familiar/lightstep
-	inherent_spell = /obj/effect/proc_holder/spell/invoked/blink/glimmer_hare
+	inherent_spell = list(/obj/effect/proc_holder/spell/invoked/blink/glimmer_hare)
+	pass_flags = PASSTABLE | PASSMOB
 
 	alpha = 125
 	icon_state = "glimmer"
@@ -270,8 +285,9 @@
 	name = "Gravemoss Serpent"
 	desc = "Its scales are flecked with lichen and grave-dust. Wherever it passes, roots twitch faintly in the soil."
 	summoning_emote = "The ground heaves faintly as a long, moss-veiled serpent uncoils from it."
+	butcher_results = list(/obj/item/natural/dirtclod = 1)
 	buff_given = /datum/status_effect/buff/familiar/burdened_coil
-	inherent_spell = /obj/effect/proc_holder/spell/self/scent_of_the_grave
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/scent_of_the_grave)
 
 	icon_state = "gravemoss"
 	icon_living = "gravemoss"
@@ -296,6 +312,15 @@
 	desc = "Its glossy feathers shimmer with shifting constellations, eyes gleaming with uncanny awareness even in the darkest shadows."
 	summoning_emote = "A rift in the air reveals a fragment of the starry void, from which a sleek crow with feathers like the night sky takes flight."
 	buff_given = /datum/status_effect/buff/familiar/starseam
+	pass_flags = PASSTABLE | PASSMOB
+	movement_type = FLYING
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/celestial_illumination)
+
+	light_system = MOVABLE_LIGHT
+	light_color = "#8A75FF"
+	light_outer_range = 5
+	light_on = FALSE
+	light_power = 7
 
 	icon_state = "crow_flying"
 	icon_living = "crow_flying"
@@ -310,7 +335,7 @@
 	speak = list("Kraa.", "Caw.", "Krrrk.")
 	speak_emote = list("caws quietly", "croaks")
 	emote_hear = list("lets out a knowing caw.", "chirps like stars ticking.")
-	emote_see = list("flickers through constellations.", "tilts its head and vanishes.")
+	emote_see = list("flickers through constellations.", "tilts its head and vanishes for a second.")
 
 /datum/status_effect/buff/familiar/starseam
 	id = "starseam"
@@ -326,6 +351,8 @@
 	desc = "Tiny and warm to the touch, this drake's wingbeats stir old memories. Runes flicker behind it like afterimages."
 	summoning_emote = "A hush falls as glowing ash collects into a fluttering emberdrake."
 	buff_given = /datum/status_effect/buff/familiar/steady_spark
+	inherent_spell = list(/obj/effect/proc_holder/spell/invoked/pyroclastic_puff)
+	butcher_results = list(/obj/item/ash = 1)
 
 	icon_state = "emberdrake"
 	icon_living = "emberdrake"
@@ -350,6 +377,7 @@
 	desc = "It flickers when not directly observed. Leaves no tracks. You're not always sure it's still nearby."
 	summoning_emote = "A ripple in the air becomes a sleek fox, its fur twitching between shades of color as it pads forth."
 	buff_given = /datum/status_effect/buff/familiar/subtle_slip
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/phantom_flicker)
 	footstep_type = null
 
 	icon_state = "ripple"
@@ -375,7 +403,8 @@
 	desc = "Its gaze is too knowing. It tilts its head as if listening to something inside your skull."
 	summoning_emote = "A thought twists into form, a tiny stoat slinks into view."
 	buff_given = /datum/status_effect/buff/familiar/noticed_thought
-	inherent_spell = /obj/effect/proc_holder/spell/invoked/invisibility
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/phantasm_fade)
+	pass_flags = PASSTABLE | PASSMOB
 
 	icon_state = "whisper"
 	icon_living = "whisper"
@@ -400,6 +429,9 @@
 	desc = "It barely moves, but seems unshakable. Vines twist gently around its limbs."
 	summoning_emote = "The ground gives a slow rumble. A turtle with a bark-like shell emerges from the soil."
 	buff_given = /datum/status_effect/buff/familiar/worn_stone
+	pass_flags = PASSMOB
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/verdant_sprout)
+	speed = 1
 
 	icon_state = "thornback"
 	icon_living = "thornback"

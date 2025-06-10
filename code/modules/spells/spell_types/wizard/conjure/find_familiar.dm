@@ -1,12 +1,12 @@
-/obj/effect/proc_holder/spell/invoked/findfamiliar
+/obj/effect/proc_holder/spell/self/findfamiliar
 	name = "Find Familiar"
-	desc = "Summon a loyal magical companion to aid you in your adventures. Reusing the spell on a familiar might awaken them to sentience."
+	desc = "Summon a loyal magical companion to aid you in your adventures. Reusing the spell with an active familiar can awaken its sentience."
 	overlay_state = "null"
 	sound = list('sound/magic/whiteflame.ogg')
 	active = FALSE
 
 	recharge_time = 5 SECONDS
-	chargetime = 1 SECONDS
+	chargetime = 2 SECONDS
 
 	warnie = "spellwarning"
 
@@ -31,11 +31,11 @@
 		"Hollow Antlerling (+1 Luck)" = /mob/living/simple_animal/pet/familiar/hollow_antlerling,
 	)
 
-/obj/effect/proc_holder/spell/invoked/findfamiliar/empowered/
+/obj/effect/proc_holder/spell/self/findfamiliar/empowered/
 	name = "Empowered Find Familiar"
 	invocation = "Tegos, nemetos trēwos."
 
-/obj/effect/proc_holder/spell/invoked/findfamiliar/empowered/Initialize()
+/obj/effect/proc_holder/spell/self/findfamiliar/empowered/Initialize()
 	. = ..()
 	// Extended list offered in some conditions.
 	familiars += list(
@@ -47,62 +47,56 @@
 		"Thornback Turtle (+1 Strength, +1 Constitution)" = /mob/living/simple_animal/pet/familiar/thornback_turtle,
 	)
 
-/obj/effect/proc_holder/spell/invoked/findfamiliar/cast(list/targets, mob/user)
+/obj/effect/proc_holder/spell/self/findfamiliar/cast(list/targets, mob/living/carbon/user)
 	..()
-	var/atom/target = targets[1]
-	if(!(istype(target, /turf/open)) || !(istype(target, /mob/living/simple_animal/pet/familiar)))
-		return
-	if(istype(target, /turf/open/))
-		for(var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.player_list)
-			if(familiar_check.familiar_summoner == user)
-				to_chat(user, span_notice("You alread have a familiar."))
-				revert_cast()
+	for(var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.alive_mob_list)
+		if(familiar_check.familiar_summoner == user)
+			var/list/mob/candidate = pollGhostCandidates("Do you want to play as [span_notice("[familiar_check.name]")]?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
+			if(LAZYLEN(candidate))
+				var/mob/chosen_one =  pick(candidate)
+				if(istype(chosen_one, /mob/dead/new_player))
+					var/mob/dead/new_player/menu_gamer = chosen_one
+					menu_gamer.close_spawn_windows()
+				var/mob/living/simple_animal/pet/familiar/awakener = familiar_check
+				awakener.key = chosen_one.key
+				chosen_one.mind.transfer_to(awakener)
+				awakener.grant_all_languages(omnitongue=TRUE)
+				var/new_name = input(awakener, "What is your name?", "Name") as text|null
+				awakener.fully_replace_character_name(null, new_name)
+				awakener.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_summoner)
+				user.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_familiar)
+				if(awakener.inherent_spell)
+					for(var/spell_path in awakener.inherent_spell)
+						awakener.mind.AddSpell(new spell_path)
+				//Disabling the AI
+				awakener.can_have_ai = FALSE
+				awakener.AIStatus = AI_OFF
+				awakener.stop_automated_movement = TRUE  // Stop automated movement
+				awakener.stop_automated_movement_when_pulled = TRUE  // Stop movement when pulled
+				awakener.wander = FALSE  // Disable wandering
 				return
-		var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
-		var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
-		fam = new familiar_type(get_turf(target))
-		fam.familiar_summoner = user
-		user.visible_message(span_notice("[fam.summoning_emote]"))
-		fam.fully_replace_character_name(null, "[user]'s familiar")	
-	else 
-		var/mob/living/simple_animal/pet/familiar/targeted_familiar
-		if(!targeted_familiar.familiar_summoner == user)
-			to_chat(user, span_notice("You are not this familiar's master."))
-			return
-		var/list/mob/candidate = pollGhostCandidates("Do you want to play as [span_notice("[targeted_familiar.name]")]?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
-		if(LAZYLEN(candidate))
-			var/mob/chosen_one =  pick(candidate)
-			var/mob/living/simple_animal/pet/familiar/awakener = target
-			awakener.key = chosen_one.key
-			chosen_one.mind.transfer_to(awakener)
-			awakener.grant_all_languages(omnitongue=TRUE)
-			var/new_name = input(awakener, "What is your name?", "Name") as text|null
-			awakener.fully_replace_character_name(null, new_name)
-			awakener.mind.AddSpell(/obj/effect/proc_holder/spell/self/message/message_summoner)
-			awakener.mind.AddSpell(/obj/effect/proc_holder/spell/self/message/message_familiar)
-			if(awakener.inherent_spell)
-				for(var/spell_path in awakener.inherent_spell)
-					awakener.mind.AddSpell(spell_path)
-			//Disabling the AI
-			awakener.can_have_ai = FALSE
-			awakener.AIStatus = AI_OFF
-			awakener.stop_automated_movement = TRUE  // Stop automated movement
-			awakener.stop_automated_movement_when_pulled = TRUE  // Stop movement when pulled
-			awakener.wander = FALSE  // Disable wandering
-		else
-			to_chat(user, span_notice("The familiar didn't awaken."))
+			else
+				to_chat(user, span_notice("The familiar didn't awaken."))
+				return
+	var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
+	var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
+	fam = new familiar_type(get_step(user, user.dir))
+	fam.familiar_summoner = user
+	user.visible_message(span_notice("[fam.summoning_emote]"))
+	fam.fully_replace_character_name(null, "[user]'s familiar")
+	user.apply_status_effect(fam.buff_given)
+	return TRUE
 
-/obj/effect/proc_holder/spell/self/message/message_familiar
+/obj/effect/proc_holder/spell/self/message_familiar
 	name = "Message Familiar"
 	desc = "Whisper a message in your Familar's head."
 
-/obj/effect/proc_holder/spell/self/message/message_familiar/cast(list/targets, mob/user)
+/obj/effect/proc_holder/spell/self/message_familiar/cast(list/targets, mob/user)
 	. = ..()
-	var/mob/living/simple_animal/pet/familiar/familiar = null
+	var/mob/living/simple_animal/pet/familiar/familiar
 	for(var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.player_list)
 		if(familiar_check.familiar_summoner == user)
 			familiar = familiar_check
-			return
 	if(!familiar)
 		revert_cast()
 		to_chat(user, "You cannot sense your familiar's mind.")
@@ -120,3 +114,13 @@
 	user.whisper(message)
 	log_game("[key_name(user)] sent a message to [key_name(familiar)] with contents [message]")
 	return TRUE
+
+/datum/virtue/utility/forgotten_bond
+	name = "Forgotten Bond"
+	desc = "Long before the Ridge was settled, old pacts were made... and I remember them. My bond reaches deeper than most, calling on familiars that stir uneasily in memory and myth. They are stranger, older... and they chose me."
+	custom_text = "Teaches the empowered version of the Find Familiar spell."
+	
+	
+/datum/virtue/utility/forgotten_bond/apply_to_human(mob/living/carbon/human/recipient)
+	if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/self/findfamiliar))
+		recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/findfamiliar)
