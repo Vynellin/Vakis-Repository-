@@ -189,3 +189,9 @@
 /datum/mood_event/area/add_effects(_mood_change, _description)
 	mood_change = _mood_change
 	description = _description
+
+// Fsalute mood event that lasts 15 minutes
+/datum/mood_event/fsalute
+	description = "<span class='nicegreen'>I feel uplifted by the priest’s sacred salute.</span>\n"
+	mood_change = 7
+	timeout = 15 MINUTES

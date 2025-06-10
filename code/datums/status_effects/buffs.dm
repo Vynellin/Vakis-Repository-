@@ -320,3 +320,25 @@
 /datum/status_effect/antimagic/on_remove()
 	REMOVE_TRAIT(owner, TRAIT_ANTIMAGIC, MAGIC_TRAIT)
 	owner.visible_message("<span class='warning'>[owner]'s dull aura fades away...</span>")
+
+//  Peaceful notification to sync with fortune pot (currently using fortune pot buff)
+/datum/status_effect/buff/peaceful_aura
+	id = "peaceful"
+	duration = 3000
+
+	/datum/status_effect/buff/peaceful_aura/on_apply()
+		owner.visible_message(
+			"<span class='notice'>A calm warmth flows through [owner]’s heart.</span>",
+		)
+		return ..()
+
+	/datum/status_effect/buff/peaceful_aura/on_remove()
+		owner.visible_message(
+			"<span class='warning'>The calm warmth around [owner] fades away.</span>",
+		)
+		return ..()
+
+/atom/movable/screen/alert/status_effect/buff/peaceful_aura
+    name = "Peace"
+    desc = ""
+    icon_state = "buff"
