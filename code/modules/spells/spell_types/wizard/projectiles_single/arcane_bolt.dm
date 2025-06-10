@@ -15,7 +15,9 @@
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	spell_tier = 3
-	invocation_type = "none"
+	invocation_type = "emote"
+	invocation = span_warning("%user% casts Arcane Bolt!")
+	invocation_emote_self = span_warning("I cast Arcane Bolt!")
 	glow_color = GLOW_COLOR_ARCANE
 	glow_intensity = GLOW_INTENSITY_LOW
 	charging_slowdown = 3

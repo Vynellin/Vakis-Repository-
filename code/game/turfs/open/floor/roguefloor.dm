@@ -61,7 +61,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
-	slowdown = 0
 
 /turf/open/floor/rogue/twig
 	icon_state = "twig"
@@ -70,7 +69,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
-	slowdown = 0
 
 /turf/open/floor/rogue/twig/Initialize()
 	dir = pick(GLOB.cardinals)
@@ -157,7 +155,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
-	slowdown = 0
 	smooth = SMOOTH_TRUE
 	neighborlay = "snowedge"
 
@@ -178,7 +175,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
-	slowdown = 0
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/snowrough,)
 	neighborlay = "snowroughedge"
@@ -200,7 +196,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
-	slowdown = 0
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/snow,
 						/turf/open/floor/rogue/snowrough,)
@@ -219,7 +214,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
-	slowdown = 0
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/snowpatchy,
 						/turf/open/floor/rogue/snow,
@@ -323,7 +317,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/dirtland.wav'
-	slowdown = 2
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/grass,
 						/turf/open/floor/rogue/grassred, 
@@ -347,7 +340,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/dirtland.wav'
-	slowdown = 2
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue/grass,
 						/turf/open/floor/rogue/grassred, 
@@ -500,7 +492,6 @@
 						/turf/open/floor/rogue/snow,
 						/turf/open/floor/rogue/snowrough,)
 	neighborlay = "roadedge"
-	slowdown = 0
 
 /turf/open/floor/rogue/dirt/road/attack_right(mob/user)
 	return
@@ -520,7 +511,6 @@
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/dirtland.wav'
 	baseturfs = /turf/open/floor/rogue/sand
-	slowdown = 0
 
 /turf/open/floor/rogue/sand/Initialize(mapload)
 	. = ..()
@@ -537,7 +527,6 @@
 	barefootstep = FOOTSTEP_SOFT_BAREFOOT
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	landsound = 'sound/foley/jumpland/dirtland.wav'
-	slowdown = 0
 
 /turf/proc/roguesmooth(adjacencies)
 	var/list/New
@@ -635,7 +624,6 @@
 	landsound = 'sound/foley/jumpland/dirtland.wav'
 	smooth = SMOOTH_TRUE
 	canSmoothWith = list(/turf/open/floor/rogue, /turf/closed/mineral, /turf/closed/wall/mineral)
-	slowdown = 0
 
 /turf/open/floor/rogue/underworld/road/Initialize()
 	. = ..()
