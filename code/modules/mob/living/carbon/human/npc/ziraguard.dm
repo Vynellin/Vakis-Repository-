@@ -3,7 +3,7 @@ GLOBAL_LIST_INIT(ziraguard_aggro, world.file2list("strings/rt/drowaggrolines.txt
 /mob/living/carbon/human/species/elf/dark/ziraguard
 	aggressive=1
 	mode = AI_IDLE
-	faction = list("drow")
+	faction = list("ziraguard","drow")
 	ambushable = FALSE
 	dodgetime = 30
 	flee_in_pain = TRUE
@@ -39,7 +39,7 @@ GLOBAL_LIST_INIT(ziraguard_aggro, world.file2list("strings/rt/drowaggrolines.txt
 
 /mob/living/carbon/human/species/elf/dark/ziraguard/after_creation()
 	..()
-	job = "Drow Raider"
+	job = "Guardian of Secrets"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
@@ -116,22 +116,22 @@ GLOBAL_LIST_INIT(ziraguard_aggro, world.file2list("strings/rt/drowaggrolines.txt
 
 /datum/outfit/job/roguetown/human/species/elf/dark/ziraguard/pre_equip(mob/living/carbon/human/H)
 	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/lord
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 	pants = /obj/item/clothing/under/roguetown/chainlegs/iron
-	cloak = /obj/item/clothing/cloak/raincloak/furcloak/black
+	cloak = /obj/item/clothing/cloak/templar/zira
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	if(prob(50))
 		wrists = /obj/item/clothing/wrists/roguetown/bracers
 	mask = /obj/item/clothing/mask/rogue/facemask/steel
 	if(prob(50))
 		mask = /obj/item/clothing/mask/rogue/ragmask/black
-	head = /obj/item/clothing/head/roguetown/roguehood/black
+	head = /obj/item/clothing/head/roguetown/zirahood
 	if(prob(50))
-		head = /obj/item/clothing/head/roguetown/helmet/kettle
+		head = /obj/item/clothing/head/roguetown/helmet/heavy/zirahelm
 	neck = /obj/item/clothing/neck/roguetown/bevor
 	if(prob(50))
 		neck = /obj/item/clothing/neck/roguetown/gorget
-	gloves = /obj/item/clothing/gloves/roguetown/chain
+	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	H.STASTR = rand(16,18)
 	H.STASPD = rand(16,18)
@@ -140,7 +140,7 @@ GLOBAL_LIST_INIT(ziraguard_aggro, world.file2list("strings/rt/drowaggrolines.txt
 	H.STAPER = rand(12,14)
 	H.STAINT = rand(12,14)
 	if(prob(50))
-		r_hand = /obj/item/rogueweapon/sword/falx
-		l_hand = /obj/item/rogueweapon/shield/tower
+		r_hand = /obj/item/rogueweapon/sword/falchion
+		l_hand = /obj/item/rogueweapon/shield/buckler
 	else
-		r_hand = /obj/item/rogueweapon/halberd/glaive
+		r_hand = /obj/item/rogueweapon/halberd/bardiche
