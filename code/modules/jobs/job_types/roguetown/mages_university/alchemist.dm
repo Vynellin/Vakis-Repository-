@@ -4,7 +4,7 @@
 	department_flag = MAGES_UNIVERSITY
 	selection_color = JCOLOR_MAGES
 	faction = "Station"
-	total_positions = 1
+	total_positions = 0 //disabled until people come and give it some love, Role at the moment is replaced both by head mage and archivist.
 	spawn_positions = 1
 
 	allowed_races = RACES_ALL_KINDS
@@ -24,7 +24,7 @@
 /datum/outfit/job/roguetown/alchemist
 	name = "Alchemist"
 	jobtype = /datum/job/roguetown/alchemist
-	backpack_contents = list(/obj/item/book/granter/spellbook/magician = 1)
+	backpack_contents = list(/obj/item/book/spellbook = 1)
 
 /datum/outfit/job/roguetown/alchemist/pre_equip(mob/living/carbon/human/H)
 	..()

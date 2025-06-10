@@ -9,8 +9,9 @@
 	chargedloop = null
 	sound = 'sound/magic/whiteflame.ogg'
 	associated_skill = /datum/skill/magic/arcane
+	gesture_required = TRUE // Potential offensive use, need a target
 	antimagic_allowed = TRUE
-	charge_max = 15 SECONDS
+	recharge_time = 15 SECONDS
 	miracle = FALSE
 
 /obj/effect/proc_holder/spell/invoked/bonechill/cast(list/targets, mob/living/user)
@@ -45,9 +46,11 @@
 	chargedloop = null
 	sound = 'sound/items/beartrap.ogg'
 	associated_skill = /datum/skill/magic/arcane
+	gesture_required = TRUE // Offensive spell
 	antimagic_allowed = TRUE
-	charge_max = 15 SECONDS
+	recharge_time = 15 SECONDS
 	miracle = FALSE
+	hide_charge_effect = TRUE
 
 /obj/effect/proc_holder/spell/invoked/eyebite/cast(list/targets, mob/living/user)
 	. = ..()
@@ -73,8 +76,9 @@
 	no_early_release = TRUE
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
+	gesture_required = TRUE // Summon spell
 	associated_skill = /datum/skill/magic/arcane
-	charge_max = 60 SECONDS
+	recharge_time = 60 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/raise_undead/cast(list/targets, mob/living/user)
 	. = ..()
@@ -113,9 +117,11 @@
 	no_early_release = TRUE
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
+	gesture_required = TRUE // Summon spell
 	associated_skill = /datum/skill/magic/arcane
-	charge_max = 30 SECONDS
-	var/cabal_affine = FALSE
+	recharge_time = 30 SECONDS
+	hide_charge_effect = TRUE
+	var/is_summoned = FALSE
 
 /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/cast(list/targets, mob/living/user)
 	. = ..()
@@ -124,23 +130,23 @@
 	if(isopenturf(T))
 		switch(skeleton_roll)
 			if(1 to 20)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/axe(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/axe(T, user, is_summoned)
 			if(21 to 40)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/spear(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/spear(T, user, is_summoned)
 			if(41 to 60)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/guard(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/guard(T, user, is_summoned)
 			if(61 to 80)
-				new /mob/living/simple_animal/hostile/rogue/skeleton/bow(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton/bow(T, user, is_summoned)
 			if(81 to 100)
-				new /mob/living/simple_animal/hostile/rogue/skeleton(T, user, cabal_affine)
+				new /mob/living/simple_animal/hostile/rogue/skeleton(T, user, is_summoned)
 		return TRUE
 	else
 		to_chat(user, span_warning("The targeted location is blocked. My summon fails to come forth."))
 		return FALSE
 
 /obj/effect/proc_holder/spell/invoked/raise_lesser_undead/necromancer
-	cabal_affine = TRUE
-	charge_max = 45 SECONDS
+	is_summoned = TRUE
+	recharge_time = 45 SECONDS
 
 /obj/effect/proc_holder/spell/invoked/projectile/sickness
 	name = "Ray of Sickness"
@@ -158,7 +164,7 @@
 	charging_slowdown = 1
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
-	charge_max = 15 SECONDS
+	recharge_time = 15 SECONDS
 
 /obj/effect/proc_holder/spell/self/suicidebomb
 	name = "Calcic Outburst"
@@ -166,7 +172,7 @@
 	overlay_state = "tragedy"
 	chargedrain = 0
 	chargetime = 0
-	charge_max = 10 SECONDS
+	recharge_time = 10 SECONDS
 	sound = 'sound/magic/swap.ogg'
 	warnie = "spellwarning"
 	chargedloop = /datum/looping_sound/invokegen
@@ -212,3 +218,53 @@
 	exp_light = 2
 	exp_flash = 2
 	exp_fire = 0
+	
+/obj/effect/proc_holder/spell/targeted/gravemark
+	name = "Mark of the Gravebound"
+	desc = "Adds or removes a target from the list of allies exempt from your undead's aggression."
+
+/obj/effect/proc_holder/spell/targeted/gravemark/cast(list/targets, mob/user)
+	. = ..()
+	var/faction_tag = "[user.mind.name]_[user.ckey]_faction"
+
+	for (var/mob/living/mob in targets)
+		if (!mob?.mind)
+			to_chat(user, span_warning("This one lacks the spark of sentience."))
+			continue
+
+		if (mob == user)
+			to_chat(user, span_warning("It would be unwise to make an enemy of your own skeletons."))
+			continue
+
+		var/adding = TRUE
+
+		if (faction_tag in mob.mind.current.faction)
+			mob.mind.current.faction -= faction_tag
+			mob.mind.summons_additional_factions -= faction_tag
+			user.say("Your safety is forfeit, your fate bone-bound.")
+			adding = FALSE
+		else
+			mob.mind.current.faction |= faction_tag
+			mob.mind.summons_additional_factions |= faction_tag
+			user.say("Marked by bone and spared by death.")
+
+		// Update the target's summons
+		if (islist(mob.mind.summons_list))
+			for (var/mob/living/summon in mob.mind.summons_list)
+				if (!summon || QDELETED(summon))
+					continue
+				if (adding)
+					summon.faction |= faction_tag
+				else
+					summon.faction -= faction_tag
+
+		// Update the caster's summons to respect or remove the target
+		var/target_tag = "[mob.mind.name]_[mob.ckey]_faction"
+		if (islist(user.mind.summons_list))
+			for (var/mob/living/summon in user.mind.summons_list)
+				if (!summon || QDELETED(summon))
+					continue
+				if (adding)
+					summon.faction |= target_tag
+				else
+					summon.faction -= target_tag

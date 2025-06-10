@@ -112,13 +112,19 @@
 		if("idle")
 			return pick('sound/vo/mobs/skel/skeleton_idle (1).ogg','sound/vo/mobs/skel/skeleton_idle (2).ogg','sound/vo/mobs/skel/skeleton_idle (3).ogg')
 
-
-/mob/living/simple_animal/hostile/rogue/skeleton/Initialize(mapload, mob/user, cabal_affine = FALSE)
+//Sorta duct tape thing. Solaris doesn't have the Necromancers as part of the Undead faction. So they are attacked by PVE undead. Removing the necromancer's skeletons from the undead faction so they can defend their master.
+/mob/living/simple_animal/hostile/rogue/skeleton/Initialize(mapload, mob/user, is_summoned = FALSE)
 	. = ..()
 	if(user)
-		summoner = user.name
-		if (cabal_affine)
-			faction |= "cabal"
+		summoner = user.mind.name
+		if (is_summoned)
+			faction |= "[user.mind.name]_[user.ckey]_faction"
+			user.mind.summons_list += src
+			for (var/faction_to_add in user.mind.summons_additional_factions)
+				faction |= faction_to_add
+			if (!("undead" in user.faction)) //We don't want the lich antag to get murdered by its own minion
+				name = "Deathbound"
+				faction -= "undead"
 
 /mob/living/simple_animal/hostile/rogue/skeleton/Life()
 	. = ..()

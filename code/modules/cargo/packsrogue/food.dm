@@ -21,6 +21,15 @@
 					/obj/item/reagent_containers/glass/bottle/rogue/manapot,
 				)
 
+/datum/supply_pack/rogue/food/stampot
+	name = "Stamina Potion"
+	cost = 80
+	contains = list(
+					/obj/item/reagent_containers/glass/bottle/rogue/stampot,
+					/obj/item/reagent_containers/glass/bottle/rogue/stampot,
+					/obj/item/reagent_containers/glass/bottle/rogue/stampot,
+				)
+
 /datum/supply_pack/rogue/food/wineb
 	name = "Wine"
 	cost = 45

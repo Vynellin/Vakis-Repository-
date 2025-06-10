@@ -1,20 +1,17 @@
 /datum/virtue/combat/magical_potential
 	name = "Arcane Potential"
-	desc = "I grasped the basics of arcane magic at an early age, and have been able to prestidigitate for as long as I can remember."
-	custom_text = "Combat classes receive a weaker version of this virtue -- they get fewer spellpoints."
+	desc = "Either by natural talent or limited formal training, I posess a modicum sum of Arcane knowledge, which aids me on my day to day chores."
+	custom_text = "+1 to Arcane, Up to Legendary. if they don't have any Arcane prior, they get 2 spell points and access to Tier 1 spells. If they do, they get +1 Intelligence. "
 	added_skills = list(list(/datum/skill/magic/arcane, 1, 6))
 
 /datum/virtue/combat/magical_potential/apply_to_human(mob/living/carbon/human/recipient)
-	if (!recipient.mind?.get_skill_level(/datum/skill/magic/arcane)) // we can do this because apply_to is always called first
-		recipient.mind?.adjust_spellpoints(-4) // Limits skill gain through for non-initial arcanes
+	if (!is_arcane(recipient)) // we can do this because apply_to is always called first
 		if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/targeted/touch/prestidigitation))
 			recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/prestidigitation)
+		ADD_TRAIT(recipient, TRAIT_MAGIC_TALENT, TRAIT_GENERIC)
+		recipient.mind?.adjust_spellpoints(2)
 	else
-		if (!HAS_TRAIT(recipient, TRAIT_MEDIUMARMOR) && !HAS_TRAIT(recipient, TRAIT_HEAVYARMOR) && !HAS_TRAIT(recipient, TRAIT_DODGEEXPERT))
-			recipient.mind?.adjust_spellpoints(1) // 1 extra spellpoint if you're already arcane
-		else
-			recipient.mind?.adjust_spellpoints(2) // This lessons the -6 that applies to martial classes by default (currently only pontifex at time of change).
-			to_chat(recipient, span_notice("My virtue lessens the limitations of my magical reach."))
+		recipient.change_stat("intelligence", 1)
 
 /datum/virtue/combat/devotee
 	name = "Devotee"
@@ -25,7 +22,7 @@
 /datum/virtue/combat/devotee/apply_to_human(mob/living/carbon/human/recipient)
 	if (!recipient.mind)
 		return
-	if (!recipient.devotion)
+	if (!is_divine(recipient))
 		// only give non-devotionists orison... and t0 for some reason (this is probably a bad idea)
 		var/datum/devotion/new_faith = new /datum/devotion(recipient, recipient.patron)
 		var/datum/patron/our_patron = new_faith.patron
@@ -33,7 +30,7 @@
 		new_faith.max_progression = CLERIC_REQ_1 - 20
 		recipient.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
 		recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/targeted/touch/orison)
-		if (!HAS_TRAIT(recipient, TRAIT_MEDIUMARMOR) && !HAS_TRAIT(recipient, TRAIT_HEAVYARMOR) && !HAS_TRAIT(recipient, TRAIT_DODGEEXPERT) && !HAS_TRAIT(recipient, TRAIT_CRITICAL_RESISTANCE))
+		if (!is_combat_class(recipient))
 			recipient.mind?.AddSpell(new our_patron.t0)
 	else
 		// for devotionists, bump up their maximum 1 tier and give them a TINY amount of passive devo gain

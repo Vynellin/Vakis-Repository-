@@ -17,8 +17,10 @@
 	whitelist_req = TRUE
 
 	give_bank_account = 30
-	min_pq = 3 // Please don't kill the duke by operating on strong intent. Play apothecary until you're deserving of the great white beak of doom
+	min_pq = 3 // Please don't kill the marquis by operating on strong intent. Play barber surgeon until you're deserving of the great white beak of doom
 	max_pq = null
+
+	virtue_restrictions = list(/datum/virtue/utility/noble) // This one I'm iffy on. You're of the court; yeah, but you're still a churchie. IDK.
 	round_contrib_points = 3
 
 	cmode_music = 'sound/music/combat_physician.ogg'
@@ -75,3 +77,34 @@
 	var/datum/devotion/C = new /datum/devotion(H, H.patron) // This creates the cleric holder used for devotion spells
 	C.grant_spells_deacon(H) // There can only be one true priest, so you're not as good.
 	H.verbs += list(/mob/living/carbon/human/proc/devotionreport, /mob/living/carbon/human/proc/clericpray)
+	switch(H.patron?.type)
+		if(/datum/patron/lording_three/aeternus)
+			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
+		if(/datum/patron/lording_three/zira)
+			neck = /obj/item/clothing/neck/roguetown/psicross/zira
+		if(/datum/patron/peoples_pantheon/cinella)
+			neck = /obj/item/clothing/neck/roguetown/psicross/cinella	
+		if(/datum/patron/three_sisters/tamari)
+			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
+		if(/datum/patron/lording_three/tsoridys)
+			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
+		if(/datum/patron/peoples_pantheon/varielle)
+			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
+		if(/datum/patron/three_sisters/nunos)
+			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
+		if(/datum/patron/peoples_pantheon/carthus)
+			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
+		if(/datum/patron/three_sisters/kasmidian)
+			var/list/psicross_options = list(
+				/obj/item/clothing/neck/roguetown/psicross, \
+				/obj/item/clothing/neck/roguetown/psicross/aeternus, \
+				/obj/item/clothing/neck/roguetown/psicross/zira, \
+				/obj/item/clothing/neck/roguetown/psicross/cinella, \
+				/obj/item/clothing/neck/roguetown/psicross/tamari, \
+				/obj/item/clothing/neck/roguetown/psicross/tsoridys, \
+				/obj/item/clothing/neck/roguetown/psicross/carthus, \
+				/obj/item/clothing/neck/roguetown/psicross/nunos, \
+				/obj/item/clothing/neck/roguetown/psicross/varielle, \
+				/obj/item/clothing/neck/roguetown/psicross/wood, \
+			)
+			neck = pick(psicross_options) // Don't care to move this off xylix behavior yet
