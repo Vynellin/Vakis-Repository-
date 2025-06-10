@@ -256,8 +256,8 @@
 				/obj/item/natural/fibers = 1)
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/sewing/noc
-	name = "tabard, noc (1 fibers, 3 cloth)"
+/datum/crafting_recipe/roguetown/sewing/zira
+	name = "tabard, zira (1 fibers, 3 cloth)"
 	result = list(/obj/item/clothing/cloak/templar/zira)
 	reqs = list(/obj/item/natural/cloth = 3,
 				/obj/item/natural/fibers = 1)

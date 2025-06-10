@@ -35,8 +35,10 @@
 
 	if(isliving(the_target)) //Targetting vs living mobs
 		var/mob/living/L = the_target
-		if(L.summoner && L.summoner == the_target.name) // won't attack whomever summoned it
-			return FALSE
+		if(istype(the_target, /mob/living/carbon/human))
+			var/mob/living/carbon/human/carbon_target = the_target
+			if(living_mob.summoner && carbon_target.mind && living_mob.summoner == carbon_target.mind.name) // won't attack whomever summoned it
+				return FALSE
 		if(faction_check(living_mob, L) || L.stat)
 			return FALSE
 		return TRUE

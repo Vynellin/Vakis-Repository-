@@ -242,7 +242,7 @@
 	keys = list(/obj/item/roguekey/mages_university, /obj/item/roguekey/mages_university/private)
 
 /obj/item/storage/keyring/head_mage
-	keys = list(/obj/item/roguekey/mages_university, /obj/item/roguekey/mages_university/private, /obj/item/roguekey/mages_university/head_mage)
+	keys = list(/obj/item/roguekey/mages_university, /obj/item/roguekey/mages_university/private, /obj/item/roguekey/mages_university/head_mage, /obj/item/roguekey/archive, /obj/item/roguekey/artificer)
 
 /obj/item/storage/keyring/artificer
 	keys = list(/obj/item/roguekey/mages_university, /obj/item/roguekey/mages_university/private, /obj/item/roguekey/artificer)
