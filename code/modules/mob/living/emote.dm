@@ -1767,7 +1767,7 @@
 		user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "questmarker", null, MUTATIONS_LAYER, soundin = null, y_offset = 32)
 	else
 		user.clear_overhead_indicator("questmarker")
-		playsound(user, 'portal_enter.ogg', snd_vol, FALSE, snd_range, soundping = soundping, animal_pref = animal)
+		playsound(user, 'sound/misc/portal_enter.ogg', snd_vol, FALSE, snd_range, soundping = soundping, animal_pref = animal)
 
 /mob/living/carbon/human/verb/emote_quest()
 	set name = "Quest Marker"
