@@ -1,6 +1,6 @@
 /obj/structure/roguemachine/noticeboard
 	name = "notice board"
-	desc = "A large wooden notice board, carrying postings from all across Solaris. A ZAD perch sits atop it."
+	desc = "A large wooden notice board, carrying postings from all across Solaris. A crow's perch sits atop it."
 	icon = 'icons/roguetown/misc/64x64.dmi'
 	icon_state = "noticeboard"
 	density = TRUE
@@ -52,7 +52,7 @@
 
 /obj/structure/roguemachine/boardbarrier //Blocks sprite locations
 	name = ""
-	desc = "A large wooden notice board, carrying postings from all across Solaris. A ZAD perch sits atop it."
+	desc = "A large wooden notice board, carrying postings from all across Solaris. A crow's perch sits atop it."
 	icon = 'icons/roguetown/underworld/underworld.dmi'
 	icon_state = "spiritpart"
 	density = TRUE
@@ -157,7 +157,7 @@
 	for(var/obj/structure/roguemachine/noticeboard/board in SSroguemachine.noticeboards)
 		if(board != src)
 			playsound(board, 'sound/ambience/noises/birds (7).ogg', 50, FALSE, -1)
-			board.visible_message(span_smallred("A ZAD lands, delivering a new posting!"))
+			board.visible_message(span_smallred("A crow lands, delivering a new posting!"))
 
 
 
@@ -169,12 +169,12 @@
 	if(!inputtitle)
 		return
 	if(length(inputtitle) > 50)
-		to_chat(guy, span_warning("Too long! You shall surely overburden the zad with this novel!"))
+		to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 		return
 	var/inputmessage = stripped_multiline_input(guy, "What shall I write for this posting?", "NOTICEBOARD", no_trim=TRUE)
 	if(inputmessage)
 		if(length(inputmessage) > 2000)
-			to_chat(guy, span_warning("Too long! You shall surely overburden the zad with this novel!"))
+			to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 			return
 	else
 		return
@@ -182,11 +182,11 @@
 	if(!inputname)
 		return
 	if(length(inputname) > 50)
-		to_chat(guy, span_warning("Too long! You shall surely overburden the zad with this novel!"))
+		to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 		return
 	var/inputrole = stripped_input(guy, "What personal title shall I use on the posting?", "NOTICEBOARD", null)
 	if(length(inputrole) > 50)
-		to_chat(guy, span_warning("Too long! You shall surely overburden the zad with this novel!"))
+		to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 		return
 	add_post(inputmessage, inputtitle, inputname, inputrole, guy.real_name, FALSE)
 	guy.apply_status_effect(/datum/status_effect/debuff/postcooldown)
@@ -194,7 +194,7 @@
 	for(var/obj/structure/roguemachine/noticeboard/board in SSroguemachine.noticeboards)
 		if(board != src)
 			playsound(board, 'sound/ambience/noises/birds (7).ogg', 50, FALSE, -1)
-			board.visible_message(span_smallred("A ZAD lands, delivering a new posting!"))
+			board.visible_message(span_smallred("A crow lands, delivering a new posting!"))
 
 
 /obj/structure/roguemachine/noticeboard/proc/remove_post(mob/living/carbon/human/guy)
