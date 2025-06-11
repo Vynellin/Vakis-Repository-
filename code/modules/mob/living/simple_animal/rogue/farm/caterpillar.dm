@@ -1,5 +1,5 @@
 
-/mob/living/simple_animal/hostile/retaliate/rogue/caterpillar
+/mob/living/simple_animal/hostile/retaliate/rogue/mothcat
 	icon = 'icons/roguetown/mob/monster/caterpillar.dmi'
 	name = "\improper cat'erpillar"
 	desc = ""
@@ -16,9 +16,21 @@
 	speak_chance = 2
 	turns_per_move = 5
 	faction = list("chickens")
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/fat = 1, /obj/item/reagent_containers/food/snacks/rogue/meat/poultry = 1, /obj/item/natural/bone = 2, /obj/item/alch/sinew = 1, /obj/item/alch/bone = 1, /obj/item/alch/viscera = 1)
-	var/egg_type = /obj/item/reagent_containers/food/snacks/egg
-	food_type = list(/obj/item/reagent_containers/food/snacks/grown/berries/rogue,/obj/item/natural/worms,/obj/item/reagent_containers/food/snacks/grown/wheat,/obj/item/reagent_containers/food/snacks/grown/oat)
+	butcher_results = list(
+		/obj/item/reagent_containers/food/snacks/fat = 1, 
+		/obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1, 
+		/obj/item/natural/bone = 2, 
+		/obj/item/alch/sinew = 1, 
+		/obj/item/alch/bone = 1, 
+		/obj/item/alch/viscera = 1,
+		)
+	var/egg_type = /obj/item/reagent_containers/food/snacks/egg/mothcat
+	food_type = list(
+		/obj/item/reagent_containers/food/snacks/grown/berries/rogue,
+		/obj/item/natural/worms,
+		/obj/item/natural/fibers,
+		/obj/item/natural/bundle/fibers,
+	)
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
 	response_disarm_continuous = "gently pushes aside"
@@ -38,24 +50,24 @@
 	mob_size = MOB_SIZE_SMALL
 	var/list/layMessage = EGG_LAYING_MESSAGES
 	var/list/validColors = list("brown","black","white")
-	var/static/caterpillar_count = 0
+	var/static/mothcat_count = 0
 	footstep_type = FOOTSTEP_MOB_BAREFOOT
 	STACON = 6
 	STASTR = 6
 	STASPD = 1
 	tame = TRUE
 
-/mob/living/simple_animal/hostile/retaliate/rogue/chicken/get_sound(input)
+/mob/living/simple_animal/hostile/retaliate/rogue/mothcat/get_sound(input)
 	switch(input)
 		if("pain")
-			return pick('sound/vo/mobs/chikn/pain (1).ogg','sound/vo/mobs/chikn/pain (2).ogg','sound/vo/mobs/chikn/pain (3).ogg')
+			return 'sound/vo/mobs/cat/trill.ogg'
 		if("death")
 			return 'sound/vo/mobs/chikn/death.ogg'
 		if("idle")
-			return pick('sound/vo/mobs/chikn/idle (1).ogg','sound/vo/mobs/chikn/idle (2).ogg','sound/vo/mobs/chikn/idle (3).ogg','sound/vo/mobs/chikn/idle (4).ogg','sound/vo/mobs/chikn/idle (5).ogg','sound/vo/mobs/chikn/idle (6).ogg')
+			return pick('sound/vo/mobs/cat/cat_meow1.ogg','sound/vo/mobs/cat/cat_meow2.ogg','sound/vo/mobs/cat/cat_meow3.ogg','sound/vo/mobs/cat/cat_purr1.ogg','sound/vo/mobs/cat/cat_purr2.ogg','sound/vo/mobs/cat/cat_purr3.ogg','sound/vo/mobs/cat/cat_purr4.ogg')
 
 
-/mob/living/simple_animal/hostile/retaliate/rogue/chicken/simple_limb_hit(zone)
+/mob/living/simple_animal/hostile/retaliate/rogue/mothcat/simple_limb_hit(zone)
 	if(!zone)
 		return ""
 	switch(zone)
@@ -64,9 +76,9 @@
 		if(BODY_ZONE_PRECISE_L_EYE)
 			return "head"
 		if(BODY_ZONE_PRECISE_NOSE)
-			return "beak"
+			return "head"
 		if(BODY_ZONE_PRECISE_MOUTH)
-			return "beak"
+			return "head"
 		if(BODY_ZONE_PRECISE_SKULL)
 			return "head"
 		if(BODY_ZONE_PRECISE_EARS)
@@ -93,15 +105,15 @@
 			return "wing"
 	return ..()
 
-/mob/living/simple_animal/hostile/retaliate/rogue/chicken/Initialize()
+/mob/living/simple_animal/hostile/retaliate/rogue/mothcat/Initialize()
 	. = ..()
-	++caterpillar_count
+	++mothcat_count
 
-/mob/living/simple_animal/hostile/retaliate/rogue/chicken/Destroy()
-	--caterpillar_count
+/mob/living/simple_animal/hostile/retaliate/rogue/mothcat/Destroy()
+	--mothcat_count
 	return ..()
 
-/mob/living/simple_animal/hostile/retaliate/rogue/chicken/Life()
+/mob/living/simple_animal/hostile/retaliate/rogue/mothcat/Life()
 	..()
 	if(!stat && (production > 29) && egg_type && isturf(loc) && !enemies.len)
 		testing("laying egg with [production] production")
@@ -112,7 +124,7 @@
 			E.pixel_x = rand(-6,6)
 			E.pixel_y = rand(-6,6)
 			if(eggsFertile)
-				if(caterpillar_count < MAX_CHICKENS && prob(50))
+				if(mothcat_count < MAX_CHICKENS && prob(50))
 					E.fertile = TRUE
 		else if(!stop_automated_movement)
 			//look for nests
@@ -149,6 +161,8 @@
 				Goto(pick(foundnests),move_to_delay)
 				addtimer(CALLBACK(src, PROC_REF(return_action)), 15 SECONDS)
 
+/obj/item/reagent_containers/food/snacks/egg/mothcat
+	mob_type = /mob/living/simple_animal/hostile/retaliate/rogue/caterpillar
 
 /obj/structure/fluff/nest
 	name = "nest"
