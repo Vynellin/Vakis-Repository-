@@ -440,44 +440,49 @@
 
 		M.visible_message(span_warning("[M] starts to fade into thin air!"), span_notice("You start to become invisible!"))
 		animate(M, alpha = 0, time = 1 SECONDS, easing = EASE_IN)
+
 		M.mob_timers[MT_INVISIBILITY] = world.time + 2 MINUTES
 		M.invis_broken_early = FALSE
 
+		// Apply invis and visual feedback
+		M.update_sneak_invis()
+
+		// Register movement signal to break stealth
+		REGISTER_SIGNAL(M, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
+
+		// Schedule end of duration
+		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, fade_back_message)), 2 MINUTES)
 		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, update_sneak_invis), TRUE), 2 MINUTES)
-		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, fade_back_message), TRUE), 2 MINUTES)
-		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, check_break_veil), TRUE), 1 SECONDS)
+
 	return TRUE
 
-/mob/living/proc/check_break_veil()
+/mob/living/proc/on_veil_movement(atom/source, dir)
 	if (!src || QDELETED(src))
 		return
 
-	// If the invisibility timer has expired, stop checking.
-	if (world.time > mob_timers[MT_INVISIBILITY])
+	// Already broken or expired?
+	if (src.invis_broken_early || world.time > src.mob_timers[MT_INVISIBILITY])
 		return
 
-	// If the mob moved recently, break invisibility early.
-	if (src.last_move_time >= (world.time - 1 SECONDS))
-		if (!src.invis_broken_early)
-			src.visible_message(span_warning("[src] shimmers and becomes visible!"), span_notice("You break the illusion and become visible."))
-			animate(src, alpha = 255, time = 0.5 SECONDS, easing = EASE_OUT)
-			src.alpha = 255
-			src.mob_timers[MT_INVISIBILITY] = world.time
-			src.invis_broken_early = TRUE
-			src.update_sneak_invis()
-			return
+	src.invis_broken_early = TRUE
+	src.visible_message(span_warning("[src] shimmers and becomes visible!"), span_notice("You break the illusion and become visible."))
+	animate(src, alpha = 255, time = 0.5 SECONDS, easing = EASE_OUT)
+	src.alpha = 255
+	src.mob_timers[MT_INVISIBILITY] = world.time
 
-	// Re-add the check for the next tick
-	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living, check_break_veil)), 1 SECONDS)
+	src.update_sneak_invis()
+
+	// Cleanup signal
+	UNREGISTER_SIGNAL(src, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
 
 /mob/living/proc/fade_back_message()
 	if (!src || QDELETED(src))
 		return
+
+	// Stop tracking movement
+	UNREGISTER_SIGNAL(src, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
+
 	if (src.invis_broken_early)
-		return // Don't show "you become visible again" since we already should have gotten a feedback from whatever broke the stealth
+		return // Already became visible via movement
+
 	src.visible_message(span_warning("[src] fades back into view."), span_notice("You become visible again."))
-
-
-
-
-#undef MIRACLE_HEALING_FILTER
