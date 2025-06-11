@@ -1736,7 +1736,7 @@
 /datum/emote/living/fsalute/run_emote(mob/living/user, params, type_override, intentional, targetted, animal)
 	. = ..()
 	if(. && !isnull(user.patron) && !HAS_TRAIT(user, TRAIT_DECEIVING_MEEKNESS))	//Guarded doesn't show an icon to anyone.
-		user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "stress", 15, MUTATIONS_LAYER, private = user.patron.type, soundin = 'sound/magic/holyshield.ogg', y_offset = 32)
+		user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "stress", 15, OBJ_LAYER, private = user.patron.type, soundin = 'sound/magic/holyshield.ogg', y_offset = 32)
 
 /mob/living/carbon/human/verb/emote_fsalute()
 	set name = "Faith Salute"
@@ -1758,19 +1758,24 @@
 	emote_type = EMOTE_VISIBLE
 	show_runechat = FALSE
 	var/toggled = FALSE
+	var/static/mutable_appearance/quest_marker
 
 /datum/emote/living/quest/run_emote(mob/living/user, params, type_override, intentional, targetted, animal)
 	. = ..()
+	if(!quest_marker)
+		quest_marker = mutable_appearance('icons/mob/overhead_effects.dmi', "questmarker", OBJ_LAYER, EMISSIVE_PLANE)
+		quest_marker.pixel_y = 34
 	if(!toggled)
-		user.play_overhead_indicator('icons/mob/overhead_effects.dmi', "questmarker", null, MUTATIONS_LAYER, soundin = null, y_offset = 32, fadein_time = 4)
+		user.overlays_standing[OBJ_LAYER] = quest_marker
+		user.apply_overlay(OBJ_LAYER)
 		playsound(user, 'sound/magic/inspire_02.ogg', 100, FALSE, 9)
 		key_third_person = "no longer needs help."
 		message = "no longer needs help."
 		toggled = TRUE
 	else
-		CALLBACK(user, TYPE_PROC_REF(/mob/living, clear_overhead_indicator), "questmarker")
-		key_third_person = initial(key_third_person)
+		user.remove_overlay(OBJ_LAYER)
 		playsound(user, 'sound/misc/portal_enter.ogg', 100, FALSE, 9)
+		key_third_person = initial(key_third_person)
 		message = initial(message)
 		sound = initial(sound)
 		toggled = FALSE
