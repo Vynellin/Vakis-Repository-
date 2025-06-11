@@ -1,38 +1,8 @@
 /*
 	Familiar list and buffs below. 
-	Sprites by Diltyrr
+	Sprites by Diltyrr (those aren't good gah)
 
 	Quick AI pictures idea for each of them : https://imgbox.com/g/MvanomKazA
-
-	Format to add more:
-	
-	/mob/living/simple_animal/pet/familiar/[creature_id]
-	name = "[Creature's name]"
-	desc = "[Creature's description]"
-	summoning_emote = "[Emote that will be played at the time of summoning]"
-	buff_given = datum of the given buff
-	inherent_spell = list of given spell(s)
-
-
-	speak = list("[random speech that the ai will do.]")
-	speak_emote = list("[how will the creature speak, aka the text between the chat and the name.]")
-	emote_hear = list([random sound based emotes the ai can do]")
-	emote_see = list("[random visual based emotes the ai can do]")
-
-	icon_state = "[multi directional icon, should probably be located in icons/roguetown/mob/familiars.dmi]"
-	icon_living = "[multi directional icon, should probably be located in icons/roguetown/mob/familiars.dmi]"
-	icon_dead = "[one directional icon, dead one, should probably be located in icons/roguetown/mob/familiars.dmi]"
-	
-/datum/status_effect/buff/familiar/[buff_id]
-	id = "[buff_id]"
-	effectedstats = list("[stat]" = [value]) +1 to one value if offered by the normal find familiar, +1 to two value if offered by the empowered version.
-	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/[alert_id]
-
-/atom/movable/screen/alert/status_effect/buff/familiar/[alert_id]
-	name = "[Buff Name]"
-	desc = "[Buff description]"
-
-
 */
 
 /mob/living/simple_animal/pet/familiar
@@ -68,7 +38,7 @@
 	butcher_results = list(/obj/item/natural/stone = 1)
 	speed = 0.8
 	breedchildren = 0 //Yeah no, I'm not falling for this one.
-	base_intents = list(INTENT_HELP, INTENT_GRAB)
+	base_intents = list(INTENT_HELP, INTENT_HARM)
 	dodgetime = 20
 	held_items = list(null, null)
 
@@ -84,6 +54,7 @@
 	. = ..()
 	familiar_summoner.remove_status_effect(buff_given)
 	familiar_summoner.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_familiar)
+	emote("deathgasp")
 
 /mob/living/simple_animal/pet/familiar/pondstone_toad
 	name = "Pondstone Toad"
@@ -91,7 +62,14 @@
 	summoning_emote = "A deep thrum echoes beneath your feet, and a mossy toad pushes itself free from the earth, humming low."
 	buff_given = /datum/status_effect/buff/familiar/settled_weight
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/stillness_of_stone)
+	animal_species = "Pondstone Toad"
 	pass_flags = PASSTABLE | PASSMOB
+	STASTR = 11
+	STAPER = 7
+	STAINT = 9
+	STACON = 11
+	STASPD = 5
+	STALUC = 9
 
 	speak = list("Hrrrm.", "Grrup.", "Blorp.")
 	speak_emote = list("croaks low", "grumbles")
@@ -122,8 +100,18 @@
 	name = "Mist Lynx"
 	desc = "A ghostlike lynx, its eyes gleaming like twin moons. It never seems to blink, even when you're not looking."
 	summoning_emote = "Mist coils into feline shape, resolving into a lynx with pale fur and unblinking silver eyes."
+	animal_species = "Mist Lynx"
+	var/list/saved_trails = list()
 	buff_given = /datum/status_effect/buff/familiar/silver_glance
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/lurking_step, /obj/effect/proc_holder/spell/invoked/veilbound_shift)
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
+	STASTR = 6
+	STAPER = 11
+	STAINT = 9
+	STACON = 7
+	STAEND = 9
+	STASPD = 13
+	STALUC = 9
 
 	alpha = 100
 	icon_state = "mist"
@@ -148,9 +136,16 @@
 	name = "Rune Rat"
 	desc = "This rat leaves fading runes in the air as it twitches. The smell of old paper clings to its fur."
 	summoning_emote = "A faint spark dances through the air. A rat with a softly glowing tail scampers into existence."
+	animal_species = "Rune Rat"
 	buff_given = /datum/status_effect/buff/familiar/threaded_thoughts
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/inscription_cache, /obj/effect/proc_holder/spell/self/recall_cache)
 	pass_flags = PASSTABLE | PASSMOB
+	STASTR = 5
+	STAPER = 9
+	STAINT = 11
+	STACON = 7
+	STAEND = 8
+	STASPD = 11
 
 	icon_state = "runerat"
 	icon_living = "runerat"
@@ -176,23 +171,25 @@
 	name = "Vaporroot Wisp"
 	desc = "This vaporroot wisp shimmers and shifts like smoke but feels solid enough to lean on."
 	summoning_emote = "A swirl of silvery mist gathers, coalescing into a small wisp of vaporroot."
+	animal_species = "Vaporroot"
 	buff_given = /datum/status_effect/buff/familiar/quiet_resilience
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	movement_type = FLYING
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/soothing_bloom)
+	STASTR = 4
+	STACON = 11
+	STAEND = 9
+	STASPD = 8
 
 	alpha = 100
-	icon_state = "vaporoot"
-	icon_living = "vaporoot"
+	icon_state = "vaporroot"
+	icon_living = "vaporroot"
+	icon_dead = "vaporroot_dead"
 
 	speak = list("Fffff...", "Whuuuh.")
 	speak_emote = list("whispers", "murmurs")
 	emote_hear = list("hums softly.", "emits a calming mist.")
 	emote_see = list("swirls in place.", "dissolves briefly.")
-
-/mob/living/simple_animal/pet/familiar/vaporroot_wisp/death()
-	. = ..()
-	qdel(src)
 
 /datum/status_effect/buff/familiar/quiet_resilience
 	id = "quiet_resilience"
@@ -207,10 +204,18 @@
 	name = "Ashcoiler"
 	desc = "This long-bodied snake coils slowly, like a heated rope. Its breath carries a faint scent of burnt herbs."
 	summoning_emote = "Dust rises and circles before coiling into a gray-scaled creature that radiates dry, residual warmth."
+	animal_species = "Ashcoiler"
 	buff_given = /datum/status_effect/buff/familiar/desert_bred_tenacity
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/smolder_shroud)
 	butcher_results = list(/obj/item/ash = 1)
 	pass_flags = PASSTABLE | PASSMOB
+	STASTR = 7
+	STAPER = 8
+	STAINT = 9
+	STACON = 9
+	STAEND = 11
+	STASPD = 8
+	STALUC = 8
 
 	icon_state = "ashcoiler"
 	icon_living = "ashcoiler"
@@ -234,9 +239,16 @@
 	name = "Glimmer Hare"
 	desc = "A quick, nervy creature. Light bends strangely around its translucent body."
 	summoning_emote = "The air glints, and a translucent hare twitches into existence."
+	animal_species = "Glimmer Hare"
 	buff_given = /datum/status_effect/buff/familiar/lightstep
 	inherent_spell = list(/obj/effect/proc_holder/spell/invoked/blink/glimmer_hare)
 	pass_flags = PASSTABLE | PASSMOB
+	STASTR = 4
+	STAPER = 9
+	STACON = 6
+	STAEND = 9
+	STASPD = 9
+	STALUC = 11
 
 	alpha = 125
 	icon_state = "glimmer"
@@ -261,7 +273,14 @@
 	name = "Hollow Antlerling"
 	desc = "A dog-sized deer with gleaming hollow antlers that emit flute-like sounds."
 	summoning_emote = "A musical chime sounds. A tiny deer with antlers like bone flutes steps gently into view."
+	animal_species = "Hollow Antlerling"
 	buff_given = /datum/status_effect/buff/familiar/soft_favor
+
+	STASTR = 6
+	STACON = 8
+	STAEND = 9
+	STASPD = 9
+	STALUC = 11
 
 	icon_state = "antlerling"
 	icon_living = "antlerling"
@@ -285,9 +304,17 @@
 	name = "Gravemoss Serpent"
 	desc = "Its scales are flecked with lichen and grave-dust. Wherever it passes, roots twitch faintly in the soil."
 	summoning_emote = "The ground heaves faintly as a long, moss-veiled serpent uncoils from it."
+	animal_species = "Gravemoss Serpent"
 	butcher_results = list(/obj/item/natural/dirtclod = 1)
 	buff_given = /datum/status_effect/buff/familiar/burdened_coil
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/scent_of_the_grave)
+
+	STASTR = 11
+	STAPER = 8
+	STAINT = 9
+	STAEND = 11
+	STASPD = 6
+	STALUC = 8
 
 	icon_state = "gravemoss"
 	icon_living = "gravemoss"
@@ -311,20 +338,20 @@
 	name = "Starfield Crow"
 	desc = "Its glossy feathers shimmer with shifting constellations, eyes gleaming with uncanny awareness even in the darkest shadows."
 	summoning_emote = "A rift in the air reveals a fragment of the starry void, from which a sleek crow with feathers like the night sky takes flight."
+	animal_species = "Starfield Crow"
 	buff_given = /datum/status_effect/buff/familiar/starseam
 	pass_flags = PASSTABLE | PASSMOB
 	movement_type = FLYING
-	inherent_spell = list(/obj/effect/proc_holder/spell/self/celestial_illumination)
-
-	light_system = MOVABLE_LIGHT
-	light_color = "#8A75FF"
-	light_outer_range = 5
-	light_on = FALSE
-	light_power = 7
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/starseers_cry)
+	STASTR = 4
+	STAPER = 11
+	STACON = 6
+	STAEND = 8
+	STALUC = 11
 
 	icon_state = "crow_flying"
 	icon_living = "crow_flying"
-	icon_dead = "crow1"
+	icon_dead = "crow_dead"
 
 	base_intents = list(/datum/intent/unarmed/help)
 	harm_intent_damage = 0
@@ -350,9 +377,17 @@
 	name = "Emberdrake"
 	desc = "Tiny and warm to the touch, this drake's wingbeats stir old memories. Runes flicker behind it like afterimages."
 	summoning_emote = "A hush falls as glowing ash collects into a fluttering emberdrake."
+	animal_species = "Emberdrake"
 	buff_given = /datum/status_effect/buff/familiar/steady_spark
 	inherent_spell = list(/obj/effect/proc_holder/spell/invoked/pyroclastic_puff)
 	butcher_results = list(/obj/item/ash = 1)
+	STASTR = 9
+	STAPER = 8
+	STAINT = 11
+	STACON = 11
+	STAEND = 9
+	STASPD = 8
+	STALUC = 8
 
 	icon_state = "emberdrake"
 	icon_living = "emberdrake"
@@ -376,9 +411,15 @@
 	name = "Ripplefox"
 	desc = "It flickers when not directly observed. Leaves no tracks. You're not always sure it's still nearby."
 	summoning_emote = "A ripple in the air becomes a sleek fox, its fur twitching between shades of color as it pads forth."
+	animal_species = "Ripplefox"
 	buff_given = /datum/status_effect/buff/familiar/subtle_slip
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/phantom_flicker)
 	footstep_type = null
+	STASTR = 5
+	STACON = 8
+	STAEND = 9
+	STASPD = 11
+	STALUC = 11
 
 	icon_state = "ripple"
 	icon_living = "ripple"
@@ -402,9 +443,17 @@
 	name = "Whisper Stoat"
 	desc = "Its gaze is too knowing. It tilts its head as if listening to something inside your skull."
 	summoning_emote = "A thought twists into form, a tiny stoat slinks into view."
+	animal_species = "Whisper Stoat"
 	buff_given = /datum/status_effect/buff/familiar/noticed_thought
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/phantasm_fade)
 	pass_flags = PASSTABLE | PASSMOB
+	STASTR = 5
+	STAPER = 11
+	STAINT = 11
+	STACON = 7
+	STAEND = 8
+	STASPD = 11
+	STALUC = 9
 
 	icon_state = "whisper"
 	icon_living = "whisper"
@@ -428,10 +477,17 @@
 	name = "Thornback Turtle"
 	desc = "It barely moves, but seems unshakable. Vines twist gently around its limbs."
 	summoning_emote = "The ground gives a slow rumble. A turtle with a bark-like shell emerges from the soil."
+	animal_species = "Thornback Turtle"
 	buff_given = /datum/status_effect/buff/familiar/worn_stone
 	pass_flags = PASSMOB
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/verdant_sprout)
-	speed = 1
+	STASPD = 11
+	STAPER = 7
+	STAINT = 9
+	STACON = 11
+	STAEND = 12
+	STASPD = 5
+	STALUC = 8
 
 	icon_state = "thornback"
 	icon_living = "thornback"

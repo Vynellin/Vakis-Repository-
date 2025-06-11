@@ -33,7 +33,7 @@
 
 /obj/effect/proc_holder/spell/self/findfamiliar/empowered/
 	name = "Empowered Find Familiar"
-	invocation = "Tegos, nemetos trēwos."
+	invocation = "Tegos, nemetos trēwos." //I'm calling "older, forgotten incanation" as proto celtic sounding since we're using latin for normal ones.
 
 /obj/effect/proc_holder/spell/self/findfamiliar/empowered/Initialize()
 	. = ..()
@@ -51,7 +51,7 @@
 	..()
 	for(var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.alive_mob_list)
 		if(familiar_check.familiar_summoner == user)
-			var/list/mob/candidate = pollGhostCandidates("Do you want to play as [span_notice("[familiar_check.name]")]?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
+			var/list/mob/candidate = pollGhostCandidates("Do you want to play as ("[familiar_check.name], the [familiar_check.animal_species]")?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
 			if(LAZYLEN(candidate))
 				var/mob/chosen_one =  pick(candidate)
 				if(istype(chosen_one, /mob/dead/new_player))
@@ -63,6 +63,7 @@
 				awakener.grant_all_languages(omnitongue=TRUE)
 				var/new_name = input(awakener, "What is your name?", "Name") as text|null
 				awakener.fully_replace_character_name(null, new_name)
+				awakener.mind.RemoveAllSpells() //Clear familiar spells if we're a dead job with spells and we accept becoming a familiar.
 				awakener.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_summoner)
 				user.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_familiar)
 				if(awakener.inherent_spell)
@@ -122,5 +123,5 @@
 	
 	
 /datum/virtue/utility/forgotten_bond/apply_to_human(mob/living/carbon/human/recipient)
-	if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/self/findfamiliar))
-		recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/findfamiliar)
+	if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/self/findfamiliar/empowered))
+		recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/findfamiliar/empowered)

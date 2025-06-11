@@ -75,7 +75,7 @@
 		to_chat(src, "<span class='notice'>You shift back into your natural form.</span>")
 		src.regenerate_icons()
 
-/mob/living/simple_animal/pet/familiar/hollow_antlerling/Moved()
+/mob/living/simple_animal/pet/familiar/hollow_antlerling/Entered(atom/movable/AM, atom/oldLoc)
 	. = ..()
 	// 60% chance to leave a glowing petal trail
 	if(prob(60) && isturf(loc))
@@ -231,18 +231,35 @@
 		owner.adjustOrganLoss(ORGAN_SLOT_BRAIN, -healing_on_tick)
 		owner.adjustCloneLoss(-healing_on_tick, 0)
 
-/obj/effect/proc_holder/spell/self/celestial_illumination
-	name= "Celestial Illumination"
-	recharge_time = 1 SECONDS
+/obj/effect/proc_holder/spell/self/starseers_cry
+	name = "Starseer's Cry"
+	desc = "Let out a piercing celestial call that disrupts all veils of shadow within sight."
+	recharge_time = 30 SECONDS
 
-/obj/effect/proc_holder/spell/self/celestial_illumination/cast(list/targets, mob/living/simple_animal/pet/familiar/starfield_crow/user)
+/obj/effect/proc_holder/spell/self/starseers_cry/cast(list/targets, mob/living/simple_animal/pet/familiar/starfield_crow/user)
 	. = ..()
-	if(user.light_on)
-		user.light_on = FALSE
-		user.update_light
-	else
-		user.light_on = TRUE
-		user.update_light
+	user.visible_message(span_danger("[user] lets out a soul-piercing cry, the stars shimmering in their eyes!"))
+
+	for (var/mob/living/M in range(7, user))
+		if (M == user)
+			continue
+
+		var/invis_active = M.mob_timers[MT_INVISIBILITY] > world.time
+		var/sneaking = M.m_intent == MOVE_INTENT_SNEAK
+
+		if (invis_active || sneaking)
+			if (invis_active)
+				M.mob_timers[MT_INVISIBILITY] = world.time
+				M.invis_broken_early = TRUE // Prevent future fade-back message
+				M.update_sneak_invis()
+			if (sneaking)
+				M.mob_timers[MT_FOUNDSNEAK] = world.time
+
+			M.visible_message(span_danger("[M] is revealed by a cosmic pulse!"), span_notice("You feel your concealment burn away."))
+			found_ping(get_turf(M), user.client, "hidden")
+
+	return TRUE
+
 
 /obj/effect/proc_holder/spell/invoked/pyroclastic_puff
 	name = "Pyroclastic_puff"
@@ -314,22 +331,153 @@
 	name= "Phantasm Fade"
 	recharge_time = 2 MINUTES
 
-/obj/effect/proc_holder/spell/self/phantasm_fade/cast(list/targets, mob/user)
+/obj/effect/proc_holder/spell/self/phantasm_fade/cast(list/targets, mob/living/simple_animal/pet/familiar/whisper_stoat/user)
 	. = ..()
-	user.visible_message(span_warning("[user] starts to fade into thin air!"), span_notice("You start to become invisible!"))
+	user.visible_message(span_warning("[user.name] starts to fade into thin air!"), span_notice("You start to become invisible!"))
 	animate(user, alpha = 0, time = 1 SECONDS, easing = EASE_IN)
 	user.mob_timers[MT_INVISIBILITY] = world.time + 15 SECONDS
 	addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living, update_sneak_invis), TRUE), 15 SECONDS)
-	addtimer(CALLBACK(user, TYPE_PROC_REF(/atom/movable, visible_message), span_warning("[user] fades back into view."), span_notice("You become visible again.")), 15 SECONDS)
+	addtimer(CALLBACK(user, TYPE_PROC_REF(/atom/movable, visible_message), span_warning("[user.name] fades back into view."), span_notice("You become visible again.")), 15 SECONDS)
+	return TRUE
+
+/obj/effect/proc_holder/spell/self/phantom_flicker
+	name= "Phantom Flicker"
+	recharge_time = 2 MINUTES
 
 /obj/effect/proc_holder/spell/self/phantom_flicker/cast(list/targets, mob/living/simple_animal/pet/familiar/ripplefox/user)
 	. = ..()
 	var/mob/living/simple_animal/pet/familiar/ripplefox/fam = new user.type(user.loc)
+	user.visible_message(span_notice("[fam] blurs and darts away!"))
+	fam.visible_message(span_notice("[fam] blurs and darts away!"))
 	fam.familiar_summoner = user
 	fam.fully_replace_character_name(null, user.name)
+	fam.ai_controller.set_blackboard_key(BB_BASIC_MOB_FLEEING, TRUE)
+
+	var/mob/living/fake_fam = fam
 	spawn(10 SECONDS)
-		if(!QDELETED(fam))
-			qdel(fam)
+		if(fake_fam && !QDELETED(fake_fam))
+			qdel(fake_fam)
+
 	return TRUE
+
+/obj/effect/proc_holder/spell/self/lurking_step
+	name = "Lurking Step"
+	desc = "Mark this location with a name, binding it to your hidden trail."
+	recharge_time = 10 SECONDS
+
+/obj/effect/proc_holder/spell/self/lurking_step/cast(list/targets, mob/living/simple_animal/pet/familiar/mist_lynx/user)
+	. = ..()
+	if (!user.saved_trails)
+		user.saved_trails = list()
+
+	var/spot_name = input(user, "Name this location for future return:", "Mark Trail") as text|null
+	if (!spot_name)
+		return FALSE
+
+	// Limit to 3 entries
+	if (user.saved_trails.len >= 3)
+		user.saved_trails.Cut(1, 2)
+
+	user.saved_trails += list(list("name" = spot_name, "loc" = user.loc))
+
+	to_chat(user, span_notice("You still yourself. The place is etched into your hidden path."))
+	return TRUE
+
+/obj/effect/proc_holder/spell/invoked/veilbound_shift
+	name = "Veilbound Shift"
+	desc = "Vanish and reappear at a hidden trail you've marked before."
+	chargetime = 20 // longer cast time to balance teleporting
+	recharge_time = 1 MINUTES
+
+/obj/effect/proc_holder/spell/invoked/veilbound_shift/cast(list/targets, mob/living/simple_animal/pet/familiar/mist_lynx/user)
+	. = ..()
+	if (!user.saved_trails || !user.saved_trails.len)
+		to_chat(user, span_warning("You have no marked paths to return to."))
+		return FALSE
+
+	var/list/names = list()
+	for (var/entry in user.saved_trails)
+		names += entry["name"]
+
+	var/choice = input(user, "Choose a hidden trail to return to:", "Veilbound Shift") as null|anything in names
+	if (!choice)
+		return FALSE
+
+	var/target_loc
+	for (var/entry in user.saved_trails)
+		if (entry["name"] == choice)
+			target_loc = entry["loc"]
+			break
+
+	if (!(isturf(target_loc) || isopenturf(target_loc)))
+		to_chat(user, span_warning("The path has faded..."))
+		return
+
+	user.visible_message(span_emote("[user] blurs at the edges, dissolving like mist."))
+
+	spawn(20) // short delay before teleport
+		do_teleport(user, target_loc, forceMove = TRUE, channel = TELEPORT_CHANNEL_MAGIC)
+		user.visible_message(span_emote("A ripple in the air resolves into fur and paw. [user.name] pads silently into view."))
+
+	return TRUE
+
+/obj/effect/proc_holder/spell/self/verdant_veil
+	name = "Verdant Veil"
+	desc = "Shrouds nearby allies in illusionary invisibility, broken if they move or act."
+	recharge_time = 30 SECONDS
+
+/obj/effect/proc_holder/spell/self/verdant_veil/cast(list/targets, mob/living/simple_animal/pet/familiar/hollow_antlerling/user)
+	. = ..()
+	to_chat(user, span_notice("You exhale a shimmering cloud of forest illusion..."))
+	user.visible_message(span_warning("[user] releases a swirl of glowing leaves!"), span_notice("You feel the forest's stillness wrap around you."))
+
+	for (var/mob/living/M in range(1, user))
+		if (M == user || isobserver(M))
+			continue
+
+		if (M.anti_magic_check(TRUE, TRUE))
+			continue
+
+		M.visible_message(span_warning("[M] starts to fade into thin air!"), span_notice("You start to become invisible!"))
+		animate(M, alpha = 0, time = 1 SECONDS, easing = EASE_IN)
+		M.mob_timers[MT_INVISIBILITY] = world.time + 2 MINUTES
+		M.invis_broken_early = FALSE
+
+		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, update_sneak_invis), TRUE), 2 MINUTES)
+		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, fade_back_message), TRUE), 2 MINUTES)
+		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, check_break_veil), TRUE), 1 SECONDS)
+	return TRUE
+
+/mob/living/proc/check_break_veil()
+	if (!src || QDELETED(src))
+		return
+
+	// If the invisibility timer has expired, stop checking.
+	if (world.time > mob_timers[MT_INVISIBILITY])
+		return
+
+	// If the mob moved recently, break invisibility early.
+	if (src.last_move_time >= (world.time - 1 SECONDS))
+		if (!src.invis_broken_early)
+			src.visible_message(span_warning("[src] shimmers and becomes visible!"), span_notice("You break the illusion and become visible."))
+			animate(src, alpha = 255, time = 0.5 SECONDS, easing = EASE_OUT)
+			src.alpha = 255
+			src.mob_timers[MT_INVISIBILITY] = world.time
+			src.invis_broken_early = TRUE
+			src.update_sneak_invis()
+			return
+
+	// Re-add the check for the next tick
+	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living, check_break_veil)), 1 SECONDS)
+
+/mob/living/proc/fade_back_message()
+	if (!src || QDELETED(src))
+		return
+	if (src.invis_broken_early)
+		return // Don't show "you become visible again" since we already should have gotten a feedback from whatever broke the stealth
+	src.visible_message(span_warning("[src] fades back into view."), span_notice("You become visible again."))
+
+
+
 
 #undef MIRACLE_HEALING_FILTER
