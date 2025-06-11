@@ -38,45 +38,11 @@
 		return
 	return ..()
 
-/obj/structure/flora/roguetree/Initialize()
-	. = ..()
-
-/*
-	if(makevines)
-		var/turf/target = get_step_multiz(src, UP)
-		if(istype(target, /turf/open/transparent/openspace))
-			target.ChangeTurf(/turf/open/floor/rogue/shroud)
-			var/makecanopy = FALSE
-			for(var/D in GLOB.cardinals)
-				if(!makecanopy)
-					var/turf/NT = get_step(src, D)
-					for(var/obj/structure/flora/roguetree/R in NT)
-						if(R.makevines)
-							makecanopy = TRUE
-							break
-			if(makecanopy)
-				for(var/D in GLOB.cardinals)
-					var/turf/NT = get_step(target, D)
-					if(NT)
-						if(istype(NT, /turf/open/transparent/openspace) || istype(NT, /turf/open/floor/rogue/shroud))
-							NT.ChangeTurf(/turf/closed/wall/shroud)
-							for(var/X in GLOB.cardinals)
-								var/turf/NA = get_step(NT, X)
-								if(NA)
-									if(istype(NA, /turf/open/transparent/openspace))
-										NA.ChangeTurf(/turf/open/floor/rogue/shroud)
-*/
-
-	if(istype(loc, /turf/open/floor/rogue/grass))
-		var/turf/T = loc
-		T.ChangeTurf(/turf/open/floor/rogue/dirt)
-
 /obj/structure/flora/roguetree/obj_destruction(damage_flag)
 	if(stump_type)
 		new stump_type(loc)
 	playsound(src, 'sound/misc/treefall.ogg', 100, FALSE)
 	. = ..()
-
 
 /obj/structure/flora/roguetree/Initialize()
 	. = ..()
