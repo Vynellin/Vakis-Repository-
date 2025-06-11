@@ -617,7 +617,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 /area/rogue/under/cave/dungeon/old_university_garden
 	name = "Entombed Garden"
 	icon_state = "caves"
-	first_time_text = "Entombed Garden"
+	first_time_text = "ENTOMBED GARDEN"
 	droning_sound = 'sound/music/area/dungeon2.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
