@@ -9199,6 +9199,10 @@
 	icon_state = "horzw"
 	},
 /area/rogue/indoors/town)
+"dOM" = (
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/rtfield)
 "dOW" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8
@@ -11654,6 +11658,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
+/obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town)
 "eKx" = (
@@ -14904,14 +14909,9 @@
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/woods)
 "gbj" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
-/obj/structure/roguemachine/atm/directional/north{
-	location_tag = "Tavern Lobby"
-	},
-/turf/open/floor/rogue/wood,
-/area/rogue/indoors/town/tavern)
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/grassyel,
+/area/rogue/outdoors/town)
 "gbl" = (
 /obj/machinery/tanningrack,
 /turf/open/floor/rogue/hexstone,
@@ -18507,6 +18507,10 @@
 	},
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
+"hzm" = (
+/obj/structure/roguemachine/lottery_roguetown/directional/south,
+/turf/open/floor/carpet/inn,
+/area/rogue/indoors/town/tavern)
 "hzn" = (
 /obj/structure/roguemachine/bounty,
 /turf/open/floor/rogue/wood/nosmooth,
@@ -18818,12 +18822,12 @@
 /turf/closed/wall/mineral/rogue/stone/red_moss,
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "hEh" = (
-/obj/structure/fluff/railing/border{
-	dir = 4
-	},
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-e"
+	},
+/obj/structure/fluff/railing/border{
+	dir = 4
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/town)
@@ -20041,6 +20045,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
+/obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
 "ies" = (
@@ -22490,6 +22495,14 @@
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/beach/forest)
+"jaH" = (
+/obj/effect/decal/cobbleedge{
+	dir = 1;
+	icon_state = "borderfall"
+	},
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "jaT" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
@@ -28160,6 +28173,10 @@
 "lrc" = (
 /turf/closed/wall/mineral/rogue/stone/blue_moss,
 /area/rogue/indoors/shelter)
+"lro" = (
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/exposed/town/keep)
 "lrE" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/item/rogueweapon/mace/wsword,
@@ -28645,7 +28662,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/outdoors/town)
 "lBQ" = (
-/obj/structure/roguemachine/lottery_roguetown/directional/north,
+/obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/tavern)
 "lCc" = (
@@ -30790,11 +30807,9 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/town/cell)
 "myg" = (
-/obj/structure/fluff/walldeco/sparrowflag{
-	pixel_y = 32
-	},
-/turf/open/floor/rogue/tile,
-/area/rogue/indoors/town)
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/town)
 "myn" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /obj/effect/decal/cobbleedge{
@@ -34647,6 +34662,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
+/obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/beach/forest)
 "nXk" = (
@@ -36672,6 +36688,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
+/obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
 "oPG" = (
@@ -36918,6 +36935,9 @@
 /area/rogue/outdoors/mountains/decap)
 "oWi" = (
 /obj/structure/roguemachine/stockpile/directional/north,
+/obj/structure/roguemachine/atm/directional/west{
+	location_tag = "Steward Desk"
+	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town)
 "oWp" = (
@@ -37588,6 +37608,12 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/indoors/town/garrison)
+"piQ" = (
+/obj/structure/roguemachine/atm/directional/south{
+	location_tag = "Tavern Lobby"
+	},
+/turf/open/floor/rogue/wood,
+/area/rogue/indoors/town/tavern)
 "piX" = (
 /obj/item/restraints/legcuffs/beartrap/armed/camouflage,
 /turf/open/floor/rogue/greenstone,
@@ -40006,6 +40032,10 @@
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/outdoors/town/roofs)
+"qjk" = (
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/town)
 "qjB" = (
 /obj/effect/oneway/lich{
 	dir = 1;
@@ -42880,6 +42910,10 @@
 /obj/item/rogueweapon/huntingknife/chefknife,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town)
+"rqp" = (
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/dirt,
+/area/rogue/indoors/shelter/woods)
 "rqr" = (
 /turf/open/floor/rogue/carpet/lord/left,
 /area/rogue/under/cave/dungeon/vulnafir)
@@ -43018,9 +43052,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/indoors/cave)
 "rtc" = (
-/obj/structure/roguemachine/atm/directional/north{
-	location_tag = "Steward Desk"
-	},
+/obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town)
 "rty" = (
@@ -43065,6 +43097,9 @@
 "ruA" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
+	},
+/obj/structure/fluff/walldeco/sparrowflag{
+	pixel_y = 32
 	},
 /turf/open/floor/rogue/tile,
 /area/rogue/indoors/town)
@@ -45574,6 +45609,10 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/physician)
+"stn" = (
+/obj/structure/roguemachine/noticeboard,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/beach/forest)
 "sto" = (
 /turf/open/floor/rogue/grass,
 /area/rogue/under/cave)
@@ -51962,13 +52001,11 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/cave)
 "vcJ" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
 /obj/structure/roguemachine/scomm/directional/east,
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
+/obj/structure/rack/rogue,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town)
 "vcN" = (
@@ -227333,7 +227370,7 @@ fVo
 pxF
 pxF
 pxF
-rZO
+dOM
 tKI
 rZO
 ibp
@@ -229084,7 +229121,7 @@ seL
 rZO
 rZO
 rZO
-rZO
+dOM
 sNZ
 quW
 sNZ
@@ -231475,7 +231512,7 @@ dpy
 dpy
 dpy
 apU
-dXq
+rqp
 eHk
 cPH
 pfw
@@ -240930,7 +240967,7 @@ ibp
 sNZ
 sNZ
 sNZ
-rZO
+dOM
 asY
 asY
 asY
@@ -244476,7 +244513,7 @@ vqL
 taS
 taS
 taS
-gbj
+gzY
 bPF
 pvg
 pvg
@@ -244933,7 +244970,7 @@ pvg
 pvg
 nXL
 nXL
-pvg
+piQ
 dJN
 klx
 pvg
@@ -245385,7 +245422,7 @@ pvg
 nXL
 nXL
 nXL
-nXL
+hzm
 dJN
 klx
 poe
@@ -246234,7 +246271,7 @@ tFL
 pWT
 qyR
 pWT
-pWT
+myg
 exD
 exD
 exD
@@ -246727,7 +246764,7 @@ xnl
 lRv
 lRv
 iZY
-hzE
+jaH
 exD
 sns
 sns
@@ -248078,7 +248115,7 @@ kRg
 iBM
 efX
 guo
-myg
+lRv
 nim
 lRv
 lRv
@@ -248574,7 +248611,7 @@ fgM
 aFv
 pWT
 njB
-qyR
+gbj
 sns
 sns
 njB
@@ -256235,9 +256272,9 @@ sVL
 wfT
 sns
 eKH
-ycF
+eyl
 wCS
-sRJ
+ycF
 cDX
 xnh
 puO
@@ -257104,7 +257141,7 @@ nKf
 njB
 qyR
 qyR
-exD
+qjk
 exD
 exD
 sns
@@ -257568,7 +257605,7 @@ xTm
 ePo
 wDT
 eZd
-exD
+qjk
 fpx
 rfZ
 bUt
@@ -263481,7 +263518,7 @@ qfA
 qfA
 nKf
 pWT
-mWD
+myg
 sns
 sns
 sns
@@ -263933,7 +263970,7 @@ bge
 qfA
 nKf
 pWT
-mWD
+pWT
 sns
 sns
 sns
@@ -272039,7 +272076,7 @@ noW
 noW
 nTh
 rMf
-rMf
+lro
 jQE
 weQ
 kyN
@@ -364159,7 +364196,7 @@ lpq
 dCq
 lpq
 lpq
-lpq
+fQF
 sJx
 sJx
 sJx
@@ -364611,7 +364648,7 @@ lpq
 lpq
 lpq
 lpq
-lpq
+stn
 sJx
 sJx
 sJx
