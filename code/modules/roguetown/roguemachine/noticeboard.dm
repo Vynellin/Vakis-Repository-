@@ -137,20 +137,20 @@
 	if(guy.has_status_effect(/datum/status_effect/debuff/postcooldown))
 		to_chat(guy, span_warning("I must wait a time until my next posting..."))
 		return
-	var/inputtitle = input(guy, "What shall the title of my posting be?", "NOTICEBOARD", null)
+	var/inputtitle = input(guy, "What shall the title of my posting be?", src, null)
 	if(!inputtitle)
 		return
-	var/inputmessage = stripped_multiline_input(guy, "What shall I write for this posting?", "NOTICEBOARD", no_trim=TRUE)
+	var/inputmessage = stripped_multiline_input(guy, "What shall I write for this posting?", src, no_trim=TRUE)
 	if(inputmessage)
-		if(length(inputmessage) > 2000)
+		if(length(inputmessage) > MAX_MESSAGE_LEN)
 			to_chat(guy, span_warning("Too long! You shall surely overburden the with this novel!"))
 			return
 	else
 		return
-	var/inputname = input(guy, "What name shall I use on the posting?", "NOTICEBOARD", null)
+	var/inputname = input(guy, "What name shall I use on the posting?", src, null)
 	if(!inputname)
 		return
-	var/inputrole = input(guy, "What personal title shall I use on the posting?", "NOTICEBOARD", null)
+	var/inputrole = input(guy, "What personal title shall I use on the posting?", src, null)
 	add_post(inputmessage, inputtitle, inputname, inputrole, guy.real_name, TRUE)
 	guy.apply_status_effect(/datum/status_effect/debuff/postcooldown)
 	message_admins("[ADMIN_LOOKUPFLW(guy)] has made a notice board post. The message was: [inputmessage]")
@@ -165,27 +165,27 @@
 	if(guy.has_status_effect(/datum/status_effect/debuff/postcooldown))
 		to_chat(guy, span_warning("I must wait a time until my next posting..."))
 		return
-	var/inputtitle = stripped_input(guy, "What shall the title of my posting be?", "NOTICEBOARD", null)
+	var/inputtitle = stripped_input(guy, "What shall the title of my posting be?", src, null)
 	if(!inputtitle)
 		return
-	if(length(inputtitle) > 50)
+	if(length(inputtitle) > MAX_CHARTER_LEN)
 		to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 		return
-	var/inputmessage = stripped_multiline_input(guy, "What shall I write for this posting?", "NOTICEBOARD", no_trim=TRUE)
+	var/inputmessage = stripped_multiline_input(guy, "What shall I write for this posting?", src, no_trim=TRUE)
 	if(inputmessage)
-		if(length(inputmessage) > 2000)
+		if(length(inputmessage) > MAX_MESSAGE_LEN)
 			to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 			return
 	else
 		return
-	var/inputname = stripped_input(guy, "What name shall I use on the posting?", "NOTICEBOARD", null)
+	var/inputname = stripped_input(guy, "What name shall I use on the posting?", src, null)
 	if(!inputname)
 		return
-	if(length(inputname) > 50)
+	if(length(inputname) > MAX_CHARTER_LEN)
 		to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 		return
-	var/inputrole = stripped_input(guy, "What personal title shall I use on the posting?", "NOTICEBOARD", null)
-	if(length(inputrole) > 50)
+	var/inputrole = stripped_input(guy, "What personal title shall I use on the posting?", src, null)
+	if(length(inputrole) > MAX_CHARTER_LEN)
 		to_chat(guy, span_warning("Too long! You shall surely overburden the crows with this novel!"))
 		return
 	add_post(inputmessage, inputtitle, inputname, inputrole, guy.real_name, FALSE)
