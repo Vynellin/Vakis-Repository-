@@ -204,16 +204,14 @@
 	maxHealth = 3
 	ventcrawler = VENTCRAWLER_ALWAYS
 	var/amount_grown = 0
-	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
-	mob_size = MOB_SIZE_TINY
+	pass_flags = PASSTABLE | PASSMOB
+	mob_size = MOB_SIZE_SMALL
 	gold_core_spawnable = FRIENDLY_SPAWN
 
 	footstep_type = FOOTSTEP_MOB_CLAW
 
 /mob/living/simple_animal/caterpillar/Initialize()
 	. = ..()
-	pixel_x = rand(-6, 6)
-	pixel_y = rand(0, 10)
 
 /mob/living/simple_animal/caterpillar/Life()
 	. =..()
