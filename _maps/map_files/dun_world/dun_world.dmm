@@ -543,6 +543,10 @@
 	},
 /turf/open/floor/rogue/greenstone,
 /area/rogue/under/cave/dungeon/dungeon1/gethsmane/inner)
+"akN" = (
+/obj/structure/flora/roguegrass/bush/wall,
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/town)
 "akR" = (
 /obj/structure/chair/bench,
 /turf/open/floor/rogue/cobble,
@@ -1337,7 +1341,7 @@
 /obj/structure/stone_tile/surrounding/cracked{
 	dir = 8
 	},
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/fort_dusk)
 "aAE" = (
@@ -1415,7 +1419,7 @@
 /turf/open/floor/rogue/blocks/stonered,
 /area/rogue/indoors)
 "aCx" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /obj/effect/decal/cobble/mossy{
 	dir = 5
 	},
@@ -2657,7 +2661,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "bae" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/effect/decal/wood/herringbone{
 	dir = 4
 	},
@@ -2735,7 +2739,7 @@
 /turf/open/floor/rogue/carpet/lord/center,
 /area/rogue/under/cave/dungeon/licharena)
 "bbG" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
 "bbJ" = (
@@ -2987,7 +2991,7 @@
 	},
 /area/rogue/under/cave/dungeon/fort_dusk)
 "bhg" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/indoors/shelter/woods)
 "bhh" = (
@@ -3600,7 +3604,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/under/town/sewer)
 "btk" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /obj/structure/fluff/littlebanners/bluewhite{
 	pixel_y = 15
 	},
@@ -3956,7 +3960,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/cave)
 "bAU" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/town/keep)
 "bAW" = (
@@ -4115,7 +4119,7 @@
 /area/rogue/outdoors/mountains)
 "bDq" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/mountains)
 "bDu" = (
@@ -4277,7 +4281,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "bGs" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/effect/decal/wood/herringbone{
 	dir = 8
 	},
@@ -6066,7 +6070,7 @@
 /area/rogue/indoors/town/garrison)
 "coT" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
 "cpa" = (
@@ -11548,7 +11552,7 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/indoors/town)
 "evd" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/winter,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/under/cave/dungeon/old_university)
 "eve" = (
@@ -13017,7 +13021,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors/town)
 "eUq" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/rtfield)
 "eUs" = (
@@ -16847,7 +16851,7 @@
 /obj/effect/decal/wood/herringbone{
 	dir = 8
 	},
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "gtI" = (
@@ -19366,7 +19370,7 @@
 /turf/open/floor/carpet/inn,
 /area/rogue/under/town/basement/keep)
 "hqk" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/effect/decal/cobbleedge{
 	dir = 10;
 	icon_state = "cobbleedge-n"
@@ -20035,7 +20039,7 @@
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/indoors/town/church/chapel)
 "hCi" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /obj/effect/decal/wood/herringbone{
 	dir = 5
 	},
@@ -21670,7 +21674,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "iiJ" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/machinery/light/rogue/wallfire/candle/weak/directional/west,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/fort_dusk)
@@ -22017,7 +22021,7 @@
 	dir = 1
 	},
 /obj/effect/decal/wood/herringbone,
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "ioM" = (
@@ -22173,7 +22177,7 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "irS" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/winter,
 /turf/open/floor/rogue/grasscold,
 /area/rogue/under/cave/dungeon/old_university)
 "irW" = (
@@ -23729,7 +23733,7 @@
 	dir = 4
 	},
 /obj/effect/decal/wood/herringbone,
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/effect/decal/wood/herringbone{
 	dir = 8
 	},
@@ -25417,7 +25421,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/dungeon/fort_dusk)
 "jCt" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/town)
 "jCu" = (
@@ -26163,7 +26167,7 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/under/cave/dungeon/goblinfort)
 "jSj" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/effect/decal/cobble/mossy{
 	dir = 6
 	},
@@ -26359,7 +26363,7 @@
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "jWn" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/town)
 "jWp" = (
@@ -27280,7 +27284,7 @@
 /obj/effect/decal/wood/herringbone{
 	dir = 1
 	},
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "krw" = (
@@ -27815,7 +27819,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors)
 "kBH" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/mountains)
 "kBI" = (
@@ -28370,7 +28374,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/indoors/town)
 "kMd" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /obj/effect/decal/cobble/mossy{
 	dir = 10
 	},
@@ -31564,7 +31568,7 @@
 	dir = 1;
 	icon_state = "borderfall"
 	},
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/mountains)
 "lWL" = (
@@ -31608,6 +31612,10 @@
 /obj/structure/closet/dirthole,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/woods)
+"lXM" = (
+/obj/structure/bars/cemetery,
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/exposed/town/keep)
 "lXN" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/spear,
 /turf/open/floor/rogue/ruinedwood,
@@ -32056,7 +32064,7 @@
 /turf/open/floor/rogue/metal,
 /area/rogue/outdoors/mountains/decap)
 "mgq" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/town/keep)
 "mgs" = (
@@ -34480,7 +34488,7 @@
 	},
 /area/rogue/indoors/town)
 "nea" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/town)
 "nei" = (
@@ -36083,7 +36091,7 @@
 /turf/open/floor/rogue/churchmarble,
 /area/rogue/under/cave/dungeon/licharena)
 "nES" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/effect/decal/wood/herringbone{
 	dir = 5
 	},
@@ -37350,7 +37358,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/tavern)
 "ogP" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "ogQ" = (
@@ -37493,7 +37501,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/manor)
 "ojH" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/rtfield)
 "ojJ" = (
@@ -38285,7 +38293,7 @@
 /turf/open/floor/rogue/wood,
 /area/rogue/under/town/basement)
 "oyQ" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/mountains)
 "oyV" = (
@@ -38991,7 +38999,7 @@
 /turf/closed/wall/mineral/rogue/wood,
 /area/rogue/outdoors/woods)
 "oNK" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/mountains)
 "oNQ" = (
@@ -39978,7 +39986,7 @@
 /obj/effect/decal/wood/herringbone{
 	dir = 8
 	},
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "pgW" = (
@@ -40648,7 +40656,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/cave/dungeon/goblinfort)
 "ptW" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "pug" = (
@@ -43625,7 +43633,7 @@
 	},
 /area/rogue/under/town/sewer)
 "qCM" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/fort_dusk)
 "qCP" = (
@@ -46052,7 +46060,7 @@
 /area/rogue/outdoors/exposed/town/keep)
 "rxb" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/mountains)
 "rxe" = (
@@ -47607,6 +47615,10 @@
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/beach)
+"scF" = (
+/obj/structure/flora/roguegrass/bush/red,
+/turf/open/floor/rogue/grassred,
+/area/rogue/outdoors/rtfield)
 "scM" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
@@ -50177,7 +50189,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/under/cave/dungeon/old_university)
 "teb" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "ted" = (
@@ -50643,7 +50655,7 @@
 /obj/effect/decal/wood/herringbone{
 	dir = 8
 	},
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
 "tnu" = (
@@ -51863,7 +51875,7 @@
 /turf/open/floor/rogue/wood/herringbone,
 /area/rogue/indoors/town/garrison)
 "tMO" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/rtfield)
 "tMR" = (
@@ -53206,7 +53218,7 @@
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/indoors/town)
 "umH" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/indoors/shelter/woods)
 "umI" = (
@@ -53535,6 +53547,13 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town/manor)
+"uug" = (
+/obj/effect/decal/mossy{
+	dir = 4
+	},
+/obj/structure/flora/roguegrass/bush/red,
+/turf/open/floor/rogue/grassyel,
+/area/rogue/outdoors/town)
 "uup" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat/gethsmane,
 /turf/open/floor/rogue/ruinedwood{
@@ -54008,6 +54027,10 @@
 /mob/living/simple_animal/hostile/rogue/skeleton/guard,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
+"uCs" = (
+/obj/structure/flora/roguegrass/bush/red,
+/turf/closed/mineral/rogue/bedrock,
+/area/rogue/under/cave/dungeon/old_university_garden)
 "uCt" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -54399,7 +54422,7 @@
 	},
 /area/rogue/indoors/town)
 "uJY" = (
-/obj/structure/flora/roguegrass/bush/wall/tall,
+/obj/structure/flora/roguegrass/bush/wall/tall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/town)
 "uKd" = (
@@ -55506,7 +55529,7 @@
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/under/town/basement)
 "vfX" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
@@ -57798,7 +57821,7 @@
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/town/basement/keep)
 "waL" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/town/keep)
 "waN" = (
@@ -59987,7 +60010,7 @@
 /obj/structure/fluff/railing/wood{
 	dir = 4
 	},
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/mountains)
 "xaA" = (
@@ -207747,7 +207770,7 @@ gen
 gen
 gen
 gen
-gen
+uCs
 gen
 gen
 gen
@@ -237091,11 +237114,11 @@ rZO
 sNZ
 hpb
 hpb
-bQc
+scF
 tMO
 tMO
 tMO
-bQc
+scF
 sNZ
 sNZ
 fVo
@@ -238904,7 +238927,7 @@ hvq
 esP
 iEx
 gyu
-bQc
+scF
 sNZ
 quW
 fVo
@@ -239765,7 +239788,7 @@ sns
 sns
 pNn
 lmD
-mRG
+uug
 mRG
 mhj
 aVZ
@@ -276858,7 +276881,7 @@ cjz
 sns
 sns
 njB
-pWT
+mWD
 cDX
 eKH
 fNj
@@ -277310,7 +277333,7 @@ njB
 sns
 npM
 njB
-pWT
+akN
 uBc
 xsM
 sLj
@@ -277762,7 +277785,7 @@ pWT
 ffQ
 etE
 pWT
-njB
+akN
 uBc
 kCG
 sLj
@@ -280436,7 +280459,7 @@ vxe
 weQ
 weQ
 msF
-nTh
+lXM
 rMf
 rMf
 rMf
@@ -280887,9 +280910,9 @@ fer
 vxe
 weQ
 weQ
-rMf
+uhI
 nTh
-rMf
+uhI
 srR
 bfg
 bfg
@@ -281339,8 +281362,8 @@ xsj
 vxe
 weQ
 weQ
-rMf
-nTh
+uhI
+lXM
 rMf
 wMU
 nmG
@@ -281793,7 +281816,7 @@ uzB
 uzB
 nTh
 njP
-rMf
+uhI
 eMc
 paq
 paq
@@ -282244,8 +282267,8 @@ vxe
 weQ
 weQ
 hqk
-nTh
-rMf
+lXM
+uhI
 wMU
 rwF
 eqg
@@ -283148,7 +283171,7 @@ vxe
 weQ
 weQ
 hqk
-nTh
+lXM
 rMf
 wMU
 vJE
@@ -283600,7 +283623,7 @@ vxe
 weQ
 weQ
 hqk
-nTh
+lXM
 rMf
 nfq
 qXR
@@ -284052,7 +284075,7 @@ vxe
 weQ
 weQ
 jaw
-nTh
+lXM
 rMf
 vAw
 vAw
@@ -284504,8 +284527,8 @@ baE
 baE
 baE
 jaw
-nTh
-rMf
+lXM
+uhI
 vAw
 wlQ
 vAw
@@ -284956,8 +284979,8 @@ vAw
 vAw
 vAw
 uhI
-nTh
-rMf
+lXM
+uhI
 vAw
 vAw
 vAw
@@ -285408,7 +285431,7 @@ rMf
 rMf
 rMf
 uhI
-nTh
+lXM
 rMf
 hXD
 mgK

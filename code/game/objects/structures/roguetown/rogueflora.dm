@@ -318,6 +318,20 @@
 		return 0
 	return 1
 
+/obj/structure/flora/roguegrass/bush/red
+	icon_state = "bush1red"
+
+/obj/structure/flora/roguegrass/bush/red/Initialize()
+	. = ..()
+	icon_state = "bush[rand(1,4)]red"
+
+/obj/structure/flora/roguegrass/bush/winter
+	icon_state = "bush1winter"
+
+/obj/structure/flora/roguegrass/bush/winter/Initialize()
+	. = ..()
+	icon_state = "bush[rand(1,4)]winter"
+
 /obj/structure/flora/roguegrass/bush/wall
 	name = "great bush"
 	desc = "A bush, this one's roots are thick and block the way."
@@ -338,13 +352,27 @@
 
 /obj/structure/flora/roguegrass/bush/wall/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 /obj/structure/flora/roguegrass/bush/wall/CheckExit(atom/movable/O, turf/target)
 	if(istype(O) && (O.pass_flags & PASSGRILLE))
-		return 1
-	return 0
+		return TRUE
+	return FALSE
+
+/obj/structure/flora/roguegrass/bush/wall/red
+	icon_state = "bushwall1red"
+
+/obj/structure/flora/roguegrass/bush/wall/red/Initialize()
+	. = ..()
+	icon_state = "bushwall[pick(1,2)]red"
+
+/obj/structure/flora/roguegrass/bush/wall/winter
+	icon_state = "bushwall1winter"
+
+/obj/structure/flora/roguegrass/bush/wall/red/Initialize()
+	. = ..()
+	icon_state = "bushwall[pick(1,2)]winter"
 
 /obj/structure/flora/roguegrass/bush/wall/tall
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
@@ -357,6 +385,13 @@
 /obj/structure/flora/roguegrass/bush/wall/tall/Initialize()
 	. = ..()
 	icon_state = "tallbush[pick(1,2)]"
+
+/obj/structure/flora/roguegrass/bush/wall/tall/red
+	icon_state = "tallbush1red"
+
+/obj/structure/flora/roguegrass/bush/wall/tall/red/Initialize()
+	. = ..()
+	icon_state = "tallbush[pick(1,2)]red"
 
 
 /obj/structure/flora/rogueshroom
