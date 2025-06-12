@@ -15,9 +15,8 @@
 	var/inherent_spell = null
 	speak_chance = 1
 	turns_per_move = 5
-	ventcrawler = VENTCRAWLER_ALWAYS
-	pass_flags = PASSTABLE
 	mob_size = MOB_SIZE_SMALL
+	pass_flags = PASSMOB //We don't want them to block players.
 	density = FALSE
 	see_in_dark = 6
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
@@ -38,7 +37,7 @@
 	butcher_results = list(/obj/item/natural/stone = 1)
 	speed = 0.8
 	breedchildren = 0 //Yeah no, I'm not falling for this one.
-	base_intents = list(INTENT_HELP, INTENT_HARM)
+	base_intents = list(INTENT_HELP)
 	dodgetime = 20
 	held_items = list(null, null)
 
@@ -46,6 +45,16 @@
 /mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
 	. = ..()
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living, ExtinguishMob)), 1 SECONDS)
+
+/mob/living/simple_animal/pet/familiar/Initialize()
+	. = ..()
+	ADD_TRAIT(src, TRAIT_NOFALLDAMAGE1, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_CHUNKYFINGERS, TRAIT_GENERIC)
+
+/mob/living/simple_animal/pet/familiar/examine(mob/user)
+	. = ..()
+	if(flavortext || headshot_link || ooc_notes)
+		. += "<a href='?src=[REF(src)];task=view_headshot;'>Examine closer</a>"
 
 /datum/status_effect/buff/familiar
 	duration = -1
@@ -63,7 +72,6 @@
 	buff_given = /datum/status_effect/buff/familiar/settled_weight
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/stillness_of_stone)
 	animal_species = "Pondstone Toad"
-	pass_flags = PASSTABLE | PASSMOB
 	STASTR = 11
 	STAPER = 7
 	STAINT = 9
@@ -104,7 +112,7 @@
 	var/list/saved_trails = list()
 	buff_given = /datum/status_effect/buff/familiar/silver_glance
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/lurking_step, /obj/effect/proc_holder/spell/invoked/veilbound_shift)
-	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
+	pass_flags = PASSGRILLE | PASSMOB
 	STASTR = 6
 	STAPER = 11
 	STAINT = 9
@@ -139,7 +147,6 @@
 	animal_species = "Rune Rat"
 	buff_given = /datum/status_effect/buff/familiar/threaded_thoughts
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/inscription_cache, /obj/effect/proc_holder/spell/self/recall_cache)
-	pass_flags = PASSTABLE | PASSMOB
 	STASTR = 5
 	STAPER = 9
 	STAINT = 11
@@ -208,7 +215,6 @@
 	buff_given = /datum/status_effect/buff/familiar/desert_bred_tenacity
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/smolder_shroud)
 	butcher_results = list(/obj/item/ash = 1)
-	pass_flags = PASSTABLE | PASSMOB
 	STASTR = 7
 	STAPER = 8
 	STAINT = 9
@@ -242,7 +248,6 @@
 	animal_species = "Glimmer Hare"
 	buff_given = /datum/status_effect/buff/familiar/lightstep
 	inherent_spell = list(/obj/effect/proc_holder/spell/invoked/blink/glimmer_hare)
-	pass_flags = PASSTABLE | PASSMOB
 	STASTR = 4
 	STAPER = 9
 	STACON = 6
@@ -414,7 +419,6 @@
 	animal_species = "Ripplefox"
 	buff_given = /datum/status_effect/buff/familiar/subtle_slip
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/phantom_flicker)
-	footstep_type = null
 	STASTR = 5
 	STACON = 8
 	STAEND = 9
@@ -446,7 +450,6 @@
 	animal_species = "Whisper Stoat"
 	buff_given = /datum/status_effect/buff/familiar/noticed_thought
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/phantasm_fade)
-	pass_flags = PASSTABLE | PASSMOB
 	STASTR = 5
 	STAPER = 11
 	STAINT = 11
@@ -479,7 +482,6 @@
 	summoning_emote = "The ground gives a slow rumble. A turtle with a bark-like shell emerges from the soil."
 	animal_species = "Thornback Turtle"
 	buff_given = /datum/status_effect/buff/familiar/worn_stone
-	pass_flags = PASSMOB
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/verdant_sprout)
 	STASPD = 11
 	STAPER = 7

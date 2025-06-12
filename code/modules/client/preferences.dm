@@ -176,6 +176,12 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/ooc_notes
 	var/ooc_notes_display
 
+	var/familiar_name
+	var/familiar_specie
+	var/familiar_headshot
+	var/familiar_ooc
+	var/familiar_ooc_extra
+
 /datum/preferences/New(client/C)
 	parent = C
 	migrant  = new /datum/migrant_pref(src)

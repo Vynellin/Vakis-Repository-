@@ -10,18 +10,15 @@
 	var/mob/living/simple_animal/pet/familiar/caster = user
 	var/mob/living/summoner = caster.familiar_summoner
 
-	if(!isliving(summoner))
+	if(!isliving(summoner) || !summoner?.mind)
 		revert_cast()
-		to_chat(summoner, "You cannot sense your summoner's mind.")
-		return
-	if(!summoner.mind)
-		revert_cast()
-		to_chat(summoner, "You cannot sense your summoner's mind.")
-		return
+		to_chat(user, span_warning("You cannot sense your summoner's mind."))
+		return FALSE
+
 	var/message = input(user, "You make a connection. What are you trying to say?")
 	if(!message)
 		revert_cast()
-		return
+		return FALSE
 	to_chat_immediate(summoner, "Arcane whispers fill the back of my head, resolving into [user]'s voice: <font color=#7246ff>[message]</font>")
 	user.visible_message("[user] mutters an incantation and their mouth briefly flashes white.")
 	user.whisper(message)
@@ -34,56 +31,60 @@
 
 /obj/effect/proc_holder/spell/self/stillness_of_stone/cast(list/targets, mob/living/simple_animal/pet/familiar/pondstone_toad/user)
 	. = ..()
-	if(user.stoneform) // Already stoned: revert to normal
-		user.icon = user.original_icon
-		user.icon_state = user.original_icon_state
-		user.icon_living = user.original_icon_living
-		user.name = user.original_name
-		user.stoneform = FALSE
-		to_chat(user, "<span class='notice'>You shift back into your natural form.</span>")
-		user.regenerate_icons()
+	if(user.stoneform)
+		user.revert_from_stoneform()
 	else
-		// Save original state
-		user.original_icon = user.icon
-		user.original_icon_state = user.icon_state
-		user.original_icon_living = user.icon_living
-		user.original_name = user.name
-		// Transform to stone
+		// Save original state if not already saved
+		if(!user.original_icon)
+			user.original_icon = user.icon
+			user.original_icon_state = user.icon_state
+			user.original_icon_living = user.icon_living
+			user.original_name = user.name
+
 		user.icon = 'icons/roguetown/items/natural.dmi'
 		user.icon_state = "stone1"
 		user.icon_living = "stone1"
 		user.name = "Stone"
 		user.stoneform = TRUE
-		to_chat(user, "<span class='notice'>You become utterly still, blending into your surroundings like a stone.</span>")
+
+		user.visible_message(
+			span_notice("[user] becomes utterly still, their body taking on the appearance of a stone."),
+			span_notice("You become utterly still, blending into your surroundings like a stone.")
+		)
 		user.regenerate_icons()
 	return TRUE
 
+/mob/living/simple_animal/pet/familiar/pondstone_toad/proc/revert_from_stoneform()
+	if(!stoneform)
+		return
+
+	icon = original_icon
+	icon_state = original_icon_state
+	icon_living = original_icon_living
+	name = original_name
+	stoneform = FALSE
+
+	visible_message(
+		span_notice("[src] shifts back into a more animated, toad-like form."),
+		span_notice("You shift back into your natural form.")
+	)
+	regenerate_icons()
+
 /mob/living/simple_animal/pet/familiar/pondstone_toad/Move()
 	if(stoneform)
-		return 0
+		return FALSE
 	return ..()
 
-//Dying in stone form would cause weird issues.
 /mob/living/simple_animal/pet/familiar/pondstone_toad/death()
 	. = ..()
-	if(src.stoneform) // Already stoned: revert to normal
-		src.icon = src.original_icon
-		src.icon_state = src.original_icon_state
-		src.icon_living = src.original_icon_living
-		src.name = src.original_name
-		src.stoneform = FALSE
-		to_chat(src, "<span class='notice'>You shift back into your natural form.</span>")
-		src.regenerate_icons()
+	if(stoneform)
+		revert_from_stoneform()
 
-/mob/living/simple_animal/pet/familiar/hollow_antlerling/Entered(atom/movable/AM, atom/oldLoc)
+/mob/living/simple_animal/pet/familiar/hollow_antlerling/Exited(atom/movable/AM, atom/newLoc)
 	. = ..()
-	// 60% chance to leave a glowing petal trail
-	if(prob(60) && isturf(loc))
-		var/turf/turf = loc
-		// Create the petal overlay
-		var/obj/effect/overlay/petal = new /obj/item/glow_petal(turf)
-		// Delete it after 5 to 6 seconds
-		spawn(rand(50, 60)) // 5 to 6 seconds
+	if (prob(60) && isturf(src.loc))
+		var/obj/item/glow_petal/petal = new /obj/item/glow_petal(src.loc)
+		spawn(rand(50, 60))
 			qdel(petal)
 
 /obj/item/glow_petal
@@ -102,24 +103,33 @@
 	name = "Scent of the Grave"
 	recharge_time = 1 SECONDS
 
-/obj/effect/proc_holder/spell/self/scent_of_the_grave/cast(list/targets, mob/living/simple_animal/pet/familiar/pondstone_toad/user)
+/obj/effect/proc_holder/spell/self/scent_of_the_grave/cast(list/targets, mob/living/simple_animal/pet/familiar/gravemoss_serpent/user)
 	. = ..()
+
+	user.visible_message(
+		span_notice("[user] lifts its head, tongue flickering as it tastes the air..."),
+		span_notice("You raise your head, tasting the air for the scent of the dead.")
+	)
+
 	var/list/trackable = list()
-	for (var/corpse in GLOB.dead_mob_list)
+	for (var/mob/living/corpse in GLOB.dead_mob_list)
 		if(get_dist(corpse, user) < 30)
 			trackable += corpse
 
-	if(!trackable || !trackable.len)
-		to_chat(user, "No trackable corpses nearby.")
+	if(!trackable.len)
+		to_chat(user,span_notice("You detect no nearby corpses."))
 		return
 
 	var/obj/item/choice = input(user, "Select a corpse to track", "Nearby corpses") as null|anything in trackable
-	if(choice == null)
+	if(!choice)
 		return
 
 	var/direction_text = dir2text(get_dir(user.loc, choice.loc))
-	to_chat(user, "The scent leads you [direction_text].")
 
+	user.visible_message(
+		span_warning("[user]'s eyes narrows."),
+		span_notice("The scent of the grave draws you to the [direction_text].")
+	)
 
 /obj/effect/proc_holder/spell/invoked/blink/glimmer_hare
 	invocation = "" //"Natural" abilty, no incantation.
@@ -346,19 +356,32 @@
 
 /obj/effect/proc_holder/spell/self/phantom_flicker/cast(list/targets, mob/living/simple_animal/pet/familiar/ripplefox/user)
 	. = ..()
+
 	var/mob/living/simple_animal/pet/familiar/ripplefox/fam = new user.type(user.loc)
-	user.visible_message(span_notice("[fam] blurs and darts away!"))
-	fam.visible_message(span_notice("[fam] blurs and darts away!"))
+	user.visible_message(span_notice("[user.name] blurs and darts away in two directions at once!"))
+
 	fam.familiar_summoner = user
 	fam.fully_replace_character_name(null, user.name)
-	fam.ai_controller.set_blackboard_key(BB_BASIC_MOB_FLEEING, TRUE)
 
-	var/mob/living/fake_fam = fam
-	spawn(10 SECONDS)
-		if(fake_fam && !QDELETED(fake_fam))
-			qdel(fake_fam)
+	// Find a random open turf in view range
+	var/list/valid_turfs = list()
+	for (var/turf/potential_turf in range(7, user))
+		if (potential_turf && fam.CanPass(potential_turf))
+			valid_turfs += potential_turf
+
+	if (valid_turfs.len)
+		var/turf/target_turf = pick(valid_turfs)
+		walk_to(fam, target_turf, 0)
+
+	// Schedule deletion safely with global context
+	addtimer(CALLBACK(GLOBAL_PROC, /proc/delete_illusory_fam, fam, user), 200)
 
 	return TRUE
+
+/proc/delete_illusory_fam(var/mob/living/simple_animal/pet/familiar/ripplefox/fam, var/mob/user)
+	if(fam && !QDELETED(fam))
+		user.visible_message(span_notice("[fam.name] flickers and vanishes into nothingness."))
+		qdel(fam)
 
 /obj/effect/proc_holder/spell/self/lurking_step
 	name = "Lurking Step"
@@ -448,7 +471,7 @@
 		M.update_sneak_invis()
 
 		// Register movement signal to break stealth
-		REGISTER_SIGNAL(M, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
+		RegisterSignal(M, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
 
 		// Schedule end of duration
 		addtimer(CALLBACK(M, TYPE_PROC_REF(/mob/living, fade_back_message)), 2 MINUTES)
@@ -473,14 +496,14 @@
 	src.update_sneak_invis()
 
 	// Cleanup signal
-	UNREGISTER_SIGNAL(src, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
+	UnregisterSignal(src, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
 
 /mob/living/proc/fade_back_message()
 	if (!src || QDELETED(src))
 		return
 
 	// Stop tracking movement
-	UNREGISTER_SIGNAL(src, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
+	UnregisterSignal(src, COMSIG_MOVABLE_MOVED, /mob/living/proc/on_veil_movement)
 
 	if (src.invis_broken_early)
 		return // Already became visible via movement
