@@ -255,6 +255,7 @@
 #define SLIP_WHEN_CRAWLING		(1<<4) //clown planet ruin
 
 #define MAX_CHICKENS 50
+#define MAX_MOTHCATS 50
 
 ///Flags used by the flags parameter of electrocute act.
 
