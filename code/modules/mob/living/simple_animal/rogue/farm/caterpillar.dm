@@ -194,7 +194,12 @@
 	response_harm_simple = "kick"
 	attack_verb_continuous = "headbutts"
 	attack_verb_simple = "headbutt"
-	food_type = list(/obj/item/reagent_containers/food/snacks/grown/wheat)
+	food_type = list(
+		/obj/item/reagent_containers/food/snacks/grown/berries/rogue,
+		/obj/item/natural/worms,
+		/obj/item/natural/fibers,
+		/obj/item/natural/bundle/fibers,
+	)
 	health = 3
 	maxHealth = 3
 	ventcrawler = VENTCRAWLER_ALWAYS
