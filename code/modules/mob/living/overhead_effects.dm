@@ -1,7 +1,9 @@
 //By DREAMKEEP, Vide Noir https://github.com/EaglePhntm.
 //GRAPHICS & SOUNDS INCLUDED:
 //DARKEST DUNGEON (STRESS, RELIEF, AFFLICTION)
-/mob/living/proc/play_overhead_indicator(icon_path, overlay_name, clear_time, overlay_layer, private = FALSE, soundin = null, y_offset = 12)
+/mob/living/proc/play_overhead_indicator(icon_path, overlay_name, clear_time, overlay_layer, private, soundin = null, y_offset = 12, fadein_time)
+	var/obj/effect/temp_visual/stress_event/invisible/overhead_indicator = /obj/effect/temp_visual/stress_event
+
 	if(!ishuman(src))
 		return
 	if(stat != DEAD)
@@ -20,7 +22,8 @@
 			appearance.appearance_flags = RESET_COLOR
 			overlays_standing[OBJ_LAYER] = appearance
 			apply_overlay(OBJ_LAYER)
-			addtimer(CALLBACK(humie, PROC_REF(clear_overhead_indicator), appearance), clear_time)
+			if(clear_time)
+				addtimer(CALLBACK(humie, PROC_REF(clear_overhead_indicator), appearance), clear_time)
 			playsound(src, soundin, 100, FALSE, extrarange = -1, ignore_walls = FALSE)
 		if(ispath(private, /datum/patron))	// Patron signs
 			var	icon_plane = WEATHER_EFFECT_PLANE
