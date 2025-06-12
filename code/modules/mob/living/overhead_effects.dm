@@ -36,11 +36,11 @@
 						H.playsound_local(get_turf(src), soundin, 100, FALSE)
 
 		        // buffs + mood (priest only)
-				for (var/mob/living/carbon/human/target in view(10, src.loc))
-					if (target != src)
-						target.apply_status_effect(/datum/status_effect/buff/peaceful_aura)
-						target.apply_status_effect(/datum/status_effect/buff/alch/fortunepot)
-						SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "fsalute", /datum/mood_event/fsalute)
+				for(var/mob/living/carbon/human/T in view(5, src.loc))
+					if (T != src)
+						T.apply_status_effect(/datum/status_effect/buff/faithful)
+						T.apply_status_effect(/datum/status_effect/buff/ffortune)
+						// SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "fsalute", /datum/stressevent/inner_peace)
 			else
 				// ── God sign for non-priests ──
 				for (var/mob/living/carbon/human/H in viewers(world.view, src))
