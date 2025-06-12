@@ -13,7 +13,7 @@
 	var/list/categories = list("Postings", "Premium Postings")
 	var/authority_roles = list(
 		"Marquis",
-		"Marquise",
+		"Marquess",
 		"Nobleman",
 		"Noblewoman",
 		"Hand",
