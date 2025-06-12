@@ -639,9 +639,7 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	droning_sound_night = null
 	ambush_times = list("night","dawn","dusk","day")
 	ambush_types = list(
-				/turf/open/floor/rogue/grassred,
-				/turf/open/floor/rogue/grassyel,
-				/turf/open/floor/rogue/grasscold)
+				/turf/open/floor/rogue/grassred)
 	ambush_mobs = list(
 				/mob/living/carbon/human/species/elf/dark/ziraguard/ambush = 60,
 				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 40)
