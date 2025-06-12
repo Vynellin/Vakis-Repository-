@@ -28527,6 +28527,12 @@
 	},
 /turf/open/floor/rogue/metal/barograte,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
+"kOR" = (
+/obj/structure/closet/crate/roguecloset/crafted,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
+/turf/open/floor/carpet/red,
+/area/rogue/under/cave/dungeon/old_university)
 "kPm" = (
 /obj/structure/mineral_door/bars{
 	locked = 1
@@ -44174,6 +44180,7 @@
 /area/rogue/under/town/basement/keep)
 "qMa" = (
 /obj/structure/closet/crate/roguecloset/crafted,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /turf/open/floor/carpet/red,
 /area/rogue/under/cave/dungeon/old_university)
 "qMx" = (
@@ -60971,6 +60978,7 @@
 /area/rogue/indoors/shelter/woods)
 "xra" = (
 /obj/structure/rack/rogue,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/carpet/red,
 /area/rogue/under/cave/dungeon/old_university)
 "xrk" = (
@@ -202270,7 +202278,7 @@ wEX
 wgu
 xra
 qMa
-qMa
+kOR
 mjs
 gen
 gen
