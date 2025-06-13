@@ -73,7 +73,7 @@
 // PATRON GOD TRAITS
 #define TRAIT_KNEESTINGER_IMMUNITY "Blessing of Tamari"
 #define TRAIT_SOUL_EXAMINE "Blessing of Tsoridys" //can check bodies to see if they have departed // SOLARIS NOTE: why the fuck would you obfuscate critical info like this. oughhghgh
-#define TRAIT_CHOSEN "Aeternus' Chosen"
+#define TRAIT_CHOSEN "The Nine's Chosen"
 #define TRAIT_CINELLA_SWIM "Blessing of Cinella" //less base fatigue drain when swimming
 #define TRAIT_KASMIDIAN "Blessing of Kasmidian" //secret thieves cant language
 #define TRAIT_BEASTKIN "Tamari's Howl" // ww/beast language for tamari devotees
@@ -147,8 +147,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_KNIGHTSMAN = span_info("I am a stalwart defender of the crown. In the keep of Solaris Ridge, my abilities are sharper due to my routine and familiarity."),
 	TRAIT_DEATHBARGAIN = span_info("A horrible deal has been prepared in your name. May you never see it fulfilled..."),
 	TRAIT_RITUALIST = span_info("I am skilled in the holy arts. Using ritual chalk, I can more deftly channel my God's powers via runes."),
-	TRAIT_CHOSEN = "Aeternus chose you to represent his light.",
-	TRAIT_WEBWALK = "I can move freely between webs.",
+	TRAIT_CHOSEN = span_info("My words and actions bears the weight of the Nine. When I speak, their presence is felt, whether in judgment, blessing, or warning. The words are mine, but not wholly."),	TRAIT_WEBWALK = "I can move freely between webs.",
 	TRAIT_NOSTINK = span_dead("My nose is numb to the smell of decay."),
 	TRAIT_ZJUMP = "Time to reach a new high.",
 	TRAIT_JESTERPHOBIA = span_warning("I have a severe irrational fear of Jesters"),

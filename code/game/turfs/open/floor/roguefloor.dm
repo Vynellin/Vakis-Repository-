@@ -27,8 +27,6 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/woodland.wav'
-//	smooth = SMOOTH_MORE
-//	canSmoothWith = list(/turf/closed/mineral/rogue, /turf/closed/mineral, /turf/closed/wall/mineral/rogue/stonebrick, /turf/closed/wall/mineral/rogue/wood, /turf/closed/wall/mineral/rogue/wooddark, /turf/closed/wall/mineral/rogue/decowood, /turf/closed/wall/mineral/rogue/decostone, /turf/closed/wall/mineral/rogue/stone, /turf/closed/wall/mineral/rogue/stone/moss, /turf/open/floor/rogue/cobble, /turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
 	neighborlay = "dirtedge"
 
 /turf/open/floor/rogue/ruinedwood/Initialize()
@@ -332,7 +330,7 @@
 
 /turf/open/floor/rogue/dirt
 	name = "dirt"
-	desc = "The dirt is pocked with the scars of countless wars."
+	desc = "The dirt is pocked with the scars of travel and wildlife."
 	icon_state = "dirt"
 	layer = MID_TURF_LAYER
 	footstep = FOOTSTEP_GRASS
@@ -476,14 +474,8 @@
 	name = "dirt"
 	desc = "The dirt is pocked with the scars of countless steps."
 	icon_state = "road"
-	layer = MID_TURF_LAYER
 	footstep = FOOTSTEP_SAND
-	barefootstep = FOOTSTEP_SOFT_BAREFOOT
-	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
-	tiled_dirt = FALSE
-	landsound = 'sound/foley/jumpland/dirtland.wav'
-	smooth = SMOOTH_TRUE
-	canSmoothWith = list(/turf/open/floor/rogue/dirt,
+	canSmoothWith = list(/turf/open/floor/rogue/dirt/road,
 						/turf/open/floor/rogue/grass,
 						/turf/open/floor/rogue/grassred, 
 						/turf/open/floor/rogue/grassyel, 
