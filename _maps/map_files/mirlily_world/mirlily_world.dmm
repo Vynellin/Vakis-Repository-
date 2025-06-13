@@ -1754,7 +1754,7 @@
 /turf/open/floor/rogue/grass,
 /area/rogue/outdoors/town/roofs/keep)
 "jX" = (
-/obj/structure/flora/roguegrass/bush/wall,
+/obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/exposed/town/keep)
 "jZ" = (
@@ -9133,7 +9133,7 @@
 	},
 /area/rogue/indoors/town/manor)
 "Yg" = (
-/obj/structure/flora/roguegrass/bush,
+/obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/outdoors/exposed/town/keep)
 "Yi" = (
@@ -9315,10 +9315,6 @@
 /obj/machinery/light/rogue/wallfire/candle/weak/directional/west,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/manor)
-"Zl" = (
-/obj/structure/flora/roguetree/lush,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/exposed/town/keep)
 "Zm" = (
 /obj/structure/chair/wood/rogue{
 	dir = 4
@@ -173421,7 +173417,7 @@ kE
 kE
 ws
 rt
-Zl
+VS
 rt
 Gk
 yW

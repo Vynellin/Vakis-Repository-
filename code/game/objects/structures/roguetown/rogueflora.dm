@@ -117,18 +117,6 @@
 	. = ..()
 	icon_state = "screaming[rand(1,3)]"
 
-/obj/structure/flora/roguetree/lush
-	name = /obj/structure/flora/tree/jungle::name
-	desc = "A tree, lush and full."
-	icon = /obj/structure/flora/tree/jungle::icon
-	icon_state = /obj/structure/flora/tree/jungle::icon_state
-	pixel_x = /obj/structure/flora/tree/jungle::pixel_x
-	pixel_y = /obj/structure/flora/tree/jungle::pixel_y
-
-/obj/structure/flora/roguetree/lush/Initialize()
-	. = ..()
-	icon_state = "[icon_state][rand(1, 6)]"
-
 /obj/structure/flora/roguetree/stump
 	name = "tree stump"
 	desc = "Someone cut this tree down."
