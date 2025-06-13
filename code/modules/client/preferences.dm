@@ -176,21 +176,12 @@ GLOBAL_LIST_EMPTY(chosen_names)
 	var/ooc_notes
 	var/ooc_notes_display
 
-	var/familiar_name
-	var/familiar_specie
-	var/familiar_headshot_link
-	var/familiar_flavortext
-	var/familiar_flavortext_display
-	var/familiar_info
-	var/familiar_ooc
-	var/familiar_ooc_notes
-	var/familiar_ooc_notes_display
-	var/familiar_ooc_extra
-	var/familiar_ooc_extra_link
+	var/datum/familiar_pref/familiar_pref
 
 /datum/preferences/New(client/C)
 	parent = C
 	migrant  = new /datum/migrant_pref(src)
+	familiar_pref = new /datum/familiar_pref(src)
 
 	for(var/custom_name_id in GLOB.preferences_custom_names)
 		custom_names[custom_name_id] = get_default_name(custom_name_id)
@@ -461,20 +452,7 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "<br><b>Loadout Item III:</b> <a href='?_src_=prefs;preference=loadout_item3;task=input'>[loadout3 ? loadout3.name : "None"]</a>"
 
-			dat += "<h2>Be a Familiar</h2>"
-
-			dat += "<a href='?_src_=prefs;preference=familiar_name;task=input'>[(familiar_name && length(familiar_name)) ? familiar_name : "(Set name)"]</a> <a href='?_src_=prefs;preference=familiar_name;task=random'>\[R\]</a>"
-
-			dat += "<br><b>Familiar Headshot:</b> <a href='?_src_=prefs;preference=familiar_headshot;task=input'>Change</a>"
-			if(familiar_headshot_link != null)
-				dat += "<br><img src='[familiar_headshot_link]' width='100px' height='100px'>"
-
-			dat += "<br><b>Flavortext:</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=familiar_flavortext;task=input'>Change</a>"
-
-			dat += "<br><b>OOC Notes:</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=familiar_ooc_notes;task=input'>Change</a>"
-
-			dat += "<br><b>Familiar OOC Extra:</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=familiar_ooc_extra;task=input'>Change</a>"
-			dat += "</td>"
+			dat += "<br><b>Be a Familiar:</b><a href='?_src_=prefs;preference=familiar_pref;task=input'>Familiar Preferences</a>"
 
 			dat += "</tr></table>"
 //			-----------END OF BODY TABLE-----------
@@ -1448,16 +1426,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						else
 							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ', . and ,.</font>")
 
-				if("familiar_name")
-					var/new_name = input(user, "Choose your Familiar character's name:", "Identity")  as text|null
-					if(new_name)
-						new_name = reject_bad_name(new_name)
-						if(new_name)
-							familiar_name = new_name
-						else
-							to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ', . and ,.</font>")
-
-
 				if("nickname")
 					var/new_name = input(user, "Choose your character's nickname (For Highlighting):", "Nickname (For Chat Highlighting)")  as text|null
 					if(new_name)
@@ -1606,24 +1574,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					to_chat(user, "<span class='notice'>Successfully updated headshot picture</span>")
 					log_game("[user] has set their Headshot image to '[headshot_link]'.")
 
-				if("familiar_headshot")
-					to_chat(user, "<span class='notice'>Please use a relatively SFW image of the head and shoulder area to maintain immersion level. Lastly, ["<span class='bold'>do not use a real life photo or use any image that is less than serious.</span>"]</span>")
-					to_chat(user, "<span class='notice'>If the photo doesn't show up properly in-game, ensure that it's a direct image link that opens properly in a browser.</span>")
-					to_chat(user, "<span class='notice'>Keep in mind that the photo will be downsized to 325x325 pixels, so the more square the photo, the better it will look.</span>")
-					var/new_headshot_link = input(user, "Input the headshot link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Headshot", familiar_headshot_link) as text|null
-					if(new_headshot_link == null)
-						return
-					if(new_headshot_link == "")
-						familiar_headshot_link = null
-						ShowChoices(user)
-						return
-					if(!valid_headshot_link(user, new_headshot_link))
-						familiar_headshot_link = null
-						ShowChoices(user)
-						return
-					familiar_headshot_link = new_headshot_link
-					to_chat(user, "<span class='notice'>Successfully updated Familiar headshot picture</span>")
-					log_game("[user] has set their Familiar Headshot image to '[familiar_headshot_link]'.")
 				if("legacyhelp")
 					var/list/dat = list()
 					dat += "This slot was around since before major Flavortext / OOC changes.<br>"
@@ -1671,23 +1621,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					is_legacy = FALSE
 					to_chat(user, "<span class='notice'>Successfully updated flavortext</span>")
 					log_game("[user] has set their flavortext'.")
-				if("familiar_flavortext")
-					to_chat(user, "<span class='notice'>["<span class='bold'>Flavortext should not include nonphysical nonsensory attributes such as backstory or the character's internal thoughts.</span>"]</span>")
-					var/new_flavortext = input(user, "Input your Familiar character description:", "Flavortext", familiar_flavortext) as message|null
-					if(new_flavortext == null)
-						return
-					if(new_flavortext == "")
-						familiar_flavortext = null
-						familiar_flavortext_display = null
-						ShowChoices(user)
-						return
-					familiar_flavortext = new_flavortext
-					var/ft = flavortext
-					ft = html_encode(ft)
-					ft = replacetext(parsemarkdown_basic(ft), "\n", "<BR>")
-					familiar_flavortext_display = ft
-					to_chat(user, "<span class='notice'>Successfully updated familiar flavortext</span>")
-					log_game("[user] has set their familiar flavortext'.")
+				
 				if("ooc_notes")
 					to_chat(user, "<span class='notice'>["<span class='bold'>BE AWARE: Phrases such as \"no limits\" and \"anything goes\" are considered ban-baiting.</span>"]</span>")
 					var/new_ooc_notes = input(user, "Input your OOC preferences:", "OOC notes", ooc_notes) as message|null
@@ -1707,23 +1641,7 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 					is_legacy = FALSE
 					to_chat(user, "<span class='notice'>Successfully updated OOC notes.</span>")
 					log_game("[user] has set their OOC notes'.")
-				if("familiar_ooc_notes")
-					to_chat(user, "<span class='notice'>["<span class='bold'>BE AWARE: Phrases such as \"no limits\" and \"anything goes\" are considered ban-baiting.</span>"]</span>")
-					var/new_ooc_notes = input(user, "Input your OOC preferences:", "OOC notes", familiar_ooc_notes) as message|null
-					if(new_ooc_notes == null)
-						return
-					if(new_ooc_notes == "")
-						familiar_ooc_notes = null
-						familiar_ooc_notes_display = null
-						ShowChoices(user)
-						return
-					familiar_ooc_notes = new_ooc_notes
-					var/familiar_ooc = ooc_notes
-					familiar_ooc = html_encode(familiar_ooc)
-					familiar_ooc = replacetext(parsemarkdown_basic(familiar_ooc), "\n", "<BR>")
-					familiar_ooc_notes_display = familiar_ooc
-					to_chat(user, "<span class='notice'>Successfully updated Familiar OOC notes.</span>")
-					log_game("[user] has set their Familiar OOC notes'.")
+
 				if("ooc_preview")	//Unashamedly copy pasted from human_topic.dm L:7. Sorry!
 					var/list/dat = list()
 					dat += "<div align='center'><font size = 5; font color = '#dddddd'><b>[real_name]</b></font></div>"
@@ -1809,60 +1727,9 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 						ooc_extra += "</center></div>"
 						to_chat(user, "<span class='notice'>Successfully updated OOC Extra with [info]</span>")
 						log_game("[user] has set their OOC Extra to '[ooc_extra_link]'.")
-				if("familiar_ooc_extra")
-					to_chat(user, "<span class='notice'>Add a link from a suitable host (catbox, etc) to an mp3, mp4, or jpg / png file to have it embed at the bottom of your OOC notes.</span>")
-					to_chat(user, "<span class='notice'>If the link doesn't show up properly in-game, ensure that it's a direct link that opens properly in a browser.</span>")
-					to_chat(user, "<span class='notice'>Videos will be shrunk to a ~300x300 square. Keep this in mind.</span>")
-					to_chat(user, "<font color = '#d6d6d6'>Leave a single space to delete it from your OOC notes.</font>")
-					to_chat(user, "<font color ='red'>Abuse of this will get you banned.</font>")
-					var/fam_new_extra_link = input(user, "Input the accessory link (https, hosts: gyazo, discord, lensdump, imgbox, catbox):", "Familiar OOC Extra", familiar_ooc_extra_link) as text|null
-					if(fam_new_extra_link == null)
-						return
-					if(fam_new_extra_link == "")
-						fam_new_extra_link = null
-						ShowChoices(user)
-						return
-					if(fam_new_extra_link == " ")	//Single space to delete
-						familiar_ooc_extra_link = null
-						familiar_ooc_extra = null
-						to_chat(user, "<span class='notice'>Successfully deleted Familiar OOC Extra.</span>")
-					var/static/list/valid_extensions = list("jpg", "png", "jpeg", "gif", "mp4", "mp3")
-					if(!valid_headshot_link(user, fam_new_extra_link, FALSE, valid_extensions))
-						fam_new_extra_link = null
-						ShowChoices(user)
-						return
-
-					var/list/value_split = splittext(fam_new_extra_link, ".")
-
-					// extension will always be the last entry
-					var/extension = value_split[length(value_split)]
-					var/info
-					if((extension in valid_extensions))
-						familiar_ooc_extra_link = fam_new_extra_link
-						familiar_ooc_extra = null
-						familiar_ooc_extra = "<div align ='center'><center>"
-						if(extension == "jpg" || extension == "png" || extension == "jpeg" || extension == "gif")
-							familiar_ooc_extra += "<br>"
-							familiar_ooc_extra += "<img src='[ooc_extra_link]'/>"
-							info = "an embedded image."
-						else 
-							switch(extension)
-								if("mp4")
-									familiar_ooc_extra = "<br>"
-									familiar_ooc_extra += "<video width=["288"] height=["288"] controls=["true"]>"
-									familiar_ooc_extra += "<source src='[ooc_extra_link]' type=["video/mp4"]>"
-									familiar_ooc_extra += "</video>"
-									familiar_info = "a video."
-								if("mp3")
-									familiar_ooc_extra = "<br>"
-									familiar_ooc_extra += "<audio controls>"
-									familiar_ooc_extra += "<source src='[ooc_extra_link]' type=["audio/mp3"]>"
-									familiar_ooc_extra += "Your browser does not support the audio element."
-									familiar_ooc_extra += "</audio>"
-									info = "embedded audio."
-						familiar_ooc_extra += "</center></div>"
-						to_chat(user, "<span class='notice'>Successfully updated Familiar OOC Extra with [info]</span>")
-						log_game("[user] has set their Familiar OOC Extra to '[familiar_ooc_extra_link]'.")
+				
+				if("familiar_pref")
+					familiar_pref.show_ui()
 				
 				if("loadout_item")
 					var/list/loadouts_available = list("None")
@@ -2551,12 +2418,6 @@ Slots: [job.spawn_positions] [job.round_contrib_points ? "RCP: +[job.round_contr
 		character.update_body()
 		character.update_hair()
 		character.update_body_parts(redraw = TRUE)
-
-/datum/preferences/proc/fam_copy_to(mob/living/simple_animal/character, icon_updates = 1, roundstart_checks = TRUE, character_setup = FALSE, antagonist = FALSE)
-	character.name = familiar_name
-	character.familiar_headshot_link = familiar_headshot_link
-	character.familiar_ooc_notes = familiar_ooc_notes
-	character.familiar_flavortext = familiar_flavortext
 
 /datum/preferences/proc/get_default_name(name_id)
 	switch(name_id)

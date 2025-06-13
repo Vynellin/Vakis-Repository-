@@ -77,8 +77,8 @@
 			else if (choice == "I have a specific familiar in mind")
 				// Filter matching familiars
 				var/list/options = list()
-				for (var/entry in GLOB.registered_familiars)
-					if (entry["type"] == familiar_check.type && !entry["suppress"])
+				for (var/mob/entry in GLOB.familiar_queue)
+					if (entry.client?.prefs.familiar_pref.familiar_specie == familiar_check.type && !entry["suppress"])
 						options += entry
 
 				if (!options.len)
@@ -132,7 +132,7 @@
 	)
 	if (path_choice == "Summon from registered familiars")
 		var/list/options = list()
-		for (var/entry in GLOB.registered_familiars)
+		for (var/mob/entry in GLOB.familiar_queue)
 			if (!entry["suppress"])
 				options += entry
 		if (!options.len)
@@ -181,7 +181,7 @@
 
 /proc/prepare_familiar_for_player(mob/living/simple_animal/pet/familiar/awakener, mob/chosen_one, mob/living/carbon/user)
 	awakener.ckey = chosen_one.ckey
-	chosen_one.client.prefs.fam_copy_to(awakener) //This should save the familiar name, fam ooc notes, fam extra ooc and fam headshot to the mob for inspection later.
+	user.client.prefs.familiar_pref.fam_copy_to(awakener)
 	chosen_one.mind.transfer_to(awakener)
 	awakener.grant_all_languages(omnitongue=TRUE)
 	awakener.mind.RemoveAllSpells()
