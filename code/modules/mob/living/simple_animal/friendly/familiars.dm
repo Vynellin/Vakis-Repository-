@@ -53,7 +53,7 @@
 
 /mob/living/simple_animal/pet/familiar/examine(mob/user)
 	. = ..()
-	if(flavortext || headshot_link || ooc_notes)
+	if(familiar_flavortext || familiar_headshot_link || familiar_ooc_notes)
 		. += "<a href='?src=[REF(src)];task=view_headshot;'>Examine closer</a>"
 
 /datum/status_effect/buff/familiar
@@ -61,9 +61,13 @@
 
 /mob/living/simple_animal/pet/familiar/death()
 	. = ..()
+	emote("deathgasp")
+	to_chat(src.familiar_summoner, span_warning("[src.name] has fallen, and your bond dims. Yet in the quiet beyond, a flicker of their essence remains."))
+
+/mob/living/simple_animal/pet/familiar/Destroy()
 	familiar_summoner.remove_status_effect(buff_given)
 	familiar_summoner.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_familiar)
-	emote("deathgasp")
+	..()
 
 /mob/living/simple_animal/pet/familiar/pondstone_toad
 	name = "Pondstone Toad"

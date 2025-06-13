@@ -59,6 +59,7 @@
 				"I have a specific familiar in mind"
 			)
 			if (choice == "Do nothing" || choice == null)
+				revert_cast()
 				return FALSE
 			else if (choice == "Make it sentient")
 				var/list/mob/candidate = pollGhostCandidates("Do you want to play as [familiar_check.name], the [familiar_check.animal_species]?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
@@ -82,6 +83,7 @@
 
 				if (!options.len)
 					to_chat(user, span_notice("No matching familiar candidates are currently available."))
+					revert_cast()
 					return FALSE
 
 				while (TRUE)
@@ -90,6 +92,7 @@
 						name_map[entry["name"]] = entry
 					var/name_choice = input(user, "Choose from registered familiars") as null|anything in name_map
 					if (!name_choice)
+						revert_cast()
 						return FALSE
 
 					var/entry = name_map[name_choice]
@@ -97,7 +100,8 @@
 					if (desc_confirm == "Yes")
 						var/mob/ghost_candidate = get_mob_by_ckey(entry["ckey"])
 						if (!ghost_candidate || !istype(ghost_candidate, /mob/dead/observer))
-							to_chat(user, span_warning("That ghost is no longer available."))
+							to_chat(user, span_warning("That familiar is no longer available."))
+							revert_cast()
 							return FALSE
 
 						var/resp = input(ghost_candidate, "[user] wants to make you their familiar. Accept?") as null|anything in list("Yes", "No", "Never this round")
@@ -115,6 +119,12 @@
 					else
 						continue
 
+	//familiar exists but is dead
+	for (var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.dead_mob_list)
+		if (familiar_check.familiar_summoner == user)
+			var/death_deleting = input(user, "You have a familiar but they are dead, do you want to summon another ? This will make the previous one impossible to ressurect.") as null|anything in list("Yes", "No")
+			if (death_deleting == "No")
+				return FALSE
 	// No existing familiar
 	var/path_choice = input(user, "How do you want to summon your familiar?") as null|anything in list(
 		"Summon from registered familiars",
@@ -170,11 +180,10 @@
 	return TRUE
 
 /proc/prepare_familiar_for_player(mob/living/simple_animal/pet/familiar/awakener, mob/chosen_one, mob/living/carbon/user)
-	awakener.key = chosen_one.key
+	awakener.ckey = chosen_one.ckey
+	chosen_one.client.prefs.fam_copy_to(awakener) //This should save the familiar name, fam ooc notes, fam extra ooc and fam headshot to the mob for inspection later.
 	chosen_one.mind.transfer_to(awakener)
 	awakener.grant_all_languages(omnitongue=TRUE)
-	var/new_name = input(awakener, "What is your name?", "Name") as text|null
-	awakener.fully_replace_character_name(null, new_name)
 	awakener.mind.RemoveAllSpells()
 	awakener.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_summoner)
 	user.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_familiar)
@@ -188,7 +197,6 @@
 	awakener.stop_automated_movement = TRUE
 	awakener.stop_automated_movement_when_pulled = TRUE
 	awakener.wander = FALSE
-
 
 /obj/effect/proc_holder/spell/self/message_familiar
 	name = "Message Familiar"
