@@ -370,7 +370,7 @@
 /obj/structure/flora/roguegrass/bush/wall/winter
 	icon_state = "bushwall1winter"
 
-/obj/structure/flora/roguegrass/bush/wall/red/Initialize()
+/obj/structure/flora/roguegrass/bush/wall/winter/Initialize()
 	. = ..()
 	icon_state = "bushwall[pick(1,2)]winter"
 
