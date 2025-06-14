@@ -473,6 +473,7 @@
 	icon_state = "shelf"
 	density = FALSE
 	climbable = FALSE
+	climb_offset = 0
 	dir = SOUTH
 	pixel_y = 32
 
@@ -492,6 +493,7 @@
 /obj/structure/rack/rogue/shelf/biggest
 	icon_state = "shelf_biggest"
 	pixel_y = 0
+	climb_offset = 10
 
 /obj/structure/rack/rogue/shelf/biggest/tree
 	icon_state = "shelf_biggest_tree"
