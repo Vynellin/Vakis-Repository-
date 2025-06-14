@@ -91,7 +91,7 @@
 	desc = "Enchant an acorn into a shelter acorn, which can be planted and will provide natural shelter, the size of which varies based on the size of the acorn used!"
 	overlay_state = "invoke_shelter"
 	recharge_time = 10 SECONDS
-	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
+	req_items = list(/obj/item/clothing/neck/roguetown/psicross/tamari)
 	req_inhand = /obj/item/acorn
 	sound = 'sound/misc/jmov (2).ogg'
 	associated_skill = /datum/skill/magic/holy
