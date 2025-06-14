@@ -1,4 +1,4 @@
-/datum/familiar_pref
+/datum/familiar_prefs
 	/// Reference to our prefs
 	var/datum/preferences/prefs
 	var/familiar_name
@@ -6,51 +6,51 @@
 	var/familiar_headshot_link
 	var/familiar_flavortext
 	var/familiar_flavortext_display
-	var/familiar_info
 	var/familiar_ooc
 	var/familiar_ooc_notes
 	var/familiar_ooc_notes_display
 	var/familiar_ooc_extra
 	var/familiar_ooc_extra_link
 
-/datum/familiar_pref/New(datum/preferences/passed_prefs)
+/datum/familiar_prefs/New(datum/preferences/passed_prefs)
 	. = ..()
 	prefs = passed_prefs
 
-/datum/familiar_pref/proc/show_ui()
+/datum/familiar_prefs/proc/fam_show_ui()
 	var/client/client = prefs.parent
 	if(!client)
 		return
 
 	var/list/dat = list()
-	dat += "<br><b>Familiar Name:</b> <a href='?_src_=prefs;preference=familiar_name;task=input'>[(familiar_name && length(familiar_name)) ? familiar_name : "(Set name)"]</a>"
+	dat += "<br><b>Familiar Name:</b> <a href='?_src_=familiar_prefs;preference=familiar_name;task=input'>[familiar_name] (Set name)</a>"
 
-	dat += "<br><b>Familiar Headshot:</b> <a href='?_src_=prefs;preference=familiar_headshot;task=input'>Change</a>"
+	dat += "<br><b>Familiar Headshot:</b> <a href='?_src_=familiar_prefs;preference=familiar_headshot;task=input'>Change</a>"
 	if(familiar_headshot_link != null)
 		dat += "<br><img src='[familiar_headshot_link]' width='100px' height='100px'>"
 
-	dat += "<br><b>Flavortext:</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=familiar_flavortext;task=input'>Change</a>"
+	dat += "<br><b>Flavortext:</b><a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=familiar_prefs;preference=familiar_flavortext;task=input'>Change</a>"
 
-	dat += "<br><b>OOC Notes:</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=familiar_ooc_notes;task=input'>Change</a>"
+	dat += "<br><b>OOC Notes:</b><a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=familiar_prefs;preference=familiar_ooc_notes;task=input'>Change</a>"
 
-	dat += "<br><b>Familiar OOC Extra:</b><a href='?_src_=prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=prefs;preference=familiar_ooc_extra;task=input'>Change</a>"
+	dat += "<br><b>Familiar OOC Extra:</b><a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=familiar_prefs;preference=familiar_ooc_extra;task=input'>Change</a>"
 
 	var/current_specie = familiar_specie ? familiar_specie : "None selected"
-	dat += "<br><b>Selected Familiar Type:</b> <a href='?_src_=prefs;preference=familiar_specie;task=select'>[current_specie]</a>"
+	dat += "<br><b>Selected Familiar Type:</b> <a href='?_src_=familiar_prefs;preference=familiar_specie;task=select'>[current_specie]</a>"
 
-	if(usr in GLOB.familiar_queue)
-		dat += "<br><a href='?_src_=prefs;preference=familiar_queue;task=leave'>Leave Queue</a>"
+	if(usr.client in GLOB.familiar_queue)
+		dat += "<br><a href='?_src_=familiar_prefs;preference=familiar_queue;task=leave'>Leave Queue</a>"
 	else
-		dat += "<br><a href='?_src_=prefs;preference=familiar_queue;task=join'>Queue Up</a>"
+		dat += "<br><a href='?_src_=familiar_prefs;preference=familiar_queue;task=join'>Queue Up</a>"
 
 
-	var/datum/browser/popup = new(client.mob, "familiar_pref", "<center>Be a Familiar</center>", 330, 410)
+	var/datum/browser/popup = new(client.mob, "familiar_prefs", "<center>Be a Familiar</center>", 330, 410)
 	popup.set_window_options("can_close=1")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 
 
-/datum/familiar_pref/proc/process_link(mob/user, list/href_list,)
+/datum/familiar_prefs/proc/fam_process_link(mob/user, list/href_list)
+
 
 	if(!user || !istype(user))
 		return
@@ -75,11 +75,11 @@
 				return
 			if(new_headshot_link == "")
 				familiar_headshot_link = null
-				show_ui()
+				fam_show_ui()
 				return
 			if(!valid_headshot_link(user, new_headshot_link))
 				familiar_headshot_link = null
-				show_ui()
+				fam_show_ui()
 				return
 			familiar_headshot_link = new_headshot_link
 			to_chat(user, "<span class='notice'>Successfully updated Familiar headshot picture</span>")
@@ -93,7 +93,7 @@
 			if(new_flavortext == "")
 				familiar_flavortext = null
 				familiar_flavortext_display = null
-				show_ui()
+				fam_show_ui()
 				return
 			familiar_flavortext = new_flavortext
 			var/ft = html_encode(parsemarkdown_basic(familiar_flavortext))
@@ -103,14 +103,14 @@
 			log_game("[user] has set their familiar flavortext.")
 
 		if("familiar_ooc_notes")
-			to_chat(user, "<span class='notice'><b>BE AWARE: Phrases such as \"no limits\" and \"anything goes\" are considered ban-baiting.</b></span>")
+			to_chat(user, "<span class='notice'><b>BE AWARE: you are not allowed to ERP as a familiar as per server rules.</b></span>")
 			var/new_ooc_notes = input(user, "Input your OOC preferences:", "OOC notes", familiar_ooc_notes) as message|null
 			if(new_ooc_notes == null)
 				return
 			if(new_ooc_notes == "")
 				familiar_ooc_notes = null
 				familiar_ooc_notes_display = null
-				show_ui()
+				fam_show_ui()
 				return
 			familiar_ooc_notes = new_ooc_notes
 			var/ooc = html_encode(parsemarkdown_basic(familiar_ooc_notes))
@@ -128,18 +128,18 @@
 				return
 			if(link == "")
 				link = null
-				show_ui()
+				fam_show_ui()
 				return
 			if(link == " ")
 				familiar_ooc_extra = null
 				familiar_ooc_extra_link = null
 				to_chat(user, "<span class='notice'>Successfully deleted Familiar OOC Extra.</span>")
-				show_ui()
+				fam_show_ui()
 				return
 			var/static/list/valid_ext = list("jpg", "jpeg", "png", "gif", "mp4", "mp3")
 			if(!valid_headshot_link(user, link, FALSE, valid_ext))
 				link = null
-				show_ui()
+				fam_show_ui()
 				return
 			familiar_ooc_extra_link = link
 			var/ext = lowertext(splittext(link, ".")[length(splittext(link, "."))])
@@ -157,15 +157,28 @@
 			to_chat(user, "<span class='notice'>Successfully updated Familiar OOC Extra with [info]</span>")
 			log_game("[user] has set their Familiar OOC Extra to '[link]'.")
 
-		if("familiar_queue")
-			if(task == "join")
-				if(!(user in GLOB.familiar_queue))
-					GLOB.familiar_queue += user
+		if ("familiar_queue")
+			if (task == "join")
+				var/datum/preferences/prefs = user?.client?.prefs
+				var/datum/familiar_prefs/fam_pref = prefs?.familiar_prefs
+
+				if (!fam_pref)
+					to_chat(user, "<span class='warning'>Familiar preferences are not initialized.</span>")
+					return
+
+				if (!fam_pref.familiar_name || !fam_pref.familiar_flavortext_display || !fam_pref.familiar_specie)
+					to_chat(user, "<span class='warning'>You must set your Familiar's name, description, and type before joining the queue.</span>")
+					return
+
+				if (!(user.client in GLOB.familiar_queue))
+					GLOB.familiar_queue += user.client
 					to_chat(user, "<span class='notice'>You have been added to the Familiar queue.</span>")
-			else if(task == "leave")
-				if(user in GLOB.familiar_queue)
-					GLOB.familiar_queue -= user
+
+			else if (task == "leave")
+				if (user.client in GLOB.familiar_queue)
+					GLOB.familiar_queue -= user.client
 					to_chat(user, "<span class='notice'>You have been removed from the Familiar queue.</span>")
+
 
 		if("familiar_specie")
 			var/list/familiar_types = list(
@@ -191,11 +204,5 @@
 				log_game("[user] has set familiar type to [choice]")
 
 	if(user.client)
-		winset(user.client, "familiar_pref", "is-visible=false")
-		show_ui()
-
-/datum/familiar_pref/proc/fam_copy_to(mob/living/simple_animal/character)
-	character.name = familiar_name
-	character.familiar_headshot_link = familiar_headshot_link
-	character.familiar_ooc_notes = familiar_ooc_notes
-	character.familiar_flavortext = familiar_flavortext
+		winset(user.client, "familiar_prefs", "is-visible=false")
+		fam_show_ui()

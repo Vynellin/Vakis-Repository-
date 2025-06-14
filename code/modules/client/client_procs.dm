@@ -137,7 +137,13 @@ GLOBAL_LIST_EMPTY(respawncounts)
 				return
 			inprefs = TRUE
 			. = prefs.process_link(usr,href_list)
-			. = prefs.familiar_pref.process_link(usr,href_list)
+			inprefs = FALSE
+			return
+		if("familiar_prefs")
+			if (inprefs)
+				return
+			inprefs = TRUE
+			. = prefs.familiar_prefs.fam_process_link(usr,href_list)
 			inprefs = FALSE
 			return
 		if("vars")

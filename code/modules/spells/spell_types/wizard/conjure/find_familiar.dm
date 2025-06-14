@@ -37,7 +37,7 @@
 
 /obj/effect/proc_holder/spell/self/findfamiliar/empowered/Initialize()
 	. = ..()
-	// Extended list offered in some conditions.
+	// Extended list if we're eligible
 	familiars += list(
 		"Gravemoss Serpent (+1 Strength, +1 Endurance)" = /mob/living/simple_animal/pet/familiar/gravemoss_serpent,
 		"Starfield Crow (+1 Perception, +1 Luck)" = /mob/living/simple_animal/pet/familiar/starfield_crow,
@@ -52,136 +52,168 @@
 
 	for (var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.alive_mob_list)
 		if (familiar_check.familiar_summoner == user)
-			// Ask the caster how they want to proceed
-			var/choice = input(user, "You already have a familiar. What do you want to do?") as null|anything in list(
-				"Make it sentient",
-				"Do nothing",
-				"I have a specific familiar in mind"
+			var/choice = input(user, "You already have a familiar. Do you want to free them?") as null|anything in list(
+				"Yes",
+				"No"
 			)
-			if (choice == "Do nothing" || choice == null)
+			if (choice == "No" || choice == null)
 				revert_cast()
 				return FALSE
-			else if (choice == "Make it sentient")
-				var/list/mob/candidate = pollGhostCandidates("Do you want to play as [familiar_check.name], the [familiar_check.animal_species]?", ROLE_SENTIENCE, null, FALSE, 100, POLL_IGNORE_SENTIENCE_POTION)
-				if (LAZYLEN(candidate))
-					var/mob/chosen_one = pick(candidate)
-					if (istype(chosen_one, /mob/dead/new_player))
-						var/mob/dead/new_player/menu_gamer = chosen_one
-						menu_gamer.close_spawn_windows()
-					var/mob/living/simple_animal/pet/familiar/awakener = familiar_check
-					prepare_familiar_for_player(awakener, chosen_one, user)
-					return FALSE
+			else if (choice == "Yes")
+				if(familiar_check.mind)
+					to_chat(familiar_check, span_warning("You feel your link with [familiar_check.familiar_summoner.real_name] break, you are free."))
+					to_chat(user, span_warning("You feel your link with [familiar_check.name] break."))
+					familiar_check.summoner = null
+					familiar_check.familiar_summoner.remove_status_effect(familiar_check.buff_given)
+					familiar_check.familiar_summoner.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_familiar)
+					familiar_check.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_summoner)
 				else
-					to_chat(user, span_notice("The familiar didn't awaken."))
-					return FALSE
-			else if (choice == "I have a specific familiar in mind")
-				// Filter matching familiars
-				var/list/options = list()
-				for (var/mob/entry in GLOB.familiar_queue)
-					if (entry.client?.prefs.familiar_pref.familiar_specie == familiar_check.type && !entry["suppress"])
-						options += entry
-
-				if (!options.len)
-					to_chat(user, span_notice("No matching familiar candidates are currently available."))
-					revert_cast()
-					return FALSE
-
-				while (TRUE)
-					var/list/name_map = list()
-					for (var/entry in options)
-						name_map[entry["name"]] = entry
-					var/name_choice = input(user, "Choose from registered familiars") as null|anything in name_map
-					if (!name_choice)
-						revert_cast()
-						return FALSE
-
-					var/entry = name_map[name_choice]
-					var/desc_confirm = input(user, "[entry["description"]]\n\nSummon this familiar?") as null|anything in list("Yes", "No")
-					if (desc_confirm == "Yes")
-						var/mob/ghost_candidate = get_mob_by_ckey(entry["ckey"])
-						if (!ghost_candidate || !istype(ghost_candidate, /mob/dead/observer))
-							to_chat(user, span_warning("That familiar is no longer available."))
-							revert_cast()
-							return FALSE
-
-						var/resp = input(ghost_candidate, "[user] wants to make you their familiar. Accept?") as null|anything in list("Yes", "No", "Never this round")
-						if (resp == "Yes")
-							var/fam_type = entry["type"]
-							var/mob/living/simple_animal/pet/familiar/fam = new fam_type(get_step(user, user.dir))
-							fam.familiar_summoner = user
-							prepare_familiar_for_player(fam, ghost_candidate, user)
-							return FALSE
-						else if (resp == "Never this round")
-							entry["suppress"] = TRUE
-							return FALSE
-						else
-							continue
-					else
-						continue
-
+					familiar_check.visible_message(span_warning("[familiar_check.name] looks in the direction of [familiar_check.familiar_summoner.real_name] one last time, before opening a portal and vanishing into it, the portal closing behind them."))
+					qdel(familiar_check)
+				revert_cast()
+				return FALSE
 	//familiar exists but is dead
 	for (var/mob/living/simple_animal/pet/familiar/familiar_check in GLOB.dead_mob_list)
 		if (familiar_check.familiar_summoner == user)
-			var/death_deleting = input(user, "You have a familiar but they are dead, do you want to summon another ? This will make the previous one impossible to ressurect.") as null|anything in list("Yes", "No")
-			if (death_deleting == "No")
+			var/choice = input(user, "You already have a familiar. Do you want to free them?") as null|anything in list(
+				"Yes",
+				"No"
+			)
+			if (choice == "No" || choice == null)
+				revert_cast()
 				return FALSE
+			else if (choice == "Yes")
+				if(familiar_check.mind)
+					to_chat(familiar_check, span_warning("You feel your link with [familiar_check.familiar_summoner.real_name] break, you are free."))
+					to_chat(user, span_warning("You feel your link with [familiar_check.name] break."))
+					familiar_check.summoner = null
+					familiar_check.familiar_summoner.remove_status_effect(familiar_check.buff_given)
+					familiar_check.familiar_summoner.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_familiar)
+					familiar_check.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_summoner)
+				else
+					familiar_check.visible_message(span_warning("[familiar_check.name]'s corpse vanishes in a puff of smoke."))
+					qdel(familiar_check)
 	// No existing familiar
 	var/path_choice = input(user, "How do you want to summon your familiar?") as null|anything in list(
 		"Summon from registered familiars",
 		"Summon a non-sentient familiar"
 	)
 	if (path_choice == "Summon from registered familiars")
-		var/list/options = list()
-		for (var/mob/entry in GLOB.familiar_queue)
-			if (!entry["suppress"])
-				options += entry
-		if (!options.len)
+		var/list/candidates = list()
+
+		for (var/client/looped_client in GLOB.familiar_queue)
+			var/datum/familiar_prefs/pref = looped_client.prefs?.familiar_prefs
+			if (pref)
+				candidates += looped_client
+
+		if (!candidates.len)
 			to_chat(user, span_notice("No familiar candidates are currently registered."))
+			revert_cast()
 			return FALSE
 
 		while (TRUE)
 			var/list/name_map = list()
-			for (var/entry in options)
-				name_map[entry["name"]] = entry
-			var/name_choice = input(user, "Choose from registered familiars") as null|anything in name_map
-			if (!name_choice)
+			for (var/client/looped_candidates in candidates)
+				var/datum/familiar_prefs/pref = looped_candidates.prefs?.familiar_prefs
+				if (pref?.familiar_name)
+					name_map[pref.familiar_name] = looped_candidates
+
+			var/choice = input(user, "Choose a registered familiar to inspect:") as null|anything in name_map
+			if (!choice)
+				revert_cast()
 				return FALSE
 
-			var/entry = name_map[name_choice]
-			var/desc_confirm = input(user, "[entry["description"]]\n\nSummon this familiar?") as null|anything in list("Yes", "No")
-			if (desc_confirm == "Yes")
-				var/mob/ghost_candidate = get_mob_by_ckey(entry["ckey"])
-				if (!ghost_candidate || !istype(ghost_candidate, /mob/dead/observer))
-					to_chat(user, span_warning("That ghost is no longer available."))
-					return FALSE
+			var/client/target = name_map[choice]
+			var/datum/familiar_prefs/pref = target.prefs?.familiar_prefs
+			if (!pref)
+				to_chat(user, span_warning("That familiar is no longer available."))
+				continue
 
-				var/resp = input(ghost_candidate, "[user] wants to make you their familiar. Accept?") as null|anything in list("Yes", "No", "Never this round")
-				if (resp == "Yes")
-					var/fam_type = entry["type"]
-					var/mob/living/simple_animal/pet/familiar/fam = new fam_type(get_step(user, user.dir))
-					fam.familiar_summoner = user
-					prepare_familiar_for_player(fam, ghost_candidate, user)
-					return TRUE
-				else if (resp == "Never this round")
-					entry["suppress"] = TRUE
-					return FALSE
-				else
-					continue
-	else if (path_choice != "Summon a non-sentient familiar")
-		return FALSE
+			// Mimic clicking "Examine closer"
+			var/list/dat = list()
+			dat += "<div align='center'><font size = 5; font color = '#dddddd'><b>[pref.familiar_name]</b></font></div>"
+			if(valid_headshot_link(null, pref.familiar_headshot_link, TRUE))
+				dat += ("<div align='center'><img src='[pref.familiar_headshot_link]' width='325px' height='325px'></div>")
+			if(pref.familiar_flavortext)
+				dat += "<div align='left'>[pref.familiar_flavortext_display]</div>"
+			if(pref.familiar_ooc)
+				dat += "<br>"
+				dat += "<div align='center'><b>OOC notes</b></div>"
+				dat += "<div align='left'>[pref.familiar_ooc_notes_display]</div>"
+			if(pref.familiar_ooc_extra)
+				dat += "[pref.familiar_ooc_extra]"
+			var/datum/browser/popup = new(user, "[src]", nwidth = 600, nheight = 800)
+			popup.set_content(dat.Join())
+			popup.open(FALSE)
 
-	var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
-	var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
-	var/mob/living/simple_animal/pet/familiar/fam = new familiar_type(get_step(user, user.dir))
-	fam.familiar_summoner = user
-	user.visible_message(span_notice("[fam.summoning_emote]"))
-	fam.fully_replace_character_name(null, "[user]'s familiar")
-	user.apply_status_effect(fam.buff_given)
-	return TRUE
+			var/confirm = input(user, "Summon this familiar?") as null|anything in list("Yes", "No")
+			if (confirm != "Yes")
+				winset(user.client, "[src]", "is-visible=false")
+				continue
 
-/proc/prepare_familiar_for_player(mob/living/simple_animal/pet/familiar/awakener, mob/chosen_one, mob/living/carbon/user)
+			var/mob/ghost = get_mob_by_ckey(target.ckey)
+			
+			if (!ghost || (!isobserver(ghost) && !isnewplayer(ghost)))
+				to_chat(user, span_warning("That familiar is no longer available."))
+				revert_cast()
+				return FALSE
+
+			var/response = ask_familiar_prompt(ghost, user, 20 SECONDS)
+
+			if (response == "Yes")
+				spawn_familiar_for_player(fam, ghost, user)
+				return TRUE
+
+			else
+				to_chat(user, span_notice("[target] declined or didn't answer in time."))
+				continue
+	else
+		var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
+		var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
+		var/mob/living/simple_animal/pet/familiar/fam = new familiar_type(get_step(user, user.dir))
+		fam.familiar_summoner = user
+		user.visible_message(span_notice("[fam.summoning_emote]"))
+		fam.fully_replace_character_name(null, "[user]'s familiar")
+		user.apply_status_effect(fam.buff_given)
+		return TRUE
+
+/proc/ask_familiar_prompt(mob/M, mob/caster, poll_time = 200)
+	set waitfor = 0
+
+	if (!M || !M.client)
+		return "Timeout"
+
+	window_flash(M.client)
+
+	var/response
+	if (!M || !M.client)
+		return "Timeout"
+
+	response = askuser(
+		M,
+		"[caster] wants to summon you as a familiar. Accept?",
+		"Please answer in [DisplayTimeText(poll_time)]!",
+		"Yes", "No",
+		Timeout = poll_time,
+		StealFocus = 0
+	)
+
+	switch(response)
+		if(1)
+			return "Yes"
+		if(2)
+			return "No"
+		else
+			return "Timeout"
+
+/proc/spawn_familiar_for_player(mob/chosen_one, mob/living/carbon/user)
+	var/mob/living/simple_animal/pet/familiar/awakener = new chosen_one.client.prefs.familiar_prefs.familiar_specie(get_step(user, user.dir))
+	awakener.familiar_summoner = user
+	user.visible_message(span_notice("[awakener.summoning_emote]"))
+	awakener.fully_replace_character_name(null, "[chosen_one.client.prefs.familiar_prefs.familiar_name]")
+	user.apply_status_effect(awakener.buff_given)
 	awakener.ckey = chosen_one.ckey
-	user.client.prefs.familiar_pref.fam_copy_to(awakener)
+	awakener.fully_replace_character_name(null, chosen_one.client.prefs.familiar_prefs.familiar_name)
 	chosen_one.mind.transfer_to(awakener)
 	awakener.grant_all_languages(omnitongue=TRUE)
 	awakener.mind.RemoveAllSpells()
