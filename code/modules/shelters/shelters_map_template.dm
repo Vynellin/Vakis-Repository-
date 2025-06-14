@@ -115,6 +115,7 @@
 	id = "shelter_tree_large"
 	description = "A magical yet homely shelter, with a distinct natural feel. You got a feeling this one will be rather large."
 	mappath = "_maps/templates/shelter_tree_large.dmm"
+	z_level_count = 2
 
 /datum/map_template/shelter/tree/tall
 	name = "tall shelter tree"
