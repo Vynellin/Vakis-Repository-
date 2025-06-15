@@ -418,7 +418,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["familiar_headshot_link"]			>> familiar_prefs.familiar_headshot_link
 	S["familiar_flavortext"]			>> familiar_prefs.familiar_flavortext
 	S["familiar_flavortext_display"]	>> familiar_prefs.familiar_flavortext_display
-	S["familiar_ooc"]					>> familiar_prefs.familiar_ooc
 	S["familiar_ooc_notes"]				>> familiar_prefs.familiar_ooc_notes
 	S["familiar_ooc_notes_display"]		>> familiar_prefs.familiar_ooc_notes_display
 	S["familiar_ooc_extra"]				>> familiar_prefs.familiar_ooc_extra
@@ -684,7 +683,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["familiar_headshot_link"] , familiar_prefs.familiar_headshot_link)
 	WRITE_FILE(S["familiar_flavortext"] , familiar_prefs.familiar_flavortext)
 	WRITE_FILE(S["familiar_flavortext_display"] , familiar_prefs.familiar_flavortext_display)
-	WRITE_FILE(S["familiar_ooc"] , familiar_prefs.familiar_ooc)
 	WRITE_FILE(S["familiar_ooc_notes"] , familiar_prefs.familiar_ooc_notes)
 	WRITE_FILE(S["familiar_ooc_notes_display"] , familiar_prefs.familiar_ooc_notes_display)
 	WRITE_FILE(S["familiar_ooc_extra"] , familiar_prefs.familiar_ooc_extra)

@@ -34,8 +34,14 @@
 
 	dat += "<br><b>Familiar OOC Extra:</b><a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=familiar_prefs;preference=familiar_ooc_extra;task=input'>Change</a>"
 
-	var/current_specie = familiar_specie ? familiar_specie : "None selected"
-	dat += "<br><b>Selected Familiar Type:</b> <a href='?_src_=familiar_prefs;preference=familiar_specie;task=select'>[current_specie]</a>"
+	var/display_name = "None selected"
+	var/list/all_types = GLOB.familiar_types_extended.Copy()
+	all_types |= GLOB.familiar_types
+	for (var/name in all_types)
+		if (all_types[name] == familiar_specie)
+			display_name = name
+			break
+	dat += "<br><b>Selected Familiar Type:</b> <a href='?_src_=familiar_prefs;preference=familiar_specie;task=select'>[display_name]</a>"
 
 	if(usr.client in GLOB.familiar_queue)
 		dat += "<br><a href='?_src_=familiar_prefs;preference=familiar_queue;task=leave'>Leave Queue</a>"
@@ -50,8 +56,6 @@
 
 
 /datum/familiar_prefs/proc/fam_process_link(mob/user, list/href_list)
-
-
 	if(!user || !istype(user))
 		return
 
@@ -103,7 +107,6 @@
 			log_game("[user] has set their familiar flavortext.")
 
 		if("familiar_ooc_notes")
-			to_chat(user, "<span class='notice'><b>BE AWARE: you are not allowed to ERP as a familiar as per server rules.</b></span>")
 			var/new_ooc_notes = input(user, "Input your OOC preferences:", "OOC notes", familiar_ooc_notes) as message|null
 			if(new_ooc_notes == null)
 				return
@@ -179,29 +182,19 @@
 					GLOB.familiar_queue -= user.client
 					to_chat(user, "<span class='notice'>You have been removed from the Familiar queue.</span>")
 
+		if ("familiar_specie")
+			var/list/all_types = GLOB.familiar_types_extended.Copy()
+			all_types |= GLOB.familiar_types
 
-		if("familiar_specie")
-			var/list/familiar_types = list(
-				"Pondstone Toad" = /mob/living/simple_animal/pet/familiar/pondstone_toad,
-				"Mist Lynx" = /mob/living/simple_animal/pet/familiar/mist_lynx,
-				"Rune Rat" = /mob/living/simple_animal/pet/familiar/rune_rat,
-				"Vaporroot Wisp" = /mob/living/simple_animal/pet/familiar/vaporroot_wisp,
-				"Ashcoiler" = /mob/living/simple_animal/pet/familiar/ashcoiler,
-				"Glimmer Hare" = /mob/living/simple_animal/pet/familiar/glimmer_hare,
-				"Hollow Antlerling" = /mob/living/simple_animal/pet/familiar/hollow_antlerling,
-				"Gravemoss Serpent" = /mob/living/simple_animal/pet/familiar/gravemoss_serpent,
-				"Starfield Crow" = /mob/living/simple_animal/pet/familiar/starfield_crow,
-				"Emberdrake" = /mob/living/simple_animal/pet/familiar/emberdrake,
-				"Ripplefox" = /mob/living/simple_animal/pet/familiar/ripplefox,
-				"Whisper Stoat" = /mob/living/simple_animal/pet/familiar/whisper_stoat,
-				"Thornback Turtle" = /mob/living/simple_animal/pet/familiar/thornback_turtle
-			)
-
-			var/choice = input(user, "Select a Familiar type:", "Familiar Type") in familiar_types
-			if(choice)
-				familiar_specie = choice
-				to_chat(user, "<span class='notice'>Familiar type set to [choice]</span>")
-				log_game("[user] has set familiar type to [choice]")
+			var/choice = input(user, "Select a Familiar type:", "Familiar Type") as null|anything in all_types
+			if (choice)
+				var/path = all_types[choice]
+				if (path)
+					familiar_specie = path
+					to_chat(user, "<span class='notice'>Familiar type set to [choice]</span>")
+					log_game("[user] has set familiar type to [choice]")
+				else
+					to_chat(user, span_warning("Something went wrong selecting that familiar type."))
 
 	if(user.client)
 		winset(user.client, "familiar_prefs", "is-visible=false")

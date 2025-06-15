@@ -145,6 +145,7 @@
 #include "code\__DEFINES\mobs\simplemob_attack_speed.dm"
 #include "code\__DEFINES\mobs\simplemob_health.dm"
 #include "code\__DEFINES\mobs\simplemob_movement_speed.dm"
+#include "code\__DEFINES\roguetown\familiars.dm"
 #include "code\__DEFINES\roguetown\rebel.dm"
 #include "code\__DEFINES\roguetown\werewolf.dm"
 #include "code\__HELPERS\_auxtools_api.dm"

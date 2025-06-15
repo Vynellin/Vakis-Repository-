@@ -21,15 +21,11 @@
 	invocation_type = "whisper"
 
 	var/mob/living/simple_animal/pet/familiar/fam
-	var/familiars = list(
-		"Pondstone Toad (+1 Strength)" = /mob/living/simple_animal/pet/familiar/pondstone_toad,
-		"Mist Lynx (+1 Perception)" = /mob/living/simple_animal/pet/familiar/mist_lynx,
-		"Rune Rat (+1 Intelligence)" = /mob/living/simple_animal/pet/familiar/rune_rat,
-		"Vaporroot Wisp (+1 Constitution)" = /mob/living/simple_animal/pet/familiar/vaporroot_wisp,
-		"Ashcoiler (+1 Endurance)" = /mob/living/simple_animal/pet/familiar/ashcoiler,
-		"Glimmer Hare (+1 Speed)" = /mob/living/simple_animal/pet/familiar/glimmer_hare,
-		"Hollow Antlerling (+1 Luck)" = /mob/living/simple_animal/pet/familiar/hollow_antlerling,
-	)
+	var/familiars
+
+/obj/effect/proc_holder/spell/self/findfamiliar/Initialize()
+	. = ..()
+	familiars = GLOB.familiar_types
 
 /obj/effect/proc_holder/spell/self/findfamiliar/empowered/
 	name = "Empowered Find Familiar"
@@ -38,14 +34,7 @@
 /obj/effect/proc_holder/spell/self/findfamiliar/empowered/Initialize()
 	. = ..()
 	// Extended list if we're eligible
-	familiars += list(
-		"Gravemoss Serpent (+1 Strength, +1 Endurance)" = /mob/living/simple_animal/pet/familiar/gravemoss_serpent,
-		"Starfield Crow (+1 Perception, +1 Luck)" = /mob/living/simple_animal/pet/familiar/starfield_crow,
-		"Emberdrake (+1 Intelligence, +1 Constitution)" = /mob/living/simple_animal/pet/familiar/emberdrake,
-		"Ripplefox (+1 Speed, +1 Luck)" = /mob/living/simple_animal/pet/familiar/ripplefox,
-		"Whisper Stoat (+1 Perception, +1 Intelligence)" = /mob/living/simple_animal/pet/familiar/whisper_stoat,
-		"Thornback Turtle (+1 Strength, +1 Constitution)" = /mob/living/simple_animal/pet/familiar/thornback_turtle,
-	)
+	familiars += GLOB.familiar_types_extended
 
 /obj/effect/proc_holder/spell/self/findfamiliar/cast(list/targets, mob/living/carbon/user)
 	. = ..()
@@ -136,7 +125,7 @@
 				dat += ("<div align='center'><img src='[pref.familiar_headshot_link]' width='325px' height='325px'></div>")
 			if(pref.familiar_flavortext)
 				dat += "<div align='left'>[pref.familiar_flavortext_display]</div>"
-			if(pref.familiar_ooc)
+			if(pref.familiar_ooc_notes_display)
 				dat += "<br>"
 				dat += "<div align='center'><b>OOC notes</b></div>"
 				dat += "<div align='left'>[pref.familiar_ooc_notes_display]</div>"
@@ -150,22 +139,22 @@
 			if (confirm != "Yes")
 				winset(user.client, "[src]", "is-visible=false")
 				continue
-
-			var/mob/ghost = get_mob_by_ckey(target.ckey)
 			
-			if (!ghost || (!isobserver(ghost) && !isnewplayer(ghost)))
+			if (!target || (!isobserver(target.mob) && !isnewplayer(target.mob)))
 				to_chat(user, span_warning("That familiar is no longer available."))
 				revert_cast()
 				return FALSE
 
-			var/response = ask_familiar_prompt(ghost, user, 20 SECONDS)
+			var/response = ask_familiar_prompt(target, user, 200)
 
 			if (response == "Yes")
-				spawn_familiar_for_player(fam, ghost, user)
+				popup.close()
+				spawn_familiar_for_player(target, user)
 				return TRUE
 
+
 			else
-				to_chat(user, span_notice("[target] declined or didn't answer in time."))
+				to_chat(user, span_notice("[target] declined or didn't respond in time."))
 				continue
 	else
 		var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
@@ -177,34 +166,54 @@
 		user.apply_status_effect(fam.buff_given)
 		return TRUE
 
-/proc/ask_familiar_prompt(mob/M, mob/caster, poll_time = 200)
-	set waitfor = 0
 
-	if (!M || !M.client)
-		return "Timeout"
+/datum/familiar_poll
+	var/mob/target
+	var/mob/caster
+	var/timeout
+	var/response = null
 
-	window_flash(M.client)
+/datum/familiar_poll/New(mob/M, mob/c, time)
+	target = M
+	caster = c
+	timeout = time
+	spawn(0)
+		show_prompt()
+	..()
 
-	var/response
-	if (!M || !M.client)
-		return "Timeout"
+/proc/ask_familiar_prompt(mob/user, mob/caster, poll_time = 200)
+	var/datum/familiar_poll/polled = new(user, caster, poll_time)
+	return polled.wait_for_response()
 
-	response = askuser(
-		M,
-		"[caster] wants to summon you as a familiar. Accept?",
-		"Please answer in [DisplayTimeText(poll_time)]!",
+/datum/familiar_poll/proc/show_prompt()
+	if (!target || !target.client)
+		response = "Timeout"
+		return
+
+	window_flash(target.client)
+
+	var/result = askuser(
+		target,
+		"[caster] wants to summon you as a familiar.",
+		"Respond within [DisplayTimeText(timeout)]",
 		"Yes", "No",
-		Timeout = poll_time,
+		Timeout = timeout,
 		StealFocus = 0
 	)
 
-	switch(response)
+	switch(result)
 		if(1)
-			return "Yes"
+			response = "Yes"
 		if(2)
-			return "No"
+			response = "No"
 		else
-			return "Timeout"
+			response = "Timeout"
+
+/datum/familiar_poll/proc/wait_for_response()
+	var/timer = 0
+	while (isnull(response) && timer++ < timeout)
+		sleep(1)
+	return response
 
 /proc/spawn_familiar_for_player(mob/chosen_one, mob/living/carbon/user)
 	var/mob/living/simple_animal/pet/familiar/awakener = new chosen_one.client.prefs.familiar_prefs.familiar_specie(get_step(user, user.dir))
@@ -212,16 +221,19 @@
 	user.visible_message(span_notice("[awakener.summoning_emote]"))
 	awakener.fully_replace_character_name(null, "[chosen_one.client.prefs.familiar_prefs.familiar_name]")
 	user.apply_status_effect(awakener.buff_given)
-	awakener.ckey = chosen_one.ckey
 	awakener.fully_replace_character_name(null, chosen_one.client.prefs.familiar_prefs.familiar_name)
 	chosen_one.mind.transfer_to(awakener)
-	awakener.grant_all_languages(omnitongue=TRUE)
-	awakener.mind.RemoveAllSpells()
-	awakener.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_summoner)
+	var/datum/mind/mind_datum = awakener.mind
+	if (!mind_datum)
+		return // failsafe in case something went wrong with transfer
+	mind_datum.RemoveAllSpells()
+	mind_datum.AddSpell(new /obj/effect/proc_holder/spell/self/message_summoner)
 	user.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message_familiar)
+
 	if (awakener.inherent_spell)
 		for (var/spell_path in awakener.inherent_spell)
-			awakener.mind.AddSpell(new spell_path)
+			mind_datum.AddSpell(new spell_path)
+
 
 	// Disabling AI features
 	awakener.can_have_ai = FALSE
