@@ -18,21 +18,21 @@
 
 /datum/familiar_prefs/proc/fam_show_ui()
 	var/client/client = prefs.parent
-	if(!client)
+	if (!client)
 		return
 
 	var/list/dat = list()
 	dat += "<br><b>Familiar Name:</b> <a href='?_src_=familiar_prefs;preference=familiar_name;task=input'>[familiar_name] (Set name)</a>"
 
 	dat += "<br><b>Familiar Headshot:</b> <a href='?_src_=familiar_prefs;preference=familiar_headshot;task=input'>Change</a>"
-	if(familiar_headshot_link != null)
+	if (familiar_headshot_link)
 		dat += "<br><img src='[familiar_headshot_link]' width='100px' height='100px'>"
 
-	dat += "<br><b>Flavortext:</b><a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=familiar_prefs;preference=familiar_flavortext;task=input'>Change</a>"
+	dat += "<br><b>Flavortext:</b> <a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a> <a href='?_src_=familiar_prefs;preference=familiar_flavortext;task=input'>Change</a>"
 
-	dat += "<br><b>OOC Notes:</b><a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=familiar_prefs;preference=familiar_ooc_notes;task=input'>Change</a>"
+	dat += "<br><b>OOC Notes:</b> <a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a> <a href='?_src_=familiar_prefs;preference=familiar_ooc_notes;task=input'>Change</a>"
 
-	dat += "<br><b>Familiar OOC Extra:</b><a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a><a href='?_src_=familiar_prefs;preference=familiar_ooc_extra;task=input'>Change</a>"
+	dat += "<br><b>Familiar OOC Extra:</b> <a href='?_src_=familiar_prefs;preference=formathelp;task=input'>(?)</a> <a href='?_src_=familiar_prefs;preference=familiar_ooc_extra;task=input'>Change</a>"
 
 	var/display_name = "None selected"
 	var/list/all_types = GLOB.familiar_types_extended.Copy()
@@ -43,20 +43,18 @@
 			break
 	dat += "<br><b>Selected Familiar Type:</b> <a href='?_src_=familiar_prefs;preference=familiar_specie;task=select'>[display_name]</a>"
 
-	if(usr.client in GLOB.familiar_queue)
+	if (client in GLOB.familiar_queue)
 		dat += "<br><a href='?_src_=familiar_prefs;preference=familiar_queue;task=leave'>Leave Queue</a>"
 	else
 		dat += "<br><a href='?_src_=familiar_prefs;preference=familiar_queue;task=join'>Queue Up</a>"
 
-
-	var/datum/browser/popup = new(client.mob, "familiar_prefs", "<center>Be a Familiar</center>", 330, 410)
+	var/datum/browser/popup = new(client?.mob, "Be a Familiar", "<center>Be a Familiar</center>", 330, 410)
 	popup.set_window_options("can_close=1")
 	popup.set_content(dat.Join())
 	popup.open(FALSE)
 
-
 /datum/familiar_prefs/proc/fam_process_link(mob/user, list/href_list)
-	if(!user || !istype(user))
+	if(!user)
 		return
 
 	var/task = href_list["task"]

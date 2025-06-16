@@ -49,7 +49,7 @@
 
 	user.busy_summoning_familiar = TRUE
 
-	. = ..() // call parent cast proc if needed
+	. = ..()
 
 	// Check if user already has a familiar
 	for (var/mob/living/simple_animal/pet/familiar/fam in GLOB.alive_mob_list + GLOB.dead_mob_list)
@@ -60,8 +60,9 @@
 				revert_cast()
 				return FALSE
 			free_familiar(fam, user)
-			log_game("[key_name(user)] has released their familiar: [fam.name] ([fam.type])")
-			if (fam?.mind)
+			if(!fam?.mind)
+				log_game("[key_name(user)] has released their familiar: [fam.name] ([fam.type])")
+			else
 				log_game("[key_name(user)] released sentient familiar [key_name(fam)] ([fam.type])")
 			user.busy_summoning_familiar = FALSE
 			revert_cast()
@@ -135,13 +136,11 @@
 				if(2)
 					to_chat(target.mob, span_notice("Choice registered: No."))
 					to_chat(user, span_notice("The familiar resisted your summon."))
-					log_game("Sentient familiar [target.ckey] declined summon from [user.ckey]")
 					user.busy_summoning_familiar = FALSE
 					revert_cast()
 					return FALSE
 				else
 					to_chat(user, span_notice("The familiar took too long to answer your summon, the magic is spent."))
-					log_game("Summon attempt for [target.ckey] by [user.ckey] timed out")
 					user.busy_summoning_familiar = FALSE
 					revert_cast()
 					return FALSE
