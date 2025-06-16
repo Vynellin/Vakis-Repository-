@@ -164,7 +164,7 @@
 			if (task == "join")
 				var/datum/preferences/prefs = user?.client?.prefs
 				var/datum/familiar_prefs/fam_pref = prefs?.familiar_prefs
-
+				
 				if (!fam_pref)
 					to_chat(user, "<span class='warning'>Familiar preferences are not initialized.</span>")
 					return
@@ -197,5 +197,4 @@
 					to_chat(user, span_warning("Something went wrong selecting that familiar type."))
 
 	if(user.client)
-		winset(user.client, "familiar_prefs", "is-visible=false")
 		fam_show_ui()
