@@ -239,8 +239,14 @@
 		to_chat(user, span_warning("Familiar summoning failed: The target has no valid familiar form."))
 		return
 
+	// Check for valid spawn turf before spawning familiar
+	var/turf/spawn_turf = get_step(user, user.dir)
+	if (!isturf(spawn_turf) || !isopenturf(spawn_turf))
+		to_chat(user, span_warning("There is not enough space to summon your familiar."))
+		return
+
 	// Spawn the familiar mob near the summoner
-	var/mob/living/simple_animal/pet/familiar/awakener = new prefs.familiar_specie(get_step(user, user.dir))
+	var/mob/living/simple_animal/pet/familiar/awakener = new prefs.familiar_specie(spawn_turf)
 	if (!awakener)
 		to_chat(user, span_warning("Familiar summoning failed: Could not create familiar."))
 		return

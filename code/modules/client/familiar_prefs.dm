@@ -17,7 +17,7 @@
 	prefs = passed_prefs
 
 /datum/familiar_prefs/proc/fam_show_ui()
-	var/client/client = prefs.parent
+	var/client/client = prefs?.parent
 	if (!client)
 		return
 

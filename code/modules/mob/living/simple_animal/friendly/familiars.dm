@@ -1,3 +1,7 @@
+#define FAMILIAR_SEE_IN_DARK 6
+#define FAMILIAR_MIN_BODYTEMP 200
+#define FAMILIAR_MAX_BODYTEMP 400
+
 /*
 	Familiar list and buffs below. 
 	Sprites by Diltyrr (those aren't good gah)
@@ -18,10 +22,10 @@
 	mob_size = MOB_SIZE_SMALL
 	pass_flags = PASSMOB //We don't want them to block players.
 	density = FALSE
-	see_in_dark = 6
+	see_in_dark = FAMILIAR_SEE_IN_DARK
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	minbodytemp = 200
-	maxbodytemp = 400
+	minbodytemp = FAMILIAR_MIN_BODYTEMP
+	maxbodytemp = FAMILIAR_MAX_BODYTEMP
 	unsuitable_atmos_damage = 1
 	response_help_continuous = "pets"
 	response_help_simple = "pet"
@@ -41,7 +45,7 @@
 	dodgetime = 20
 	held_items = list(null, null)
 
-//As far as I am aware, you cannot pat out fire as a familiar, if you add their really low HP, this seems fair.
+//As far as I am aware, you cannot pat out fire as a familiar at least not in time for it to not kill you, this seems fair.
 /mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
 	. = ..()
 	addtimer(CALLBACK(src, TYPE_PROC_REF(/mob/living, ExtinguishMob)), 1 SECONDS)
@@ -62,12 +66,16 @@
 /mob/living/simple_animal/pet/familiar/death()
 	. = ..()
 	emote("deathgasp")
-	to_chat(src.familiar_summoner, span_warning("[src.name] has fallen, and your bond dims. Yet in the quiet beyond, a flicker of their essence remains."))
+	if(familiar_summoner)
+		to_chat(familiar_summoner, span_warning("[src.name] has fallen, and your bond dims. Yet in the quiet beyond, a flicker of their essence remains."))
 
 /mob/living/simple_animal/pet/familiar/Destroy()
-	familiar_summoner.remove_status_effect(buff_given)
-	familiar_summoner.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_familiar)
-	..()
+    if(familiar_summoner)
+        if(buff_given)
+            familiar_summoner.remove_status_effect(buff_given)
+        if(familiar_summoner.mind)
+            familiar_summoner.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message_familiar)
+    return ..()
 
 /mob/living/simple_animal/pet/familiar/pondstone_toad
 	name = "Pondstone Toad"
@@ -487,12 +495,11 @@
 	animal_species = "Thornback Turtle"
 	buff_given = /datum/status_effect/buff/familiar/worn_stone
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/verdant_sprout)
-	STASPD = 11
+	STASPD = 5
 	STAPER = 7
 	STAINT = 9
 	STACON = 11
 	STAEND = 12
-	STASPD = 5
 	STALUC = 8
 
 	icon_state = "thornback"
@@ -513,3 +520,7 @@
 /atom/movable/screen/alert/status_effect/buff/familiar/worn_stone
 	name = "Worn Stone"
 	desc = "Nothing feels urgent. You can take your time... and take a hit."
+
+#undef FAMILIAR_SEE_IN_DARK
+#undef FAMILIAR_MIN_BODYTEMP
+#undef FAMILIAR_MAX_BODYTEMP
