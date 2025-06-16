@@ -131,6 +131,8 @@
 					spawn_familiar_for_player(target.mob, user)
 					log_game("[key_name(user)] summoned sentient familiar [pref.familiar_name] ([target.ckey]) as [pref.familiar_specie]")
 					log_game("[user.ckey] summoned [pref.familiar_name] ([pref.familiar_specie]) controlled by [target.ckey]")
+					if(target && target.mob)
+					    winset(target.mob, "Be a Familiar", "is-visible=false")
 					user.busy_summoning_familiar = FALSE
 					return TRUE
 				if(2)
