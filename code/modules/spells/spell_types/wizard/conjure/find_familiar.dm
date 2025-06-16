@@ -145,17 +145,19 @@
 				revert_cast()
 				return FALSE
 
-			var/response = ask_familiar_prompt(target, user, 200)
-
-			if (response == "Yes")
-				popup.close()
-				spawn_familiar_for_player(target, user)
-				return TRUE
-
-
-			else
-				to_chat(user, span_notice("[target] declined or didn't respond in time."))
-				continue
+			switch(askuser(target.mob,"[user.real_name] is trying to summon you as a familiar. Do you accept?","Please answer in [DisplayTimeText(200)]!","Yes","No", StealFocus=0, Timeout=200))
+				if(1)
+					to_chat(target.mob, span_notice("You are [user.real_name]'s magical familiar, you are magically contracted to help them, yet you still have a self preservation instinct."))
+					spawn_familiar_for_player(target.mob, user)
+				if(2)
+					to_chat(target.mob, span_notice("Choice registered: No."))
+					to_chat(user, span_notice("The familiar resisted your summon."))
+					revert_cast()
+					return FALSE
+				else
+					revert_cast()
+					to_chat(user, span_notice("The familiar took too long to answer your summon, the magic is spent."))
+					return FALSE
 	else
 		var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
 		var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
@@ -165,55 +167,6 @@
 		fam.fully_replace_character_name(null, "[user]'s familiar")
 		user.apply_status_effect(fam.buff_given)
 		return TRUE
-
-
-/datum/familiar_poll
-	var/mob/target
-	var/mob/caster
-	var/timeout
-	var/response = null
-
-/datum/familiar_poll/New(mob/M, mob/c, time)
-	target = M
-	caster = c
-	timeout = time
-	spawn(0)
-		show_prompt()
-	..()
-
-/proc/ask_familiar_prompt(mob/user, mob/caster, poll_time = 200)
-	var/datum/familiar_poll/polled = new(user, caster, poll_time)
-	return polled.wait_for_response()
-
-/datum/familiar_poll/proc/show_prompt()
-	if (!target || !target.client)
-		response = "Timeout"
-		return
-
-	window_flash(target.client)
-
-	var/result = askuser(
-		target,
-		"[caster] wants to summon you as a familiar.",
-		"Respond within [DisplayTimeText(timeout)]",
-		"Yes", "No",
-		Timeout = timeout,
-		StealFocus = 0
-	)
-
-	switch(result)
-		if(1)
-			response = "Yes"
-		if(2)
-			response = "No"
-		else
-			response = "Timeout"
-
-/datum/familiar_poll/proc/wait_for_response()
-	var/timer = 0
-	while (isnull(response) && timer++ < timeout)
-		sleep(1)
-	return response
 
 /proc/spawn_familiar_for_player(mob/chosen_one, mob/living/carbon/user)
 	var/mob/living/simple_animal/pet/familiar/awakener = new chosen_one.client.prefs.familiar_prefs.familiar_specie(get_step(user, user.dir))
