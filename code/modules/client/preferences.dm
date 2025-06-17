@@ -454,6 +454,8 @@ GLOBAL_LIST_EMPTY(chosen_names)
 
 			dat += "<br><b>Be a Familiar:</b><a href='?_src_=prefs;preference=familiar_prefs;task=input'>Familiar Preferences</a>"
 
+			dat += "</td>"
+
 			dat += "</tr></table>"
 //			-----------END OF BODY TABLE-----------
 			dat += "</td>"

@@ -45,6 +45,7 @@
 	dodgetime = 20
 	held_items = list(null, null)
 	var/lore_blurb = null
+	pooptype = null
 
 //As far as I am aware, you cannot pat out fire as a familiar at least not in time for it to not kill you, this seems fair.
 /mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
@@ -59,8 +60,8 @@
 
 /mob/living/simple_animal/pet/familiar/examine(mob/user)
 	. = ..()
-	if(familiar_flavortext || familiar_headshot_link || familiar_ooc_notes)
-		. += "<a href='?src=[REF(src)];task=view_headshot;'>Examine closer</a>"
+	if(src.client.prefs.familiar_prefs.familiar_flavortext || src.client.prefs.familiar_prefs.familiar_headshot_link || src.client.prefs.familiar_prefs.familiar_ooc_notes)
+		. += "<a href='?src=[REF(src)];task=view_fam_headshot;'>Examine closer</a>"
 
 /datum/status_effect/buff/familiar
 	duration = -1
@@ -306,6 +307,7 @@
 	summoning_emote = "A musical chime sounds. A tiny deer with antlers like bone flutes steps gently into view."
 	animal_species = "Hollow Antlerling"
 	buff_given = /datum/status_effect/buff/familiar/soft_favor
+	inherent_spell = list(/obj/effect/proc_holder/spell/self/verdant_veil)
 
 	STASTR = 6
 	STACON = 8

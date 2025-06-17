@@ -102,5 +102,4 @@
 			. += "<a href='?src=[REF(src)];check_hb=1'>Check Heartbeat</a>"
 
 	. += "✠ ------------ ✠</span>"
-	if(istype(user, /mob/living/simple_animal/pet/familiar) && user.mind)
-		. += "<a href='?src=[REF(src)];task=view_fam_headshot;'>Examine closer</a>"
+		

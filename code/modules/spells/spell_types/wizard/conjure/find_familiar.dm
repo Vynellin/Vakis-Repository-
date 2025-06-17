@@ -80,8 +80,11 @@
 		// Build list of valid candidate clients
 		for (var/client/c_client in GLOB.familiar_queue)
 			var/datum/familiar_prefs/pref = c_client.prefs?.familiar_prefs
-			if (pref && (pref.familiar_specie in familiars))
-				candidates += c_client
+			if (pref && familiars)
+				for (var/fam_type in familiars)
+					if (ispath(pref.familiar_specie, familiars[fam_type]))
+						candidates += c_client
+						break
 
 		if (!candidates.len)
 			to_chat(user, span_notice("There is no familiar candidate you could summon."))
@@ -160,7 +163,6 @@
 		user.busy_summoning_familiar = FALSE
 		return TRUE
 	else
-		to_chat(user, span_notice("Cancelling the cast."))
 		user.busy_summoning_familiar = FALSE
 		revert_cast()
 		return FALSE
@@ -171,22 +173,26 @@
 		return
 
 	var/list/dat = list()
-	var/title = pref.familiar_name ? html_encode(pref.familiar_name) : "Unnamed Familiar"
+	var/title = pref.familiar_name ? pref.familiar_name : "Unnamed Familiar"
 
 	dat += "<div align='center'><font size=5 color='#dddddd'><b>[title]</b></font></div>"
+
+	// Add species name below the title, centered
+	if (pref.familiar_specie)
+		dat += "<div align='center'><font size=4 color='#bbbbbb'>[initial(pref.familiar_specie)]</font></div>"
 
 	if (valid_headshot_link(null, pref.familiar_headshot_link, TRUE))
 		dat += "<div align='center'><img src='[pref.familiar_headshot_link]' width='325px' height='325px'></div>"
 
 	if (pref.familiar_flavortext_display)
-		dat += "<div align='left'>[html_encode(pref.familiar_flavortext_display)]</div>"
+		dat += "<div align='left'>[pref.familiar_flavortext_display]</div>"
 
 	if (pref.familiar_ooc_notes_display)
 		dat += "<br><div align='center'><b>OOC notes</b></div>"
-		dat += "<div align='left'>[html_encode(pref.familiar_ooc_notes_display)]</div>"
+		dat += "<div align='left'>[pref.familiar_ooc_notes_display]</div>"
 
 	if (pref.familiar_ooc_extra)
-		dat += html_encode(pref.familiar_ooc_extra)
+		dat += pref.familiar_ooc_extra
 
 	var/datum/browser/popup = new(user, "Familiar Inspect", nwidth = 600, nheight = 800)
 	popup.set_content(dat.Join("\n"))
@@ -197,16 +203,13 @@
 	if (!fam || !user)
 		return
 
-	var/fam_name = fam.name ? html_encode(fam.name) : "Unnamed Familiar"
-	var/user_name = user.real_name ? html_encode(user.real_name) : "Unnamed Summoner"
-
 	if (!fam.mind)
-		log_game("[key_name(user)] has released their familiar: [fam_name] ([fam.type])")
+		log_game("[key_name(user)] has released their familiar: [fam.name] ([fam.type])")
 	else
 		log_game("[key_name(user)] released sentient familiar [key_name(fam)] ([fam.type])")
 
-	to_chat(user, span_warning("You feel your link with [fam_name] break."))
-	to_chat(fam, span_warning("You feel your link with [user_name] break, you are free."))
+	to_chat(user, span_warning("You feel your link with [fam.name] break."))
+	to_chat(fam, span_warning("You feel your link with [user.name] break, you are free."))
 
 	fam.summoner = null
 	if (fam.buff_given)
@@ -218,9 +221,9 @@
 	if (!fam.mind)
 		var/exit_msg
 		if (isdead(fam))
-			exit_msg = "[fam_name]'s corpse vanishes in a puff of smoke."
+			exit_msg = "[fam.name]'s corpse vanishes in a puff of smoke."
 		else
-			exit_msg = "[fam_name] looks in the direction of [user_name] one last time, before opening a portal and vanishing into it."
+			exit_msg = "[fam.name] looks in the direction of [user.name] one last time, before opening a portal and vanishing into it."
 
 		fam.visible_message(span_warning(exit_msg))
 		qdel(fam)
@@ -260,8 +263,7 @@
 
 	// Set summoner and name
 	awakener.familiar_summoner = user
-	var/fam_name = prefs.familiar_name ? html_encode(prefs.familiar_name) : "Unnamed Familiar"
-	awakener.fully_replace_character_name(null, fam_name)
+	awakener.fully_replace_character_name(null, prefs.familiar_name)
 
 	// Display summoning emote
 	user.visible_message(span_notice("[awakener.summoning_emote]"))
@@ -304,7 +306,7 @@
 	awakener.wander = FALSE
 
 	// Admin/game logging
-	log_game("[key_name(user)] has summoned [key_name(chosen_one)] as familiar '[fam_name]' ([awakener.type]).")
+	log_game("[key_name(user)] has summoned [key_name(chosen_one)] as familiar '[awakener.name]' ([awakener.type]).")
 
 /obj/effect/proc_holder/spell/self/message_familiar
 	name = "Message Familiar"
