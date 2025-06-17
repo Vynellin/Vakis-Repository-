@@ -43,6 +43,12 @@
 			break
 	dat += "<br><b>Selected Familiar Type:</b> <a href='?_src_=familiar_prefs;preference=familiar_specie;task=select'>[display_name]</a>"
 
+	if (familiar_specie)
+		var/mob/living/simple_animal/pet/familiar/proto = new familiar_specie()
+		if (proto.lore_blurb)
+			dat += "<br><i><b>Lore inspiration:</b> [proto.lore_blurb]</i>"
+		qdel(proto)
+
 	if (client in GLOB.familiar_queue)
 		dat += "<br><a href='?_src_=familiar_prefs;preference=familiar_queue;task=leave'>Leave Queue</a>"
 	else

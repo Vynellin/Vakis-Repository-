@@ -44,6 +44,7 @@
 	base_intents = list(INTENT_HELP)
 	dodgetime = 20
 	held_items = list(null, null)
+	var/lore_blurb = null
 
 //As far as I am aware, you cannot pat out fire as a familiar at least not in time for it to not kill you, this seems fair.
 /mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
@@ -108,6 +109,8 @@
 	var/original_name = ""
 	var/stoneform = FALSE
 	
+	lore_blurb = "Pondstone Toads are ancient, patient creatures, said to carry the wisdom of the marshes. They are calm, resilient, and often serve as silent observers."
+
 /datum/status_effect/buff/familiar/settled_weight
 	id = "settled_weight"
 	effectedstats = list("strength" = 1)
@@ -144,6 +147,8 @@
 	emote_hear = list("lets out a soft yowl.", "whispers almost silently.")
 	emote_see = list("pads in a circle.", "vanishes briefly, then reappears.")
 
+	lore_blurb = "Mist Lynxes are elusive and mysterious, moving unseen through fog and shadow. They are clever, perceptive, and fiercely loyal to those they trust."
+
 /datum/status_effect/buff/familiar/silver_glance
 	id = "silver_glance"
 	effectedstats = list("perception" = 1)
@@ -178,6 +183,8 @@
 	var/stored_books = list()
 	var/storage_limit = 5
 
+	lore_blurb = "Rune Rats are quick-witted and curious, always seeking knowledge. They are drawn to secrets and the written word, leaving trails of glowing runes wherever they go."
+
 /datum/status_effect/buff/familiar/threaded_thoughts
 	id = "threaded_thoughts"
 	effectedstats = list("intelligence" = 1)
@@ -210,6 +217,8 @@
 	speak_emote = list("whispers", "murmurs")
 	emote_hear = list("hums softly.", "emits a calming mist.")
 	emote_see = list("swirls in place.", "dissolves briefly.")
+
+	lore_blurb = "Vaporroot Wisps are gentle spirits of mist and healing. They drift quietly, bringing calm and comfort to those around them."
 
 /datum/status_effect/buff/familiar/quiet_resilience
 	id = "quiet_resilience"
@@ -245,6 +254,8 @@
 	emote_hear = list("hisses faintly.", "breathes a puff of ash.")
 	emote_see = list("slowly coils and uncoils.", "shifts weight in rhythm.")
 
+	lore_blurb = "Ashcoilers are serpents born of long-forgotten hearth fires and latent magic. Patient and enduring, their presence brings resilience."
+
 /datum/status_effect/buff/familiar/desert_bred_tenacity
 	id = "desert_bred_tenacity"
 	effectedstats = list("endurance" = 1)
@@ -278,6 +289,8 @@
 	emote_hear = list("thumps the ground.", "scatters some dust.")
 	emote_see = list("dashes suddenly, then stops.", "vibrates subtly.")
 
+	lore_blurb = "Glimmer Hares are quick and elusive, their bodies shimmering with light. They are symbols of luck and agility, always a step ahead of danger."
+
 /datum/status_effect/buff/familiar/lightstep
 	id = "lightstep"
 	effectedstats = list("speed" = 1)
@@ -308,6 +321,8 @@
 	speak_emote = list("chimes softly", "calls out")
 	emote_hear = list("lets out a musical chime.")
 	emote_see = list("flickers like a mirage.", "steps just out of reach of falling dust.")
+
+	lore_blurb = "Hollow Antlerlings are gentle forest spirits, symbols of luck and renewal. They are playful, curious, and bring fortune to their companions."
 
 /datum/status_effect/buff/familiar/soft_favor
 	id = "soft_favor"
@@ -342,6 +357,8 @@
 	speak_emote = list("hisses low", "mutters")
 	emote_hear = list("rumbles from deep within.", "hisses like wind in roots.")
 	emote_see = list("sinks halfway into the earth.", "gazes steadily.")
+
+	lore_blurb = "Gravemoss Serpents are ancient guardians of the earth, their scales flecked with lichen and grave-dust. They are wise, patient, and deeply connected to the cycle of life and death."
 
 /datum/status_effect/buff/familiar/burdened_coil
 	id = "burdened_coil"
@@ -382,6 +399,8 @@
 	emote_hear = list("lets out a knowing caw.", "chirps like stars ticking.")
 	emote_see = list("flickers through constellations.", "tilts its head and vanishes for a second.")
 
+	lore_blurb = "Starfield Crows are mysterious and intelligent, their feathers shimmering with constellations. They are omens of fate and keepers of secrets."
+
 /datum/status_effect/buff/familiar/starseam
 	id = "starseam"
 	effectedstats = list("perception" = 1, "luck" = 1)
@@ -416,6 +435,8 @@
 	emote_hear = list("rumbles like a hearth.", "flickers with flame.")
 	emote_see = list("glows briefly brighter.", "leaves a brief heat haze.")
 
+	lore_blurb = "Emberdrakes are tiny dragons of warmth and memory. Their presence stirs old stories and brings comfort in the darkest nights."
+
 /datum/status_effect/buff/familiar/steady_spark
 	id = "steady_spark"
 	effectedstats = list("intelligence" = 1, "constitution" = 1)
@@ -446,6 +467,8 @@
 	speak_emote = list("whispers fast", "speaks quickly")
 	emote_hear = list("lets out a playful yip.", "laughs like water in motion.")
 	emote_see = list("blurs like a ripple.", "isn't where it was a second ago.")
+
+	lore_blurb = "Ripplefoxes are tricksters and guides, flickering at the edge of sight. They are masters of illusion and always seem to know more than they let on."
 
 /datum/status_effect/buff/familiar/subtle_slip
 	id = "subtle_slip"
@@ -480,6 +503,8 @@
 	emote_hear = list("murmurs in your direction.", "makes a sound you forget instantly.")
 	emote_see = list("wraps around a shadow.", "slips behind a thought.")
 
+	lore_blurb = "Whisper Stoats are subtle and insightful, listening to thoughts and secrets. They are trusted confidants and clever companions."
+
 /datum/status_effect/buff/familiar/noticed_thought
 	id = "noticed_thought"
 	effectedstats = list("perception" = 1, "intelligence" = 1)
@@ -512,6 +537,7 @@
 	emote_hear = list("grunts like shifting boulders.", "sighs like old wood.")
 	emote_see = list("retracts slightly into its shell.", "blinks slowly.")
 
+	lore_blurb = "Thornback Turtles are sturdy guardians, embodying endurance and protection. They are slow to anger but steadfast in defense of their friends."
 
 /datum/status_effect/buff/familiar/worn_stone
 	id = "worn_stone"

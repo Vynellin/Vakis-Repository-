@@ -80,7 +80,7 @@
 		// Build list of valid candidate clients
 		for (var/client/c_client in GLOB.familiar_queue)
 			var/datum/familiar_prefs/pref = c_client.prefs?.familiar_prefs
-			if (pref && familiars[pref.familiar_specie])
+			if (pref && (pref.familiar_specie in familiars))
 				candidates += c_client
 
 		if (!candidates.len)
@@ -132,7 +132,7 @@
 					log_game("[key_name(user)] summoned sentient familiar [pref.familiar_name] ([target.ckey]) as [pref.familiar_specie]")
 					log_game("[user.ckey] summoned [pref.familiar_name] ([pref.familiar_specie]) controlled by [target.ckey]")
 					if(target && target.mob)
-					    winset(target.mob, "Be a Familiar", "is-visible=false")
+						winset(target.mob, "Be a Familiar", "is-visible=false")
 					user.busy_summoning_familiar = FALSE
 					return TRUE
 				if(2)
@@ -147,7 +147,7 @@
 					revert_cast()
 					return FALSE
 
-	else
+	if(path_choice == "Summon a non-sentient familiar")
 		// Non-sentient familiar summoning
 		var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
 		var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
@@ -159,6 +159,11 @@
 		log_game("[key_name(user)] summoned non-sentient familiar of type [familiar_type]")
 		user.busy_summoning_familiar = FALSE
 		return TRUE
+	else
+		to_chat(user, span_notice("Cancelling the cast."))
+		user.busy_summoning_familiar = FALSE
+		revert_cast()
+		return FALSE
 
 ///Used to show a preview of the prospective familiar's inspect window to the summoner.
 /proc/show_familiar_preview(mob/user, datum/familiar_prefs/pref)
