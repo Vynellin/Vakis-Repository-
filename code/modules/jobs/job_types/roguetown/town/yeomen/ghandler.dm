@@ -15,7 +15,7 @@
 	give_bank_account = 43
 	min_pq = -4
 	max_pq = null
-	round_contrib_points = 3
+	round_contrib_points = 2
 
 
 /datum/job/roguetown/ghandler/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
@@ -89,7 +89,7 @@
 	beltl = /obj/item/storage/keyring/ghandler
 	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/parrying
 	id = /obj/item/scomstone/
-	backpack_contents = list(/obj/item/paper = 2, /obj/item/natural/feather = 1)
+	backpack_contents = list(/obj/item/paper = 4, /obj/item/natural/feather = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)

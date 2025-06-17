@@ -15857,6 +15857,7 @@
 	dir = 1
 	},
 /obj/structure/chair/bench/couch/r,
+/obj/effect/landmark/start/ghandler,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town)
 "gxo" = (
