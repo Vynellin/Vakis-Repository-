@@ -178,15 +178,8 @@
 	dat += "<div align='center'><font size=5 color='#dddddd'><b>[title]</b></font></div>"
 
 	// Add species name below the title, centered
-	if (pref.familiar_specie)
-		if (GLOB.familiar_display_names[pref.familiar_specie])
-			var/specie_type = GLOB.familiar_display_names[pref.familiar_specie]
-			dat += "<div align='center'><font size=4 color='#bbbbbb'>[specie_type]</font></div>"
-		else
-			var/mob/living/simple_animal/pet/familiar/proto = new pref.familiar_specie()
-			var/specie_type = proto.name
-			qdel(proto)
-			dat += "<div align='center'><font size=4 color='#bbbbbb'>[specie_type]</font></div>"
+	var/specie_type = GLOB.familiar_display_names[pref.familiar_specie]
+	dat += "<div align='center'><font size=4 color='#bbbbbb'>[specie_type]</font></div>"
 
 	// Add pronouns below species name
 	var/list/pronoun_display = list(
@@ -223,7 +216,7 @@
 	to_chat(user, span_warning("You feel your link with [fam.name] break."))
 	to_chat(fam, span_warning("You feel your link with [user.name] break, you are free."))
 
-	fam.summoner = null
+	fam.familiar_summoner = null
 	if (fam.buff_given)
 		user.remove_status_effect(fam.buff_given)
 
@@ -277,7 +270,6 @@
 	awakener.familiar_summoner = user
 	awakener.fully_replace_character_name(null, prefs.familiar_name)
 	awakener.pronouns = prefs.familiar_pronouns
-	awakener.familiar_prefs = prefs
 
 	// Display summoning emote
 	user.visible_message(span_notice("[awakener.summoning_emote]"))

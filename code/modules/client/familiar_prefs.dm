@@ -23,12 +23,12 @@
 		return
 
 	var/list/dat = list()
-	dat += "<br><b>Familiar Name:</b> <a href='?_src_=familiar_prefs;preference=familiar_name;task=input'>[familiar_name] (Set name)</a>"
-
-	// --- Familiar species display using mapping ---
+		// --- Familiar species display using mapping ---
 	if (familiar_specie && GLOB.familiar_display_names[familiar_specie])
-		var/specie_type = GLOB.familiar_display_names[familiar_specie]
+		var/specie_type = GLOB.familiar_display_names[familiar_specie] ? GLOB.familiar_display_names[familiar_specie] : "Unknown Species"
 		dat += "<div align='center'><font size=4 color='#bbbbbb'>[specie_type]</font></div>"
+
+	dat += "<br><b>Familiar Name:</b> <a href='?_src_=familiar_prefs;preference=familiar_name;task=input'>[familiar_name] (Set name)</a>"
 
 	// --- Pronoun selection ---
 	var/list/pronoun_display = list(
@@ -60,10 +60,9 @@
 	dat += "<br><b>Selected Familiar Type:</b> <a href='?_src_=familiar_prefs;preference=familiar_specie;task=select'>[display_name]</a>"
 
 	if (familiar_specie)
-		var/mob/living/simple_animal/pet/familiar/proto = new familiar_specie()
-		if (proto.lore_blurb)
-			dat += "<br><i><b>Lore inspiration:</b> [proto.lore_blurb]</i>"
-		qdel(proto)
+		var/lore_blurb = GLOB.familiar_lore_blurbs[familiar_specie]
+		if (lore_blurb)
+			dat += "<br><i><b>Lore inspiration:</b> [lore_blurb]</i>"
 
 	if (client in GLOB.familiar_queue)
 		dat += "<br><a href='?_src_=familiar_prefs;preference=familiar_queue;task=leave'>Leave Queue</a>"

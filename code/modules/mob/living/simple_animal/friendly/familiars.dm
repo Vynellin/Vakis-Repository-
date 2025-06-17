@@ -10,18 +10,24 @@
 */
 
 /mob/living/simple_animal/pet/familiar
-	dextrous = TRUE
-	gender = NEUTER
 	name = "Generic Wizard familiar"
 	desc = "The spirit of what makes a familiar (You shouldn't be seeing this.)"
-	var/mob/living/carbon/familiar_summoner = null
-	var/summoning_emote = null
-	var/buff_given = list()
-	var/inherent_spell = null
+
+	icon = 'icons/roguetown/mob/familiars.dmi'
+	
+	butcher_results = list(/obj/item/natural/stone = 1)
+
+	pass_flags = PASSMOB //We don't want them to block players.
+	base_intents = list(INTENT_HELP)
+	melee_damage_lower = 1
+	melee_damage_upper = 2
+
+	dextrous = TRUE
+	gender = NEUTER
+
 	speak_chance = 1
 	turns_per_move = 5
 	mob_size = MOB_SIZE_SMALL
-	pass_flags = PASSMOB //We don't want them to block players.
 	density = FALSE
 	see_in_dark = FAMILIAR_SEE_IN_DARK
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
@@ -34,21 +40,20 @@
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
-	icon = 'icons/roguetown/mob/familiars.dmi'
 	faction = list("rogueanimal")
-	melee_damage_lower = 1
-	melee_damage_upper = 2
-	footstep_type = FOOTSTEP_MOB_BAREFOOT
-	butcher_results = list(/obj/item/natural/stone = 1)
 	speed = 0.8
 	breedchildren = 0 //Yeah no, I'm not falling for this one.
-	base_intents = list(INTENT_HELP)
 	dodgetime = 20
 	held_items = list(null, null)
-	var/lore_blurb = null
 	pooptype = null
-	var/familiar_prefs
-
+	footstep_type = FOOTSTEP_MOB_BAREFOOT
+	var/obj/item/mouth = null
+	
+	var/buff_given = list()
+	var/mob/living/carbon/familiar_summoner = null
+	var/inherent_spell = null
+	var/summoning_emote = null
+	
 //As far as I am aware, you cannot pat out fire as a familiar at least not in time for it to not kill you, this seems fair.
 /mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
 	. = ..()
@@ -69,7 +74,8 @@
 
 /mob/living/simple_animal/pet/familiar/examine(mob/user)
 	. = ..()
-	if(src.familiar_prefs && ((src.familiar_prefs["familiar_flavortext"]) || ("familiar_headshot_link" in src.familiar_prefs && src.familiar_prefs["familiar_headshot_link"]) || (src.familiar_prefs["familiar_ooc_notes"])))
+	var/datum/familiar_prefs/fpref = src.client.prefs.familiar_prefs
+	if(fpref && (fpref.familiar_flavortext || fpref.familiar_headshot_link || fpref.familiar_ooc_notes))
 		. += "<a href='?src=[REF(src)];task=view_fam_headshot;'>Examine closer</a>"
 
 /datum/status_effect/buff/familiar
@@ -90,36 +96,30 @@
     return ..()
 
 /mob/living/simple_animal/pet/familiar/pondstone_toad
-	name = "Pondstone Toad"
-	desc = "This damp, heavy toad pulses with unseen strength. Its skin is cool and lined with mineral veins."
-	summoning_emote = "A deep thrum echoes beneath your feet, and a mossy toad pushes itself free from the earth, humming low."
-	buff_given = /datum/status_effect/buff/familiar/settled_weight
-	inherent_spell = list(/obj/effect/proc_holder/spell/self/stillness_of_stone)
-	animal_species = "Pondstone Toad"
-	STASTR = 11
-	STAPER = 7
-	STAINT = 9
-	STACON = 11
-	STASPD = 5
-	STALUC = 9
-
-	speak = list("Hrrrm.", "Grrup.", "Blorp.")
-	speak_emote = list("croaks low", "grumbles")
-	emote_hear = list("croaks lowly.", "lets out a bubbling sound.")
-	emote_see = list("shudders like stone.", "thumps softly in place.")
-
-	icon_state = "pondstone"
-	icon_living = "pondstone"
-	icon_dead = "pondstone_dead"
-
-	//vars used for this familiar's ability
-	var/icon/original_icon = null
-	var/original_icon_state = ""
-	var/original_icon_living = ""
-	var/original_name = ""
-	var/stoneform = FALSE
-	
-	lore_blurb = "Pondstone Toads are ancient, patient creatures, said to carry the wisdom of the marshes. They are calm, resilient, and often serve as silent observers."
+    name = "Pondstone Toad"
+    desc = "This damp, heavy toad pulses with unseen strength. Its skin is cool and lined with mineral veins."
+    animal_species = "Pondstone Toad"
+    summoning_emote = "A deep thrum echoes beneath your feet, and a mossy toad pushes itself free from the earth, humming low."
+    icon_state = "pondstone"
+    icon_living = "pondstone"
+    icon_dead = "pondstone_dead"
+    buff_given = /datum/status_effect/buff/familiar/settled_weight
+    inherent_spell = list(/obj/effect/proc_holder/spell/self/stillness_of_stone)
+    STASTR = 11
+    STAPER = 7
+    STAINT = 9
+    STACON = 11
+    STASPD = 5
+    STALUC = 9
+    speak = list("Hrrrm.", "Grrup.", "Blorp.")
+    speak_emote = list("croaks low", "grumbles")
+    emote_hear = list("croaks lowly.", "lets out a bubbling sound.")
+    emote_see = list("shudders like stone.", "thumps softly in place.")
+    var/icon/original_icon = null
+    var/original_icon_state = ""
+    var/original_icon_living = ""
+    var/original_name = ""
+    var/stoneform = FALSE
 
 /datum/status_effect/buff/familiar/settled_weight
 	id = "settled_weight"
@@ -130,34 +130,31 @@
 	name = "Settled Weight"
 	desc = "You feel just a touch more grounded. Pushing back has become a little easier."
 
+
 /mob/living/simple_animal/pet/familiar/mist_lynx
-	name = "Mist Lynx"
-	desc = "A ghostlike lynx, its eyes gleaming like twin moons. It never seems to blink, even when you're not looking."
-	summoning_emote = "Mist coils into feline shape, resolving into a lynx with pale fur and unblinking silver eyes."
-	animal_species = "Mist Lynx"
-	var/list/saved_trails = list()
-	buff_given = /datum/status_effect/buff/familiar/silver_glance
-	inherent_spell = list(/obj/effect/proc_holder/spell/self/lurking_step, /obj/effect/proc_holder/spell/invoked/veilbound_shift)
-	pass_flags = PASSGRILLE | PASSMOB
-	STASTR = 6
-	STAPER = 11
-	STAINT = 9
-	STACON = 7
-	STAEND = 9
-	STASPD = 13
-	STALUC = 9
-
-	alpha = 100
-	icon_state = "mist"
-	icon_living = "mist"
-	icon_dead = "mist_dead"
-
-	speak = list("...") // mostly silent
-	speak_emote = list("purrs softly", "whispers")
-	emote_hear = list("lets out a soft yowl.", "whispers almost silently.")
-	emote_see = list("pads in a circle.", "vanishes briefly, then reappears.")
-
-	lore_blurb = "Mist Lynxes are elusive and mysterious, moving unseen through fog and shadow. They are clever, perceptive, and fiercely loyal to those they trust."
+    name = "Mist Lynx"
+    desc = "A ghostlike lynx, its eyes gleaming like twin moons. It never seems to blink, even when you're not looking."
+    animal_species = "Mist Lynx"
+    summoning_emote = "Mist coils into feline shape, resolving into a lynx with pale fur and unblinking silver eyes."
+    icon_state = "mist"
+    icon_living = "mist"
+    icon_dead = "mist_dead"
+    alpha = 150
+    buff_given = /datum/status_effect/buff/familiar/silver_glance
+    inherent_spell = list(/obj/effect/proc_holder/spell/self/lurking_step, /obj/effect/proc_holder/spell/invoked/veilbound_shift)
+    pass_flags = PASSGRILLE | PASSMOB
+    STASTR = 6
+    STAPER = 11
+    STAINT = 9
+    STACON = 7
+    STAEND = 9
+    STASPD = 13
+    STALUC = 9
+    speak = list("...") // mostly silent
+    speak_emote = list("purrs softly", "whispers")
+    emote_hear = list("lets out a soft yowl.", "whispers almost silently.")
+    emote_see = list("pads in a circle.", "vanishes briefly, then reappears.")
+    var/list/saved_trails = list()
 
 /datum/status_effect/buff/familiar/silver_glance
 	id = "silver_glance"
@@ -169,31 +166,27 @@
 	desc = "There's a flicker at the edge of your vision. You notice what others pass by."
 
 /mob/living/simple_animal/pet/familiar/rune_rat
-	name = "Rune Rat"
-	desc = "This rat leaves fading runes in the air as it twitches. The smell of old paper clings to its fur."
-	summoning_emote = "A faint spark dances through the air. A rat with a softly glowing tail scampers into existence."
-	animal_species = "Rune Rat"
-	buff_given = /datum/status_effect/buff/familiar/threaded_thoughts
-	inherent_spell = list(/obj/effect/proc_holder/spell/self/inscription_cache, /obj/effect/proc_holder/spell/self/recall_cache)
-	STASTR = 5
-	STAPER = 9
-	STAINT = 11
-	STACON = 7
-	STAEND = 8
-	STASPD = 11
-
-	icon_state = "runerat"
-	icon_living = "runerat"
-	icon_dead = "runerat_dead"
-
-	speak = list("Skrii!", "Tik-tik.", "Chrr.")
-	speak_emote = list("squeaks", "chatters")
-	emote_hear = list("squeaks thoughtfully.", "sniffs the air.")
-	emote_see = list("twitches its tail in patterns.", "skitters in a loop.")
-	var/stored_books = list()
-	var/storage_limit = 5
-
-	lore_blurb = "Rune Rats are quick-witted and curious, always seeking knowledge. They are drawn to secrets and the written word, leaving trails of glowing runes wherever they go."
+    name = "Rune Rat"
+    desc = "This rat leaves fading runes in the air as it twitches. The smell of old paper clings to its fur."
+    animal_species = "Rune Rat"
+    summoning_emote = "A faint spark dances through the air. A rat with a softly glowing tail scampers into existence."
+    icon_state = "runerat"
+    icon_living = "runerat"
+    icon_dead = "runerat_dead"
+    buff_given = /datum/status_effect/buff/familiar/threaded_thoughts
+    inherent_spell = list(/obj/effect/proc_holder/spell/self/inscription_cache, /obj/effect/proc_holder/spell/self/recall_cache)
+    STASTR = 5
+    STAPER = 9
+    STAINT = 11
+    STACON = 7
+    STAEND = 8
+    STASPD = 11
+    speak = list("Skrii!", "Tik-tik.", "Chrr.")
+    speak_emote = list("squeaks", "chatters")
+    emote_hear = list("squeaks thoughtfully.", "sniffs the air.")
+    emote_see = list("twitches its tail in patterns.", "skitters in a loop.")
+    var/stored_books = list()
+    var/storage_limit = 5
 
 /datum/status_effect/buff/familiar/threaded_thoughts
 	id = "threaded_thoughts"
@@ -205,30 +198,26 @@
 	desc = "Your thoughts gather more easily, like threads pulled into a tidy weave."
 
 /mob/living/simple_animal/pet/familiar/vaporroot_wisp
-	name = "Vaporroot Wisp"
-	desc = "This vaporroot wisp shimmers and shifts like smoke but feels solid enough to lean on."
-	summoning_emote = "A swirl of silvery mist gathers, coalescing into a small wisp of vaporroot."
-	animal_species = "Vaporroot"
-	buff_given = /datum/status_effect/buff/familiar/quiet_resilience
-	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
-	movement_type = FLYING
-	inherent_spell = list(/obj/effect/proc_holder/spell/self/soothing_bloom)
-	STASTR = 4
-	STACON = 11
-	STAEND = 9
-	STASPD = 8
-
-	alpha = 100
-	icon_state = "vaporroot"
-	icon_living = "vaporroot"
-	icon_dead = "vaporroot_dead"
-
-	speak = list("Fffff...", "Whuuuh.")
-	speak_emote = list("whispers", "murmurs")
-	emote_hear = list("hums softly.", "emits a calming mist.")
-	emote_see = list("swirls in place.", "dissolves briefly.")
-
-	lore_blurb = "Vaporroot Wisps are gentle spirits of mist and healing. They drift quietly, bringing calm and comfort to those around them."
+    name = "Vaporroot Wisp"
+    desc = "This vaporroot wisp shimmers and shifts like smoke but feels solid enough to lean on."
+    animal_species = "Vaporroot"
+    summoning_emote = "A swirl of silvery mist gathers, coalescing into a small wisp of vaporroot."
+    icon_state = "vaporroot"
+    icon_living = "vaporroot"
+    icon_dead = "vaporroot_dead"
+    alpha = 150
+    buff_given = /datum/status_effect/buff/familiar/quiet_resilience
+    inherent_spell = list(/obj/effect/proc_holder/spell/self/soothing_bloom)
+    pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
+    movement_type = FLYING
+    STASTR = 4
+    STACON = 11
+    STAEND = 9
+    STASPD = 8
+    speak = list("Fffff...", "Whuuuh.")
+    speak_emote = list("whispers", "murmurs")
+    emote_hear = list("hums softly.", "emits a calming mist.")
+    emote_see = list("swirls in place.", "dissolves briefly.")
 
 /datum/status_effect/buff/familiar/quiet_resilience
 	id = "quiet_resilience"
@@ -264,8 +253,6 @@
 	emote_hear = list("hisses faintly.", "breathes a puff of ash.")
 	emote_see = list("slowly coils and uncoils.", "shifts weight in rhythm.")
 
-	lore_blurb = "Ashcoilers are serpents born of long-forgotten hearth fires and latent magic. Patient and enduring, their presence brings resilience."
-
 /datum/status_effect/buff/familiar/desert_bred_tenacity
 	id = "desert_bred_tenacity"
 	effectedstats = list("endurance" = 1)
@@ -289,7 +276,7 @@
 	STASPD = 9
 	STALUC = 11
 
-	alpha = 125
+	alpha = 150
 	icon_state = "glimmer"
 	icon_living = "glimmer"
 	icon_dead = "glimmer_dead"
@@ -298,8 +285,6 @@
 	speak_emote = list("chatters quickly", "chirps")
 	emote_hear = list("thumps the ground.", "scatters some dust.")
 	emote_see = list("dashes suddenly, then stops.", "vibrates subtly.")
-
-	lore_blurb = "Glimmer Hares are quick and elusive, their bodies shimmering with light. They are symbols of luck and agility, always a step ahead of danger."
 
 /datum/status_effect/buff/familiar/lightstep
 	id = "lightstep"
@@ -332,8 +317,6 @@
 	speak_emote = list("chimes softly", "calls out")
 	emote_hear = list("lets out a musical chime.")
 	emote_see = list("flickers like a mirage.", "steps just out of reach of falling dust.")
-
-	lore_blurb = "Hollow Antlerlings are gentle forest spirits, symbols of luck and renewal. They are playful, curious, and bring fortune to their companions."
 
 /datum/status_effect/buff/familiar/soft_favor
 	id = "soft_favor"
@@ -368,8 +351,6 @@
 	speak_emote = list("hisses low", "mutters")
 	emote_hear = list("rumbles from deep within.", "hisses like wind in roots.")
 	emote_see = list("sinks halfway into the earth.", "gazes steadily.")
-
-	lore_blurb = "Gravemoss Serpents are ancient guardians of the earth, their scales flecked with lichen and grave-dust. They are wise, patient, and deeply connected to the cycle of life and death."
 
 /datum/status_effect/buff/familiar/burdened_coil
 	id = "burdened_coil"
@@ -410,8 +391,6 @@
 	emote_hear = list("lets out a knowing caw.", "chirps like stars ticking.")
 	emote_see = list("flickers through constellations.", "tilts its head and vanishes for a second.")
 
-	lore_blurb = "Starfield Crows are mysterious and intelligent, their feathers shimmering with constellations. They are omens of fate and keepers of secrets."
-
 /datum/status_effect/buff/familiar/starseam
 	id = "starseam"
 	effectedstats = list("perception" = 1, "luck" = 1)
@@ -446,8 +425,6 @@
 	emote_hear = list("rumbles like a hearth.", "flickers with flame.")
 	emote_see = list("glows briefly brighter.", "leaves a brief heat haze.")
 
-	lore_blurb = "Emberdrakes are tiny dragons of warmth and memory. Their presence stirs old stories and brings comfort in the darkest nights."
-
 /datum/status_effect/buff/familiar/steady_spark
 	id = "steady_spark"
 	effectedstats = list("intelligence" = 1, "constitution" = 1)
@@ -478,8 +455,6 @@
 	speak_emote = list("whispers fast", "speaks quickly")
 	emote_hear = list("lets out a playful yip.", "laughs like water in motion.")
 	emote_see = list("blurs like a ripple.", "isn't where it was a second ago.")
-
-	lore_blurb = "Ripplefoxes are tricksters and guides, flickering at the edge of sight. They are masters of illusion and always seem to know more than they let on."
 
 /datum/status_effect/buff/familiar/subtle_slip
 	id = "subtle_slip"
@@ -514,8 +489,6 @@
 	emote_hear = list("murmurs in your direction.", "makes a sound you forget instantly.")
 	emote_see = list("wraps around a shadow.", "slips behind a thought.")
 
-	lore_blurb = "Whisper Stoats are subtle and insightful, listening to thoughts and secrets. They are trusted confidants and clever companions."
-
 /datum/status_effect/buff/familiar/noticed_thought
 	id = "noticed_thought"
 	effectedstats = list("perception" = 1, "intelligence" = 1)
@@ -547,8 +520,6 @@
 	speak_emote = list("rumbles", "speaks slowly")
 	emote_hear = list("grunts like shifting boulders.", "sighs like old wood.")
 	emote_see = list("retracts slightly into its shell.", "blinks slowly.")
-
-	lore_blurb = "Thornback Turtles are sturdy guardians, embodying endurance and protection. They are slow to anger but steadfast in defense of their friends."
 
 /datum/status_effect/buff/familiar/worn_stone
 	id = "worn_stone"

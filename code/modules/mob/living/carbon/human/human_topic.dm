@@ -48,27 +48,6 @@ GLOBAL_VAR_INIT(year_integer, text2num(year)) // = 2013???
 		popup.open(FALSE)
 		return
 
-	if(href_list["task"] == "view_fam_headshot")
-		if(!ismob(usr))
-			return
-		var/mob/user = usr
-		var/list/dat = list()
-		dat += "<div align='center'><font size = 5; font color = '#dddddd'><b>[client.prefs.familiar_prefs.familiar_name]</b></font></div>"
-		if(valid_headshot_link(null, client.prefs.familiar_prefs.familiar_headshot_link, TRUE))
-			dat += ("<div align='center'><img src='[client.prefs.familiar_prefs.familiar_headshot_link]' width='325px' height='325px'></div>")
-		if(flavortext)
-			dat += "<div align='left'>[client.prefs.familiar_prefs.familiar_flavortext_display]</div>"
-		if(ooc_notes)
-			dat += "<br>"
-			dat += "<div align='center'><b>OOC notes</b></div>"
-			dat += "<div align='left'>[client.prefs.familiar_prefs.familiar_ooc_notes_display]</div>"
-		if(ooc_extra)
-			dat += "[client.prefs.familiar_prefs.familiar_ooc_extra]"
-		var/datum/browser/popup = new(user, "[src]", nwidth = 600, nheight = 800)
-		popup.set_content(dat.Join())
-		popup.open(FALSE)
-		return
-
 	if(href_list["inspect_limb"] && (observer_privilege || usr.canUseTopic(src, BE_CLOSE, NO_DEXTERITY)))
 		var/list/msg = list()
 		var/mob/user = usr

@@ -56,7 +56,6 @@
 		user.icon_living = "stone1"
 		user.name = "Stone"
 		user.stoneform = TRUE
-
 		user.regenerate_icons()
 	return TRUE
 
@@ -143,6 +142,10 @@
 /obj/effect/proc_holder/spell/invoked/blink/glimmer_hare
 	invocation = "" //"Natural" abilty, no incantation.
 	chargetime = 0
+	releasedrain = 0
+	chargedrain = 0
+	xp_gain = FALSE
+	
 
 /obj/effect/proc_holder/spell/self/inscription_cache
 	name = "Inscription Cache"
@@ -234,6 +237,7 @@
 /datum/status_effect/regen/soothing_bloom
 	id = "soothing_bloom"
 	tick_interval = 40 //This should give it two ticks of 1 healing per person in the radius.
+	alert_type = /atom/movable/screen/alert/status_effect/regen/soothing_bloom
 	duration = 8 SECONDS
 	var/healing_on_tick = 1
 	var/outline_colour = "#129160"
@@ -246,6 +250,12 @@
 	var/filter = owner.get_filter(MIRACLE_HEALING_FILTER)
 	if (!filter)
 		owner.add_filter(MIRACLE_HEALING_FILTER, 2, list("type" = "outline", "color" = outline_colour, "alpha" = 60, "size" = 1))
+	return TRUE
+
+/datum/status_effect/regen/soothing_bloom/on_remove()
+	var/filter = owner.get_filter(MIRACLE_HEALING_FILTER)
+	if (filter)
+		owner.remove_filter(MIRACLE_HEALING_FILTER)
 	return TRUE
 
 /datum/status_effect/regen/soothing_bloom/tick()
@@ -493,6 +503,7 @@
 	desc = "Shrouds nearby allies in illusionary invisibility, broken if they move or act."
 	recharge_time = 30 SECONDS
 
+//I wanted a long duration aoe invisibility that would be broken by movement. But I can't make it work so, short duration it is.
 /obj/effect/proc_holder/spell/self/verdant_veil/cast(list/targets, mob/living/simple_animal/pet/familiar/hollow_antlerling/user)
 	. = ..()
 	to_chat(user, span_notice("You exhale a shimmering cloud of forest illusion..."))
@@ -508,67 +519,24 @@
 		nearby_mob.visible_message(span_warning("[nearby_mob] starts to fade into thin air!"), span_notice("You start to become invisible!"))
 		animate(nearby_mob, alpha = 0, time = 1 SECONDS, easing = EASE_IN)
 
-		nearby_mob.mob_timers[MT_INVISIBILITY] = world.time + 2 MINUTES
+		nearby_mob.mob_timers[MT_INVISIBILITY] = world.time + 5 SECONDS
 		nearby_mob.invis_broken_early = FALSE
 
 		// Apply invis and visual feedback
 		nearby_mob.update_sneak_invis()
 
-		// --- Use signals for movement and action breaking ---
-		if(!islist(nearby_mob.verdant_veil_signal_ids))
-			nearby_mob.verdant_veil_signal_ids = list()
-		else
-			for(var/sig in nearby_mob.verdant_veil_signal_ids)
-				UnregisterSignal(nearby_mob, sig)
-			nearby_mob.verdant_veil_signal_ids.Cut()
 
-		RegisterSignal(nearby_mob, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/mob/living, on_veil_movement))
-		RegisterSignal(nearby_mob, COMSIG_MOB_ATTACK_HAND, TYPE_PROC_REF(/mob/living, on_veil_movement))
-		RegisterSignal(nearby_mob, COMSIG_MOB_ITEM_ATTACK, TYPE_PROC_REF(/mob/living, on_veil_movement))
-		
 		// Schedule end of duration
-		addtimer(CALLBACK(nearby_mob, TYPE_PROC_REF(/mob/living, fade_back_message)), 2 MINUTES)
-		addtimer(CALLBACK(nearby_mob, TYPE_PROC_REF(/mob/living, update_sneak_invis), TRUE), 2 MINUTES)
+		addtimer(CALLBACK(nearby_mob, TYPE_PROC_REF(/mob/living, fade_back_message)), 5 SECONDS)
+		addtimer(CALLBACK(nearby_mob, TYPE_PROC_REF(/mob/living, update_sneak_invis), TRUE), 5 SECONDS)
 
 	return TRUE
-
-/mob/living
-	var/list/verdant_veil_signal_ids
-
-/mob/living/proc/on_veil_movement(atom/source, dir)
-	if (!src || QDELETED(src))
-		return
-
-	// Already broken or expired?
-	if (src.invis_broken_early || world.time > src.mob_timers[MT_INVISIBILITY])
-		return
-
-	src.invis_broken_early = TRUE
-	src.visible_message(span_warning("[src] shimmers and becomes visible!"), span_notice("You break the illusion and become visible."))
-	animate(src, alpha = 255, time = 0.5 SECONDS, easing = EASE_OUT)
-	src.alpha = 255
-	src.mob_timers[MT_INVISIBILITY] = world.time
-
-	src.update_sneak_invis()
-
-	// Cleanup signals
-	if(islist(src.verdant_veil_signal_ids))
-		for(var/sig in src.verdant_veil_signal_ids)
-			UnregisterSignal(src, sig)
-		src.verdant_veil_signal_ids.Cut()
 
 /mob/living/proc/fade_back_message()
 	if (!src || QDELETED(src))
 		return
-
-	// Cleanup signals
-	if(islist(src.verdant_veil_signal_ids))
-		for(var/sig in src.verdant_veil_signal_ids)
-			UnregisterSignal(src, sig)
-		src.verdant_veil_signal_ids.Cut()
-
 	if (src.invis_broken_early)
-		return // Already became visible via movement
+		return // Already became visible
 
 	src.visible_message(span_warning("[src] fades back into view."), span_notice("You become visible again."))
 
