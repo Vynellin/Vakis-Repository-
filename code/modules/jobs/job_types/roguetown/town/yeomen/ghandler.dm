@@ -35,9 +35,8 @@
 	category_tags = list(CTAG_GHANDLER)
 
 /datum/outfit/job/roguetown/ghandler/ace/pre_equip(mob/living/carbon/human/H)
-	..()
 	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	shirt = /obj/item/clothing/suit/roguetown/shirt/guildwaistcoat
 	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	backl = /obj/item/storage/backpack/rogue/satchel
@@ -81,18 +80,16 @@
 	category_tags = list(CTAG_GHANDLER)
 
 /datum/outfit/job/roguetown/ghandler/receptionist/pre_equip(mob/living/carbon/human/H)
-	..()
-	armor = /obj/item/clothing/suit/roguetown/armor/gambeson/fencer
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
-	pants = /datum/supply_pack/rogue/apparel/trousers/leather
+	shirt = /obj/item/clothing/suit/roguetown/shirt/guildwaistcoat
+	pants = /obj/item/clothing/under/roguetown/tights/black
+	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
 	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
 	backl = /obj/item/storage/backpack/rogue/satchel
-	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	belt = /obj/item/storage/belt/rogue/leather/black
 	beltl = /obj/item/storage/keyring/ghandler
-	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/special = 1,
+	beltr = /obj/item/rogueweapon/huntingknife/idagger/steel/parrying
 	id = /obj/item/scomstone/
-	backpack_contents = list(obj/item/paper = 2, /obj/item/natural/feather = 1)
+	backpack_contents = list(/obj/item/paper = 2, /obj/item/natural/feather = 1)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/maces, 1, TRUE)
@@ -100,12 +97,12 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/riding, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/cooking, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
