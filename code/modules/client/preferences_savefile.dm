@@ -414,6 +414,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 /datum/preferences/proc/_load_familiar_prefs(S)
 	S["familiar_name"]					>> familiar_prefs.familiar_name
+	S["familiar_pronouns"]				>> familiar_prefs.familiar_pronouns
 	S["familiar_specie"]				>> familiar_prefs.familiar_specie
 	S["familiar_headshot_link"]			>> familiar_prefs.familiar_headshot_link
 	S["familiar_flavortext"]			>> familiar_prefs.familiar_flavortext
@@ -679,6 +680,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	//Familiar Files
 	WRITE_FILE(S["familiar_name"] , familiar_prefs.familiar_name)
+	WRITE_FILE(S["familiar_pronouns"] , familiar_prefs.familiar_pronouns)
 	WRITE_FILE(S["familiar_specie"] , familiar_prefs.familiar_specie)
 	WRITE_FILE(S["familiar_headshot_link"] , familiar_prefs.familiar_headshot_link)
 	WRITE_FILE(S["familiar_flavortext"] , familiar_prefs.familiar_flavortext)

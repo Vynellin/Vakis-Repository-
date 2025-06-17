@@ -86,7 +86,7 @@
 	if(stoneform)
 		revert_from_stoneform()
 
-/mob/living/simple_animal/pet/familiar/Move()
+/mob/living/simple_animal/pet/familiar/hollow_antlerling/Move()
 	. = ..()
 	if (prob(60) && isturf(src.loc))
 		var/obj/item/glow_petal/petal = new /obj/item/glow_petal(src.loc)
@@ -522,10 +522,10 @@
 				UnregisterSignal(nearby_mob, sig)
 			nearby_mob.verdant_veil_signal_ids.Cut()
 
-		nearby_mob.verdant_veil_signal_ids += RegisterSignal(nearby_mob, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/mob/living, on_veil_movement))
-		nearby_mob.verdant_veil_signal_ids += RegisterSignal(nearby_mob, COMSIG_MOB_ATTACK_HAND, TYPE_PROC_REF(/mob/living, on_veil_movement))
-		nearby_mob.verdant_veil_signal_ids += RegisterSignal(nearby_mob, COMSIG_MOB_ITEM_ATTACK, TYPE_PROC_REF(/mob/living, on_veil_movement))
-
+		RegisterSignal(nearby_mob, COMSIG_MOVABLE_MOVED, TYPE_PROC_REF(/mob/living, on_veil_movement))
+		RegisterSignal(nearby_mob, COMSIG_MOB_ATTACK_HAND, TYPE_PROC_REF(/mob/living, on_veil_movement))
+		RegisterSignal(nearby_mob, COMSIG_MOB_ITEM_ATTACK, TYPE_PROC_REF(/mob/living, on_veil_movement))
+		
 		// Schedule end of duration
 		addtimer(CALLBACK(nearby_mob, TYPE_PROC_REF(/mob/living, fade_back_message)), 2 MINUTES)
 		addtimer(CALLBACK(nearby_mob, TYPE_PROC_REF(/mob/living, update_sneak_invis), TRUE), 2 MINUTES)

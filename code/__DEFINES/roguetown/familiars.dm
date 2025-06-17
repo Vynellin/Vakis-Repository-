@@ -16,3 +16,19 @@ GLOBAL_LIST_INIT(familiar_types_extended, list(
 				"Whisper Stoat (+1 Perception, +1 Intelligence)" = /mob/living/simple_animal/pet/familiar/whisper_stoat,
 				"Thornback Turtle (+1 Strength, +1 Constitution)" = /mob/living/simple_animal/pet/familiar/thornback_turtle
 ))
+
+GLOBAL_LIST_INIT(familiar_display_names, list(
+    /mob/living/simple_animal/pet/familiar/pondstone_toad = "Pondstone Toad",
+    /mob/living/simple_animal/pet/familiar/mist_lynx = "Mist Lynx",
+    /mob/living/simple_animal/pet/familiar/rune_rat = "Rune Rat",
+    /mob/living/simple_animal/pet/familiar/vaporroot_wisp = "Vaporroot Wisp",
+    /mob/living/simple_animal/pet/familiar/ashcoiler = "Ashcoiler",
+    /mob/living/simple_animal/pet/familiar/glimmer_hare = "Glimmer Hare",
+    /mob/living/simple_animal/pet/familiar/hollow_antlerling = "Hollow Antlerling",
+    /mob/living/simple_animal/pet/familiar/gravemoss_serpent = "Gravemoss Serpent",
+    /mob/living/simple_animal/pet/familiar/starfield_crow = "Starfield Crow",
+    /mob/living/simple_animal/pet/familiar/emberdrake = "Emberdrake",
+    /mob/living/simple_animal/pet/familiar/ripplefox = "Ripplefox",
+    /mob/living/simple_animal/pet/familiar/whisper_stoat = "Whisper Stoat",
+    /mob/living/simple_animal/pet/familiar/thornback_turtle = "Thornback Turtle"
+))

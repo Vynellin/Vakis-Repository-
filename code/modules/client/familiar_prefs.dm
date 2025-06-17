@@ -11,6 +11,7 @@
 	var/familiar_ooc_notes_display
 	var/familiar_ooc_extra
 	var/familiar_ooc_extra_link
+	var/familiar_pronouns = THEY_THEM // Default pronouns
 
 /datum/familiar_prefs/New(datum/preferences/passed_prefs)
 	. = ..()
@@ -23,6 +24,21 @@
 
 	var/list/dat = list()
 	dat += "<br><b>Familiar Name:</b> <a href='?_src_=familiar_prefs;preference=familiar_name;task=input'>[familiar_name] (Set name)</a>"
+
+	// --- Familiar species display using mapping ---
+	if (familiar_specie && GLOB.familiar_display_names[familiar_specie])
+		var/specie_type = GLOB.familiar_display_names[familiar_specie]
+		dat += "<div align='center'><font size=4 color='#bbbbbb'>[specie_type]</font></div>"
+
+	// --- Pronoun selection ---
+	var/list/pronoun_display = list(
+		HE_HIM = "he/him",
+		SHE_HER = "she/her",
+		THEY_THEM = "they/them",
+		IT_ITS = "it/its"
+	)
+	var/selected_pronoun = pronoun_display[familiar_pronouns] ? pronoun_display[familiar_pronouns] : "they/them"
+	dat += "<br><b>Pronouns:</b> <a href='?_src_=familiar_prefs;preference=familiar_pronouns;task=select'>[selected_pronoun]</a>"
 
 	dat += "<br><b>Familiar Headshot:</b> <a href='?_src_=familiar_prefs;preference=familiar_headshot;task=input'>Change</a>"
 	if (familiar_headshot_link)
@@ -72,9 +88,22 @@
 				new_name = reject_bad_name(new_name)
 				if(new_name)
 					familiar_name = new_name
+					to_chat(user, "<span class='notice'>Familiar name set to [new_name].</span>")
 				else
 					to_chat(user, "<font color='red'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ', . and ,.</font>")
-
+				
+		if ("familiar_pronouns")
+			var/list/pronoun_options = list(
+				"he/him" = HE_HIM,
+				"she/her" = SHE_HER,
+				"they/them" = THEY_THEM,
+				"it/its" = IT_ITS
+			)
+			var/choice = input(user, "Select your familiar's pronouns:", "Pronouns") as null|anything in pronoun_options
+			if(choice)
+				familiar_pronouns = pronoun_options[choice]
+				to_chat(user, "<span class='notice'>Familiar pronouns set to [choice].</span>")
+				
 		if("familiar_headshot")
 			to_chat(user, "<span class='notice'>Please use a relatively SFW image of the head and shoulder area to maintain immersion level. <b>Do not use a real life photo or unserious images.</b></span>")
 			to_chat(user, "<span class='notice'>Ensure it's a direct image link. The photo will be resized to 325x325 pixels.</span>")

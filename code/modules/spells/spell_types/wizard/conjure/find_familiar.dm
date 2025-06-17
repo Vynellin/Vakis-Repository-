@@ -179,7 +179,24 @@
 
 	// Add species name below the title, centered
 	if (pref.familiar_specie)
-		dat += "<div align='center'><font size=4 color='#bbbbbb'>[initial(pref.familiar_specie)]</font></div>"
+		if (GLOB.familiar_display_names[pref.familiar_specie])
+			var/specie_type = GLOB.familiar_display_names[pref.familiar_specie]
+			dat += "<div align='center'><font size=4 color='#bbbbbb'>[specie_type]</font></div>"
+		else
+			var/mob/living/simple_animal/pet/familiar/proto = new pref.familiar_specie()
+			var/specie_type = proto.name
+			qdel(proto)
+			dat += "<div align='center'><font size=4 color='#bbbbbb'>[specie_type]</font></div>"
+
+	// Add pronouns below species name
+	var/list/pronoun_display = list(
+		HE_HIM = "he/him",
+		SHE_HER = "she/her",
+		THEY_THEM = "they/them",
+		IT_ITS = "it/its"
+	)
+	var/selected_pronoun = pronoun_display[pref.familiar_pronouns] ? pronoun_display[pref.familiar_pronouns] : "they/them"
+	dat += "<div align='center'><font size=3 color='#bbbbbb'>[selected_pronoun]</font></div>"
 
 	if (valid_headshot_link(null, pref.familiar_headshot_link, TRUE))
 		dat += "<div align='center'><img src='[pref.familiar_headshot_link]' width='325px' height='325px'></div>"
@@ -200,14 +217,9 @@
 
 ///Used to free a familiar from its summoner.
 /proc/free_familiar(mob/living/simple_animal/pet/familiar/fam, mob/living/carbon/user)
-	if (!fam || !user)
+	if (QDELETED(fam))
+		to_chat(user, span_warning("The familiar is already gone."))
 		return
-
-	if (!fam.mind)
-		log_game("[key_name(user)] has released their familiar: [fam.name] ([fam.type])")
-	else
-		log_game("[key_name(user)] released sentient familiar [key_name(fam)] ([fam.type])")
-
 	to_chat(user, span_warning("You feel your link with [fam.name] break."))
 	to_chat(fam, span_warning("You feel your link with [user.name] break, you are free."))
 
@@ -264,6 +276,8 @@
 	// Set summoner and name
 	awakener.familiar_summoner = user
 	awakener.fully_replace_character_name(null, prefs.familiar_name)
+	awakener.pronouns = prefs.familiar_pronouns
+	awakener.familiar_prefs = prefs
 
 	// Display summoning emote
 	user.visible_message(span_notice("[awakener.summoning_emote]"))

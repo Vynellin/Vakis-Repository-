@@ -11,6 +11,7 @@
 
 /mob/living/simple_animal/pet/familiar
 	dextrous = TRUE
+	gender = NEUTER
 	name = "Generic Wizard familiar"
 	desc = "The spirit of what makes a familiar (You shouldn't be seeing this.)"
 	var/mob/living/carbon/familiar_summoner = null
@@ -46,6 +47,7 @@
 	held_items = list(null, null)
 	var/lore_blurb = null
 	pooptype = null
+	var/familiar_prefs
 
 //As far as I am aware, you cannot pat out fire as a familiar at least not in time for it to not kill you, this seems fair.
 /mob/living/simple_animal/pet/familiar/fire_act(added, maxstacks)
@@ -58,9 +60,16 @@
 	ADD_TRAIT(src, TRAIT_CHUNKYFINGERS, TRAIT_GENERIC)
 	AddComponent(/datum/component/footstep, footstep_type)
 
+/mob/living/simple_animal/pet/familiar/proc/can_bite()
+	for(var/obj/item/grabbing/grab in grabbedby) //Grabbed by the mouth
+		if(grab.sublimb_grabbed == BODY_ZONE_PRECISE_MOUTH)
+			return FALSE
+			
+	return TRUE
+
 /mob/living/simple_animal/pet/familiar/examine(mob/user)
 	. = ..()
-	if(src.client.prefs.familiar_prefs.familiar_flavortext || src.client.prefs.familiar_prefs.familiar_headshot_link || src.client.prefs.familiar_prefs.familiar_ooc_notes)
+	if(src.familiar_prefs && ((src.familiar_prefs["familiar_flavortext"]) || ("familiar_headshot_link" in src.familiar_prefs && src.familiar_prefs["familiar_headshot_link"]) || (src.familiar_prefs["familiar_ooc_notes"])))
 		. += "<a href='?src=[REF(src)];task=view_fam_headshot;'>Examine closer</a>"
 
 /datum/status_effect/buff/familiar
@@ -450,8 +459,8 @@
 
 /mob/living/simple_animal/pet/familiar/ripplefox
 	name = "Ripplefox"
-	desc = "It flickers when not directly observed. Leaves no tracks. You're not always sure it's still nearby."
-	summoning_emote = "A ripple in the air becomes a sleek fox, its fur twitching between shades of color as it pads forth."
+	desc = "They flickers when not directly observed. Leaves no tracks. You're not always sure they're still nearby."
+	summoning_emote = "A ripple in the air becomes a sleek fox, their fur twitching between shades of color as they pads forth."
 	animal_species = "Ripplefox"
 	buff_given = /datum/status_effect/buff/familiar/subtle_slip
 	inherent_spell = list(/obj/effect/proc_holder/spell/self/phantom_flicker)
