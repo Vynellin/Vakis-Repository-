@@ -65,6 +65,7 @@
 	ADD_TRAIT(src, TRAIT_CHUNKYFINGERS, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
 	AddComponent(/datum/component/footstep, footstep_type)
+	faction = familiar_summoner.faction
 
 /mob/living/simple_animal/pet/familiar/proc/can_bite()
 	for(var/obj/item/grabbing/grab in grabbedby) //Grabbed by the mouth
