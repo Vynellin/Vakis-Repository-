@@ -54,19 +54,46 @@
 	// Check if user already has a familiar
 	for (var/mob/living/simple_animal/pet/familiar/fam in GLOB.alive_mob_list + GLOB.dead_mob_list)
 		if (fam.familiar_summoner == user)
-			var/choice = input(user, "You already have a familiar. Do you want to free them?") as null|anything in list("Yes", "No")
-			if (choice != "Yes")
+			if(fam.health <= 0)
+				var/choice = input(user, "Your familiar is dead. What do you want to do?") as null|anything in list("Revive with magic stone", "Free them")
+				if(choice == "Revive with magic stone")
+					to_chat(user, span_notice("You will need a magical stone in your active hand to attempt resurrection."))
+					var/obj/item/natural/stone/magic_stone = user.get_active_held_item()
+					if(!istype(magic_stone, /obj/item/natural/stone) || magic_stone.magic_power < 1)
+						to_chat(user, span_warning("You need to be holding a magical stone in your active hand!"))
+						user.busy_summoning_familiar = FALSE
+						revert_cast()
+						return FALSE
+					else
+						revive_familiar(magic_stone, fam, user)
+						return TRUE
+				else if(choice == "Free them")
+					free_familiar(fam, user)
+					if(!fam?.mind)
+						log_game("[key_name(user)] has released their familiar: [fam.name] ([fam.type])")
+					else
+						log_game("[key_name(user)] released sentient familiar [key_name(fam)] ([fam.type])")
+					user.busy_summoning_familiar = FALSE
+					revert_cast()
+					return FALSE
+				else // Cancel
+					user.busy_summoning_familiar = FALSE
+					revert_cast()
+					return FALSE
+			else
+				var/choice = input(user, "You already have a familiar. Do you want to free them?") as null|anything in list("Yes", "No")
+				if (choice != "Yes")
+					user.busy_summoning_familiar = FALSE
+					revert_cast()
+					return FALSE
+				free_familiar(fam, user)
+				if(!fam?.mind)
+					log_game("[key_name(user)] has released their familiar: [fam.name] ([fam.type])")
+				else
+					log_game("[key_name(user)] released sentient familiar [key_name(fam)] ([fam.type])")
 				user.busy_summoning_familiar = FALSE
 				revert_cast()
 				return FALSE
-			free_familiar(fam, user)
-			if(!fam?.mind)
-				log_game("[key_name(user)] has released their familiar: [fam.name] ([fam.type])")
-			else
-				log_game("[key_name(user)] released sentient familiar [key_name(fam)] ([fam.type])")
-			user.busy_summoning_familiar = FALSE
-			revert_cast()
-			return FALSE
 
 	// Ask how the user wants to summon
 	var/path_choice = input(user, "How do you want to summon your familiar?") as null|anything in list(
@@ -336,6 +363,17 @@
 	user.whisper(message)
 	log_game("[key_name(user)] sent a message to [key_name(familiar)] with contents [message]")
 	return TRUE
+
+/proc/revive_familiar(obj/item/natural/stone/magic_stone, mob/living/simple_animal/pet/familiar/fam, mob/living/carbon/user)
+    // Consume the stone
+    to_chat(user, span_notice("You channel the stone's magic into [fam.name], reviving them!"))
+    qdel(magic_stone)
+
+    // Revive and fully heal the familiar
+    fam.revive(full_heal = TRUE, admin_revive = TRUE)
+    fam.familiar_summoner = user
+    fam.visible_message(span_notice("[fam.name] is restored to life by [user]'s magic!"))
+    return TRUE
 
 /datum/virtue/utility/forgotten_bond
 	name = "Forgotten Bond"
