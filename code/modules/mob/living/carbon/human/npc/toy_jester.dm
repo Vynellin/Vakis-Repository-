@@ -3,7 +3,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 /mob/living/carbon/human/species/construct/metal/toyjester
 	aggressive=1
 	mode = AI_IDLE
-	faction = list("Toybox")
+	faction = list("toybox")
 	ambushable = FALSE
 	dodgetime = 30
 	flee_in_pain = TRUE
@@ -110,11 +110,15 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 	if(mode == AI_HUNT)
 		if(prob(5))
 			emote("laugh")
+		if(prob(5))
+			emote("chuckle")
+		if(prob(5))
+			emote("giggle")
 	. = ..()
 
 /datum/outfit/job/roguetown/human/species/construct/metal/toyjester/pre_equip(mob/living/carbon/human/H)
-	var/loadout = rand(1,3)
-	switch(loadout)
+	var/toyclass = rand(1,3)
+	switch(toyclass)
 		if(1) //Jester
 			armor = /obj/item/clothing/suit/roguetown/armor/leather
 			shirt = /obj/item/clothing/suit/roguetown/shirt/jester
@@ -122,7 +126,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			if(prob(50))
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
-			mask = /obj/item/clothing/mask/rogue/facemask/prisoner
+			mask = /obj/item/clothing/mask/rogue/facemask
 			if(prob(50))
 				mask = /obj/item/clothing/mask/rogue/ragmask/black
 			head = /obj/item/clothing/head/roguetown/jester
@@ -152,7 +156,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			if(prob(50))
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
-			mask = /obj/item/clothing/mask/rogue/facemask/prisoner
+			mask = /obj/item/clothing/mask/rogue/facemask
 			if(prob(50))
 				mask = /obj/item/clothing/mask/rogue/ragmask/black
 			head = /obj/item/clothing/head/roguetown/helmet/tricorn
@@ -178,7 +182,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			if(prob(50))
 				wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
-			mask = /obj/item/clothing/mask/rogue/facemask/prisoner
+			mask = /obj/item/clothing/mask/rogue/facemask
 			head = /obj/item/clothing/head/roguetown/helmet/skullcap
 			neck = /obj/item/clothing/neck/roguetown/gorget
 			gloves = /obj/item/clothing/gloves/roguetown/chain/iron
