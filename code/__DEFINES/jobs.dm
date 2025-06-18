@@ -143,7 +143,7 @@
 #define SHOPHAND				(1<<4)
 #define JANITOR					(1<<5)
 #define TAILOR					(1<<6)
-#define GHANDLER				(1<<0)
+#define GHANDLER				(1<<7)
 
 #define PEASANTS					(1<<5)
 
@@ -254,7 +254,7 @@
 #define JDO_COURTAGENT 49
 #define JDO_WRETCH 50
 
-#define JDO_LUNATIC 10 // ALWAYS keep lunatic last. It's a reward role for being a true sport.
+#define JDO_LUNATIC 51 // ALWAYS keep lunatic last. It's a reward role for being a true sport.
 
 #define MANOR_ROLES \
 	/datum/job/roguetown/jester,\
