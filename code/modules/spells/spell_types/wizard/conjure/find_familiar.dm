@@ -66,6 +66,7 @@
 						return FALSE
 					else
 						revive_familiar(magic_stone, fam, user)
+						user.busy_summoning_familiar = FALSE
 						return TRUE
 				else if(choice == "Free them")
 					free_familiar(fam, user)
