@@ -304,7 +304,7 @@
 	/datum/job/roguetown/blacksmith,\
 	/datum/job/roguetown/merchant,\
 	/datum/job/roguetown/tailor,\
-	/datum/job/roguetown/janitor\
+	/datum/job/roguetown/janitor,\
 	/datum/job/roguetown/ghandler
 
 
