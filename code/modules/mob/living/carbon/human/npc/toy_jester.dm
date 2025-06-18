@@ -132,9 +132,9 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 		neck = /obj/item/clothing/neck/roguetown/gorget
 	gloves = /obj/item/clothing/gloves/roguetown/angle
 	shoes = /obj/item/clothing/shoes/roguetown/jester
-	H.STASTR = rand(16,18)
+	H.STASTR = rand(8,20)
 	H.STASPD = rand(16,18)
-	H.STACON = rand(14,16)
+	H.STACON = rand(16,18)
 	H.STAEND = rand(14,16)
 	H.STAPER = rand(12,14)
 	H.STAINT = rand(12,14)
