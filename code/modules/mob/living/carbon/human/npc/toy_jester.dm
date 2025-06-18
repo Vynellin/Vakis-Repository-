@@ -8,7 +8,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 	dodgetime = 30
 	flee_in_pain = TRUE
 	stand_attempts = 6
-	possible_rmb_intents = list()
+	possible_rmb_intents = list(/datum/rmb_intent/feint, /datum/rmb_intent/aimed, /datum/rmb_intent/strong, /datum/rmb_intent/weak)
 	var/is_silent = FALSE /// Determines whether or not we will scream our funny lines at people.
 
 /mob/living/carbon/human/species/construct/metal/toyjester/ambush
@@ -67,9 +67,9 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 	else
 		new_hair.set_accessory_type(hairm, null, src)
 
-	new_hair.accessory_colors = "#BFB7AB"
-	new_hair.hair_color = "#BFB7AB"
-	hair_color = "#BFB7AB"
+	new_hair.accessory_colors = "#a37126"
+	new_hair.hair_color = "#a37126"
+	hair_color = "#a37126"
 
 	head.add_bodypart_feature(new_hair)
 
@@ -85,10 +85,8 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 	
 	skin_tone = "A18047"
 
-	if(gender == FEMALE)
-		real_name = pick(world.file2list("strings/rt/names/other/toyf.txt"))
-	else
-		real_name = pick(world.file2list("strings/rt/names/other/toym.txt"))
+	real_name = pick(world.file2list("strings/rt/names/other/toyjester.txt"))
+
 	update_hair()
 	update_body()
 
@@ -145,7 +143,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 				r_hand = /obj/item/rogueweapon/knuckles/bronzeknuckles
 				l_hand = /obj/item/rogueweapon/knuckles/bronzeknuckles
 			else
-				r_hand = /obj/item/rogueweapon/eaglebeak
+				r_hand = /obj/item/rogueweapon/eaglebeak/lucerne
 		if(2) //Toy Arquebusier
 			armor = /obj/item/clothing/suit/roguetown/armor/gambeson/heavy
 			shirt = /obj/item/clothing/suit/roguetown/shirt/jester
