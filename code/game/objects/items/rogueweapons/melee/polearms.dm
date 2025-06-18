@@ -480,8 +480,10 @@
 	wdefense = 9
 
 /obj/item/rogueweapon/halberd/toyarquebus
-	possible_item_intents = list(/datum/intent/spear/thrust/eaglebeak, SPEAR_BASH) //bash is for nonlethal takedowns, only targets limbs
-	gripped_intents = list(/datum/intent/spear/thrust/eaglebeak, /datum/intent/spear/cut/bardiche, /datum/intent/axe/chop, SPEAR_BASH)
+	force = 15
+	force_wielded = 30
+	possible_item_intents = list(SPEAR_BASH)
+	gripped_intents = list(SPEAR_BASH,/datum/intent/mace/smash/wood)
 	name = "Toy Arquebus"
 	desc = "Unfortunately, this Arquebus appears to be a replica made entierly of wood. There's a little orange cap at the end of it, too."
 	icon = 'modular_helmsguard/icons/weapons/arquebus.dmi'

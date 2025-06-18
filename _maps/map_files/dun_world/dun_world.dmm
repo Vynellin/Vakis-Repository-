@@ -10748,10 +10748,6 @@
 /obj/structure/fluff/walldeco/bigpainting,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/town/tavern)
-"edF" = (
-/mob/living/carbon/human/species/construct/metal/toyjester,
-/turf/open/floor/rogue/grassyel,
-/area/rogue/under/cave/dungeon/toybox_dungeon)
 "edM" = (
 /turf/open/floor/rogue/rooftop/green{
 	dir = 4
@@ -19785,10 +19781,6 @@
 	},
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/town/cell)
-"hue" = (
-/mob/living/carbon/human/species/construct/metal/toyjester,
-/turf/open/floor/rogue/grassred,
-/area/rogue/under/cave/dungeon/toybox_dungeon)
 "huf" = (
 /obj/structure/table/wood{
 	dir = 6;
@@ -45846,8 +45838,8 @@
 /area/rogue/outdoors/beach)
 "rik" = (
 /mob/living/carbon/human/species/construct/metal/toyjester,
-/turf/open/floor/rogue/tile/checkeralt,
-/area/rogue/under/cave/dungeon/toybox_dungeon)
+/turf/open/floor/rogue/blocks/platform,
+/area/rogue/outdoors/woods)
 "ris" = (
 /obj/machinery/light/rogue/cauldron,
 /turf/open/floor/rogue/dirt/road,
@@ -51515,10 +51507,6 @@
 /obj/machinery/light/rogue/wallfire,
 /turf/closed/wall/mineral/rogue/pipe,
 /area/rogue/outdoors/mountains/decap)
-"try" = (
-/mob/living/carbon/human/species/construct/metal/toyjester,
-/turf/open/floor/rogue/carpet/lord/center,
-/area/rogue/under/cave/dungeon/toybox_dungeon)
 "trD" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -62009,10 +61997,6 @@
 	dir = 8
 	},
 /area/rogue/indoors/town/manor)
-"xwI" = (
-/mob/living/carbon/human/species/construct/metal/toyjester,
-/turf/open/floor/rogue/grass,
-/area/rogue/under/cave/dungeon/toybox_dungeon)
 "xwL" = (
 /obj/structure/roguerock,
 /turf/open/floor/rogue/dirt/road,
@@ -269202,9 +269186,9 @@ eMx
 eMx
 eMx
 lkt
-fQI
-fQI
-fQI
+rik
+rik
+rik
 qXm
 eMx
 eMx
@@ -269654,9 +269638,9 @@ eMx
 eMx
 eMx
 lkt
-fQI
-fQI
-fQI
+rik
+rik
+rik
 qXm
 eMx
 eMx
@@ -270106,9 +270090,9 @@ eMx
 eMx
 eMx
 fzK
-fQI
-fQI
-fQI
+rik
+rik
+rik
 fzK
 eMx
 eMx
@@ -270558,9 +270542,9 @@ eMx
 eMx
 eMx
 lkt
-fQI
-fQI
-fQI
+rik
+rik
+rik
 qXm
 eMx
 eMx
@@ -271946,7 +271930,7 @@ dPX
 tYg
 tYg
 tYg
-rik
+tYg
 tYg
 spL
 fAR
@@ -274201,7 +274185,7 @@ dGh
 pCI
 tYg
 tYg
-rik
+tYg
 tYg
 tYg
 sCI
@@ -276024,7 +276008,7 @@ dGh
 tEz
 wAm
 tEz
-xwI
+wAm
 tEz
 dGh
 xZD
@@ -277824,7 +277808,7 @@ tqv
 dGh
 wVx
 rdN
-edF
+rdN
 wVx
 dGh
 sea
@@ -278259,7 +278243,7 @@ uJD
 uJD
 uJD
 uJD
-try
+uJD
 uJD
 dDJ
 uJD
@@ -280543,7 +280527,7 @@ hwX
 dGh
 oQg
 lzn
-hue
+oQg
 lzn
 oQg
 dGh
@@ -282335,7 +282319,7 @@ dGh
 pCI
 tYg
 tYg
-rik
+tYg
 tYg
 sCI
 tYg
