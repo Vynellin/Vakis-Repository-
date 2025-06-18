@@ -27,7 +27,7 @@
 
 /obj/effect/proc_holder/spell/self/findfamiliar/Initialize()
 	. = ..()
-	familiars = GLOB.familiar_types
+	familiars = GLOB.familiar_types.Copy()
 
 /obj/effect/proc_holder/spell/self/findfamiliar/empowered/
 	name = "Empowered Find Familiar"
@@ -35,7 +35,7 @@
 
 /obj/effect/proc_holder/spell/self/findfamiliar/empowered/Initialize()
 	. = ..()
-	// Extended list if we're eligible
+	familiars = GLOB.familiar_types.Copy()
 	familiars += GLOB.familiar_types_extended
 
 /obj/effect/proc_holder/spell/self/findfamiliar/cast(list/targets, mob/living/carbon/user)
