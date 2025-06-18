@@ -115,7 +115,6 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 	. = ..()
 
 /datum/outfit/job/roguetown/human/species/construct/metal/toyjester/pre_equip(mob/living/carbon/human/H)
-	..()
 	var/loadout = rand(1,3)
 	switch(loadout)
 		if(1) //Jester
