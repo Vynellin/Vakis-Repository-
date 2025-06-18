@@ -191,7 +191,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 			H.STAINT = rand(12,14)
 			if(prob(50))
 				r_hand = /obj/item/rogueweapon/sword/iron
-				l_hand = /obj/item/rogueweapon/shield/buckler
+				l_hand = /obj/item/rogueweapon/shield/heater
 			else
 				r_hand = /obj/item/rogueweapon/sword/iron/messer
 				l_hand = /obj/item/rogueweapon/shield/buckler
