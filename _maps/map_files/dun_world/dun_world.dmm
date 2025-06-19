@@ -8993,7 +8993,7 @@
 "dlh" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/remains/human,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/vulnafir)
 "dlE" = (
 /obj/structure/stairs{
@@ -9952,7 +9952,7 @@
 /area/rogue/indoors/shelter)
 "dDJ" = (
 /obj/structure/stairs/fancy/c,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "dDL" = (
 /obj/machinery/light/rogue/lanternpost,
@@ -12894,7 +12894,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "eDX" = (
 /obj/structure/closet/crate/chest/old_crate,
@@ -13808,9 +13808,7 @@
 /area/rogue/outdoors/woods)
 "eTB" = (
 /mob/living/carbon/human/species/elf/dark/ziraguard,
-/turf/open/floor/rogue/carpet/lord/center{
-	dir = 1
-	},
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/old_university)
 "eTI" = (
 /obj/structure/fluff/walldeco/chains{
@@ -17171,7 +17169,7 @@
 	pixel_y = 8
 	},
 /obj/effect/spawner/lootdrop/potion_ingredient/herb,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/vulnafir)
 "gdM" = (
 /obj/structure/table/wood,
@@ -27654,9 +27652,7 @@
 /obj/structure/stairs/fancy/c{
 	dir = 1
 	},
-/turf/open/floor/rogue/carpet/lord/center{
-	dir = 1
-	},
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/old_university)
 "jOm" = (
 /obj/structure/bars/pipe{
@@ -32036,7 +32032,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "lrR" = (
 /obj/structure/fluff/clockwork/alloy_shards,
@@ -35386,7 +35382,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "mGa" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "mGf" = (
 /obj/structure/lever{
@@ -38952,7 +38948,7 @@
 /area/rogue/outdoors/mountains)
 "nPX" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/vulnafir)
 "nPZ" = (
 /mob/living/simple_animal/hostile/rogue/skeleton,
@@ -44834,7 +44830,7 @@
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "pVc" = (
 /mob/living/carbon/human/species/construct/metal/toyjester,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "pVf" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/headless,
@@ -52560,7 +52556,7 @@
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "sLR" = (
 /obj/structure/fluff/clockwork/alloy_shards/large,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "sLV" = (
 /obj/structure/fluff/railing/wood{
@@ -53990,7 +53986,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/remains/human,
 /obj/structure/chair/wood/rogue/throne,
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/vulnafir)
 "tnP" = (
 /obj/machinery/light/rogue/oven/south,
@@ -54998,9 +54994,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/indoors)
 "tIX" = (
-/turf/open/floor/rogue/carpet/lord/center{
-	dir = 1
-	},
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/old_university)
 "tJi" = (
 /obj/structure/roguewindow,
@@ -55259,7 +55253,7 @@
 /obj/structure/fluff/littlebanners{
 	pixel_y = -5
 	},
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "tNg" = (
 /turf/open/transparent/openspace,
@@ -57976,7 +57970,7 @@
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/mountains/decap)
 "uJD" = (
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "uJI" = (
 /obj/structure/rogue/trophy/deer,
@@ -61093,7 +61087,7 @@
 /obj/item/reagent_containers/glass/bottle/rogue{
 	pixel_x = 5
 	},
-/turf/open/floor/rogue/carpet/lord/center,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/rogue/under/cave/dungeon/vulnafir)
 "vRZ" = (
 /obj/item/grown/log/tree/stake,
