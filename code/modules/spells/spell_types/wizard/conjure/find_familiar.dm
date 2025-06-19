@@ -96,6 +96,14 @@
 				revert_cast()
 				return FALSE
 
+	// Check for valid spawn turf before spawning familiar
+	var/turf/spawn_turf = get_step(user, user.dir)
+	if (!isturf(spawn_turf) || !isopenturf(spawn_turf))
+		to_chat(user, span_warning("There is not enough space to summon your familiar."))
+		revert_cast()
+		user.busy_summoning_familiar = FALSE
+		return FALSE
+
 	// Ask how the user wants to summon
 	var/path_choice = input(user, "How do you want to summon your familiar?") as null|anything in list(
 		"Summon from registered familiars",
@@ -181,7 +189,7 @@
 		// Non-sentient familiar summoning
 		var/familiarchoice = input("Choose your familiar", "Available familiars") as anything in familiars
 		var/mob/living/simple_animal/pet/familiar/familiar_type = familiars[familiarchoice]
-		var/mob/living/simple_animal/pet/familiar/fam = new familiar_type(get_step(user, user.dir))
+		var/mob/living/simple_animal/pet/familiar/fam = new familiar_type(spawn_turf)
 		fam.familiar_summoner = user
 		user.visible_message(span_notice("[fam.summoning_emote]"))
 		fam.fully_replace_character_name(null, "[user]'s familiar")
@@ -281,13 +289,8 @@
 		to_chat(user, span_warning("Familiar summoning failed: The target has no valid familiar form."))
 		return
 
-	// Check for valid spawn turf before spawning familiar
-	var/turf/spawn_turf = get_step(user, user.dir)
-	if (!isturf(spawn_turf) || !isopenturf(spawn_turf))
-		to_chat(user, span_warning("There is not enough space to summon your familiar."))
-		return
-
 	// Spawn the familiar mob near the summoner
+	var/turf/spawn_turf = get_step(user, user.dir)
 	var/mob/living/simple_animal/pet/familiar/awakener = new prefs.familiar_specie(spawn_turf)
 	if (!awakener)
 		to_chat(user, span_warning("Familiar summoning failed: Could not create familiar."))
