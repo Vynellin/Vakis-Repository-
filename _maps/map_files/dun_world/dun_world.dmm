@@ -16933,8 +16933,6 @@
 	dir = 1;
 	icon_state = "longtable_mid"
 	},
-/obj/item/clothing/mask/rogue/facemask,
-/obj/item/clothing/mask/rogue/lordmask,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/shop)
 "fZg" = (
@@ -18139,9 +18137,11 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/woods)
 "gvq" = (
-/obj/structure/handcart{
-	dir = 8
-	},
+/obj/item/rogueweapon/sickle,
+/obj/item/rogueweapon/thresher,
+/obj/structure/rack/rogue,
+/obj/item/rogueweapon/pitchfork,
+/obj/item/reagent_containers/glass/bucket,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/shop)
 "gvs" = (
@@ -20093,6 +20093,8 @@
 /obj/item/reagent_containers/glass/bottle/rogue/manapot,
 /obj/item/reagent_containers/glass/bottle/rogue/stampot,
 /obj/item/reagent_containers/glass/bottle/rogue/stampot,
+/obj/item/storage/belt/rogue/pouch/medicine,
+/obj/item/storage/belt/rogue/pouch/medicine,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/shop)
 "hff" = (
@@ -20357,6 +20359,13 @@
 /obj/machinery/light/rogue/wallfire/candle/weak/directional/north,
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/fort_dusk)
+"hkQ" = (
+/obj/item/folding_table_stored,
+/obj/item/storage/gadget/messkit,
+/obj/item/storage/gadget/messkit,
+/obj/item/storage/gadget/messkit,
+/turf/open/floor/rogue/hexstone,
+/area/rogue/indoors/town/shop)
 "hkR" = (
 /obj/structure/well/fountain{
 	pixel_x = -16
@@ -20383,14 +20392,9 @@
 /area/rogue/indoors/cave)
 "hlE" = (
 /obj/structure/rack/rogue,
-/obj/item/clothing/cloak/half/red,
 /obj/item/clothing/cloak/half/brown,
 /obj/item/clothing/cloak/raincloak/furcloak,
-/obj/item/clothing/cloak/raincloak/red,
-/obj/item/clothing/cloak/raincloak/green,
-/obj/item/clothing/cloak/raincloak/blue,
 /obj/item/clothing/cloak/raincloak/brown,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/shop)
 "hlJ" = (
@@ -23426,13 +23430,11 @@
 "ioe" = (
 /obj/structure/rack/rogue,
 /obj/item/clothing/under/roguetown/tights/random,
-/obj/item/clothing/under/roguetown/tights/random,
-/obj/item/clothing/under/roguetown/tights/random,
 /obj/item/clothing/suit/roguetown/shirt/undershirt/random,
-/obj/item/clothing/suit/roguetown/shirt/undershirt/random,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /obj/item/clothing/suit/roguetown/shirt/tunic,
 /obj/item/clothing/shoes/roguetown/boots,
+/obj/item/clothing/suit/roguetown/shirt/dress/gen/random,
+/obj/item/clothing/suit/roguetown/shirt/dress,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/shop)
 "ion" = (
@@ -24458,7 +24460,7 @@
 /area/rogue/under/cave/dungeon/dungeon1/gethsmane)
 "iHl" = (
 /obj/structure/closet/crate/roguecloset,
-/obj/item/reagent_containers/powder,
+/obj/item/clothing/mask/rogue/lordmask,
 /obj/item/roguekey/merchant,
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/shop)
@@ -26806,6 +26808,9 @@
 /obj/item/clothing/mask/cigarette/rollie/nicotine,
 /obj/item/clothing/mask/cigarette/rollie/nicotine,
 /obj/item/clothing/mask/cigarette/rollie/nicotine,
+/obj/item/reagent_containers/powder/ozium,
+/obj/item/reagent_containers/powder/ozium,
+/obj/item/reagent_containers/powder/moondust,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/shop)
 "jwB" = (
@@ -28661,6 +28666,7 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /obj/item/rogueweapon/woodstaff,
+/obj/item/storage/backpack/rogue/backpack,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/shop)
 "khy" = (
@@ -30572,6 +30578,15 @@
 /obj/structure/fermenting_barrel,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
+"kSc" = (
+/obj/structure/table/wood{
+	icon_state = "longtable"
+	},
+/obj/item/clothing/suit/roguetown/armor/gambeson,
+/obj/item/clothing/wrists/roguetown/bracers/leather,
+/obj/item/clothing/gloves/roguetown/leather,
+/turf/open/floor/rogue/twig,
+/area/rogue/indoors/town)
 "kSt" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobble,
@@ -33348,6 +33363,8 @@
 	dir = 1;
 	icon_state = "longtable"
 	},
+/obj/item/paper,
+/obj/item/paper,
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
 /turf/open/floor/rogue/blocks/stonered/tiny,
@@ -40105,6 +40122,7 @@
 /obj/structure/rack/rogue,
 /obj/item/clothing/mask/rogue/spectacles,
 /obj/item/clothing/mask/rogue/spectacles/golden,
+/obj/item/scomstone/bad,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/shop)
 "omc" = (
@@ -42222,6 +42240,10 @@
 "paM" = (
 /obj/structure/roguemachine/atm/directional/north{
 	location_tag = "Merchant"
+	},
+/obj/item/storage/roguebag{
+	pixel_x = 7;
+	pixel_y = 7
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/shop)
@@ -44524,8 +44546,9 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
-/obj/item/paper,
-/obj/item/paper,
+/obj/item/toy/plushie/saiga{
+	pixel_y = 20
+	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/shop)
 "pPL" = (
@@ -48909,6 +48932,9 @@
 /obj/structure/rack/rogue{
 	pixel_y = 13
 	},
+/obj/item/storage/backpack/rogue/backpack,
+/obj/item/bedroll,
+/obj/item/bedroll,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "ruO" = (
@@ -53654,8 +53680,6 @@
 	dir = 1;
 	icon_state = "longtable"
 	},
-/obj/item/clothing/neck/roguetown/coif,
-/obj/item/clothing/mask/bandana/black,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/rogue/indoors/town/shop)
 "tgY" = (
@@ -54366,6 +54390,9 @@
 	pixel_x = -7;
 	pixel_y = 7
 	},
+/obj/item/flashlight/flare/torch/metal,
+/obj/item/flashlight/flare/torch/metal,
+/obj/item/flashlight/flare/torch/metal,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/shop)
 "tvC" = (
@@ -55667,6 +55694,9 @@
 	pixel_y = 13
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
+/obj/item/reagent_containers/glass/bottle/waterskin,
+/obj/item/reagent_containers/glass/bottle/waterskin,
+/obj/item/reagent_containers/glass/bottle/waterskin,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/rogue/indoors/town)
 "tVi" = (
@@ -56293,7 +56323,11 @@
 /area/rogue/under/cave/dungeon/dungeon1/gethsmane)
 "ugv" = (
 /obj/structure/rack/rogue,
+/obj/item/rogueweapon/pick,
+/obj/item/rogueweapon/stoneaxe/handaxe,
 /obj/item/storage/belt/rogue/leather/knifebelt/iron,
+/obj/item/rogueweapon/huntingknife,
+/obj/item/lockpickring,
 /turf/open/floor/rogue/concrete,
 /area/rogue/indoors/town/shop)
 "ugw" = (
@@ -61802,6 +61836,15 @@
 "weQ" = (
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/exposed/town/keep)
+"weU" = (
+/obj/structure/rack/rogue,
+/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
+/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
+/obj/item/reagent_containers/glass/bottle/rogue/wine,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/rogue/indoors/town/shop)
 "wfk" = (
 /turf/open/floor/rogue/grassred,
 /area/rogue/under/cave/dungeon/old_university_garden)
@@ -62574,6 +62617,9 @@
 /area/rogue/under/cave/dungeon/vulnafir)
 "wtC" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
+/obj/structure/handcart{
+	dir = 8
+	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/shop)
 "wub" = (
@@ -62988,11 +63034,8 @@
 /area/rogue/under/town/sewer)
 "wDT" = (
 /obj/structure/rack/rogue,
-/obj/item/clothing/suit/roguetown/shirt/dress,
-/obj/item/clothing/suit/roguetown/shirt/dress,
-/obj/item/clothing/suit/roguetown/shirt/dress/gen/blue,
-/obj/item/clothing/suit/roguetown/shirt/dress/gen/purple,
-/obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /obj/item/clothing/wrists/roguetown/wrappings,
 /turf/open/floor/carpet/purple,
@@ -64105,6 +64148,12 @@
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/flashlight/flare/torch/lantern,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/rope,
+/obj/item/bedroll,
+/obj/item/reagent_containers/glass/bottle/waterskin,
+/obj/item/reagent_containers/glass/bottle/waterskin,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town/shop)
 "xcD" = (
@@ -65862,6 +65911,8 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
+/obj/item/clothing/neck/roguetown/coif,
+/obj/item/clothing/mask/rogue/facemask,
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town/shop)
 "xIj" = (
@@ -256587,7 +256638,7 @@ lKo
 bSA
 kRg
 tvC
-bPS
+kSc
 guo
 tSh
 wRe
@@ -262459,7 +262510,7 @@ tEq
 pPy
 tvm
 tvm
-nhG
+weU
 eZd
 uBc
 gpj
@@ -265171,7 +265222,7 @@ udZ
 wtC
 xTm
 xTm
-xTm
+hkQ
 xTm
 ioe
 dGb
