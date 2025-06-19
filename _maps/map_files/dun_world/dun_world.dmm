@@ -4148,7 +4148,7 @@
 	icon_state = "churchtable_mid_alt"
 	},
 /obj/item/roguegem/diamond,
-/turf/closed,
+/turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/mountains/decap)
 "bxC" = (
 /obj/effect/decal/remains/human,
@@ -19917,7 +19917,7 @@
 /area/rogue/indoors/town)
 "hcW" = (
 /obj/structure/roguewindow/stained/silver,
-/turf/closed,
+/turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town)
 "hcZ" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
@@ -30869,7 +30869,7 @@
 /obj/structure/mineral_door/wood/donjon/stone{
 	locked = 1
 	},
-/turf/closed,
+/turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains/decap)
 "lab" = (
 /obj/structure/closet/dirthole/closed/loot,
@@ -31790,7 +31790,7 @@
 /obj/structure/table/church{
 	icon_state = "churchtable_end_alt"
 	},
-/turf/closed,
+/turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/mountains/decap)
 "loV" = (
 /turf/closed/wall/mineral/rogue/wooddark/vertical,
@@ -43212,10 +43212,6 @@
 /obj/structure/fluff/psycross,
 /turf/open/floor/rogue/grassred,
 /area/rogue/outdoors/exposed/town/keep)
-"puy" = (
-/obj/structure/bars/cemetery,
-/turf/closed,
-/area/rogue/outdoors/town)
 "puA" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -51859,10 +51855,6 @@
 /obj/structure/table/wood,
 /turf/open/floor/rogue/wood,
 /area/rogue/under/cave/dungeon/old_university)
-"szn" = (
-/obj/structure/spacevine,
-/turf/closed,
-/area/rogue/under/cavewet/bogcaves/sunkencity)
 "szA" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -53927,7 +53919,7 @@
 /obj/structure/table/church{
 	icon_state = "churchtable_mid_alt"
 	},
-/turf/closed,
+/turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/mountains/decap)
 "tox" = (
 /obj/structure/fluff/railing/wood,
@@ -60677,9 +60669,6 @@
 	dir = 4
 	},
 /area/rogue/outdoors/beach/forest)
-"vLX" = (
-/turf/closed,
-/area/rogue/under/cave/dungeon/toybox_dungeon)
 "vMd" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -78737,7 +78726,7 @@ xed
 mVz
 mVz
 mVz
-szn
+skP
 xed
 xed
 xed
@@ -80090,7 +80079,7 @@ eHn
 eHn
 ukX
 ukX
-szn
+skP
 mVz
 mVz
 mVz
@@ -245184,7 +245173,7 @@ avX
 pWT
 teB
 mWD
-puy
+nKf
 teB
 pWT
 pMG
@@ -507524,7 +507513,7 @@ flX
 flX
 flX
 flX
-vLX
+flX
 aBB
 aBB
 aBB
@@ -514771,7 +514760,7 @@ rdN
 rdN
 iTa
 rdN
-flX
+tZU
 cQk
 flX
 flX
