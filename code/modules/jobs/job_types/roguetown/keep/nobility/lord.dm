@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/job/roguetown/lord
 	title = "Marquis"
-	f_title = "Marquise"
+	f_title = "Marquess"
 	flag = LORD
 	department_flag = NOBLEMEN
 	selection_color = JCOLOR_NOBLE
@@ -35,7 +35,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 
 /datum/job/roguetown/exlord //just used to change the lords title
 	title = "Marquis Emeritus"
-	f_title = "Marquise Emeritus"
+	f_title = "Marquess Emeritus"
 	flag = LORD
 	department_flag = NOBLEMEN
 	faction = "Station"
@@ -50,7 +50,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	if(L)
 		SSticker.rulermob = L
 		if(should_wear_femme_clothes(L))
-			SSticker.rulertype = "Marquise"
+			SSticker.rulertype = "Marquess"
 		else
 			SSticker.rulertype = "Marquis"
 		to_chat(world, "<b><span class='notice'><span class='big'>[L.real_name] is [SSticker.rulertype] of Sunmarch.</span></span></b>")
@@ -122,7 +122,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	desc = "Grant someone a title of honor... Or shame."
 	overlay_state = "recruit_titlegrant"
 	antimagic_allowed = TRUE
-	charge_max = 100
+	recharge_time = 100
 	/// Maximum range for title granting
 	var/title_range = 3
 	/// Maximum length for the title
@@ -181,7 +181,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	desc = "Make someone a noble, or strip them of their nobility."
 	overlay_state = "recruit_titlegrant"
 	antimagic_allowed = TRUE
-	charge_max = 100
+	recharge_time = 100
 	/// Maximum range for nobility granting
 	var/nobility_range = 3
 
@@ -244,7 +244,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	recruitment_message = "Serve the crown, %RECRUIT!"
 	accept_message = "FOR THE CROWN!"
 	refuse_message = "I refuse."
-	charge_max = 100
+	recharge_time = 100
 
 /obj/effect/proc_holder/spell/self/convertrole/mercenary
 	name = "Recruit Mercenary"
@@ -253,7 +253,7 @@ GLOBAL_LIST_EMPTY(lord_titles)
 	recruitment_message = "Serve the Guild, %RECRUIT!"
 	accept_message = "FOR THE GUILD!"
 	refuse_message = "I refuse."
-	charge_max = 100
+	recharge_time = 100
 
 /obj/effect/proc_holder/spell/self/convertrole/bog
 	name = "Recruit Warden"

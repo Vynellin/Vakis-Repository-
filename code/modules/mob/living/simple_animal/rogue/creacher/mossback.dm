@@ -51,7 +51,8 @@
 	AddElement(/datum/element/ai_retaliate)
 	ai_controller.set_blackboard_key(BB_BASIC_FOODS, food_type)
 	if(user)
-		summoner = user.name
+		summoner = user.mind.name
+		user.mind.summons_list += src
 		if (townercrab)
 			faction = list("neutral")
 			tamed(1)

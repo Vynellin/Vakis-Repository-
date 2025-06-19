@@ -9,10 +9,12 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = 'sound/magic/heal.ogg'
-	invocation_type = "none"
+	invocation_type = "emote"
+	invocation = span_warning("%user% casts Miracle!")
+	invocation_emote_self = span_warning("I cast Miracle!")
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	charge_max = 10 SECONDS
+	recharge_time = 10 SECONDS
 	miracle = TRUE
 	devotion_cost = 10
 
@@ -157,14 +159,15 @@
 	range = 4
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
-//	chargedloop = /datum/looping_sound/invokeholy
 	chargedloop = null
 	req_items = list(/obj/item/clothing/neck/roguetown/psicross)
 	sound = 'sound/magic/heal.ogg'
-	invocation_type = "none"
+	invocation_type = "emote"
+	invocation = span_warning("%user% casts Fortify!")
+	invocation_emote_self = span_warning("I cast Fortify!")
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	charge_max = 20 SECONDS
+	recharge_time = 20 SECONDS
 	miracle = TRUE
 	devotion_cost = 20
 
@@ -198,10 +201,12 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = list('sound/magic/regression1.ogg','sound/magic/regression2.ogg','sound/magic/regression3.ogg','sound/magic/regression4.ogg')
-	invocation_type = "none"
+	invocation_type = "emote"
+	invocation = span_warning("%user% casts Regression!")
+	invocation_emote_self = span_warning("I cast Regression!")
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	charge_max = 10 SECONDS
+	recharge_time = 10 SECONDS
 	miracle = TRUE
 	devotion_cost = 10
 
@@ -234,7 +239,7 @@
 	invocation_type = "none"
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	charge_max = 20 SECONDS
+	recharge_time = 20 SECONDS
 	miracle = TRUE
 	devotion_cost = 20
 
@@ -261,7 +266,7 @@
 	releasedrain = 35
 	chargedrain = 1
 	chargetime = 30
-	charge_max = 60 SECONDS
+	recharge_time = 60 SECONDS
 	warnie = "spellwarning"
 	no_early_release = TRUE
 	movement_interrupt = FALSE

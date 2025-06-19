@@ -6,7 +6,7 @@
 	chargedrain = 1
 	chargetime = 0 SECONDS
 	releasedrain = 0 
-	charge_max = 3 SECONDS
+	recharge_time = 3 SECONDS
 	var/order_range = 12
 	var/faction_ordering = FALSE ///this sets whether it orders mobs the user is aligned with in range or just mobs who are the character's 'friends' (ie, their summons)
 
@@ -30,7 +30,7 @@
 	// Target is another mob
 	else if(ismob(target))
 		var/mob/living/mob_target = target
-		if(caster.faction_check_mob(target) || (mob_target.summoner && mob_target.summoner == caster.name))
+		if(caster.faction_check_mob(target) || (mob_target.summoner && mob_target.summoner == caster.mind.name))
 			src.process_minions(order_type = "aggressive", target = target)
 			return
 		else
@@ -50,7 +50,7 @@
 		if (istype(other_mob, /mob/living/simple_animal) && !other_mob.client) // Only simple_mobs for now
 			var/mob/living/simple_animal/minion = other_mob
 
-			if ((faction_ordering && caster.faction_check_mob(minion)) || (!faction_ordering && minion.summoner == caster.name))
+			if ((faction_ordering && caster.faction_check_mob(minion)) || (!faction_ordering && minion.summoner == caster.mind.name))
 
 				minion.ai_controller.clear_blackboard_key(BB_FOLLOW_TARGET)
 				minion.ai_controller.clear_blackboard_key(BB_BASIC_MOB_CURRENT_TARGET)

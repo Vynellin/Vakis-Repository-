@@ -209,7 +209,7 @@
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 			beltl = /obj/item/flashlight/flare/torch/lantern
 			beltr = /obj/item/ammopouch/bullets
-			backpack_contents = list(/obj/item/powderhorn, /obj/item/gun/ballistic/arquebus_pistol, /obj/item/rogueweapon/huntingknife)
+			backpack_contents = list(/obj/item/powderhorn, /obj/item/gun/ballistic/arquebus_pistol, /obj/item/rogueweapon/huntingknife, /obj/item/roguekey/adventurers_guild)
 			H.cmode_music = 'sound/music/combat_buccaneer.ogg'
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
@@ -227,6 +227,7 @@
 			H.mind.adjust_skillrank(/datum/skill/labor/fishing, 2, TRUE)
 			ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 			ADD_TRAIT (H, TRAIT_DECEIVING_MEEKNESS, TRAIT_GENERIC)
+			ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC) // gets them inline defensively with the other rogues and also at the same time makes them unable to use things like devotion with full efficacy. Crazy stuff
 			H.change_stat("perception", 1)
 			H.change_stat("endurance", 1)
 			H.change_stat("speed", 2)

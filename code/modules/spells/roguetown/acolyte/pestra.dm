@@ -11,10 +11,12 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = 'sound/magic/diagnose.ogg'
-	invocation_type = "none"
+	invocation_type = "emote"
+	invocation = span_warning("%user% casts Diagnose!")
+	invocation_emote_self = span_warning("I cast Diagnose!")
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	charge_max = 5 SECONDS //very stupidly simple spell
+	recharge_time = 5 SECONDS //very stupidly simple spell
 	miracle = TRUE
 	devotion_cost = 0 //come on, this is very basic
 
@@ -67,10 +69,12 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	sound = 'sound/gore/flesh_eat_03.ogg'
-	invocation_type = "none"
+	invocation_type = "emote"
+	invocation = span_warning("%user% casts Bodypart Miracle!")
+	invocation_emote_self = span_warning("I cast Bodypart Miracle!")
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	charge_max = 60 SECONDS //attaching a limb is pretty intense
+	recharge_time = 60 SECONDS //attaching a limb is pretty intense
 	miracle = TRUE
 	devotion_cost = 20
 
@@ -170,7 +174,7 @@
 	sound = 'sound/magic/revive.ogg'
 	associated_skill = /datum/skill/magic/holy
 	antimagic_allowed = TRUE
-	charge_max = 2 MINUTES
+	recharge_time = 2 MINUTES
 	miracle = TRUE
 	devotion_cost = 30
 	/// Amount of PQ gained for curing zombos
