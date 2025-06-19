@@ -531,6 +531,408 @@
 	name = "Worn Stone"
 	desc = "Nothing feels urgent. You can take your time... and take a hit."
 
-#undef FAMILIAR_SEE_IN_DARK
-#undef FAMILIAR_MIN_BODYTEMP
-#undef FAMILIAR_MAX_BODYTEMP
+/*
+	Mundane and Mechanical Familiars, Reusing old sprites.
+*/
+
+
+/mob/living/simple_animal/pet/familiar/mouse_brown
+    name = "Mouse (brown)"
+    desc = "A small brown mouse, quick and alert, always searching for crumbs and cozy hiding spots."
+    animal_species = "Mouse"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "mouse_brown"
+    icon_living = "mouse_brown"
+    icon_dead = "mouse_brown_dead"
+    STASTR = 3
+    STAPER = 7
+    STAINT = 4
+    STACON = 5
+    STAEND = 5
+    STASPD = 8
+    STALUC = 6
+    summoning_emote = "A faint rustle as a brown mouse darts out from a shadow."
+    speak = list("Squeak!", "Skrit.", "Chrr.")
+    speak_emote = "squeaks"
+    emote_hear = list("squeaks softly.", "nibbles on something unseen.", "scratches at the floor.")
+    emote_see = list("washes its face.", "scurries in a small circle.", "stands up on its hind legs.")
+
+/mob/living/simple_animal/pet/familiar/mouse_white
+    name = "Mouse (white)"
+    desc = "A white mouse, gentle and inquisitive, often found exploring nooks and crannies."
+    animal_species = "Mouse"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "mouse_white"
+    icon_living = "mouse_white"
+    icon_dead = "mouse_white_dead"
+    STASTR = 3
+    STAPER = 7
+    STAINT = 4
+    STACON = 5
+    STAEND = 5
+    STASPD = 8
+    STALUC = 6
+    summoning_emote = "A soft squeak as a white mouse peeks out from behind an object."
+    speak = list("Squeak!", "Skrit.", "Chrr.")
+    speak_emote = "squeaks"
+    emote_hear = list("squeaks quietly.", "sniffs the air.", "scratches at a corner.")
+    emote_see = list("grooms its fur.", "scampers quickly.", "pauses to listen.")
+
+/mob/living/simple_animal/pet/familiar/mouse_grey
+    name = "Mouse (grey)"
+    desc = "A grey mouse, quiet and nimble, skilled at slipping unnoticed through the smallest gaps."
+    animal_species = "Mouse"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "mouse_gray"
+    icon_living = "mouse_gray"
+    icon_dead = "mouse_gray_dead"
+    STASTR = 3
+    STAPER = 7
+    STAINT = 4
+    STACON = 5
+    STAEND = 5
+    STASPD = 8
+    STALUC = 6
+    summoning_emote = "A grey mouse slips quietly from a crack in the wall."
+    speak = list("Squeak!", "Skrit.", "Chrr.")
+    speak_emote = "squeaks"
+    emote_hear = list("squeaks.", "chews on something.", "scratches at the ground.")
+    emote_see = list("darts under a nearby object.", "sits up and looks around.", "twitches its tail.")
+
+/mob/living/simple_animal/pet/familiar/crow
+    name = "Crow"
+    desc = "A clever black crow, watchful and resourceful, known for its sharp eyes and love of shiny things."
+    animal_species = "Crow"
+    icon = 'icons/roguetown/mob/monster/crow.dmi'
+    icon_state = "crow_flying"
+    icon_living = "crow_flying"
+    icon_dead = "crow1"
+    STASTR = 4
+    STAPER = 8
+    STAINT = 5
+    STACON = 6
+    STAEND = 6
+    STASPD = 7
+    STALUC = 7
+    summoning_emote = "A black feather flutters down as a crow lands nearby with a caw."
+    speak = list("Caw!", "Kraa.", "Crrk.")
+    speak_emote = "caws"
+    emote_hear = list("caws.", "clicks its beak.", "ruffles its feathers.")
+    emote_see = list("tilts its head.", "hops in a circle.", "spreads its wings briefly.")
+
+/mob/living/simple_animal/pet/familiar/chicken_grey
+    name = "Chicken (grey)"
+    desc = "A plump grey chicken, content to peck at the ground and cluck softly among friends."
+    animal_species = "Chicken"
+    icon = 'icons/roguetown/mob/monster/chicken.dmi'
+    icon_state = "chicken"
+    icon_living = "chicken"
+    icon_dead = "chicken_dead"
+    STASTR = 4
+    STAPER = 5
+    STAINT = 4
+    STACON = 6
+    STAEND = 6
+    STASPD = 5
+    STALUC = 5
+    summoning_emote = "A soft clucking as a grey chicken waddles into view."
+    speak = list("Cluck.", "Bawk.", "Buk-buk.")
+    speak_emote = list("clucks", "fluffs its feathers")
+    emote_hear = list("clucks softly.", "bawks.", "scratches at the dirt.")
+    emote_see = list("fluffs up its feathers.", "pecks at the ground.", "shakes its tail feathers.")
+
+/mob/living/simple_animal/pet/familiar/chicken_brown
+    name = "Chicken (brown)"
+    desc = "A brown chicken, lively and sociable, always scratching for seeds and insects."
+    animal_species = "Chicken"
+    icon = 'icons/roguetown/mob/monster/chicken.dmi'
+    icon_state = "chicken_brown"
+    icon_living = "chicken_brown"
+    icon_dead = "chicken_brown_dead"
+    STASTR = 4
+    STAPER = 5
+    STAINT = 4
+    STACON = 6
+    STAEND = 6
+    STASPD = 5
+    STALUC = 5
+    summoning_emote = "A brown chicken bustles in, pecking at the floor."
+    speak = list("Cluck.", "Bawk.", "Buk-buk.")
+    speak_emote = "clucks"
+    emote_hear = list("clucks.", "bawks loudly.", "scratches at the floor.")
+    emote_see = list("struts proudly.", "flaps its wings.", "pecks at a seed.")
+
+/mob/living/simple_animal/pet/familiar/chicken_white
+    name = "Chicken (white)"
+    desc = "A white chicken, calm and steady, with a soft cluck and a gentle demeanor."
+    animal_species = "Chicken"
+    icon = 'icons/roguetown/mob/monster/chicken.dmi'
+    icon_state = "chicken_white"
+    icon_living = "chicken_white"
+    icon_dead = "chicken_white_dead"
+    STASTR = 4
+    STAPER = 5
+    STAINT = 4
+    STACON = 6
+    STAEND = 6
+    STASPD = 5
+    STALUC = 5
+    summoning_emote = "A white chicken quietly settles down."
+    speak = list("Cluck.", "Bawk.", "Buk-buk.")
+    speak_emote = "clucks"
+    emote_hear = list("clucks quietly.", "bawks.", "scratches at the ground.")
+    emote_see = list("walks in a slow circle.", "fluffs up.", "pecks gently at the floor.")
+
+/mob/living/simple_animal/pet/familiar/chicken_black
+    name = "Chicken (black)"
+    desc = "A black chicken, sleek and proud, strutting confidently wherever it goes."
+    animal_species = "Chicken"
+    icon = 'icons/roguetown/mob/monster/chicken.dmi'
+    icon_state = "chicken_black"
+    icon_living = "chicken_black"
+    icon_dead = "chicken_black_dead"
+    STASTR = 4
+    STAPER = 5
+    STAINT = 4
+    STACON = 6
+    STAEND = 6
+    STASPD = 5
+    STALUC = 5
+    summoning_emote = "A black chicken struts in, head held high."
+    speak = list("Cluck.", "Bawk.", "Buk-buk.")
+    speak_emote = "clucks"
+    emote_hear = list("clucks.", "bawks.", "ruffles its feathers.")
+    emote_see = list("spins in place.", "struts with its head high.", "flaps its wings.")
+
+/mob/living/simple_animal/pet/familiar/rat
+    name = "Rat"
+    desc = "A streetwise rat, clever and adaptable, able to thrive in almost any environment."
+    animal_species = "Rat"
+    icon = 'icons/roguetown/mob/monster/rat.dmi'
+    icon_state = "srat"
+    icon_living = "srat"
+    icon_dead = "srat1"
+    STASTR = 4
+    STAPER = 7
+    STAINT = 5
+    STACON = 5
+    STAEND = 6
+    STASPD = 7
+    STALUC = 6
+    summoning_emote = "A rat scurries out from a dark corner, nose twitching."
+    speak = list("Squeak!", "Chrr.", "Tik-tik.")
+    speak_emote = "squeaks"
+    emote_hear = list("squeaks.", "gnaws on something.", "scratches at the floor.")
+    emote_see = list("washes its face.", "runs in a quick circle.", "sniffs the air.")
+
+/mob/living/simple_animal/pet/familiar/bat
+    name = "Bat"
+    desc = "A tiny bat, nocturnal and swift, flitting silently through the night in search of insects."
+    animal_species = "Bat"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "bat"
+    icon_living = "bat"
+    icon_dead = "bat_dead"
+    STASTR = 3
+    STAPER = 8
+    STAINT = 4
+    STACON = 5
+    STAEND = 5
+    STASPD = 8
+    STALUC = 6
+    summoning_emote = "A flutter of wings as a bat swoops down from above."
+    speak = list("Screech!", "Eek!", "Chirp.")
+    speak_emote = "screeches"
+    emote_hear = list("screeches.", "chirps.", "flaps its wings.")
+    emote_see = list("hangs upside down.", "circles overhead.", "lands briefly before taking off again.")
+
+/mob/living/simple_animal/pet/familiar/frog_green
+    name = "Frog (Green)"
+    desc = "A green frog, cheerful and spry, happiest near water and quick to leap away from danger."
+    animal_species = "Frog"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "frog"
+    icon_living = "frog"
+    icon_dead = "frog_dead"
+    STASTR = 3
+    STAPER = 6
+    STAINT = 4
+    STACON = 5
+    STAEND = 6
+    STASPD = 7
+    STALUC = 5
+    summoning_emote = "A green frog hops into view with a wet plop."
+    speak = list("Ribbit.", "Croak.", "Brrrp.")
+    speak_emote = "croaks"
+    emote_hear = list("croaks.", "ribbits.", "chirps softly.")
+    emote_see = list("hops in place.", "blinks slowly.", "wriggles its toes.")
+
+/mob/living/simple_animal/pet/familiar/frog_purple
+    name = "Frog (Purple)"
+    desc = "A purple frog, unusual in color but otherwise a typical amphibian, fond of damp places."
+    animal_species = "Frog"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "rare_frog"
+    icon_living = "rare_frog"
+    icon_dead = "rare_frog_dead"
+    STASTR = 3
+    STAPER = 6
+    STAINT = 4
+    STACON = 5
+    STAEND = 6
+    STASPD = 7
+    STALUC = 5
+    summoning_emote = "A purple frog appears with a soft splash."
+    speak = list("Ribbit.", "Croak.", "Brrrp.")
+    speak_emote = "croaks"
+    emote_hear = list("croaks.", "ribbits.", "makes a soft brrrp.")
+    emote_see = list("leaps to a new spot.", "sits very still.", "wriggles its toes.")
+
+/mob/living/simple_animal/pet/familiar/parrot
+    name = "Parrot"
+    desc = "A bright parrot, talkative and intelligent, with a fondness for mimicking voices and sounds."
+    animal_species = "Parrot"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "parrot_fly"
+    icon_living = "parrot_fly"
+    icon_dead = "parrot_dead"
+    STASTR = 4
+    STAPER = 7
+    STAINT = 6
+    STACON = 5
+    STAEND = 6
+    STASPD = 7
+    STALUC = 7
+    summoning_emote = "A flash of color as a parrot swoops down, squawking."
+    speak = list("Squawk!", "Hello!", "Pretty bird!")
+    speak_emote = "squawks"
+    emote_hear = list("squawks.", "chatters.", "clicks its beak.")
+    emote_see = list("preens its feathers.", "bobs its head.", "flaps its wings.")
+
+/mob/living/simple_animal/pet/familiar/snake
+    name = "Snake"
+    desc = "A slender snake, calm and observant, moving gracefully and silently through its surroundings."
+    animal_species = "Snake"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "snake"
+    icon_living = "snake"
+    icon_dead = "snake_dead"
+    STASTR = 4
+    STAPER = 7
+    STAINT = 5
+    STACON = 6
+    STAEND = 6
+    STASPD = 7
+    STALUC = 6
+    summoning_emote = "A snake slithers into view, tongue flicking."
+    speak = list("Hiss.", "Sss.", "Tssst.")
+    speak_emote = "hisses"
+    emote_hear = list("hisses.", "flicks its tongue.", "slides quietly.")
+    emote_see = list("coils up.", "raises its head.", "slithers in a slow circle.")
+
+/mob/living/simple_animal/pet/familiar/mudcrab
+    name = "Mudcrab"
+    desc = "A mudcrab, sturdy and stubborn, scuttling sideways and always ready to defend itself."
+    animal_species = "Mudcrab"
+    icon = 'icons/mob/animal.dmi'
+    icon_state = "mudcrab"
+    icon_living = "mudcrab"
+    icon_dead = "mudcrab_dead"
+    STASTR = 5
+    STAPER = 5
+    STAINT = 4
+    STACON = 7
+    STAEND = 7
+    STASPD = 4
+    STALUC = 5
+    summoning_emote = "A mudcrab emerges from a patch of damp earth."
+    speak = list("Click.", "Clack.", "Snap.")
+    speak_emote = "clicks"
+    emote_hear = list("clicks.", "clacks.", "scrapes its claws together.")
+    emote_see = list("scuttles sideways.", "raises its claws.", "digs at the ground.")
+
+/mob/living/simple_animal/pet/familiar/cat_pink
+    name = "Cat (Pink)"
+    desc = "A hairless cat, playful and affectionate, with a knack for finding the warmest spot in any room."
+    animal_species = "Cat"
+    icon = 'icons/mob/pets.dmi'
+    icon_state = "cat"
+    icon_living = "cat"
+    icon_dead = "cat_dead"
+    STASTR = 4
+    STAPER = 7
+    STAINT = 5
+    STACON = 6
+    STAEND = 6
+    STASPD = 7
+    STALUC = 7
+    summoning_emote = "A pink, hairless cat stretches and yawns as it appears."
+    speak = list("Mrrp.", "Mew.", "Prrt.")
+    speak_emote = "meows"
+    emote_hear = list("purrs.", "meows softly.", "chirps quietly.")
+    emote_see = list("arches its back.", "rolls over and stretches.", "kneads a soft spot.")
+
+/mob/living/simple_animal/pet/familiar/cat_black
+    name = "Cat (Black)"
+    desc = "A black cat, sleek and mysterious, often seen watching quietly from the shadows."
+    animal_species = "Cat"
+    icon = 'icons/roguetown/topadd/takyon/Cat.dmi'
+    icon_state = "cat"
+    icon_living = "cat"
+    icon_dead = "cat_dead"
+    STASTR = 4
+    STAPER = 7
+    STAINT = 5
+    STACON = 6
+    STAEND = 6
+    STASPD = 7
+    STALUC = 7
+    summoning_emote = "A black cat pads silently into view, tail flicking."
+    speak = list("Mrrp.", "Mew.", "Prrt.")
+    speak_emote = "meows"
+    emote_hear = list("purrs.", "meows.", "makes a soft prrt.")
+    emote_see = list("flicks its tail.", "blinks slowly.", "circles in place.")
+
+/mob/living/simple_animal/pet/familiar/mechanical/brass_thrum
+    name = "Brass Thrum"
+    desc = "A mechanical spider-like creature of brass and whirring gears, its movements precise and accompanied by a faint, rhythmic hum."
+    animal_species = "Brass Thrum"
+    icon = 'icons/mob/drone.dmi'
+    icon_state = "drone_clock"
+    icon_living = "drone_clock"
+    icon_dead = "drone_clock_dead"
+    STASTR = 5
+    STAPER = 6
+    STAINT = 5
+    STACON = 7
+    STAEND = 7
+    STASPD = 5
+    STALUC = 5
+    mob_biotypes = MOB_ROBOTIC
+    summoning_emote = "A metallic clatter as a brass spider-like automaton unfolds itself."
+    speak = list("Whirr.", "Click.", "Thrum.")
+    speak_emote = "whirrs"
+    emote_hear = list("whirrs.", "clicks.", "hums softly.")
+    emote_see = list("rotates its body.", "taps its legs on the ground.", "spins in place.")
+
+/mob/living/simple_animal/pet/familiar/mechanical/gemspire_beetle
+    name = "Gemspire Beetle"
+    desc = "A four-legged, spider-like automaton adorned with crystalline spires, blending arcane energy with intricate clockwork."
+    animal_species = "Gemspire Beetle"
+    icon = 'icons/mob/drone.dmi'
+    icon_state = "drone_gem"
+    icon_living = "drone_gem"
+    icon_dead = "drone_gem_dead"
+    STASTR = 5
+    STAPER = 6
+    STAINT = 5
+    STACON = 7
+    STAEND = 7
+    STASPD = 5
+    STALUC = 5
+    mob_biotypes = MOB_ROBOTIC
+    summoning_emote = "A faint chime as a gem-encrusted mechanical beetle scuttles into view."
+    speak = list("Tick.", "Chime.", "Clack.")
+    speak_emote = "chimes"
+    emote_hear = list("chimes.", "clicks.", "makes a faint ticking sound.")
+    emote_see = list("glints in the light.", "shifts its crystalline spires.", "spins in a small circle.")
