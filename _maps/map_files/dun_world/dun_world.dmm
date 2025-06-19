@@ -390,7 +390,7 @@
 /area/rogue/indoors/town)
 "ahF" = (
 /obj/structure/rack/rogue/shelf/biggest,
-/obj/item/bedroll,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/gadgets,
 /turf/open/floor/rogue/wood,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "ahI" = (
@@ -8502,10 +8502,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "das" = (
 /obj/structure/table/wood/fancy/royalblack,
-/obj/item/reagent_containers/glass/bottle/rogue/poison{
-	pixel_x = 0;
-	pixel_y = 11
-	},
+/obj/effect/spawner/lootdrop/potion_poisons,
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
 	},
@@ -12847,10 +12844,7 @@
 /area/rogue/under/cave/dungeon/fort_dusk)
 "eDk" = (
 /obj/structure/table/wood/fancy/cyan,
-/obj/item/reagent_containers/glass/bottle/rogue/elfred{
-	pixel_x = 3;
-	pixel_y = 11
-	},
+/obj/effect/spawner/lootdrop/potion_stats,
 /turf/open/floor/rogue/tile/masonic,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "eDp" = (
@@ -16093,7 +16087,8 @@
 /area/rogue/indoors/cave)
 "fKk" = (
 /obj/structure/closet/crate/roguecloset/dark,
-/obj/item/reagent_containers/glass/bottle/waterskin/purifier,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/gadgets,
+/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
 /turf/open/floor/rogue/wood,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "fKG" = (
@@ -18064,7 +18059,7 @@
 "guK" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/reagent_containers/glass/cup/golden,
-/obj/item/sharpener,
+/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "guN" = (
@@ -21243,10 +21238,7 @@
 /area/rogue/indoors/town/tavern)
 "hBL" = (
 /obj/structure/table/wood/fancy/green,
-/obj/item/reagent_containers/glass/bottle/rogue/elfblue{
-	pixel_x = 0;
-	pixel_y = 12
-	},
+/obj/effect/spawner/lootdrop/potion_vitals,
 /turf/open/floor/rogue/tile/masonic,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "hBM" = (
@@ -23983,6 +23975,11 @@
 "iyF" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/closet/crate/chest/wicker,
+/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette,
+/obj/item/reagent_containers/food/snacks/rogue/meat/coppiette{
+	pixel_x = 5;
+	pixel_y = 4
+	},
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
 	},
@@ -31576,7 +31573,7 @@
 /area/rogue/under/cave/dungeon/dungeon1/gethsmane)
 "llG" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/glass/bottle/rogue/healthpot,
+/obj/effect/spawner/lootdrop/potion_vitals,
 /turf/open/floor/rogue/woodturned,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "llM" = (
@@ -32744,10 +32741,7 @@
 /area/rogue/indoors/town/church/chapel)
 "lGA" = (
 /obj/structure/table/wood/fancy/red,
-/obj/item/reagent_containers/glass/bottle/rogue/stampot{
-	pixel_x = -3;
-	pixel_y = 9
-	},
+/obj/effect/spawner/lootdrop/potion_vitals,
 /turf/open/floor/rogue/tile/masonic,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "lGH" = (
@@ -41140,10 +41134,6 @@
 /obj/effect/mapping_helpers/access/antag/underking,
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/shelter/mountains)
-"oGr" = (
-/obj/item/needle,
-/turf/open/floor/rogue/blocks/platform,
-/area/rogue/outdoors/woods)
 "oGu" = (
 /obj/structure/rack/rogue/shelf/big{
 	icon_state = "shelf_biggest";
@@ -42337,10 +42327,7 @@
 /area/rogue/outdoors/mountains/decap/stepbelow)
 "pdX" = (
 /obj/structure/table/wood/fancy/orange,
-/obj/item/reagent_containers/glass/bottle/rogue/manapot{
-	pixel_x = -2;
-	pixel_y = 9
-	},
+/obj/effect/spawner/lootdrop/potion_stats,
 /turf/open/floor/rogue/tile/masonic,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "pee" = (
@@ -52859,13 +52846,13 @@
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/reagent_containers/powder/spice{
-	pixel_x = 0;
-	pixel_y = 5
-	},
 /obj/item/reagent_containers/glass/cup/golden{
 	pixel_x = -9;
 	pixel_y = -6
+	},
+/obj/item/reagent_containers/powder/spice{
+	pixel_x = 0;
+	pixel_y = 5
 	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
@@ -53126,7 +53113,7 @@
 /area/rogue/under/cave/dungeon/dungeon1/gethsmane)
 "sYr" = (
 /obj/structure/closet/crate/roguecloset/crafted,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/gadgets,
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "sYw" = (
@@ -62224,10 +62211,6 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town/manor)
-"woe" = (
-/obj/item/flashlight/flare/torch/lantern/bronzelamptern,
-/turf/open/floor/rogue/blocks/platform,
-/area/rogue/outdoors/woods)
 "woi" = (
 /obj/structure/chair/wood/rogue/fancy,
 /turf/open/floor/carpet/royalblack,
@@ -63698,7 +63681,7 @@
 /obj/structure/table/wood{
 	icon_state = "tablewood3"
 	},
-/obj/item/reagent_containers/glass/bottle/rogue/healthpot,
+/obj/effect/spawner/lootdrop/potion_vitals,
 /turf/open/floor/rogue/ruinedwood,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "wWh" = (
@@ -66340,13 +66323,13 @@
 	pixel_x = 0;
 	pixel_y = 7
 	},
-/obj/item/reagent_containers/powder/sugar{
-	pixel_x = 0;
-	pixel_y = 12
-	},
 /obj/item/candle/yellow/lit{
 	pixel_x = 11;
 	pixel_y = -5
+	},
+/obj/item/reagent_containers/powder/sugar{
+	pixel_x = 0;
+	pixel_y = 12
 	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
@@ -279715,7 +279698,7 @@ eMx
 eMx
 eMx
 lkt
-oGr
+fQI
 fQI
 fQI
 qXm
@@ -280167,7 +280150,7 @@ eMx
 eMx
 eMx
 lkt
-woe
+fQI
 fQI
 fQI
 qXm
