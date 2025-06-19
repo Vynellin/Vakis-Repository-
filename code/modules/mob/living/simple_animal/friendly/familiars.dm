@@ -321,7 +321,7 @@
 
 /datum/status_effect/buff/familiar/soft_favor
 	id = "soft_favor"
-	effectedstats = list("luck" = 1)
+	effectedstats = list("fortune" = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/soft_favor
 
 /atom/movable/screen/alert/status_effect/buff/familiar/soft_favor
@@ -394,7 +394,7 @@
 
 /datum/status_effect/buff/familiar/starseam
 	id = "starseam"
-	effectedstats = list("perception" = 1, "luck" = 1)
+	effectedstats = list("perception" = 1, "fortune" = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/starseam
 
 /atom/movable/screen/alert/status_effect/buff/familiar/starseam
@@ -459,7 +459,7 @@
 
 /datum/status_effect/buff/familiar/subtle_slip
 	id = "subtle_slip"
-	effectedstats = list("speed" = 1, "luck" = 1)
+	effectedstats = list("speed" = 1, "fortune" = 1)
 	alert_type = /atom/movable/screen/alert/status_effect/buff/familiar/subtle_slip
 
 /atom/movable/screen/alert/status_effect/buff/familiar/subtle_slip
