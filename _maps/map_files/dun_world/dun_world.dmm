@@ -14243,6 +14243,13 @@
 "faM" = (
 /turf/closed/wall/mineral/rogue/decostone/long,
 /area/rogue/under/town/basement)
+"faV" = (
+/obj/structure/fluff/littlebanners{
+	pixel_y = -5
+	},
+/obj/item/storage/belt/rogue/pouch/coins/rich,
+/turf/open/floor/rogue/grassyel,
+/area/rogue/under/cave/dungeon/toybox_dungeon)
 "faY" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobble,
@@ -14329,9 +14336,9 @@
 /turf/open/water/ocean,
 /area/rogue/outdoors/beach)
 "fcl" = (
-/obj/machinery/light/rogue/torchholder/directional/east,
-/turf/open/transparent/openspace,
-/area/rogue/outdoors/woods)
+/obj/item/storage/belt/rogue/pouch/coins/rich,
+/turf/open/floor/rogue/grassyel,
+/area/rogue/under/cave/dungeon/toybox_dungeon)
 "fcn" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -56782,7 +56789,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
 "uqF" = (
-/obj/item/gun/ballistic/arquebus,
+/obj/item/riddleofsteel,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "uqH" = (
@@ -297325,7 +297332,7 @@ eMx
 eMx
 eMx
 eMx
-fcl
+eMx
 eMx
 eMx
 eMx
@@ -509334,7 +509341,7 @@ fZQ
 voP
 rdN
 voP
-fZQ
+faV
 rdN
 nGW
 oAX
@@ -509783,7 +509790,7 @@ jdl
 rdN
 voP
 fZQ
-rdN
+fcl
 rdN
 rdN
 fZQ
@@ -511599,7 +511606,7 @@ fZQ
 rdN
 ljy
 voP
-rdN
+fcl
 fZQ
 uFN
 nGW
@@ -512504,7 +512511,7 @@ rdN
 ljy
 voP
 rdN
-fZQ
+faV
 uFN
 whh
 cQk
@@ -514302,7 +514309,7 @@ nGW
 jdl
 rdN
 rdN
-fZQ
+faV
 voP
 voP
 rdN
@@ -514757,7 +514764,7 @@ rdN
 iTa
 rdN
 rdN
-rdN
+fcl
 iTa
 rdN
 tZU
