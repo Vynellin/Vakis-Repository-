@@ -24474,6 +24474,10 @@
 "iIe" = (
 /turf/open/floor/rogue/metal,
 /area/rogue/under/cave/dungeon/vulnafir)
+"iIm" = (
+/obj/item/storage/belt/rogue/pouch/coins/rich,
+/turf/open/floor/rogue/grassyel,
+/area/rogue/under/cave/dungeon/toybox_dungeon)
 "iIp" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -52914,13 +52918,13 @@
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/reagent_containers/powder/spice{
-	pixel_x = 0;
-	pixel_y = 5
-	},
 /obj/item/reagent_containers/glass/cup/golden{
 	pixel_x = -9;
 	pixel_y = -6
+	},
+/obj/item/reagent_containers/powder/spice{
+	pixel_x = 0;
+	pixel_y = 5
 	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
@@ -56134,6 +56138,13 @@
 	icon_state = "plating2"
 	},
 /area/rogue/under/cave/dungeon/toybox_dungeon)
+"udz" = (
+/obj/structure/fluff/littlebanners{
+	pixel_y = -5
+	},
+/obj/item/storage/belt/rogue/pouch/coins/rich,
+/turf/open/floor/rogue/grassyel,
+/area/rogue/under/cave/dungeon/toybox_dungeon)
 "udD" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 5
@@ -56887,7 +56898,7 @@
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
 "uqF" = (
-/obj/item/gun/ballistic/arquebus,
+/obj/item/riddleofsteel,
 /turf/open/floor/rogue/grassyel,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "uqH" = (
@@ -66399,13 +66410,13 @@
 	pixel_x = 0;
 	pixel_y = 7
 	},
-/obj/item/reagent_containers/powder/sugar{
-	pixel_x = 0;
-	pixel_y = 12
-	},
 /obj/item/candle/yellow/lit{
 	pixel_x = 11;
 	pixel_y = -5
+	},
+/obj/item/reagent_containers/powder/sugar{
+	pixel_x = 0;
+	pixel_y = 12
 	},
 /turf/open/floor/rogue/tile/masonic/single,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
@@ -509450,7 +509461,7 @@ fZQ
 voP
 rdN
 voP
-fZQ
+udz
 rdN
 nGW
 oAX
@@ -509899,7 +509910,7 @@ jdl
 rdN
 voP
 fZQ
-rdN
+iIm
 rdN
 rdN
 fZQ
@@ -511715,7 +511726,7 @@ fZQ
 rdN
 ljy
 voP
-rdN
+iIm
 fZQ
 uFN
 nGW
@@ -512620,7 +512631,7 @@ rdN
 ljy
 voP
 rdN
-fZQ
+udz
 uFN
 whh
 cQk
@@ -514418,7 +514429,7 @@ nGW
 jdl
 rdN
 rdN
-fZQ
+udz
 voP
 voP
 rdN
@@ -514873,7 +514884,7 @@ rdN
 iTa
 rdN
 rdN
-rdN
+iIm
 iTa
 rdN
 flX
