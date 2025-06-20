@@ -40,10 +40,10 @@
 
 /datum/status_effect/buff/shield/on_apply()
     . = ..()
-    RegisterSignal(owner, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(on_take_damage))
+    RegisterSignal(owner, COMSIG_MOB_APPLY_DAMGE, PROC_REF(on_take_damage))
 
 /datum/status_effect/buff/shield/on_remove()
-    UnregisterSignal(owner, COMSIG_MOB_APPLY_DAMAGE)
+    UnregisterSignal(owner, COMSIG_MOB_APPLY_DAMGE)
 
 /datum/status_effect/buff/shield/proc/on_take_damage(mob/living/source, amount, damagetype, def_zone)
     SIGNAL_HANDLER

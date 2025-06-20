@@ -212,15 +212,15 @@
 
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/post_buckle_mob(mob/living/M)
 	. = ..()
-	RegisterSignal(M, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(check_sprint_dismount))
+	RegisterSignal(M, COMSIG_MOB_APPLY_DAMGE, PROC_REF(check_sprint_dismount))
 	if(!has_buckled_mobs())
-		RegisterSignal(src, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(check_sprint_dismount))
+		RegisterSignal(src, COMSIG_MOB_APPLY_DAMGE, PROC_REF(check_sprint_dismount))
 	
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/post_unbuckle_mob(mob/living/M)
 	. = ..()
-	UnregisterSignal(M, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(check_sprint_dismount))
+	UnregisterSignal(M, COMSIG_MOB_APPLY_DAMGE, PROC_REF(check_sprint_dismount))
 	if(!has_buckled_mobs())
-		UnregisterSignal(src, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(check_sprint_dismount))
+		UnregisterSignal(src, COMSIG_MOB_APPLY_DAMGE, PROC_REF(check_sprint_dismount))
 
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/taunted(mob/user)
 	emote("aggro")
