@@ -2068,16 +2068,6 @@
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/blocks/platform,
 /area/rogue/outdoors/mountains/decap)
-"aMt" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/machinery/light/rogue/torchholder/directional/north,
-/obj/item/natural/stone,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "aMJ" = (
 /turf/closed/wall/mineral/rogue/pipe{
 	icon_state = "iron_corner";
@@ -3717,22 +3707,6 @@
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/rogue/churchbrick,
 /area/rogue/indoors/town/church/chapel)
-"brw" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/table/wood{
-	icon_state = "tablewood1";
-	dir = 1
-	},
-/obj/item/candle/skull/lit{
-	pixel_x = 0;
-	pixel_y = 10
-	},
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "brA" = (
 /obj/structure/table/wood,
 /obj/item/clothing/cloak/templar/nunos,
@@ -7511,17 +7485,6 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/underdark)
-"cKM" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/closet/crate/chest/lootbox,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/gadgets,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "cKU" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/wallfire/candle/directional/north{
@@ -8831,17 +8794,6 @@
 	},
 /turf/open/lava,
 /area/rogue/outdoors/mountains/decap/stepbelow)
-"djO" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/rack/rogue,
-/obj/item/flint,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "dka" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/dirt/road,
@@ -13516,11 +13468,6 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/under/town/basement/keep)
-"eRU" = (
-/turf/open/floor/rogue/rooftop/green/corner1{
-	dir = 8
-	},
-/area/rogue/outdoors/beach/forest)
 "eSe" = (
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/cobble,
@@ -19163,16 +19110,6 @@
 "gUO" = (
 /turf/open/floor/carpet/red,
 /area/rogue/indoors/town/shop)
-"gUP" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/item/rogueweapon/pick,
-/obj/structure/rack/rogue,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "gUQ" = (
 /obj/effect/decal/mossy{
 	dir = 8
@@ -28595,17 +28532,6 @@
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/town/manor)
-"kpV" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/closet/crate/chest/neu,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "kqa" = (
 /obj/item/ammo_casing/caseless/rogue/arrow/stone,
 /turf/open/floor/rogue/grass,
@@ -32948,10 +32874,6 @@
 /obj/item/natural/bone,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
-"lTy" = (
-/obj/item/natural/stone,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "lTP" = (
 /turf/closed/wall/mineral/rogue/decowood,
 /area/rogue/outdoors/woods)
@@ -35322,9 +35244,6 @@
 "mPA" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush,
 /turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
-"mPC" = (
-/turf/open/floor/rogue/rooftop/green/corner1,
 /area/rogue/outdoors/beach/forest)
 "mPH" = (
 /obj/structure/chair/wood/rogue/chair3{
@@ -54168,9 +54087,6 @@
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
-"tHI" = (
-/turf/open/floor/rogue/rooftop/green,
-/area/rogue/outdoors/beach/forest)
 "tHO" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/misc,
@@ -55879,18 +55795,6 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/exposed/town/keep)
-"ulP" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/table/wood{
-	icon_state = "longtable"
-	},
-/obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "ulV" = (
 /obj/structure/table/optable,
 /turf/open/floor/rogue/blocks{
@@ -57969,21 +57873,6 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rogue/indoors/cave)
-"uYt" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/item/natural/stone,
-/obj/item/natural/stone,
-/obj/item/storage/roguebag{
-	pixel_x = -7;
-	pixel_y = 5
-	},
-/obj/item/rogueore/coal,
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "uYv" = (
 /obj/structure/fermenting_barrel/water,
 /obj/structure/fluff/wallclock/directional/north{
@@ -59396,22 +59285,6 @@
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/wood,
 /area/rogue/outdoors/town/roofs/keep)
-"vAR" = (
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
-/obj/structure/table/wood{
-	icon_state = "longtable";
-	dir = 1
-	},
-/obj/item/reagent_containers/glass/bottle{
-	pixel_x = 9;
-	pixel_y = 14
-	},
-/turf/open/floor/rogue/grass,
-/area/rogue/outdoors/beach/forest)
 "vAV" = (
 /obj/structure/closet/crate/chest/crate,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
@@ -366618,7 +366491,7 @@ qPv
 lpq
 lpq
 lpq
-brw
+lpq
 lpq
 lpq
 lpq
@@ -367074,7 +366947,7 @@ lpq
 lpq
 lpq
 lpq
-kpV
+lpq
 lpq
 lpq
 lpq
@@ -367523,7 +367396,7 @@ lpq
 lpq
 lpq
 lpq
-mPA
+lpq
 lpq
 lpq
 lpq
@@ -367973,12 +367846,12 @@ qPv
 qPv
 dCq
 lpq
-ulP
 lpq
 lpq
 lpq
-uYt
-gUP
+lpq
+lpq
+lpq
 lpq
 lpq
 lpq
@@ -368425,11 +368298,11 @@ dCq
 dCq
 lpq
 lpq
-vAR
 lpq
 lpq
 lpq
-aMt
+lpq
+lpq
 lpq
 lpq
 lpq
@@ -368884,7 +368757,7 @@ lpq
 lpq
 lpq
 lpq
-lTy
+lpq
 lpq
 lpq
 lpq
@@ -369330,8 +369203,8 @@ dCq
 lpq
 lpq
 lpq
-djO
-cKM
+lpq
+lpq
 lpq
 lpq
 lpq
@@ -369786,7 +369659,7 @@ lpq
 lpq
 lpq
 lpq
-lTy
+lpq
 lpq
 lpq
 lpq
@@ -485041,14 +484914,14 @@ vMR
 vMR
 vMR
 vMR
-eRU
-tHI
-tHI
-tHI
-tHI
-tHI
-tHI
-mPC
+vMR
+vMR
+vMR
+vMR
+vMR
+vMR
+vMR
+vMR
 vMR
 vMR
 vMR
