@@ -8187,7 +8187,10 @@
 	icon_state = "tablewood1";
 	dir = 1
 	},
-/obj/item/roguecoin/copper/pile,
+/obj/item/candle/skull/lit{
+	pixel_x = 0;
+	pixel_y = 10
+	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/shelter)
 "cVt" = (
@@ -8925,9 +8928,8 @@
 /area/rogue/under/cave/dungeon/toybox_dungeon)
 "djH" = (
 /obj/structure/closet/crate/chest/neu,
-/obj/item/ingot/iron,
-/obj/item/ingot/iron,
-/obj/item/roguegem/diamond,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/rogue/indoors/shelter)
 "djM" = (
@@ -11059,7 +11061,8 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/rtfield)
 "dYl" = (
-/obj/machinery/anvil/crafted,
+/obj/item/rogueweapon/pick,
+/obj/structure/rack/rogue,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/shelter)
 "dYp" = (
@@ -20227,7 +20230,7 @@
 /area/rogue/indoors/shelter)
 "his" = (
 /obj/structure/well,
-/turf/open/floor/rogue/dirt/road,
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/beach/forest)
 "hiH" = (
 /obj/structure/fluff/railing/border{
@@ -21747,6 +21750,7 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/shelter)
 "hLr" = (
@@ -31385,8 +31389,10 @@
 "lhu" = (
 /obj/item/natural/stone,
 /obj/item/natural/stone,
-/obj/item/natural/stone,
-/obj/item/natural/stone,
+/obj/item/storage/roguebag{
+	pixel_x = -7;
+	pixel_y = 5
+	},
 /obj/item/rogueore/coal,
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/indoors/shelter)
@@ -31886,8 +31892,10 @@
 /turf/open/floor/carpet/purple,
 /area/rogue/indoors/town)
 "lpw" = (
-/obj/machinery/light/rogue/smelter,
-/turf/open/floor/rogue/cobblerock,
+/obj/structure/closet/crate/chest/lootbox,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/gadgets,
+/turf/open/floor/rogue/wood,
 /area/rogue/indoors/shelter)
 "lpD" = (
 /obj/structure/roguemachine/scomm/directional/west,
@@ -39847,7 +39855,10 @@
 	icon_state = "longtable";
 	dir = 1
 	},
-/obj/item/rogueweapon/hammer,
+/obj/item/reagent_containers/glass/bottle{
+	pixel_x = 9;
+	pixel_y = 14
+	},
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/shelter)
 "ohz" = (
@@ -45003,7 +45014,8 @@
 /area/rogue/under/cave/dungeon/vulnafir)
 "pZt" = (
 /obj/machinery/light/rogue/torchholder/directional/north,
-/turf/open/floor/rogue/cobblerock,
+/obj/item/natural/stone,
+/turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter)
 "pZv" = (
 /obj/structure/flora/roguetree/burnt,
@@ -56727,6 +56739,10 @@
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town/roofs)
+"unb" = (
+/obj/item/natural/stone,
+/turf/open/floor/rogue/dirt,
+/area/rogue/indoors/shelter)
 "unc" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/red/end{
 	dir = 1
@@ -65855,7 +65871,7 @@
 "xHW" = (
 /obj/structure/rack/rogue,
 /obj/item/flint,
-/obj/item/rogueweapon/tongs,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
 /turf/open/floor/rogue/wood,
 /area/rogue/indoors/shelter)
 "xIa" = (
@@ -368537,7 +368553,7 @@ lpq
 xcE
 lwE
 rgK
-iSP
+vMm
 uGX
 xcE
 xcE
@@ -369446,7 +369462,7 @@ xcE
 pZt
 eFv
 eFv
-sJx
+dCq
 lpq
 slK
 lpq
@@ -369897,8 +369913,8 @@ iSP
 cuY
 eFv
 eFv
-lpw
-sJx
+eFv
+fFR
 lpq
 lpq
 dCq
@@ -370345,11 +370361,11 @@ lpq
 xcE
 gxo
 xHW
-iNA
+lpw
 xcE
 eFv
 eFv
-lpw
+eFv
 sJx
 lpq
 lpq
@@ -370800,7 +370816,7 @@ xcE
 xcE
 uGX
 eFv
-eFv
+unb
 uGX
 sJx
 lpq
@@ -481987,14 +482003,14 @@ vMR
 vMR
 vMR
 vMR
-iSa
-opG
-opG
-opG
-opG
-opG
-opG
-ecv
+vMR
+vMR
+vMR
+vMR
+vMR
+vMR
+vMR
+vMR
 vMR
 vMR
 vMR
@@ -482439,14 +482455,14 @@ vMR
 vMR
 vMR
 vMR
-vLU
 iSa
 opG
 opG
 opG
 opG
+opG
+opG
 ecv
-ufx
 vMR
 vMR
 vMR
@@ -482892,12 +482908,12 @@ vMR
 vMR
 vMR
 vLU
-vLU
-moo
-moo
-moo
-moo
-ufx
+iSa
+opG
+opG
+opG
+opG
+ecv
 ufx
 vMR
 vMR
@@ -485152,12 +485168,12 @@ vMR
 vMR
 vMR
 vLU
-eRU
-tHI
-tHI
-tHI
-tHI
-mPC
+vLU
+moo
+moo
+moo
+moo
+ufx
 ufx
 vMR
 vMR
@@ -485603,14 +485619,14 @@ vMR
 vMR
 vMR
 vMR
+vLU
 eRU
 tHI
 tHI
 tHI
 tHI
-tHI
-tHI
 mPC
+ufx
 vMR
 vMR
 vMR
@@ -486055,14 +486071,14 @@ vMR
 vMR
 vMR
 vMR
-vMR
-vMR
-vMR
-vMR
-vMR
-vMR
-vMR
-vMR
+eRU
+tHI
+tHI
+tHI
+tHI
+tHI
+tHI
+mPC
 vMR
 vMR
 vMR
