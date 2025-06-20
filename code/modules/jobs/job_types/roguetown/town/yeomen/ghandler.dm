@@ -10,7 +10,7 @@
 	allowed_races = RACES_ALL_KINDS
 
 	tutorial = "You are the proud handler for the local branch of the Rasurian Adventurer's Guild. You've taken upon yourself the task of wrangling the constant flow of adventurers and treasure-seekers into the March. It is a job of constant diplomacy and occasional action, keeping the local lords happy while arranging quests and affairs for the adventurers."
-	outfit = /datum/outfit/job/roguetown/soilson
+	outfit = /datum/outfit/job/roguetown/ghandler
 	display_order = JDO_GHANDLER
 	give_bank_account = 43
 	min_pq = 1
