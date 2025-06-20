@@ -445,6 +445,11 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 								return
 
 	before_cast(targets, user = user)
+	if(user && HAS_TRAIT(user, TRAIT_WILDMAGIC))
+		if(prob(10))
+			trigger_wild_magic(targets, user, src)
+			revert_cast()
+			return FALSE
 	if(user && user.ckey)
 		user.log_message(span_danger("cast the spell [name]."), LOG_ATTACK)
 	if(recharge)
