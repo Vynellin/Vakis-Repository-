@@ -89,7 +89,7 @@
 		// Replace the accessory type with antlers
 		current_horns.accessory_type = /datum/sprite_accessory/horns/antlers
 		current_horns.accessory_colors = "#8B4513"
-		target.update_body_parts()
+		target.update_body()
 	else
 		// Create new antler horns
 		current_horns = new /obj/item/organ/horns()
@@ -97,7 +97,7 @@
 		current_horns.accessory_colors = "#8B4513"
 		target.internal_organs += current_horns
 		target.equip_to_slot(current_horns, SLOT_HEAD)
-		target.update_body_parts()
+		target.update_body()
 	
 	target.visible_message(span_notice("[target] grows majestic antlers!"))
 
@@ -119,7 +119,7 @@
 			target.visible_message(span_notice("[target]'s antlers vanish, replaced by their original horns!"))
 		else
 			target.visible_message(span_notice("[target]'s antlers vanish!"))
-		target.update_body_parts()
+		target.update_body()
 
 /proc/temporary_faerie_eyes(mob/living/carbon/human/target)
 	if(!istype(target)) return

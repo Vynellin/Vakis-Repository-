@@ -16,10 +16,10 @@
             if(spell)
                 var/obj/effect/proc_holder/spell/spell_instance = new spell
                 spell_instance.perform(list(user), FALSE, user)
-                if(target == user)
+                if(targets == user)
                     return
                 else
-                    user.visible_message(span_notice("The spell twists in the air, caught in unseen verdant whims, and turns its power upon [user]!"))"
+                    user.visible_message(span_notice("The spell twists in the air, caught in unseen verdant whims, and turns its power upon [user]!"))
         if(2)
             for(var/mob/living/affected_mob in (surged_targets))
                 if(affected_mob.anti_magic_check(TRUE, TRUE))

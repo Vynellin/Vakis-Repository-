@@ -4,7 +4,7 @@
 	icon = 'code/modules/roguetown/wild_magic/icon/illusions.dmi'
 	icon_state = ""
 	plane = EMISSIVE_PLANE
-	layer = OBJ_LAYER
+	layer = MUTATIONS_LAYER
 	anchored = TRUE
 	density = FALSE
 	opacity = FALSE
