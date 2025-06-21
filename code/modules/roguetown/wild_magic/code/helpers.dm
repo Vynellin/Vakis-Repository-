@@ -4,13 +4,24 @@
 
 /obj/effect/proc_holder/spell/invoked/wild_magic_testing/cast(target, mob/user)
 	var/input = input(user, "Enter a wild magic effect number to test (1-50):", "Wild Magic Test", 1) as num
+
 	if(isnum(input) && input >= 2 && input <= 49)
 		trigger_wild_magic(list(target), user, src, input)
+
 	else if(isnum(input) && (input == 50 || input == 1))
-		trigger_wild_magic(list(target), user, /obj/effect/proc_holder/spell/invoked/projectile/fireball, input) //Using another spell to avoid infinite loop when testing.
+		var/choice = input("Choose a spell to use:", "Wild Magic Projectile") as null|anything in list(
+			/obj/effect/proc_holder/spell/invoked/projectile/fireball,
+			/obj/effect/proc_holder/spell/invoked/projectile/repel,
+			/obj/effect/proc_holder/spell/invoked/projectile/fetch,
+			/obj/effect/proc_holder/spell/invoked/projectile/guided_bolt
+		)
+
+		if(choice)
+			trigger_wild_magic(list(target), user, choice, input)
 	else
 		to_chat(user, span_warning("Invalid effect number. Please enter a number between 1 and 50."))
 
+///Apply a temporary illusion on the target.
 /proc/apply_illusion(atom/movable/target, type)
     var/obj/overlay = new type
     target.vis_contents += overlay
@@ -21,6 +32,7 @@
         target.update_icon()
         qdel(overlay)
 
+///Change the user's hair to neon green for 15 seconds.
 /proc/temporarily_dye_hair_green(var/mob/living/carbon/human/target)
 	var/obj/item/bodypart/head/head = target.get_bodypart(BODY_ZONE_HEAD)
 	if(!head || !head.bodypart_features) return
@@ -72,6 +84,7 @@
 		target.update_hair()
 		target.visible_message(span_notice("[target]'s hair returns to its original color!"))
 
+///Change the user horn's into antler or give them if no horns, reverts after 15 sec.
 /proc/temporary_antlers(mob/living/carbon/human/target)
     var/obj/item/organ/horns/current_horns = null
     var/old_accessory_type = null
@@ -122,7 +135,7 @@
             target.visible_message(span_notice("[target]'s antlers vanish!"))
         target.update_body()
 
-
+///Change the target's eye for a "faerie blue" for 15 seconds.
 /proc/temporary_faerie_eyes(mob/living/carbon/human/target)
 	if(!istype(target)) return
 
@@ -153,6 +166,7 @@
 		target.update_body_parts()
 		target.visible_message(span_notice("[target]'s eyes return to their natural color."))
 
+///Change the target's skincolor for something garish for 15 seconds.
 /proc/temporary_skin_color(mob/living/carbon/human/target)
 	if(!istype(target)) return
 
@@ -179,19 +193,49 @@
 		target.skin_tone = old_skin_color
 		target.update_body()
 
+///Fire a received magic projectile that turns around to hit the caster after a delay.
 /proc/reflect_projectile_to_user(obj/effect/proc_holder/spell/invoked/projectile/spell_instance, mob/living/user, list/targets)
-    var/turf/start = get_step(user, user.dir)
-    var/obj/projectile/arced_proj = new spell_instance.projectile_type(start)
-    arced_proj.firer = user 
+	var/turf/start = get_step(user, user.dir)
+	var/obj/projectile/arced_proj = new spell_instance.projectile_type(start)
+	arced_proj.firer = user
 
-    var/atom/single_target = targets[1]
+	var/atom/single_target = targets[1]
+	arced_proj.preparePixelProjectile(single_target, user)
+	var/old_speed = arced_proj.speed
+	arced_proj.fire()
 
-    arced_proj.preparePixelProjectile(single_target, user)
-    arced_proj.fire(user, single_target)
+	// Start with a delay before the slow down
+	spawn(3)
+		if (arced_proj && !QDELETED(arced_proj))
+			arced_proj.speed = 2  // Dramatically slow down for the "stall" effect
 
-    var/obj/projectile/P = arced_proj
+			// Now delay before turning around
+			spawn(2)
+				if (arced_proj && !QDELETED(arced_proj))
+					var/mob/living/dummy_firer = get_dummy_firer(single_target.loc, user)
+					arced_proj.firer = dummy_firer
+					arced_proj.original = get_turf(user)
+					var/turf/end = get_turf(user)
+					var/angle = Get_Angle(get_turf(arced_proj), end)
+					arced_proj.setAngle(angle)
 
-    spawn(10)
-        var/turf/end = get_turf(user)
-        var/angle = Get_Angle(get_turf(P), end)
-        P.setAngle(angle)
+					// Clean up dummy later
+					spawn(100)
+						if(dummy_firer && !QDELETED(dummy_firer))
+							qdel(dummy_firer)
+
+			// Restore speed after turn
+			spawn(2)
+				if (arced_proj && !QDELETED(arced_proj))
+					arced_proj.speed = old_speed
+
+///Proc used to obtain a dummy "firer" variable for proc/reflect_projectile_to_user to avoid ground targetting breaking the proc.
+/proc/get_dummy_firer(atom/target)
+	var/mob/living/dummy = new /mob/living(target.loc)
+	dummy.name = "Fey Reflection"
+	dummy.invisibility = 101
+	dummy.alpha = 0
+	dummy.loc = target.loc
+	dummy.layer = initial(dummy.layer) - 1 // Render behind everything
+	dummy.anchored = TRUE
+	return dummy

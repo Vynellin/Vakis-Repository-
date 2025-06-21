@@ -16,7 +16,7 @@
             if(spell_typepath)
                 var/obj/effect/proc_holder/spell/spell_instance = new spell_typepath
                 if(istype(spell_instance, /obj/effect/proc_holder/spell/invoked/projectile))
-                    reflect_projectile_to_user(spell_instance, user, targets)
+                    reflect_projectile_to_user(spell_instance, user, targets[1])
                 else
                     spell_instance.perform(list(user), FALSE, user)
                 if(targets == user)
@@ -379,10 +379,10 @@
             user.log_message(span_danger("Wild magic surge, twinned spell"), LOG_ATTACK)
             if (spell_typepath)
                 var/obj/effect/proc_holder/spell/spell_instance = new spell_typepath
-                spell_instance.perform(list(targets), FALSE, user)
+                spell_instance.perform(targets[1], FALSE, user)
                 sleep(0.5 SECONDS)
                 var/obj/effect/proc_holder/spell/spell_instance_two = new spell_typepath
-                spell_instance_two.perform(list(targets), FALSE, user)
+                spell_instance_two.perform(targets[1], FALSE, user)
                 user.visible_message(span_notice("A pulse of wild energy twists the weave, [user.name]'s spell erupts twice in quick succession!"))
 
 
