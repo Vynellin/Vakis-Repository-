@@ -40,16 +40,25 @@
 
 /datum/status_effect/buff/shield/on_apply()
     . = ..()
-    RegisterSignal(owner, COMSIG_MOB_APPLY_DAMGE, PROC_REF(on_take_damage))
+    RegisterSignal(owner, COMSIG_MOB_APPLY_DAMAGE, PROC_REF(on_take_damage))
 
 /datum/status_effect/buff/shield/on_remove()
-    UnregisterSignal(owner, COMSIG_MOB_APPLY_DAMGE)
+    UnregisterSignal(owner, COMSIG_MOB_APPLY_DAMAGE)
 
-/datum/status_effect/buff/shield/proc/on_take_damage(mob/living/source, amount, damagetype, def_zone)
+/datum/status_effect/buff/shield/proc/on_take_damage(datum/source, datum/signal_damage/signal_data)
     SIGNAL_HANDLER
-    owner.visible_message(span_notice("[owner] is protected by a magical shield!"), span_notice("You feel a magical shield absorb the attack!"))
+
+    // Notify players
+    owner.visible_message(
+        span_notice("[owner] is protected by a magical shield!"),
+        span_notice("You feel a magical shield absorb the attack!")
+    )
+
+    // Remove the shield
     owner.remove_status_effect(src)
-    return FALSE
+
+    // Cancel the damage
+    signal_data.cancel = TRUE
 
 /mob/living/carbon/proc/remove_night_vision(mob/living/target, mob/living/user)
 	target.visible_message(span_notice("[target]'s eyes lose their night vision glow."))

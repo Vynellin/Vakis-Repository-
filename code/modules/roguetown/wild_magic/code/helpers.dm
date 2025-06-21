@@ -7,7 +7,7 @@
 	if(isnum(input) && input >= 2 && input <= 49)
 		trigger_wild_magic(list(target), user, src, input)
 	else if(isnum(input) && (input == 50 || input == 1))
-		to_chat(user, span_notice("Can't test those with this spell, It would loop infinitely.")) //Not actually procing it or it would get stuck in a loop.
+		trigger_wild_magic(list(target), user, /obj/effect/proc_holder/spell/invoked/projectile/fireball, input) //Using another spell to avoid infinite loop when testing.
 	else
 		to_chat(user, span_warning("Invalid effect number. Please enter a number between 1 and 50."))
 
@@ -73,53 +73,55 @@
 		target.visible_message(span_notice("[target]'s hair returns to its original color!"))
 
 /proc/temporary_antlers(mob/living/carbon/human/target)
-	var/obj/item/organ/horns/current_horns = null
-	var/old_accessory_type = null
-	var/old_accessory_colors = null
+    var/obj/item/organ/horns/current_horns = null
+    var/old_accessory_type = null
+    var/old_accessory_colors = null
 
-	// Check for existing horns
-	for (var/obj/item/organ/horn_organ in target.internal_organs)
-		if (istype(horn_organ, /obj/item/organ/horns))
-			current_horns = horn_organ
-			old_accessory_type = horn_organ.accessory_type
-			old_accessory_colors = horn_organ.accessory_colors
-			break
+    // Check for existing horns
+    for (var/obj/item/organ/horn_organ in target.internal_organs)
+        if (istype(horn_organ, /obj/item/organ/horns))
+            current_horns = horn_organ
+            old_accessory_type = horn_organ.accessory_type
+            old_accessory_colors = horn_organ.accessory_colors
+            break
 
-	if (current_horns)
-		// Replace the accessory type with antlers
-		current_horns.accessory_type = /datum/sprite_accessory/horns/antlers
-		current_horns.accessory_colors = "#8B4513"
-		target.update_body()
-	else
-		// Create new antler horns
-		current_horns = new /obj/item/organ/horns()
-		current_horns.accessory_type = /datum/sprite_accessory/horns/antlers
-		current_horns.accessory_colors = "#8B4513"
-		target.internal_organs += current_horns
-		target.equip_to_slot(current_horns, SLOT_HEAD)
-		target.update_body()
-	
-	target.visible_message(span_notice("[target] grows majestic antlers!"))
+    // If current horns exist, remove them completely before adding antlers
+    if (current_horns)
+        if (current_horns in target.internal_organs)
+            target.internal_organs -= current_horns
+        qdel(current_horns)
+        current_horns = null
 
-	// Wait 15 seconds
-	spawn(150) // 1 decisecond = 0.1 second, so 150 = 15s
-		if (!target || !current_horns) return
+    // Now create new antler horns fresh
+    current_horns = new /obj/item/organ/horns()
+    current_horns.accessory_type = /datum/sprite_accessory/horns/antlers
+    current_horns.accessory_colors = "#8B4513"
+    target.internal_organs += current_horns
+    target.equip_to_slot(current_horns, SLOT_HEAD)
+    target.update_body()
 
-		// Remove antlers
-		if (current_horns in target.internal_organs)
-			target.internal_organs -= current_horns
-			qdel(current_horns)
+    target.visible_message(span_notice("[target] grows majestic antlers!"))
 
-		// Reapply old horns if they existed
-		if (old_accessory_type)
-			var/obj/item/organ/horns/restored = new /obj/item/organ/horns()
-			restored.accessory_type = old_accessory_type
-			restored.accessory_colors = old_accessory_colors
-			target.internal_organs += restored
-			target.visible_message(span_notice("[target]'s antlers vanish, replaced by their original horns!"))
-		else
-			target.visible_message(span_notice("[target]'s antlers vanish!"))
-		target.update_body()
+    // Wait 15 seconds
+    spawn(150) // 1 decisecond = 0.1 second, so 150 = 15s
+        if (!target || !current_horns) return
+
+        // Remove antlers
+        if (current_horns in target.internal_organs)
+            target.internal_organs -= current_horns
+            qdel(current_horns)
+
+        // Reapply old horns if they existed
+        if (old_accessory_type)
+            var/obj/item/organ/horns/restored = new /obj/item/organ/horns()
+            restored.accessory_type = old_accessory_type
+            restored.accessory_colors = old_accessory_colors
+            target.internal_organs += restored
+            target.visible_message(span_notice("[target]'s antlers vanish, replaced by their original horns!"))
+        else
+            target.visible_message(span_notice("[target]'s antlers vanish!"))
+        target.update_body()
+
 
 /proc/temporary_faerie_eyes(mob/living/carbon/human/target)
 	if(!istype(target)) return
@@ -176,3 +178,20 @@
 
 		target.skin_tone = old_skin_color
 		target.update_body()
+
+/proc/reflect_projectile_to_user(obj/effect/proc_holder/spell/invoked/projectile/spell_instance, mob/living/user, list/targets)
+    var/turf/start = get_step(user, user.dir)
+    var/obj/projectile/arced_proj = new spell_instance.projectile_type(start)
+    arced_proj.firer = user 
+
+    var/atom/single_target = targets[1]
+
+    arced_proj.preparePixelProjectile(single_target, user)
+    arced_proj.fire(user, single_target)
+
+    var/obj/projectile/P = arced_proj
+
+    spawn(10)
+        var/turf/end = get_turf(user)
+        var/angle = Get_Angle(get_turf(P), end)
+        P.setAngle(angle)

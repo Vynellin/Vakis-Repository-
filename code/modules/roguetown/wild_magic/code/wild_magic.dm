@@ -1,6 +1,6 @@
 //file name is voluntary, for it to be loaded before spell and still be in order in the dme.
 
-/proc/trigger_wild_magic(list/targets, mob/living/carbon/user, spell, effect_override = null)
+/proc/trigger_wild_magic(list/targets, mob/living/carbon/user, spell_typepath, effect_override = null)
     var/effect = effect_override ? effect_override : rand(1, 50)
     var/list/surged_targets = list()
     for(var/target in targets)
@@ -13,13 +13,17 @@
     switch(effect)
         if(1)
             user.log_message(span_danger("Wild magic surge, user is the target."), LOG_ATTACK)
-            if(spell)
-                var/obj/effect/proc_holder/spell/spell_instance = new spell
-                spell_instance.perform(list(user), FALSE, user)
+            if(spell_typepath)
+                var/obj/effect/proc_holder/spell/spell_instance = new spell_typepath
+                if(istype(spell_instance, /obj/effect/proc_holder/spell/invoked/projectile))
+                    reflect_projectile_to_user(spell_instance, user, targets)
+                else
+                    spell_instance.perform(list(user), FALSE, user)
                 if(targets == user)
                     return
                 else
                     user.visible_message(span_notice("The spell twists in the air, caught in unseen verdant whims, and turns its power upon [user]!"))
+
         if(2)
             for(var/mob/living/affected_mob in (surged_targets))
                 if(affected_mob.anti_magic_check(TRUE, TRUE))
@@ -371,12 +375,16 @@
                 addtimer(CALLBACK(affected_mob, "remove_filter", filter_id), 15 SECONDS)
                 addtimer(CALLBACK(affected_mob, "update_icon"), 15 SECONDS)
             user.visible_message(span_notice("A radiant shimmer fills the air, each figure haloed in iridescent magic."))
-        if(50)
-            var/obj/effect/proc_holder/spell/doubled = new spell
-            doubled.perform(targets, FALSE, user)
-            sleep(0.5 SECONDS)
-            doubled.perform(targets, FALSE, user)
-            user.visible_message(span_notice("A pulse of wild energy twists the weave, [user.name]'s spell erupts twice in quick succession!"))
+        if (50)
+            user.log_message(span_danger("Wild magic surge, twinned spell"), LOG_ATTACK)
+            if (spell_typepath)
+                var/obj/effect/proc_holder/spell/spell_instance = new spell_typepath
+                spell_instance.perform(list(targets), FALSE, user)
+                sleep(0.5 SECONDS)
+                var/obj/effect/proc_holder/spell/spell_instance_two = new spell_typepath
+                spell_instance_two.perform(list(targets), FALSE, user)
+                user.visible_message(span_notice("A pulse of wild energy twists the weave, [user.name]'s spell erupts twice in quick succession!"))
+
 
 /datum/charflaw/wildmagic
 	name = "Wild Magic"

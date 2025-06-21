@@ -3,13 +3,11 @@
 	desc = "An illusionary effect that can be used to deceive or distract."
 	icon = 'code/modules/roguetown/wild_magic/icon/illusions.dmi'
 	icon_state = ""
-	plane = EMISSIVE_PLANE
-	layer = MUTATIONS_LAYER
 	anchored = TRUE
 	density = FALSE
 	opacity = FALSE
 	appearance_flags = NO_CLIENT_COLOR | RESET_COLOR | KEEP_APART
-	blend_mode = BLEND_ADD
+	blend_mode = BLEND_OVERLAY
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/overlay/vis/illusion/mote
