@@ -35158,7 +35158,6 @@
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/town)
 "mBa" = (
-/obj/machinery/light/rogue/smelter,
 /turf/open/floor/rogue/concrete,
 /area/rogue/under/town/sewer)
 "mBb" = (
@@ -46055,7 +46054,6 @@
 /turf/open/floor/rogue/blocks/newstone,
 /area/rogue/under/cavewet/bogcaves/sunkencity)
 "qut" = (
-/obj/machinery/anvil,
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
@@ -50034,8 +50032,6 @@
 	icon_state = "longtable";
 	dir = 1
 	},
-/obj/item/rogueweapon/hammer,
-/obj/item/rogueweapon/tongs,
 /turf/open/floor/rogue/cobble,
 /area/rogue/under/town/sewer)
 "rOV" = (
