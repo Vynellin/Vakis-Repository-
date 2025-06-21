@@ -9500,6 +9500,18 @@
 /obj/effect/mapping_helpers/access/garrison,
 /turf/open/floor/rogue/tile/bfloorz,
 /area/rogue/under/town/basement/keep)
+"VG" = (
+/obj/structure/fluff/railing/border{
+	dir = 1
+	},
+/obj/structure/fluff/railing/border{
+	dir = 8
+	},
+/obj/structure/fluff/railing/border{
+	dir = 9
+	},
+/turf/open/floor/rogue/churchbrick,
+/area/rogue/indoors/town/magician)
 "VH" = (
 /turf/open/water/river{
 	icon_state = "rockwd"
@@ -105167,7 +105179,7 @@ Ae
 Ae
 Mn
 SJ
-Ri
+RL
 Ri
 Ri
 Ri
@@ -105424,7 +105436,7 @@ Mn
 VH
 VH
 SJ
-Ri
+RL
 Ri
 Ri
 Ri
@@ -105679,9 +105691,9 @@ LP
 Hm
 Ae
 SJ
-Ri
-Ri
-Ri
+VG
+QJ
+sR
 Ri
 Ri
 Ri
@@ -105936,7 +105948,7 @@ LP
 RW
 Ae
 SJ
-Ri
+RL
 Ri
 Ri
 Ri
