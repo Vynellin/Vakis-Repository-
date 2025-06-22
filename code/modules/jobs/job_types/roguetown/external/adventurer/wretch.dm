@@ -281,7 +281,6 @@
 	H.cmode_music = 'sound/music/combat_cult.ogg'
 	if(H.age == AGE_OLD)
 		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
-		H.mind.adjust_spellpoints(2)
 	H.change_stat("intelligence", 4)
 	H.change_stat("endurance", 1)
 	H.change_stat("speed", 1)

@@ -2,8 +2,6 @@
 //GRAPHICS & SOUNDS INCLUDED:
 //DARKEST DUNGEON (STRESS, RELIEF, AFFLICTION)
 /mob/living/proc/play_overhead_indicator(icon_path, overlay_name, clear_time, overlay_layer, private, soundin = null, y_offset = 12, fadein_time)
-	var/obj/effect/temp_visual/stress_event/invisible/overhead_indicator = /obj/effect/temp_visual/stress_event
-
 	if(!ishuman(src))
 		return
 	if(stat != DEAD)

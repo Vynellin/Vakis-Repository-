@@ -75,7 +75,6 @@
 			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.change_stat("speed", -1)
 			H.change_stat("intelligence", 1)
-			H.mind.adjust_spellpoints(1)
 		ADD_TRAIT(H, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_ARCANE_T3, TRAIT_GENERIC)
 		ADD_TRAIT(H, TRAIT_MAGIC_TUTOR, TRAIT_GENERIC)
@@ -116,4 +115,3 @@
 			H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 			H.change_stat("speed", -1)
 			H.change_stat("intelligence", 1)
-			H.mind.adjust_spellpoints(1)
