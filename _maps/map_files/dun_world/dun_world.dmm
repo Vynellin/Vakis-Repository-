@@ -3154,6 +3154,16 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town)
+"beW" = (
+/obj/effect/spawner/lootdrop/roguetown/sewers,
+/obj/structure/table/wood,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
+/obj/item/roguegear{
+	pixel_x = -6;
+	pixel_y = 13
+	},
+/turf/open/floor/rogue/church,
+/area/rogue/under/cave/dungeon/old_university)
 "bfg" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -5717,6 +5727,13 @@
 /obj/item/rope,
 /turf/open/floor/rogue/dirt,
 /area/rogue/indoors/shelter/woods)
+"bXx" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_lava";
+	custom_name = "Dragons' Den"
+	},
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/under/cave/dungeon/dragonden)
 "bXy" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/saigabuck/tame,
 /turf/open/floor/rogue/dirt/road,
@@ -12784,6 +12801,13 @@
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/cave)
+"eAk" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_underdark";
+	custom_name = "Drow Village"
+	},
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/under/underdark)
 "eAp" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 4
@@ -14777,8 +14801,9 @@
 /turf/open/floor/rogue/woodturned,
 /area/rogue/under/underdark)
 "fgK" = (
-/obj/structure/well/fountain{
-	pixel_x = -16
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Skeleton Village"
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/rogue/outdoors/beach/forest)
@@ -18724,6 +18749,13 @@
 	},
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/cave/dungeon/vulnafir)
+"gCy" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Vulnafir"
+	},
+/turf/open/water/cleanshallow,
+/area/rogue/under/cave/dungeon/vulnafir)
 "gCF" = (
 /obj/structure/table/wood,
 /turf/open/floor/rogue/cobble/mossy,
@@ -19866,6 +19898,13 @@
 	dir = 8
 	},
 /area/rogue/indoors/shelter/mountains)
+"gYc" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_lava";
+	custom_name = "Mt. Decapitation Entrance"
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/rogue/outdoors/mountains/decap/stepbelow)
 "gYi" = (
 /obj/structure/table/vtable,
 /obj/item/reagent_containers/glass/bottle/rogue/elfred,
@@ -21915,8 +21954,8 @@
 	},
 /area/rogue/outdoors/beach)
 "hLv" = (
-/obj/structure/well/fountain{
-	pixel_x = -16
+/obj/structure/roguemachine/teleport_beacon{
+	custom_name = "Sunmarch Center"
 	},
 /turf/open/floor/rogue/cobble,
 /area/rogue/outdoors/town)
@@ -22085,6 +22124,13 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/rogue/indoors/town/manor)
+"hPg" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Orcs' Treasure Room"
+	},
+/turf/open/floor/rogue/herringbone,
+/area/rogue/under/cave/dungeon/old_ruin)
 "hPz" = (
 /obj/item/natural/bundle/silk{
 	pixel_x = 5
@@ -24284,6 +24330,13 @@
 /obj/item/roguegear,
 /turf/open/floor/rogue/church,
 /area/rogue/under/cave/dungeon/old_university)
+"iBe" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_lava";
+	custom_name = "Goblin Fortress"
+	},
+/turf/open/floor/rogue/concrete,
+/area/rogue/under/cave/dungeon/goblinfort)
 "iBk" = (
 /turf/open/transparent/openspace,
 /area/rogue/indoors/town/church/chapel)
@@ -28787,14 +28840,11 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/outdoors/town)
 "kgO" = (
-/obj/structure/table/wood,
-/obj/item/roguegear{
-	pixel_x = -6;
-	pixel_y = 13
+/obj/structure/roguemachine/teleport_beacon{
+	custom_name = "Sunmarch Southern Crossroads"
 	},
-/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
-/turf/open/floor/rogue/church,
-/area/rogue/under/cave/dungeon/old_university)
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/outdoors/rtfield)
 "kgR" = (
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/town/basement)
@@ -29752,6 +29802,12 @@
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/rogue/under/cave/dungeon/old_ruin)
+"kBj" = (
+/obj/structure/roguemachine/teleport_beacon{
+	custom_name = "Sunmarch Northern Crossroads"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/beach/forest)
 "kBl" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -30781,6 +30837,13 @@
 	dir = 8
 	},
 /area/rogue/under/cave/dungeon/fort_dusk)
+"kTx" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_underdark";
+	custom_name = "Old University Lockroom"
+	},
+/turf/open/floor/rogue/church,
+/area/rogue/under/cave/dungeon/old_university)
 "kTC" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/blocks/platform,
@@ -31089,6 +31152,10 @@
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/mountains/decap)
+"kZV" = (
+/obj/item/reagent_containers/food/snacks/crow,
+/turf/open/floor/rogue/dirt,
+/area/rogue/indoors/shelter/woods)
 "lab" = (
 /obj/structure/closet/dirthole/closed/loot,
 /obj/structure/closet/dirthole/grave,
@@ -34592,6 +34659,13 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/rogue/indoors/town)
+"mms" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Lich's Hall"
+	},
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
+/area/rogue/under/cave/dungeon/licharena)
 "mmB" = (
 /turf/open/floor/rogue/tile/bath,
 /area/rogue/under/town/basement/keep)
@@ -42242,14 +42316,12 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors/shelter/woods)
 "oZb" = (
-/obj/structure/rack/rogue,
-/obj/item/roguegear{
-	pixel_x = 1;
-	pixel_y = -3
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Lone Knight"
 	},
-/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
-/turf/open/floor/rogue/church,
-/area/rogue/under/cave/dungeon/old_university)
+/turf/open/floor/rogue/cobblerock,
+/area/rogue/indoors/shelter/woods)
 "oZg" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -44901,6 +44973,13 @@
 	},
 /turf/open/floor/rogue/tile/brick,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
+"pSG" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Goblins' Village"
+	},
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "pSN" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -46591,6 +46670,13 @@
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/herringbone,
 /area/rogue/under/town/sewer)
+"qAL" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Giuseppe's Treasure"
+	},
+/turf/open/floor/rogue/grassyel,
+/area/rogue/under/cave/dungeon/toybox_dungeon)
 "qAP" = (
 /obj/structure/bars/steel,
 /turf/open/floor/rogue/dirt/road,
@@ -47780,6 +47866,12 @@
 /area/rogue/indoors)
 "qXj" = (
 /obj/structure/fluff/walldeco/bigpainting/lake,
+/obj/structure/rack/rogue,
+/obj/item/roguegear{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
 /turf/open/floor/rogue/church,
 /area/rogue/under/cave/dungeon/old_university)
 "qXk" = (
@@ -48722,6 +48814,13 @@
 	icon_state = "weird1"
 	},
 /area/rogue/indoors/town)
+"roe" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Abandoned Village"
+	},
+/turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
 "rol" = (
 /obj/structure/chair/bench/church/r,
 /turf/open/floor/rogue/concrete,
@@ -55044,6 +55143,15 @@
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
 /area/rogue/under/cave/dungeon/toybox_dungeon)
+"tEQ" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Winding Halls' Underking's Quarters"
+	},
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/rogue/under/cave/dungeon/winding_halls)
 "tEZ" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/fluff/railing/stonehedge{
@@ -57300,6 +57408,13 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat/gethsmane,
 /turf/open/water/sewer,
 /area/rogue/under/cave/dungeon/dungeon1/gethsmane/inner)
+"utE" = (
+/obj/structure/roguemachine/teleport_beacon{
+	icon_state = "aetheryte_outside";
+	custom_name = "Searaiders' Hold"
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/rogue/indoors/shelter)
 "utS" = (
 /obj/structure/fluff/walldeco/artificerflag,
 /turf/closed/wall/mineral/rogue/decostone/mossy,
@@ -80260,7 +80375,7 @@ nOh
 nOh
 nOh
 nOh
-nOh
+eAk
 nOh
 nOh
 nOh
@@ -129375,7 +129490,7 @@ qPv
 qPv
 ujm
 xlz
-oSF
+tEQ
 hML
 hML
 ulk
@@ -129827,7 +129942,7 @@ qPv
 qPv
 ujm
 xlz
-xlz
+oSF
 hML
 hML
 wXe
@@ -161915,7 +162030,7 @@ uPw
 pbD
 qaf
 qaf
-qaf
+hPg
 ttg
 uPw
 uPw
@@ -184678,12 +184793,12 @@ uCi
 uCi
 uCi
 cZd
-ocO
+jhj
 cHl
 cHl
 cHl
 cHl
-oEg
+cXs
 cZd
 uCi
 uCi
@@ -185131,11 +185246,11 @@ kqk
 kqk
 abu
 qXj
-jhj
 cHl
-cXs
 cHl
-kgO
+kTx
+cHl
+glN
 abu
 kqk
 kqk
@@ -185582,12 +185697,12 @@ ujo
 tVR
 gsO
 cZd
-cHl
-oZb
-cHl
-glN
+beW
 cHl
 cHl
+cHl
+cHl
+oEg
 cZd
 icB
 tVR
@@ -191376,7 +191491,7 @@ iLR
 iLR
 oeF
 iLR
-iLR
+mms
 iLR
 iLR
 iLR
@@ -213688,7 +213803,7 @@ xkH
 xkH
 jFA
 jFA
-jFA
+roe
 xkH
 xkH
 xkH
@@ -235081,7 +235196,7 @@ szI
 szI
 ikt
 aeA
-aeA
+gCy
 ctJ
 jLC
 aeA
@@ -237056,8 +237171,8 @@ rZO
 rZO
 bsL
 asY
-rZO
-rZO
+asY
+asY
 asY
 rZO
 bsL
@@ -237508,8 +237623,8 @@ rZO
 rZO
 asY
 asY
-rZO
-rZO
+asY
+asY
 asY
 asY
 rZO
@@ -237961,7 +238076,7 @@ bsL
 bsL
 asY
 asY
-rZO
+asY
 asY
 asY
 rZO
@@ -248419,7 +248534,7 @@ sNZ
 sNZ
 sNZ
 sNZ
-asY
+kgO
 asY
 asY
 asY
@@ -260252,7 +260367,7 @@ ffw
 gTg
 diy
 diy
-inC
+oZb
 diy
 diy
 avx
@@ -261156,7 +261271,7 @@ dXq
 jEt
 dXq
 dXq
-dXq
+kZV
 diy
 eHk
 avx
@@ -295228,7 +295343,7 @@ dDF
 xDd
 xDd
 uGX
-uZT
+utE
 uZT
 lHl
 uGX
@@ -320893,7 +321008,7 @@ jFA
 xkH
 xkH
 xkH
-xkH
+pSG
 jFA
 jFA
 veg
@@ -371661,7 +371776,7 @@ tOc
 lpq
 lpq
 lpq
-lpq
+kBj
 sJx
 sJx
 sJx
@@ -442560,7 +442675,7 @@ uXU
 aXa
 mQP
 vqO
-cmU
+iBe
 vqO
 mQP
 uXU
@@ -445786,7 +445901,7 @@ dFQ
 dFQ
 mhV
 oMY
-oMY
+gYc
 oMY
 eQi
 oMY
@@ -447057,7 +447172,7 @@ qTf
 qTf
 qTf
 qTf
-qTf
+bXx
 lHb
 qTf
 pSV
@@ -512531,7 +512646,7 @@ naH
 gbT
 gBn
 hwX
-rdN
+qAL
 uqF
 fZQ
 rdN
