@@ -184,7 +184,7 @@
 			zombie.STAINT = max(zombie.STAINT - 3, 1)
 			for(var/trait in traits_rotman)
 				ADD_TRAIT(zombie, trait, "[type]")
-			to_chat(zombie, span_green("I no longer crave for flesh... <i>But I still feel ill.</i>"))
+			to_chat(zombie, span_green("I no longer feel lost... <i>But I still feel ill.</i>"))
 		else
 			if(!was_i_undead)
 				zombie.mob_biotypes &= ~MOB_UNDEAD
@@ -193,7 +193,7 @@
 			zombie.faction += "neutral"
 			zombie.regenerate_organs()
 			if(has_turned)
-				to_chat(zombie, span_green("I no longer crave for flesh..."))
+				to_chat(zombie, span_green("I no longer feel lost..."))
 
 		for(var/obj/item/bodypart/zombie_part as anything in zombie.bodyparts) //Cure all limbs
 			zombie_part.rotted = FALSE
@@ -375,7 +375,7 @@
 		zombie.adjustBruteLoss(-INFINITY, updating_health = FALSE, forced = TRUE)
 		zombie.adjustFireLoss(-INFINITY, updating_health = FALSE, forced = TRUE)
 		zombie.heal_wounds(INFINITY) // Heal all non-permanent wounds
-		to_chat(zombie, span_userdanger("Your bones snap back into place and your flesh knits itself back together as you rise again in undeath."))
+		to_chat(zombie, span_userdanger("Your bones snap back into place, your flesh knits itself back together - you rise once again in Undeath."))
 
 	zombie.stat = UNCONSCIOUS // Start unconscious
 	zombie.updatehealth() // Then check if the mob should wake up
