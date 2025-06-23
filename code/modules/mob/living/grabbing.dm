@@ -425,6 +425,7 @@
 	slot_flags = ITEM_SLOT_MOUTH
 	bleed_suppressing = 1
 	var/last_drink
+	var/last_stealth_bite
 
 /obj/item/grabbing/bite/Click(location, control, params)
 	var/list/modifiers = params2list(params)
@@ -463,6 +464,7 @@
 	if(HAS_TRAIT(user, TRAIT_STRONGBITE))
 		damage = damage*2
 	C.next_attack_msg.Cut()
+	//leaving out silent biting, but if we wanted, it would be here
 	if(C.apply_damage(damage, BRUTE, limb_grabbed, armor_block))
 		playsound(C.loc, "smallslash", 100, FALSE, -1)
 		var/datum/wound/caused_wound = limb_grabbed.bodypart_attacked_by(BCLASS_BITE, damage, user, sublimb_grabbed, crit_message = TRUE)
@@ -546,7 +548,7 @@
 			if(C.stat != DEAD)
 				zomwerewolf = C.mind.has_antag_datum(/datum/antagonist/zombie)
 		if(VDrinker)
-			if(zomwerewolf)
+			if(zomwerewolf|| HAS_TRAIT(VVictim,TRAIT_VAMPIRISM))
 				to_chat(user, span_danger("I'm going to puke..."))
 				addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
 			else
@@ -585,6 +587,62 @@
 					VDrinker.handle_vitae(300, 300)
 				else
 					VDrinker.handle_vitae(300)
+	if(ishuman(C) && ishuman(user))
+		var/mob/living/carbon/human/BSDrinker = user
+		var/mob/living/carbon/human/BSVictim = C
+		var/zomwerewolf = C.mind?.has_antag_datum(/datum/antagonist/werewolf)
+		if(HAS_TRAIT(BSDrinker,TRAIT_VAMPIRISM))
+			if(zomwerewolf)
+				to_chat(BSDrinker, span_danger("I'm going to puke..."))
+				addtimer(CALLBACK(BSDrinker, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
+			else
+				if(HAS_TRAIT(BSVictim,TRAIT_VAMPIRISM))
+					//you can transfer vitae, but not grow in power
+					to_chat(BSDrinker, span_warning("It's vitae, just like mine."))
+					BSVictim.vitae -= 500
+					BSDrinker.vitae += 500
+				if ((BSVictim.vitae_pool > 500) && (!HAS_TRAIT(BSVictim,TRAIT_VAMPIRISM)))
+					BSVictim.blood_volume = max(BSVictim.blood_volume-45, 0)
+					BSVictim.vitae_pool -= 500
+					if(ishuman(BSVictim))
+						if(BSVictim.virginity && (HAS_TRAIT(BSDrinker,TRAIT_EFFICIENT_DRINKER)))
+							to_chat(BSDrinker, "<span class='love'>Virgin blood, delicious!</span>")
+							to_chat(BSDrinker, span_warning("I feel my power grow greatly"))
+							BSDrinker.vitae += 1250
+							BSDrinker.bs_vitae_total += 1250
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 12)
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 7)
+						else if(HAS_TRAIT(BSDrinker,TRAIT_EFFICIENT_DRINKER)) //Extra for an efficient drinker
+							to_chat(BSDrinker, span_warning("I feel my power grow greatly"))
+							BSDrinker.vitae += 1000
+							BSDrinker.bs_vitae_total += 1000
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 10)
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 5)
+						else if(BSVictim.virginity)
+							to_chat(BSDrinker, "<span class='love'>Virgin blood, delicious!</span>")
+							to_chat(BSDrinker, span_warning("I feel my power grow greatly"))
+							BSDrinker.vitae += 750
+							BSDrinker.bs_vitae_total += 750
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 7)
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 3)
+						else
+							to_chat(BSDrinker, span_warning("I feel my power grow"))
+							BSDrinker.vitae += 500
+							BSDrinker.bs_vitae_total += 500
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 5)
+							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 2)
+					else
+						to_chat(BSDrinker, span_warning("I feel my power grow"))
+						BSDrinker.vitae += 500
+						BSDrinker.bs_vitae_total += 500
+						BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 5)
+						BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 2)
+
+				else
+					//you gain vitae but not to level up
+					to_chat(BSDrinker, span_warning("I no longer gain power from this blood..."))
+					BSVictim.blood_volume = max(C.blood_volume-45, 0)
+					BSDrinker.vitae += 500
 
 	C.blood_volume = max(C.blood_volume-15, 0)
 	C.handle_blood()
@@ -596,19 +654,35 @@
 	to_chat(user, span_warning("I drink from [C]'s [parse_zone(sublimb_grabbed)]."))
 	log_combat(user, C, "drank blood from ")
 
-	if(ishuman(C) && C.mind)
+	if(ishuman(C) && C.mind && (!HAS_TRAIT(user,TRAIT_VAMPIRISM)))
 		var/datum/antagonist/vampirelord/VDrinker = user.mind.has_antag_datum(/datum/antagonist/vampirelord)
-		if(C.blood_volume <= BLOOD_VOLUME_SURVIVE)
-			if(!VDrinker.isspawn)
-				switch(alert("Would you like to sire a new spawn?",,"Yes","No"))
+		if(!VDrinker.isspawn || !HAS_TRAIT(C,TRAIT_VAMPIRISM))
+			switch(alert("Would you like to sire a new spawn?",,"Yes","No"))
+				if("Yes")
+					user.visible_message("[user] begins to infuse dark magic into [C]")
+					if(do_after(user, 30))
+						C.visible_message("[C] rises as a new spawn!")
+						var/datum/antagonist/vampirelord/lesser/new_antag = new /datum/antagonist/vampirelord/lesser()
+						new_antag.sired = TRUE
+						C.mind.add_antag_datum(new_antag)
+						sleep(20)
+						C.fully_heal()
+				if("No")
+					to_chat(user, span_warning("I decide [C] is unworthy."))
+	if(ishuman(C) && C.mind && (HAS_TRAIT(user,TRAIT_VAMPIRISM)))
+		var/mob/living/carbon/human/BSDrinker = user
+		var/mob/living/carbon/human/BSVictim = C	
+		if(BSVictim.blood_volume <= BLOOD_VOLUME_SURVIVE)				
+			if (!HAS_TRAIT(BSVictim,TRAIT_VAMPIRISM) && HAS_TRAIT(BSVictim,TRAIT_BLOOD_THRALL) )
+				switch(alert("Would you like to sire a bloodsucker?",,"Yes","No"))
 					if("Yes")
-						user.visible_message("[user] begins to infuse dark magic into [C]")
-						if(do_after(user, 30))
-							C.visible_message("[C] rises as a new spawn!")
-							var/datum/antagonist/vampirelord/lesser/new_antag = new /datum/antagonist/vampirelord/lesser()
+						BSDrinker.visible_message("[BSDrinker] begins to infuse dark magic into [BSVictim]")
+						if(do_after(BSDrinker, 30))
+							BSVictim.visible_message("[BSVictim] rises as a new spawn!")
+							var/datum/antagonist/bloodsucker/lesser/new_antag = new /datum/antagonist/bloodsucker/lesser()
 							new_antag.sired = TRUE
-							C.mind.add_antag_datum(new_antag)
+							BSVictim.mind.add_antag_datum(new_antag)
 							sleep(20)
-							C.fully_heal()
+							BSVictim.fully_heal()
 					if("No")
-						to_chat(user, span_warning("I decide [C] is unworthy."))
+						to_chat(BSDrinker, span_warning("I decide [BSVictim] is unworthy."))

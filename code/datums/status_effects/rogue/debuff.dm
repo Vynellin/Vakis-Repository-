@@ -310,3 +310,101 @@
 	name = "Carthus' Burden"
 	desc = "My arms and legs are restrained by divine chains!\n"
 	icon_state = "restrained"
+
+//vampire related debuffs
+/atom/movable/screen/alert/status_effect/debuff/veil_up
+	name = "Vampires Veil"
+	desc = "raise my veil so others don't know"
+	icon_state = "veil_up"
+
+/datum/status_effect/debuff/veil_up
+	id = "veil_up"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/veil_up
+
+/datum/status_effect/debuff/veil_up/on_apply()	
+	if(iscarbon(owner))
+		if(HAS_TRAIT(owner, TRAIT_VAMPIRISM))
+			var/mob/living/carbon/human/H = owner
+			var/vampskill = H.mind.get_skill_level(/datum/skill/magic/vampirism)
+			//less of a debutff them higher your vampirism level is
+			if(vampskill == 1) 
+				effectedstats = list("speed" = -2, "strength" = -2, "endurance" = -2)
+			if(vampskill == 2) 
+				effectedstats = list("speed" = -1, "strength" = -2, "endurance" = -1)
+			if(vampskill == 3) 
+				effectedstats = list("speed" = -1, "strength" = -1, "endurance" = -1)
+			if(vampskill == 5)
+				effectedstats = list("strength" = -1, "endurance" = -1)
+			if(vampskill == 6)
+				effectedstats = list("endurance" = -1)
+			if(HAS_TRAIT(owner,TRAIT_WEAK_VEIL)) //if someone has a weak veil their vampirism level is just ignored
+				effectedstats = list("speed" = -3, "strength" = -3, "endurance" = -3)
+	return ..()
+
+//may not include for Solaris, intended for a silent bite
+/datum/status_effect/debuff/blood_tired
+	id = "blood_tired"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/blood_tired
+	effectedstats = list("speed" = -5)
+	duration = 2.5 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/blood_tired
+	name = "Tired"
+	desc = "Something has made me extremely tired, but I can't sleep it off"
+	icon_state = "sleepy"
+
+//a few weaknesses that could be applied to vampires or other antags
+/datum/status_effect/debuff/salt_curse
+	id = "salt_curse"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/salt_curse
+	effectedstats = list("strength" = -2,"perception" = -2,"intelligence" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
+	duration = 2.5 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/salt_curse
+	name = "Salt Curse"
+	desc = "My BANE!"
+	icon_state = "hunger3"
+
+/datum/status_effect/debuff/water_curse
+	id = "water_curse"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/water_curse
+	effectedstats = list("strength" = -2,"perception" = -2,"intelligence" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
+	duration = 2.5 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/water_curse
+	name = "Water Curse"
+	desc = "My BANE!"
+	icon_state = "hunger3"
+
+/datum/status_effect/debuff/holy_curse
+	id = "holy_curse"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/holy_curse
+	effectedstats = list("strength" = -2,"perception" = -2,"intelligence" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
+	duration = 2.5 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/holy_curse
+	name = "Holy Curse"
+	desc = "My BANE!"
+	icon_state = "hunger3"
+
+/datum/status_effect/debuff/indoor_fear
+	id = "indoor_fear"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/indoor_fear
+	effectedstats = list("strength" = -2,"perception" = -2, "endurance" = -2,"speed" = -2)
+	duration = 5 SECONDS
+
+/atom/movable/screen/alert/status_effect/debuff/indoor_fear
+	name = "Indoors"
+	desc = "Ugh, TOO CRAMPED!"
+	icon_state = "hunger3"
+
+/datum/status_effect/debuff/town_fear
+	id = "town_fear"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/town_fear
+	effectedstats = list("strength" = -3,"perception" = -3, "endurance" = -3,"speed" = -3)
+	duration = 45 SECONDS
+
+/atom/movable/screen/alert/status_effect/debuff/town_fear
+	name = "Town Disgust"
+	desc = "I HATE being in town, I CRAVE the wilds!"
+	icon_state = "hunger3"

@@ -405,6 +405,54 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 		GLOB.pre_setup_antags |= antag
 	restricted_jobs = list()
 
+//doing our custom selection for bloodsuckers
+/datum/game_mode/chaosmode/proc/pick_bloodsucker()
+	var/suckersremaining = 3
+	//restricted jobs, we should change this to the types
+	restricted_jobs = list(
+	"Grand Duke",
+	"Consort",
+	"Dungeoneer",
+	"Inquisitor",
+	"Confessor",
+	"Watchman",
+	"Man at Arms",
+	"Priest",
+	"Acolyte",
+	"Cleric",
+	"Knight Captain",
+	"Court Magician",
+	"Templar",
+	"Bog Guard",
+	"Bog Master",
+	"Knight",
+	"Martyr",
+	)
+	antag_candidates = get_players_for_role(ROLE_BLOODSUCKER)
+	antag_candidates = shuffle(antag_candidates)
+	for(var/datum/mind/bloodsucker in antag_candidates)
+		if(!suckersremaining)
+			break
+		var/blockme = FALSE
+		if(!(bloodsucker in allantags))
+			blockme = TRUE
+		if(bloodsucker.assigned_role in GLOB.noble_positions)
+			continue
+		if(blockme)
+			continue
+		allantags -= bloodsucker
+		pre_bloodsuckers += bloodsucker
+		bloodsucker.special_role = "vampire"
+		//bloodsucker.assigned_role = "vampire" // This is a tricky way to prevent double-spawning for the spawn as multiple jobs. taking this out, to see if it lets us spawn in?
+		bloodsucker.restricted_roles = restricted_jobs.Copy()
+		testing("[key_name(bloodsucker)] has been selected as a VAMPIRE")
+		log_game("[key_name(bloodsucker)] has been selected as a [bloodsucker.special_role]")
+		antag_candidates.Remove(bloodsucker)
+		suckersremaining -= 1
+	for(var/antag in pre_bloodsuckers)
+		GLOB.pre_setup_antags |= antag
+	restricted_jobs = list()
+
 /datum/game_mode/chaosmode/proc/pick_werewolves()
 	// Ideally we want adventurers/pilgrims/towners to roll it
 	restricted_jobs = list(

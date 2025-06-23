@@ -129,3 +129,18 @@
 	var/datum/statpack/statpack = null // Lethalstone Port - statpacks for greater customization
 	var/second_voice	// Virtue-specific. Can be swapped to / from and changed.
 	var/original_voice
+	//vitae used mostly for vampires or anything that uses blood magic
+	var/vitae = 1000
+	//we track this for round goals and skill level ups, this number should rise for each vamp
+	var/bs_vitae_total = 0 
+	//setting up vars on round start values
+	var/cache_skin = "caucasian1"
+	var/cache_eyes = "000"
+	var/cache_hair ="000"
+	//setting up vars for bloodsucker color values
+	var/bs_skin = "c9d3de"
+	var/bs_eyes = "ff0000"
+	var/bs_hair = "181a1d"
+	//Thrall and spawn count
+	var/bs_thrall = 0
+	var/bs_spawn = 0
