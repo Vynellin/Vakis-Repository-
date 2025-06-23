@@ -33,10 +33,8 @@
 	if (!damage || (!forced && hit_percent <= 0))
 		set_typing_indicator(FALSE)
 		return 0
-
-	set_typing_indicator(FALSE)
-	var/damage_amount = forced ? damage : damage * hit_percent
-
+	clear_typing_indicator()
+	var/damage_amount =  forced ? damage : damage * hit_percent
 	switch(damagetype)
 		if (BRUTE)
 			adjustBruteLoss(damage_amount, forced = forced)

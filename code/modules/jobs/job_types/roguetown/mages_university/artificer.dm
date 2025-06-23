@@ -31,8 +31,8 @@
 		H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/masonry, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/engineering, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 5, TRUE) // bring in line with the other yeomen
+		H.mind.adjust_skillrank(/datum/skill/craft/engineering, 5, TRUE) // bring in line with the other yeomen
 		H.mind.adjust_skillrank(/datum/skill/craft/blacksmithing, 2, TRUE) //added to help with early round grind and so they can assist in making tools if needed.
 		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 4, TRUE)
@@ -40,6 +40,7 @@
 		H.mind.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/articap
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/jacket/artijacket
@@ -59,7 +60,8 @@
 						/obj/item/clothing/cloak/apron/blacksmith = 1
 						)
 	H.change_stat("strength", 1)
-	H.change_stat("intelligence", 2)
-	H.change_stat("endurance", 1)
+	H.change_stat("intelligence", 3) //Nerd
+	H.change_stat("endurance", 2) //Innate mining should have some gains
 	H.change_stat("constitution", 1)
-	ADD_TRAIT(H, TRAIT_ARCANE_T1, TRAIT_GENERIC)
+	ADD_TRAIT(H, TRAIT_MAGIC_TALENT, TRAIT_GENERIC) // Arcane potential Trait, so they dont get to T2
+	H.mind?.adjust_spellpoints(2)
