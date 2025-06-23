@@ -38,6 +38,7 @@
 	var/glow_color = null // The color of the glow
 	var/hide_charge_effect = FALSE // If true, will not show the spell's icon when charging 
 	var/obj/effect/mob_charge_effect = null
+	var/ignore_wild_magic = FALSE
 
 
 /obj/effect/proc_holder/Initialize()
@@ -445,7 +446,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 								return
 
 	before_cast(targets, user = user)
-	if(user && HAS_TRAIT(user, TRAIT_WILDMAGIC))
+	if(user && HAS_TRAIT(user, TRAIT_WILDMAGIC) && !ignore_wild_magic)
 		if(prob(10) && src)
 			var/tpath = src.type
 			trigger_wild_magic(targets, user, tpath)
