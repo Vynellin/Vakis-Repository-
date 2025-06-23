@@ -51,6 +51,7 @@
 		for(var/obj/item/reagent_containers/food/snacks/bagged_fruit in I.contents)
 			if(try_ferment(bagged_fruit, user, TRUE))
 				success = TRUE
+				I.grid_remove_item(bagged_fruit)
 		if(success)
 			to_chat(user, span_info("I dump the contents of [I] into [src]."))
 			I.update_icon()
