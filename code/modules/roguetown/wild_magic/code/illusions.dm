@@ -1,7 +1,7 @@
 /obj/effect/overlay/vis/illusion
 	name = "Illusion"
 	desc = "An illusionary effect that can be used to deceive or distract."
-	icon = 'code/modules/roguetown/wild_magic/icon/illusions.dmi'
+	icon = 'icons/effects/illusions.dmi'
 	icon_state = ""
 	anchored = TRUE
 	density = FALSE
