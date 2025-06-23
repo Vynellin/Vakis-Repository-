@@ -1,3 +1,5 @@
+/* Spell to test specific wild magic procs, uncomment if you need it.
+
 /obj/effect/proc_holder/spell/invoked/wild_magic_testing
 	name = "Wild Magic Testing"
 	desc = "A spell that tests the unpredictable nature of wild magic."
@@ -22,6 +24,8 @@
 			trigger_wild_magic(list(target), user, choice, input)
 	else
 		to_chat(user, span_warning("Invalid effect number. Please enter a number between 1 and 50."))
+
+*/
 
 ///Apply a temporary illusion on the target.
 /proc/apply_illusion(atom/movable/target, type)
