@@ -15,7 +15,7 @@
 	sewrepair = TRUE
 	flags_inv = HIDEBOOB
 	experimental_inhand = FALSE
-	
+
 	grid_width = 64
 	grid_height = 64
 
@@ -501,3 +501,15 @@
 	sewrepair = TRUE
 	flags_inv = null
 	slot_flags = ITEM_SLOT_SHIRT
+
+/obj/item/clothing/suit/roguetown/shirt/guildwaistcoat
+	name= "Guild Waistcoat"
+	desc = "A fine delicate waistcoat worn by the travelling bureaucrats of Rasura's various Guilds. It's a little tight around the middle."
+	icon_state = "grenzelshirt"
+	item_state = "grenzelshirt"
+	body_parts_covered = CHEST|GROIN|ARMS|VITALS
+	sleeved = 'icons/roguetown/clothing/onmob/shirts.dmi'
+	boobed = FALSE
+	r_sleeve_status = SLEEVE_NORMAL
+	l_sleeve_status = SLEEVE_NORMAL
+	flags_inv = HIDECROTCH|HIDEBOOB
