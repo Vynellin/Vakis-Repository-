@@ -14,7 +14,6 @@ GLOBAL_LIST_INIT(roguetown_areas_typecache, typecacheof(/area/rogue/indoors/town
 	power_light = TRUE
 	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
 	requires_power = FALSE
-//	var/previous_ambient = ""
 	var/town_area = FALSE
 	var/keep_area = FALSE
 	var/warden_area = FALSE
