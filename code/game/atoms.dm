@@ -261,7 +261,7 @@
 		return FALSE
 
 	//Check for centcom itself
-	if(istype(T.loc, /area/rogue/indoors/rasurian_heartland))
+	if(istype(T.loc, /area/rasurian_heartland/indoors))
 		return TRUE
 
 /**

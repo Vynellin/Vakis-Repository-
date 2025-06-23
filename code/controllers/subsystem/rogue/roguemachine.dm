@@ -51,11 +51,10 @@ PROCESSING_SUBSYSTEM_DEF(roguemachine)
 		return FALSE
 	var/area/the_area = get_area(T)
 	var/static/list/safe_areas = typecacheof(list(\
-		/area/rogue/outdoors/town,\
-		/area/rogue/indoors/town,\
-		/area/rogue/under/town,\
-		/area/rogue/under/town/basement,\
-		/area/rogue/under/town/caverogue,\
+		/area/provincial/outdoors/town,\
+		/area/provincial/indoors/town,\
+		/area/provincial/indoors/town/basement,\
+		/area/provincial/indoors/town/basement,\
 	))
 	if(is_type_in_typecache(the_area.type, safe_areas))
 		return TRUE
