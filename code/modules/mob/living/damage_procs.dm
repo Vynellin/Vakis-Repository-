@@ -31,7 +31,6 @@
 	var/hit_percent = 1
 	damage = max(damage - blocked, 0)
 	if (!damage || (!forced && hit_percent <= 0))
-		set_typing_indicator(FALSE)
 		return 0
 	clear_typing_indicator()
 	var/damage_amount =  forced ? damage : damage * hit_percent
