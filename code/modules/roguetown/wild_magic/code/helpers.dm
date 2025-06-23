@@ -13,7 +13,9 @@
 			/obj/effect/proc_holder/spell/invoked/projectile/fireball,
 			/obj/effect/proc_holder/spell/invoked/projectile/repel,
 			/obj/effect/proc_holder/spell/invoked/projectile/fetch,
-			/obj/effect/proc_holder/spell/invoked/projectile/guided_bolt
+			/obj/effect/proc_holder/spell/invoked/projectile/guided_bolt,
+			/obj/effect/proc_holder/spell/invoked/blade_burst,
+			/obj/effect/proc_holder/spell/invoked/gravity,
 		)
 
 		if(choice)
@@ -110,8 +112,7 @@
     current_horns.accessory_type = /datum/sprite_accessory/horns/antlers
     current_horns.accessory_colors = "#8B4513"
     target.internal_organs += current_horns
-    target.equip_to_slot(current_horns, SLOT_HEAD)
-    target.update_body()
+    target.update_hair()
 
     target.visible_message(span_notice("[target] grows majestic antlers!"))
 
@@ -133,7 +134,7 @@
             target.visible_message(span_notice("[target]'s antlers vanish, replaced by their original horns!"))
         else
             target.visible_message(span_notice("[target]'s antlers vanish!"))
-        target.update_body()
+        target.update_hair()
 
 ///Change the target's eye for a "faerie blue" for 15 seconds.
 /proc/temporary_faerie_eyes(mob/living/carbon/human/target)
@@ -194,48 +195,87 @@
 		target.update_body()
 
 ///Fire a received magic projectile that turns around to hit the caster after a delay.
-/proc/reflect_projectile_to_user(obj/effect/proc_holder/spell/invoked/projectile/spell_instance, mob/living/user, list/targets)
+/obj/effect/proc_holder/spell/invoked/projectile/proc/reflect_projectile_to_user(obj/effect/proc_holder/spell/invoked/projectile/spell_instance, mob/living/user, list/targets)
 	var/turf/start = get_step(user, user.dir)
 	var/obj/projectile/arced_proj = new spell_instance.projectile_type(start)
-	arced_proj.firer = user
 
 	var/atom/single_target = targets[1]
+
+	arced_proj.original = single_target
+	arced_proj.def_zone = user.zone_selected
+	arced_proj.arcshot = user?.used_intent?.arc_check()
+	if (arced_proj.arcshot)
+		arced_proj.range = get_dist_euclidian(single_target, user)
+
+	arced_proj.accuracy += (user.STAINT * -9) * 4
+	arced_proj.bonus_accuracy += (user.STAINT - 8) * 3
+	if (user.mind)
+		arced_proj.bonus_accuracy += user.mind.get_skill_level(spell_instance.associated_skill) * 5
+
+	arced_proj.firer = user
 	arced_proj.preparePixelProjectile(single_target, user)
-	var/old_speed = arced_proj.speed
+
+	for (var/V in spell_instance.projectile_var_overrides)
+		if (arced_proj.vars[V])
+			arced_proj.vv_edit_var(V, spell_instance.projectile_var_overrides[V])
+
+	ready_projectile(arced_proj, single_target, user, 1)
 	arced_proj.fire()
 
-	// Start with a delay before the slow down
+	var/old_speed = arced_proj.speed
+
+	//redirection logic
+	var/mob/living/dummy_firer = null
 	spawn(3)
 		if (arced_proj && !QDELETED(arced_proj))
-			arced_proj.speed = 2  // Dramatically slow down for the "stall" effect
+			arced_proj.speed = 2
 
-			// Now delay before turning around
 			spawn(2)
 				if (arced_proj && !QDELETED(arced_proj))
-					var/mob/living/dummy_firer = get_dummy_firer(single_target.loc, user)
+					safely_cleanup_existing_fey_reflection(user)
+
+					dummy_firer = get_dummy_firer(single_target, user)
 					arced_proj.firer = dummy_firer
-					arced_proj.original = get_turf(user)
+					arced_proj.original = user.loc
+
 					var/turf/end = get_turf(user)
 					var/angle = Get_Angle(get_turf(arced_proj), end)
 					arced_proj.setAngle(angle)
 
-					// Clean up dummy later
-					spawn(100)
-						if(dummy_firer && !QDELETED(dummy_firer))
-							qdel(dummy_firer)
-
-			// Restore speed after turn
 			spawn(2)
 				if (arced_proj && !QDELETED(arced_proj))
 					arced_proj.speed = old_speed
 
+			spawn(100) //dummy should clear after 10 sec, should be enough time for any projectile to hit.
+				if (dummy_firer && !QDELETED(dummy_firer))
+					safely_cleanup_fey_reflection(dummy_firer)
+
 ///Proc used to obtain a dummy "firer" variable for proc/reflect_projectile_to_user to avoid ground targetting breaking the proc.
-/proc/get_dummy_firer(atom/target)
-	var/mob/living/dummy = new /mob/living(target.loc)
-	dummy.name = "Fey Reflection"
+/proc/get_dummy_firer(atom/target, mob/living/user)
+	var/turf/current_turfget = null
+	if(!isturf(target))
+		current_turfget = get_turf(target)
+	else
+		current_turfget = target	
+	var/mob/living/dummy = new /mob/living(current_turfget)
+	dummy.name = "spell_dummy_[user.real_name]"
 	dummy.invisibility = 101
 	dummy.alpha = 0
-	dummy.loc = target.loc
-	dummy.layer = initial(dummy.layer) - 1 // Render behind everything
-	dummy.anchored = TRUE
+	dummy.layer = initial(dummy.layer) - 1
+	dummy.dir = get_dir(get_turf(target), get_turf(user))
 	return dummy
+
+///Cleans up old dummies that MIGHT cause issue if for some reason you get the exact same wild magic proc before the automated cleanup.
+/proc/safely_cleanup_fey_reflection(mob/living/dummy)
+	if (!dummy || QDELETED(dummy)) return
+	if (is_spell_dummy(dummy))
+		qdel(dummy)
+
+/proc/safely_cleanup_existing_fey_reflection(mob/living/user)
+	spawn(100)
+		for (var/mob/living/mob in GLOB.mob_living_list)
+			if (is_spell_dummy(mob) && findtext(mob.name, user.real_name))
+				qdel(mob)
+
+/proc/is_spell_dummy(mob/living/mob)
+	return istype(mob) && mob.name && findtext(mob.name, "spell_dummy_") == 1

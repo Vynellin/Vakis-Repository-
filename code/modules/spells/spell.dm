@@ -447,7 +447,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 	before_cast(targets, user = user)
 	if(user && HAS_TRAIT(user, TRAIT_WILDMAGIC))
 		if(prob(10) && src)
-			var/tpath = "[src]"
+			var/tpath = src.type
 			trigger_wild_magic(targets, user, tpath)
 			revert_cast()
 			return FALSE

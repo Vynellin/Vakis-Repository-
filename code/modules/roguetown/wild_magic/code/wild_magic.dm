@@ -1,6 +1,7 @@
 //file name is voluntary, for it to be loaded before spell and still be in order in the dme.
 
 /proc/trigger_wild_magic(list/targets, mob/living/carbon/user, spell_typepath, effect_override = null)
+    playsound(user.loc, 'sound/misc/sudden noise.ogg', 100, TRUE)
     var/effect = effect_override ? effect_override : rand(1, 50)
     var/list/surged_targets = list()
     for(var/target in targets)
@@ -16,7 +17,8 @@
             if(spell_typepath)
                 var/obj/effect/proc_holder/spell/spell_instance = new spell_typepath
                 if(istype(spell_instance, /obj/effect/proc_holder/spell/invoked/projectile))
-                    reflect_projectile_to_user(spell_instance, user, targets[1])
+                    var/obj/effect/proc_holder/spell/invoked/projectile/projectile_instance = spell_instance
+                    projectile_instance.reflect_projectile_to_user(spell_instance, user, targets[1])
                 else
                     spell_instance.perform(list(user), FALSE, user)
                 if(targets == user)
@@ -52,9 +54,10 @@
                 proj_fetch.firer = user
                 proj_fetch.preparePixelProjectile(affected_mob, user)
                 proj_fetch.fire()
-            user.visible_message(span_notice("The air stirs, mystic tethers snap tight, drawing all toward their source."))
+            user.visible_message(span_notice("The air stirs, mystic tethers snap tight, drawing some figures toward their source."))
         if(6)
             user.log_message(span_danger("Wild magic surge, temporary glamours"), LOG_ATTACK)
+            user.visible_message(span_notice("Harmless glamour flutters through the air, leaving behind curious transformations."))
             for(var/mob/living/carbon/human/affected_human in (targets + list(user)))
                 var/illusion_type = pick("hair", "eyes", "skin", "antlers")
                 switch(illusion_type)
@@ -68,7 +71,6 @@
                             affected_human.visible_message(span_notice("[affected_human]'s skin sparkles with motes of magic!"))
                     if("antlers")
                         temporary_antlers(affected_human)
-            user.visible_message(span_notice("Harmless glamour flutters through the air, leaving behind curious transformations."))
         if(7)
             user.log_message(span_danger("Wild magic surge, mass root"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
@@ -87,15 +89,15 @@
             // Everyone laughs uncontrollably
             for(var/mob/living/affected_mob in (surged_targets))
                 affected_mob.emote("laugh")
-            user.visible_message(span_notice("A wave of fey mirth causes everyone to burst into laughter!"))
+            user.visible_message(span_notice("A wave of fey mirth causes some to burst into laughter!"))
         if(10)
             // A random harmless animal appears at each person's feet
             var/list/animal_types = list(
                 /mob/living/simple_animal/butterfly,
                 /mob/living/simple_animal/chick,
-                /mob/living/simple_animal/chicken,
+                /mob/living/simple_animal/hostile/retaliate/rogue/chicken,
                 /mob/living/simple_animal/mouse,
-                /mob/living/simple_animal/mudcrabcrab
+                /mob/living/simple_animal/hostile/retaliate/rogue/mudcrab,
             )
             for(var/mob/living/affected_mob in (surged_targets))
                 var/mob/living/simple_animal/animal_type = pick(animal_types)
@@ -121,12 +123,12 @@
             user.log_message(span_danger("Wild magic surge, one hit shield"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
                 affected_mob.apply_status_effect(/datum/status_effect/buff/shield, 30 SECONDS)
-            user.visible_message(span_notice("Silent and sudden, protective glamour settles over all."))
+            user.visible_message(span_notice("Silent and sudden, protective glamour settles over some figures."))
         if(13)
             user.log_message(span_danger("Wild magic surge, random teleport"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
                 step(affected_mob, pick(GLOB.cardinals))
-            user.visible_message(span_notice("With a mischievous shimmer, wild magic skips everyone a step sideways."))
+            user.visible_message(span_notice("With a mischievous shimmer, wild magic skips some a step sideways."))
         if(14)
             user.log_message(span_danger("Wild magic surge, nightvision or blind"), LOG_ATTACK)
             for(var/mob/living/carbon/affected_mob in (surged_targets))
@@ -149,7 +151,7 @@
         if(16)
             for(var/mob/living/affected_mob in (surged_targets))
                 affected_mob.emote("dance")
-            user.visible_message(span_notice("The world sways to a silent tune as wild magic seizes all in a spellbound dance."))
+            user.visible_message(span_notice("The world sways to a silent tune as wild magic seizes some in a spellbound dance."))
         if(17)
             user.log_message(span_danger("Wild magic surge, mass teleport"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
@@ -171,7 +173,7 @@
                     affected_mob.visible_message(span_notice("[affected_mob] suddenly blinks a short distance!"))
                 else
                     continue
-            user.visible_message(span_notice("With a ripple of wild glamour, everyone vanishes, only to reappear somewhere nearby."))
+            user.visible_message(span_notice("With a ripple of wild glamour, figures vanishes, only to reappear somewhere nearby."))
         if(18)
             user.log_message(span_danger("Wild magic surge, mass confusion"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
@@ -208,8 +210,9 @@
                 temporary_skin_color(affected_human)
         if(24)
             // All are surrounded by a faint, musical chime
-            playsound(user.loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
-            user.visible_message(span_notice("The air hums with delicate tones, as if unseen bells were stirred by passing magic."))
+            spawn (70) //we wait to not overlay the feedback from wild magic			
+                playsound(user.loc, 'modular_azurepeak/sound/spellbooks/crystal.ogg', 100, TRUE)
+                user.visible_message(span_notice("The air hums with delicate tones, as if unseen bells were stirred by passing magic."))
         if(25)
             user.log_message(span_danger("Wild magic surge, mass guided bolt"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
@@ -227,7 +230,7 @@
         if(27)
             for(var/mob/living/affected_mob in (surged_targets))
                 step_away(affected_mob, user, 2)
-            user.visible_message(span_notice("A sudden gust of wind pushes everyone back slightly!"))  
+            user.visible_message(span_notice("A sudden gust of wind pushes some back slightly!"))  
         if(28)
             user.log_message(span_danger("Wild magic surge, mass silence and haste"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
@@ -243,7 +246,7 @@
                 affected_mob.visible_message(span_notice("[affected_mob] is surrounded by a faint, glowing aura!"))
                 addtimer(CALLBACK(affected_mob, "remove_filter", filter_id), 15 SECONDS)
                 addtimer(CALLBACK(affected_mob, "update_icon"), 15 SECONDS)
-            user.visible_message(span_notice("Glamour shimmers to life, each figure bathed in a gentle, enchanted glow."))  
+            user.visible_message(span_notice("Glamour shimmers to life, some figures bathed in a gentle, enchanted glow."))  
         if(30)
             user.log_message(span_danger("Wild magic surge, mass swap with animals"), LOG_ATTACK)
             for(var/mob/living/carbon/affected_mob in (surged_targets))
@@ -272,17 +275,17 @@
         if(33)
             for(var/mob/living/carbon/affected_mob in (surged_targets))
                 affected_mob.apply_status_effect(/datum/status_effect/debuff/singcurse)
-            user.visible_message(span_notice("A trickster's melody weaves into the world, every voice caught in its spellbound tune."))  
+            user.visible_message(span_notice("A trickster's melody weaves into the world, Som voices caught in its spellbound tune."))  
         if(34)
             user.log_message(span_danger("Wild magic surge, time slow and haste"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
                 affected_mob.add_movespeed_modifier("wildmagic_slow", TRUE, 100, multiplicative_slowdown=3)
-            user.visible_message(span_notice("Time seems to slow for everyone!"))
+                to_chat(user, span_warning("You feel the world speed up around you."))
             sleep(5 SECONDS)
             for(var/mob/living/affected_mob in (surged_targets))
                 affected_mob.remove_movespeed_modifier("wildmagic_slow")
                 affected_mob.add_movespeed_modifier("wildmagic_haste", TRUE, 200, multiplicative_slowdown=-1)
-            user.visible_message(span_notice("Time suddenly speeds up for everyone!"))
+                to_chat(user, span_warning("You feel the world slow down around you."))
             sleep(5 SECONDS)
             for(var/mob/living/affected_mob in (surged_targets))
                 affected_mob.remove_movespeed_modifier("wildmagic_haste")
@@ -304,7 +307,7 @@
                 for(var/mob/living/affected_mob in (surged_targets))
                     affected_mob.status_flags &= ~GODMODE
                     to_chat(affected_mob, span_notice("The protective aura fades, leaving you vulnerable once more."))  
-            user.visible_message(span_notice("A shimmering ward envelops all—no harm may touch them, if only for a moment."))  
+            user.visible_message(span_notice("A shimmering ward envelops some, no harm may touch them, if only for a moment."))  
         if(38)
             for(var/mob/living/affected_mob in (surged_targets))
                 affected_mob.emote("jump")
@@ -317,19 +320,21 @@
                     affected_mob.add_filter(filter_id, 2, list("type" = "outline", "color" = glow_color, "alpha" = 120, "size" = 2))
                 addtimer(CALLBACK(affected_mob, "remove_filter", filter_id), 15 SECONDS)
                 addtimer(CALLBACK(affected_mob, "update_icon"), 15 SECONDS)
-            user.visible_message(span_notice("A soft, silvery glow washes over all, as if touched by moonlight itself."))  
+            user.visible_message(span_notice("A soft, silvery glow washes over some, as if touched by moonlight itself."))  
         if(40)
             for(var/mob/living/carbon/affected_mob in (surged_targets))
                 affected_mob.apply_status_effect(/datum/status_effect/debuff/secretcurse, 30 SECONDS)
             user.visible_message(span_notice("Suddenly, secrets slip from tongues, whether meant to or not!"))  
         if(41)
-            for(var/mob/living/carbon/affected_mob in (surged_targets))
-                to_chat(affected_mob, span_notice("You hear a faint, buzzing sound!"))
-            user.visible_message(span_notice("The air is filled with the sound of fey wings!"))
+            spawn(70) //Delayed to not overlay sounds
+                for(var/mob/living/carbon/affected_mob in (surged_targets))
+                    to_chat(affected_mob, span_notice("You hear a faint, buzzing sound!"))
+                playsound(user.loc, 'sound/misc/fliesloop.ogg', 100, TRUE)
+                user.visible_message(span_notice("The air is filled with the sound of fey wings!"))
         if(42)
             for(var/mob/living/carbon/affected_mob in (surged_targets))
                 affected_mob.apply_status_effect(/datum/status_effect/debuff/mimiccurse, 20 SECONDS)
-            user.visible_message(span_notice("Suddenly, voices echo as everyone begins mimicking one another!"))  
+            user.visible_message(span_notice("Suddenly, voices echoes as figures begins mimicking one another!"))  
         if(43)
             user.log_message(span_danger("Wild magic surge, mass magic immunity"), LOG_ATTACK)
             for(var/mob/living/affected_mob in (surged_targets))
@@ -337,11 +342,12 @@
             user.visible_message(span_notice("A strange stillness fills the air, magic falters, unable to take hold."))  
         if(44)
             for(var/mob/living/affected_mob in (surged_targets))
-                spawn(0)
-                    for(var/i = 1, i <= 5, i++)
-                        step(affected_mob, pick(GLOB.cardinals))
-                        sleep(1)
-            user.visible_message(span_notice("Feet move of their own accord, sending everyone into a frantic, unpredictable dance!"))  
+                if(affected_mob.health > 0) //We don't want corpses moving around
+                    spawn(0)
+                        for(var/i = 1, i <= 5, i++)
+                            step(affected_mob, pick(GLOB.cardinals))
+                            sleep(1)
+            user.visible_message(span_notice("Feet move of their own accord, sending figures into a frantic, unpredictable dance!"))  
         if(45)
             for(var/mob/living/affected_mob in (surged_targets))
                 var/glow_color = "#FFD700" // gold
@@ -351,7 +357,7 @@
                 affected_mob.visible_message(span_notice("[affected_mob] is surrounded by a golden glow!"))
                 addtimer(CALLBACK(affected_mob, "remove_filter", filter_id), 15 SECONDS)
                 addtimer(CALLBACK(affected_mob, "update_icon"), 15 SECONDS)
-            user.visible_message(span_notice("A warm, golden light envelops all, shimmering with an otherworldly radiance.")) 
+            user.visible_message(span_notice("A warm, golden light envelops some figures, shimmering with an otherworldly radiance.")) 
         if(46)
             for(var/mob/living/carbon/affected_mob in (surged_targets))
                 affected_mob.apply_status_effect(/datum/status_effect/debuff/questioncurse, 30 SECONDS)
@@ -363,18 +369,42 @@
         if(48)
             for(var/mob/living/carbon/affected_mob in (surged_targets))
                 affected_mob.apply_status_effect(/datum/status_effect/debuff/selfcomplimentcurse, 20 SECONDS)
-            user.visible_message(span_notice("Suddenly, everyone is proclaiming their own brilliance!"))
+            user.visible_message(span_notice("A fey enchantment falls upon a few figures, they instantly seem more confident."))
         if(49)
-            // All are surrounded by a faint, rainbow shimmer (I'm giving it a purple glow, no idea how to animate it)
-            for(var/mob/living/affected_mob in (surged_targets))
-                var/glow_color = "#B06FFC"
-                var/filter_id = "wildmagic_rainbowglow"
-                if (!affected_mob.get_filter(filter_id))
-                    affected_mob.add_filter(filter_id, 2, list("type" = "outline", "color" = glow_color, "alpha" = 120, "size" = 2))
+            // Add a rainbow shimmer with stacked colored outlines
+            for(var/mob/living/affected_mob in surged_targets)
+                var/list/rainbow_colors = list("#FF0000", "#FFA500", "#00FF00", "#0000FF", "#4B0082")
+                var/base_filter_id = "wildmagic_rainbowglow"
+                var/index = 1
+                var/size = 1
+
+                for (var/color in rainbow_colors)
+                    size = index / 3
+                    var/filter_id = "[base_filter_id]_[index]"
+                    if (!affected_mob.get_filter(filter_id))
+                        affected_mob.add_filter(
+                            filter_id,
+                            2, // priority
+                            list(
+                                "type" = "outline",
+                                "color" = color,
+                                "alpha" = 120,
+                                "size" = size // Stagger sizes for layered glow
+                            )
+                        )
+                    index++
+
                 affected_mob.visible_message(span_notice("[affected_mob] is surrounded by a rainbow shimmer!"))
-                addtimer(CALLBACK(affected_mob, "remove_filter", filter_id), 15 SECONDS)
-                addtimer(CALLBACK(affected_mob, "update_icon"), 15 SECONDS)
-            user.visible_message(span_notice("A radiant shimmer fills the air, each figure haloed in iridescent magic."))
+
+                // Timer to clean up the effect after 15 seconds
+                spawn(15 SECONDS)
+                    index = 1
+                    for (var/_ in rainbow_colors)
+                        var/filter_id = "[base_filter_id]_[index++]"
+                        affected_mob.remove_filter(filter_id)
+                        affected_mob.update_icon()
+
+            user.visible_message(span_notice("A radiant shimmer fills the air, Some figures haloed in iridescent magic."))
         if (50)
             user.log_message(span_danger("Wild magic surge, twinned spell"), LOG_ATTACK)
             if (spell_typepath)
