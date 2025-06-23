@@ -9,7 +9,7 @@
 	fill_icon_thresholds = list(0, 33, 66, 100)
 	dropshrink = 0.8
 	slot_flags = ITEM_SLOT_HIP|ITEM_SLOT_MOUTH
-	obj_flags = CAN_BE_HIT
+	obj_flags = CAN_BE_HIT | UNIQUE_RENAME
 	spillable = FALSE
 	var/closed = TRUE //Put a cork in it!
 	reagent_flags = TRANSPARENT
@@ -20,7 +20,8 @@
 	experimental_onhip = FALSE
 	experimental_inhand = FALSE
 	sellprice = 1
-
+	grid_height = 32
+	grid_width = 32
 
 /*
 	The next two functions are copies from ..(), but edited to give the max per transfer.
