@@ -39,6 +39,26 @@
 	name = "Dungeon Cell"
 	icon_state = "cell"
 
+/// GATES ///
+
+/area/provincial/indoors/town/province_keep/garrison/gate
+	name = "Gatehouse"
+
+/area/provincial/indoors/town/province_keep/garrison/gate/north
+	name = "Northern Gatehouse"
+
+/area/provincial/indoors/town/province_keep/garrison/gate/west
+	name = "Western Gatehouse"
+
+/area/provincial/indoors/town/province_keep/garrison/gate/east
+	name = "Eastern Gatehouse"
+
+/area/provincial/indoors/town/province_keep/garrison/gate/south
+	name = "Southern Gatehouse"
+
+/area/provincial/indoors/town/province_keep/garrison/gate/keep
+	name = "Keep Gatehouse"
+
 /// QUARTERS ///
 
 /area/provincial/indoors/town/province_keep/garrison/quarters

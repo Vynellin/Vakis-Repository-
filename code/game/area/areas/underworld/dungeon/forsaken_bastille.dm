@@ -1,4 +1,4 @@
-/area/provincial/underground/dungeon/fogotten_bastille
+/area/provincial/underground/dungeon/forsaken_bastille
 	name = "The Forsaken Bastille"
 	icon_state = "duke"
 	first_time_text = "THE FORSAKEN BASTILLE"
