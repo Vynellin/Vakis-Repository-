@@ -64,10 +64,8 @@
 
 	for (var/i = 1 to orb_count)
 		var/angle = base_angle + angle_step * i  // angle in DEGREES
-
-		// BYOND’s cos()/sin() take degrees, so use them directly
 		var/pixel_x = round(cos(angle) * radius)
-		var/pixel_y = round(sin(angle) * radius + 16)  // lift arc
+		var/pixel_y = round(sin(angle) * radius + 8)  // lift arc
 
 		var/obj/effect/overlay/orb/orb = new
 		orb.icon = 'icons/obj/projectiles.dmi'
@@ -79,7 +77,7 @@
 		orb.color = "#ddeeff"
 		orb.mouse_opacity = 0
 		orb.anchored = TRUE
-		orb.loc = null               // keep purely visual
+		orb.loc = null
 
 		user.vis_contents += orb
 
@@ -153,8 +151,8 @@
     var/max_turn_rate = 2
     var/homing_strength = 0.2
     var/turn_penalty = 1.1
-    var/min_speed = 60 //The higher the number the slower the projectile, somehow
-    var/direction = 0 // make sure this is set when fired
+    var/min_speed = 60 //Speed is coded as higher = Slower, for some reason.
+    var/direction = 0
     var/current_angle = null
 
 /obj/projectile/magic/celestial_orb/process()
@@ -169,8 +167,7 @@
         var/abs_delta = abs(delta_angle)
 
         if (abs_delta > 15)
-            // Instead of exponential slowdown, apply a small speed reduction based on turn severity
-            var/penalty = 1 - min(abs_delta / 180, 1) * (1 - turn_penalty)  // Scales between 1.0 and turn_penalty
+            var/penalty = 1 - min(abs_delta / 180, 1) * (1 - turn_penalty)
             speed *= penalty
             speed = max(speed, min_speed)
 
