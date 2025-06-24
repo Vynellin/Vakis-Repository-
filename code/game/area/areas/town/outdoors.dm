@@ -33,6 +33,14 @@
 	droning_sound_dusk = null
 	droning_sound_night = null
 
+/// RAMPARTS ///
+
+/area/provincial/outdoors/town/ramparts
+	name = "Solaris Ridge - Ramparts"
+	icon_state = "manorgarri"
+
+/// ROOFS ///
+
 /area/provincial/outdoors/town/roofs
 	name = "Solaris Ridge - Rooftops"
 	icon_state = "roofs"

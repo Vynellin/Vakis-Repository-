@@ -61,6 +61,14 @@
 	brief_descriptor = "beneath the bustle of the city"
 	general_location = "From below Solaris Ridge!"
 
+/// RAMPARTS ///
+
+/area/provincial/indoors/town/ramparts
+	name = "Solaris Ridge - Ramparts"
+	icon_state = "garrison"
+
+/// SEWERS ///
+
 /area/provincial/indoors/town/sewer
 	name = "Solaris Ridge - Sewers"
 	icon_state = "sewer"
