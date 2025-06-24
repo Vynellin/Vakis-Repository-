@@ -2,7 +2,7 @@
 	name = "\improper Kasmidian beacon"
 	desc = "A five meter tall spire with a glowing, floating prism in the middle, rotating clock-wise in irregular, slow intervals. <br>\
 	Their existence and origins are speculated upon; yet, the followers of Kasmidian are evident to be capable of procuring more of them."
-	icon = 'modular/code/modules/aetheryte/aetheryte.dmi'
+	icon = 'icons/obj/machines/teleport_beacon.dmi'
 	icon_state = "aetheryte_town"
 	anchored = TRUE
 	density = TRUE
@@ -52,3 +52,15 @@
 /obj/structure/roguemachine/teleport_beacon/Destroy(force)
 	SSroguemachine.teleport_beacons -= src
 	return ..()
+
+/obj/structure/roguemachine/teleport_beacon/wilderness
+	icon_state = "aetheryte_outside"
+
+/obj/structure/roguemachine/teleport_beacon/lava
+	icon_state = "aetheryte_lava"
+
+/obj/structure/roguemachine/teleport_beacon/underdark
+	icon_state = "aetheryte_underdark"
+
+/obj/structure/roguemachine/teleport_beacon/bandit
+	icon_state = "aetheryte_bandit"

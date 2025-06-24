@@ -8588,10 +8588,6 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/outdoors/mountains)
-"daS" = (
-/obj/structure/fluff/statue/knightalt,
-/turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
 "daX" = (
 /obj/structure/table/vtable/v2,
 /obj/item/roguegem/random,
@@ -8744,7 +8740,7 @@
 "ddC" = (
 /obj/item/reagent_containers/food/snacks/crow,
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/forest)
 "ddD" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
@@ -14601,7 +14597,7 @@
 "fdY" = (
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/area/provincial/outdoors/forest)
 "fdZ" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -20707,13 +20703,6 @@
 	dir = 8
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
-"heJ" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_underdark";
-	custom_name = "Drow Village"
-	},
-/turf/open/floor/rogue/cobblerock,
-/area/provincial/underground/underdark)
 "heU" = (
 /obj/structure/winch{
 	gid = "lichdoor";
@@ -23144,7 +23133,7 @@
 /obj/structure/roguemachine/teleport_beacon{
 	custom_name = "Sunmarch Northern Crossroads"
 	},
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/beach/forest)
 "hTt" = (
 /obj/structure/stairs{
@@ -24033,8 +24022,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/armory/secure)
 "ilf" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_lava";
+/obj/structure/roguemachine/teleport_beacon/lava{
 	custom_name = "Abandoned Manor"
 	},
 /turf/open/floor/rogue/tile,
@@ -25525,7 +25513,7 @@
 /area/provincial/underground/dungeon/gethsmane/inner)
 "iLM" = (
 /obj/structure/roguemachine/noticeboard,
-/turf/open/floor/rogue/grass,
+/turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/beach/forest)
 "iLN" = (
 /obj/structure/table/wood{
@@ -25836,7 +25824,7 @@
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "iRs" = (
 /obj/structure/roguemachine/teleport_beacon{
-	custom_name = "Sunmarch Southern Crossroads"
+	custom_name = "Solara Vie Southern Crossroads"
 	},
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/field)
@@ -28963,7 +28951,7 @@
 /area/provincial/underground/dungeon/licharena)
 "jVL" = (
 /obj/structure/roguemachine/teleport_beacon{
-	custom_name = "Sunmarch Center"
+	custom_name = "Solaris Ridge"
 	},
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
@@ -29189,8 +29177,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/meeting_room)
 "jZH" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
+/obj/structure/roguemachine/teleport_beacon/wilderness{
 	custom_name = "Goblins' Village"
 	},
 /turf/open/floor/rogue/dirt,
@@ -32426,8 +32413,7 @@
 /turf/open/floor/rogue/greenstone,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "lfj" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
+/obj/structure/roguemachine/teleport_beacon/underdark{
 	custom_name = "Lich's Hall"
 	},
 /turf/open/floor/rogue/carpet/lord/center/no_teleport,
@@ -34549,11 +34535,11 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
 "lTA" = (
-/obj/structure/fluff/railing/border{
-	dir = 5
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	custom_name = "Eternal Flame"
 	},
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/outdoors/forest)
 "lTL" = (
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/provincial/indoors/town/province_keep/quarters/jester)
@@ -35273,8 +35259,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/old_university)
 "mgP" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_lava";
+/obj/structure/roguemachine/teleport_beacon/lava{
 	custom_name = "Goblin Fortress"
 	},
 /turf/open/floor/rogue/concrete,
@@ -37132,9 +37117,8 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/decrepit_tower)
 "mLM" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
-	custom_name = "Orcs' Treasure Room"
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	custom_name = "Old Ruins"
 	},
 /turf/open/floor/rogue/herringbone,
 /area/provincial/underground/dungeon/old_ruin)
@@ -43098,8 +43082,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors)
 "oJR" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
+/obj/structure/roguemachine/teleport_beacon/wilderness{
 	custom_name = "Vulnafir"
 	},
 /turf/open/water/cleanshallow,
@@ -43711,13 +43694,6 @@
 "oVg" = (
 /turf/open/water/pond,
 /area/provincial/outdoors/beach/forest)
-"oVD" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
-	custom_name = "Abandoned Village"
-	},
-/turf/open/floor/rogue/grass,
-/area/provincial/outdoors/forest)
 "oVH" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /obj/effect/decal/cobbleedge{
@@ -48642,12 +48618,11 @@
 	},
 /area/provincial/underground/dungeon/vulnafir)
 "qCQ" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
-	custom_name = "Lone Knight"
+/obj/structure/roguemachine/teleport_beacon/underdark{
+	custom_name = "The Underdark"
 	},
-/turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/turf/open/floor/rogue/blocks,
+/area/provincial/underground/underdark)
 "qCS" = (
 /obj/structure/fluff/statue/gargoyle/moss/candles,
 /turf/open/floor/rogue/blocks,
@@ -49058,14 +49033,8 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town)
 "qKx" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
-	custom_name = "Winding Halls' Underking's Quarters"
-	},
-/turf/open/floor/rogue/ruinedwood{
-	icon_state = "weird1"
-	},
-/area/provincial/underground/dungeon/winding_halls)
+/turf/closed/wall/mineral/rogue/stone/moss,
+/area/provincial/outdoors/forest)
 "qKD" = (
 /turf/open/floor/rogue/wood/herringbone,
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
@@ -51408,9 +51377,8 @@
 	},
 /area/provincial/indoors/town/veterans_house)
 "rDi" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_underdark";
-	custom_name = "Skeleton Basement"
+/obj/structure/roguemachine/teleport_beacon/underdark{
+	custom_name = "Skeletal Crypt"
 	},
 /turf/open/floor/rogue/blocks/paving,
 /area/provincial/indoors/town/basement)
@@ -51607,8 +51575,7 @@
 	},
 /area/provincial/outdoors/town)
 "rHK" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_underdark";
+/obj/structure/roguemachine/teleport_beacon/underdark{
 	custom_name = "Goblin Basement"
 	},
 /turf/open/floor/rogue/blocks,
@@ -53117,8 +53084,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/three)
 "shr" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_underdark";
+/obj/structure/roguemachine/teleport_beacon/wilderness{
 	custom_name = "Old University Lockroom"
 	},
 /turf/open/floor/rogue/church,
@@ -54321,9 +54287,8 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
 "sDT" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
-	custom_name = "Giuseppe's Treasure"
+/obj/structure/roguemachine/teleport_beacon/bandit{
+	custom_name = "Giuseppe's Toybox"
 	},
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -60160,9 +60125,8 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors)
 "uGm" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
-	custom_name = "Skeleton Village"
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	custom_name = "Riverbrook"
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/outdoors/beach/forest)
@@ -60232,9 +60196,11 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "uHy" = (
-/obj/structure/fluff/psycross,
-/turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	custom_name = "The Winding Halls"
+	},
+/turf/open/floor/rogue/churchbrick,
+/area/provincial/underground/dungeon/winding_halls)
 "uHG" = (
 /obj/structure/table/wood,
 /obj/item/roguestatue/iron{
@@ -60970,8 +60936,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/beach)
 "uVU" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_outside";
+/obj/structure/roguemachine/teleport_beacon/bandit{
 	custom_name = "Searaiders' Hold"
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -61655,15 +61620,6 @@
 /obj/item/roguegem/random,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/dungeon/old_ruin)
-"vjq" = (
-/obj/structure/fluff/statue/femalestatue/bared{
-	name = "savior";
-	desc = "An inscription reads: She who split that which was one into that which is many.";
-	pixel_x = -20;
-	pixel_y = -30
-	},
-/turf/open/floor/carpet/red,
-/area/provincial/underground/dungeon/winding_halls)
 "vjy" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -62846,12 +62802,6 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/licharena)
-"vEj" = (
-/obj/structure/fluff/railing/border{
-	dir = 1
-	},
-/turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
 "vEv" = (
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/church/quarters)
@@ -65742,7 +65692,7 @@
 "wGd" = (
 /obj/item/reagent_containers/food/snacks/crow,
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/outdoors/forest)
 "wGe" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/rogue/grassyel,
@@ -66303,8 +66253,7 @@
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/mages_university/artificer)
 "wQv" = (
-/obj/structure/roguemachine/teleport_beacon{
-	icon_state = "aetheryte_lava";
+/obj/structure/roguemachine/teleport_beacon/lava{
 	custom_name = "Dragons' Den"
 	},
 /turf/open/floor/rogue/naturalstone,
@@ -69483,11 +69432,9 @@
 /turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/provincial/underground/dungeon/licharena)
 "xVD" = (
-/obj/structure/fluff/railing/border{
-	dir = 9
-	},
+/obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/outdoors/beach/forest)
 "xVG" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /obj/structure/bed/rogue/inn/wool,
@@ -70210,7 +70157,7 @@
 "yiI" = (
 /obj/structure/chair/bench/church/smallbench,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors)
+/area/provincial/outdoors/forest)
 "yiN" = (
 /obj/effect/decal/cobbleedge{
 	dir = 9
@@ -82391,7 +82338,7 @@ btr
 btr
 btr
 kos
-btr
+qCQ
 btr
 btr
 pgs
@@ -82829,7 +82776,7 @@ pgs
 pgs
 pgs
 pgs
-heJ
+pgs
 pgs
 pgs
 pgs
@@ -131944,7 +131891,7 @@ pUX
 pUX
 vCf
 fKX
-qKx
+cxw
 cxw
 cxw
 taU
@@ -134204,8 +134151,8 @@ vPq
 vCf
 fKX
 dnw
-vjq
-sqd
+lau
+uHy
 xUK
 lau
 cxw
@@ -216257,7 +216204,7 @@ azB
 azB
 kGI
 kGI
-oVD
+kGI
 azB
 azB
 azB
@@ -261010,13 +260957,13 @@ kGI
 kGI
 kGI
 kGI
-iQS
-iQS
-iQS
-mfs
-mfs
-iQS
-acq
+woX
+woX
+woX
+pzC
+pzC
+woX
+kGI
 kGI
 kGI
 kGI
@@ -261459,17 +261406,17 @@ kGI
 kGI
 azB
 woX
-iQS
-cxG
-iQS
-iQS
-iQS
-iQS
-mfs
-mfs
-iQS
-uGf
-cxG
+woX
+azB
+woX
+woX
+woX
+woX
+pzC
+pzC
+woX
+qKx
+azB
 nWL
 nWL
 nWL
@@ -261910,19 +261857,19 @@ kGI
 woX
 woX
 azB
-cxG
-cxG
-cxG
-cxG
-uHy
-iQS
+azB
+azB
+azB
+azB
+pzC
+woX
 yiI
-mfs
+pzC
 wGd
-mfs
+pzC
 fdY
-iQS
-eiB
+woX
+nWL
 nWL
 nWL
 nWL
@@ -262361,20 +262308,20 @@ azB
 sBk
 azB
 azB
-cxG
-cxG
+azB
+azB
 rSU
+qKI
 rSU
-rSU
-lTA
-mfs
-mfs
-mfs
-mfs
-mfs
+pzC
+pzC
+pzC
+pzC
+pzC
+pzC
 fdY
-acq
-oAt
+kGI
+sBk
 nWL
 woX
 nWL
@@ -262813,20 +262760,20 @@ azB
 azB
 woX
 azB
-oAt
-acq
-rSU
-daS
+sBk
+kGI
+qKI
 xlk
-vEj
-mfs
-mfs
-qCQ
-mfs
-mfs
+qKI
+pzC
+pzC
+pzC
+pzC
+pzC
+lTA
 fdY
-acq
-cxG
+kGI
+azB
 azB
 woX
 nWL
@@ -263265,20 +263212,20 @@ azB
 azB
 woX
 azB
-acq
-acq
+kGI
+kGI
 rSU
+qKI
 rSU
-rSU
-xVD
-mfs
-cxG
-mfs
-mfs
-mfs
+pzC
+pzC
+azB
+pzC
+pzC
+pzC
 fdY
-acq
-acq
+kGI
+kGI
 kGI
 woX
 dbq
@@ -263718,19 +263665,19 @@ dbq
 azB
 kGI
 kGI
-acq
-cxG
-cxG
-cxG
-uHy
-cxG
-cxG
+kGI
+azB
+azB
+azB
+pzC
+azB
+azB
 ddC
-mfs
-acq
+pzC
+kGI
 fdY
-acq
-acq
+kGI
+kGI
 woX
 woX
 kGI
@@ -264171,17 +264118,17 @@ azB
 kGI
 dbq
 kGI
-cxG
-cxG
-cxG
-cxG
-cxG
-mfs
-mfs
-mfs
-acq
-uGf
-acq
+azB
+azB
+azB
+azB
+azB
+pzC
+pzC
+pzC
+kGI
+qKx
+kGI
 dbq
 woX
 nWL
@@ -264626,13 +264573,13 @@ woX
 woX
 kGI
 kGI
-cxG
-oAt
-mfs
-mfs
-mfs
-iQS
-cxG
+azB
+sBk
+pzC
+pzC
+pzC
+woX
+azB
 nWL
 nWL
 nWL
@@ -372875,7 +372822,7 @@ mxb
 mxb
 mxb
 sQN
-iXi
+fhu
 iXi
 iXi
 iXi
@@ -373329,7 +373276,7 @@ sQN
 sQN
 iXi
 iXi
-iXi
+fhu
 iXi
 sQN
 sQN
@@ -373778,8 +373725,8 @@ kOO
 sQN
 sQN
 sQN
-sQN
-iXi
+fhu
+fhu
 iXi
 iXi
 iXi
@@ -374231,8 +374178,8 @@ sQN
 sQN
 sQN
 hTn
-iXi
-iXi
+fhu
+fhu
 iXi
 iXi
 sQN
@@ -374682,8 +374629,8 @@ mxb
 kOO
 sQN
 sQN
-sQN
-iXi
+fhu
+fhu
 iXi
 iXi
 iXi
@@ -375134,8 +375081,8 @@ sQN
 mxb
 sQN
 sQN
-jww
-iXi
+xVD
+fhu
 iXi
 iXi
 iXi
@@ -375589,7 +375536,7 @@ sQN
 iLM
 iXi
 iXi
-iXi
+fhu
 iXi
 sQN
 sQN
@@ -376039,7 +375986,7 @@ muZ
 sQN
 sQN
 sQN
-iXi
+fhu
 iXi
 iXi
 iXi
