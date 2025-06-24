@@ -56,3 +56,4 @@
 	armor_penetration = 5
 	damage_type = BRUTE
 	woundclass = BCLASS_STAB
+	hitsound = 'sound/combat/hits/bladed/genstab (1).ogg'

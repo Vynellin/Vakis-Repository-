@@ -161,6 +161,7 @@
     armor_penetration = 10
     woundclass = BCLASS_BLUNT
     nodamage = FALSE
+    hitsound = 'sound/combat/hits/blunt/bluntsmall (1).ogg'
 
     var/max_turn_rate = 1 //The higher it is, the better it turns
     var/direction = 0
