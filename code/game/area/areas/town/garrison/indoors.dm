@@ -35,9 +35,15 @@
 	brief_descriptor = "where men rot and hope dwindles"
 	general_location = /area/provincial/indoors/town/province_keep/garrison::general_location
 
+/area/provincial/indoors/town/province_keep/garrison/dungeon/secondary
+	name = "Secondary Dungeon"
+
 /area/provincial/indoors/town/province_keep/garrison/cell
-	name = "Dungeon Cell"
+	name = "Dungeon Cells"
 	icon_state = "cell"
+
+/area/provincial/indoors/town/province_keep/garrison/cell/secondary
+	name = "Secondary Dungeon Cells"
 
 /// GATES ///
 

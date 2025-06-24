@@ -9,6 +9,10 @@
 	brief_descriptor = "nestled within the keep of Sunmarch."
 	general_location = "Inside the keep!"
 
+/// ATTIC ///
+/area/provincial/indoors/town/province_keep/attic
+	name = "Keep of Sunmarch - Attic"
+
 /// BATHS ///
 
 /area/provincial/indoors/town/province_keep/baths
