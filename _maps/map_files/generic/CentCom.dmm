@@ -1979,7 +1979,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/customsign{
-	desc = "This is a temporary replacement for the podlauncher rooms of a more proper admin z-level. All five podbays are here, denoted by different tiles. The Aetherial Road / ERT is the 3x3. Have fun!";
+	desc = "Supplypods won't work until we get TGUI back in. Have a fishy stick!";
 	name = "AHOY THERE"
 	},
 /turf/open/floor/rogue/tile,
