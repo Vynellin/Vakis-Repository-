@@ -51,10 +51,42 @@
 	icon_state = "dwarfin"
 	first_time_text = "The Dusk Quarter"
 
-/// JANITOR'S ABODE ///
+/// FARMHOUSE ///
+/area/provincial/indoors/town/farm
+	name = "Farmhouse"
 
-/area/provincial/indoors/town/janitors_abode
+/area/provincial/indoors/town/farm/basement
+	name = "Farmhouse Basement"
+
+/area/provincial/indoors/town/farm/secondary
+	name = "Secondary Farmhouse"
+
+/area/provincial/indoors/town/farm/secondary/basement
+	name = "Secondary Farmhouse Basement"
+
+/area/provincial/indoors/town/farm/secondary/stall
+	name = "Soilson Stall"
+
+/area/provincial/indoors/town/farm/barn
+	name = "Barn"
+
+/area/provincial/indoors/town/farm/chicken_coop
+	name = "Chicken Coop"
+
+/// HOUSES ///
+
+/area/provincial/indoors/town/house
+	name = "Townhouse"
+
+/area/provincial/indoors/town/house/janitor
 	name = "Janitor's Abode"
+
+/area/provincial/indoors/town/house/veteran
+	name = "Veteran's House"
+	icon_state = "garrison"
+
+/area/provincial/indoors/town/house/village_elder
+	name = "Village Elder's House"
 
 /// MAGE'S UNIVERSITY ///
 
@@ -146,6 +178,14 @@
 	droning_sound_night = null
 	converted_type = /area/provincial/outdoors/shop
 
+/// STABLES ///
+
+/area/provincial/indoors/town/stables
+	name = "Stables"
+
+/area/provincial/indoors/town/stables/rented
+	name = "Rented Stables"
+
 /// TAVERN ///
 
 /area/provincial/indoors/town/tavern
@@ -228,9 +268,3 @@
 
 /area/provincial/indoors/town/tailor
 	name = "Tailor"
-
-/// VETERAN'S HOUSE ///
-
-/area/provincial/indoors/town/veterans_house
-	name = "Veteran's House"
-	icon_state = "garrison"

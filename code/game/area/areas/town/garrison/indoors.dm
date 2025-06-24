@@ -81,4 +81,4 @@
 /// STABLES ///
 
 /area/provincial/indoors/town/province_keep/garrison/stables
-	name = "Stables"
+	name = "Keep Stables"

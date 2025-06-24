@@ -153,3 +153,4 @@
 
 /area/provincial/indoors/town/province_keep/deacon/quarters
 	name = "Deacon's Quarters"
+
