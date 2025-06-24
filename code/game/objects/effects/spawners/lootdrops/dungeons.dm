@@ -1,14 +1,3 @@
-//!View bog_shack_small.dm for documentation
-
-/obj/effect/landmark/map_load_mark/smalldungeon
-	name = "Small Dungeon"
-	templates = list( "smalldungeon1" )
-
-/datum/map_template/smalldungeon1
-	name = "Small Dungeon Varient 1"
-	id = "smalldungeon1"
-	mappath = "_maps/map_files/templates/smalldungeons/smalldungeon1.dmm"
-
 /obj/effect/spawner/lootdrop/roguetown/dungeon
 	name = "dungeon spawner"
 	loot = list(
@@ -156,6 +145,7 @@
 	lootcount = 1
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/materials
+	icon_state = "materials"
 	loot = list(
 		// Materials
 		/obj/item/natural/bundle/stick = 2,
@@ -171,6 +161,7 @@
 	lootcount = 2
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing
+	icon_state = "clothing"
 	loot = list(
 		// Clothing
 		/obj/item/clothing/cloak/stabard = 3,
@@ -190,6 +181,7 @@
 	lootcount = 1
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money
+	icon_state = "coins"
 	loot = list(
 		// Money
 		/obj/item/roguecoin/copper = 5,
@@ -238,6 +230,7 @@
 	lootcount = 1
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/medical
+	icon_state = "medical"
 	loot = list(
 		//medical
 		/obj/item/needle = 4,
@@ -247,6 +240,7 @@
 	lootcount = 2
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons
+	icon_state = "weapons"
 	loot = list(
 		//weapons
 		/obj/item/rogueweapon/mace = 2,
@@ -275,12 +269,11 @@
 		/obj/item/rogueweapon/eaglebeak/lucerne = 1,
 		/obj/item/rogueweapon/eaglebeak = 1,
 		/obj/item/rogueweapon/spear/billhook = 1,
-
-
 	)
 	lootcount = 1
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/tools
+	icon_state = "tools"
 	loot = list(
 		// tools
 		/obj/item/rogueweapon/shovel = 3,
@@ -295,6 +288,7 @@
 	lootcount = 1
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor
+	icon_state = "armor"
 	loot = list(
 		//armor
 		/obj/item/clothing/suit/roguetown/armor/leather/studded = 2,
@@ -327,6 +321,7 @@
 	lootcount = 1
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/food
+	icon_state = "food"
 	loot = list(
 		//food
 		/obj/item/reagent_containers/food/snacks/rogue/crackerscooked = 3,
@@ -337,6 +332,7 @@
 	lootcount = 2
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells
+	icon_state = "spells"
 	loot = list(
 		//spells
 		/obj/item/book/granter/spell/blackstone/spitfire = 5,
@@ -364,6 +360,7 @@
 	lootcount = 1
 
 /obj/effect/spawner/lootdrop/roguetown/dungeon/gadgets
+	icon_state = "gadgets"
 	loot = list(
 		//Adventuring Gear
 		/obj/item/bedroll = 3,
