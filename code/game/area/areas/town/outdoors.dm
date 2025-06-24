@@ -30,13 +30,13 @@
 /// RAMPARTS ///
 
 /area/provincial/outdoors/town/ramparts
-	name = "Solaris Ridge - Ramparts"
+	name = "Exterior Ramparts"
 	icon_state = "manorgarri"
 
 /// ROOFS ///
 
 /area/provincial/outdoors/town/roofs
-	name = "Solaris Ridge - Rooftops"
+	name = "Rooftops"
 	icon_state = "roofs"
 	ambientsounds = AMB_MOUNTAIN
 	ambientnight = AMB_MOUNTAIN

@@ -1,4 +1,5 @@
 /area/provincial/outdoors/church
+	name = "Chapel Gardens"
 	icon_state = "church"
 	droning_sound = 'sound/music/area/church.ogg'
 	droning_sound_dusk = null

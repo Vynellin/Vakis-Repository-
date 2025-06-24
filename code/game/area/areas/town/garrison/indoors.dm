@@ -13,52 +13,52 @@
 /// ARMORY ///
 
 /area/provincial/indoors/town/province_keep/garrison/armory
-	name = "Keep of Sunmarch - Armory"
+	name = "Armory"
 
 /area/provincial/indoors/town/province_keep/garrison/armory/secure
-	name = "Keep of Sunmarch - Secure Armory"
+	name = "Secure Armory"
 
 /area/provincial/indoors/town/province_keep/garrison/armory/toilets
-	name = "Keep of Sunmarch - Armory Toilets"
+	name = "Armory Toilets"
 
 /// CANTEEN ///
 
 /area/provincial/indoors/town/province_keep/garrison/canteen
-	name = "Keep of Sunmarch - Canteen"
+	name = "Canteen"
 
 /// DUNGEON ///
 
 /area/provincial/indoors/town/province_keep/garrison/dungeon
-	name = "Keep of Sunmarch - Dungeon"
+	name = "Dungeon"
 	spookysounds = SPOOKY_DUNGEON
 	spookynight = SPOOKY_DUNGEON
 	brief_descriptor = "where men rot and hope dwindles"
 	general_location = /area/provincial/indoors/town/province_keep/garrison::general_location
 
 /area/provincial/indoors/town/province_keep/garrison/cell
-	name = "Keep of Sunmarch - Dungeon Cell"
+	name = "Dungeon Cell"
 	icon_state = "cell"
 
 /// QUARTERS ///
 
 /area/provincial/indoors/town/province_keep/garrison/quarters
-	name = "Keep of Sunmarch - Barracks"
+	name = "Barracks"
 
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain
-	name = "Keep of Sunmarch - Knight Captain's Quarters"
+	name = "Knight Captain's Quarters"
 
 /area/provincial/indoors/town/province_keep/garrison/quarters/marshal
-	name = "Keep of Sunmarch - Marshal's Quarters"
+	name = "Marshal's Quarters"
 
 /area/provincial/indoors/town/province_keep/garrison/quarters/sergeant
-	name = "Keep of Sunmarch - Sergeant's Quarters"
+	name = "Sergeant's Quarters"
 
 /// RAMPARTS ///
 
 /area/provincial/indoors/town/province_keep/garrison/ramparts
-	name = "Keep of Sunmarch - Ramparts"
+	name = "Keep Ramparts"
 
 /// STABLES ///
 
 /area/provincial/indoors/town/province_keep/garrison/stables
-	name = "Keep of Sunmarch - Stables"
+	name = "Stables"

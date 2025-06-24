@@ -122,7 +122,7 @@
 /// DIGNITARIES ///
 
 /area/provincial/indoors/town/province_keep/magician
-	name = "Magician's Tower"
+	name = "Court Magician's Tower"
 	icon_state = "magician"
 	spookysounds = SPOOKY_MYSTICAL
 	spookynight = SPOOKY_MYSTICAL
@@ -133,6 +133,12 @@
 	brief_descriptor = "where the university sent dignitary to persuade the Marquis."
 	general_location = "Inside the Dignitary's Quarter!"
 
+/area/provincial/indoors/town/province_keep/magician/alchemylab
+	name = "Court Magician's Alchemy Lab"
+
+/area/provincial/indoors/town/province_keep/magician/quarters
+	name = "Court Magician's Quarters"
+
 /area/provincial/indoors/town/province_keep/deacon
 	name = "Deacon's Office"
 	icon_state = "physician"
@@ -141,3 +147,9 @@
 	droning_sound_night = null
 	brief_descriptor = "where the chapel of lights sent dignitary to persuade the Marquis."
 	general_location = "Inside the Dignitary's Quarter!"
+
+/area/provincial/indoors/town/province_keep/deacon/alchemylab
+	name = "Archivist-Deacon Alchemy Lab"
+
+/area/provincial/indoors/town/province_keep/deacon/quarters
+	name = "Deacon's Quarters"

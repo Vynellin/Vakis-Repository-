@@ -1,5 +1,5 @@
 /area/provincial/indoors/town
-	name = "Solaris Ridge - Interior"
+	name = "Interior"
 	icon_state = "town"
 	droning_sound = 'sound/music/area/towngen.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
@@ -12,18 +12,18 @@
 /// ADVENTURER'S GUILD ///
 
 /area/provincial/indoors/town/adventurers_guild
-	name = "Solaris Ridge - Adventurer's Guild"
+	name = "Adventurer's Guild"
 
 /area/provincial/indoors/town/adventurers_guild/handlers_office
-	name = "Solaris Ridge - Guild Handler's Office"
+	name = "Guild Handler's Office"
 
 /area/provincial/indoors/town/adventurers_guild/handlers_office/bedroom
-	name = "Solaris Ridge - Guild Handler's Bedroom"
+	name = "Guild Handler's Bedroom"
 
 /// BASEMENT ///
 
 /area/provincial/indoors/town/basement
-	name = "Solaris Ridge - Basement"
+	name = "Basement"
 	icon_state = "basement"
 	ambientsounds = AMB_BASEMENT
 	ambientnight = AMB_BASEMENT
@@ -39,7 +39,7 @@
 /// BLACKSMITH ///
 
 /area/provincial/indoors/town/blacksmith
-	name = "Solaris Ridge - Blacksmith"
+	name = "Blacksmith"
 	icon_state = "dwarfin"
 	droning_sound = 'sound/music/area/dwarf.ogg'
 	brief_descriptor = "where craftsmen toil and legends are prepared"
@@ -47,60 +47,62 @@
 /// DUSK QUARTER ///
 
 /area/provincial/indoors/town/dusk_quarter
-	name = "Solaris Ridge - Dusk Quarter"
+	name = "Dusk Quarter"
 	icon_state = "dwarfin"
 	first_time_text = "The Dusk Quarter"
 
 /// JANITOR'S ABODE ///
 
 /area/provincial/indoors/town/janitors_abode
-	name = "Solaris Ridge - Janitor's Abode"
+	name = "Janitor's Abode"
 
 /// MAGE'S UNIVERSITY ///
 
 /area/provincial/indoors/town/mages_university
-	name = "Solaris Ridge - Mage's University"
+	name = "Mage's University"
 
 /area/provincial/indoors/town/mages_university/alchemy_lab
-	name = "Solaris Ridge - University Alchemy Lab"
+	name = "University Alchemy Lab"
 
 /area/provincial/indoors/town/mages_university/archivist
-	name = "Solaris Ridge - Archivist's Office"
+	name = "Archivist's Office"
 
 /area/provincial/indoors/town/mages_university/archivist/quarters
-	name = "Solaris Ridge - Archivist's Quarters"
+	name = "Archivist's Quarters"
 
 /area/provincial/indoors/town/mages_university/artificer
-	name = "Solaris Ridge - Artificer's Office"
+	name = "Artificer's Office"
 
 /area/provincial/indoors/town/mages_university/established_mage_hall
-	name = "Solaris Ridge - Established Mage Hall"
+	name = "Established Mage Hall"
 
 /area/provincial/indoors/town/mages_university/head_mage
-	name = "Solaris Ridge - Head Mage's Quarters"
+	name = "Head Mage's Quarters"
 
 /area/provincial/indoors/town/mages_university/kitchen
-	name = "Solaris Ridge - University Kitchen"
+	name = "University Kitchen"
 
 /area/provincial/indoors/town/mages_university/library
-	name = "Solaris Ridge - Library"
+	name = "Library"
 
 /area/provincial/indoors/town/mages_university/shared_storage
-	name = "Solaris Ridge - University Shared Storage"
+	name = "University Shared Storage"
 
 /// STALLS ///
+
 /area/provincial/indoors/town/stall
-	name = "Solaris Ridge - Stall I"
+	name = "Stall I"
 
 /area/provincial/indoors/town/stall/stall_two
-	name = "Solaris Ridge - Stall II"
+	name = "Stall II"
 
 /area/provincial/indoors/town/stall/stall_three
-	name = "Solaris Ridge - Stall III"
+	name = "Stall III"
 
 /// STEWARD ///
+
 /area/provincial/indoors/town/steward
-	name = "Solaris Ridge - Stewardry"
+	name = "Stewardry"
 	icon_state = "warehouse"
 
 /area/provincial/indoors/town/steward/import_platform
@@ -114,13 +116,13 @@
 /// RAMPARTS ///
 
 /area/provincial/indoors/town/ramparts
-	name = "Solaris Ridge - Ramparts"
+	name = "Ramparts"
 	icon_state = "garrison"
 
 /// SEWERS ///
 
 /area/provincial/indoors/town/sewer
-	name = "Solaris Ridge - Sewers"
+	name = "Sewers"
 	icon_state = "sewer"
 	ambientsounds = AMB_CAVEWATER
 	ambientnight = AMB_CAVEWATER
@@ -157,13 +159,78 @@
 	converted_type = /area/provincial/outdoors/tavern
 	brief_descriptor = "where merriment sparks and bards play"
 
+/area/provincial/indoors/town/tavern/arena
+	name = "Arena"
+
+/area/provincial/indoors/town/tavern/arena/spectator
+	name = "Arena Spectation"
+
+/area/provincial/indoors/town/tavern/bath
+	name = "Bathhouse"
+
+/area/provincial/indoors/town/tavern/kitchen
+	name = "Tavern's Kitchen"
+
+/area/provincial/indoors/town/tavern/kitchen/pantry
+	name = "Tavern's Pantry"
+
+/area/provincial/indoors/town/tavern/public_meeting_room
+	name = "Public Meeting Room"
+
+/area/provincial/indoors/town/tavern/innkeeper
+	name = "Innkeeper's Quarters"
+
+/area/provincial/indoors/town/tavern/tapster_quarters
+	name = "Tapster Quarters"
+
+/// TAVERN ROOMS ///
+
+/area/provincial/indoors/town/tavern/room
+	name = "Room I"
+
+/area/provincial/indoors/town/tavern/room/two
+	name = "Room II"
+
+/area/provincial/indoors/town/tavern/room/three
+	name = "Room III"
+
+/area/provincial/indoors/town/tavern/room/four
+	name = "Room IV"
+
+/area/provincial/indoors/town/tavern/room/five
+	name = "Room V"
+
+/area/provincial/indoors/town/tavern/room/six
+	name = "Room VI"
+
+/area/provincial/indoors/town/tavern/room/seven
+	name = "Room VII"
+
+/area/provincial/indoors/town/tavern/room/eight
+	name = "Room VIII"
+
+/area/provincial/indoors/town/tavern/room/luxury
+	name = "Luxury Room I"
+
+/area/provincial/indoors/town/tavern/room/luxury/two
+	name = "Luxury Room II"
+
+/area/provincial/indoors/town/tavern/room/luxury/three
+	name = "Luxury Room III"
+
+/area/provincial/indoors/town/tavern/room/luxury/four
+	name = "Luxury Room IV"
+
+/area/provincial/indoors/town/tavern/room/luxury/five
+	name = "Luxury Room V"
+
 /// TAILOR ///
 
 /area/provincial/indoors/town/tailor
-	name = "Solaris Ridge - Tailor"
+	name = "Tailor"
 
 /// VETERAN'S HOUSE ///
 
 /area/provincial/indoors/town/veterans_house
-	name = "Solaris Ridge - Veteran's House"
+	name = "Veteran's House"
 	icon_state = "garrison"

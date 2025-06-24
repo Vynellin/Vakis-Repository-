@@ -29,7 +29,7 @@
 		// Only allow ground-level town areas, no roofs or underground
 		if(!istype(A, /area/provincial/underground) && !istype(A, /area/provincial/outdoors/town/roofs))
 			if(istype(A, /area/provincial/indoors/town/tavern) || \
-			   istype(A, /area/provincial/indoors/town/church/chapel) || \
+			   istype(A, /area/provincial/indoors/town/church) || \
 			   istype(A, /area/provincial/indoors/town/province_keep))
 				indoor_areas += A
 			else if(istype(A, /area/provincial/outdoors/town))
