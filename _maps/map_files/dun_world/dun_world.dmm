@@ -3045,6 +3045,7 @@
 	},
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/newstone/alt,
 /area/provincial/indoors/town/province_keep/garrison/gate/west)
 "baH" = (
@@ -4312,6 +4313,7 @@
 	},
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/newstone,
 /area/provincial/indoors/town/province_keep/garrison/gate/west)
 "bzu" = (
@@ -57770,6 +57772,7 @@
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/peasant/farm,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/farm/secondary/basement)
 "tFU" = (
@@ -66407,6 +66410,13 @@
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground)
+"wGQ" = (
+/obj/effect/decal/mossy{
+	dir = 4
+	},
+/obj/structure/flora/roguegrass/bush,
+/turf/open/floor/rogue/grass,
+/area/provincial/outdoors/town)
 "wHg" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
@@ -246614,7 +246624,7 @@ sWS
 wGe
 sWS
 wSb
-nEJ
+tSx
 qCy
 fhT
 sbt
@@ -247533,7 +247543,7 @@ rNA
 wIn
 tVV
 bUK
-gBC
+wGQ
 wno
 tYn
 tYn
