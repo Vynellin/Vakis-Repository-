@@ -35,7 +35,7 @@
 	brief_descriptor = "where men rot and hope dwindles"
 	general_location = /area/provincial/indoors/town/province_keep/garrison::general_location
 
-/area/provincial/indoors/town/province_keep/garrison/cell
+/area/provincial/indoors/town/province_keep/garrison/dungeon/cell
 	name = "Dungeon Cell"
 	icon_state = "cell"
 
@@ -43,6 +43,11 @@
 
 /area/provincial/indoors/town/province_keep/garrison/gate
 	name = "Gatehouse"
+	keep_area = FALSE
+	first_time_text = null
+	droning_sound = /area/provincial/indoors/town::droning_sound
+	droning_sound_dusk = /area/provincial/indoors/town::droning_sound_dusk
+	droning_sound_night = /area/provincial/indoors/town::droning_sound_night
 
 /area/provincial/indoors/town/province_keep/garrison/gate/north
 	name = "Northern Gatehouse"
@@ -58,6 +63,10 @@
 
 /area/provincial/indoors/town/province_keep/garrison/gate/keep
 	name = "Keep Gatehouse"
+	keep_area = TRUE // nightmare
+	droning_sound = /area/provincial/indoors/town/province_keep/garrison::droning_sound
+	droning_sound_dusk = /area/provincial/indoors/town/province_keep/garrison::droning_sound_dusk
+	droning_sound_night = /area/provincial/indoors/town/province_keep/garrison::droning_sound_night
 
 /// QUARTERS ///
 
