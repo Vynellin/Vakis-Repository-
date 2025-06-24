@@ -737,6 +737,7 @@
 #include "code\game\area\areas\town\church\indoors.dm"
 #include "code\game\area\areas\town\church\outdoors.dm"
 #include "code\game\area\areas\town\garrison\indoors.dm"
+#include "code\game\area\areas\town\garrison\outdoors.dm"
 #include "code\game\area\areas\town\keep\indoors.dm"
 #include "code\game\area\areas\town\keep\outdoors.dm"
 #include "code\game\area\areas\underworld\caves.dm"

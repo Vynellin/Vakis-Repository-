@@ -40,7 +40,7 @@
 /obj/item/rope/chain,
 /obj/item/natural/cloth,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "abc" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/rogue/naturalstone,
@@ -301,7 +301,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 8
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "afx" = (
 /turf/open/floor/rogue/church,
 /area/provincial/underground)
@@ -842,7 +842,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/innercorner{
 	dir = 8
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "aoS" = (
 /obj/structure/bed/rogue,
 /obj/item/bedsheet/rogue/wool,
@@ -991,6 +991,9 @@
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/old_university)
+"arC" = (
+/turf/closed/wall/mineral/rogue/stone/moss,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "arJ" = (
 /obj/structure/stairs{
 	dir = 1
@@ -1141,7 +1144,7 @@
 	desc = "A hide of a slain bear. It looks rich and expensive."
 	},
 /turf/open/floor/rogue/tile/masonic/inverted,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "atv" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -1152,7 +1155,7 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "atw" = (
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/transparent/openspace,
@@ -1176,7 +1179,7 @@
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/rogueweapon/sword/long/exe/cloth,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "atJ" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -1707,7 +1710,7 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "aEE" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -1872,7 +1875,7 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "aID" = (
 /obj/structure/chair/bench/church/r,
 /turf/open/floor/rogue/blocks,
@@ -1892,7 +1895,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "aIS" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 10
@@ -2393,7 +2396,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "aQJ" = (
 /obj/machinery/light/rogue/wallfire/candle/weak/directional/west,
 /turf/open/floor/rogue/wood,
@@ -2529,7 +2532,7 @@
 	},
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "aSH" = (
 /obj/structure/fluff/customsign{
 	name = "DANGEROUS FOE AHEAD!"
@@ -2614,6 +2617,9 @@
 "aUs" = (
 /turf/closed/wall/mineral/rogue/decostone,
 /area/provincial/underground/dungeon/old_university)
+"aUw" = (
+/turf/open/floor/rogue/cobble,
+/area/provincial/outdoors/town/garrison/ramparts)
 "aUI" = (
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/antag/underking,
@@ -2836,6 +2842,9 @@
 /obj/structure/mineral_door/wood/violet,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
+"aYp" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "aYt" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/rogue/hexstone,
@@ -3076,7 +3085,7 @@
 	pixel_y = 32
 	},
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "bcM" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/guard,
 /turf/open/floor/rogue/blocks/green{
@@ -3369,7 +3378,7 @@
 /obj/structure/fluff/railing/border,
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "bib" = (
 /obj/structure/flora/roguetree/underworld,
 /turf/open/floor/rogue/grassred,
@@ -3679,6 +3688,12 @@
 	},
 /turf/open/transparent/openspace,
 /area/provincial/indoors/town)
+"bof" = (
+/obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/access/garrison,
+/obj/effect/mapping_helpers/lock_door,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "boj" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -3875,6 +3890,9 @@
 	icon_state = "weird1"
 	},
 /area/provincial/indoors/town/province_keep/deacon)
+"brN" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "brO" = (
 /obj/structure/closet/crate/coffin,
 /obj/item/reagent_containers/glass/bottle/rogue/manapot,
@@ -4201,6 +4219,9 @@
 	icon_state = "weird1"
 	},
 /area/provincial/indoors/town/church/chapel)
+"bvN" = (
+/turf/open/floor/rogue/wood,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "bvY" = (
 /turf/open/floor/rogue/blocks{
 	dir = 8
@@ -4240,6 +4261,9 @@
 /obj/item/roguegem/diamond,
 /turf/open/floor/rogue/blocks/platform,
 /area/provincial/outdoors/mountains/underkings_maw)
+"bxq" = (
+/turf/closed/wall/mineral/rogue/wooddark/window,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "bxC" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/blocks/platform,
@@ -4402,6 +4426,9 @@
 /obj/structure/fluff/clockwork/alloy_shards,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/underground/dungeon/old_university)
+"bBd" = (
+/turf/open/floor/rogue/blocks,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "bBi" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 4
@@ -4676,7 +4703,7 @@
 "bFa" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/rogue/tile,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "bFn" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -4981,6 +5008,10 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town)
+"bKA" = (
+/obj/machinery/light/rogue/torchholder/directional/east,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "bKI" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /turf/open/floor/rogue/grass,
@@ -5036,7 +5067,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "bLF" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /obj/structure/fluff/walldeco/church/line,
@@ -5157,7 +5188,7 @@
 /area/provincial/indoors/town)
 "bNE" = (
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "bNP" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/blocks/newstone/alt,
@@ -5505,7 +5536,7 @@
 	dir = 6
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "bSF" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/cobble,
@@ -5539,7 +5570,7 @@
 	},
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "bTe" = (
 /obj/effect/decal/wood/herringbone2,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -5901,7 +5932,7 @@
 	dir = 4
 	},
 /turf/open/transparent/openspace,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "bZZ" = (
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/town)
@@ -6160,6 +6191,9 @@
 	icon_state = "weird1"
 	},
 /area/provincial/indoors/town)
+"cfR" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "cgi" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -6591,7 +6625,7 @@
 	name = "Evidence Storage"
 	},
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "coT" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/roguegrass/bush/red,
@@ -8103,7 +8137,7 @@
 /obj/item/clothing/under/roguetown/loincloth/brown,
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "cQW" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -8385,7 +8419,7 @@
 	},
 /obj/effect/landmark/start/guard_captain,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "cWk" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/cloak/stabard/surcoat/guard,
@@ -8973,7 +9007,7 @@
 	pixel_x = 0
 	},
 /turf/open/floor/rogue/wood/herringbone,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "dhf" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/greenstone,
@@ -9410,7 +9444,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "dqz" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -9809,6 +9843,13 @@
 "dxE" = (
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/quarters/jester)
+"dxH" = (
+/obj/structure/fluff/railing/wood{
+	dir = 1;
+	pixel_y = -1
+	},
+/turf/open/floor/rogue/woodturned,
+/area/provincial/outdoors/town/garrison/ramparts)
 "dxM" = (
 /obj/structure/table/wood{
 	dir = 10;
@@ -10892,7 +10933,7 @@
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /obj/structure/chair/wood/rogue/chair3,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "dRl" = (
 /turf/open/floor/rogue/tile/bath,
 /area/provincial/underground/dungeon/old_university_garden)
@@ -10921,7 +10962,7 @@
 /obj/structure/fermenting_barrel/water,
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "dSb" = (
 /obj/item/candle/skull{
 	pixel_x = 11
@@ -10954,7 +10995,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "dSB" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5
@@ -10998,7 +11039,7 @@
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "dTm" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8
@@ -11343,7 +11384,7 @@
 /obj/item/roguekey/manor,
 /obj/item/roguekey/dungeon,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "dZY" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -11540,7 +11581,7 @@
 	pixel_y = 33
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "eeL" = (
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/beach)
@@ -11915,7 +11956,7 @@
 	pixel_x = -32
 	},
 /turf/open/floor/rogue/tile/masonic/inverted,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "emj" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
@@ -12133,7 +12174,7 @@
 /obj/machinery/light/rogue/torchholder/directional/east,
 /obj/structure/roguemachine/scomm/directional/south,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "epy" = (
 /obj/structure/flora/roguetree,
 /turf/open/water/swamp/deep,
@@ -12530,7 +12571,7 @@
 	icon_state = "cobbleedge-sread"
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "ewm" = (
 /obj/item/flint,
 /obj/structure/bed/rogue/shit,
@@ -12661,7 +12702,7 @@
 	pixel_y = 11
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "exT" = (
 /obj/structure/rack/rogue/shelf,
 /obj/structure/rack/rogue/shelf/big{
@@ -13158,7 +13199,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "eFj" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 8
@@ -13185,7 +13226,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "eFn" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
 /obj/structure/chair/bench{
@@ -13607,6 +13648,11 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /turf/open/floor/rogue/tile,
 /area/provincial/underground/dungeon/winding_halls)
+"eNE" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle{
+	dir = 8
+	},
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "eNM" = (
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -14625,6 +14671,9 @@
 /obj/item/storage/belt/rogue/pouch/coins/rich,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground/underdark/sunkencity)
+"feb" = (
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "feg" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/carpet/red,
@@ -15203,7 +15252,7 @@
 /obj/item/paper/scroll,
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "fpa" = (
 /obj/structure/mineral_door/wood/deadbolt{
 	dir = 8
@@ -16482,7 +16531,7 @@
 /obj/item/bedsheet/rogue/fabric_double,
 /obj/effect/landmark/start/guard_captain,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "fNH" = (
 /obj/structure/mineral_door/wood/window,
 /turf/open/floor/rogue/dirt/road,
@@ -16572,6 +16621,12 @@
 /mob/living/carbon/human/species/goblin/npc/ambush/sea,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/basement)
+"fOY" = (
+/obj/structure/chair/wood/rogue/fancy{
+	dir = 4
+	},
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "fPa" = (
 /obj/structure/flora/roguegrass/bush,
 /turf/open/floor/rogue/grass,
@@ -16585,7 +16640,10 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
+"fPr" = (
+/turf/open/floor/rogue/tile,
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "fPs" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush,
 /turf/open/floor/rogue/dirt,
@@ -17069,7 +17127,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "fYa" = (
 /obj/structure/spacevine,
 /turf/open/water/sewer,
@@ -17387,7 +17445,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "gdH" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/pick/steel,
@@ -17793,7 +17851,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "gkt" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 1
@@ -17878,6 +17936,31 @@
 	},
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town)
+"gmh" = (
+/obj/structure/table/wood,
+/obj/item/paper,
+/obj/item/paper{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/paper{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/paper{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/paper{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/obj/item/paper{
+	pixel_y = 7
+	},
+/obj/item/natural/feather,
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "gmu" = (
 /obj/structure/fermenting_barrel/random/water,
 /turf/open/floor/rogue/cobble,
@@ -17896,6 +17979,10 @@
 "gmz" = (
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/town/basement)
+"gmH" = (
+/obj/structure/table/wood,
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "gmQ" = (
 /obj/structure/closet/crate/chest{
 	locked = 1;
@@ -18046,6 +18133,10 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town)
+"gpo" = (
+/obj/machinery/light/rogue/torchholder/directional/north,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "gpr" = (
 /obj/effect/turf_decal/trimline/yellow/filled/line,
 /obj/structure/glowshroom,
@@ -18095,7 +18186,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "gql" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -18160,6 +18251,11 @@
 /obj/structure/closet/crate/chest/lootbox,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/goblinfort)
+"grl" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner{
+	dir = 8
+	},
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "grv" = (
 /obj/effect/decal/remains/wolf,
 /turf/open/floor/rogue/cobble,
@@ -18181,7 +18277,7 @@
 /obj/effect/decal/cleanable/dirt/cobweb,
 /obj/structure/chair/wood/rogue/chair3,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "gsk" = (
 /obj/structure/bed/rogue/shit{
 	name = "makeshift bed"
@@ -18243,6 +18339,11 @@
 /obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university_garden)
+"gtz" = (
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "gtB" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/fluff/walldeco/church/line{
@@ -18307,7 +18408,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "gus" = (
 /obj/structure/rack/rogue,
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -18560,7 +18661,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "gyS" = (
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/item/roguecoin/silver/pile,
@@ -18618,7 +18719,7 @@
 	icon_state = "redcouch2"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "gzY" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -18788,7 +18889,7 @@
 "gDG" = (
 /obj/structure/roguemachine/scomm/directional/west,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "gDW" = (
 /obj/structure/rack/rogue{
 	density = 0;
@@ -19063,7 +19164,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "gHP" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -19098,7 +19199,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "gIt" = (
 /obj/structure/roguemachine/mail/directional/east{
 	mailtag = "Heir"
@@ -19120,7 +19221,7 @@
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /obj/item/reagent_containers/food/snacks/grown/wheat,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "gIF" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -19455,7 +19556,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "gQh" = (
 /obj/structure/spacevine,
 /turf/closed/mineral/random/rogue,
@@ -20469,7 +20570,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "hie" = (
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/tavern)
@@ -20670,7 +20771,7 @@
 "hmx" = (
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "hmE" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobble,
@@ -20897,6 +20998,9 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/tile,
 /area/provincial/underground/underdark/sunkencity)
+"hqU" = (
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "hqW" = (
 /turf/open/floor/rogue/volcanic,
 /area/provincial/underground/dungeon/old_ruin)
@@ -20982,7 +21086,7 @@
 "hsS" = (
 /obj/structure/roguemachine/scomm/directional/south,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "hsW" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -21445,7 +21549,7 @@
 /area/provincial/indoors/town/shop)
 "hAV" = (
 /turf/open/floor/rogue/twig,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "hAZ" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /obj/structure/fluff/railing/border{
@@ -21614,7 +21718,7 @@
 	icon_state = "cobbleedge-n"
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "hDn" = (
 /obj/structure/chair/wood/rogue{
 	dir = 4
@@ -21697,6 +21801,9 @@
 	},
 /turf/closed/wall/mineral/rogue/stone,
 /area/provincial/indoors/town/basement)
+"hFx" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "hFy" = (
 /obj/structure/fluff/psycross,
 /turf/open/floor/rogue/grass,
@@ -21825,6 +21932,9 @@
 	},
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/dwarfin)
+"hHP" = (
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "hHU" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
@@ -22441,7 +22551,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "hVh" = (
 /obj/structure/table/wood{
 	dir = 10;
@@ -22527,7 +22637,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "hWB" = (
 /obj/structure/stairs{
 	dir = 8
@@ -22905,7 +23015,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "icB" = (
 /obj/structure/closet/crate/chest,
 /obj/item/roguestatue/steel,
@@ -22963,7 +23073,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "idg" = (
 /obj/structure/table/wood{
 	icon_state = "largetable"
@@ -23144,7 +23254,7 @@
 	dir = 4
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "igK" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -23180,7 +23290,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "ihO" = (
 /obj/structure/mineral_door/wood/violet,
 /turf/open/floor/rogue/herringbone,
@@ -23261,7 +23371,7 @@
 "ijk" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "ijA" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -23884,7 +23994,7 @@
 /obj/item/bedsheet/rogue/fabric_double,
 /obj/effect/landmark/start/sergeant,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "iud" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/blocks/stonered,
@@ -23918,6 +24028,12 @@
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university_garden)
+"iuB" = (
+/obj/structure/roguewindow/openclose/reinforced{
+	dir = 8
+	},
+/turf/open/floor/rogue/concrete,
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "iuC" = (
 /obj/structure/table/wood{
 	dir = 4;
@@ -23963,7 +24079,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "ivE" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -23986,7 +24102,7 @@
 	dir = 10
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "ivQ" = (
 /obj/structure/closet/dirthole/closed/loot,
 /turf/open/floor/rogue/grass,
@@ -24169,7 +24285,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "iyk" = (
 /obj/structure/fluff/statue/gargoyle,
 /turf/open/floor/rogue/blocks,
@@ -24859,7 +24975,7 @@
 /area/provincial/underground/underdark/undersea/undergrove)
 "iLV" = (
 /turf/closed/wall/mineral/rogue/roofwall/middle,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "iLW" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -25138,6 +25254,9 @@
 	dir = 4
 	},
 /area/provincial/underground/dungeon/gethsmane/inner)
+"iQT" = (
+/turf/closed/wall/mineral/rogue/stone/moss,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "iQW" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/soap/bath,
@@ -25262,7 +25381,7 @@
 "iSQ" = (
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/wood/herringbone,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "iTa" = (
 /mob/living/carbon/human/species/construct/metal/toyjester,
 /obj/structure/fluff/littlebanners{
@@ -25515,7 +25634,7 @@
 /obj/structure/rack/rogue,
 /obj/item/natural/saddle,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "iWP" = (
 /obj/item/natural/stone,
 /turf/open/floor/rogue/cobblerock,
@@ -25566,7 +25685,7 @@
 /obj/item/natural/stone,
 /obj/item/storage/belt/rogue/surgery_bag/full,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "iXw" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -25757,7 +25876,7 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "jaw" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -25780,6 +25899,9 @@
 /obj/structure/flora/roguegrass/bush/red,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
+"jaJ" = (
+/turf/closed/wall/mineral/rogue/stone/moss,
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "jaT" = (
 /obj/structure/spider/stickyweb,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
@@ -26028,7 +26150,7 @@
 "jej" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "jew" = (
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town)
@@ -26509,7 +26631,7 @@
 /obj/structure/closet/crate/chest/neu,
 /obj/item/flashlight/flare/torch/lantern,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "jnb" = (
 /obj/structure/bars/passage/steel{
 	redstone_id = "secretdoor1"
@@ -26638,7 +26760,7 @@
 "jpB" = (
 /obj/structure/fermenting_barrel/water,
 /turf/open/floor/rogue/tile,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "jpD" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/wood,
@@ -26671,7 +26793,7 @@
 /obj/structure/fluff/railing/border,
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "jqL" = (
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/cobble,
@@ -26800,7 +26922,7 @@
 	icon_state = "cobbleedge-sread"
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "jsS" = (
 /obj/item/roguebin/trash,
 /turf/open/floor/rogue/cobble/mossy,
@@ -26914,7 +27036,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "jvC" = (
 /obj/structure/roguemachine/mail/directional/east,
 /turf/open/floor/rogue/hexstone,
@@ -27184,7 +27306,7 @@
 	icon_state = "cobbleedge-sread"
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "jBj" = (
 /obj/structure/bookcase/random/adult,
 /turf/open/floor/carpet/red,
@@ -27420,12 +27542,6 @@
 /obj/item/bouquet/salvia,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
-"jEZ" = (
-/obj/structure/stairs{
-	dir = 4
-	},
-/turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
 "jFg" = (
 /obj/structure/closet/crate/roguecloset,
 /turf/open/floor/carpet/royalblack,
@@ -27493,7 +27609,7 @@
 "jHt" = (
 /obj/structure/closet/crate/chest/neu,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "jHy" = (
 /obj/structure/bars/pipe,
 /turf/open/water/sewer,
@@ -27567,7 +27683,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "jIS" = (
 /obj/structure/closet/crate/chest,
 /obj/item/reagent_containers/glass/bucket/wooden,
@@ -27807,7 +27923,7 @@
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /obj/item/clothing/under/roguetown/skirt,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "jNc" = (
 /obj/structure/mineral_door/wood/deadbolt{
 	dir = 4;
@@ -27902,7 +28018,7 @@
 	dir = 6
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "jOX" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/hexstone,
@@ -27911,7 +28027,7 @@
 /obj/structure/toilet,
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "jPj" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/underground/dungeon/vulnafir)
@@ -28114,6 +28230,10 @@
 	},
 /turf/open/floor/carpet/inn,
 /area/provincial/indoors/town/tavern)
+"jSw" = (
+/obj/structure/ladder,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "jSx" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/dirt/road,
@@ -28320,7 +28440,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "jWX" = (
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/blocks,
@@ -28597,7 +28717,7 @@
 	dir = 10
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "kcq" = (
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/church/basement)
@@ -28645,7 +28765,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "kdz" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -29005,7 +29125,7 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "kkN" = (
 /obj/structure/far_travel,
 /turf/open/floor/rogue/cobblerock,
@@ -29120,7 +29240,7 @@
 "knS" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "knW" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -29139,7 +29259,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "kog" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
 /turf/open/floor/rogue/cobble/mossy,
@@ -30621,7 +30741,7 @@
 /area/provincial/underground/dungeon/fogotten_bastille)
 "kPX" = (
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "kQf" = (
 /obj/structure/chair/bench/couch{
 	icon_state = "redcouch2"
@@ -31160,7 +31280,7 @@
 "laf" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "lal" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /turf/open/water/river{
@@ -31823,7 +31943,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "lls" = (
 /obj/machinery/light/rogue/smelter,
 /turf/open/floor/rogue/cobble,
@@ -31840,7 +31960,7 @@
 "llM" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "llO" = (
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/provincial/indoors/town/church/basement)
@@ -32008,7 +32128,7 @@
 /obj/item/natural/feather,
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "lot" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /obj/structure/table/wood,
@@ -32158,7 +32278,7 @@
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "lqP" = (
 /turf/open/floor/rogue/hay,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "lqS" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 8
@@ -32405,7 +32525,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "lve" = (
 /turf/open/floor/rogue/churchrough,
 /area/provincial/indoors/town/basement)
@@ -32430,6 +32550,9 @@
 "lvw" = (
 /turf/closed/wall/mineral/rogue/decowood,
 /area/provincial/indoors/town/dwarfin)
+"lvM" = (
+/turf/closed/wall/mineral/rogue/wooddark/window,
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "lvN" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
 /turf/open/floor/rogue/wood,
@@ -32449,7 +32572,7 @@
 /area/provincial/outdoors/field)
 "lwu" = (
 /turf/closed/wall/mineral/rogue/decowood/vert,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "lwB" = (
 /obj/structure/flora/newleaf,
 /turf/open/floor/rogue/rooftop{
@@ -32487,7 +32610,7 @@
 "lwZ" = (
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "lxb" = (
 /obj/structure/chair/wood/rogue/chair3,
 /turf/open/floor/rogue/church,
@@ -32511,7 +32634,7 @@
 	},
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "lxN" = (
 /obj/structure/table/wood{
 	dir = 9;
@@ -32522,6 +32645,9 @@
 /obj/effect/spawner/lootdrop/potion_vitals,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
+"lxO" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "lxU" = (
 /obj/structure/stairs/stone/d{
 	dir = 8
@@ -32670,6 +32796,11 @@
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/provincial/indoors/town/province_keep/quarters/councillor)
+"lAM" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner{
+	dir = 1
+	},
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "lAO" = (
 /obj/structure/roguemachine/bounty,
 /turf/open/floor/rogue/concrete,
@@ -33268,7 +33399,7 @@
 	icon_state = "map3"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "lMc" = (
 /turf/open/floor/rogue/rooftop{
 	icon_state = "roofg"
@@ -33668,7 +33799,7 @@
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "lUu" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/greenstone,
@@ -33698,6 +33829,9 @@
 /obj/structure/ladder,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/mountains)
+"lUU" = (
+/turf/open/transparent/openspace,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "lVa" = (
 /turf/closed/wall/mineral/rogue/decostone/mossy/red/cand,
 /area/provincial/indoors)
@@ -33940,14 +34074,14 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "lZX" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
 /obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "man" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 10
@@ -34250,6 +34384,10 @@
 /obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/sewer)
+"meI" = (
+/obj/structure/closet/crate/drawer,
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "meK" = (
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/carpet/lord/right{
@@ -34542,7 +34680,7 @@
 	dir = 3
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "mkn" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/dirt/road,
@@ -34683,6 +34821,9 @@
 /obj/item/reagent_containers/glass/bucket/pot,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/vulnafir)
+"mnw" = (
+/turf/open/floor/rogue/woodturned,
+/area/provincial/outdoors/town/garrison/ramparts)
 "mnA" = (
 /obj/machinery/light/rogue/campfire,
 /turf/open/floor/rogue/dirt,
@@ -34769,7 +34910,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "mps" = (
 /obj/structure/chair/wood/rogue/chair3{
 	dir = 8
@@ -34831,7 +34972,7 @@
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "mqT" = (
 /turf/open/floor/rogue/tile/masonic/inverted,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "mqV" = (
 /obj/structure/bed/rogue,
 /obj/effect/landmark/start/manorguardsman,
@@ -34839,7 +34980,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "mqW" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/whip,
@@ -34940,6 +35081,9 @@
 /obj/item/rogueweapon/huntingknife/chefknife,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town)
+"mtk" = (
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/provincial/outdoors/town/garrison/ramparts)
 "mtn" = (
 /obj/structure/spacevine,
 /obj/structure/bars/pipe,
@@ -35146,7 +35290,7 @@
 "mxS" = (
 /obj/structure/bed/rogue/shit,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "myg" = (
 /obj/structure/roguemachine/noticeboard,
 /turf/open/floor/rogue/grass,
@@ -35161,7 +35305,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "myq" = (
 /obj/structure/table/wood{
 	dir = 2;
@@ -35401,7 +35545,7 @@
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/rope/chain,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "mCs" = (
 /obj/item/grown/log/tree/small,
 /turf/open/floor/rogue/dirt,
@@ -35509,6 +35653,9 @@
 /obj/item/natural/feather,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/basement)
+"mEG" = (
+/turf/closed/wall/mineral/rogue/stone/moss,
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "mEK" = (
 /obj/structure/table/wood,
 /obj/item/rogueore/tin,
@@ -35687,7 +35834,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "mIf" = (
 /obj/structure/fluff/railing/stonehedge{
 	dir = 8
@@ -35771,6 +35918,21 @@
 "mJH" = (
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground/dungeon/gethsmane)
+"mJS" = (
+/turf/closed/wall/mineral/rogue/roofwall/middle{
+	dir = 4
+	},
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
+"mKr" = (
+/obj/structure/roguemachine/scomm/directional/north,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
+"mKs" = (
+/obj/machinery/light/rogue/wallfire/candle/directional/north{
+	pixel_y = -32
+	},
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "mKy" = (
 /obj/machinery/light/rogue/firebowl/church,
 /turf/open/floor/rogue/tile/masonic/single,
@@ -37263,7 +37425,7 @@
 /obj/structure/closet/crate/drawer,
 /obj/item/reagent_containers/glass/cup/silver,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "njj" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /turf/open/floor/rogue/ruinedwood{
@@ -37915,7 +38077,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "nsM" = (
 /obj/structure/flora/newbranch/leafless{
 	dir = 8
@@ -37995,6 +38157,9 @@
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
+"nuE" = (
+/turf/closed/wall/mineral/rogue/wooddark/window,
+/area/provincial/outdoors/town/garrison/ramparts)
 "nvd" = (
 /obj/structure/chair/wood/rogue/fancy{
 	dir = 8
@@ -38333,7 +38498,7 @@
 /area/provincial/indoors/town/province_keep/deacon)
 "nBo" = (
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "nBr" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-n"
@@ -38516,7 +38681,7 @@
 "nDo" = (
 /obj/structure/roguemachine/scomm/directional/east,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "nDp" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/provincial/indoors/town/province_keep/quarters/marquis)
@@ -38808,7 +38973,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "nJD" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat/gethsmane,
 /turf/open/floor/rogue/metal/barograte/open,
@@ -39009,6 +39174,9 @@
 	},
 /turf/open/floor/rogue/metal,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"nMs" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "nMH" = (
 /obj/structure/fluff/railing/border,
 /turf/open/water/sewer,
@@ -39120,6 +39288,9 @@
 	icon_state = "weird1"
 	},
 /area/provincial/indoors)
+"nOK" = (
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "nOV" = (
 /obj/structure/closet/crate/chest,
 /obj/structure/roguemachine/scomm/directional/north,
@@ -39206,7 +39377,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "nQT" = (
 /obj/structure/winch{
 	gid = "bastilletop";
@@ -39567,7 +39738,7 @@
 	icon_state = "map4"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "nXh" = (
 /obj/structure/chair/wood/rogue,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -39782,7 +39953,7 @@
 	},
 /obj/structure/ladder,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "ocs" = (
 /obj/structure/closet/crate/roguecloset,
 /obj/item/reagent_containers/glass/cup/wooden,
@@ -40263,7 +40434,7 @@
 	layer = 4.51
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "olI" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -40365,7 +40536,7 @@
 "onP" = (
 /obj/structure/bed/rogue,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "onV" = (
 /obj/machinery/light/rogue/cauldron,
 /turf/open/floor/rogue/tile/checkeralt,
@@ -41272,7 +41443,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "oEA" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -41314,6 +41485,11 @@
 /obj/item/flashlight/flare/torch/lantern,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/old_ruin)
+"oFa" = (
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "oFh" = (
 /obj/structure/bed/rogue/shit{
 	name = "makeshift bed"
@@ -41920,6 +42096,10 @@
 "oQg" = (
 /turf/open/floor/rogue/grassred,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"oQh" = (
+/obj/structure/roguemachine/scomm/directional/west,
+/turf/open/floor/rogue/wood,
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "oQk" = (
 /turf/closed/wall/mineral/rogue/decostone/long{
 	dir = 1
@@ -42046,7 +42226,7 @@
 	},
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "oTw" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/woodturned,
@@ -42404,7 +42584,7 @@
 "paj" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/tile,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "paq" = (
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/town/keep)
@@ -42552,6 +42732,10 @@
 	},
 /turf/open/transparent/openspace,
 /area/provincial/underground/underdark/sunkencity)
+"pdj" = (
+/obj/machinery/light/rogue/torchholder/directional/west,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "pdo" = (
 /obj/structure/spacevine{
 	opacity = 1
@@ -42625,7 +42809,7 @@
 "pee" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "pej" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/spider,
 /turf/open/water/swamp,
@@ -42643,7 +42827,7 @@
 	icon_state = "map1"
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "pen" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_x = -32
@@ -42653,7 +42837,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "pev" = (
 /obj/machinery/light/rogue/hearth,
 /obj/item/cooking/pan,
@@ -42969,6 +43153,10 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/indoors/town/province_keep/garrison)
+"piP" = (
+/obj/structure/fluff/walldeco/customflag,
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "piQ" = (
 /obj/structure/roguemachine/atm/directional/south{
 	location_tag = "Tavern Lobby"
@@ -43228,6 +43416,12 @@
 /obj/structure/fluff/clockwork/alloy_shards,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/old_university)
+"pox" = (
+/obj/structure/stairs{
+	dir = 4
+	},
+/turf/open/floor/rogue/woodturned,
+/area/provincial/outdoors/town/garrison/ramparts)
 "poz" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -43362,7 +43556,7 @@
 	},
 /obj/item/natural/feather,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "pqX" = (
 /turf/open/floor/rogue/blocks/green{
 	dir = 4
@@ -43447,7 +43641,7 @@
 "psu" = (
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "psx" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/grass,
@@ -43478,7 +43672,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "psV" = (
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/indoors)
@@ -43534,7 +43728,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "ptM" = (
 /turf/closed/wall/mineral/rogue/roofwall/outercorner{
 	dir = 8
@@ -43641,6 +43835,11 @@
 "pwb" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/provincial/indoors/town/province_keep/throneroom/overlook)
+"pwc" = (
+/turf/closed/wall/mineral/rogue/roofwall/outercorner{
+	dir = 4
+	},
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "pwg" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/metal/barograte,
@@ -44183,7 +44382,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 4
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "pEJ" = (
 /obj/structure/fluff/railing/wood{
 	dir = 4
@@ -44205,7 +44404,7 @@
 	},
 /obj/item/reagent_containers/glass/bottle/rogue/beer/voddena,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "pFm" = (
 /obj/effect/spawner/roguemap/stump,
 /turf/open/floor/rogue/grassred,
@@ -44383,7 +44582,7 @@
 	pixel_y = 0
 	},
 /turf/open/floor/rogue/tile/masonic/inverted,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "pIB" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -44460,7 +44659,7 @@
 /area/provincial/indoors/town)
 "pJN" = (
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "pJR" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/orc/spear,
 /turf/open/floor/rogue/cobble,
@@ -44541,7 +44740,7 @@
 	dir = 8
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "pLc" = (
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/hexstone,
@@ -46196,7 +46395,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "qqX" = (
 /mob/living/carbon/human/species/elf/dark/ziraguard,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -46212,7 +46411,7 @@
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "qrk" = (
 /obj/structure/closet/crate/chest/wicker,
 /obj/item/rogueweapon/hoe,
@@ -46285,7 +46484,7 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "qsz" = (
 /obj/structure/chair/wood/rogue/throne,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -46341,7 +46540,7 @@
 "qtP" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "qtR" = (
 /obj/structure/chair/wood/rogue,
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
@@ -47164,7 +47363,7 @@
 /turf/closed/wall/mineral/rogue/decostone/long{
 	dir = 1
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "qIk" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/dirt/road,
@@ -47241,7 +47440,7 @@
 "qJz" = (
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "qJC" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5
@@ -47444,7 +47643,7 @@
 	dir = 10
 	},
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "qNy" = (
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -47681,7 +47880,7 @@
 "qSC" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "qSF" = (
 /obj/structure/bed/rogue/inn/pileofshit,
 /turf/open/floor/rogue/blocks/platform,
@@ -47728,6 +47927,12 @@
 	icon_state = "weird1"
 	},
 /area/provincial/indoors/town/province_keep/quarters/marquis)
+"qTz" = (
+/obj/structure/roguewindow/openclose/reinforced{
+	dir = 8
+	},
+/turf/open/floor/rogue/concrete,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "qTN" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
 /area/provincial/underground)
@@ -47764,7 +47969,7 @@
 /obj/item/rope/chain,
 /obj/item/scomstone/garrison,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "qUs" = (
 /turf/open/floor/rogue/twig,
 /area/provincial/outdoors/bog)
@@ -48326,13 +48531,6 @@
 /obj/item/clothing/suit/roguetown/shirt/jester,
 /turf/open/floor/rogue/blocks/newstone/alt,
 /area/provincial/underground/underdark/sunkencity)
-"rfp" = (
-/obj/structure/fluff/railing/wood{
-	dir = 1;
-	pixel_y = -1
-	},
-/turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
 "rfw" = (
 /turf/closed/mineral/random/rogue,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -48714,7 +48912,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "rlQ" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -49722,7 +49920,7 @@
 "rDO" = (
 /obj/structure/table/wood,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "rDQ" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/indoors/town/province_keep/quarters/knight)
@@ -49842,7 +50040,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "rFC" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north{
 	pixel_y = -32
@@ -49855,6 +50053,12 @@
 	icon_state = "iron_joint"
 	},
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"rFP" = (
+/obj/structure/roguewindow/openclose/reinforced{
+	dir = 8
+	},
+/turf/open/floor/rogue/concrete,
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "rGg" = (
 /obj/structure/fluff/statue/gargoyle/moss{
 	pixel_y = 20
@@ -50716,7 +50920,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "rWU" = (
 /obj/structure/closet/crate/chest,
 /obj/structure/fluff/railing/border{
@@ -51043,7 +51247,7 @@
 	icon_state = "cobbleedge-n"
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "sdh" = (
 /obj/structure/fluff/railing/border{
 	dir = 6
@@ -51261,7 +51465,7 @@
 /area/provincial/indoors/town)
 "siN" = (
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "siO" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
@@ -51376,7 +51580,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "skf" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/woodturned,
@@ -52368,6 +52572,9 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_bastille)
+"sAk" = (
+/turf/open/floor/rogue/wood,
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "sAq" = (
 /obj/item/roguegem/random,
 /turf/open/floor/rogue/cobblerock,
@@ -52437,7 +52644,7 @@
 "sBH" = (
 /obj/machinery/light/rogue/torchholder/directional/south,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "sBM" = (
 /obj/structure/handcart{
 	dir = 8
@@ -52782,7 +52989,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "sJf" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -52832,7 +53039,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "sKn" = (
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/item/roguegem/random,
@@ -53047,6 +53254,9 @@
 "sNZ" = (
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/field)
+"sOl" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "sOB" = (
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -53362,6 +53572,9 @@
 /obj/machinery/light/rogue/firebowl/standing,
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"sTN" = (
+/turf/closed/wall/mineral/rogue/decostone,
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "sTX" = (
 /obj/effect/decal/mossy{
 	dir = 1
@@ -53422,7 +53635,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "sUK" = (
 /turf/closed/wall/mineral/rogue/wooddark/end,
 /area/provincial/indoors)
@@ -54100,7 +54313,7 @@
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "tih" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -54415,7 +54628,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/outercorner{
 	dir = 1
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "toI" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4
@@ -55006,7 +55219,7 @@
 /obj/effect/mapping_helpers/access/garrison/dungeon,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "tAZ" = (
 /obj/structure/fluff/railing/stonehedge{
 	dir = 4
@@ -55659,10 +55872,10 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "tMv" = (
 /turf/open/floor/rogue/wood/herringbone,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "tMO" = (
 /obj/structure/flora/roguegrass/bush/wall/red,
 /turf/open/floor/rogue/grassred,
@@ -56012,7 +56225,7 @@
 /obj/item/paper/scroll,
 /obj/item/natural/feather,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "tUJ" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -56178,6 +56391,11 @@
 "tXq" = (
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
+"tXt" = (
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "tXA" = (
 /obj/structure/fluff/walldeco/painting/queen,
 /turf/closed/wall/mineral/rogue/stonebrick,
@@ -56920,7 +57138,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "ukC" = (
 /obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
@@ -56928,7 +57146,7 @@
 /area/provincial/indoors/town/tavern)
 "ukD" = (
 /turf/open/floor/carpet/stellar,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/canteen)
 "ukL" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/tile,
@@ -57210,7 +57428,7 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/mapping_helpers/access/garrison,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "upg" = (
 /turf/open/transparent/openspace,
 /area/provincial/underground/underdark/sunkencity)
@@ -57666,7 +57884,7 @@
 "uxv" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "uxw" = (
 /obj/structure/fermenting_barrel/water,
 /obj/structure/fluff/railing/border{
@@ -57741,7 +57959,7 @@
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "uyC" = (
 /obj/structure/bookcase/random,
 /obj/structure/fluff/walldeco/med4{
@@ -58669,7 +58887,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "uOZ" = (
 /obj/machinery/anvil,
 /turf/open/floor/rogue/blocks/stonered/tiny,
@@ -58830,7 +59048,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "uSa" = (
 /obj/structure/closet/crate/roguecloset/inn,
 /obj/item/clothing/head/roguetown/articap,
@@ -58842,7 +59060,7 @@
 	layer = 4.51
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "uSl" = (
 /obj/structure/bookcase,
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -59309,7 +59527,7 @@
 	},
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "vat" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /obj/structure/stairs{
@@ -59784,7 +60002,7 @@
 /obj/item/paper,
 /obj/item/paper,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "vjb" = (
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border{
@@ -59874,7 +60092,7 @@
 	dir = 6
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "vkJ" = (
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/tile,
@@ -59962,7 +60180,7 @@
 	icon_state = "cobbleedge-w"
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "vmL" = (
 /obj/item/bedsheet/rogue/double_pelt,
 /obj/structure/bed/rogue/inn/wooldouble,
@@ -60396,9 +60614,8 @@
 /turf/open/floor/rogue/grassyel,
 /area/provincial/outdoors/town/keep)
 "vvv" = (
-/obj/structure/roguemachine/scomm/directional/north,
-/turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/garrison)
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "vvB" = (
 /turf/closed/mineral/random/rogue,
 /area/provincial/outdoors/mountains)
@@ -60672,7 +60889,7 @@
 "vAJ" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "vAR" = (
 /turf/open/floor/rogue/rooftop/green{
 	dir = 8
@@ -60810,6 +61027,12 @@
 	},
 /turf/open/transparent/openspace,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"vDM" = (
+/obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/access/garrison,
+/obj/effect/mapping_helpers/lock_door,
+/turf/open/floor/rogue/concrete,
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "vDS" = (
 /obj/structure/table/wood{
 	icon_state = "map3"
@@ -60928,7 +61151,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/outercorner{
 	dir = 8
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "vFu" = (
 /obj/effect/decal/mossy{
 	dir = 8
@@ -60942,7 +61165,7 @@
 "vFx" = (
 /obj/structure/roguemachine/scomm/directional/east,
 /turf/open/floor/rogue/tile,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "vFy" = (
 /obj/structure/handcart{
 	dir = 4
@@ -60953,7 +61176,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/innercorner{
 	dir = 1
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "vGe" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -61019,6 +61242,10 @@
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/tavern)
+"vGU" = (
+/obj/machinery/light/rogue/torchholder/directional/west,
+/turf/open/floor/rogue/tile,
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "vGV" = (
 /obj/item/natural/stone{
 	pixel_y = -9;
@@ -61051,7 +61278,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 1
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "vHK" = (
 /obj/structure/spacevine,
 /turf/closed/wall/mineral/rogue/stone/moss,
@@ -61659,7 +61886,7 @@
 /obj/item/flashlight/flare/torch/lantern,
 /obj/item/rope/chain,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "vTN" = (
 /turf/closed/wall/mineral/rogue/stone/window/moss,
 /area/provincial/indoors/town/province_keep/garrison)
@@ -61737,7 +61964,7 @@
 "vUZ" = (
 /obj/structure/roguemachine/scomm/directional/west,
 /turf/open/floor/rogue/wood/herringbone,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "vVa" = (
 /obj/item/restraints/legcuffs/beartrap/armed/camouflage,
 /turf/open/floor/rogue/dirt,
@@ -61773,9 +62000,6 @@
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/dungeon/cursed_labyrinth)
-"vVX" = (
-/turf/open/floor/rogue/woodturned,
-/area/provincial/outdoors/town/roofs/keep)
 "vWe" = (
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/antag/underking,
@@ -62425,7 +62649,7 @@
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "wip" = (
 /obj/structure/table/wood,
 /obj/item/natural/bundle/cloth{
@@ -63009,7 +63233,7 @@
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/stables)
 "wtn" = (
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/pelt,
@@ -63357,7 +63581,7 @@
 /area/provincial/indoors)
 "wBK" = (
 /turf/open/floor/rogue/wood,
-/area/provincial/outdoors/town/roofs/keep)
+/area/provincial/outdoors/town/garrison/ramparts)
 "wBO" = (
 /turf/open/floor/rogue/rooftop{
 	icon_state = "roofg"
@@ -63471,6 +63695,10 @@
 /obj/item/clothing/wrists/roguetown/wrappings,
 /turf/open/floor/carpet/purple,
 /area/provincial/indoors/town/shop)
+"wDV" = (
+/obj/structure/fluff/walldeco/customflag,
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "wDX" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 5
@@ -64121,7 +64349,7 @@
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "wSt" = (
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/cobblerock,
@@ -65685,7 +65913,7 @@
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "xuv" = (
 /obj/structure/fluff/wallclock/directional/north,
 /turf/open/floor/rogue/tile/checkeralt,
@@ -65902,6 +66130,9 @@
 /obj/item/clothing/gloves/roguetown/plate/blk,
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/underground/underdark/sunkencity)
+"xyE" = (
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "xyI" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/wallclock/directional/north,
@@ -65939,7 +66170,7 @@
 	},
 /obj/structure/chair/bench/couch,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters)
 "xzQ" = (
 /obj/structure/fluff/walldeco/chains{
 	icon_state = "chains2"
@@ -66782,7 +67013,7 @@
 	pixel_x = -32
 	},
 /turf/closed/wall/mineral/rogue/wooddark,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/outdoors/town/garrison/ramparts)
 "xRV" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/twig,
@@ -66835,6 +67066,9 @@
 	icon_state = "iron_corner"
 	},
 /area/provincial/indoors/town/sewer)
+"xSZ" = (
+/turf/open/floor/carpet/royalblack,
+/area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "xTf" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /obj/effect/decal/mossy{
@@ -66921,7 +67155,7 @@
 	},
 /obj/effect/landmark/start/guard_captain,
 /turf/open/floor/carpet/royalblack,
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "xVg" = (
 /obj/structure/bars,
 /turf/open/floor/rogue/cobble,
@@ -67309,7 +67543,7 @@
 "ybZ" = (
 /obj/structure/roguemachine/scomm/directional/west,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors/town/province_keep/garrison/cell)
+/area/provincial/indoors/town/province_keep/garrison/dungeon)
 "ycc" = (
 /obj/structure/bed/rogue/inn/hay,
 /turf/open/floor/rogue/dirt/road,
@@ -67363,7 +67597,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/garrison)
+/area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "ydi" = (
 /turf/closed/wall/mineral/rogue/roofwall/outercorner{
 	dir = 4
@@ -274740,11 +274974,11 @@ rPF
 eFC
 aaB
 gGn
-oDW
-oDW
-oDW
-oDW
-oDW
+aYp
+aYp
+aYp
+aYp
+aYp
 uqB
 uqB
 phl
@@ -275192,7 +275426,7 @@ rPF
 aaB
 aaB
 chp
-oDW
+aYp
 jPc
 ybZ
 pJN
@@ -275635,7 +275869,7 @@ hrE
 hrE
 jWw
 lcA
-hrE
+jaJ
 oDW
 rPF
 oYj
@@ -275644,7 +275878,7 @@ oDW
 rPF
 oYj
 rPF
-oDW
+aYp
 knS
 bTd
 pJN
@@ -276087,16 +276321,16 @@ weQ
 jWw
 kSN
 kSN
-jWw
+aYp
 aaU
-kSN
-kSN
-kSN
-cXP
-kSN
-kSN
-kSN
-oDW
+fPr
+fPr
+fPr
+vGU
+fPr
+fPr
+fPr
+aYp
 pJN
 pJN
 pJN
@@ -276539,13 +276773,13 @@ weQ
 lcA
 kSN
 kSN
-jWw
+aYp
 cQV
-kSN
-kSN
-kSN
-kSN
-kSN
+fPr
+fPr
+fPr
+fPr
+fPr
 paj
 bFa
 upf
@@ -276984,23 +277218,23 @@ rMf
 jQE
 uMp
 teu
-vgL
+hqU
 lwu
 lwu
-vgL
+hqU
 vgL
 slm
 kSN
-jWw
+aYp
 coS
-kSN
-kSN
-kSN
-kSN
-kSN
+fPr
+fPr
+fPr
+fPr
+fPr
 vFx
 jpB
-oDW
+aYp
 pJN
 jej
 mxS
@@ -277436,23 +277670,23 @@ rMf
 jQE
 rAR
 noW
-iVE
+lvM
 iWK
 uxv
 aSu
 hrE
 kSN
 kSN
-jWw
-jWw
-jWw
-lcA
-gpv
-lcA
-jWw
-jWw
-jWw
-oDW
+aYp
+aYp
+aYp
+vDM
+wDV
+vDM
+aYp
+aYp
+aYp
+aYp
 bcH
 bNE
 bNE
@@ -277904,7 +278138,7 @@ kSN
 cXP
 xAk
 jWw
-oDW
+aYp
 lor
 pJN
 bNE
@@ -278340,7 +278574,7 @@ rMf
 jQE
 weQ
 weQ
-iVE
+lvM
 kPX
 vkF
 sJb
@@ -278356,10 +278590,10 @@ kSN
 kSN
 xAk
 jWw
-jWw
-jWw
+aYp
+aYp
 tAP
-jWw
+aYp
 fGz
 amf
 fGz
@@ -278792,7 +279026,7 @@ rMf
 jQE
 weQ
 weQ
-vgL
+hqU
 lxC
 jqJ
 lqP
@@ -278808,11 +279042,11 @@ kSN
 kJy
 xAk
 jWw
-jWw
+aYp
 gsb
 nBo
 iXv
-jWw
+aYp
 pun
 afK
 wBe
@@ -279244,10 +279478,10 @@ rMf
 jQE
 weQ
 weQ
-vgL
+hqU
 lwu
 lwu
-vgL
+hqU
 vgL
 slm
 kSN
@@ -279257,14 +279491,14 @@ gpv
 kSN
 kSN
 kSN
-gpv
-jWw
-jWw
-jWw
+piP
+sOl
+sOl
+sOl
 jmW
 nBo
-jWw
-jWw
+aYp
+aYp
 cXr
 iUr
 wBe
@@ -279696,7 +279930,7 @@ rMf
 jQE
 weQ
 weQ
-vgL
+hqU
 lxC
 bia
 lqP
@@ -279712,10 +279946,10 @@ tzy
 rFB
 gdG
 tMq
-jWw
+sOl
 fPq
 epu
-jWw
+aYp
 mXo
 vAw
 afK
@@ -280148,7 +280382,7 @@ rMf
 jQE
 weQ
 weQ
-iVE
+lvM
 kPX
 kcg
 dqx
@@ -280164,10 +280398,10 @@ tzy
 rFB
 ukD
 kod
-jWw
-jWw
-jWw
-jWw
+sOl
+aYp
+aYp
+aYp
 nTh
 pHV
 guO
@@ -280614,9 +280848,9 @@ wiK
 nqq
 nqq
 dSR
-iCo
-iCo
-jWw
+gtz
+gtz
+sOl
 eRf
 bTH
 jWw
@@ -281052,7 +281286,7 @@ vAw
 jQE
 weQ
 teu
-iVE
+lvM
 iWK
 llM
 gIy
@@ -281065,10 +281299,10 @@ jWw
 srn
 xLC
 rCV
-jWw
+sOl
 eFl
 hhZ
-jWw
+sOl
 iCo
 tMg
 jWw
@@ -281504,10 +281738,10 @@ rLU
 jQE
 weQ
 teu
-vgL
+hqU
 lwu
 lwu
-vgL
+hqU
 vgL
 jWw
 jWw
@@ -281517,10 +281751,10 @@ hrE
 jWw
 hrE
 hrE
-jWw
-jWw
-jWw
-jWw
+sOl
+sOl
+sOl
+sOl
 pZS
 jWw
 jWw
@@ -387266,18 +387500,18 @@ bGf
 bGf
 kSK
 kSK
-jWw
-jWw
-iVE
-hrE
-iVE
-iVE
-iVE
-jWw
-jWw
-iVE
-jWw
-jWw
+nMs
+nMs
+bxq
+arC
+bxq
+bxq
+bxq
+nMs
+nMs
+bxq
+nMs
+nMs
 kSK
 kSK
 bGf
@@ -387717,20 +387951,20 @@ bGf
 bGf
 bGf
 kSK
-jWw
-jWw
+nMs
+nMs
 onP
 bLx
 nJB
 bSB
 ocq
 ewl
-yjG
+pdj
 ptv
 aIJ
-yjG
-jWw
-jWw
+pdj
+nMs
+nMs
 kSK
 bGf
 bGf
@@ -388150,7 +388384,7 @@ lKo
 cDX
 bGf
 bGf
-hrE
+arC
 bGf
 bGf
 bGf
@@ -388169,7 +388403,7 @@ bGf
 bGf
 bGf
 kSK
-jWw
+nMs
 lZX
 onP
 gIi
@@ -388180,9 +388414,9 @@ gyM
 aIC
 hVb
 aIJ
-iWa
+nOK
 psu
-jWw
+nMs
 kSK
 bGf
 bGf
@@ -388201,7 +388435,7 @@ bGf
 bGf
 bGf
 bGf
-hrE
+arC
 bGf
 bGf
 bGf
@@ -388601,9 +388835,9 @@ bGf
 bGf
 bGf
 bGf
-jWw
-hrE
-hrE
+nMs
+arC
+arC
 kSK
 kSK
 kSK
@@ -388621,20 +388855,20 @@ kSK
 kSK
 kSK
 kSK
-hrE
+arC
 qNm
-iWa
+nOK
 ptv
 uOV
-rCV
-rCV
-rCV
+lUU
+lUU
+lUU
 oEv
 hVb
 aIJ
-iWa
+nOK
 jHt
-hrE
+arC
 kSK
 kSK
 bsK
@@ -388652,9 +388886,9 @@ kSK
 kSK
 bsK
 kSK
-jWw
-hrE
-hrE
+nMs
+arC
+arC
 bGf
 bGf
 bGf
@@ -389036,9 +389270,9 @@ aBB
 aBB
 aBB
 aBB
-jWw
-sBz
-jWw
+nMs
+bof
+nMs
 bGf
 bGf
 bGf
@@ -389052,62 +389286,62 @@ bGf
 bGf
 bGf
 bGf
-jWw
-jWw
-yjG
-hrE
-hrE
-hrE
-iVE
-jWw
-iVE
-jWw
-iVE
-jWw
-hrE
-jWw
-jWw
-iVE
-jWw
-iVE
-jWw
-iVE
-jWw
-hrE
-mnC
-iWa
+nMs
+nMs
+pdj
+arC
+arC
+arC
+bxq
+nMs
+bxq
+nMs
+bxq
+nMs
+arC
+nMs
+nMs
+bxq
+nMs
+bxq
+nMs
+bxq
+nMs
+arC
+gpo
+nOK
 hVb
 uOV
-rCV
-rCV
-rCV
+lUU
+lUU
+lUU
 mpq
 hVb
 guq
-iWa
-hrE
-hrE
-jWw
-iVE
-jWw
-iVE
-hrE
-iVE
-jWw
-jWw
-iVE
-jWw
-iVE
-jWw
-iVE
-hrE
-iVE
-jWw
-jWw
-jWw
-yjG
-hrE
-jWw
+nOK
+arC
+arC
+nMs
+bxq
+nMs
+bxq
+arC
+bxq
+nMs
+nMs
+bxq
+nMs
+bxq
+nMs
+bxq
+arC
+bxq
+nMs
+nMs
+nMs
+pdj
+arC
+nMs
 bGf
 bGf
 bGf
@@ -389487,79 +389721,79 @@ aBB
 aBB
 aBB
 aBB
-hrE
-jWw
-iWa
-jWw
-hrE
-vgL
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-jWw
-iWa
-iWa
-iWa
-jWw
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-iWa
-jWw
-iWa
-iWa
+arC
+nMs
+nOK
+nMs
+arC
+mtk
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nMs
+nOK
+nOK
+nOK
+nMs
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nOK
+nMs
+nOK
+nOK
 sjM
 uOV
-rCV
-rCV
-rCV
+lUU
+lUU
+lUU
 rlK
 hVb
-iWa
-iWa
-hrE
+nOK
+nOK
+arC
 bZV
 qsx
-srn
-srn
-srn
-srn
-srn
+bBd
+bBd
+bBd
+bBd
+bBd
 qtP
-srn
-srn
-srn
-srn
+bBd
+bBd
+bBd
+bBd
 qtP
-srn
-srn
-srn
-srn
-jWw
-mnC
-iWa
-iWa
-jWw
+bBd
+bBd
+bBd
+bBd
+nMs
+gpo
+nOK
+nOK
+nMs
 bGf
 bGf
 bGf
@@ -389939,11 +390173,11 @@ aBB
 aBB
 aBB
 aBB
-iVE
-dJt
-iWa
-yjG
-sBz
+bxq
+jSw
+nOK
+pdj
+bof
 wBK
 wBK
 wBK
@@ -389956,62 +390190,62 @@ wBK
 vAJ
 wBK
 wBK
-sBz
-iWa
-iWa
-iWa
-sBz
-iWa
-aQQ
-iWa
-iWa
-iWa
-iWa
-aQQ
-iWa
-iWa
-iWa
-iWa
-aQQ
-iWa
-iWa
-iWa
-iWa
-sBz
-iWa
-iWa
+bof
+nOK
+nOK
+nOK
+bof
+nOK
+bKA
+nOK
+nOK
+nOK
+nOK
+bKA
+nOK
+nOK
+nOK
+nOK
+bKA
+nOK
+nOK
+nOK
+nOK
+bof
+nOK
+nOK
 gkp
 myn
-rCV
-rCV
-rCV
+lUU
+lUU
+lUU
 gqd
 sjM
 aQI
-aQQ
-sBz
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-srn
-sBz
-iWa
-iWa
-dJt
-jWw
+bKA
+bof
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bBd
+bof
+nOK
+nOK
+jSw
+nMs
 bGf
 bGf
 bGf
@@ -390391,11 +390625,11 @@ aBB
 aBB
 aBB
 aBB
-hrE
-hrE
-vvv
-jWw
-jWw
+arC
+arC
+mKr
+nMs
+nMs
 ukB
 nsK
 nsK
@@ -390408,37 +390642,37 @@ nsK
 nsK
 nsK
 nsK
-jWw
-vvv
-iWa
-iWa
-jWw
-jWw
-jWw
-jWw
-hrE
-hrE
-hrE
-jWw
-jWw
-jWw
-jWw
-jWw
-hrE
-hrE
-hrE
-jWw
-hrE
-hrE
+nMs
+mKr
+nOK
+nOK
+nMs
+nMs
+nMs
+nMs
+arC
+arC
+arC
+nMs
+nMs
+nMs
+nMs
+nMs
+arC
+arC
+arC
+nMs
+arC
+arC
 onP
 onP
-jWw
-jWw
-iVE
-iVE
-iVE
-jWw
-iVE
+nMs
+nMs
+bxq
+bxq
+bxq
+nMs
+bxq
 hrE
 hrE
 jWw
@@ -390458,12 +390692,12 @@ lcA
 jWw
 jWw
 hrE
-hrE
-jWw
-vvv
-iWa
-iWa
-jWw
+arC
+nMs
+mKr
+nOK
+nOK
+nMs
 bGf
 bGf
 bGf
@@ -390844,9 +391078,9 @@ aBB
 aBB
 aBB
 aBB
-hrE
-sBz
-jWw
+arC
+bof
+nMs
 vmi
 vmi
 vmi
@@ -390860,11 +391094,11 @@ vmi
 vmi
 vmi
 vmi
-jWw
-jWw
-dJt
-hrE
-hrE
+nMs
+nMs
+jSw
+arC
+arC
 vmi
 vmi
 vmi
@@ -390881,10 +391115,10 @@ vmi
 vmi
 jwc
 jwc
-hrE
-hrE
-jWw
-hrE
+arC
+arC
+nMs
+arC
 jwc
 jwc
 jwc
@@ -390911,11 +391145,11 @@ kSN
 cXP
 obd
 jwc
-jWw
-jWw
-iWa
-jWw
-hrE
+nMs
+nMs
+nOK
+nMs
+arC
 sfl
 bGf
 kVG
@@ -391296,8 +391530,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -391313,9 +391547,9 @@ vmi
 vmi
 vmi
 vmi
-jWw
-hrE
-hrE
+nMs
+arC
+arC
 vmi
 vmi
 vmi
@@ -391364,9 +391598,9 @@ kSN
 obd
 jwc
 jwc
-jWw
-sBz
-jWw
+nMs
+bof
+nMs
 sfl
 sfl
 bGf
@@ -391748,8 +391982,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -391766,7 +392000,7 @@ vmi
 vmi
 vmi
 vmi
-hrE
+arC
 vmi
 vmi
 vmi
@@ -391817,8 +392051,8 @@ obd
 jwc
 jwc
 dSu
-pRP
-vgL
+aUw
+mtk
 sfl
 sfl
 bGf
@@ -392200,8 +392434,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -392268,9 +392502,9 @@ jWw
 jWw
 jwc
 jwc
-rfp
+dxH
 kkx
-iVE
+nuE
 sfl
 sfl
 bGf
@@ -392652,8 +392886,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -392720,9 +392954,9 @@ jWw
 jWw
 jwc
 jwc
-rfp
-vVX
-vgL
+dxH
+mnw
+mtk
 sfl
 sfl
 bGf
@@ -393104,8 +393338,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -393172,9 +393406,9 @@ cXP
 obd
 jwc
 jwc
-rfp
-vVX
-iVE
+dxH
+mnw
+nuE
 sfl
 sfl
 bGf
@@ -393556,8 +393790,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -393624,9 +393858,9 @@ kSN
 obd
 jwc
 jwc
-rfp
-vVX
-vgL
+dxH
+mnw
+mtk
 sfl
 sfl
 bGf
@@ -394008,7 +394242,7 @@ aBB
 aBB
 aBB
 aBB
-vgL
+mtk
 qJz
 uSi
 vmi
@@ -394077,8 +394311,8 @@ obd
 jwc
 jwc
 vhE
-jEZ
-iVE
+pox
+nuE
 sfl
 sfl
 nFN
@@ -394460,8 +394694,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -394507,24 +394741,24 @@ vmi
 vmi
 jwc
 jwc
-jWw
-jWw
-jWw
+lxO
+lxO
+lxO
 wSl
-jWw
-jWw
-jWw
-jWw
-jWw
-jWw
-jWw
-jWw
-jWw
-jWw
-jWw
+lxO
+lxO
+lxO
+lxO
+lxO
+lxO
+lxO
+lxO
+hFx
+hFx
+hFx
 wio
-jWw
-bDY
+hFx
+sTN
 bDY
 amf
 amf
@@ -394912,8 +395146,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -394958,11 +395192,11 @@ vmi
 vmi
 vmi
 jwc
-jWw
-jWw
+lxO
+lxO
 dRj
 nQR
-iCo
+oFa
 eFi
 gQf
 mqV
@@ -394971,10 +395205,10 @@ eFi
 gQf
 ihI
 jWV
-jWw
+hFx
 jIE
-iCo
-siN
+tXt
+feb
 lvc
 qIj
 qeW
@@ -395364,8 +395598,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -395410,24 +395644,24 @@ vmi
 vmi
 vmi
 jwc
-jWw
+lxO
 xzO
 siN
 nQR
-iCo
+oFa
 hAV
 hAV
 hAV
 hAV
 hAV
 hAV
-iCo
+oFa
 jvy
-jWw
+hFx
 psN
 ycZ
-siN
-siN
+feb
+feb
 qIj
 sQp
 wBe
@@ -395816,8 +396050,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -395862,23 +396096,23 @@ vmi
 vmi
 vmi
 jwc
-jWw
+lxO
 gzR
 siN
 nQR
-iCo
+oFa
 hAV
 hAV
 hAV
 hAV
 hAV
 hAV
-iCo
+oFa
 sUB
-jWw
+hFx
 fXS
-iCo
-siN
+tXt
+feb
 itC
 qIj
 lfr
@@ -396268,8 +396502,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -396314,22 +396548,22 @@ vmi
 vmi
 vmi
 jwc
-jWw
-jWw
+lxO
+lxO
 dSa
 nQR
-iCo
+oFa
 eFi
 gQf
 hWw
 gQf
 eFi
 gQf
-iCo
+oFa
 iyg
-jWw
+hFx
 kdq
-iCo
+tXt
 nDo
 qUn
 qIj
@@ -396720,8 +396954,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -396767,24 +397001,24 @@ vmi
 vmi
 jwc
 jwc
-jWw
-jWw
-jWw
-jWw
-qqK
-jWw
-jWw
-jWw
-jWw
-qqK
-jWw
-jWw
-jWw
-jWw
-qqK
-jWw
-qqK
-bDY
+lxO
+lxO
+lxO
+lxO
+rFP
+lxO
+lxO
+lxO
+lxO
+rFP
+lxO
+lxO
+hFx
+hFx
+iuB
+hFx
+iuB
+sTN
 fGz
 vSV
 cMj
@@ -397172,8 +397406,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -397624,8 +397858,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -398076,8 +398310,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -398146,7 +398380,7 @@ jwc
 jwc
 bOX
 lkZ
-vgL
+mtk
 sfl
 sfl
 bGf
@@ -398528,7 +398762,7 @@ aBB
 aBB
 aBB
 aBB
-vgL
+mtk
 qJz
 uSi
 vmi
@@ -398596,9 +398830,9 @@ iSm
 jwc
 jwc
 jwc
-rfp
-vVX
-iVE
+dxH
+mnw
+nuE
 sfl
 sfl
 bGf
@@ -398980,8 +399214,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -399048,9 +399282,9 @@ iSm
 jwc
 jwc
 jwc
-rfp
-vVX
-vgL
+dxH
+mnw
+mtk
 sfl
 sfl
 bGf
@@ -399432,8 +399666,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -399500,9 +399734,9 @@ iSm
 jwc
 jwc
 jwc
-rfp
-vVX
-iVE
+dxH
+mnw
+nuE
 sfl
 sfl
 bGf
@@ -399884,8 +400118,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -399952,9 +400186,9 @@ cmH
 jwc
 jwc
 jwc
-rfp
-vVX
-vgL
+dxH
+mnw
+mtk
 sfl
 sfl
 bGf
@@ -400336,8 +400570,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -400404,9 +400638,9 @@ iSm
 jwc
 jwc
 jwc
-jWw
-sBz
-jWw
+nMs
+bof
+nMs
 sfl
 sfl
 bGf
@@ -400788,8 +401022,8 @@ aBB
 aBB
 aBB
 aBB
-iVE
-vVX
+nuE
+mnw
 uSi
 vmi
 vmi
@@ -400855,11 +401089,11 @@ gfU
 cmH
 jwc
 jwc
-jWw
-jWw
-vvv
-jWw
-hrE
+nMs
+nMs
+mKr
+nMs
+arC
 aUO
 aUO
 aUO
@@ -401240,8 +401474,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 uSi
 vmi
 vmi
@@ -401307,11 +401541,11 @@ drN
 iSm
 jwc
 jwc
-iVE
-dJt
-iWa
-iWa
-sBz
+bxq
+jSw
+nOK
+nOK
+bof
 aUO
 aUO
 aUO
@@ -401692,9 +401926,9 @@ aBB
 aBB
 aBB
 aBB
-jWw
-sBz
-jWw
+nMs
+bof
+nMs
 vmi
 vmi
 vmi
@@ -401704,9 +401938,9 @@ vmi
 vmi
 vmi
 vmi
-hrE
-iVE
-jWw
+arC
+bxq
+nMs
 vmi
 vmi
 vmi
@@ -401759,11 +401993,11 @@ drN
 iSm
 jwc
 jwc
-jWw
-jWw
-mnC
-jWw
-jWw
+nMs
+nMs
+gpo
+nMs
+nMs
 ldE
 ldE
 ldE
@@ -402143,11 +402377,11 @@ aBB
 aBB
 aBB
 aBB
-jWw
-jWw
-iWa
-jWw
-hrE
+nMs
+nMs
+nOK
+nMs
+arC
 idd
 gHO
 gHO
@@ -402155,11 +402389,11 @@ gHO
 gHO
 gHO
 uRY
-jWw
-jWw
-iWa
-jWw
-hrE
+nMs
+nMs
+nOK
+nMs
+arC
 kLd
 vmi
 trl
@@ -402212,9 +402446,9 @@ iSm
 jwc
 jwc
 jwc
-jWw
-sBz
-hrE
+nMs
+bof
+arC
 aBB
 aBB
 aBB
@@ -402595,23 +402829,23 @@ aBB
 aBB
 aBB
 aBB
-iVE
-yjG
-iWa
-iWa
-sBz
+bxq
+pdj
+nOK
+nOK
+bof
 pee
 wBK
 wBK
 wBK
 wBK
-vVX
+mnw
 wBK
-sBz
-yjG
-dJt
-iWa
-iVE
+bof
+pdj
+jSw
+nOK
+bxq
 vmi
 vmi
 uZk
@@ -403047,23 +403281,23 @@ aBB
 aBB
 aBB
 aBB
-hrE
-jWw
-vvv
-jWw
-jWw
-vgL
-iVE
-iVE
-vgL
-iVE
-iVE
-vgL
-jWw
-hrE
-vvv
-jWw
-jWw
+arC
+nMs
+mKr
+nMs
+nMs
+mtk
+nuE
+nuE
+mtk
+nuE
+nuE
+mtk
+nMs
+arC
+mKr
+nMs
+nMs
 kLd
 vmi
 uZk
@@ -403118,7 +403352,7 @@ jwc
 jwc
 sKm
 wBK
-iVE
+nuE
 aBB
 aBB
 aBB
@@ -403500,9 +403734,9 @@ aBB
 aBB
 aBB
 aBB
-hrE
-iVE
-jWw
+arC
+bxq
+nMs
 aBB
 aBB
 aBB
@@ -403512,9 +403746,9 @@ aBB
 aBB
 aBB
 aBB
-jWw
-sBz
-jWw
+nMs
+bof
+nMs
 vmi
 vmi
 fXf
@@ -403570,7 +403804,7 @@ jwc
 jwc
 sKm
 wBK
-vgL
+mtk
 aBB
 aBB
 aBB
@@ -403964,8 +404198,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 van
 vmi
 vmi
@@ -404022,7 +404256,7 @@ jwc
 jwc
 sKm
 wBK
-iVE
+nuE
 aBB
 aBB
 aBB
@@ -404416,7 +404650,7 @@ aBB
 aBB
 aBB
 aBB
-iVE
+nuE
 wBK
 olF
 vmi
@@ -404474,7 +404708,7 @@ jwc
 jwc
 sKm
 wBK
-vgL
+mtk
 aBB
 aBB
 aBB
@@ -404868,7 +405102,7 @@ aBB
 aBB
 aBB
 aBB
-iVE
+nuE
 wBK
 olF
 vmi
@@ -404926,7 +405160,7 @@ jwc
 jwc
 sKm
 wBK
-iVE
+nuE
 aBB
 aBB
 aBB
@@ -405320,8 +405554,8 @@ aBB
 aBB
 aBB
 aBB
-vgL
-vVX
+mtk
+mnw
 oTp
 vmi
 vmi
@@ -405378,7 +405612,7 @@ vmi
 vmi
 sKm
 wBK
-vgL
+mtk
 aBB
 aBB
 aBB
@@ -405772,9 +406006,9 @@ aBB
 aBB
 aBB
 aBB
-jWw
-sBz
-jWw
+nMs
+bof
+nMs
 vmi
 vmi
 vmi
@@ -405799,9 +406033,9 @@ vmi
 vmi
 vmi
 vmi
-jWw
-iVE
-jWw
+nMs
+bxq
+nMs
 vmi
 vmi
 vmi
@@ -405828,9 +406062,9 @@ vmi
 vmi
 vmi
 vmi
-jWw
-sBz
-jWw
+nMs
+bof
+nMs
 aBB
 aBB
 aBB
@@ -406223,11 +406457,11 @@ aBB
 aBB
 aBB
 aBB
-jWw
-jWw
-vvv
-jWw
-jWw
+nMs
+nMs
+mKr
+nMs
+nMs
 idd
 gHO
 uRY
@@ -406250,11 +406484,11 @@ gHO
 uRY
 gHO
 uRY
-jWw
-jWw
-vvv
-jWw
-jWw
+nMs
+nMs
+mKr
+nMs
+nMs
 idd
 uRY
 uRY
@@ -406279,11 +406513,11 @@ uRY
 uRY
 uRY
 uRY
-jWw
-jWw
-vvv
-jWw
-hrE
+nMs
+nMs
+mKr
+nMs
+arC
 aBB
 aBB
 aBB
@@ -406675,46 +406909,38 @@ aBB
 aBB
 aBB
 aBB
-iVE
-aQQ
-iWa
-iWa
-sBz
+bxq
+bKA
+nOK
+nOK
+bof
 wBK
-vVX
+mnw
 wBK
-vVX
+mnw
 pee
-vVX
+mnw
 wBK
-vVX
+mnw
 wBK
-vVX
+mnw
 wBK
 wBK
-vVX
+mnw
 wBK
-vVX
+mnw
 pee
-vVX
+mnw
 wBK
-vVX
+mnw
 wBK
-vVX
+mnw
 wBK
-sBz
-iWa
-iWa
-iWa
-sBz
-wBK
-wBK
-wBK
-wBK
-wBK
-pee
-wBK
-wBK
+bof
+nOK
+nOK
+nOK
+bof
 wBK
 wBK
 wBK
@@ -406726,16 +406952,24 @@ wBK
 wBK
 wBK
 wBK
+wBK
+wBK
 pee
 wBK
 wBK
 wBK
 wBK
-sBz
-iWa
-iWa
-iWa
-iVE
+wBK
+pee
+wBK
+wBK
+wBK
+wBK
+bof
+nOK
+nOK
+nOK
+bxq
 aBB
 aBB
 aBB
@@ -407127,67 +407361,67 @@ aBB
 aBB
 aBB
 aBB
-hrE
-jWw
-iWa
-jWw
-hrE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-hrE
-jWw
-mnC
-jWw
-hrE
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-iVE
-vgL
-jWw
-jWw
-mnC
-jWw
-jWw
+arC
+nMs
+nOK
+nMs
+arC
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+arC
+nMs
+gpo
+nMs
+arC
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nuE
+mtk
+nMs
+nMs
+gpo
+nMs
+nMs
 aBB
 aBB
 aBB
@@ -407580,9 +407814,9 @@ aBB
 aBB
 aBB
 aBB
-jWw
-iVE
-hrE
+nMs
+bxq
+arC
 aBB
 aBB
 aBB
@@ -407607,9 +407841,9 @@ aBB
 aBB
 aBB
 aBB
-hrE
-iVE
-jWw
+arC
+bxq
+nMs
 aBB
 aBB
 aBB
@@ -407636,9 +407870,9 @@ aBB
 aBB
 aBB
 aBB
-jWw
-iVE
-hrE
+nMs
+bxq
+arC
 aBB
 aBB
 aBB
@@ -503462,7 +503696,7 @@ bGf
 bGf
 bGf
 bGf
-jWw
+nMs
 bGf
 bGf
 bGf
@@ -503894,12 +504128,12 @@ hCF
 lMc
 lMc
 lMc
-gij
-aft
-aft
-aft
-aft
-aft
+brN
+eNE
+eNE
+eNE
+eNE
+eNE
 kUH
 obd
 gij
@@ -503908,14 +504142,14 @@ aft
 aft
 aft
 aft
-kUH
+pwc
 bGf
 bGf
 bGf
 bGf
-jWw
-jWw
-jWw
+nMs
+nMs
+nMs
 bGf
 bGf
 bGf
@@ -504345,30 +504579,30 @@ lMc
 lMc
 lMc
 lMc
-gij
+brN
 aoM
-jWw
-jWw
-jWw
-jWw
-jWw
+xyE
+xyE
+xyE
+xyE
+xyE
 cXP
 kSN
 cXP
-jWw
-jWw
-jWw
-jWw
-jWw
+cfR
+cfR
+cfR
+cfR
+cfR
 vFY
-kUH
+pwc
 lMc
 lMc
-jWw
-jWw
-yjG
-jWw
-jWw
+nMs
+nMs
+pdj
+nMs
+nMs
 bGf
 bGf
 bGf
@@ -504798,8 +505032,8 @@ lMc
 lMc
 lMc
 vHy
-jWw
-jWw
+xyE
+xyE
 tMv
 vUZ
 tMv
@@ -504809,18 +505043,18 @@ kSN
 kSN
 qrd
 laf
-gDG
+oQh
 ijk
-jWw
-jWw
+cfR
+cfR
 iLV
 lMc
 lMc
-iVE
-iWa
-iWa
-iWa
-iVE
+bxq
+nOK
+nOK
+nOK
+bxq
 bGf
 bGf
 bGf
@@ -505250,29 +505484,29 @@ lMc
 lMc
 lMc
 vHy
-jWw
+xyE
 iSQ
 tMv
 tMv
 tMv
-jWw
+xyE
 aOM
 kSN
 kSN
-jWw
-nBo
-nBo
-nBo
+cfR
+sAk
+sAk
+sAk
 sBH
-jWw
+cfR
 iLV
 lMc
 lMc
-sBz
-iWa
-iWa
-dJt
-vgL
+bof
+nOK
+nOK
+jSw
+vvv
 bGf
 bGf
 bGf
@@ -505702,29 +505936,29 @@ lMc
 lMc
 lMc
 vHy
-jWw
+xyE
 dha
 igz
 igz
 igz
-jWw
+xyE
 nZB
 kSN
 qvp
-jWw
-igz
-igz
-igz
+cfR
+fOY
+fOY
+fOY
 ivq
-jWw
+cfR
 iLV
 lMc
 lMc
-iVE
-iWa
-iWa
-iWa
-iVE
+bxq
+nOK
+nOK
+nOK
+bxq
 bGf
 bGf
 bGf
@@ -506154,29 +506388,29 @@ vmi
 lMc
 lMc
 vHy
-jWw
+xyE
 tMv
+gmH
+gmH
+gmh
+xyE
+fiK
+fiK
+fiK
+cfR
 rDO
 rDO
 pqR
-jWw
-fiK
-fiK
-fiK
-jWw
-rDO
-rDO
-pqR
-nBo
-jWw
+sAk
+cfR
 iLV
 lMc
 vmi
-jWw
-jWw
-iWa
-jWw
-jWw
+nMs
+nMs
+nOK
+nMs
+nMs
 bGf
 bGf
 bGf
@@ -506606,28 +506840,28 @@ vmi
 lMc
 lMc
 vHy
-jWw
+xyE
 iSQ
-siN
+hHP
 xUY
 hmx
-jWw
+xyE
 rCV
 vdf
 rCV
-jWw
-hmx
+cfR
+meI
 pLb
-siN
+xSZ
 sBH
-jWw
+cfR
 iLV
 lMc
 vmi
 vmi
-jWw
-iVE
-jWw
+nMs
+bxq
+nMs
 bGf
 bGf
 bGf
@@ -507056,23 +507290,23 @@ vmi
 vmi
 vmi
 lMc
-gij
+brN
 aoM
-jWw
+xyE
 thJ
-jWw
-jWw
-jWw
-jWw
-hrE
-jWw
-jWw
-jWw
-jWw
-jWw
-jWw
+xyE
+xyE
+xyE
+xyE
+iQT
+cfR
+cfR
+cfR
+cfR
+cfR
+cfR
 uyx
-jWw
+cfR
 iLV
 lMc
 vmi
@@ -507509,22 +507743,22 @@ vmi
 vmi
 lMc
 vHy
-jWw
-jWw
+xyE
+xyE
 mkj
 qSC
 gDG
-nBo
-jWw
-jWw
-jWw
-jWw
+bvN
+xyE
+xyE
+cfR
+cfR
 jAV
 pIv
 elZ
 atr
 scT
-jWw
+cfR
 iLV
 lMc
 vmi
@@ -507961,22 +508195,22 @@ vmi
 vmi
 lMc
 vHy
-jWw
+xyE
 viS
-nBo
+bvN
 nXg
 pel
-nBo
-siN
-lvc
-jWw
+bvN
+hHP
+mKs
+cfR
 foK
 jsG
 mqT
 mqT
 mqT
 hDh
-jWw
+cfR
 iLV
 lMc
 vmi
@@ -508413,22 +508647,22 @@ vmi
 vmi
 lMc
 vHy
-jWw
+xyE
 mCr
-nBo
+bvN
 exS
 tUx
 cVX
-siN
+hHP
 fNC
-jWw
+cfR
 vTJ
-nBo
+sAk
 vmI
 vmI
 vmI
 hsS
-jWw
+cfR
 iLV
 lMc
 vmi
@@ -508865,22 +509099,22 @@ vmi
 vmi
 lMc
 vHy
-jWw
+xyE
 dZX
-nBo
+bvN
 pFh
 lLV
-nBo
-siN
+bvN
+hHP
 rWQ
-jWw
+cfR
 jNb
-siN
-siN
-siN
-siN
-siN
-jWw
+xSZ
+xSZ
+xSZ
+xSZ
+xSZ
+cfR
 iLV
 lMc
 vmi
@@ -509317,22 +509551,22 @@ vmi
 vmi
 lMc
 vHy
-jWw
-jWw
+xyE
+xyE
 eeK
-nBo
-nBo
-nBo
-jWw
-jWw
-jWw
-jWw
+bvN
+bvN
+bvN
+xyE
+xyE
+cfR
+cfR
 njb
 aEu
-siN
-siN
+xSZ
+xSZ
 atG
-jWw
+cfR
 iLV
 lMc
 vmi
@@ -509769,29 +510003,29 @@ vmi
 vmi
 lMc
 vHy
-jWw
-jWw
-jWw
+xyE
+xyE
+xyE
+qTz
+qTz
+xyE
+iQT
+xyE
+mEG
+cfR
+cfR
+cfR
 qqK
 qqK
-jWw
-hrE
-jWw
-hrE
-jWw
-jWw
-jWw
-qqK
-qqK
-jWw
-jWw
+cfR
+cfR
 iLV
 lMc
 jwc
 jwc
 jav
-jEZ
-xBf
+pox
+mtk
 bGf
 bGf
 bGf
@@ -510223,27 +510457,27 @@ lMc
 toG
 pEB
 pEB
-vFt
+grl
 lMc
 lMc
 toG
 pEB
 pEB
-pEB
-pEB
-pEB
+mJS
+mJS
+mJS
 vFt
 lMc
 lMc
-toG
-pEB
+lAM
+mJS
 vFt
 lMc
 jwc
 jwc
 ivP
-vVX
-nZA
+mnw
+nuE
 bGf
 bGf
 bGf
@@ -510693,9 +510927,9 @@ lMc
 lMc
 jwc
 jwc
-rfp
-vVX
-xBf
+dxH
+mnw
+mtk
 bGf
 bGf
 bGf
@@ -511145,9 +511379,9 @@ lMc
 lMc
 jwc
 jwc
-rfp
-vVX
-nZA
+dxH
+mnw
+nuE
 bGf
 bGf
 bGf
@@ -511597,9 +511831,9 @@ lMc
 lMc
 jwc
 jwc
-rfp
-vVX
-xBf
+dxH
+mnw
+mtk
 bGf
 bGf
 bGf
@@ -512049,9 +512283,9 @@ lMc
 lMc
 jwc
 jwc
-rfp
-vVX
-nZA
+dxH
+mnw
+nuE
 bGf
 bGf
 bGf
@@ -512502,8 +512736,8 @@ jwc
 jwc
 jwc
 jOT
-vVX
-xBf
+mnw
+mtk
 bGf
 bGf
 bGf
@@ -512955,7 +513189,7 @@ jwc
 jwc
 jav
 lkZ
-nZA
+nuE
 bGf
 bGf
 bGf
@@ -515665,9 +515899,9 @@ cmH
 vmi
 vmi
 vmi
-jWw
-iVE
-jWw
+nMs
+bxq
+nMs
 bGf
 bGf
 bGf
@@ -516116,11 +516350,11 @@ qQo
 iSm
 vmi
 vmi
-jWw
-yjG
-iWa
-iWa
-jWw
+nMs
+pdj
+nOK
+nOK
+nMs
 bGf
 bGf
 bGf
@@ -516568,11 +516802,11 @@ iSb
 iSm
 vmi
 vmi
-iVE
-dJt
-iWa
-iWa
-iVE
+bxq
+jSw
+nOK
+nOK
+bxq
 bGf
 bGf
 bGf
@@ -517020,11 +517254,11 @@ iSm
 iSm
 vmi
 vmi
-jWw
-iWa
-iWa
-aQQ
-jWw
+nMs
+nOK
+nOK
+bKA
+nMs
 bGf
 bGf
 bGf
@@ -517473,9 +517707,9 @@ iSm
 vmi
 vmi
 vmi
-jWw
-iVE
-jWw
+nMs
+bxq
+nMs
 aBB
 aBB
 aBB
