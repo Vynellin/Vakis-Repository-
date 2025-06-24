@@ -51,5 +51,7 @@ GLOBAL_LIST_INIT(learnable_spells, (list(/obj/effect/proc_holder/spell/invoked/p
 		/obj/effect/proc_holder/spell/invoked/forcewall/greater,
 		/obj/effect/proc_holder/spell/self/findfamiliar,
 		/obj/effect/proc_holder/spell/invoked/celestial_vigil,
+		/obj/effect/proc_holder/spell/invoked/void_vigil,
+		/obj/effect/proc_holder/spell/invoked/umbral_volley,
 		)
 ))

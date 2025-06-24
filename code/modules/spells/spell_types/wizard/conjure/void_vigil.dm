@@ -1,8 +1,8 @@
-/obj/effect/proc_holder/spell/invoked/celestial_vigil
-    name = "Celestial Vigil"
-    desc = "Summons guiding stars that protect the caster against those who draw near."
-    sound = list("modular_azurepeak/sound/spellbooks/crystal.ogg")
-    invocation = "Custodes caeli, vigilemus!"
+/obj/effect/proc_holder/spell/invoked/void_vigil
+    name = "Void Vigil"
+    desc = "Summons shadowy sentinels that hunt your enemies with unerring malice."
+    sound = list("sound/magic/shadowstep_destination.ogg")
+    invocation = "Umbrae vigilent!"
     invocation_type = "shout"
 
     clothes_req = FALSE
@@ -15,7 +15,7 @@
     no_early_release = TRUE
     movement_interrupt = FALSE
     spell_tier = 3
-    glow_color = GLOW_COLOR_ARCANE
+    glow_color = "#3b1f47"
     glow_intensity = GLOW_INTENSITY_LOW
     charging_slowdown = 3
     chargedloop = /datum/looping_sound/invokegen
@@ -23,39 +23,39 @@
     cost = 2
     xp_gain = TRUE
 
-/obj/effect/proc_holder/spell/invoked/celestial_vigil/cast(mob/living/target, mob/living/user)
+/obj/effect/proc_holder/spell/invoked/void_vigil/cast(mob/living/target, mob/living/user)
     . = ..()
     if(!user)
         return
 
-    if(user.has_status_effect(/datum/status_effect/buff/celestial_vigil))
-        to_chat(user, span_warning("The celestial vigil is already watching over you."))
+    if(user.has_status_effect(/datum/status_effect/buff/void_vigil))
+        to_chat(user, span_warning("The void is already watching through you."))
         return
 
-    user.apply_status_effect(/datum/status_effect/buff/celestial_vigil)
-    create_celestial_orb_overlay(user)
+    user.apply_status_effect(/datum/status_effect/buff/void_vigil)
+    create_void_orb_overlay(user)
 
     spawn()
-        monitor_celestial_vigil(user)
+        monitor_void_vigil(user)
 
-/atom/movable/screen/alert/status_effect/buff/celestial_vigil
-	name = "Celestial Vigil"
-	desc = "Luminous stars drift in silent orbit, shielding you with radiant vigilance."
+/atom/movable/screen/alert/status_effect/buff/void_vigil
+	name = "Void Vigil"
+	desc = "Eyes of the void spiral silently around you, drawn to threats like moths to unseen flame."
 	icon_state = "buff"
 
-/datum/status_effect/buff/celestial_vigil
-	id = "celestialvigil"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/celestial_vigil
+/datum/status_effect/buff/void_vigil
+	id = "voidvigil"
+	alert_type = /atom/movable/screen/alert/status_effect/buff/void_vigil
 	duration = 1 MINUTES
 
-/datum/status_effect/buff/celestial_vigil/on_remove()
+/datum/status_effect/buff/void_vigil/on_remove()
 	. = ..()
-	remove_celestial_orb_overlay(owner)
+	remove_void_orb_overlay(owner)
 
-/proc/create_celestial_orb_overlay(mob/living/user)
+/proc/create_void_orb_overlay(mob/living/user)
 	if (!user) return
 
-	var/orb_count = get_celestial_orb_count(user)
+	var/orb_count = get_void_orb_count(user)
 	if (orb_count <= 0) return
 
 	var/radius = 16
@@ -68,14 +68,14 @@
 		var/pixel_x = round(cos(angle) * radius)
 		var/pixel_y = round(sin(angle) * radius + 8)  // lift arc
 
-		var/obj/effect/overlay/orb/orb = new
+		var/obj/effect/overlay/orb/void/orb = new
 		orb.icon = 'icons/obj/projectiles.dmi'
 		orb.icon_state = "ice_1"
 		orb.layer = FLOAT_LAYER
 		orb.pixel_x = pixel_x
 		orb.pixel_y = pixel_y
 		orb.alpha = 200
-		orb.color = "#ddeeff"
+		orb.color = "#2A003F"
 		orb.mouse_opacity = 0
 		orb.anchored = TRUE
 		orb.loc = null
@@ -84,16 +84,13 @@
 
 	user.update_icon()
 
-/obj/effect/overlay/orb
-    icon = 'icons/obj/projectiles.dmi'
-    icon_state = "ice_1"
-    name = "Celestial Light"
-    color = "#ddeeff"
-    alpha = 200
-    mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+/obj/effect/overlay/orb/void
+    name = "Void Sentinel"
+    color = "#2A003F"
+    alpha = 180
 
-/proc/monitor_celestial_vigil(mob/living/user)
-	while(user && user.has_status_effect(/datum/status_effect/buff/celestial_vigil))
+/proc/monitor_void_vigil(mob/living/user)
+	while(user && user.has_status_effect(/datum/status_effect/buff/void_vigil))
 		sleep(10) // every second
 
 		var/list/enemies = list()
@@ -122,23 +119,23 @@
 			fire_void_orbs(user, enemies[1])
 			return
 
-/proc/remove_celestial_orb_overlay(mob/living/user)
-    for(var/obj/effect/overlay/orb in user.vis_contents)
-        if(orb.name == "Celestial Light")
+/proc/remove_void_orb_overlay(mob/living/user)
+    for(var/obj/effect/overlay/orb/void/orb in user.vis_contents)
+        if(orb.name == "Void Sentinel")
             qdel(orb)
     user.update_icon()
 
-/proc/fire_celestial_orbs(mob/living/user, mob/living/target)
+/proc/fire_void_orbs(mob/living/user, mob/living/target)
 	var/turf/start = get_turf(user)
 	var/turf/end = get_turf(target)
-	var/total_orbs = get_celestial_orb_count(user)
-	var/fan_angle = 30 // total spread angle
+	var/total_orbs = get_void_orb_count(user)
+	var/fan_angle = 60 // total spread angle
 	var/step = total_orbs > 1 ? fan_angle / (total_orbs - 1) : 0
 	var/base_angle = Get_Angle(start, end)
 	var/offset = -(fan_angle / 2)
 
 	for (var/i = 0 to total_orbs - 1)
-		var/obj/projectile/magic/celestial_orb/orb_proj = new(start)
+		var/obj/projectile/magic/void_orb/orb_proj = new(start)
 		orb_proj.firer = user
 		orb_proj.original = target
 
@@ -147,14 +144,14 @@
 		orb_proj.current_angle = final_angle // Important: set logic angle too
 		orb_proj.fire()
 
-/obj/projectile/magic/celestial_orb
-    name = "Celestial Orb"
+/obj/projectile/magic/void_orb
+    name = "Void Orb"
     icon = 'icons/obj/projectiles.dmi'
-    color = "#ddeeff"
     icon_state = "ice_1"
+    color = "#2A003F"
     pixel_x = -8
     pixel_y = -8
-    speed = 20
+    speed = 60
 
     damage = 15
     damage_type = BRUTE
@@ -162,11 +159,11 @@
     woundclass = BCLASS_BLUNT
     nodamage = FALSE
 
-    var/max_turn_rate = 1 //The higher it is, the better it turns
+    var/max_turn_rate = 3 //Higher this is, the better it turns.
     var/direction = 0
     var/current_angle = null
 
-/obj/projectile/magic/celestial_orb/process()
+/obj/projectile/magic/void_orb/process()
     . = ..()
 
     if (!original || QDELETED(original))
@@ -181,7 +178,7 @@
         current_angle = (current_angle + 360) % 360
         setAngle(current_angle)
 
-/proc/get_celestial_orb_count(mob/living/user)
+/proc/get_void_orb_count(mob/living/user)
     if (!user || !user.mind) return 1
 
     var/intellect = clamp(user.STAINT, 1, 20)
