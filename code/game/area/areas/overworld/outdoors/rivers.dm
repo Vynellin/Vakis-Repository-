@@ -1,5 +1,5 @@
 /area/provincial/outdoors/river
-	name = "river"
+	name = "The Veshin River"
 	icon_state = "river"
 	warden_area = TRUE
 	ambientsounds = AMB_RIVERDAY

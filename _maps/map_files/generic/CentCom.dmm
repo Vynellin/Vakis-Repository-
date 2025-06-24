@@ -1526,9 +1526,6 @@
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
 /turf/open/floor/rogue/herringbone,
 /area/rasurian_heartland/indoors/prison)
-"tN" = (
-/turf/closed,
-/area/provincial/underground/basement)
 "up" = (
 /obj/item/cooking/pan,
 /turf/open/floor/rogue/tile{
@@ -18250,7 +18247,7 @@ rQ
 rQ
 "}
 (126,1,1) = {"
-tN
+rQ
 rQ
 rQ
 rQ

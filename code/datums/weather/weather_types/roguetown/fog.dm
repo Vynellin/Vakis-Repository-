@@ -19,7 +19,7 @@
 	end_sound = 'sound/blank.ogg'
 
 	area_type = /area/provincial/outdoors
-	protected_areas = list(/area/provincial/indoors,/area/provincial/underground/basement)
+	protected_areas = list(/area/provincial/indoors)
 	impacted_z_levels = list()
 	var/lastlightning = 0
 
