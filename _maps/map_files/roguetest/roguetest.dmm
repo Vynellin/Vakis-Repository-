@@ -1110,7 +1110,7 @@
 /area/provincial/outdoors/forest)
 "vW" = (
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/warehouse)
+/area/provincial/indoors/town/steward/import_platform)
 "QR" = (
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/forest)

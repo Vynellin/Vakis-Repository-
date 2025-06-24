@@ -27,12 +27,6 @@
 	converted_type = /area/provincial/indoors/town/tavern
 	brief_descriptor = /area/provincial/indoors/town/tavern::droning_sound_night
 
-/area/provincial/outdoors/dwarfin
-	icon_state = "dwarf"
-	droning_sound = 'sound/music/area/dwarf.ogg'
-	droning_sound_dusk = null
-	droning_sound_night = null
-
 /// RAMPARTS ///
 
 /area/provincial/outdoors/town/ramparts
