@@ -38,17 +38,22 @@
 /area/provincial/indoors/town/province_keep/garrison/dungeon/secondary
 	name = "Secondary Dungeon"
 
-/area/provincial/indoors/town/province_keep/garrison/cell
+/area/provincial/indoors/town/province_keep/garrison/dungeon/cell
 	name = "Dungeon Cells"
 	icon_state = "cell"
 
-/area/provincial/indoors/town/province_keep/garrison/cell/secondary
+/area/provincial/indoors/town/province_keep/garrison/dungeon/cell/secondary
 	name = "Secondary Dungeon Cells"
 
 /// GATES ///
 
 /area/provincial/indoors/town/province_keep/garrison/gate
 	name = "Gatehouse"
+	keep_area = FALSE
+	first_time_text = null
+	droning_sound = /area/provincial/indoors/town::droning_sound
+	droning_sound_dusk = /area/provincial/indoors/town::droning_sound_dusk
+	droning_sound_night = /area/provincial/indoors/town::droning_sound_night
 
 /area/provincial/indoors/town/province_keep/garrison/gate/north
 	name = "Northern Gatehouse"
@@ -64,6 +69,10 @@
 
 /area/provincial/indoors/town/province_keep/garrison/gate/keep
 	name = "Keep Gatehouse"
+	keep_area = TRUE // nightmare
+	droning_sound = /area/provincial/indoors/town/province_keep/garrison::droning_sound
+	droning_sound_dusk = /area/provincial/indoors/town/province_keep/garrison::droning_sound_dusk
+	droning_sound_night = /area/provincial/indoors/town/province_keep/garrison::droning_sound_night
 
 /// QUARTERS ///
 
