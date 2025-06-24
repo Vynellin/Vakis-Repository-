@@ -699,7 +699,7 @@
 /turf/closed/wall/mineral/rogue/decowood/vert,
 /area/provincial/indoors/town/stables)
 "amO" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/concrete,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "amP" = (
@@ -3256,7 +3256,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "bfT" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/metal/barograte/open,
 /area/provincial/underground/underdark/sunkencity)
 "bfU" = (
@@ -3992,7 +3992,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/underground/dungeon/old_university_garden)
 "bur" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground)
 "but" = (
@@ -8160,7 +8160,7 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "cSa" = (
@@ -8690,7 +8690,7 @@
 /area/provincial/outdoors/mountains)
 "daX" = (
 /obj/structure/table/vtable/v2,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
 "dbi" = (
@@ -10430,9 +10430,6 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
 "dEF" = (
-/obj/effect/landmark/start/adventurer{
-	dir = 1
-	},
 /obj/effect/landmark/start/adventurerlate{
 	dir = 1
 	},
@@ -12289,7 +12286,7 @@
 "emm" = (
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/metal,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "emp" = (
@@ -14299,6 +14296,12 @@
 /obj/structure/chair/wood/rogue/chair3,
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/town)
+"eVn" = (
+/obj/effect/landmark/start/adventurer{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/provincial/indoors/town/adventurers_guild)
 "eVp" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/rogue/cobble/mossy,
@@ -16335,7 +16338,7 @@
 /turf/open/transparent/openspace,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "fEl" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /obj/structure/closet/crate/chest/old_crate,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/spider_cave)
@@ -18351,7 +18354,7 @@
 /area/provincial/underground/dungeon/old_ruin)
 "gnP" = (
 /turf/closed/wall/mineral/rogue/decostone,
-/area/provincial/outdoors/mountains)
+/area/provincial/outdoors/town/roofs)
 "gnQ" = (
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/shop)
@@ -18564,7 +18567,7 @@
 "grA" = (
 /obj/structure/table/wood,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/carpet/lord/right,
 /area/provincial/underground/dungeon/vulnafir)
 "grB" = (
@@ -19398,7 +19401,7 @@
 /area/provincial/underground/dungeon/winding_halls)
 "gFs" = (
 /obj/effect/decal/cleanable/blood,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/goblinfort)
 "gFA" = (
@@ -20453,7 +20456,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/goblinfort)
 "gWK" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/underdark/undersea/undergrove)
 "gWM" = (
@@ -20848,7 +20851,7 @@
 /area/provincial/indoors/town)
 "hdK" = (
 /obj/structure/closet/crate/chest/lootbox,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/tile,
 /area/provincial/underground/dungeon/abandoned_manor)
 "hdO" = (
@@ -23421,7 +23424,7 @@
 /area/provincial/outdoors/dungeon/riverbrook)
 "hTn" = (
 /obj/structure/roguemachine/teleport_beacon{
-	custom_name = "Sunmarch Northern Crossroads"
+	custom_name = "Emerald Coast Crossroads"
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/beach/forest)
@@ -23899,7 +23902,7 @@
 "idq" = (
 /obj/item/roguecoin/gold/pile,
 /obj/structure/closet/crate/chest/neu_fancy,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -24546,7 +24549,7 @@
 /obj/structure/table/church{
 	icon_state = "churchtable_end"
 	},
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/blocks/platform,
 /area/provincial/underground/underkings_maw)
 "ioQ" = (
@@ -25665,7 +25668,7 @@
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "iIQ" = (
 /obj/structure/closet/crate/chest/neu_fancy,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
@@ -26151,7 +26154,7 @@
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "iRs" = (
 /obj/structure/roguemachine/teleport_beacon{
-	custom_name = "Solara Vie Southern Crossroads"
+	custom_name = "Solara Vie Crossroads"
 	},
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/field)
@@ -29388,7 +29391,7 @@
 /turf/open/floor/carpet/purple,
 /area/provincial/indoors/town/tavern/room)
 "jXv" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/underground/underkings_maw)
 "jXB" = (
@@ -30040,8 +30043,8 @@
 "khZ" = (
 /obj/structure/closet/crate/chest/lootbox,
 /obj/effect/spawner/lootdrop/potion_vitals,
-/obj/item/roguegem/random,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /obj/item/roguegem/diamond,
 /obj/item/listenstone,
 /turf/open/floor/rogue/naturalstone,
@@ -31500,7 +31503,7 @@
 	dir = 9
 	},
 /obj/structure/closet/crate/chest,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
@@ -33392,6 +33395,7 @@
 /area/provincial/indoors/town/basement)
 "lqx" = (
 /obj/structure/chair/wood/rogue/chair3,
+/obj/effect/landmark/start/ghandler,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/adventurers_guild)
 "lqA" = (
@@ -34862,7 +34866,7 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "lQT" = (
@@ -35023,6 +35027,9 @@
 /area/provincial/indoors/town/basement)
 "lUm" = (
 /obj/structure/chair/wood/rogue{
+	dir = 1
+	},
+/obj/effect/landmark/start/adventurer{
 	dir = 1
 	},
 /turf/open/floor/rogue/wood/herringbone,
@@ -36642,7 +36649,7 @@
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 1
 	},
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/mountains)
 "muJ" = (
@@ -37300,7 +37307,7 @@
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/metal,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "mHm" = (
@@ -37375,7 +37382,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "mIz" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/concrete{
 	dir = 8
 	},
@@ -38580,7 +38587,7 @@
 /area/provincial/indoors/town/ramparts)
 "ndC" = (
 /obj/structure/fluff/walldeco/chains,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/goblinfort)
 "ndF" = (
@@ -40019,7 +40026,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "nBh" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/underground/underdark/sunkencity)
 "nBw" = (
@@ -40106,9 +40113,9 @@
 	locked = 1;
 	lockid = "merchant"
 	},
-/obj/item/roguegem/random,
-/obj/item/roguegem/random,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
+/obj/effect/spawner/lootdrop/roguetown/gems,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/carpet/purple,
 /area/provincial/indoors/town/shop)
 "nCM" = (
@@ -40852,7 +40859,7 @@
 /turf/open/floor/rogue/greenstone,
 /area/provincial/underground/dungeon/gethsmane/inner)
 "nQN" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/blocks/platform,
 /area/provincial/underground/dungeon/old_ruin)
 "nQO" = (
@@ -40981,7 +40988,7 @@
 /obj/structure/bars/pipe{
 	dir = 4
 	},
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/underground/underdark/sunkencity)
 "nTi" = (
@@ -41513,6 +41520,7 @@
 /area/provincial/indoors/town/mages_university)
 "obI" = (
 /obj/structure/chair/wood/rogue,
+/obj/effect/landmark/start/adventurer,
 /turf/open/floor/rogue/wood/herringbone,
 /area/provincial/indoors/town/adventurers_guild)
 "obN" = (
@@ -45504,7 +45512,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/sewer)
 "ptN" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/old_university)
 "ptQ" = (
@@ -46514,6 +46522,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
+/obj/machinery/gear_painter,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/adventurers_guild)
 "pKB" = (
@@ -47645,6 +47654,10 @@
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/forest)
+"qfo" = (
+/obj/effect/landmark/start/adventurer,
+/turf/open/floor/rogue/cobble,
+/area/provincial/outdoors/town)
 "qfp" = (
 /obj/structure/rack/rogue,
 /obj/item/flint,
@@ -47743,7 +47756,7 @@
 /area/provincial/underground/dungeon/old_university)
 "qhA" = (
 /obj/structure/bars/pipe,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/underground/underdark/sunkencity)
 "qhB" = (
@@ -48547,6 +48560,9 @@
 /obj/item/bedsheet/rogue/fabric_double,
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
 /obj/structure/bed/rogue/inn/double,
+/obj/effect/landmark/start/barkeep{
+	dir = 8
+	},
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/tavern/innkeeper)
 "qtw" = (
@@ -54652,7 +54668,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/councillor)
 "szH" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/field)
 "szN" = (
@@ -60847,7 +60863,7 @@
 	icon_state = "longtable_mid";
 	dir = 1
 	},
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
 "uHo" = (
@@ -62298,7 +62314,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
 "vjn" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/dungeon/old_ruin)
 "vjy" = (
@@ -63193,7 +63209,7 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/indoors/town/tavern)
 "vxU" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/underdark/undersea/undergrove)
 "vyd" = (
@@ -63846,7 +63862,7 @@
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/dungeon/old_university)
 "vJt" = (
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/mountains)
 "vJu" = (
@@ -63961,7 +63977,7 @@
 /area/provincial/underground/underkings_maw)
 "vKI" = (
 /obj/structure/closet/crate/chest/neu_fancy,
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
@@ -65194,7 +65210,7 @@
 	icon_state = "longtable";
 	dir = 8
 	},
-/obj/item/roguegem/random,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /obj/item/reagent_containers/glass/bottle/rogue/healthpotnew,
 /turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/old_university)
@@ -259351,7 +259367,7 @@ qpl
 gKm
 mlI
 eaN
-tHC
+eVn
 wYx
 iRb
 tdp
@@ -259807,7 +259823,7 @@ tHC
 tHC
 xSg
 mJL
-tZh
+qfo
 ifQ
 tZh
 tZh
@@ -497157,10 +497173,10 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -497608,12 +497624,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -498060,12 +498076,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -498512,12 +498528,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -498964,12 +498980,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
 gnP
-dDB
+pwm
 oyL
 oyL
 oyL
@@ -499416,12 +499432,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -499868,12 +499884,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -500320,12 +500336,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -500772,12 +500788,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -501224,12 +501240,12 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
@@ -501677,10 +501693,10 @@ oyL
 oyL
 oyL
 oyL
-dDB
-dDB
-dDB
-dDB
+pwm
+pwm
+pwm
+pwm
 oyL
 oyL
 oyL
