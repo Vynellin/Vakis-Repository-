@@ -52,7 +52,7 @@
 		// Find tavern area for spawning
 		var/area/spawn_area
 		for(var/area/A in world)
-			if(istype(A, /area/rogue/indoors/town/tavern))
+			if(istype(A, /area/provincial/indoors/town/tavern))
 				spawn_area = A
 				break
 		
