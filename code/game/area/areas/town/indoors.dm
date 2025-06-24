@@ -168,6 +168,9 @@
 	brief_descriptor = "where rat and murk mingle twice-over"
 	general_location = /area/provincial/indoors/town/basement::general_location
 
+/area/provincial/indoors/town/sewer/rogues_den
+	name = "Rogue's Den"
+
 /// SHOP ///
 
 /area/provincial/indoors/town/shop
