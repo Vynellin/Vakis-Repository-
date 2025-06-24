@@ -109,7 +109,7 @@
 			// Skip friendly familiars
 			if(istype(mob, /mob/living/simple_animal/pet/familiar/))
 				var/mob/living/simple_animal/pet/familiar/fam_target = mob
-				if(fam_target.familiar_summoner == user) continue
+				if(fam_target.familiar_summoner == user.real_name) continue
 
 			// Skip other friendly summons
 			if(mob.summoner == user) continue
@@ -117,9 +117,9 @@
 			enemies += mob
 
 		if(enemies.len)
-			user.remove_status_effect(/datum/status_effect/buff/void_vigil)
-			remove_void_orb_overlay(user)
-			fire_void_orbs(user, enemies[1])
+			user.remove_status_effect(/datum/status_effect/buff/celestial_vigil)
+			remove_celestial_orb_overlay(user)
+			fire_celestial_orbs(user, enemies[1])
 			return
 
 /proc/remove_celestial_orb_overlay(mob/living/user)

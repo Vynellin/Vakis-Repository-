@@ -45,8 +45,8 @@
 		to_chat(target, span_warning("I feel as if my connection to the Arcane disappears entirely. The air feels still..."))
 		target.visible_message("[target]'s arcane aura seems to fade.")
 
+		addtimer(CALLBACK(src, PROC_REF(remove_buff), target), wait = 20 SECONDS)
 		return TRUE
-
 
 /obj/effect/proc_holder/spell/invoked/counterspell/proc/remove_buff(mob/living/carbon/target)
 	REMOVE_TRAIT(target, TRAIT_SPELLCOCKBLOCK, MAGIC_TRAIT)

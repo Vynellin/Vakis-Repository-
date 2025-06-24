@@ -106,7 +106,7 @@
 			// Skip friendly familiars
 			if(istype(mob, /mob/living/simple_animal/pet/familiar/))
 				var/mob/living/simple_animal/pet/familiar/fam_target = mob
-				if(fam_target.familiar_summoner == user) continue
+				if(fam_target.familiar_summoner == user.real_name) continue
 
 			// Skip other friendly summons
 			if(mob.summoner == user) continue
