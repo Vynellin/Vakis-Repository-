@@ -14270,6 +14270,16 @@
 /obj/structure/mineral_door/wood/red,
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
+"eVg" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 9
+	},
+/turf/open/floor/rogue/sand,
+/area/provincial/underground/dungeon/vulnafir)
 "eVh" = (
 /obj/item/roguecoin/copper/pile,
 /obj/structure/fluff/railing/border,
@@ -17043,6 +17053,13 @@
 /obj/structure/bars,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/armory/secure)
+"fQm" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
+	},
+/turf/open/floor/rogue/dirt,
+/area/provincial/underground/dungeon/vulnafir)
 "fQA" = (
 /obj/structure/fluff/railing/wood,
 /obj/structure/fermenting_barrel,
@@ -19654,6 +19671,7 @@
 	},
 /obj/effect/mapping_helpers/access/church/priest,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -20398,6 +20416,10 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
+"gWe" = (
+/obj/machinery/light/rogue/wallfire/candle/weak/directional/east,
+/turf/open/water/cleanshallow,
+/area/provincial/underground/dungeon/vulnafir)
 "gWi" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/greenstone,
@@ -24444,6 +24466,9 @@
 "imX" = (
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground/underdark/sunkencity)
+"ina" = (
+/turf/open/floor/rogue/cobble,
+/area/provincial/underground/dungeon/vulnafir)
 "ine" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/rogue/ruinedwood{
@@ -25658,6 +25683,9 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/town/mages_university/established_mage_hall)
+"iIW" = (
+/turf/closed/mineral/random/rogue/high,
+/area/provincial/underground/dungeon/vulnafir)
 "iIX" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/potion_poisons,
@@ -31036,6 +31064,13 @@
 /obj/item/riddleofsteel,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"kzd" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/turf/open/floor/rogue/dirt,
+/area/provincial/underground/dungeon/vulnafir)
 "kzf" = (
 /obj/structure/fluff/walldeco/rpainting/crown,
 /turf/closed/wall/mineral/rogue/decostone/long{
@@ -33543,6 +33578,16 @@
 "ltt" = (
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/tavern/room/luxury/two)
+"ltx" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-e"
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 10
+	},
+/turf/open/floor/rogue/grass,
+/area/provincial/underground/dungeon/vulnafir)
 "ltA" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 6
@@ -43534,10 +43579,14 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "oJR" = (
-/obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "Vulnafir"
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
 	},
-/turf/open/water/cleanshallow,
+/obj/effect/decal/cobbleedge{
+	dir = 5
+	},
+/turf/open/floor/rogue/sand,
 /area/provincial/underground/dungeon/vulnafir)
 "oKe" = (
 /obj/effect/decal/wood/herringbone{
@@ -51414,6 +51463,12 @@
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/sewer)
+"rtM" = (
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	custom_name = "Vulnafir"
+	},
+/turf/open/floor/rogue/cobble,
+/area/provincial/underground/dungeon/vulnafir)
 "rtQ" = (
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
@@ -64438,6 +64493,16 @@
 /obj/item/rogueweapon/sword/iron,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/armory/secure)
+"vVv" = (
+/obj/effect/decal/cobbleedge{
+	dir = 10;
+	icon_state = "cobbleedge-w"
+	},
+/obj/effect/decal/cobbleedge{
+	dir = 6
+	},
+/turf/open/floor/rogue/grass,
+/area/provincial/underground/dungeon/vulnafir)
 "vVL" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/goat,
 /turf/open/floor/rogue/dirt,
@@ -66464,6 +66529,9 @@
 	},
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/beach)
+"wIu" = (
+/turf/open/floor/rogue/sand,
+/area/provincial/underground/dungeon/vulnafir)
 "wIQ" = (
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 4
@@ -238330,7 +238398,7 @@ bgl
 bgl
 eCP
 mup
-oJR
+mup
 rfY
 euA
 mup
@@ -239233,13 +239301,13 @@ bgl
 bgl
 bgl
 iiT
-iiT
+iIW
 mup
 mup
 mup
 mup
-iiT
-iiT
+iIW
+iIW
 wvL
 hzu
 iiT
@@ -239681,18 +239749,18 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
 iiT
 iiT
 iiT
 iiT
-iiT
-iiT
-iiT
-iiT
+iIW
+iIW
+mup
+iIW
+iIW
+iIW
+iIW
+iIW
 rfY
 rfY
 hzu
@@ -240132,17 +240200,17 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
 iiT
+iiT
+mup
+mup
+mup
+mup
+mup
+mup
+iIW
+iIW
+iIW
 rfY
 rfY
 hzu
@@ -240584,17 +240652,17 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
 iiT
-iiT
-iiT
+mup
+mup
+wIu
+kzd
+hzu
+mup
+mup
+iIW
+iIW
+iIW
 cOa
 cOa
 uUP
@@ -241036,15 +241104,15 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
 iiT
+mup
+hzu
+eVg
+ina
+ltx
+hzu
+mup
+iIW
 cOa
 cOa
 cOa
@@ -241488,15 +241556,15 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
 iiT
+mup
+hzu
+ina
+rtM
+ina
+rfY
+uUP
+hzu
 hzu
 fDg
 hzu
@@ -241940,14 +242008,14 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
+iiT
+mup
+wIu
+oJR
+ina
+vVv
+rfY
+mup
 iiT
 hzu
 hzu
@@ -242392,14 +242460,14 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
+iiT
+mup
+mup
+wIu
+fQm
+wIu
+mup
+mup
 iiT
 iiT
 hzu
@@ -242844,15 +242912,15 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
+iiT
+iiT
+mup
+mup
+gWe
+mup
+mup
+iiT
+iiT
 bgl
 iiT
 iiT
@@ -243297,13 +243365,13 @@ bgl
 bgl
 bgl
 bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
-bgl
+iiT
+hWE
+ePs
+ePs
+ePs
+hWE
+iiT
 bgl
 bgl
 bgl
