@@ -1418,6 +1418,9 @@
 	icon_state = "chess"
 	},
 /area/provincial/indoors)
+"nH" = (
+/turf/open/floor/rogue/blocks/newstone,
+/area/provincial/indoors)
 "nQ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1506,6 +1509,9 @@
 "tj" = (
 /turf/closed/indestructible/riveted,
 /area/rasurian_heartland/indoors/artificacy_launchbay)
+"tk" = (
+/turf/open/floor/rogue/blocks/stonered,
+/area/provincial/indoors)
 "tl" = (
 /obj/effect/decal/herringbone{
 	dir = 8
@@ -1674,6 +1680,9 @@
 /area/rasurian_heartland/indoors)
 "Ew" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
 /turf/open/floor/rogue/tile,
 /area/rasurian_heartland/indoors/artificacy_launchbay)
 "EV" = (
@@ -1681,6 +1690,12 @@
 /area/rasurian_heartland/indoors/prison)
 "Gq" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
 /turf/open/floor/rogue/tile,
 /area/rasurian_heartland/indoors/artificacy_launchbay)
 "Gs" = (
@@ -1710,6 +1725,9 @@
 	},
 /turf/open/floor/rogue/concrete,
 /area/provincial/outdoors/forest)
+"Hj" = (
+/turf/open/floor/rogue/blocks/green,
+/area/provincial/indoors)
 "Ik" = (
 /obj/effect/decal/herringbone{
 	dir = 8
@@ -1758,7 +1776,7 @@
 /area/rasurian_heartland/outdoors)
 "JB" = (
 /turf/open/floor/rogue/tile/bath,
-/area/rasurian_heartland/indoors/artificacy_launchbay/bay_four)
+/area/rasurian_heartland/indoors/artificacy_launchbay/aetherial_road)
 "JJ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1772,6 +1790,9 @@
 /area/rasurian_heartland/indoors)
 "JM" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
 /turf/open/floor/rogue/tile,
 /area/rasurian_heartland/indoors/artificacy_launchbay)
 "Kk" = (
@@ -1783,6 +1804,9 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/rasurian_heartland/indoors)
+"Lz" = (
+/turf/open/floor/rogue/churchbrick,
+/area/provincial/indoors)
 "LE" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1793,6 +1817,16 @@
 /obj/item/rogueweapon/spear/billhook,
 /turf/open/floor/rogue/cobble,
 /area/rasurian_heartland/indoors)
+"LL" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/floor/rogue/tile,
+/area/rasurian_heartland/indoors/artificacy_launchbay)
 "LU" = (
 /turf/closed/indestructible/riveted/boss/see_through,
 /area/rasurian_heartland/indoors/prison)
@@ -1822,6 +1856,18 @@
 "PK" = (
 /turf/open/floor/rogue/tile/bfloorz,
 /area/rasurian_heartland/indoors/artificacy_launchbay/bay_four)
+"Qo" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/turf/open/floor/rogue/tile,
+/area/rasurian_heartland/indoors/artificacy_launchbay)
+"QA" = (
+/turf/open/floor/rogue/blocks/bluestone,
+/area/rasurian_heartland/outdoors/supplypod_active_transit)
 "QP" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/tile{
@@ -1849,6 +1895,12 @@
 "RX" = (
 /turf/closed/indestructible/riveted,
 /area/start)
+"SA" = (
+/turf/closed/mineral/rogue/bedrock,
+/area/provincial/indoors)
+"SU" = (
+/turf/open/floor/rogue/church,
+/area/provincial/indoors)
 "Te" = (
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/forest)
@@ -1856,6 +1908,9 @@
 /obj/effect/landmark/start/vampirespawn,
 /turf/open/floor/rogue/blocks/paving,
 /area/provincial/indoors)
+"TH" = (
+/turf/open/floor/rogue/blocks,
+/area/rasurian_heartland/outdoors/supplypod_active_transit)
 "Ub" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood2";
@@ -1904,6 +1959,31 @@
 "WB" = (
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/provincial/indoors)
+"WF" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/turf/open/floor/rogue/tile,
+/area/rasurian_heartland/indoors/artificacy_launchbay)
+"XL" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/turf/open/floor/rogue/tile,
+/area/rasurian_heartland/indoors/artificacy_launchbay)
+"XY" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/customsign{
+	desc = "This is a temporary replacement for the podlauncher rooms of a more proper admin z-level. All five podbays are here, denoted by different tiles. The Aetherial Road / ERT is the 3x3. Have fun!";
+	name = "AHOY THERE"
+	},
+/turf/open/floor/rogue/tile,
+/area/rasurian_heartland/indoors/artificacy_launchbay)
 "Yk" = (
 /obj/item/rogueweapon/pick,
 /turf/open/floor/rogue/dirt/road,
@@ -2005,9 +2085,9 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
+kB
+kB
+kB
 tj
 tj
 tj
@@ -2132,10 +2212,10 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
+kB
+kB
+kB
+kB
 tj
 tj
 tj
@@ -2262,7 +2342,7 @@ rQ
 rQ
 rQ
 rQ
-rQ
+kB
 tj
 tj
 tj
@@ -2271,7 +2351,7 @@ Kk
 Kk
 ay
 ay
-nb
+WF
 nb
 nb
 Jo
@@ -2392,7 +2472,7 @@ rQ
 rQ
 rQ
 rQ
-rQ
+kB
 tj
 MM
 MM
@@ -2402,7 +2482,7 @@ Kk
 JB
 JB
 JB
-nb
+XL
 nb
 ll
 hx
@@ -2522,17 +2602,17 @@ rQ
 rQ
 rQ
 rQ
-rQ
+kB
 tj
 MM
 MM
 tj
 Gq
-nb
+LL
 JB
 JB
 JB
-nb
+XY
 nb
 eh
 xe
@@ -2652,7 +2732,7 @@ rQ
 rQ
 rQ
 rQ
-rQ
+kB
 tj
 MM
 MM
@@ -2662,7 +2742,7 @@ MD
 JB
 JB
 JB
-nb
+XL
 nb
 ll
 hx
@@ -2782,7 +2862,7 @@ rQ
 rQ
 rQ
 rQ
-rQ
+kB
 tj
 tj
 tj
@@ -2791,7 +2871,7 @@ MD
 MD
 PK
 PK
-nb
+Qo
 nb
 nb
 Jo
@@ -2912,10 +2992,10 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
+kB
+kB
+kB
+kB
 tj
 tj
 tj
@@ -3045,9 +3125,9 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
+kB
+kB
+kB
 tj
 tj
 tj
@@ -3177,24 +3257,24 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
+kB
 kB
 kB
 kB
@@ -11131,23 +11211,23 @@ kB
 kB
 kB
 kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
-kB
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
 "}
 (72,1,1) = {"
 rQ
@@ -11261,23 +11341,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+SA
 "}
 (73,1,1) = {"
 rQ
@@ -11391,23 +11471,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+Lz
+SA
 "}
 (74,1,1) = {"
 rQ
@@ -11521,23 +11601,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+SU
+Lz
+SA
 "}
 (75,1,1) = {"
 rQ
@@ -11651,23 +11731,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+tk
+SU
+Lz
+SA
 "}
 (76,1,1) = {"
 rQ
@@ -11781,23 +11861,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+cN
+tk
+SU
+Lz
+SA
 "}
 (77,1,1) = {"
 rQ
@@ -11911,23 +11991,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+nH
+Hj
+Hj
+Hj
+Hj
+Hj
+nH
+cN
+tk
+SU
+Lz
+SA
 "}
 (78,1,1) = {"
 rQ
@@ -12041,23 +12121,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+nH
+Hj
+TH
+TH
+TH
+Hj
+nH
+cN
+tk
+SU
+Lz
+SA
 "}
 (79,1,1) = {"
 rQ
@@ -12171,23 +12251,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+nH
+Hj
+TH
+QA
+TH
+Hj
+nH
+cN
+tk
+SU
+Lz
+SA
 "}
 (80,1,1) = {"
 rQ
@@ -12301,23 +12381,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+nH
+Hj
+TH
+TH
+TH
+Hj
+nH
+cN
+tk
+SU
+Lz
+SA
 "}
 (81,1,1) = {"
 rQ
@@ -12431,23 +12511,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+nH
+Hj
+Hj
+Hj
+Hj
+Hj
+nH
+cN
+tk
+SU
+Lz
+SA
 "}
 (82,1,1) = {"
 rQ
@@ -12561,23 +12641,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+nH
+nH
+nH
+nH
+nH
+nH
+nH
+cN
+tk
+SU
+Lz
+SA
 "}
 (83,1,1) = {"
 rQ
@@ -12691,23 +12771,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+tk
+SU
+Lz
+SA
 "}
 (84,1,1) = {"
 rQ
@@ -12821,23 +12901,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+tk
+SU
+Lz
+SA
 "}
 (85,1,1) = {"
 rQ
@@ -12951,23 +13031,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+SU
+Lz
+SA
 "}
 (86,1,1) = {"
 rQ
@@ -13081,23 +13161,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+Lz
+SA
 "}
 (87,1,1) = {"
 rQ
@@ -13211,23 +13291,23 @@ rQ
 rQ
 rQ
 rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
-rQ
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
+SA
 "}
 (88,1,1) = {"
 rQ
