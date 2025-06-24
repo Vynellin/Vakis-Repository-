@@ -1852,7 +1852,7 @@
 	body_parts_covered = HEAD|HAIR
 	icon_state = "carapacecap"
 	item_state = "carapacecap"
-	armor = list("blunt" = 60, "slash" = 60, "stab" = 60, "bullet" = 60, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 60, "slash" = 60, "stab" = 60, "piercing" = 60, "fire" = 30, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT)
 	max_integrity = 100
 	anvilrepair = null
@@ -1864,7 +1864,7 @@
 	name = "dragonscale cap"
 	desc = "Fiery armored plates sown together to protect your head."
 	color = "#9e5761"
-	armor = list("blunt" = 60, "slash" = 60, "stab" = 60, "bullet" = 60, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 60, "slash" = 60, "stab" = 60, "piercing" = 60, "fire" = 30, "acid" = 0)
 
 /obj/item/clothing/head/roguetown/helmet/carapacehelm
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
@@ -1876,7 +1876,7 @@
 	block2add = FOV_BEHIND
 	icon_state = "carapacehelm"
 	item_state = "carapacehelm"
-	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "piercing" = 100, "fire" = 30, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST)
 	max_integrity = 150
 	anvilrepair = null
@@ -1893,6 +1893,6 @@
 	icon_state = "dragonscalehelm"
 	item_state = "dragonscalehelm"
 	color = "#693a41"
-	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 0)
+	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 100, "fire" = 60, "acid" = 0)
 	max_integrity = 300
 	sellprice = 50

@@ -121,7 +121,7 @@
 	body_parts_covered = ARMS
 	icon_state = "carapace_bracers"
 	item_state = "carapace_bracers"
-	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "piercing" = 100, "fire" = 30, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
 	blocksound = PLATEHIT
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
@@ -133,4 +133,4 @@
 	name = "dragonscale bracers"
 	desc = "Fiber bracers lined with dragonscale to protect your wrists"
 	color = "#9e5761"
-	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 0)
+	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 100, "fire" = 60, "acid" = 0)

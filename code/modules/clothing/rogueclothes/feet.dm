@@ -275,7 +275,7 @@
 	color = null
 	blocksound = PLATEHIT
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
-	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "piercing" = 100, "fire" = 30, "acid" = 0)
 	anvilrepair = null
 	smeltresult = /obj/item/ash
 	sewrepair = TRUE
@@ -283,4 +283,4 @@
 	name = "dragonscale boots"
 	desc = "Boots made from dragonscale for added protection."
 	color = "#9e5761"
-	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "bullet" = 100, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 0)
+	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 100, "fire" = 60, "acid" = 0)
