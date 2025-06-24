@@ -82,3 +82,8 @@
 
 /area/provincial/indoors/town/province_keep/garrison/stables
 	name = "Keep Stables"
+
+/// WARDEN'S WATCHTOWER ///
+
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower
+	name = "Warden's Watchtower"

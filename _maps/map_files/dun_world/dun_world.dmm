@@ -218,6 +218,7 @@
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/mages_university/tower,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -1528,11 +1529,12 @@
 /obj/structure/bed/rogue,
 /obj/effect/landmark/start/hostage,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "aAp" = (
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/church/canteen)
 "aAr" = (
@@ -2308,7 +2310,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "aNQ" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/cobble,
@@ -2378,6 +2380,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/blacksmith,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -2548,7 +2551,7 @@
 "aSr" = (
 /obj/structure/roguemachine/scomm/directional/west,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "aSt" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/mole,
 /turf/open/floor/rogue/naturalstone,
@@ -3065,7 +3068,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "bbs" = (
 /obj/structure/fluff/statue/knight/interior/r,
 /mob/living/simple_animal/hostile/rogue/skeleton/axe,
@@ -3374,7 +3377,7 @@
 "biK" = (
 /obj/effect/decal/wood/herringbone2,
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "biM" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -3619,7 +3622,7 @@
 	},
 /obj/effect/decal/wood/herringbone2,
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "bnT" = (
 /obj/structure/chair/bench/coucha/r,
 /turf/open/floor/carpet/red,
@@ -4224,11 +4227,10 @@
 	},
 /area/provincial/underground/underdark/sunkencity)
 "bye" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Noble's Apartment"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble/heir,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -4261,6 +4263,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison/armory,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "byM" = (
@@ -5013,18 +5016,17 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "bMh" = (
 /turf/closed/wall/mineral/rogue/pipe{
 	icon_state = "iron_corner"
 	},
 /area/provincial/underground/dungeon/gethsmane)
 "bMn" = (
-/obj/structure/mineral_door/wood{
-	name = "Room VI"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomvi,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/six)
 "bMp" = (
@@ -5110,7 +5112,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "bNI" = (
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
@@ -5230,6 +5232,7 @@
 "bPX" = (
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/kitchen)
 "bQm" = (
@@ -5602,11 +5605,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town)
 "bWo" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Head Mage"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/mages_university/head_mage,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/indoors/town/mages_university/head_mage)
 "bWp" = (
@@ -5902,7 +5904,7 @@
 	},
 /obj/item/reagent_containers/glass/bottle/rogue/healthpot,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "cbe" = (
 /obj/structure/closet/crate/coffin,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/misc,
@@ -5959,11 +5961,10 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/beach/forest)
 "ccm" = (
-/obj/structure/mineral_door/wood{
-	name = "Kitchen"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/private,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/mages_university/kitchen)
 "ccu" = (
@@ -6010,11 +6011,10 @@
 	},
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "cdf" = (
-/obj/structure/mineral_door/wood{
-	name = "Room VIII"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomviii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/eight)
 "cdh" = (
@@ -6084,11 +6084,11 @@
 /area/provincial/outdoors/field)
 "cea" = (
 /obj/structure/mineral_door/wood/donjon{
-	dir = 4;
-	name = "Archivist's Office"
+	dir = 4
 	},
 /obj/effect/mapping_helpers/access/mages_university/archive,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/mages_university/archivist)
 "ceg" = (
@@ -6388,7 +6388,7 @@
 /obj/item/rogueweapon/huntingknife/idagger/steel,
 /obj/item/rogueweapon/huntingknife/idagger/steel,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "ciB" = (
 /obj/machinery/tanningrack,
 /turf/open/floor/rogue/cobble,
@@ -6416,6 +6416,10 @@
 /obj/structure/fluff/statue,
 /turf/open/floor/rogue/concrete,
 /area/provincial/outdoors/mountains)
+"cjM" = (
+/obj/structure/bars,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "cjX" = (
 /obj/structure/table/cooling,
 /obj/structure/bars{
@@ -6463,7 +6467,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "cks" = (
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/mages_university)
@@ -6653,11 +6657,10 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "con" = (
-/obj/structure/mineral_door/wood{
-	name = "examination room"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/church/deacon,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/province_keep/deacon)
 "cos" = (
@@ -6828,11 +6831,10 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/town/roofs)
 "crv" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Hand's Chambers"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble/hand,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -6967,11 +6969,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/field)
 "cvk" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Marshal's Quarters"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "cvr" = (
@@ -7398,6 +7399,15 @@
 "cDS" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/provincial/outdoors/mountains)
+"cDV" = (
+/obj/structure/mineral_door/wood/fancywood,
+/obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/provincial/indoors/town/province_keep/quarters/guest)
 "cEg" = (
 /obj/structure/closet/crate/chest/neu,
 /obj/item/natural/cloth,
@@ -7487,6 +7497,7 @@
 	},
 /obj/effect/mapping_helpers/access/noble/steward,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/steward)
 "cFV" = (
@@ -7600,7 +7611,7 @@
 	pixel_y = 15
 	},
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "cHS" = (
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/rogue/wood,
@@ -8248,6 +8259,7 @@
 "cUl" = (
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/antag/underking,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/sewer/rogues_den)
 "cUo" = (
@@ -8480,11 +8492,10 @@
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/underground/dungeon/old_university)
 "cXa" = (
-/obj/structure/mineral_door/wood{
-	name = "Luxury Room V"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/fancyroomv,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/luxury/five)
 "cXd" = (
@@ -9080,6 +9091,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison/dungeon,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/cell)
 "dhE" = (
@@ -9201,7 +9213,7 @@
 /obj/structure/bed/rogue,
 /obj/effect/landmark/start/hostage,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "djx" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -9221,9 +9233,10 @@
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/town/tavern/innkeeper)
 "djR" = (
-/obj/machinery/light/rogue/firebowl/stump,
-/turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors)
+/turf/closed/wall/mineral/rogue/wooddark/end{
+	dir = 8
+	},
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "djV" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -9262,7 +9275,7 @@
 	},
 /obj/item/roguebin/water,
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "dky" = (
 /obj/machinery/light/rogue/firebowl/standing/blue,
 /turf/open/floor/rogue/dirt,
@@ -9397,6 +9410,13 @@
 /obj/effect/decal/cleanable/blood/gibs/up,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/mountains/underkings_maw)
+"dmY" = (
+/obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/access/garrison,
+/obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/province_keep/garrison/ramparts)
 "dng" = (
 /obj/structure/roguewindow/openclose/reinforced{
 	dir = 8
@@ -9771,7 +9791,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/carpet,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "dtQ" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/spear,
 /turf/open/floor/rogue/ruinedwood{
@@ -10007,15 +10027,8 @@
 	},
 /area/provincial/outdoors/town/roofs)
 "dyS" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Guest Room"
-	},
-/obj/effect/mapping_helpers/access/noble,
-/obj/effect/mapping_helpers/lock_door,
-/turf/open/floor/rogue/ruinedwood{
-	icon_state = "weird1"
-	},
-/area/provincial/indoors/town/province_keep/quarters/guest)
+/turf/closed/wall/mineral/rogue/wooddark/end,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "dyT" = (
 /obj/structure/closet/crate/chest,
 /obj/item/ingot/copper,
@@ -10112,6 +10125,7 @@
 "dAt" = (
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/meeting_room)
 "dAy" = (
@@ -10122,6 +10136,7 @@
 "dAA" = (
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/sewer)
 "dAN" = (
@@ -10272,7 +10287,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "dCH" = (
 /obj/structure/bookcase,
 /turf/open/floor/rogue/blocks,
@@ -10386,9 +10401,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/sewer)
 "dEl" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "shipside bunkhouse"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
 "dEm" = (
@@ -10628,6 +10641,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/west)
 "dIF" = (
@@ -10736,7 +10750,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "dKz" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -10938,7 +10952,7 @@
 	pixel_y = 15
 	},
 /turf/open/floor/rogue/grassred,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "dOz" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/spear,
 /turf/open/floor/rogue/blocks,
@@ -11153,7 +11167,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "dSS" = (
 /obj/structure/table/optable,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
@@ -11319,7 +11333,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "dWJ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -11991,7 +12005,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "ehw" = (
 /obj/structure/fluff/statue/knight/interior,
 /turf/open/floor/rogue/carpet/lord/left,
@@ -12053,8 +12067,8 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/bog)
 "eiB" = (
-/turf/open/water/swamp,
-/area/provincial/indoors)
+/turf/open/floor/rogue/woodturned,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "eiE" = (
 /obj/structure/fluff/walldeco/customflag{
 	pixel_x = -32
@@ -12180,11 +12194,10 @@
 	},
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "elm" = (
-/obj/structure/mineral_door/wood/violet{
-	name = "INNKEEP"
-	},
+/obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/yeomen/tavern/innkeeper,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/innkeeper)
 "elo" = (
@@ -12242,6 +12255,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison/armory,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "elV" = (
@@ -12728,6 +12742,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison/armory,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/armory/secure)
 "evY" = (
@@ -13179,7 +13194,7 @@
 	icon_state = "tablewood1"
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "eEf" = (
 /mob/living/carbon/human/species/elf/dark/drowraider,
 /turf/open/floor/rogue/dirt/road,
@@ -13368,7 +13383,7 @@
 /obj/item/quiver/arrows,
 /obj/item/quiver/arrows,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "eGO" = (
 /obj/structure/fluff/statue/gargoyle,
 /turf/open/floor/rogue/tile{
@@ -14265,6 +14280,7 @@
 "eVl" = (
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/church/graveyard,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/church/basement/crypt)
 "eVm" = (
@@ -14761,10 +14777,8 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/abandoned_manor)
 "feI" = (
-/obj/structure/flora/ausbushes/ppflowers,
-/obj/structure/flora/roguegrass,
-/turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/turf/closed/wall/mineral/rogue/wooddark/horizontal,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "feO" = (
 /obj/item/chair/rogue,
 /turf/open/floor/rogue/wood,
@@ -14850,11 +14864,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/stables)
 "fgb" = (
-/obj/structure/mineral_door/wood{
-	name = "alchemy room"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/archive,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
 "fgg" = (
@@ -15143,6 +15156,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/archive,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile/brick,
 /area/provincial/indoors/town/mages_university/archivist/quarters)
 "flv" = (
@@ -15221,7 +15235,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "fnw" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north{
 	pixel_y = -32
@@ -15238,7 +15252,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 8
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "fnN" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "cobbleedge-sread"
@@ -15547,7 +15561,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "fsU" = (
 /obj/effect/decal/cobbleedge{
 	dir = 5
@@ -15576,7 +15590,7 @@
 "ftC" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/twig,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "ftX" = (
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/provincial/outdoors/town)
@@ -15811,6 +15825,7 @@
 /obj/structure/mineral_door/wood/donjon,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/south)
 "fxu" = (
@@ -16166,7 +16181,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "fBW" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -16525,9 +16540,9 @@
 /area/provincial/underground/dungeon/old_university)
 "fHt" = (
 /obj/structure/mineral_door/wood/deadbolt{
-	dir = 4;
-	name = "PUBLIC MEETING ROOM"
+	dir = 4
 	},
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/public_meeting_room)
 "fHw" = (
@@ -16838,11 +16853,10 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/basement)
 "fNf" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Established Mage Hall"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/mages_university/private,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/mages_university/established_mage_hall)
 "fNm" = (
@@ -17153,7 +17167,7 @@
 	dir = 5
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "fTb" = (
 /obj/machinery/gear_painter,
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -17494,6 +17508,7 @@
 "fYE" = (
 /obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "fYS" = (
@@ -17517,7 +17532,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/outercorner{
 	dir = 8
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "fZw" = (
 /obj/item/roguebin/trash,
 /turf/open/floor/rogue/concrete,
@@ -17716,6 +17731,7 @@
 /obj/structure/fluff/walldeco/alarm,
 /obj/effect/mapping_helpers/access/noble/vault,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/province_keep/basement)
 "gdm" = (
@@ -17764,6 +17780,7 @@
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/mages_university/tower,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -18289,11 +18306,10 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/dungeon/riverbrook)
 "gnm" = (
-/obj/structure/mineral_door/wood/red{
-	name = "barracks"
-	},
+/obj/structure/mineral_door/wood/red,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/quarters)
 "gnu" = (
@@ -18322,7 +18338,7 @@
 /area/provincial/indoors/town/shop)
 "gnV" = (
 /turf/closed/wall/mineral/rogue/craftstone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "gog" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/cobblerock,
@@ -18630,6 +18646,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/artificer,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -18714,7 +18731,7 @@
 /obj/structure/bed/rogue,
 /obj/item/bedsheet/rogue/wool,
 /turf/open/floor/rogue/twig,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "guA" = (
 /obj/effect/decal/cobbleedge{
 	dir = 6
@@ -19102,6 +19119,9 @@
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/armory)
+"gBn" = (
+/turf/open/transparent/openspace,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "gBo" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/rogue/ruinedwood/spiral,
@@ -19306,11 +19326,11 @@
 /area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "gEo" = (
 /obj/structure/mineral_door/wood/donjon{
-	name = "Deacon's Clinic";
 	dir = 1
 	},
 /obj/effect/mapping_helpers/access/church/deacon,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/deacon)
 "gEq" = (
@@ -19555,11 +19575,10 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "gIH" = (
-/obj/structure/mineral_door/wood{
-	name = "Luxury Room I"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/fancyroomi,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/luxury)
 "gIP" = (
@@ -20000,6 +20019,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/south)
 "gQv" = (
@@ -21039,6 +21059,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/ramparts)
 "hgJ" = (
@@ -21253,7 +21274,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/outercorner{
 	dir = 4
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hkA" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -21319,7 +21340,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "hlT" = (
 /obj/structure/rack/rogue,
 /obj/item/rogueweapon/stoneaxe/woodcut/steel,
@@ -21469,9 +21490,10 @@
 	},
 /area/provincial/indoors/town)
 "hoL" = (
-/obj/structure/roguemachine/noticeboard,
-/turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/turf/closed/wall/mineral/rogue/wooddark/end{
+	dir = 1
+	},
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hoO" = (
 /obj/structure/fluff/railing/border,
 /obj/machinery/light/rogue/torchholder/directional/north,
@@ -21600,9 +21622,8 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "hqY" = (
-/obj/structure/flora/roguegrass/bush/wall/red,
-/turf/open/floor/rogue/grassred,
-/area/provincial/indoors)
+/turf/open/floor/rogue/wood,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hrj" = (
 /obj/structure/fluff/railing/wood{
 	dir = 1;
@@ -21965,6 +21986,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/noble/royal,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/water/swamp,
 /area/provincial/indoors/town/sewer)
 "hxM" = (
@@ -22127,7 +22149,7 @@
 	},
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hBp" = (
 /obj/effect/decal/cleanable/blood/gibs/up,
 /obj/machinery/light/rogue/torchholder/directional/west,
@@ -22332,6 +22354,7 @@
 /obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/tavern/kitchen)
 "hEL" = (
@@ -22688,11 +22711,10 @@
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/province_keep/deacon)
 "hJw" = (
-/obj/structure/mineral_door/wood{
-	name = "Canteen"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/canteen)
 "hJz" = (
@@ -22864,7 +22886,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hLV" = (
 /obj/structure/winch{
 	dir = 4;
@@ -23105,7 +23127,7 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hPZ" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north{
 	pixel_y = -32
@@ -23231,6 +23253,12 @@
 	icon_state = "horzw"
 	},
 /area/provincial/indoors/town/farm/barn)
+"hRC" = (
+/obj/machinery/light/rogue/wallfire{
+	pixel_y = 32
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hRD" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8
@@ -23262,11 +23290,10 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "hRT" = (
-/obj/structure/mineral_door/wood/violet{
-	name = "Wizard's Tower"
-	},
+/obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/mages_university/tower,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep/magician)
 "hSd" = (
@@ -23295,6 +23322,7 @@
 "hSm" = (
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep)
 "hSo" = (
@@ -23311,7 +23339,7 @@
 /obj/item/roguekey/warden,
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hSz" = (
 /obj/structure/closet/crate/chest/lootbox,
 /obj/item/scomstone,
@@ -23435,6 +23463,7 @@
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/yeomen/merchant/shop,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/shop)
 "hUA" = (
@@ -23720,7 +23749,7 @@
 "iau" = (
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "iaA" = (
 /obj/structure/rack/rogue,
 /obj/machinery/light/rogue/torchholder/directional/east,
@@ -23852,10 +23881,9 @@
 	},
 /area/provincial/underground/dungeon/winding_halls)
 "idV" = (
-/obj/structure/mineral_door/wood/window{
-	name = "Deacon's Office"
-	},
+/obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/church/deacon,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/deacon)
 "idY" = (
@@ -23863,11 +23891,10 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/underground/dungeon/fogotten_church)
 "iel" = (
-/obj/structure/mineral_door/wood{
-	name = "Artificier"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/artificer,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/town/dusk_quarter)
 "iem" = (
@@ -24221,7 +24248,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "ikH" = (
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/decrepit_tower)
@@ -24351,7 +24378,7 @@
 	pixel_x = 6
 	},
 /turf/open/floor/rogue/twig,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "ilZ" = (
 /turf/open/floor/rogue/wood/nosmooth,
 /area/provincial/outdoors/town/roofs)
@@ -24559,11 +24586,10 @@
 /turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/old_university)
 "ipK" = (
-/obj/structure/mineral_door/wood{
-	name = "stall ii"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/peasant/stallii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/stall/stall_two)
 "ipR" = (
@@ -24628,6 +24654,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison/armory,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/armory/toilets)
 "iqS" = (
@@ -24673,12 +24700,14 @@
 "ism" = (
 /obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/tavern)
 "isv" = (
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/province_keep/garrison/gate/north)
 "isG" = (
@@ -24810,7 +24839,7 @@
 /obj/structure/flora/ausbushes/lavendergrass,
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "ivL" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4
@@ -25098,7 +25127,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "iAK" = (
 /obj/structure/plasticflaps,
 /turf/open/floor/rogue/dirt/road,
@@ -25892,7 +25921,7 @@
 	pixel_y = 15
 	},
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "iNO" = (
 /obj/structure/bars/pipe{
 	dir = 8;
@@ -25918,11 +25947,10 @@
 /turf/open/floor/carpet/purple,
 /area/provincial/indoors/town/mages_university/established_mage_hall)
 "iNY" = (
-/obj/structure/mineral_door/wood{
-	name = "Established Mage Hall"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/private,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/mages_university/established_mage_hall)
 "iOg" = (
@@ -26070,9 +26098,8 @@
 /area/provincial/indoors)
 "iRb" = (
 /obj/effect/mapping_helpers/access/peasant/adventurers_guild,
-/obj/structure/mineral_door/wood/window{
-	name = "Adventurer's Guild"
-	},
+/obj/structure/mineral_door/wood/window,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/adventurers_guild)
 "iRe" = (
@@ -26270,6 +26297,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/garrison/gate/south)
 "iUG" = (
@@ -26426,11 +26454,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/beach/forest)
 "iXz" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Lord's Apartment"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble/royal,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -26837,17 +26864,16 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "jfq" = (
 /obj/item/clothing/neck/roguetown/psicross/zira,
 /turf/open/floor/rogue/blocks/platform,
 /area/provincial/underground/dungeon/old_ruin)
 "jfr" = (
-/obj/structure/mineral_door/wood{
-	name = "Luxury Room V"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/fancyroomv,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/tavern/room/luxury/five)
 "jft" = (
@@ -26904,7 +26930,11 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
+"jgi" = (
+/obj/structure/chair/stool/rogue,
+/turf/open/floor/rogue/dirt/road,
+/area/provincial/outdoors/field)
 "jgm" = (
 /turf/closed/wall/mineral/rogue/stone/window/moss,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
@@ -26993,6 +27023,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/mages_university/artificer,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
 	},
@@ -27442,11 +27473,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/basement)
 "jnF" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Lord's Apartment"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble/royal,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -28582,15 +28612,14 @@
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 4
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "jIP" = (
-/obj/structure/mineral_door/wood{
-	name = "warden's watchtower"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison/warden,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "jJb" = (
 /obj/structure/fluff/statue/psybloody{
 	name = "fool";
@@ -28924,11 +28953,10 @@
 	},
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "jPe" = (
-/obj/structure/mineral_door/wood{
-	name = "Soilson Stall"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/peasant/farm,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/farm/secondary/stall)
 "jPi" = (
@@ -28966,7 +28994,7 @@
 "jPN" = (
 /obj/structure/fluff/walldeco/customflag,
 /turf/closed/wall/mineral/rogue/wooddark,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "jPT" = (
 /obj/structure/flora/roguetree,
 /turf/open/water/swamp/deep,
@@ -29098,7 +29126,7 @@
 	},
 /obj/item/candle/yellow,
 /turf/open/floor/rogue/carpet,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "jSP" = (
 /obj/item/natural/rock,
 /obj/item/natural/rock,
@@ -29407,6 +29435,7 @@
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/church/basement)
 "jYo" = (
@@ -29559,7 +29588,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "kbj" = (
 /obj/item/fishingrod,
 /turf/open/floor/rogue/dirt/road,
@@ -29824,11 +29853,10 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/underground/underdark/sunkencity)
 "kfh" = (
-/obj/structure/mineral_door/wood/window{
-	name = "captains room door"
-	},
+/obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "kfl" = (
@@ -30001,10 +30029,9 @@
 /area/provincial/indoors/town)
 "kiq" = (
 /obj/effect/mapping_helpers/access/yeomen/tavern,
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Handler's Office"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/adventurers_guild/handlers_office)
 "kir" = (
@@ -30300,6 +30327,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tailor,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/tailor)
 "kmt" = (
@@ -30766,6 +30794,7 @@
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/mages_university/tower,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -30867,11 +30896,11 @@
 /area/provincial/underground/dungeon/forsaken_bastille)
 "kxb" = (
 /obj/structure/mineral_door/wood/donjon{
-	dir = 1;
-	name = "Throne Room"
+	dir = 1
 	},
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile{
 	icon_state = "bfloorz"
 	},
@@ -31041,6 +31070,7 @@
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/town/province_keep)
 "kzY" = (
@@ -31357,6 +31387,7 @@
 "kEF" = (
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/library)
 "kEG" = (
@@ -31404,7 +31435,7 @@
 	pixel_y = 15
 	},
 /turf/open/floor/rogue/grassred,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "kFu" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/rogue/grassred,
@@ -31482,11 +31513,12 @@
 "kHe" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "kHg" = (
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/indoors/town/church)
 "kHk" = (
@@ -31533,6 +31565,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison)
 "kHS" = (
@@ -31870,7 +31903,7 @@
 "kOo" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "kOp" = (
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/blocks,
@@ -32055,8 +32088,9 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/indoors/town/province_keep)
 "kRH" = (
-/turf/open/floor/rogue/naturalstone,
-/area/provincial/indoors)
+/obj/structure/roguewindow,
+/turf/open/floor/rogue/blocks,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "kRK" = (
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/hexstone,
@@ -32088,6 +32122,10 @@
 /obj/item/rogueweapon/hammer,
 /turf/open/floor/rogue/metal,
 /area/provincial/underground/underdark/sunkencity)
+"kSc" = (
+/obj/structure/chair/stool/rogue,
+/turf/open/floor/rogue/dirt,
+/area/provincial/outdoors/field)
 "kSd" = (
 /obj/structure/closet/crate/drawer,
 /obj/item/clothing/under/roguetown/tights/black,
@@ -32116,7 +32154,7 @@
 "kSS" = (
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "kST" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 4
@@ -32186,7 +32224,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "kUa" = (
 /obj/structure/fluff/statue/knight,
 /turf/open/floor/rogue/tile/masonic/single,
@@ -32414,6 +32452,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/yeomen/blacksmith,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
 	},
@@ -32640,11 +32679,10 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "lcV" = (
-/obj/structure/mineral_door/wood/violet{
-	name = "STAFF"
-	},
+/obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/town/tavern/tapster_quarters)
 "ldb" = (
@@ -33219,11 +33257,11 @@
 /area/provincial/indoors/town/tailor)
 "lnZ" = (
 /obj/structure/mineral_door/swing_door{
-	keylock = 1;
-	locked = 1;
-	name = "stables"
+	keylock = 1
 	},
 /obj/effect/mapping_helpers/access/peasant/adventurers_guild,
+/obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/stables)
 "loa" = (
@@ -33323,7 +33361,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/middle{
 	dir = 1
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "lqF" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -33659,11 +33697,10 @@
 /turf/closed/wall/mineral/rogue/decostone/mossy/red,
 /area/provincial/underground/dungeon/fogotten_church)
 "lwo" = (
-/obj/structure/mineral_door/wood{
-	name = "stall i"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/peasant/stalli,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/stall)
 "lwz" = (
@@ -33751,11 +33788,10 @@
 /turf/open/floor/rogue/church,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "lxP" = (
-/obj/structure/mineral_door/wood{
-	name = "Room V"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomv,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/five)
 "lxS" = (
@@ -33825,7 +33861,7 @@
 /area/provincial/indoors/town/tavern/arena/spectator)
 "lzu" = (
 /turf/closed/wall/mineral/rogue/roofwall/outercorner,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "lzx" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 1
@@ -34117,11 +34153,10 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/house/janitor)
 "lFB" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Councilor's Chambers"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/quarters/councillor)
 "lFH" = (
@@ -34209,6 +34244,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/province_keep/basement)
 "lHi" = (
@@ -34400,9 +34436,10 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/west)
 "lKt" = (
-/obj/structure/flora/roguegrass,
-/turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/turf/closed/wall/mineral/rogue/wooddark/end{
+	dir = 4
+	},
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "lKv" = (
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/gate/keep)
@@ -34500,11 +34537,11 @@
 /area/provincial/indoors/town/mages_university/artificer)
 "lMt" = (
 /obj/structure/mineral_door/swing_door{
-	keylock = 1;
-	name = "stables"
+	keylock = 1
 	},
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/province_keep/garrison/stables)
 "lMw" = (
@@ -34909,6 +34946,7 @@
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church/priest,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/provincial/indoors/town/church/vault)
 "lTX" = (
@@ -35646,8 +35684,9 @@
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/indoors/town/province_keep/deacon/quarters)
 "mht" = (
-/turf/open/floor/rogue/grassred,
-/area/provincial/indoors)
+/obj/machinery/light/rogue/firebowl/stump,
+/turf/open/floor/rogue/dirt,
+/area/provincial/outdoors/field)
 "mhx" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/potion_vitals,
@@ -35698,7 +35737,7 @@
 /area/provincial/indoors/town/province_keep/garrison)
 "mio" = (
 /turf/closed/wall/mineral/rogue/roofwall/middle,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "mip" = (
 /obj/effect/landmark/mapGenerator/rogue/bog{
 	endTurfY = 450
@@ -35750,11 +35789,10 @@
 /turf/open/transparent/openspace,
 /area/provincial/indoors/town/province_keep/garrison/gate/north)
 "miD" = (
-/obj/structure/mineral_door/wood{
-	name = "Room II"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/two)
 "miL" = (
@@ -36518,7 +36556,7 @@
 "mtZ" = (
 /obj/structure/roguemachine/scomm/directional/north,
 /turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "muh" = (
 /turf/closed/wall/mineral/rogue/decostone/long{
 	dir = 1;
@@ -36924,6 +36962,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/merchant,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/shop)
 "mBm" = (
@@ -36960,7 +36999,7 @@
 	},
 /obj/item/natural/feather,
 /turf/open/floor/rogue/carpet,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "mBK" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/indoors/town/shop)
@@ -37664,6 +37703,7 @@
 /obj/structure/mineral_door/wood/red,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
 "mPN" = (
@@ -37888,9 +37928,8 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/dusk_quarter)
 "mST" = (
-/obj/structure/flora/newtree,
-/turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/turf/closed/wall/mineral/rogue/wooddark/vertical,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "mTi" = (
 /obj/structure/fluff/canopy/booth/booth02,
 /obj/structure/mineral_door/wood/deadbolt/shutter{
@@ -38015,11 +38054,10 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
 "mVB" = (
-/obj/structure/mineral_door/wood{
-	name = "Luxury Room IV"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/fancyroomiv,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/luxury/four)
 "mVK" = (
@@ -38088,11 +38126,10 @@
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/sewer/rogues_den)
 "mWz" = (
-/obj/structure/mineral_door/wood{
-	name = "stall iii"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/peasant/stalliii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/stall/stall_three)
 "mWH" = (
@@ -38177,6 +38214,7 @@
 "mYu" = (
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/town/church)
 "mYw" = (
@@ -38718,7 +38756,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "nhm" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/railing/border{
@@ -39187,7 +39225,7 @@
 "npr" = (
 /obj/machinery/light/rogue/campfire/longlived,
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "npv" = (
 /obj/structure/mineral_door/wood,
 /turf/open/floor/rogue/blocks,
@@ -39556,7 +39594,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "nvx" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/floor/rogue/dirt,
@@ -40161,6 +40199,7 @@
 "nFy" = (
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/throneroom/overlook)
 "nFB" = (
@@ -40348,6 +40387,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/church/graveyard,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/church/basement/crypt)
 "nJM" = (
@@ -40402,7 +40442,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "nKF" = (
 /obj/structure/roguemachine/scomm/directional/west,
 /turf/open/floor/carpet/royalblack,
@@ -40798,7 +40838,7 @@
 /obj/machinery/light/rogue/oven/south,
 /obj/item/reagent_containers/glass/bucket/pot,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "nRm" = (
 /obj/item/fishingrod,
 /turf/open/floor/rogue/wood,
@@ -41468,13 +41508,13 @@
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "ocl" = (
 /obj/structure/mineral_door/wood/donjon{
-	dir = 1;
-	name = "Vault Door"
+	dir = 1
 	},
 /obj/effect/mapping_helpers/access/noble/vault,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/vault)
 "ocn" = (
 /obj/structure/fluff/grindwheel,
 /turf/open/floor/rogue/blocks,
@@ -42252,11 +42292,10 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/dungeon/riverbrook)
 "omY" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Mage's University"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/mages_university,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/mages_university)
 "ond" = (
@@ -43000,9 +43039,8 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town)
 "oAt" = (
-/obj/structure/flora/newtree,
-/turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/turf/closed/wall/mineral/rogue/wooddark,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "oAz" = (
 /obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/antag/underking,
@@ -43441,6 +43479,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/church/priest,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/church/vault)
 "oIH" = (
@@ -43491,7 +43530,7 @@
 "oJI" = (
 /obj/structure/roguewindow/openclose/reinforced,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "oJR" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
 	custom_name = "Vulnafir"
@@ -43950,6 +43989,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison/armory,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "oSz" = (
@@ -44371,7 +44411,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "pbv" = (
 /obj/structure/bars/pipe,
 /obj/structure/mineral_door/wood,
@@ -44720,11 +44760,10 @@
 	},
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "phA" = (
-/obj/structure/mineral_door/wood{
-	name = "alchemy room"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/church/deacon,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
 "phC" = (
@@ -44739,7 +44778,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "phK" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10
@@ -44832,11 +44871,10 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/underdark)
 "pjW" = (
-/obj/structure/mineral_door/wood/donjon{
-	name = "Deacon's Clinic"
-	},
+/obj/structure/mineral_door/wood/donjon,
 /obj/effect/mapping_helpers/access/church/deacon,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/province_keep/deacon)
 "pkb" = (
@@ -44860,6 +44898,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town/roofs/keep)
 "pkE" = (
@@ -44961,8 +45000,9 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison/dungeon,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "plI" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
 /turf/open/floor/rogue/ruinedwood{
@@ -45030,7 +45070,7 @@
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "pmJ" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -45038,7 +45078,7 @@
 /obj/item/rope/chain,
 /obj/item/kitchen/fork/ironfork,
 /turf/open/floor/rogue/twig,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "pmM" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -45278,7 +45318,7 @@
 	dir = 1;
 	icon_state = "vertw"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "prM" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -45985,11 +46025,10 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town)
 "pDt" = (
-/obj/structure/mineral_door/wood/red{
-	name = "Janitor's Abode"
-	},
+/obj/structure/mineral_door/wood/red,
 /obj/effect/mapping_helpers/access/yeomen/janitor,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/town/house/janitor)
 "pDv" = (
@@ -46198,6 +46237,7 @@
 "pHd" = (
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/tavern/arena)
 "pHl" = (
@@ -46251,11 +46291,10 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
 "pHM" = (
-/obj/structure/mineral_door/wood{
-	name = "Luxury Room III"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/fancyroomiii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/luxury/three)
 "pHP" = (
@@ -47236,9 +47275,8 @@
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/province_keep/quarters/marquis)
 "pYS" = (
-/obj/structure/flora/roguegrass/bush/wall/tall/red,
-/turf/open/floor/rogue/grassred,
-/area/provincial/indoors)
+/turf/open/floor/rogue/twig,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "pYX" = (
 /obj/structure/chair/wood/rogue/fancy,
 /turf/open/floor/rogue/hexstone,
@@ -47266,6 +47304,7 @@
 "pZx" = (
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/newstone,
 /area/provincial/indoors/town/church/treatment_center)
 "pZB" = (
@@ -47505,6 +47544,7 @@
 /obj/structure/mineral_door/wood/red,
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "qeN" = (
@@ -47526,14 +47566,14 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/woodturned,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "qfe" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
 /obj/item/paper/scroll,
 /turf/open/floor/rogue/carpet,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "qff" = (
 /obj/item/flint,
 /turf/open/floor/rogue/wood,
@@ -47682,7 +47722,7 @@
 	pixel_y = -32
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "qib" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassred,
@@ -47903,7 +47943,7 @@
 	},
 /obj/item/candle/yellow/lit,
 /turf/open/floor/rogue/woodturned,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "qli" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/guard,
 /turf/open/floor/rogue/concrete{
@@ -47944,6 +47984,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep/kitchen)
 "qlK" = (
@@ -48054,15 +48095,8 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town/keep)
 "qnm" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Lord's Dining Room"
-	},
-/obj/effect/mapping_helpers/access/noble/royal,
-/obj/effect/mapping_helpers/lock_door,
-/turf/open/floor/rogue/ruinedwood{
-	icon_state = "weird1"
-	},
-/area/provincial/indoors/town/province_keep/quarters/marquis)
+/turf/closed/wall/mineral/rogue/craftstone,
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "qns" = (
 /obj/structure/roguerock,
 /turf/open/floor/rogue/naturalstone,
@@ -48706,7 +48740,7 @@
 	},
 /obj/effect/decal/wood/herringbone2,
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "qwE" = (
 /obj/structure/flora/roguegrass/water/reeds,
 /obj/structure/flora/roguegrass/water/reeds,
@@ -48716,6 +48750,7 @@
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/provincial/indoors/town/church/quarters)
 "qwO" = (
@@ -48812,11 +48847,10 @@
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university_garden)
 "qyC" = (
-/obj/structure/mineral_door/wood{
-	name = "wine cellar"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/wine_cellar)
 "qyD" = (
@@ -49251,11 +49285,10 @@
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town)
 "qGb" = (
-/obj/structure/mineral_door/wood/red{
-	name = "Janitor's Abode"
-	},
+/obj/structure/mineral_door/wood/red,
 /obj/effect/mapping_helpers/access/yeomen/janitor,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/house/janitor)
 "qGd" = (
@@ -49777,7 +49810,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "qPa" = (
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "horzw"
@@ -49796,7 +49829,7 @@
 	pixel_y = 15
 	},
 /turf/open/water/swamp,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "qPo" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/fluff/littlebanners/bluewhite{
@@ -50026,7 +50059,7 @@
 	},
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/rogue/carpet,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "qTQ" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/reagent_containers/glass/cup/golden,
@@ -50341,6 +50374,7 @@
 "ran" = (
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/kitchen)
 "rao" = (
@@ -50501,7 +50535,9 @@
 /turf/open/floor/carpet/red,
 /area/provincial/underground/underkings_maw)
 "rcZ" = (
-/obj/structure/mineral_door/wood,
+/obj/structure/mineral_door/wood{
+	name = "Confession Booth"
+	},
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -50743,7 +50779,7 @@
 /area/provincial/underground/dungeon/old_university)
 "riC" = (
 /turf/open/floor/rogue/carpet,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "riG" = (
 /obj/effect/decal/remains/human,
 /obj/machinery/light/rogue/torchholder/directional/west,
@@ -51172,7 +51208,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "rpI" = (
 /obj/structure/table/wood,
 /obj/item/clothing/head/roguetown/roguehood/mage,
@@ -51186,11 +51222,10 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/quarters/servant)
 "rqb" = (
-/obj/structure/mineral_door/wood{
-	name = "veterans house"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -52151,7 +52186,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "rJs" = (
 /obj/structure/closet/crate/coffin,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
@@ -52917,6 +52952,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/province_keep/garrison/gate/south)
 "rWv" = (
@@ -53195,10 +53231,9 @@
 /turf/open/transparent/openspace,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "sbc" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Lord's Restroom"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble/royal,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep/baths/marquis)
 "sbg" = (
@@ -53472,7 +53507,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "sfD" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /turf/open/floor/rogue/cobble,
@@ -53580,11 +53615,10 @@
 /turf/closed/wall/mineral/rogue/decostone/mossy/cand,
 /area/provincial/underground)
 "shj" = (
-/obj/structure/mineral_door/wood{
-	name = "Room III"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomiii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/three)
 "shr" = (
@@ -54554,11 +54588,10 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/sewer)
 "szB" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Council Office"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/councillor)
 "szH" = (
@@ -54618,11 +54651,10 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "sAA" = (
-/obj/structure/mineral_door/wood/donjon{
-	name = "squireroom door"
-	},
+/obj/structure/mineral_door/wood/donjon,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/quarters/squire)
 "sAD" = (
@@ -54694,7 +54726,7 @@
 	icon_state = "borderfall"
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "sBL" = (
 /obj/structure/fluff/statue/knight/r,
 /turf/open/floor/rogue/tile{
@@ -54862,11 +54894,10 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
 "sEB" = (
-/obj/structure/mineral_door/wood{
-	name = "Room IV"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomiv,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/four)
 "sEO" = (
@@ -54947,11 +54978,10 @@
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/provincial/underground/dungeon/old_university)
 "sGn" = (
-/obj/structure/mineral_door/wood{
-	name = "Luxury Room II"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/fancyroomii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/luxury/two)
 "sGo" = (
@@ -55439,11 +55469,10 @@
 /turf/open/floor/rogue/twig,
 /area/provincial/indoors)
 "sQs" = (
-/obj/structure/mineral_door/wood{
-	name = "Room VII"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomvii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/seven)
 "sQL" = (
@@ -55608,11 +55637,10 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/shop)
 "sTe" = (
-/obj/structure/mineral_door/wood{
-	name = "Shared Storage"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/private,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/mages_university/shared_storage)
 "sTA" = (
@@ -55760,6 +55788,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/north)
 "sVI" = (
@@ -55827,6 +55856,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/basement)
 "sWR" = (
@@ -55843,6 +55873,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/blacksmith,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/blacksmith)
 "sWZ" = (
@@ -55961,6 +55992,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/quarters/servant)
 "sZw" = (
@@ -56190,6 +56222,7 @@
 "tdJ" = (
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/sewer)
 "tdK" = (
@@ -56197,7 +56230,7 @@
 	pixel_y = 28
 	},
 /turf/open/floor/rogue/carpet,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "tdR" = (
 /obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/mages_university/artificer,
@@ -56647,11 +56680,10 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "tlt" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Knight's Chamber"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile/bfloorz,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "tlv" = (
@@ -57248,11 +57280,10 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/underground/underdark/sunkencity)
 "twU" = (
-/obj/structure/mineral_door/wood/violet{
-	name = "INNKEEP"
-	},
+/obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/yeomen/tavern/innkeeper,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/town/tavern/innkeeper)
 "twV" = (
@@ -57293,7 +57324,7 @@
 "tye" = (
 /obj/structure/fluff/psycross,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "tyA" = (
 /obj/structure/chair/stool/rogue,
 /mob/living/carbon/human/species/elf/dark/drowraider,
@@ -57314,6 +57345,7 @@
 /obj/structure/mineral_door/wood/red,
 /obj/effect/mapping_helpers/access/garrison/sheriff,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "tyV" = (
@@ -57858,11 +57890,10 @@
 /turf/open/transparent/openspace,
 /area/provincial/underground/dungeon/old_ruin)
 "tIh" = (
-/obj/structure/mineral_door/wood{
-	name = "bath"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/province_keep/baths)
 "tIq" = (
@@ -57894,9 +57925,8 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/underground/dungeon/old_university)
 "tIR" = (
-/obj/machinery/light/rogue/firebowl/stump,
-/turf/open/floor/rogue/naturalstone,
-/area/provincial/indoors)
+/turf/open/floor/rogue/ruinedwood,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "tIS" = (
 /obj/machinery/light/rogue/torchholder/directional/south,
 /turf/open/floor/rogue/blocks,
@@ -58014,7 +58044,7 @@
 	},
 /obj/structure/roguemachine/scomm/directional/east,
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "tLP" = (
 /turf/closed/wall/mineral/rogue/wooddark/end{
 	dir = 1
@@ -58233,7 +58263,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "tPG" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1";
@@ -58385,11 +58415,11 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "tSx" = (
-/obj/structure/mineral_door/wood,
+/obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison,
-/obj/effect/mapping_helpers/lock_door,
-/turf/open/floor/rogue/concrete,
-/area/provincial/indoors/town/province_keep/garrison)
+/obj/effect/mapping_helpers/autoname,
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/town/sewer)
 "tSM" = (
 /obj/structure/fluff/railing/border{
 	dir = 4
@@ -58754,6 +58784,7 @@
 /obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/tavern/kitchen)
 "tZh" = (
@@ -58763,6 +58794,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "tZz" = (
@@ -58845,11 +58877,10 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/underground/dungeon/abandoned_manor)
 "uaX" = (
-/obj/structure/mineral_door/wood{
-	name = "Library"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/mages_university/archive,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/mages_university/library)
 "ubb" = (
@@ -59395,6 +59426,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/town/province_keep/garrison/gate/west)
 "ujA" = (
@@ -59593,7 +59625,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/twig,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "unU" = (
 /turf/open/floor/rogue/wood/herringbone,
 /area/provincial/indoors/town/adventurers_guild)
@@ -59899,11 +59931,10 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/dungeon/fogotten_church)
 "uts" = (
-/obj/structure/mineral_door/wood{
-	name = "Luxury Room III"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/fancyroomiii,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/tavern/room/luxury/three)
 "uuc" = (
@@ -60708,7 +60739,7 @@
 "uGi" = (
 /obj/structure/fluff/railing/fence,
 /turf/open/floor/rogue/dirt/road,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "uGm" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
 	custom_name = "Riverbrook"
@@ -61024,7 +61055,7 @@
 "uLY" = (
 /obj/structure/well,
 /turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "uMk" = (
 /obj/structure/fluff/railing/border{
 	dir = 8
@@ -61180,11 +61211,10 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/mountains)
 "uPD" = (
-/obj/structure/mineral_door/wood/window{
-	name = "Alchemy Lab"
-	},
+/obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/mages_university/private,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/twig,
 /area/provincial/indoors/town/mages_university/alchemy_lab)
 "uPF" = (
@@ -61321,7 +61351,7 @@
 /obj/item/rogueweapon/huntingknife/chefknife,
 /obj/item/kitchen/rollingpin,
 /turf/open/floor/rogue/blocks/stonered/tiny,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "uSm" = (
 /obj/structure/fluff/railing/border{
 	dir = 10
@@ -61494,7 +61524,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "uVD" = (
 /obj/structure/ladder,
 /turf/open/floor/rogue/ruinedwood{
@@ -61562,6 +61592,7 @@
 	},
 /obj/effect/mapping_helpers/access/church/graveyard,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/church/basement/crypt)
 "uWk" = (
@@ -62556,6 +62587,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile{
 	icon_state = "greenstone"
 	},
@@ -62564,6 +62596,7 @@
 /obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/yeomen/tavern,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/town/tavern/kitchen)
 "vpb" = (
@@ -62587,9 +62620,8 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground)
 "vpB" = (
-/obj/machinery/light/rogue/firebowl/stump,
-/turf/open/floor/rogue/grass,
-/area/provincial/indoors)
+/turf/closed/wall/mineral/rogue/stone,
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "vpH" = (
 /turf/closed/wall/mineral/rogue/decostone/cand{
 	max_integrity = 99999
@@ -62689,6 +62721,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/noble/royal,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/sewer)
 "vrd" = (
@@ -62961,10 +62994,9 @@
 /area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "vvt" = (
 /obj/effect/mapping_helpers/access/yeomen/tavern,
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Handler's Quarters"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/adventurers_guild/handlers_office/bedroom)
 "vvA" = (
@@ -63300,11 +63332,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town/keep)
 "vCj" = (
-/obj/structure/mineral_door/wood{
-	name = "deacon's bedroom"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/church/deacon,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -63407,7 +63438,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "vDU" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobble/mossy,
@@ -63652,10 +63683,9 @@
 /turf/open/floor/rogue/metal,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "vHi" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Rogue's Den"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/antag/underking,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/sewer/rogues_den)
 "vHA" = (
@@ -63887,7 +63917,7 @@
 /area/provincial/indoors/town/province_keep/deacon)
 "vKS" = (
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "vKU" = (
 /turf/closed/wall/mineral/rogue/decostone,
 /area/provincial/indoors/town)
@@ -64050,6 +64080,7 @@
 	},
 /obj/effect/mapping_helpers/access/noble/steward,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/steward)
 "vOR" = (
@@ -64580,10 +64611,9 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep)
 "vYW" = (
-/obj/structure/mineral_door/wood/window{
-	name = "Deacon's Office"
-	},
+/obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/noble,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep/deacon)
 "vYY" = (
@@ -64624,6 +64654,7 @@
 	},
 /obj/effect/decal/cleanable/blood/tracks,
 /obj/effect/mapping_helpers/access/garrison,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "vZy" = (
@@ -64824,7 +64855,7 @@
 /area/provincial/outdoors/town/keep)
 "wdp" = (
 /turf/open/floor/rogue/ruinedwood/herringbone,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "wdr" = (
 /obj/item/roguestatue/gold/loot,
 /turf/open/floor/rogue/tile{
@@ -65038,6 +65069,7 @@
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -65064,7 +65096,7 @@
 /obj/structure/chair/bench/coucha/r,
 /obj/structure/fluff/walldeco/bigpainting/lake,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/tavern/room/luxury/three)
+/area/provincial/indoors/town/tavern/room/luxury)
 "whN" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/minotaur{
 	health = 400;
@@ -65351,6 +65383,13 @@
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/indoors/town/province_keep/garrison/gate/keep)
+"wnn" = (
+/obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/access/garrison,
+/obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
+/turf/open/floor/rogue/concrete,
+/area/provincial/indoors/town/province_keep/garrison)
 "wno" = (
 /obj/effect/decal/mossy{
 	dir = 4
@@ -65394,7 +65433,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "wnN" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/rogue/tile/masonic{
@@ -65440,6 +65479,7 @@
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/yeomen/merchant/shop,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/shop)
 "woM" = (
@@ -65647,7 +65687,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "wsY" = (
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/metal{
@@ -65867,7 +65907,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/outercorner{
 	dir = 1
 	},
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "wxG" = (
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/dungeon/old_university)
@@ -65945,6 +65985,7 @@
 /obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/yeomen/merchant/shop,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/shop)
 "wzf" = (
@@ -66008,11 +66049,10 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "wAi" = (
-/obj/structure/mineral_door/wood/violet{
-	name = "Seneschal's Quarters"
-	},
+/obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -66090,7 +66130,7 @@
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "wBu" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 1
@@ -66122,7 +66162,7 @@
 "wBR" = (
 /obj/structure/fluff/walldeco/chains,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors/town/province_keep/basement)
+/area/provincial/indoors/town/province_keep/garrison/cell)
 "wBS" = (
 /obj/structure/spider/stickyweb{
 	dir = 4
@@ -66836,10 +66876,9 @@
 /turf/open/floor/rogue/churchrough,
 /area/provincial/indoors/town/basement)
 "wPU" = (
-/obj/structure/mineral_door/wood/fancywood{
-	name = "Lord's Apartment"
-	},
+/obj/structure/mineral_door/wood/fancywood,
 /obj/effect/mapping_helpers/access/noble/royal,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -67062,7 +67101,7 @@
 	},
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/twig,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "wSw" = (
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/dirt,
@@ -67081,7 +67120,7 @@
 	pixel_y = 15
 	},
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "wTh" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1";
@@ -67246,7 +67285,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt,
-/area/provincial/indoors)
+/area/provincial/outdoors/field)
 "wWP" = (
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -67352,10 +67391,9 @@
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/adventurers_guild)
 "wYz" = (
-/obj/structure/mineral_door/wood/window{
-	name = "Library"
-	},
+/obj/structure/mineral_door/wood/window,
 /obj/effect/mapping_helpers/access/mages_university/archive,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -68172,6 +68210,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/gate/keep)
 "xnC" = (
@@ -68714,6 +68753,7 @@
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/provincial/indoors/town/church/bell_tower)
 "xwT" = (
@@ -68737,11 +68777,10 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "xxl" = (
-/obj/structure/mineral_door/wood/donjon/stone{
-	name = "Forgotten Chapel"
-	},
+/obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/antag/underking,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/underground/dungeon/fogotten_church)
 "xxq" = (
@@ -68993,9 +69032,9 @@
 /area/provincial/underground/dungeon/vulnafir)
 "xCg" = (
 /obj/structure/mineral_door/wood/deadbolt{
-	dir = 1;
-	name = "Dressing Room"
+	dir = 1
 	},
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/carpet,
 /area/provincial/indoors/town/province_keep/dressing_room)
 "xCl" = (
@@ -69221,11 +69260,10 @@
 	},
 /area/provincial/outdoors/town)
 "xGI" = (
-/obj/structure/mineral_door/wood{
-	name = "toilets"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/basement)
 "xGP" = (
@@ -69269,6 +69307,7 @@
 /obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile{
 	icon_state = "greenstone"
 	},
@@ -69523,7 +69562,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "xLp" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/hexstone,
@@ -69629,11 +69668,10 @@
 /turf/open/floor/rogue/twig,
 /area/provincial/indoors/town/basement)
 "xNm" = (
-/obj/structure/mineral_door/wood/violet{
-	name = "royal guard quarters"
-	},
+/obj/structure/mineral_door/wood/violet,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "xNy" = (
@@ -69724,6 +69762,7 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/church/graveyard,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/church)
 "xOZ" = (
@@ -69885,6 +69924,7 @@
 /obj/structure/mineral_door/wood/donjon/stone,
 /obj/effect/mapping_helpers/access/church,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/provincial/indoors/town/church/storage)
 "xRE" = (
@@ -70232,7 +70272,7 @@
 /obj/item/needle/thorn,
 /obj/structure/closet/crate/chest/old_crate,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "xXD" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/indoors/town/tavern/innkeeper)
@@ -70393,11 +70433,10 @@
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/sewer)
 "yao" = (
-/obj/structure/mineral_door/wood{
-	name = "Room I"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/yeomen/tavern/roomi,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room)
 "yax" = (
@@ -70809,14 +70848,14 @@
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/basement)
 "yiz" = (
-/obj/structure/mineral_door/wood{
-	name = "jesters chambers"
-	},
+/obj/structure/mineral_door/wood,
 /obj/effect/mapping_helpers/access/noble,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/quarters/jester)
 "yiD" = (
@@ -70896,6 +70935,7 @@
 	},
 /obj/effect/mapping_helpers/access/garrison,
 /obj/effect/mapping_helpers/lock_door,
+/obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/north)
 "ykq" = (
@@ -70939,6 +70979,10 @@
 	},
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/town/house/village_elder)
+"ykT" = (
+/obj/item/grown/log/tree/stick,
+/turf/open/floor/rogue/dirt/road,
+/area/provincial/outdoors/field)
 "ylc" = (
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
@@ -168812,13 +168856,13 @@ lXY
 lXY
 gdl
 jGF
-lXY
-lXY
-lXY
-lXY
-lXY
-lXY
-lXY
+qnm
+qnm
+qnm
+qnm
+qnm
+qnm
+qnm
 lXY
 lXY
 yiy
@@ -169264,13 +169308,13 @@ lXY
 mbh
 pcB
 pcB
-lXY
+qnm
 jSM
 qfe
 mBF
 dSG
 wBq
-lXY
+qnm
 evn
 voR
 fkd
@@ -169716,13 +169760,13 @@ lXY
 lBe
 pcB
 pcB
-lXY
+qnm
 qTH
 dtO
 riC
 hlO
 hlO
-kaZ
+cjM
 fkd
 fkd
 fkd
@@ -170168,7 +170212,7 @@ ocl
 pcB
 pcB
 pcB
-lXY
+qnm
 tdK
 riC
 riC
@@ -170620,13 +170664,13 @@ lXY
 lBe
 pcB
 pcB
-lXY
+qnm
 wBR
 vKS
 vKS
 hlO
 hlO
-kaZ
+cjM
 fkd
 fkd
 fkd
@@ -171072,13 +171116,13 @@ lXY
 lKT
 pcB
 pcB
-lXY
+qnm
 djw
 eEa
 aAo
 jga
 hlO
-lXY
+qnm
 kbO
 auR
 fkd
@@ -171524,13 +171568,13 @@ lXY
 lXY
 gdl
 jGF
-lXY
-lXY
-lXY
-lXY
-lXY
-lXY
-lXY
+qnm
+qnm
+qnm
+qnm
+qnm
+qnm
+qnm
 lXY
 lXY
 yiy
@@ -241706,25 +241750,25 @@ vPq
 pUX
 pUX
 pUX
-cxG
-cxG
-cxG
-cxG
-cxG
-cxG
-eiB
-eiB
-eiB
-eiB
-acq
-eiB
-eiB
-eiB
-eiB
-eiB
-acq
-acq
-acq
+hJN
+hJN
+hJN
+hJN
+hJN
+hJN
+ceN
+nWL
+nWL
+nWL
+kGI
+nWL
+nWL
+nWL
+nWL
+nWL
+kGI
+kGI
+kGI
 kGI
 azB
 azB
@@ -242158,26 +242202,26 @@ pUX
 pUX
 pUX
 pUX
-cxG
-cxG
-cxG
-cxG
-cxG
-eiB
-eiB
-iMg
+hJN
+hJN
+hJN
+hJN
+hJN
+ceN
+ceN
+fgA
 nKE
 nKE
-cxG
+hJN
 nKE
 nKE
 nKE
-iMg
+fgA
 bMc
 jfb
 jfb
 bMc
-iMg
+fgA
 azB
 woX
 azB
@@ -242611,26 +242655,26 @@ pUX
 pUX
 pUX
 kSS
-cxG
-acq
-acq
-acq
-eiB
-eiB
-cxG
-acq
-cxG
-cxG
-cxG
-cxG
-cxG
-cxG
-cxG
-acq
-fVw
-cxG
+hJN
+ajw
+ajw
+ajw
+ceN
+ceN
+hJN
+ajw
+hJN
+hJN
+hJN
+hJN
+hJN
+hJN
+hJN
+ajw
+mht
+hJN
 kOo
-iQS
+woX
 kGI
 kGI
 kGI
@@ -243062,27 +243106,27 @@ pUX
 pUX
 pUX
 pUX
-cxG
-cxG
-acq
-mST
-acq
-cxG
-cxG
-cxG
-iMg
-iHE
-iHE
-iHE
-iHE
-iMg
-hoL
-acq
-feI
-iQS
-iQS
+hJN
+hJN
+ajw
+ucy
+ajw
+hJN
+hJN
+hJN
+oAt
+vpB
+vpB
+vpB
+vpB
+oAt
+qCw
+ajw
+tIB
+mli
+mli
 kOo
-acq
+kGI
 kGI
 woX
 woX
@@ -243515,26 +243559,26 @@ pUX
 pUX
 pUX
 pUX
-cxG
-acq
-acq
-acq
-acq
-lKt
-cxG
-iHE
+hJN
+ajw
+ajw
+ajw
+ajw
+nVp
+hJN
+vpB
 pmB
 uVC
 uVC
 dks
-iHE
-cxG
-acq
-acq
-cxG
-iQS
+vpB
+hJN
+ajw
+ajw
+hJN
+mli
 uGi
-acq
+kGI
 kGI
 azB
 eQE
@@ -243968,25 +244012,25 @@ pUX
 pUX
 pUX
 pUX
-acq
-acq
-mST
-acq
-acq
-acq
-iHE
+ajw
+ajw
+ucy
+ajw
+ajw
+ajw
+vpB
 ftC
 ftC
 wdp
 biK
-iHE
+vpB
 tye
-iLC
-iQS
-cxG
-cxG
+ykT
+mli
+hJN
+hJN
 uGi
-iQS
+woX
 woX
 aab
 ubI
@@ -244420,25 +244464,25 @@ pUX
 pUX
 pUX
 pUX
-lKt
-acq
-acq
-acq
-vpB
-acq
+nVp
+ajw
+ajw
+ajw
+vrG
+ajw
 gnV
 ilX
 pmJ
 wdp
 biK
 jIP
-iQS
-cxG
-iQS
-iLC
-iQS
+mli
+hJN
+mli
+ykT
+mli
 uGi
-acq
+kGI
 eQE
 azB
 ffP
@@ -244875,22 +244919,22 @@ pUX
 iqn
 iqn
 iqn
-cxG
-acq
-acq
-iHE
+hJN
+ajw
+ajw
+vpB
 unJ
 ftC
 wdp
 biK
-iHE
-iLC
-acq
+vpB
+ykT
+ajw
 uLY
-acq
-cxG
+ajw
+hJN
 uGi
-acq
+kGI
 kGI
 cZn
 ubI
@@ -245327,22 +245371,22 @@ pUX
 uFb
 wGN
 iqn
-cxG
-lKt
-acq
-iHE
+hJN
+nVp
+ajw
+vpB
 hPY
 tLA
 kTX
 fSF
-iHE
+vpB
 mtZ
-lKt
-acq
+nVp
+ajw
 iau
-cxG
+hJN
 uGi
-iQS
+woX
 kGI
 kGI
 kaI
@@ -245779,22 +245823,22 @@ pUX
 nnC
 nnC
 eNK
-cxG
-acq
-acq
-iHE
-iHE
-iHE
-iHE
+hJN
+ajw
+ajw
+vpB
+vpB
+vpB
+vpB
 bnH
-iHE
-cxG
-cxG
-acq
-acq
-cxG
+vpB
+hJN
+hJN
+ajw
+ajw
+hJN
 uGi
-acq
+kGI
 kGI
 kGI
 kGI
@@ -246231,22 +246275,22 @@ pUX
 xRm
 nnC
 iqn
-cxG
-cxG
-acq
-iHE
-iHE
+hJN
+hJN
+ajw
+vpB
+vpB
 ehu
 ehu
 qwD
-iHE
-cxG
+vpB
+hJN
 npr
-acq
-acq
-cxG
+ajw
+ajw
+hJN
 kHe
-acq
+kGI
 kGI
 azB
 dbq
@@ -246683,22 +246727,22 @@ pUX
 iqn
 iqn
 iqn
-gMq
-cxG
-acq
-iMg
-iHE
-iHE
-iHE
-iHE
-iMg
-yeC
-cxG
-cxG
-acq
-acq
+jgi
+hJN
+ajw
+oAt
+vpB
+vpB
+vpB
+vpB
+oAt
+kSc
+hJN
+hJN
+ajw
+ajw
 kOo
-acq
+kGI
 kGI
 kGI
 azB
@@ -247133,24 +247177,24 @@ pUX
 pUX
 pUX
 pUX
-kRH
-kRH
-iQS
-cxG
-acq
-acq
-hqY
-pYS
+mUU
+mUU
+mli
+hJN
+ajw
+ajw
+rQc
+jwy
 dOs
-hqY
-mht
-mht
-cxG
-acq
-acq
-lKt
-iMg
-acq
+rQc
+nqz
+nqz
+hJN
+ajw
+ajw
+nVp
+fgA
+kGI
 kGI
 kGI
 kGI
@@ -247586,23 +247630,23 @@ pUX
 pUX
 pUX
 pUX
-kRH
-iQS
-cxG
+mUU
+mli
+hJN
 jPN
-lKt
-cxG
-mht
+nVp
+hJN
+nqz
 kFq
-mht
-cxG
-iMg
-cxG
-mfs
-acq
-acq
-eiB
-eiB
+nqz
+hJN
+fgA
+hJN
+xFI
+ajw
+ajw
+ceN
+ceN
 nWL
 kGI
 kGI
@@ -248023,38 +248067,38 @@ bkc
 bkc
 pUX
 pUX
-tIR
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
+saM
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
 pUX
 pUX
 pUX
 pUX
 pUX
 pUX
-kRH
-iQS
-iQS
-cxG
+mUU
+mli
+mli
+hJN
 wSA
-cxG
-cxG
+hJN
+hJN
 iNN
-iQS
-iQS
-djR
-iQS
-mfs
-mfs
-iQS
-cxG
-cxG
+mli
+mli
+xAJ
+mli
+xFI
+xFI
+mli
+hJN
+hJN
 azB
 azB
 azB
@@ -248473,40 +248517,40 @@ mUU
 mUU
 mUU
 mUU
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-tIR
-iQS
-iQS
-iQS
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+saM
+mli
+mli
+mli
 iNN
-mfs
-mfs
+xFI
+xFI
 cHN
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
 woX
 pzC
 pzC
@@ -248925,40 +248969,40 @@ xFI
 xFI
 xFI
 xFI
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
 cHN
-mfs
-mfs
+xFI
+xFI
 cHN
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
 pzC
 pzC
 pzC
@@ -249377,40 +249421,40 @@ xFI
 xFI
 xFI
 xFI
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
 cHN
-mfs
-iQS
+xFI
+mli
 wSA
-eiB
-eiB
-cxG
-cxG
-iQS
-acq
-acq
-cxG
-cxG
+ceN
+ceN
+hJN
+hJN
+mli
+ajw
+ajw
+hJN
+hJN
 sBk
 pzC
 pzC
@@ -249829,40 +249873,40 @@ xFI
 xFI
 xFI
 xFI
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-mfs
-iQS
-iQS
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+xFI
+mli
+mli
 iNN
-cxG
-eiB
+hJN
+ceN
 qPh
-eiB
-eiB
-cxG
-oAt
-iQS
-iMg
-acq
-cxG
-oAt
+ceN
+ceN
+hJN
+iXT
+mli
+fgA
+ajw
+hJN
+iXT
 sBk
 woX
 azB
@@ -250281,40 +250325,40 @@ uNv
 uNv
 uNv
 uNv
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-iQS
-iQS
-iQS
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mli
+mli
+mli
 wSA
-acq
+ajw
 jqw
 ePR
 ePR
 jqw
-cxG
-cxG
-iQS
+hJN
+hJN
+mli
 kOo
-acq
-acq
-cxG
+ajw
+ajw
+hJN
 sBk
 sBk
 azB
@@ -250736,37 +250780,37 @@ uNv
 pUX
 pUX
 pUX
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
-kRH
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
+mUU
 pUX
 pUX
 pUX
 pUX
 pUX
-tIR
-iQS
-iQS
+saM
+mli
+mli
 jPN
-cxG
-acq
+hJN
+ajw
 eSW
 aeH
 iLJ
 fpb
-cxG
-cxG
-iQS
+hJN
+hJN
+mli
 kOo
-acq
-acq
-cxG
+ajw
+ajw
+azB
 kGI
 kGI
 kGI
@@ -251190,11 +251234,11 @@ pUX
 pUX
 pUX
 pUX
-kRH
-kRH
-kRH
-kRH
-tIR
+mUU
+mUU
+mUU
+mUU
+saM
 pUX
 pUX
 pUX
@@ -251202,23 +251246,23 @@ pUX
 pUX
 pUX
 pUX
-iQS
-iQS
-cxG
-cxG
-cxG
-acq
+mli
+mli
+hJN
+hJN
+hJN
+ajw
 eSW
 dbB
 dbB
 cxX
-cxG
-cxG
-cxG
+hJN
+hJN
+hJN
 kOo
-acq
-mST
-cxG
+ajw
+ucy
+azB
 kGI
 kGI
 kGI
@@ -251655,22 +251699,22 @@ pUX
 pUX
 pUX
 pUX
-cxG
-cxG
-cxG
-cxG
-acq
+hJN
+hJN
+hJN
+hJN
+ajw
 eSW
 jmm
 dbB
 fpb
 ivG
-acq
-cxG
+ajw
+hJN
 kOo
-acq
-acq
-oAt
+ajw
+ajw
+sBk
 kGI
 kGI
 kGI
@@ -252107,11 +252151,11 @@ pUX
 pUX
 pUX
 pUX
-cxG
-cxG
-acq
-acq
-acq
+hJN
+hJN
+ajw
+ajw
+ajw
 jqw
 ePR
 ePR
@@ -252119,9 +252163,9 @@ jqw
 pbu
 pbu
 wWO
-iMg
-acq
-acq
+fgA
+ajw
+kGI
 kGI
 kGI
 kGI
@@ -252559,20 +252603,20 @@ pUX
 pUX
 pUX
 pUX
-cxG
-cxG
-acq
-acq
-acq
-cxG
-cxG
-cxG
-cxG
-cxG
-acq
-cxG
-acq
-acq
+hJN
+hJN
+ajw
+ajw
+ajw
+azB
+azB
+azB
+azB
+azB
+kGI
+azB
+kGI
+kGI
 kGI
 kGI
 kGI
@@ -264668,7 +264712,7 @@ tZh
 wSb
 sLZ
 vsk
-nEJ
+tSx
 tZh
 hRd
 jGq
@@ -273678,7 +273722,7 @@ kNB
 wSb
 sLZ
 vsk
-nEJ
+tSx
 ifQ
 ifQ
 kNB
@@ -276858,7 +276902,7 @@ fTx
 wKH
 wKH
 wKH
-jJt
+dmY
 wKH
 xuY
 lZq
@@ -279580,7 +279624,7 @@ ezt
 ezt
 ezt
 ezt
-tSx
+wnn
 iuV
 iuV
 nNF
@@ -284555,7 +284599,7 @@ aSL
 fwl
 pJw
 pJw
-tSx
+wnn
 pJw
 ary
 pJw
@@ -357426,14 +357470,14 @@ oyL
 oyL
 oyL
 sxM
-iMg
-dbB
-dbB
-dbB
-dbB
-dbB
-dbB
-iMg
+oAt
+eiB
+eiB
+eiB
+eiB
+eiB
+eiB
+oAt
 qHP
 oyL
 oyL
@@ -357878,14 +357922,14 @@ oyL
 oyL
 oyL
 hNU
-dbB
-dbB
-dbB
-dbB
-dbB
-dbB
-dbB
-dbB
+eiB
+eiB
+eiB
+eiB
+eiB
+eiB
+eiB
+eiB
 jlF
 oyL
 oyL
@@ -358330,14 +358374,14 @@ oyL
 oyL
 oyL
 hNU
-dbB
-iMg
-qKI
-vzr
-vzr
-qKI
-iMg
-dbB
+eiB
+oAt
+kRH
+mST
+mST
+kRH
+oAt
+eiB
 jlF
 oyL
 oyL
@@ -358782,14 +358826,14 @@ oyL
 oyL
 oyL
 hNU
-dbB
-uQk
+eiB
+djR
 wsK
 qOT
 qOT
 qhS
-uQk
-dbB
+djR
+eiB
 jlF
 oyL
 oyL
@@ -359234,14 +359278,14 @@ oyL
 oyL
 oyL
 hNU
-dbB
+eiB
 gnV
 gnV
 phJ
 qOT
 uRZ
-kDr
-dbB
+lKt
+eiB
 jlF
 oyL
 oyL
@@ -359686,14 +359730,14 @@ oyL
 oyL
 oyL
 hNU
-dbB
+eiB
 gnV
 nRi
 fBT
 qOT
 qOT
 jIP
-dbB
+eiB
 jlF
 oyL
 oyL
@@ -360133,19 +360177,19 @@ nIR
 nIR
 nIR
 nIR
-oyL
-oyL
-oyL
+vKf
+vKf
+vKf
 oyL
 hNU
-dbB
+eiB
 gnV
 gnV
 nvp
 qOT
 vDP
-uQk
-dbB
+djR
+eiB
 jlF
 oyL
 oyL
@@ -360585,19 +360629,19 @@ nIR
 nIR
 nIR
 nIR
-oyL
-oyL
-oyL
+rqC
+rqC
+vKf
 oyL
 hNU
-dbB
-vCJ
+eiB
+feI
 wnM
 qOT
 qOT
 fno
-vCJ
-dbB
+feI
+eiB
 jlF
 oyL
 oyL
@@ -361037,19 +361081,19 @@ nIR
 nIR
 nIR
 nIR
-oyL
-oyL
-oyL
+rqC
+rqC
+vKf
 oyL
 hNU
-dbB
-vCJ
+eiB
+feI
 rpG
 kbh
 kbh
 rJp
-vCJ
-dbB
+feI
+eiB
 jlF
 oyL
 oyL
@@ -361489,19 +361533,19 @@ nIR
 nIR
 nIR
 nIR
-oyL
-oyL
-oyL
+rqC
+rqC
+vKf
 oyL
 hNU
-dbB
-kDr
+eiB
+lKt
 bNH
 ehu
-peY
+gBn
 dCF
-kDr
-dbB
+lKt
+eiB
 jlF
 oyL
 oyL
@@ -361941,19 +361985,19 @@ nIR
 nIR
 nIR
 nIR
-oyL
-oyL
-oyL
+vKf
+vKf
+vKf
 oyL
 hNU
-dbB
-iMg
-qKI
-vzr
-vzr
-qKI
-iMg
-dbB
+eiB
+oAt
+kRH
+mST
+mST
+kRH
+oAt
+eiB
 jlF
 oyL
 oyL
@@ -362398,14 +362442,14 @@ oyL
 oyL
 oyL
 hNU
-dbB
-dbB
-dbB
-dbB
-dbB
-dbB
-dbB
-dbB
+eiB
+eiB
+eiB
+eiB
+eiB
+eiB
+eiB
+eiB
 jlF
 oyL
 oyL
@@ -362850,14 +362894,14 @@ nIR
 oyL
 oyL
 muo
-iMg
+oAt
 qlg
 qeV
 qeV
-dbB
-dbB
-dbB
-iMg
+eiB
+eiB
+eiB
+oAt
 msb
 oyL
 oyL
@@ -392081,7 +392125,7 @@ oyL
 oyL
 oyL
 wKH
-jJt
+dmY
 wKH
 sOe
 sOe
@@ -392987,7 +393031,7 @@ yih
 pZn
 uno
 bJf
-jJt
+dmY
 asm
 asm
 asm
@@ -393000,16 +393044,11 @@ asm
 tHR
 asm
 asm
-jJt
+dmY
 uno
 uno
 uno
-jJt
-uno
-mcJ
-uno
-uno
-uno
+dmY
 uno
 mcJ
 uno
@@ -393021,7 +393060,12 @@ uno
 uno
 uno
 uno
-jJt
+mcJ
+uno
+uno
+uno
+uno
+dmY
 uno
 uno
 koY
@@ -393033,7 +393077,7 @@ tvc
 wjb
 ffG
 mcJ
-jJt
+dmY
 dKl
 dKl
 dKl
@@ -393051,7 +393095,7 @@ dKl
 dKl
 dKl
 dKl
-jJt
+dmY
 uno
 uno
 pZn
@@ -393486,7 +393530,7 @@ yih
 ary
 ary
 pJw
-tSx
+wnn
 pJw
 pJw
 ary
@@ -393498,7 +393542,7 @@ ary
 ary
 pJw
 pJw
-tSx
+wnn
 pJw
 pJw
 ary
@@ -393889,7 +393933,7 @@ oyL
 oyL
 oyL
 xuY
-jJt
+dmY
 wKH
 oXM
 oXM
@@ -394409,7 +394453,7 @@ alf
 rNv
 rNv
 wKH
-jJt
+dmY
 wKH
 dAo
 dAo
@@ -403449,7 +403493,7 @@ rNv
 rNv
 rNv
 wKH
-jJt
+dmY
 wKH
 dAo
 dAo
@@ -404316,7 +404360,7 @@ gHT
 gHT
 rCP
 rCP
-dyS
+cDV
 rCP
 rCP
 psf
@@ -404355,7 +404399,7 @@ yih
 pZn
 uno
 uno
-jJt
+dmY
 adI
 adI
 adI
@@ -405257,7 +405301,7 @@ rNv
 rNv
 rNv
 wKH
-jJt
+dmY
 xuY
 oyL
 oyL
@@ -406126,7 +406170,7 @@ rCP
 rBg
 rBg
 rBg
-dyS
+cDV
 lsj
 hXU
 oXM
@@ -474496,12 +474540,12 @@ oyL
 oyL
 oyL
 lqA
-iGi
-vzr
-qvH
+hoL
+mST
+dyS
 jIP
-iGi
-qvH
+hoL
+dyS
 mio
 oyL
 oyL
@@ -474949,11 +474993,11 @@ oyL
 oyL
 lqA
 gnV
-iXU
+hRC
 hSr
-fkQ
+hqY
 aSr
-fkQ
+hqY
 mio
 oyL
 oyL
@@ -475401,11 +475445,11 @@ oyL
 oyL
 oJI
 fsT
-szx
+tIR
 sBG
-tUf
-tUf
-fkQ
+pYS
+pYS
+hqY
 xLm
 oyL
 oyL
@@ -475853,9 +475897,9 @@ oyL
 oyL
 lqA
 guu
-szx
+tIR
 sBG
-tUf
+pYS
 wSm
 eGL
 mio
@@ -476305,10 +476349,10 @@ oyL
 oyL
 lqA
 prL
-szx
+tIR
 sBG
-tUf
-tUf
+pYS
+pYS
 ciA
 mio
 oyL
@@ -476757,10 +476801,10 @@ oyL
 oyL
 lqA
 guu
-szx
+tIR
 sBG
 ftC
-tUf
+pYS
 cbb
 mio
 oyL
@@ -477209,11 +477253,11 @@ oyL
 oyL
 oJI
 fsT
-szx
+tIR
 sBG
-tUf
-tUf
-fkQ
+pYS
+pYS
+hqY
 xLm
 oyL
 oyL
@@ -477661,10 +477705,10 @@ oyL
 oyL
 lqA
 guu
-szx
+tIR
 hBk
-fkQ
-fkQ
+hqY
+hqY
 xXz
 mio
 oyL
@@ -508312,7 +508356,7 @@ sIU
 svl
 gxI
 gxI
-jJt
+dmY
 uno
 uno
 pZn
@@ -513241,7 +513285,7 @@ syW
 vcW
 vcW
 vcW
-qnm
+jnF
 uaq
 krk
 dVX
@@ -514599,7 +514643,7 @@ egw
 egw
 egw
 egw
-qnm
+jnF
 egw
 egw
 egw
