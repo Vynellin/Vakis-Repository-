@@ -1,8 +1,5 @@
-/obj/effect/proc_holder/spell/invoked/eldritchhealing/any
-	ignore_faithless = TRUE
-
 /obj/effect/proc_holder/spell/invoked/eldritchhealing
-	name = "eldritch healing"
+	name = "Eldritch Healing"
 	desc = "Restores health with shimmering arcane energy."
 	overlay_state = null
 	releasedrain = 30
@@ -20,28 +17,39 @@
 	recharge_time = 20 SECONDS
 	miracle = FALSE
 	var/patronname = ""
-	var/targetnotification = "Shimmering arcane energy lessens my pain!" // This (and the line below) is a default message; Warlocks with patrons will have it overwritten in their job file.
+	var/targetnotification = "Shimmering arcane energy lessens my pain!"
 	var/othernotification = "is surrounded by shimmering arcane energy."
 	var/ignore_faithless = FALSE
 
 /obj/effect/proc_holder/spell/invoked/eldritchhealing/cast(list/targets, mob/living/user)
 	. = ..()
-	if(isliving(targets[1]))
-		var/mob/living/target = targets[1]
-		target.visible_message(span_info("[target] "+othernotification), span_notice(targetnotification))
-		if(iscarbon(target))
-			var/mob/living/carbon/C = target
-			var/obj/item/bodypart/affecting = C.get_bodypart(check_zone(user.zone_selected))
-			if(affecting)
-				if(affecting.heal_damage(50, 50))
-					C.update_damage_overlays()
-				if(affecting.heal_wounds(50))
-					C.update_damage_overlays()
+	if (!isliving(targets[1]))
+		return FALSE
+
+	var/mob/living/target = targets[1]
+	target.visible_message(span_info("[target] [othernotification]"), span_notice(targetnotification))
+
+	var/healing = 2.5 // Flat value, no patron bonuses like lesser_heal
+
+	if (ishuman(target))
+		var/mob/living/carbon/human/H = target
+		var/no_embeds = TRUE
+		var/list/embeds = H.get_embedded_objects()
+		if (length(embeds))
+			for (var/object in embeds)
+				if (!istype(object, /obj/item/natural/worms/leech))
+					no_embeds = FALSE
+					break
+		if (no_embeds)
+			target.apply_status_effect(/datum/status_effect/buff/healing, healing)
 		else
-			target.adjustBruteLoss(-50)
-			target.adjustFireLoss(-50)
-		target.adjustToxLoss(-50)
-		target.adjustOxyLoss(-50)
-		target.blood_volume += BLOOD_VOLUME_SURVIVE
-		return TRUE
-	return FALSE
+			target.visible_message(span_warning("[target]'s wounds tear and rip around embedded objects!"),
+			                       span_warning("Agonising pain shoots through your body as eldritch energies try to close your wounds!"))
+			H.adjustBruteLoss(20)
+			playsound(target, 'sound/combat/dismemberment/dismem (2).ogg', 100)
+			H.emote("agony")
+	else
+		// fallback for non-human living mobs
+		target.apply_status_effect(/datum/status_effect/buff/healing, healing)
+
+	return TRUE
