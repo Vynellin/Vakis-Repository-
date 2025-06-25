@@ -45,15 +45,15 @@
 	on_remove_on_mob_delete = TRUE
 	var/datum/weakref/buffed_item
 
-/datum/status_effect/buff/boomingblade_weapon/on_creation(mob/living/new_owner, obj/item/I)
+/datum/status_effect/buff/boomingblade_weapon/on_creation(mob/living/new_owner, obj/item/item)
 	. = ..()
 	if(!.)
 		return
-	if(istype(I) && !(I.item_flags & ABSTRACT))
-		buffed_item = WEAKREF(I)
-		if(!I.light_outer_range && I.light_system == STATIC_LIGHT)
-			I.set_light(1)
-		RegisterSignal(I, COMSIG_ITEM_AFTERATTACK, PROC_REF(item_afterattack))
+	if(istype(item) && !(item.item_flags & ABSTRACT))
+		buffed_item = WEAKREF(item)
+		if(!item.light_outer_range && item.light_system == STATIC_LIGHT)
+			item.set_light(1)
+		RegisterSignal(item, COMSIG_ITEM_AFTERATTACK, PROC_REF(item_afterattack))
 	else
 		return
 
@@ -61,10 +61,10 @@
 	. = ..()
 	UnregisterSignal(owner, COMSIG_MOB_ATTACK_HAND)
 	if(buffed_item)
-		var/obj/item/I = buffed_item.resolve()
-		if(istype(I))
-			I.set_light(0)
-		UnregisterSignal(I, COMSIG_ITEM_AFTERATTACK)
+		var/obj/item/item = buffed_item.resolve()
+		if(istype(item))
+			item.set_light(0)
+		UnregisterSignal(item, COMSIG_ITEM_AFTERATTACK)
 
 	// Called when weapon attacks successfully
 /datum/status_effect/buff/boomingblade_weapon/proc/item_afterattack(obj/item/source, mob/living/target, mob/user, proximity_flag, click_parameters)

@@ -1,47 +1,79 @@
-/obj/effect/proc_holder/spell/invoked/greenflameblade
+/obj/effect/proc_holder/spell/self/greenflameblade
 	name = "Green-Flame Blade"
-	desc = "A melee strike engulfed in magical green fire that burns the target and ignites nearby foes with a burst of flame."
+	desc = "Imbue your weapon with green flame. Your next strike burns your target and nearby enemies."
 	overlay_state = "null"
 	releasedrain = 50
 	chargetime = 3
 	recharge_time = 10 SECONDS
-	range = 6
 	warnie = "spellwarning"
 	movement_interrupt = FALSE
 	no_early_release = FALSE
-	chargedloop = null
 	sound = 'sound/magic/whiteflame.ogg'
 	chargedloop = /datum/looping_sound/invokegen
-	associated_skill = /datum/skill/magic/arcane //can be arcane, druidic, blood, holy
+	associated_skill = /datum/skill/magic/arcane
 	cost = 1
 
 	spell_tier = 2
-
 	xp_gain = TRUE
 	miracle = FALSE
 
 	invocation = "Gladius flamma viridis!"
-	invocation_type = "shout" //can be none, whisper, emote and shout
+	invocation_type = "shout"
 
-/obj/effect/proc_holder/spell/invoked/greenflameblade/cast(list/targets, mob/living/user)
-	if(isliving(targets[1]))
-		var/mob/living/carbon/target = targets[1]
-		var/mob/living/L = target
-		var/mob/U = user
-		var/obj/item/held_item = user.get_active_held_item() //get held item
-		var aoe_range = 1
-		if(held_item)
-			held_item.melee_attack_chain(U, L)
-			L.adjustFireLoss(15) //burn target
-			playsound(target, 'sound/items/firesnuff.ogg', 100)
-			//burn effect and sound
-			for(var/mob/living/M in range(aoe_range, get_turf(target))) //burn non-user mobs in an aoe
-				if(!M.anti_magic_check())
-					if(M != user)
-						M.adjustFireLoss(15) //burn target
-						//burn effect and sound
-						new /obj/effect/temp_visual/acidsplash(get_turf(M))
-						playsound(M, 'sound/items/firelight.ogg', 100)
+/obj/effect/proc_holder/spell/self/greenflameblade/cast(mob/living/user)
+	var/obj/item/held_item = user.get_active_held_item()
+	if(!held_item)
+		user.visible_message(span_warning("You need a weapon to cast Green-Flame Blade!"))
+		return FALSE
+
+	user.apply_status_effect(/datum/status_effect/buff/greenflameblade_weapon, held_item)
+	user.visible_message(span_info("Your [held_item.name] glows with verdant magical fire!"))
+	return TRUE
+
+/datum/status_effect/buff/greenflameblade_weapon
+	id = "greenflame_blade_weapon"
+	status_type = STATUS_EFFECT_UNIQUE
+	duration = 15 SECONDS
+	alert_type = /atom/movable/screen/alert/status_effect/buff/greenflameblade_weapon
+	on_remove_on_mob_delete = TRUE
+	var/datum/weakref/buffed_item
+
+/datum/status_effect/buff/greenflameblade_weapon/on_creation(mob/living/new_owner, obj/item/item)
+	. = ..()
+	if(!. || !item)
+		return
+	buffed_item = WEAKREF(item)
+	RegisterSignal(item, COMSIG_ITEM_AFTERATTACK, PROC_REF(item_afterattack))
+
+/datum/status_effect/buff/greenflameblade_weapon/on_remove()
+	if(buffed_item)
+		var/obj/item/item = buffed_item.resolve()
+		if(item)
+			UnregisterSignal(item, COMSIG_ITEM_AFTERATTACK)
+
+/datum/status_effect/buff/greenflameblade_weapon/proc/item_afterattack(obj/item/source, mob/living/target, mob/user, proximity_flag, click_parameters)
+	if(!proximity_flag || !isliving(target))
+		return
+
+	// Primary burn
+	target.adjustFireLoss(15)
+	playsound(target, 'sound/items/firesnuff.ogg', 100)
+	new /obj/effect/temp_visual/greenflameblade(get_turf(target))
+
+	// AoE burn
+	for(var/mob/living/mob_hit in range(1, get_turf(target)))
+		if(mob_hit != user && !mob_hit.anti_magic_check())
+			mob_hit.adjustFireLoss(15)
+			playsound(mob_hit, 'sound/items/firelight.ogg', 100)
+			new /obj/effect/temp_visual/greenflameblade(get_turf(mob_hit))
+
+	user.visible_message(span_danger("[target] and nearby foes erupt in green fire!"))
+	owner.remove_status_effect(src)
+
+/atom/movable/screen/alert/status_effect/buff/greenflameblade_weapon
+	name = "Green-Flame Blade"
+	desc = "Your next strike will ignite enemies with green fire."
+	icon_state = "flame" 
 
 /obj/effect/temp_visual/greenflameblade
 	icon = 'icons/effects/fire.dmi'
