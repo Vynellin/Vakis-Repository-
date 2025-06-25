@@ -1852,9 +1852,9 @@
 	body_parts_covered = HEAD|HAIR
 	icon_state = "carapacecap"
 	item_state = "carapacecap"
-	armor = list("blunt" = 60, "slash" = 60, "stab" = 60, "piercing" = 60, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 50, "slash" = 40, "stab" = 45, "piercing" = 30, "fire" = 10, "acid" = 0) //Around Leather level
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_BLUNT)
-	max_integrity = 100
+	max_integrity = 150
 	anvilrepair = null
 	sewrepair = TRUE
 	blocksound = PLATEHIT
@@ -1864,7 +1864,8 @@
 	name = "dragonscale cap"
 	desc = "Fiery armored plates sown together to protect your head."
 	color = "#9e5761"
-	armor = list("blunt" = 60, "slash" = 60, "stab" = 60, "piercing" = 60, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 55, "slash" = 50, "stab" = 55, "piercing" = 45, "fire" = 50, "acid" = 0)
+	max_integrity = 200
 
 /obj/item/clothing/head/roguetown/helmet/carapacehelm
 	slot_flags = ITEM_SLOT_HEAD|ITEM_SLOT_HIP
@@ -1876,9 +1877,9 @@
 	block2add = FOV_BEHIND
 	icon_state = "carapacehelm"
 	item_state = "carapacehelm"
-	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "piercing" = 100, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 70, "slash" = 80, "stab" = 60, "piercing" = 50, "fire" = 15, "acid" = 0) //Around Hardened Leather level.
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_SMASH, BCLASS_TWIST)
-	max_integrity = 150
+	max_integrity = 200
 	anvilrepair = null
 	sewrepair = TRUE
 	blocksound = PLATEHIT
@@ -1893,6 +1894,6 @@
 	icon_state = "dragonscalehelm"
 	item_state = "dragonscalehelm"
 	color = "#693a41"
-	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 100, "fire" = 60, "acid" = 0)
-	max_integrity = 300
+	armor = list("blunt" = 85, "slash" = 100, "stab" = 85, "piercing" = 80, "fire" = 70, "acid" = 0)
+	max_integrity = 350
 	sellprice = 50

@@ -380,7 +380,8 @@
 	smeltresult = /obj/item/ash
 	sewrepair = TRUE
 	anvilrepair = null
-	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "piercing" = 50, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 70, "slash" = 80, "stab" = 60, "piercing" = 30, "fire" = 30, "acid" = 0) //Around Hardened leather
+	max_integrity = 225
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT)
 	blocksound = PLATEHIT
 	var/do_sound = FALSE
@@ -396,7 +397,8 @@
 /obj/item/clothing/under/roguetown/carapacelegs/dragon
 	name = "dragonscale platelegs"
 	desc = "Dragonscale armor to protect the legs."
-	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 60, "acid" = 0)
+	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 50, "fire" = 60, "acid" = 0) //Sidegrade to Blacksteel
+	max_integrity = 325
 	color = "#9e5761"
 	sellprice = 50
 

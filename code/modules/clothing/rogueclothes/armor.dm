@@ -872,9 +872,9 @@
 	item_state = "carapace"
 	blocksound = PLATEHIT
 	drop_sound = 'sound/foley/dropsound/chain_drop.ogg'
-	armor = list("blunt" = 60, "slash" = 100, "stab" = 60, "piercing" = 100, "fire" = 30, "acid" = 0)
+	armor = list("blunt" = 75, "slash" = 95, "stab" = 60, "piercing" = 60, "fire" = 25, "acid" = 0) //Slightly above carapace cuirass
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
-	max_integrity = 175
+	max_integrity = 275
 	allowed_sex = list(MALE, FEMALE)
 	var/do_sound = TRUE
 	max_integrity = 400
@@ -895,11 +895,12 @@
 	slot_flags = ITEM_SLOT_ARMOR
 	name = "carapace cuirass"
 	desc = "Vest styled watery shell chest armor sewn in layers."
+	armor = list("blunt" = 70, "slash" = 90, "stab" = 60, "piercing" = 50, "fire" = 20, "acid" = 0) //Below Brigandine, Above Hardened Leather
 	body_parts_covered = CHEST|GROIN|VITALS
 	icon_state = "carapacecuirass"
 	item_state = "carapacecuirass"
 	flags_inv = HIDEBOOB
-	max_integrity = 200
+	max_integrity = 250
 	equip_delay_self = 30
 
 /obj/item/clothing/suit/roguetown/armor/carapace/dragon
@@ -910,8 +911,8 @@
 	color = "#9e5761"
 	icon_state = "carapace"
 	item_state = "carapace"
-	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 100, "fire" = 60, "acid" = 0)
-	max_integrity = 700	//4 dragonscales, 6 fibers, and 2 difficulty.
+	armor = list("blunt" = 80, "slash" = 100, "stab" = 80, "piercing" = 70, "fire" = 60, "acid" = 0) //Sidegrade to Blacksteel Plate
+	max_integrity = 400
 	sellprice = 50
 
 /obj/item/clothing/suit/roguetown/armor/carapace/dragon/cuirass
@@ -923,6 +924,7 @@
 	icon_state = "carapacecuirass"
 	item_state = "carapacecuirass"
 	flags_inv = HIDEBOOB
-	max_integrity = 450
+	armor = list("blunt" = 75, "slash" = 95, "stab" = 80, "piercing" = 60, "fire" = 60, "acid" = 0) //Sidegrade to Blacksteel Cuirass
+	max_integrity = 350
 	equip_delay_self = 30
 	sellprice = 50
