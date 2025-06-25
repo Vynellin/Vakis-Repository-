@@ -86,12 +86,6 @@
 			human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/eldritchblast/empowered)
 			human.change_stat("intelligence", 1)
 			human.mind.adjust_spellpoints(1)
-		if("A love that clings") //ring of soulbinding
-			human.put_in_hands(givering(human))
-			ADD_TRAIT(human, TRAIT_GOODLOVER, TRAIT_GENERIC)
-			human.change_stat("endurance", 1)
-			human.set_blindness(0)
-			human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/variellecurse)
 		if("A body that won't break") //make healthier
 			givehealing(human, patronchoice)
 			human.change_stat("constitution", 1)
@@ -464,40 +458,9 @@
 /obj/item/book/rogue/eldritch/Initialize()
 	. = ..()
 	// TODO: GLOBAL LISTS OF SPELLS, THIS IS PAINFUL
-	spell1 = pick(
-		/obj/effect/proc_holder/spell/invoked/projectile/fireball,
-		/obj/effect/proc_holder/spell/invoked/projectile/lightningbolt,
-		/obj/effect/proc_holder/spell/invoked/projectile/fetch,
-		/obj/effect/proc_holder/spell/invoked/projectile/spitfire,
-		/obj/effect/proc_holder/spell/invoked/projectile/firebolt,
-		/obj/effect/proc_holder/spell/invoked/projectile/frostbolt,
-		/obj/effect/proc_holder/spell/invoked/projectile/acidsplash,
-		/obj/effect/proc_holder/spell/invoked/blade_burst,
-		/obj/effect/proc_holder/spell/invoked/frostbite,
-		/obj/effect/proc_holder/spell/invoked/arcane_storm,
-		/obj/effect/proc_holder/spell/invoked/chilltouch,
-		/obj/effect/proc_holder/spell/invoked/mindsliver,
-		/obj/effect/proc_holder/spell/invoked/lightninglure,
-		/obj/effect/proc_holder/spell/invoked/greenflameblade,
-	)
-	spell2 = pick(
-		/obj/effect/proc_holder/spell/invoked/forcewall/greater,
-		/obj/effect/proc_holder/spell/self/bladeward,
-	)
-	spell3 = pick(
-		/obj/effect/proc_holder/spell/invoked/snap_freeze,
-		/obj/effect/proc_holder/spell/self/message,
-		/obj/effect/proc_holder/spell/invoked/repulse,
-		/obj/effect/proc_holder/spell/invoked/leap,
-		/obj/effect/proc_holder/spell/aoe_turf/conjure/Wolf,
-		/obj/effect/proc_holder/spell/invoked/guidance,
-		/obj/effect/proc_holder/spell/targeted/encodethoughts,
-		/obj/effect/proc_holder/spell/invoked/magicstone,
-		/obj/effect/proc_holder/spell/invoked/mending,
-		/obj/effect/proc_holder/spell/self/light,
-		/obj/effect/proc_holder/spell/invoked/create_campfire,
-		/obj/effect/proc_holder/spell/targeted/touch/prestidigitation,
-	)
+	//spell1 = pick()
+	//spell2 = pick()
+	//spell3 = pick()
 
 
 /obj/item/book/rogue/eldritch/equipped(mob/living/user)
@@ -705,33 +668,3 @@
 		user.change_stat("fortune", -1)
 		active_item = FALSE
 		return
-
-///////////////////////////////
-//	Soulbond Ring
-///////////////////////////////
-/datum/outfit/job/roguetown/adventurer/warlock/proc/givering(mob/living/carbon/human/human)
-	var/item_type = /obj/item/clothing/ring/diamond/soulbond
-	var/obj/item/item
-	item = new item_type
-	item.item_owner = human
-	return item
-
-/obj/item/clothing/ring/diamond/soulbond
-	name = "Soulbond Ring"
-	desc = "A ring that bonds two together eternally."
-
-/obj/item/clothing/ring/diamond/soulbond/equipped(mob/living/user, slot)
-	. = ..()
-	if(slot == SLOT_RING)
-		if(user == item_owner)
-			to_chat(user, span_warning("You feel lonely. This is meant to go on someone else."))
-		else
-			ADD_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
-			to_chat(item_owner, span_warning("[user]'s life force is tied directly to yours."))
-			to_chat(user, span_warning("Your lifeforce is linked to [item_owner]'s."))
-			soullink(/datum/soullink/oneway/delay, item_owner, user)
-
-/obj/item/clothing/ring/diamond/soulbond/dropped(mob/living/user)
-	. = ..()
-	qdel(user.GetComponent(/datum/soullink/oneway))
-	REMOVE_TRAIT(src, TRAIT_NODROP, TRAIT_GENERIC)
