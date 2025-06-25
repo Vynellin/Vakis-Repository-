@@ -457,11 +457,29 @@
 
 /obj/item/book/rogue/eldritch/Initialize()
 	. = ..()
-	// TODO: GLOBAL LISTS OF SPELLS, THIS IS PAINFUL
-	//spell1 = pick()
-	//spell2 = pick()
-	//spell3 = pick()
 
+	var/list/tier_1_spells = list()
+	var/list/tier_2_spells = list()
+	var/list/tier_3_spells = list()
+
+	for (var/spell_path in GLOB.learnable_spells)
+		if (!ispath(spell_path, /obj/effect/proc_holder/spell)) continue
+		var/obj/effect/proc_holder/spell/S = spell_path
+		var/tier = initial(S.spell_tier)
+		switch (tier)
+			if (1)
+				tier_1_spells += spell_path
+			if (2)
+				tier_2_spells += spell_path
+			if (3)
+				tier_3_spells += spell_path
+
+	if (length(tier_1_spells))
+		spell1 = pick(tier_1_spells)
+	if (length(tier_2_spells))
+		spell2 = pick(tier_2_spells)
+	if (length(tier_3_spells))
+		spell3 = pick(tier_3_spells)
 
 /obj/item/book/rogue/eldritch/equipped(mob/living/user)
 	. = ..()
