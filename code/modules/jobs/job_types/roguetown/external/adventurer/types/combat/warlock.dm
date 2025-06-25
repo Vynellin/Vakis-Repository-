@@ -34,6 +34,7 @@
 	)
 
 	var/patronchoice = input("Choose your otherworldly patron", "Available patrons") as anything in patrons
+	human.patronchoice = patronchoice
 
 	switch(patronchoice)
 		if("The Verdant Court")
@@ -326,7 +327,7 @@
 	human.change_stat("endurance", 1)
 	human.change_stat("speed", -1)
 
-	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/greenflameblade) // put that new weapon to work! martial focus means less magic
+	human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/greenflameblade) // put that new weapon to work! martial focus means less magic
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mending)
 
 	ADD_TRAIT(human, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
@@ -573,7 +574,7 @@
 	var/obj/item/item
 	item = new item_type
 	item.AddComponent(/datum/component/pact_weapon, human, patronchoice)
-	item.AddComponent(/datum/component/singing_item, human)
+	item.AddComponent(/datum/component/singing_item, human, patronchoice)
 	item.AddComponent(/datum/component/spirit_holding, null, null)
 	return item
 
