@@ -50,7 +50,7 @@ GLOBAL_LIST_INIT(learnable_spells, (list(/obj/effect/proc_holder/spell/invoked/p
 		/obj/effect/proc_holder/spell/invoked/forcewall/arcane_prison,
 		/obj/effect/proc_holder/spell/invoked/forcewall/greater,
 		/obj/effect/proc_holder/spell/self/findfamiliar,
-		/obj/effect/proc_holder/spell/invoked/greenflameblade,
+		/obj/effect/proc_holder/spell/self/greenflameblade,
 		/obj/effect/proc_holder/spell/invoked/mindsliver,
 		/obj/effect/proc_holder/spell/invoked/lightninglure,
 		/obj/effect/proc_holder/spell/invoked/chilltouch,
