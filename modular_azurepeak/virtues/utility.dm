@@ -314,6 +314,8 @@
 		else
 			var/obj/item/bodypart/r_arm/prosthetic/bronzeright/L = new()
 			L.attach_limb(recipient)
+	if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/self/trickarm))
+		recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/trickarm)
 
 /datum/virtue/utility/bronzearm_l
 	name = "Bronze Arm (L)"
@@ -333,6 +335,8 @@
 		else
 			var/obj/item/bodypart/l_arm/prosthetic/bronzeleft/L = new()
 			L.attach_limb(recipient)
+	if (!recipient.mind?.has_spell(/obj/effect/proc_holder/spell/self/trickarm))
+		recipient.mind?.AddSpell(new /obj/effect/proc_holder/spell/self/trickarm)
 
 /datum/virtue/utility/woodwalker
 	name = "Woodwalker"
