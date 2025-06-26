@@ -59,11 +59,11 @@
 		"Secrets best left buried", // knowledge / tome pact
 		"A body that won't break",  // health
 		"Gold that never feels warm", // wealth / talisman
-		"A love that clings",        // soulbinding
 		"A voice that answers",      // friendship / chain pact
 		"A name the world must fear",// power
 		"A reason to keep breathing",// purpose / star chain
-		"A wound that must be answered" // revenge / curse
+		"A wound that must be answered", // revenge / curse
+		"A debt paid in screams" //Player gains a ressource that goes up when damage, can spend on shielding self or other.
 	)
 
 	var/boonchoice = input("What did you trade away a piece of yourself for?", "The Boon") as anything in boons
@@ -105,6 +105,10 @@
 			givecurse(human, patronchoice)
 			human.change_stat("speed", 1)
 			human.set_blindness(0)
+		if("A debt paid in screams")
+			//Insert what it does here. 
+			human.set_blindness(0)
+		
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/archfeypatron(mob/living/carbon/human/human, patronchoice)
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
@@ -574,7 +578,7 @@
 	var/obj/item/item
 	item = new item_type
 	item.AddComponent(/datum/component/pact_weapon, human, patronchoice)
-	item.AddComponent(/datum/component/singing_item, human, patronchoice)
+	item.AddComponent(/datum/component/singing_item, human, patronchoice, item)
 	item.AddComponent(/datum/component/spirit_holding, null, null)
 	return item
 

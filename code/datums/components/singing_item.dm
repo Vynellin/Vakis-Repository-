@@ -1,14 +1,25 @@
+/datum/controller/configuration/proc/LoadWeaponDialog()
+	var/file_path = "data/singing_weapon_replies.json"
+	if(fexists(file_path))
+		var/json_text = file2text(file_path)
+		GLOB.weapon_personality_dialog = json_decode(json_text)
+	else
+		log_world("ERROR: Could not load weapon_dialogue.json")
+
 /datum/component/singing_item
 	var/obj/item/rogueweapon/weapon
 	var/mob/living/weapon_owner
-	var/personality = "Zealous"
+	var/personality = "zealous"
 
-/datum/component/singing_item/Initialize(mob/living/owner, personality = null)
-	if(!isitem(parent))
+/datum/component/singing_item/Initialize(mob/living/carbon/human, patronchoice, item)
+	if(!isitem(item))
 		return COMPONENT_INCOMPATIBLE
-	else
-		weapon_owner = owner
-		personality = get_patron_personality(owner.patronchoice)
+
+	if(ismob(human))
+		weapon_owner = human
+		personality = get_patron_personality(patronchoice)
+
+	return ..()
 
 /proc/get_patron_personality(patronchoice)
 	switch(patronchoice)
@@ -53,7 +64,7 @@
 	if(prob(20))
 		say_weapon_line("dropped", user, source)
 
-/datum/component/singing_item/proc/onattack(obj/item/source, mob/user, atom/target)
+/datum/component/singing_item/proc/onattack(obj/item/source, atom/target, mob/user)
 	if(prob(20))
 		say_weapon_line("attack", user, source)
 
