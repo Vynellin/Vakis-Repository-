@@ -12,3 +12,6 @@
 	first_time_text = /area/provincial/outdoors/dungeon/riverbrook::first_time_text
 	brief_descriptor = /area/provincial/outdoors/dungeon/riverbrook::brief_descriptor
 	general_location = /area/provincial/outdoors/dungeon/riverbrook::general_location
+	droning_sound = 'sound/music/area/towngenold.ogg'
+	droning_sound_dusk = 'sound/music/area/forestnightold.ogg'
+	droning_sound_night = 'sound/music/area/fieldold.ogg'

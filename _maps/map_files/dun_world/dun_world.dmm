@@ -1550,6 +1550,7 @@
 /area/provincial/indoors/town/province_keep/quarters/squire)
 "aAx" = (
 /obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/access/yeomen/tailor,
 /turf/open/floor/rogue/wood/herringbone,
 /area/provincial/indoors/dungeon/riverbrook)
 "aAB" = (
@@ -3359,7 +3360,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "biz" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -5294,7 +5295,7 @@
 	},
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "bRJ" = (
 /obj/structure/roguewindow/stained/silver,
 /turf/open/floor/rogue/blocks/newstone,
@@ -11957,8 +11958,9 @@
 /area/provincial/underground/underkings_maw)
 "egS" = (
 /obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/access/yeomen/blacksmith,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "egV" = (
 /obj/structure/closet/crate/chest{
 	base_icon_state = "woodchestalt";
@@ -13070,6 +13072,16 @@
 /mob/living/simple_animal/hostile/retaliate/rogue/saiga/tame/saddled,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/stables/rented)
+"eBb" = (
+/obj/structure/fluff/walldeco/church/line,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/provincial/outdoors/dungeon/riverbrook)
 "eBd" = (
 /obj/structure/fluff/statue/knightalt/r,
 /turf/open/floor/rogue/blocks,
@@ -15026,7 +15038,7 @@
 /obj/structure/bed/rogue/inn/wooldouble,
 /obj/item/bedsheet/rogue/double_pelt,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "fiu" = (
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/rogue/dirt/road,
@@ -15153,8 +15165,11 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "fkQ" = (
-/turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/obj/structure/chair/wood/rogue/chair3{
+	dir = 1
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/provincial/indoors/dungeon/riverbrook)
 "flh" = (
 /obj/structure/stairs/fancy/r{
 	dir = 1
@@ -15600,7 +15615,7 @@
 	},
 /obj/item/natural/stone,
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "ftn" = (
 /obj/structure/chair/stool/rogue,
 /obj/effect/landmark/start/prisonerr,
@@ -20361,7 +20376,7 @@
 	},
 /obj/item/candle/yellow/lit,
 /turf/open/floor/rogue/ruinedwood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "gUd" = (
 /obj/structure/bars/pipe{
 	dir = 1
@@ -20828,7 +20843,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "hcL" = (
 /turf/open/water/cleanshallow,
 /area/provincial/underground/dungeon/old_university)
@@ -21915,9 +21930,8 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/stables)
 "huZ" = (
-/obj/item/rogueweapon/sword/sabre/dec,
-/turf/open/water/cleanshallow,
-/area/provincial/underground)
+/turf/open/floor/rogue/cobble,
+/area/provincial/indoors/dungeon/riverbrook)
 "hvf" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/guard/shield,
 /turf/open/floor/rogue/concrete{
@@ -22291,7 +22305,7 @@
 "hDw" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/spear,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "hDx" = (
 /obj/structure/fluff/clock,
 /turf/open/floor/rogue/church,
@@ -22355,7 +22369,7 @@
 /obj/structure/rack/rogue,
 /obj/item/reagent_containers/glass/bucket/wooden,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "hEn" = (
 /obj/structure/fermenting_barrel,
 /turf/open/floor/rogue/dirt/road,
@@ -25666,9 +25680,9 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town/roofs/keep)
 "iIj" = (
-/obj/machinery/light/rogue/oven/south,
-/turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/obj/structure/stairs/stone,
+/turf/open/floor/rogue/naturalstone,
+/area/provincial/underground)
 "iIu" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/grass,
@@ -35891,7 +35905,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "mjq" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -37024,7 +37038,7 @@
 /obj/item/storage/roguebag,
 /obj/item/rogueore/coal,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "mAQ" = (
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/fabric,
@@ -37768,6 +37782,10 @@
 	},
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/goblinfort)
+"mPt" = (
+/obj/structure/stairs/stone,
+/turf/open/floor/rogue/naturalstone,
+/area/provincial/indoors/dungeon/riverbrook)
 "mPB" = (
 /obj/item/bouquet/matricaria,
 /turf/open/floor/carpet/royalblack,
@@ -39560,7 +39578,7 @@
 	},
 /obj/item/natural/stone,
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "ntb" = (
 /obj/structure/bars/passage/shutter/open,
 /obj/structure/bars/pipe,
@@ -39719,6 +39737,18 @@
 "nvX" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
 /area/provincial/underground)
+"nwd" = (
+/obj/structure/fluff/walldeco/church/line{
+	dir = 1
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 8
+	},
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/turf/open/floor/rogue/ruinedwood,
+/area/provincial/outdoors/dungeon/riverbrook)
 "nwg" = (
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/farm/secondary)
@@ -44835,7 +44865,7 @@
 	dir = 1
 	},
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "phn" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -49279,7 +49309,7 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
 /turf/open/floor/rogue/ruinedwood/turned,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "qEf" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/materials,
@@ -50272,6 +50302,7 @@
 /area/provincial/indoors/town)
 "qVD" = (
 /obj/structure/mineral_door/wood,
+/obj/effect/mapping_helpers/access/peasant/villagechief,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/dungeon/riverbrook)
 "qWn" = (
@@ -51001,6 +51032,11 @@
 	icon_state = "plating2"
 	},
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"rkm" = (
+/obj/structure/mineral_door/bars,
+/obj/effect/mapping_helpers/access/garrison,
+/turf/open/floor/rogue/naturalstone,
+/area/provincial/indoors/dungeon/riverbrook)
 "rko" = (
 /obj/structure/spacevine{
 	opacity = 1
@@ -53847,7 +53883,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "sjA" = (
 /obj/structure/roguemachine/withdraw/directional/west,
 /turf/open/floor/rogue/ruinedwood{
@@ -54865,7 +54901,7 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/gadgets,
 /turf/open/floor/rogue/blocks,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "sCE" = (
 /obj/structure/roguemachine/scomm/directional/north,
 /turf/open/floor/rogue/cobble,
@@ -55431,7 +55467,7 @@
 /obj/item/flint,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/tools,
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "sMU" = (
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/seven)
@@ -56485,7 +56521,7 @@
 "tgy" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "tgK" = (
 /obj/structure/table/wood{
 	dir = 1;
@@ -58403,9 +58439,8 @@
 	},
 /area/provincial/outdoors/mountains)
 "tQh" = (
-/mob/living/carbon/human/species/skeleton/npc/ambush,
-/turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/turf/open/transparent/openspace,
+/area/provincial/indoors/dungeon/riverbrook)
 "tQi" = (
 /obj/structure/fluff/walldeco/bigpainting,
 /obj/effect/decal/wood/herringbone{
@@ -61913,7 +61948,7 @@
 	pixel_y = 14
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "vay" = (
 /turf/closed/wall/mineral/rogue/pipe{
 	dir = 4;
@@ -62005,7 +62040,7 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/wood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "vcE" = (
 /obj/structure/closet/crate/chest,
 /obj/item/reagent_containers/food/snacks/egg,
@@ -63537,7 +63572,7 @@
 "vDE" = (
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "vDI" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -63865,6 +63900,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/town/mages_university/established_mage_hall)
+"vIG" = (
+/obj/structure/chair/wood/rogue/chair3,
+/turf/open/floor/rogue/ruinedwood,
+/area/provincial/indoors/dungeon/riverbrook)
 "vIJ" = (
 /obj/structure/fluff/walldeco/church/line{
 	dir = 8
@@ -65068,7 +65107,7 @@
 "wfg" = (
 /obj/machinery/light/rogue/wallfire/candle/weak/directional/west,
 /turf/open/floor/rogue/ruinedwood,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "wfp" = (
 /obj/item/rogue/instrument/lute,
 /obj/item/rogue/instrument/harp,
@@ -65193,7 +65232,7 @@
 "whr" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobble,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "wht" = (
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grassred,
@@ -69780,7 +69819,7 @@
 	dir = 4
 	},
 /turf/open/floor/rogue/cobblerock,
-/area/provincial/indoors)
+/area/provincial/indoors/dungeon/riverbrook)
 "xMN" = (
 /turf/open/water/cleanshallow,
 /area/provincial/underground/dungeon/fogotten_church)
@@ -261511,10 +261550,10 @@ pUX
 vPq
 vPq
 mQh
-mQh
-mQh
-mQh
-mQh
+pUX
+pUX
+pUX
+pUX
 mQh
 mQh
 mQh
@@ -261963,13 +262002,13 @@ pUX
 vPq
 vPq
 mQh
-mQh
-mQh
-mQh
-mQh
-vPq
-vPq
-vPq
+pUX
+pUX
+pUX
+pUX
+pUX
+pUX
+pUX
 vPq
 vPq
 vPq
@@ -262415,11 +262454,11 @@ pUX
 pUX
 vPq
 vPq
-mQh
-mQh
-mQh
-vPq
-vPq
+pUX
+pUX
+pUX
+pUX
+pUX
 pUX
 pUX
 pUX
@@ -262867,13 +262906,13 @@ pUX
 pUX
 vPq
 vPq
-mQh
-mQh
-mQh
-vPq
-vPq
 pUX
 pUX
+pUX
+pUX
+hGg
+hGg
+hGg
 pUX
 pUX
 pUX
@@ -263319,14 +263358,14 @@ pUX
 pUX
 pUX
 vPq
-vPq
-vPq
 pUX
 pUX
 pUX
+nnC
+nnC
+iIj
+hGg
 pUX
-pUX
-wdD
 wdD
 wdD
 wdD
@@ -263773,15 +263812,15 @@ pUX
 pUX
 pUX
 pUX
-pUX
-pUX
-pUX
-pUX
+nnC
+nnC
+hGg
+hGg
+hGg
 wdD
 wdD
 eNA
-wdD
-wdD
+eNA
 wdD
 pUX
 pUX
@@ -264225,12 +264264,12 @@ pUX
 pUX
 pUX
 pUX
-pUX
-pUX
-pUX
+nnC
+nnC
+nnC
+nnC
 wdD
 wdD
-eNA
 eNA
 eNA
 pUX
@@ -264679,7 +264718,7 @@ pUX
 pUX
 pUX
 pUX
-wdD
+nnC
 wdD
 pUX
 eNA
@@ -265588,7 +265627,7 @@ pUX
 pUX
 pUX
 eNA
-huZ
+eNA
 eNA
 eNA
 pUX
@@ -378132,10 +378171,10 @@ wHg
 aAc
 aAc
 wHg
-aAc
-aAc
-aAc
-aAc
+nWt
+nWt
+nWt
+nWt
 aAc
 mHh
 aAc
@@ -378584,10 +378623,10 @@ aAc
 aAc
 wHg
 aAc
-aAc
-wHg
-aAc
-aAc
+nWt
+tQh
+mPt
+rkm
 mHh
 pqk
 mHh
@@ -379036,10 +379075,10 @@ aAc
 aAc
 aAc
 aAc
-aAc
-aAc
-aAc
-wHg
+nWt
+nWt
+nWt
+nWt
 pqk
 mHh
 mHh
@@ -388990,14 +389029,14 @@ pqk
 mHh
 pqk
 mHh
-iMg
+fxZ
 sjl
 ftm
 sjl
 sjl
-iMg
+fxZ
 biw
-iMg
+fxZ
 avh
 avh
 vrl
@@ -389444,13 +389483,13 @@ mHh
 pqk
 nta
 tgy
-qjr
+huZ
 mAM
 vDE
-vCJ
+pap
 qEe
-iMg
-iMg
+fxZ
+fxZ
 aAc
 vrl
 avh
@@ -389895,14 +389934,14 @@ mHh
 mHh
 pqk
 phj
-qjr
-qjr
+huZ
+huZ
 whr
 xML
-vCJ
-xPI
+pap
+uBx
 fij
-iMg
+fxZ
 aAc
 aAc
 avh
@@ -390346,15 +390385,15 @@ mHh
 pqk
 aAc
 haL
-iMg
-vzr
+fxZ
+raq
 egS
-vzr
-vzr
-iMg
+raq
+raq
+fxZ
 mjh
-vzr
-iMg
+raq
+fxZ
 wHg
 aAc
 avh
@@ -390798,15 +390837,15 @@ nli
 aAc
 avh
 iwn
-vCJ
+pap
 sCB
-fkQ
-fkQ
-tQh
+thB
+thB
+ilJ
 wfg
-szx
-szx
-vCJ
+vQk
+vQk
+pap
 aAc
 aAc
 aAc
@@ -391250,15 +391289,15 @@ aAc
 mXM
 avh
 iwn
-iHE
-iIj
-fkQ
+nWt
+kOp
+thB
 hDw
-fkQ
-szx
-szx
-szx
-vCJ
+thB
+vQk
+vQk
+vQk
+pap
 avh
 aAc
 sQN
@@ -391702,15 +391741,15 @@ nab
 avh
 avh
 lXF
-vCJ
+pap
 hEk
 sMR
 var
 bRm
-wFN
+vIG
 gUa
-jlM
-vCJ
+fkQ
+pap
 aAc
 wHg
 sQN
@@ -392154,15 +392193,15 @@ aAc
 lKk
 avh
 avh
-iMg
-vzr
+fxZ
+raq
 vcz
-vzr
-vzr
-vzr
+raq
+raq
+raq
 hcK
-vzr
-iMg
+raq
+fxZ
 aAc
 sQN
 sQN
@@ -493393,10 +493432,10 @@ cfI
 cfI
 cfI
 cfI
-cfI
-cfI
-cfI
-cfI
+slq
+qch
+qch
+lAH
 cfI
 cfI
 cfI
@@ -493845,10 +493884,10 @@ cfI
 cfI
 cfI
 cfI
-cfI
-cfI
-cfI
-cfI
+ggh
+nwd
+eBb
+wLJ
 cfI
 cfI
 cfI
@@ -494297,10 +494336,10 @@ cfI
 cfI
 cfI
 cfI
-cfI
-cfI
-cfI
-cfI
+weL
+dzb
+dzb
+kjK
 cfI
 cfI
 cfI
