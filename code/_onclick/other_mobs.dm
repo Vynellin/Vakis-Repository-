@@ -327,12 +327,6 @@
 	if(ismob(A) && mmb_intent)
 		var/mob/living/M = A
 		sleep(mmb_intent.swingdelay)
-		if(has_status_effect(/datum/status_effect/buff/clash) && ishuman(src))
-			var/mob/living/carbon/human/H = src
-			H.bad_guard(span_warning("The kick throws my stance off!"))
-		if(M.has_status_effect(/datum/status_effect/buff/clash) && ishuman(M))
-			var/mob/living/carbon/human/HT = M
-			HT.bad_guard(span_warning("The kick throws my stance off!"))
 		if(QDELETED(src) || QDELETED(M))
 			return FALSE
 		if(!M.Adjacent(src))
