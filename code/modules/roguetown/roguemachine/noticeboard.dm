@@ -105,6 +105,10 @@
 		return
 	var/can_remove = FALSE
 	var/can_premium = FALSE
+	if(user.job in authority_roles)
+		can_remove = TRUE
+	if(user.job in premium_roles)
+		can_premium = TRUE
 	var/contents
 	contents += "<center>NOTICEBOARD<BR>"
 	contents += "--------------<BR>"
