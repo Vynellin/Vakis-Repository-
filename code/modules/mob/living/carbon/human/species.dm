@@ -1186,6 +1186,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				target.next_attack_msg += " <span class='warning'>Armor absorbs the blow.</span>"
 			else
 				target.next_attack_msg += " <span class='warning'>The attack has no effect.</span>"
+		else
+			affecting.bodypart_attacked_by(user.used_intent.blade_class, damage, user, selzone, crit_message = TRUE)
 
 		log_combat(user, target, "punched")
 
