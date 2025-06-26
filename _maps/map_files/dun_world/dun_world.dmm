@@ -3321,7 +3321,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/mountains)
 "bhx" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/carpet/red,
 /area/provincial/underground/dungeon/old_university)
 "bhG" = (
@@ -5173,7 +5173,7 @@
 	pixel_y = 16
 	},
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/underground/dungeon/old_ruin)
 "bOP" = (
@@ -7317,7 +7317,7 @@
 /area/provincial/indoors/town/blacksmith)
 "cCc" = (
 /obj/item/roguestatue/gold/loot,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/blocks,
 /area/provincial/outdoors/mountains)
 "cCd" = (
@@ -8158,7 +8158,7 @@
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/grassyel,
@@ -9099,7 +9099,7 @@
 "dhE" = (
 /obj/structure/closet/crate/coffin,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/decal/remains/human,
 /turf/open/floor/rogue/dirt,
@@ -13814,10 +13814,14 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/underground)
 "eNN" = (
-/obj/machinery/light/rogue/chand,
+/obj/structure/fluff/railing/border,
+/obj/structure/table/wood{
+	dir = 1;
+	icon_state = "tablewood1"
+	},
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/transparent/openspace,
-/area/provincial/underground/dungeon/forsaken_bastille)
+/turf/open/floor/rogue/metal,
+/area/provincial/underground/underkings_maw)
 "eNO" = (
 /obj/effect/decal/cobbleedge{
 	dir = 8
@@ -21958,6 +21962,11 @@
 /obj/structure/closet/crate/roguecloset,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
+"hwa" = (
+/obj/effect/decal/remains/human,
+/obj/effect/spawner/lootdrop/roguetown/gems,
+/turf/open/floor/rogue/naturalstone,
+/area/provincial/underground)
 "hwj" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -23590,7 +23599,7 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "hWu" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/goblinfort)
 "hWy" = (
@@ -23815,6 +23824,11 @@
 "ibk" = (
 /turf/open/floor/rogue/tile/masonic/single,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
+"ibt" = (
+/obj/structure/closet/crate/coffin,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/rogue/churchmarble,
+/area/provincial/underground/dungeon/licharena)
 "ibI" = (
 /obj/structure/chair/wood/rogue,
 /turf/open/floor/rogue/cobble,
@@ -23900,7 +23914,7 @@
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "idq" = (
-/obj/item/roguecoin/gold/pile,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/structure/closet/crate/chest/neu_fancy,
 /obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/ruinedwood{
@@ -27301,6 +27315,15 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
+"jkJ" = (
+/obj/structure/closet/crate/chest/neu_fancy,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/rogue/grassyel,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "jkK" = (
 /obj/structure/fluff/railing/wood{
 	dir = 8;
@@ -31210,7 +31233,7 @@
 /area/provincial/indoors/town/mages_university/established_mage_hall)
 "kBT" = (
 /obj/structure/closet/crate/chest/old_crate,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "kCb" = (
@@ -31506,7 +31529,7 @@
 /obj/effect/spawner/lootdrop/roguetown/gems,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /obj/machinery/light/rogue/wallfire/candle/weak/directional/north,
 /turf/open/floor/rogue/grassred,
@@ -31624,8 +31647,8 @@
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/dusk_quarter)
 "kIa" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/carpet/inn,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -33990,8 +34013,8 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/gethsmane)
 "lBt" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -34863,10 +34886,9 @@
 /area/provincial/underground/dungeon/old_university)
 "lQS" = (
 /obj/structure/closet/crate/chest/neu_fancy,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "lQT" = (
@@ -37305,7 +37327,7 @@
 /area/provincial/outdoors/dungeon/riverbrook)
 "mHl" = (
 /obj/structure/closet/crate/chest/neu_fancy,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/metal,
@@ -38737,6 +38759,13 @@
 /obj/structure/fluff/walldeco/artificerflag,
 /turf/closed/wall/mineral/rogue/decostone,
 /area/provincial/underground/dungeon/old_university)
+"ngm" = (
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/rogue/rooftop{
+	icon_state = "roofg"
+	},
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "ngy" = (
 /turf/closed/wall/mineral/rogue/decowood,
 /area/provincial/underground/underdark)
@@ -39421,6 +39450,16 @@
 	icon_state = "weird1"
 	},
 /area/provincial/indoors/town/province_keep/garrison/quarters/sergeant)
+"nrs" = (
+/obj/structure/closet/crate/chest/neu_fancy,
+/obj/effect/spawner/lootdrop/roguetown/gems,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/rogue/grasscold,
+/area/provincial/underground/dungeon/old_university)
 "nrB" = (
 /obj/effect/decal/wood/herringbone{
 	dir = 8
@@ -40242,6 +40281,10 @@
 	},
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/old_university)
+"nEX" = (
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/rogue/tile/masonic,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "nFq" = (
 /obj/structure/fluff/walldeco/church/line,
 /turf/open/floor/rogue/hexstone,
@@ -48081,7 +48124,7 @@
 /area/provincial/indoors)
 "qmw" = (
 /obj/effect/decal/remains/human,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/indoors/town/basement)
 "qmx" = (
@@ -48933,7 +48976,7 @@
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "qyN" = (
 /obj/effect/decal/remains/human,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground)
 "qyS" = (
@@ -49125,7 +49168,7 @@
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/tavern/room/luxury)
 "qCh" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/gems,
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university)
 "qCm" = (
@@ -50286,7 +50329,7 @@
 /area/provincial/indoors/town/tavern/public_meeting_room)
 "qXi" = (
 /obj/structure/closet/crate/chest/old_crate,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/spider_cave)
 "qXr" = (
@@ -52262,7 +52305,7 @@
 /area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "rJs" = (
 /obj/structure/closet/crate/coffin,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/dungeon/licharena)
 "rJA" = (
@@ -54846,7 +54889,7 @@
 "sCO" = (
 /obj/structure/closet/crate/chest/lootbox,
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/east,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/tile,
 /area/provincial/underground/dungeon/abandoned_manor)
 "sCW" = (
@@ -55600,6 +55643,14 @@
 /mob/living/simple_animal/hostile/rogue/skeleton/guard,
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/underdark/sunkencity)
+"sRr" = (
+/obj/structure/closet/crate/chest/neu_fancy,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/rogue/grassyel,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "sRv" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1";
@@ -60128,8 +60179,8 @@
 "uvO" = (
 /obj/effect/spawner/lootdrop/roguetown,
 /obj/structure/closet/crate/chest,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/materials,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/underground/dungeon/old_ruin)
 "uvQ" = (
@@ -60780,7 +60831,7 @@
 	},
 /obj/structure/closet/crate/chest,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/armor,
@@ -64643,6 +64694,13 @@
 /obj/structure/fluff/railing/wood,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/outdoors/town/keep)
+"vYl" = (
+/obj/structure/closet/crate/chest/neu_fancy,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/turf/open/floor/rogue/metal,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "vYo" = (
 /obj/structure/roguewindow/openclose/reinforced{
 	dir = 8
@@ -65051,7 +65109,7 @@
 	icon_state = "longtable_mid";
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/carpet/royalblack,
 /area/provincial/underground/underdark)
 "wgb" = (
@@ -65391,8 +65449,8 @@
 /area/provincial/underground/dungeon/vulnafir)
 "wlK" = (
 /obj/structure/closet/crate/chest/neu_fancy,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "wlL" = (
@@ -65892,7 +65950,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/beach/forest)
 "wvt" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/tile/masonic,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "wvA" = (
@@ -66596,7 +66654,7 @@
 	dir = 1;
 	icon_state = "tablewood1"
 	},
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /turf/open/floor/rogue/metal,
 /area/provincial/underground/underkings_maw)
 "wJO" = (
@@ -66619,7 +66677,7 @@
 /obj/structure/closet/crate/chest,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /obj/item/clothing/ring/rubys,
@@ -68312,8 +68370,8 @@
 /area/provincial/outdoors/town)
 "xnF" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/closed/wall/mineral/rogue/stone/moss,
-/area/provincial/underground/dungeon/gethsmane/inner)
+/turf/closed/mineral/rogue/bedrock,
+/area/provincial/underground)
 "xnH" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -132964,7 +133022,7 @@ sqS
 sqS
 sqS
 sqS
-xnF
+dNK
 taw
 taw
 uWl
@@ -200189,7 +200247,7 @@ hcL
 hcL
 hcL
 tAl
-iIQ
+nrs
 asj
 coX
 coX
@@ -208275,7 +208333,7 @@ mDl
 eiK
 eiK
 kJo
-rJs
+ibt
 mmG
 mmG
 vga
@@ -209695,7 +209753,7 @@ bjI
 bjI
 bjI
 rLM
-qCh
+rAJ
 rLM
 lYs
 hZb
@@ -217437,7 +217495,7 @@ vCf
 vPq
 vCf
 vCf
-qyN
+hwa
 nnC
 nnC
 nnC
@@ -228669,7 +228727,7 @@ vCf
 vCf
 vCf
 vCf
-vCf
+xnF
 vCf
 vCf
 vCf
@@ -339664,7 +339722,7 @@ aGi
 iFU
 nOX
 iFU
-wJM
+eNN
 ejZ
 iFU
 cYt
@@ -393796,7 +393854,7 @@ iKB
 hlH
 aaE
 mwS
-xIS
+ngm
 gln
 oyL
 oyL
@@ -394248,7 +394306,7 @@ etd
 brz
 fEo
 fBB
-xIS
+ngm
 gln
 oyL
 oyL
@@ -401482,7 +401540,7 @@ htE
 lgS
 uwF
 rtQ
-wvt
+nEX
 rtQ
 uSD
 icu
@@ -402384,7 +402442,7 @@ rpw
 wEH
 vHP
 aae
-wvt
+nEX
 rtQ
 uSD
 qUJ
@@ -476604,7 +476662,7 @@ frr
 frr
 gVC
 bof
-eNN
+eHM
 bof
 bof
 dRv
@@ -514509,7 +514567,7 @@ nsz
 yfx
 bDr
 xXR
-lQS
+sRr
 wry
 apC
 oyL
@@ -515415,7 +515473,7 @@ bDr
 xXR
 oPM
 gUy
-cRP
+jkJ
 wry
 apC
 oyL
@@ -519475,7 +519533,7 @@ wry
 apC
 mHl
 emm
-mHl
+vYl
 fuB
 mLo
 oyL
