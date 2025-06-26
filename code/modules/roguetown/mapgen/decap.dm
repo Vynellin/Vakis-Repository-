@@ -13,7 +13,7 @@
 
 /datum/mapGeneratorModule/decapdirt
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
-	allowed_turfs = list(/turf/open/floor/rogue/dirt)
+	allowed_turfs = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
 	excluded_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableAtoms = list(/obj/structure/flora/roguetree/burnt = 30,
 							/obj/structure/flora/roguegrass/bush = 25,
@@ -26,10 +26,10 @@
 							/obj/structure/flora/roguegrass/maneater/real=7,
 							/obj/structure/flora/roguegrass/pyroclasticflowers = 15)
 	spawnableTurfs = list(/turf/open/lava=2,/turf/open/floor/rogue/dirt/road=36)
-	allowed_areas = list(/area/rogue/outdoors/mountains/decap, /area/rogue/outdoors/mountains/decap/stepbelow)
+	allowed_areas = list(/area/provincial/outdoors/mountains/underkings_maw, /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 
 /datum/mapGeneratorModule/decaproad
 	clusterCheckFlags = CLUSTER_CHECK_DIFFERENT_ATOMS
 	allowed_turfs = list(/turf/open/floor/rogue/dirt/road)
 	spawnableAtoms = list(/obj/item/natural/stone = 23,/obj/item/natural/rock = 8,/obj/item/grown/log/tree/stick = 6)
-	allowed_areas = list(/area/rogue/outdoors/mountains/decap, /area/rogue/outdoors/mountains/decap/stepbelow)
+	allowed_areas = list(/area/provincial/outdoors/mountains/underkings_maw, /area/provincial/outdoors/mountains/underkings_maw/deeper_within)

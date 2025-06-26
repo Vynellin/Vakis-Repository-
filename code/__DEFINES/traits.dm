@@ -55,6 +55,9 @@
 #define TRAIT_INTELLECTUAL "Intellectual"
 #define TRAIT_GRAVEROBBER "Experienced Grave Robber"
 #define TRAIT_MIRROR_MAGIC "Mirror Magic"
+#define TRAIT_MAGIC_TUTOR "Magical Tutor"
+#define TRAIT_MAGIC_TALENT "Magical Talent"
+#define TRAIT_ARCANE_GATES "Arcane Gates"
 
 
 #define TRAIT_PERFECT_TRACKER "Perfect Tracker" //Will always find any tracks and analyzes them perfectly.
@@ -70,7 +73,7 @@
 // PATRON GOD TRAITS
 #define TRAIT_KNEESTINGER_IMMUNITY "Blessing of Tamari"
 #define TRAIT_SOUL_EXAMINE "Blessing of Tsoridys" //can check bodies to see if they have departed // SOLARIS NOTE: why the fuck would you obfuscate critical info like this. oughhghgh
-#define TRAIT_CHOSEN "Aeternus' Chosen"
+#define TRAIT_CHOSEN "The Nine's Chosen"
 #define TRAIT_CINELLA_SWIM "Blessing of Cinella" //less base fatigue drain when swimming
 #define TRAIT_KASMIDIAN "Blessing of Kasmidian" //secret thieves cant language
 #define TRAIT_BEASTKIN "Tamari's Howl" // ww/beast language for tamari devotees
@@ -135,6 +138,7 @@
 #define TRAIT_ARCANE_T2 "Arcane Training (Apprentice)"
 #define TRAIT_ARCANE_T3 "Arcane Training (Expert)"
 #define TRAIT_ARCANE_T4 "Arcane Training (Master)"
+#define TRAIT_WILDMAGIC "Wild Magic" //low chance for random stuff to happen when casting
 
 
 GLOBAL_LIST_INIT(roguetraits, list(
@@ -144,8 +148,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_KNIGHTSMAN = span_info("I am a stalwart defender of the crown. In the keep of Solaris Ridge, my abilities are sharper due to my routine and familiarity."),
 	TRAIT_DEATHBARGAIN = span_info("A horrible deal has been prepared in your name. May you never see it fulfilled..."),
 	TRAIT_RITUALIST = span_info("I am skilled in the holy arts. Using ritual chalk, I can more deftly channel my God's powers via runes."),
-	TRAIT_CHOSEN = "Aeternus chose you to represent his light.",
-	TRAIT_WEBWALK = "I can move freely between webs.",
+	TRAIT_CHOSEN = span_info("My words and actions bears the weight of the Nine. When I speak, their presence is felt, whether in judgment, blessing, or warning. The words are mine, but not wholly."),	TRAIT_WEBWALK = "I can move freely between webs.",
 	TRAIT_NOSTINK = span_dead("My nose is numb to the smell of decay."),
 	TRAIT_ZJUMP = "Time to reach a new high.",
 	TRAIT_JESTERPHOBIA = span_warning("I have a severe irrational fear of Jesters"),
@@ -250,10 +253,14 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_SLEUTH = span_info("I can spot my tracked Mark's trail without needing to approach it, and can spot them at a distance. I can track more frequently, and the act is not impaired by movement. I can examine tracks right away."),
  	TRAIT_HARDSHELL = span_info("The bulk of this armor prevents me from parrying effectively, but I can still move out of the way."),
 	TRAIT_WOODWALKER = span_notice("I can climb trees quicker, and gain climbing experience twice as quickly. I can step on thorns and branches safely in the woods. I can get twice as many things from searching bushes, and I can stand on leaves in trees safely."),
-	TRAIT_ARCANE_T1 = span_notice("I have received basic training in the arcane arts, allowing me access to a small variety of spells useful outside of combat."),
-	TRAIT_ARCANE_T2 = span_notice("I have received advanced training in the arcane arts, allowing me to learn basic combat spells"),
-	TRAIT_ARCANE_T3 = span_notice("I am a full-fledged mage, and have access to devastating spells that affects a wide area."),
+	TRAIT_ARCANE_T1 = span_notice("I have received basic training in the arcane arts, allowing me access to a small variety of spells useful outside of combat, maybe if I really put effort into it I could reach higher heights!"),
+	TRAIT_ARCANE_T2 = span_notice("I have received advanced training in the arcane arts, allowing me to learn basic combat spells, maybe if I really put effort into it I could reach higher heights!"),
+	TRAIT_ARCANE_T3 = span_notice("I am a full-fledged mage, and have access to devastating spells that affects a wide area, maybe if I really put effort into it I could reach higher heights!"),
 	TRAIT_ARCANE_T4 = span_notice("I'm a master of the arcane arts, and has access to some of the most powerful spells ever devised."),
+	TRAIT_MAGIC_TUTOR = span_info("I know enough magic theory that if I were to reach the rank of master, I could have my own students."),
+	TRAIT_MAGIC_TALENT = span_notice("I am slowly learning about magic, able only to achieve even the smallest of spells."),
+	TRAIT_ARCANE_GATES = span_info("I have stolen a peek through the arcane gates, my mind expanded with knowledge!"),
+	TRAIT_WILDMAGIC = span_info("My magic sometimes has unexpected consequences."),
 ))
 
 // trait accessor defines

@@ -38,45 +38,11 @@
 		return
 	return ..()
 
-/obj/structure/flora/roguetree/Initialize()
-	. = ..()
-
-/*
-	if(makevines)
-		var/turf/target = get_step_multiz(src, UP)
-		if(istype(target, /turf/open/transparent/openspace))
-			target.ChangeTurf(/turf/open/floor/rogue/shroud)
-			var/makecanopy = FALSE
-			for(var/D in GLOB.cardinals)
-				if(!makecanopy)
-					var/turf/NT = get_step(src, D)
-					for(var/obj/structure/flora/roguetree/R in NT)
-						if(R.makevines)
-							makecanopy = TRUE
-							break
-			if(makecanopy)
-				for(var/D in GLOB.cardinals)
-					var/turf/NT = get_step(target, D)
-					if(NT)
-						if(istype(NT, /turf/open/transparent/openspace) || istype(NT, /turf/open/floor/rogue/shroud))
-							NT.ChangeTurf(/turf/closed/wall/shroud)
-							for(var/X in GLOB.cardinals)
-								var/turf/NA = get_step(NT, X)
-								if(NA)
-									if(istype(NA, /turf/open/transparent/openspace))
-										NA.ChangeTurf(/turf/open/floor/rogue/shroud)
-*/
-
-	if(istype(loc, /turf/open/floor/rogue/grass))
-		var/turf/T = loc
-		T.ChangeTurf(/turf/open/floor/rogue/dirt)
-
 /obj/structure/flora/roguetree/obj_destruction(damage_flag)
 	if(stump_type)
 		new stump_type(loc)
 	playsound(src, 'sound/misc/treefall.ogg', 100, FALSE)
 	. = ..()
-
 
 /obj/structure/flora/roguetree/Initialize()
 	. = ..()
@@ -116,8 +82,8 @@
 */
 
 /obj/structure/flora/roguetree/burnt
-	name = "burnt tree"
-	desc = "Maybe lightning, maybe war took the life of this once lively tree."
+	name = "young tree"
+	desc = "A young, growing tree. Past its time as a sapling, but not yet worth climbing."
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	icon_state = "t1"
 	stump_type = /obj/structure/flora/roguetree/stump/burnt
@@ -129,7 +95,7 @@
 
 /obj/structure/flora/roguetree/stump/burnt
 	name = "tree stump"
-	desc = "This stump is burnt. Maybe someone was trying to get coal the easy way."
+	desc = "Youth cut away before it could reach its prime."
 	icon_state = "st1"
 	icon = 'icons/roguetown/misc/96x96.dmi'
 	stump_type = null
@@ -318,16 +284,21 @@
 			if(!looty.len && (world.time > res_replenish))
 				loot_replenish()
 #endif
-			if(prob(50) && looty.len)
+			if(looty.len)
 				if(looty.len == 1)
 					res_replenish = world.time + 8 MINUTES
-				var/obj/item/B = pick_n_take(looty)
-				if(B)
-					B = new B(user.loc)
+				var/obj/item/loot = pick_n_take(looty)
+				if(loot)
+					var/obj/item/B = new loot.type(user.loc)
 					user.put_in_hands(B)
-					user.visible_message(span_notice("[user] finds [B] in [src]."))
+					if(HAS_TRAIT(user, TRAIT_WOODWALKER))
+						var/obj/item/C = new loot.type(user.loc)
+						user.put_in_hands(C)
+					user.visible_message(span_notice("[user] finds [HAS_TRAIT(user, TRAIT_WOODWALKER) ? "two " : ""][loot.name] in [src]."))
 					return
 			user.visible_message(span_warning("[user] searches through [src]."))
+			if((looty.len) && do_after(user, CLICK_CD_MELEE))
+				attack_hand(user)
 #ifdef MATURESERVER
 			if(!looty.len)
 				to_chat(user, span_warning("Picked clean."))
@@ -352,6 +323,20 @@
 		return 0
 	return 1
 
+/obj/structure/flora/roguegrass/bush/red
+	icon_state = "bush1red"
+
+/obj/structure/flora/roguegrass/bush/red/Initialize()
+	. = ..()
+	icon_state = "bush[rand(1,4)]red"
+
+/obj/structure/flora/roguegrass/bush/winter
+	icon_state = "bush1winter"
+
+/obj/structure/flora/roguegrass/bush/winter/Initialize()
+	. = ..()
+	icon_state = "bush[rand(1,4)]winter"
+
 /obj/structure/flora/roguegrass/bush/wall
 	name = "great bush"
 	desc = "A bush, this one's roots are thick and block the way."
@@ -372,13 +357,27 @@
 
 /obj/structure/flora/roguegrass/bush/wall/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 /obj/structure/flora/roguegrass/bush/wall/CheckExit(atom/movable/O, turf/target)
 	if(istype(O) && (O.pass_flags & PASSGRILLE))
-		return 1
-	return 0
+		return TRUE
+	return FALSE
+
+/obj/structure/flora/roguegrass/bush/wall/red
+	icon_state = "bushwall1red"
+
+/obj/structure/flora/roguegrass/bush/wall/red/Initialize()
+	. = ..()
+	icon_state = "bushwall[pick(1,2)]red"
+
+/obj/structure/flora/roguegrass/bush/wall/winter
+	icon_state = "bushwall1winter"
+
+/obj/structure/flora/roguegrass/bush/wall/winter/Initialize()
+	. = ..()
+	icon_state = "bushwall[pick(1,2)]winter"
 
 /obj/structure/flora/roguegrass/bush/wall/tall
 	icon = 'icons/roguetown/misc/foliagetall.dmi'
@@ -391,6 +390,13 @@
 /obj/structure/flora/roguegrass/bush/wall/tall/Initialize()
 	. = ..()
 	icon_state = "tallbush[pick(1,2)]"
+
+/obj/structure/flora/roguegrass/bush/wall/tall/red
+	icon_state = "tallbush1red"
+
+/obj/structure/flora/roguegrass/bush/wall/tall/red/Initialize()
+	. = ..()
+	icon_state = "tallbush[pick(1,2)]red"
 
 
 /obj/structure/flora/rogueshroom
@@ -534,7 +540,7 @@
 
 /obj/structure/flora/roguegrass/pyroclasticflowers/update_icon()
 	icon_state = "pyroflower[rand(1,3)]"
-	
+
 /obj/structure/flora/roguegrass/pyroclasticflowers/Initialize()
 	. = ..()
 	if(prob(88))

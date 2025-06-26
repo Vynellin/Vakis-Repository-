@@ -39,7 +39,26 @@
 					/obj/item/reagent_containers/glass/bottle/rogue/wine,
 				)
 
+/datum/supply_pack/rogue/food/rationpaper
+	name = "Ration Papers"
+	cost = 30
+	contains = list(
+					/obj/item/ration,
+					/obj/item/ration,
+				)
+
 /datum/supply_pack/rogue/food/meat
+	name = "Hardtack"
+	cost = 15
+	contains = list(
+					/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+					/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+					/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+					/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+					/obj/item/reagent_containers/food/snacks/rogue/crackerscooked,
+				)
+
+/datum/supply_pack/rogue/food/hardtacks
 	name = "Dry Meat"
 	cost = 15
 	contains = list(

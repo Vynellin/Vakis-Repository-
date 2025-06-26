@@ -15,14 +15,16 @@
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	spell_tier = 3
-	invocation = "Magicae Sagitta!"
-	invocation_type = "shout"
+	invocation_type = "emote"
+	invocation = span_warning("%user% casts Arcane Bolt!")
+	invocation_emote_self = span_warning("I cast Arcane Bolt!")
 	glow_color = GLOW_COLOR_ARCANE
 	glow_intensity = GLOW_INTENSITY_LOW
 	charging_slowdown = 3
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
 	cost = 2
+	xp_gain = TRUE
 
 /obj/projectile/energy/rogue3
 	name = "Arcane Bolt"

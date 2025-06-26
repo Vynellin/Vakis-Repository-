@@ -6,45 +6,68 @@
 		return
 	if(stat != DEAD)
 		var/mob/living/carbon/human/humie = src
-		var/datum/species/species =	humie.dna.species
+		var/datum/species/species = humie.dna.species
 		var/list/offset_list
 		if(humie.gender == FEMALE)
 			offset_list = species.offset_features[OFFSET_HEAD_F]
 		else
 			offset_list = species.offset_features[OFFSET_HEAD]
-		if(!private)
-			var/mutable_appearance/appearance = mutable_appearance(icon_path, overlay_name, overlay_layer)
-			if(offset_list)
-				appearance.pixel_x += (offset_list[1])
-				appearance.pixel_y += (offset_list[2]+y_offset)
-			appearance.appearance_flags = RESET_COLOR
-			overlays_standing[OBJ_LAYER] = appearance
-			apply_overlay(OBJ_LAYER)
-			addtimer(CALLBACK(humie, PROC_REF(clear_overhead_indicator), appearance), clear_time)
-			playsound(src, soundin, 100, FALSE, extrarange = -1, ignore_walls = FALSE)
-		if(!ispath(private, /datum/patron))	//Trait-exclusivity. At the moment it's only TRAIT_EMPATH for stress indicators.
+
+		// ==== 1. PATRON SIGNS (fsalute etc): RUNS EXCLUSIVELY ====
+		if(ispath(private, /datum/patron))
+			var	icon_plane = WEATHER_EFFECT_PLANE
+			// Priest override --
+			if (HAS_TRAIT(src, TRAIT_CHOSEN))
+				// show the priest icon to everyone
+				for (var/mob/living/carbon/human/H in viewers(world.view, src))
+					vis_contents += new /obj/effect/temp_visual/stress_event/invisible(
+						null, H, icon_path, "sign_Priest",
+						offset_list, y_offset, icon_plane
+					)
+					if (soundin)
+						H.playsound_local(get_turf(src), soundin, 100, FALSE)
+				// buffs + mood (priest only)
+				for(var/mob/living/carbon/human/T in view(5, src.loc))
+					if (T != src)
+						T.apply_status_effect(/datum/status_effect/buff/faithful)
+						T.apply_status_effect(/datum/status_effect/buff/ffortune)
+						// SEND_SIGNAL(target, COMSIG_ADD_MOOD_EVENT, "fsalute", /datum/stressevent/inner_peace)
+			else
+				// God sign for non-priests
+				for (var/mob/living/carbon/human/H in viewers(world.view, src))
+					if (H.patron?.type == private)
+						vis_contents += new /obj/effect/temp_visual/stress_event/invisible(
+							null, H, icon_path, "sign_[H.patron.name]",
+							offset_list, y_offset, icon_plane
+						)
+						if (soundin)
+							H.playsound_local(get_turf(src), soundin, 100, FALSE)
+			return // EARLY RETURN: do not run stress/relief/trait logic below
+
+		// ==== 2. STRESS/RELIEF OVERHEADS (not patron signs): ====
+		// Always show to self
+		var/mutable_appearance/appearance = mutable_appearance(icon_path, overlay_name, overlay_layer)
+		if(offset_list)
+			appearance.pixel_x += (offset_list[1])
+			appearance.pixel_y += (offset_list[2]+y_offset)
+		appearance.appearance_flags = RESET_COLOR
+		overlays_standing[OBJ_LAYER] = appearance
+		apply_overlay(OBJ_LAYER)
+		addtimer(CALLBACK(humie, PROC_REF(clear_overhead_indicator), appearance), clear_time)
+		playsound(src, soundin, 100, FALSE, extrarange = -1, ignore_walls = FALSE)
+
+		// Show to empaths (and self, but that's fine)
+		if(private) // only if a trait is passed (like TRAIT_EMPATH)
 			var/list/can_see = list(src)
 			for(var/mob/M in viewers(world.view, src))
 				if(HAS_TRAIT(M, private))
 					if(M != src)
 						can_see += M
-
 			for(var/mob/M in can_see)
 				vis_contents += new /obj/effect/temp_visual/stress_event/invisible(null, M, icon_path, overlay_name, offset_list)
 				if(soundin)
 					var/turf/T = get_turf(src)
 					M.playsound_local(T, soundin, 100, FALSE)
-		if(ispath(private, /datum/patron))	//Patron signs.
-			//var/icon_plane = WEATHER_EFFECT_PLANE	//Will show up through the cone.
-			if(!ispath(private, /datum/patron/godless))
-				for(var/mob/living/carbon/human/H in viewers(world.view, src))
-					var/pass = FALSE
-					if(H.patron?.type == private)
-						//vis_contents += new /obj/effect/temp_visual/stress_event/invisible(null, H, icon_path, "sign_[H.patron.name]", offset_list, y_offset, icon_plane) // NEED ICONS / ANIMATION FOR GODS
-						pass = TRUE
-					if(soundin && pass)
-						var/turf/T = get_turf(src)
-						H.playsound_local(T, soundin, 100, FALSE)
 
 /obj/effect/temp_visual/stress_event
 	icon = 'icons/mob/overhead_effects.dmi'
@@ -81,3 +104,6 @@
 /mob/living/proc/play_mental_break_indicator()
 	play_overhead_indicator('icons/mob/overhead_effects.dmi', "mentalbreak", 20, OBJ_LAYER)
 	playsound(src, 'sound/stressaffliction.ogg', 100, FALSE, ignore_walls = FALSE)
+
+/mob/living/proc/clear_vis_indicator(image/I)
+	vis_contents -= I
