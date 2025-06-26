@@ -104,7 +104,38 @@
 
 /obj/structure/ritualcircle/carthus
 	name = "Rune of the Warrior"
+	icon_state = "carthus_chalky"
 	desc = "A Holy Rune of Carthus"
+	var/warrites = list("MikiNameThis")
+
+/obj/structure/ritualcircle/carthus/attack_hand(mob/living/user)
+	if((user.patron?.type) != /datum/patron/lording_three/carthus)
+		to_chat(user,span_smallred("I don't know the proper rites for this..."))
+		return
+	if(!HAS_TRAIT(user, TRAIT_RITUALIST))
+		to_chat(user,span_smallred("I don't know the proper rites for this...")) // You need ritualist to use them
+		return
+	if(user.has_status_effect(/datum/status_effect/debuff/ritesexpended))
+		to_chat(user,span_smallred("I have performed enough rituals for the day... I must rest before communing more.")) // If you have already done a ritual in the last 30 minutes, you cannot do another.
+		return
+	var/riteselection = input(user, "Rituals of War", src) as null|anything in warrites
+	switch(riteselection)
+		if("MikiNameThis")
+			if(do_after(user, 50)
+				user.say("If you are hearing this")
+				if(do_after(user, 50))
+				user.say("Then you are doing things rite so far")
+					if(do_after(user,50))
+					user.say("Did you get the Pun?")
+					to_chat(user,span_danger("You feel like the Rune looks really cool"))
+					icon_state = "carthus_active"
+					spawn(240)
+						icon_state = "carthus_chalky"
+
+
+
+
+
 
 /obj/structure/ritualcircle/tamari
 	name = "Rune of Beasts"
