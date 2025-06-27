@@ -750,6 +750,7 @@
 #include "code\game\area\areas\underworld\dungeon\dragon_den.dm"
 #include "code\game\area\areas\underworld\dungeon\forgotten_church.dm"
 #include "code\game\area\areas\underworld\dungeon\forsaken_bastille.dm"
+#include "code\game\area\areas\underworld\dungeon\gargoyles_rest.dm"
 #include "code\game\area\areas\underworld\dungeon\goblin_fort.dm"
 #include "code\game\area\areas\underworld\dungeon\lich_arena.dm"
 #include "code\game\area\areas\underworld\dungeon\old_ruins.dm"
