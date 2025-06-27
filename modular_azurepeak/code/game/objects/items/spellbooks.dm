@@ -323,3 +323,61 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 // helper proc
 /proc/isarcane(mob/living/carbon/human/A)
 	return istype(A) && A.mind && (A.mind?.get_skill_level(/datum/skill/magic/arcane) > SKILL_LEVEL_NONE)
+
+//Warlock's
+
+/obj/item/book/spellbook/warlock
+	icon = 'icons/roguetown/items/books.dmi'
+	force = 20
+	throwforce = 10
+	associated_skill = /datum/skill/misc/reading
+	name = "whispering tome"
+	desc = "A dark tome bound in some unknown hide. Its pages whisper softly when opened."
+	breakouttime = 2 MINUTES
+	var/active_item
+	var/spell1
+	var/spell2
+	var/spell3
+	var/corresponding_patron
+
+/obj/item/book/spellbook/warlock/verdant_court
+	icon_state = "wydbark"
+	name = "wyrdbark codex"
+	desc = "Bound in living wood and leaf-vein vellum, this tome hums softly. Its ink smells faintly of moss, and the runes twist like vines when read aloud."
+	corresponding_patron = "The Verdant Court"
+
+/obj/item/book/spellbook/warlock/radiant_ember
+	icon_state = "sunfire"
+	name = "sunfire lexicon"
+	desc = "A tome gilded with divine warmth, its pages almost too bright to read. Words blaze with radiant clarity, offering guidance and judgment in equal measure."
+
+/obj/item/book/spellbook/warlock/drowned_choir
+	icon_state = "abyssal_psalter"
+	name = "abyssal psalter"
+	desc = "Waterlogged and salt-stained, this book sings in whispers only its bearer can truly understand. Each page feels wet to the touch, yet never smears."
+
+/obj/item/book/spellbook/warlock/ashen_pact
+	icon_state = "cindergrasp"
+	name = "cindergrasp testament"
+	desc = "This scorched tome crackles with heatless flame. The margins are seared with forgotten contracts, and the ink burns red when read."
+
+/obj/item/book/spellbook/warlock/bound_whisper
+	icon_state = "vessel_concord"
+	name = "vessel's concord"
+	desc = "Cork-sealed and whisper-bound, this book flickers with promises. Pages turn themselves, eager to bargain, to bargain, to bargain..."	
+
+/obj/item/book/spellbook/warlock/hollow_voice
+	icon_state = "silence_that"
+	name = "silence that listens"
+	desc = "A hollow book that never fully opens, filled with inkless script that imprints directly onto the mind. Reading it always leaves you with the sensation of being watched."
+
+/obj/item/book/spellbook/warlock/wakened_blade
+	icon_state = "edgebound"
+	name = "edgebound chronicle"
+	desc =  "Bound in leather stretched over a blade's tang, this tome shimmers faintly. Diagrams shift between warforms and invocations depending on who reads it"
+
+/obj/item/book/spellbook/warlock/pale_crown
+	icon_state = "sovreign_remnant"
+	name = "sovreign's remnant"
+	desc =  "This regal tome's pages are made of ancient looking vellum, adorned with silver thread binding and glyphs. Its pages whisper of ancient thrones and the price of eternity."
+

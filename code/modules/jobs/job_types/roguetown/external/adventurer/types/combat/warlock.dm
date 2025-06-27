@@ -444,23 +444,15 @@
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/givebook(patronchoice)
 	var/obj/item/item
-	var/item_type = /obj/item/book/rogue/eldritch
+	var/item_type = /obj/item/book/spellbook/warlock
 	item = new item_type
 	item.name = "grimoire of the "+patronchoice
 	return item
 
-/obj/item/book/rogue/eldritch
-	desc = "An earie book containing hidden knowledge."
-	icon_state = "ledger_0"
-	force = 20
-	throwforce = 10
-	breakouttime = 2 MINUTES
-	var/active_item
-	var/spell1
-	var/spell2
-	var/spell3
+/obj/item/book/spellbook/warlock/get_cdr()
+	return 0.3 //The old forgotten tome you got as your side of the contract is slightly better than a gem book.
 
-/obj/item/book/rogue/eldritch/Initialize()
+/obj/item/book/spellbook/warlock/Initialize()
 	. = ..()
 
 	var/list/tier_1_spells = list()
@@ -486,7 +478,7 @@
 	if (length(tier_3_spells))
 		spell3 = pick(tier_3_spells)
 
-/obj/item/book/rogue/eldritch/equipped(mob/living/user)
+/obj/item/book/spellbook/warlock/equipped(mob/living/user)
 	. = ..()
 	if(active_item)
 		return
@@ -497,10 +489,9 @@
 		user.mind.AddSpell(new spell1)
 		user.mind.AddSpell(new spell2)
 		user.mind.AddSpell(new spell3)
-		user.mind.AddSpell(new /obj/effect/proc_holder/spell/self/message)
 		return
 
-/obj/item/book/rogue/eldritch/dropped(mob/living/user)
+/obj/item/book/spellbook/warlock/dropped(mob/living/user)
 	. = ..()
 	if(active_item)
 		to_chat(user, span_notice("Your intellect shrinks away"))
@@ -508,7 +499,6 @@
 		user.mind.RemoveSpell(spell1)
 		user.mind.RemoveSpell(spell2)
 		user.mind.RemoveSpell(spell3)
-		user.mind.RemoveSpell(/obj/effect/proc_holder/spell/self/message)
 		active_item = FALSE
 		return
 
