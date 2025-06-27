@@ -15,11 +15,11 @@
 	)
 	/// Areas where the pod cannot be deployed.
 	/// This list gets automatically converted into a typecache when this datum is initialized.
-	var/list/banned_areas = list(/area/rogue/indoors)
+	var/list/banned_areas = list(/area/provincial/indoors)
 	/// Areas where the pod CAN be deployed, so if this is populated, it will require the area to NOT
 	/// be in `banned_areas` AND to be in `whitelisted_areas` in order for the pod to grow.
 	/// This list gets automatically converted into a typecache when this datum is initialized.
-	var/list/whitelisted_areas = list(/area/rogue/outdoors/woods, /area/rogue/outdoors/bog)
+	var/list/whitelisted_areas = list(/area/provincial/outdoors/forest, /area/provincial/outdoors/bog)
 	/// If any object in this list is found in the affected turfs, the shelter cannot deploy.
 	/// This list gets automatically converted into a typecache when this datum is initialized.
 	var/list/banned_objects = list(

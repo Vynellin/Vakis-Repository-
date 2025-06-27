@@ -1,10 +1,3 @@
-/area/misc/shelter
-	name = "\improper Shelter"
-	icon_state = "shelter"
-	requires_power = FALSE
-	has_gravity = STANDARD_GRAVITY
-	flags_1 = CAN_BE_DIRTY_1
-
 // Shelter pods
 /obj/item/shelter_pod
 	name = "shelter acorn"
