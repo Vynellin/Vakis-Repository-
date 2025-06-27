@@ -746,3 +746,33 @@
 	name = "Faith Fortune"
 	icon_state = "buff"
 	desc = "The Nine see you. The priest’s faith wraps your path in fortune."
+
+/
+
+/datum/status_effect/buff/carthusinstinct
+	id = "Heightened Instincts"
+	alert_type = /atom/movable/screen/alert/status_effect/carthusinstinct
+	duration = 20 MINUTES
+
+/atom/movable/screen/alert/status_effect/carthusinstinct
+	name = "Heightened Instincts"
+	icon_state = "buff"
+	desc = "Divine grace quickens my reflexes"
+
+/datum/status_effect/buff/carthusgrace
+	id = "Heightened Grace"
+	alert_type = null
+	duration = 20 MINUTES
+
+/datum/status_effect/buff/chargedriposte
+	id = "chargedriposte"
+	alert_type = /atom/movable/screen/alert/status_effect/chargedriposte
+	duration = 7 SECONDS
+
+/atom/movable/screen/alert/status_effect/chargedriposte
+	name = "Enhanced Riposte"
+	icon_state = "buff"
+	desc = "Make it count"
+
+
+
