@@ -23,11 +23,10 @@
 	badtrait = null //is there a bad trait we want to associate? the code name
 	badtraitname = null //is there a bad trait we want to associate? the player name
 	badtraitdesc = null //is there a bad trait we want to associate? the player description
-	/* reenable when on newer code
 	recharge_time = 20 SECONDS
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
-	vitaedrain = 100*/
+	vitaedrain = 100
 
 /obj/projectile/magic/vampire_blood_lightning
 	name = "blood bolt"
@@ -56,4 +55,5 @@
 		if(isliving(target))
 			var/mob/living/L = target
 			L.electrocute_act(3, src)
+		
 	qdel(src)

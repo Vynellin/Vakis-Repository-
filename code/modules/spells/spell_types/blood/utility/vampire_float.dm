@@ -1,28 +1,70 @@
-/obj/effect/proc_holder/spell/self/vampire_float
+/obj/effect/proc_holder/spell/invoked/vampire_float
 	name = "Float"
 	desc = "Float off the air without a sound"
 	cost = 3 // a mobility form, setting high
 	xp_gain = TRUE
-	releasedrain = 60
+	releasedrain = 1
 	chargedrain = 1
-	chargetime = 1 SECONDS
+	chargetime = 2
 	warnie = "spellwarning"
 	school = "blood"
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	spell_tier = 2 // What vampire level are we?
-	invocation = ""
+	invocation = "Sanguine"
 	invocation_type = "whisper"
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/blood
-	/* reenable when on newer code
-	recharge_time = 20 SECONDS
+	recharge_time = 2 MINUTES
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
-	vitaedrain = 100*/
+	charging_slowdown = 3
+	vitaedrain = 100
+	xp_gain = TRUE
+	goodtrait = null //is there a good trait we want to associate? the code name
+	badtrait = null //is there a bad trait we want to associate? the code name
+	badtraitname = null //is there a bad trait we want to associate? the player name
+	badtraitdesc = null //is there a bad trait we want to associate? the player description
+
+/obj/effect/proc_holder/spell/invoked/vampire_float/cast(list/targets, mob/living/user)
+	if(isliving(targets[1]))
+		var/mob/living/carbon/human/BSDrinker = targets[1]
+		if(!user)
+			return
+		if(!HAS_TRAIT(BSDrinker,TRAIT_VAMPIRISM))
+			to_chat(BSDrinker, span_warning("I'm not a vampire, what am I doing?"))
+			return
+		if(BSDrinker.has_status_effect(/datum/status_effect/debuff/veil_up))
+			to_chat(BSDrinker, span_warning("My curse is hidden."))
+			return
+		if(BSDrinker.vitae < vitaedrain)
+			to_chat(BSDrinker, span_warning("Not enough vitae."))
+			return
+		if(BSDrinker.has_status_effect(/datum/status_effect/buff/vampire_float))
+			to_chat(BSDrinker, span_warning("Already active."))
+			return
+		BSDrinker.vitae -= vitaedrain
+		BSDrinker.apply_status_effect(/datum/status_effect/buff/vampire_float)
+		to_chat(BSDrinker, span_greentext("! SPEED OF DARKNESS !"))
+		BSDrinker.playsound_local(get_turf(BSDrinker), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
+
+#define VAMPIRIC_FILTER "vampiric_glow"
 
 
+/datum/status_effect/buff/vampire_float/on_apply()
+	. = ..()
+	var/filter = owner.get_filter(VAMPIRIC_FILTER)
+	if (!filter)
+		owner.add_filter(VAMPIRIC_FILTER, 2, list("type" = "outline", "color" = "#8B0000", "alpha" = 100, "size" = 1))
+
+/datum/status_effect/buff/vampire_float/on_remove()
+	. = ..()
+	to_chat(owner, span_warning("My fortitude leaves me"))
+	owner.remove_filter(VAMPIRIC_FILTER)
+
+#undef VAMPIRIC_FILTER
+/*
 /obj/effect/proc_holder/spell/self/vampire_float/cast(list/targets, mob/living/user = usr)
 	var/mob/living/carbon/human/H = usr
 	//var/temp_vitae = H.vitae //use this to store vitae if we need a dynamic cost
@@ -50,3 +92,4 @@
 	H.apply_status_effect(/datum/status_effect/buff/vampire_float)
 	to_chat(H, span_greentext("! FLOAT UPON AIR !"))
 	H.playsound_local(get_turf(H), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
+*/

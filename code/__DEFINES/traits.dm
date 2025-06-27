@@ -161,6 +161,8 @@
 #define TRAIT_PERMADUST "Dust on Death"
 #define TRAIT_VAMP_HEAL_LIMIT "Healing Ability Limit"
 #define TRAIT_VAMP_ANCIENT "Ancient Vampire"
+#define TRAIT_KOINONIPHOBIA "Koinoniphobia"
+#define TRAIT_MEGALOPHOBIA "Megalophobia"
 
 
 GLOBAL_LIST_INIT(roguetraits, list(
@@ -305,6 +307,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_PERMADUST = span_notice("I will turn to dust upon death, I must be careful"),
 	TRAIT_VAMP_HEAL_LIMIT = span_notice("I've learned an ability to help me recover my body and can't learn more"),
 	TRAIT_VAMP_ANCIENT = span_notice("I am older than most Vampires"),
+	TRAIT_KOINONIPHOBIA = span_notice("I must stay outdoors"),
+	TRAIT_MEGALOPHOBIA = span_notice("I hate big buildings, I should stay out of town"),
 ))
 
 // trait accessor defines

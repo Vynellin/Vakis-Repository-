@@ -1,5 +1,5 @@
 // This mode will become the main basis for the typical roguetown round. Based off of chaos mode.
-var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "Extended", "Aspirants", "Bandits", "Maniac", "Lich", "CANCEL") // This is mainly used for forcemgamemodes
+var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "Extended", "Aspirants", "Bandits", "Maniac", "Lich", "Bloodsucker", "CANCEL") // This is mainly used for forcemgamemodes
 
 /datum/game_mode/chaosmode
 	name = "roguemode"
@@ -139,6 +139,9 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 				if("Maniac")
 					pick_maniac()
 					log_game("Minor Antagonist: Maniac)")
+				if("Bloodsucker")
+					pick_bloodsucker()
+					log_game("Minor Antagonist: Bloodsucker)")
 				if("Extended")
 					log_game("Major Antagonist: Extended")
 		return TRUE
@@ -407,9 +410,9 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 
 //doing our custom selection for bloodsuckers
 /datum/game_mode/chaosmode/proc/pick_bloodsucker()
-	var/suckersremaining = 3
 	//restricted jobs, we should change this to the types
 	restricted_jobs = list(
+	/datum/job/roguetown/lord::title,
 	"Grand Duke",
 	"Consort",
 	"Dungeoneer",
@@ -428,6 +431,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 	"Knight",
 	"Martyr",
 	)
+	var/suckersremaining = rand(1,3)
 	antag_candidates = get_players_for_role(ROLE_BLOODSUCKER)
 	antag_candidates = shuffle(antag_candidates)
 	for(var/datum/mind/bloodsucker in antag_candidates)

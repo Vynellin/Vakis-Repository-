@@ -12,15 +12,22 @@
 
 	//what level vampire are we
 	var/user_vamp_tier = user.mind.get_skill_level(/datum/skill/magic/vampirism)
-	
+	var/mob/living/carbon/human/BSdrinker = user
+	 
 	//Hard coding the list
 	var/list/choices = list()
 	var/list/vamp_choices = list()
 
-	//we define the perks under vamp_perk_list.dm
-	vamp_choices  += GLOB.learnable_vamp_perks
-	//we define the perks under vamp_spell_list.dm
-	vamp_choices  += GLOB.learnable_vamp_spells
+	if(BSdrinker.bs_spawn == 1)
+		//lesser perk list since they are fledglings
+		vamp_choices  += GLOB.learnable_fledgling_perks
+		//lesser spell list since they are fledglings
+		vamp_choices  += GLOB.learnable_fledgling_spells
+	else
+		//we define the perks under vamp_perk_list.dm
+		vamp_choices  += GLOB.learnable_vamp_perks
+		//we define the perks under vamp_spell_list.dm
+		vamp_choices  += GLOB.learnable_vamp_spells
 
 
 	//this limits the list to options that match our vampirism skill and should remove traits we already have
@@ -29,6 +36,7 @@
 		if((!(isnull(vamp_item.goodtrait))&&(HAS_TRAIT(user,vamp_item.goodtrait)))||(vamp_item.spell_tier > user_vamp_tier))
 			continue
 		choices["[vamp_item.name]: [vamp_item.cost]"] = vamp_item
+		
 
 	//Shows the user how many skill points they have left
 	var/choice = input("Choose a spell or perk, points left: [user.mind.vamp_points - user.mind.used_vamp_points]") as null|anything in choices
@@ -80,6 +88,11 @@
 		if (HAS_TRAIT(user,TRAIT_LOW_METABOLISM) && item.badtrait == TRAIT_HIGH_METABOLISM)
 			to_chat(user,span_warning("You have a low metabolism and can't take this on"))
 			return	//a low metabolism can't be raised to a high metabolism
+
+		//thrall spell limiter
+		if ((BSdrinker.bs_thrall > 0)&&(item.name in list ("Recruit Thrall",)))
+			to_chat(BSdrinker,span_warning("You've already recruited one or more thralls already"))
+			return	//you can't buy the spell a second time
 
 		//Heal limiters, we only allow one trait or spell to heal
 		if (HAS_TRAIT(user,TRAIT_VAMP_HEAL_LIMIT) && (item.name in list("Passive Regeneration", 

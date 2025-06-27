@@ -22,7 +22,7 @@
 	give_bank_account = TRUE
 
 	//No nobility for you, being a member of the clergy means you gave UP your nobility. It says this in many of the church tutorial texts.
-	virtue_restrictions = list(/datum/virtue/utility/noble)
+	virtue_restrictions = list(/datum/virtue/utility/noble, /datum/virtue/sucker/lesser_bloodsucker)
 
 /datum/outfit/job/roguetown/templar
 	has_loadout = TRUE

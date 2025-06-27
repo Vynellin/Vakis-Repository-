@@ -349,16 +349,6 @@
 	dir = pick(GLOB.cardinals)
 	.  = ..()
 
-/turf/open/water/cleanshallow/Entered(atom/movable/AM, atom/oldLoc)
-	. = ..()
-	if(isliving(AM))
-		var/mob/living/user = AM
-		//if they have hydrophobia, they burn
-		if(HAS_TRAIT(user,TRAIT_HYDROPHOBIA))
-			to_chat(user, span_warning("The water! it burns! it is too clean!"))
-			user.fire_act(5)
-			return .
-
 /turf/open/water/river
 	name = "river"
 	desc = "Crystal clear water! Flowing swiflty along the river."
@@ -388,15 +378,8 @@
 /turf/open/water/river/Entered(atom/movable/AM, atom/oldLoc)
 	. = ..()
 	if(isliving(AM))
-		var/mob/living/user = AM
 		if(!river_processing)
 			river_processing = addtimer(CALLBACK(src, PROC_REF(process_river)), 5, TIMER_STOPPABLE)
-		if(ishuman(user))
-			//if they have hydrophobia, they burn
-			if(HAS_TRAIT(user,TRAIT_HYDROPHOBIA))
-				to_chat(user, span_warning("The water! it burns! it is too clean!"))
-				user.fire_act(5)
-				return .
 
 /turf/open/water/river/proc/process_river()
 	river_processing = null
@@ -430,16 +413,6 @@
 	swim_skill = TRUE
 	wash_in = TRUE
 
-/turf/open/water/ocean/Entered(atom/movable/AM, atom/oldLoc)
-	. = ..()
-	if(isliving(AM))
-		var/mob/living/user = AM
-		//if they have hydrophobia, they burn
-		if(HAS_TRAIT(user,TRAIT_HYDROPHOBIA) || HAS_TRAIT(user,TRAIT_HALOPHOBIA))
-			to_chat(user, span_warning("The water! it burns! it is too clean and salty!"))
-			user.fire_act(5)
-			return .
-
 /turf/open/water/pond
 	name = "pond"
 	desc = "Still and idyllic water that flows through meadows."
@@ -452,12 +425,3 @@
 	wash_in = TRUE
 	water_reagent = /datum/reagent/water
 
-/turf/open/water/ocean/Entered(atom/movable/AM, atom/oldLoc)
-	. = ..()
-	if(isliving(AM))
-		var/mob/living/user = AM
-		//if they have hydrophobia, they burn
-		if(HAS_TRAIT(user,TRAIT_HYDROPHOBIA) || HAS_TRAIT(user,TRAIT_HALOPHOBIA))
-			to_chat(user, span_warning("The water! it burns! it is too clean and salty!"))
-			user.fire_act(5)
-			return .

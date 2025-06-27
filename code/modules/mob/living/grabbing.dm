@@ -543,6 +543,7 @@
 	if(user.mind && C.mind)
 		var/datum/antagonist/vampirelord/VDrinker = user.mind.has_antag_datum(/datum/antagonist/vampirelord)
 		var/datum/antagonist/vampirelord/VVictim = C.mind.has_antag_datum(/datum/antagonist/vampirelord)
+		
 		var/zomwerewolf = C.mind.has_antag_datum(/datum/antagonist/werewolf)
 		if(!zomwerewolf)
 			if(C.stat != DEAD)
@@ -576,8 +577,12 @@
 				to_chat(user, "<span class='notice'>A strange, sweet taste tickles my throat.</span>")
 				addtimer(CALLBACK(user, .mob/living/carbon/human/proc/vampire_infect), 1 MINUTES) // I'll use this for succession later.
 			else */
-			to_chat(user, "<span class='warning'>I'm going to puke...</span>")
-			addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
+			
+			if(HAS_TRAIT(user,TRAIT_VAMPIRISM))
+
+			else
+				to_chat(user, "<span class='warning'>I'm going to puke...</span>")
+				addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living/carbon, vomit), 0, TRUE), rand(8 SECONDS, 15 SECONDS))
 	else
 		if(user.mind)
 			if(user.mind.has_antag_datum(/datum/antagonist/vampirelord))
@@ -599,42 +604,42 @@
 				if(HAS_TRAIT(BSVictim,TRAIT_VAMPIRISM))
 					//you can transfer vitae, but not grow in power
 					to_chat(BSDrinker, span_warning("It's vitae, just like mine."))
-					BSVictim.vitae -= 500
-					BSDrinker.vitae += 500
-				if ((BSVictim.vitae_pool > 500) && (!HAS_TRAIT(BSVictim,TRAIT_VAMPIRISM)))
+					BSVictim.vitae -= 200
+					BSDrinker.vitae += 200
+				if ((BSVictim.vitae_pool > 200) && (!HAS_TRAIT(BSVictim,TRAIT_VAMPIRISM)))
 					BSVictim.blood_volume = max(BSVictim.blood_volume-45, 0)
-					BSVictim.vitae_pool -= 500
+					BSVictim.vitae_pool -= 200
 					if(ishuman(BSVictim))
 						if(BSVictim.virginity && (HAS_TRAIT(BSDrinker,TRAIT_EFFICIENT_DRINKER)))
 							to_chat(BSDrinker, "<span class='love'>Virgin blood, delicious!</span>")
 							to_chat(BSDrinker, span_warning("I feel my power grow greatly"))
-							BSDrinker.vitae += 1250
-							BSDrinker.bs_vitae_total += 1250
+							BSDrinker.vitae += 600
+							BSDrinker.bs_vitae_total += 600
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 12)
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 7)
 						else if(HAS_TRAIT(BSDrinker,TRAIT_EFFICIENT_DRINKER)) //Extra for an efficient drinker
 							to_chat(BSDrinker, span_warning("I feel my power grow greatly"))
-							BSDrinker.vitae += 1000
-							BSDrinker.bs_vitae_total += 1000
+							BSDrinker.vitae += 400
+							BSDrinker.bs_vitae_total += 400
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 10)
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 5)
 						else if(BSVictim.virginity)
 							to_chat(BSDrinker, "<span class='love'>Virgin blood, delicious!</span>")
 							to_chat(BSDrinker, span_warning("I feel my power grow greatly"))
-							BSDrinker.vitae += 750
-							BSDrinker.bs_vitae_total += 750
+							BSDrinker.vitae += 350
+							BSDrinker.bs_vitae_total += 350
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 7)
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 3)
 						else
 							to_chat(BSDrinker, span_warning("I feel my power grow"))
-							BSDrinker.vitae += 500
-							BSDrinker.bs_vitae_total += 500
+							BSDrinker.vitae += 200
+							BSDrinker.bs_vitae_total += 200
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 5)
 							BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 2)
 					else
 						to_chat(BSDrinker, span_warning("I feel my power grow"))
-						BSDrinker.vitae += 500
-						BSDrinker.bs_vitae_total += 500
+						BSDrinker.vitae += 200
+						BSDrinker.bs_vitae_total += 200
 						BSDrinker.mind.add_sleep_experience(/datum/skill/magic/vampirism, 5)
 						BSDrinker.mind.add_sleep_experience(/datum/skill/magic/blood, 2)
 
@@ -642,7 +647,7 @@
 					//you gain vitae but not to level up
 					to_chat(BSDrinker, span_warning("I no longer gain power from this blood..."))
 					BSVictim.blood_volume = max(C.blood_volume-45, 0)
-					BSDrinker.vitae += 500
+					BSDrinker.vitae += 200
 
 	C.blood_volume = max(C.blood_volume-15, 0)
 	C.handle_blood()

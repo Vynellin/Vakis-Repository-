@@ -2069,6 +2069,7 @@
 #include "modular_azurepeak\virtues\items.dm"
 #include "modular_azurepeak\virtues\movement.dm"
 #include "modular_azurepeak\virtues\size.dm"
+#include "modular_azurepeak\virtues\sucker.dm"
 #include "modular_azurepeak\virtues\thief.dm"
 #include "modular_azurepeak\virtues\utility.dm"
 #include "modular_hearthstone\code\datums\skills\misc.dm"

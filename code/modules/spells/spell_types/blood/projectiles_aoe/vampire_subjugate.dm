@@ -1,4 +1,4 @@
-/obj/effect/proc_holder/spell/targeted/vampire_subjugate
+/obj/effect/proc_holder/spell/invoked/vampire_subjugate
 	name = "Subjugate"
 	cost = 2 //how many points it takes
 	overlay_state = "transfixmaster"
@@ -7,26 +7,29 @@
 	chargetime = 0
 	range = 7
 	warnie = "sydwarning"
+	school = "blood"
 	movement_interrupt = FALSE
 	chargedloop = null
 	invocation_type = "shout"
-	associated_skill = /datum/skill/magic/blood
+	charging_slowdown = 2
 	antimagic_allowed = TRUE
-	//charge_max = 10 SECONDS
-	include_user = 0
-	max_targets = 0
+	//include_user = 0
+	//max_targets = 0
 	spell_tier = 5 // What vampire level are we?
-	/* reenable when on newer code
+	chargedloop = /datum/looping_sound/invokegen
+	associated_skill = /datum/skill/magic/blood
 	recharge_time = 2 MINUTES
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
-	vitaedrain = 100*/
+	charging_slowdown = 3
+	vitaedrain = 0
+	xp_gain = TRUE
 	goodtrait = null //is there a good trait we want to associate? the code name
 	badtrait = null //is there a bad trait we want to associate? the code name
 	badtraitname = null //is there a bad trait we want to associate? the player name
 	badtraitdesc = null //is there a bad trait we want to associate? the player description
 
-/obj/effect/proc_holder/spell/targeted/vampire_subjugate/cast(list/targets, mob/user = usr)
+/obj/effect/proc_holder/spell/invoked/vampire_subjugate/cast(list/targets, mob/user = usr)
 	var/msg = input("Soothe them. Dominate them. Speak and they will succumb.", "Transfix") as text|null
 	if(length(msg) < 10)
 		to_chat(user, span_userdanger("This is not enough!"))
@@ -34,9 +37,8 @@
 	user.say(msg)
 	user.visible_message("<font color='red'>[user]'s eyes glow a ghastly red as they project their will outwards!</font>")
 	for(var/mob/living/carbon/human/L in targets)
-		var/mob/living/carbon/human/H
 		//var/datum/antagonist/bloodsucker/BS = L.mind.has_antag_datum(/datum/antagonist/bloodsucker)
-		if(HAS_TRAIT(H,TRAIT_VAMPIRISM))
+		if(HAS_TRAIT(L,TRAIT_VAMPIRISM))
 			return
 		L.drowsyness = min(L.drowsyness + 50, 150)
 		switch(L.drowsyness)

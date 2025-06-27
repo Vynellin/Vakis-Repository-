@@ -15,7 +15,7 @@
 	no_early_release = TRUE
 	movement_interrupt = FALSE
 	spell_tier = 2 // What vampire level are we?
-	invocation = ""
+	invocation = "Saguine Chiroptera"
 	invocation_type = "whisper"
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/invokegen
@@ -24,13 +24,36 @@
 	badtrait = TRAIT_VAMP_HEAL_LIMIT //is there a bad trait we want to associate? the code name
 	badtraitname = "Healing Abilities Limit" //is there a bad trait we want to associate? the player name
 	badtraitdesc = "You can only have one ability that gives a heal. Affects regeneration, passive regeneration, batform, and mistform" //is there a bad trait we want to associate? the player description
-	/* reenable when on newer code
-	recharge_time = 2 MINUTES
+	recharge_time = 10 MINUTES
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
-	vitaedrain = 100*/
+	vitaedrain = 100
+/*
+/obj/effect/proc_holder/spell/invoked/vampire_bat/cast(list/targets, mob/living/user = usr)
+	if(isliving(targets[1]))
+		var/mob/living/carbon/human/BSDrinker = targets[1]
+		if(!user)
+			return
+		if(!HAS_TRAIT(BSDrinker,TRAIT_VAMPIRISM))
+			to_chat(BSDrinker, span_warning("I'm not a vampire, what am I doing?"))
+			return
+		if(BSDrinker.has_status_effect(/datum/status_effect/debuff/veil_up))
+			to_chat(BSDrinker, span_warning("My curse is hidden."))
+			return
+		if(BSDrinker.vitae < vitaedrain)
+			to_chat(BSDrinker, span_warning("Not enough vitae."))
+			return
+		if(BSDrinker.has_status_effect(/datum/status_effect/buff/vampire_bat))
+			to_chat(BSDrinker, span_warning("Already active."))
+			return
+		BSDrinker.vitae -= vitaedrain
+		BSDrinker.apply_status_effect(/datum/status_effect/buff/vampire_bat)
+		to_chat(BSDrinker, span_greentext("! FORM OF BAT !"))
+		BSDrinker.playsound_local(get_turf(BSDrinker), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
+*/
+	
 
-/obj/effect/proc_holder/spell/self/vampire_bat/cast(list/targets, mob/living/user = usr)
+/obj/effect/proc_holder/spell/targeted/shapeshift/vampire_bat/cast(list/targets, mob/living/user = usr)
 	var/mob/living/carbon/human/H = usr
 	//var/temp_vitae = H.vitae //use this to store vitae if we need a dynamic cost
 
@@ -52,7 +75,7 @@
 	if(H.has_status_effect(/datum/status_effect/buff/vampire_bat))
 		to_chat(H, span_warning("Already active."))
 		return
-	H.vitae -= 100
+	H.vitae -= 	vitaedrain 
 	//need to find a simple way to change to a bat
 	to_chat(H, span_greentext("! FORM OF BAT !"))
 	H.playsound_local(get_turf(H), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)

@@ -139,15 +139,16 @@
 		M.emote("agony", forced = TRUE)
 		to_chat(M, span_userdanger("THE FOUL SILVER! IT QUICKENS MY HEART!"))
 		//removing the starting traits
-		REMOVE_TRAIT(M,TRAIT_STRONGBITE, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_NOHUNGER, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_NOBREATH, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_TOXIMMUNE, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_STEELHEARTED, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_NOSLEEP, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_VAMPMANSION, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_VAMP_DREAMS, "/datum/antagonist/bloodsucker")
-		REMOVE_TRAIT(M,TRAIT_VAMPIRISM,"/datum/antagonist/bloodsucker")
+		REMOVE_TRAIT(M,TRAIT_STRONGBITE, MAGIC_TRAIT)
+		REMOVE_TRAIT(M,TRAIT_NOHUNGER, TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_NOBREATH, TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_TOXIMMUNE, TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_STEELHEARTED, TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_NOSLEEP, TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_VAMPMANSION, TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_VAMP_DREAMS, TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_VAMPIRISM,TRAIT_GENERIC)
+		REMOVE_TRAIT(M,TRAIT_GRAVEROBBER,TRAIT_GENERIC)
 		//time to remove any perks and weaknesses they got
 		REMOVE_TRAIT(M,TRAIT_VAMPIRISM, TRAIT_GENERIC)
 		REMOVE_TRAIT(M,TRAIT_SUN_RESIST, TRAIT_GENERIC)
@@ -182,6 +183,9 @@
 		M.verbs -= /mob/living/carbon/human/proc/vamp_regenerate
 		//time to remove any spells they got
 		M.RemoveSpell(/obj/effect/proc_holder/spell/targeted/transfix)
+		M.mind?.adjust_vamppoints(-50)
+		M.remove_status_effect(/datum/status_effect/debuff/veil_up)
+		M.remove_status_effect(/datum/status_effect/buff/veil_down)
 
 		var/list/vamp_choices = list()
 		vamp_choices  += GLOB.learnable_vamp_spells
@@ -241,8 +245,8 @@
 		REMOVE_TRAIT(M,TRAIT_HALOPHOBIA, TRAIT_GENERIC)
 		REMOVE_TRAIT(M,TRAIT_PERMADUST, TRAIT_GENERIC)
 		//removing vampire ranks
-		M.mind.adjust_skillrank(/datum/skill/magic/vampirism, 0, TRUE)
-		M.mind.adjust_skillrank(/datum/skill/magic/blood, 0, TRUE)
+		M.mind.adjust_skillrank(/datum/skill/magic/vampirism, -6, TRUE)
+		M.mind.adjust_skillrank(/datum/skill/magic/blood, -6, TRUE)
 		//setting their wrestling and unarmed down, they are a weak mortal now
 		M.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		M.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
@@ -252,12 +256,14 @@
 		M.verbs -= /mob/living/carbon/human/proc/vamp_regenerate
 		//time to remove any spells they got
 		M.RemoveSpell(/obj/effect/proc_holder/spell/targeted/transfix)
+		M.remove_status_effect(/datum/status_effect/debuff/veil_up)
+		M.remove_status_effect(/datum/status_effect/buff/veil_down)
 
 		var/list/vamp_choices = list()
 		vamp_choices  += GLOB.learnable_vamp_spells
 
 		for(var/vamp_choice in vamp_choices)
-			M.RemoveSpell(vamp_choice)
+			M.mind?.RemoveSpell(vamp_choice)
 
 		ADD_TRAIT(M, TRAIT_SILVER_BLESSED, TRAIT_GENERIC)
 		M.Stun(30)

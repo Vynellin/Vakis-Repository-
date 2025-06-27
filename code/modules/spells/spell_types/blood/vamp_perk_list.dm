@@ -116,6 +116,18 @@ GLOBAL_LIST_INIT(learnable_vamp_perks, (list(/obj/effect/proc_holder/spell/self/
 		/obj/effect/proc_holder/spell/self/vampire_resistholy,
 		/obj/effect/proc_holder/spell/self/vampire_resistsilver,
 		/obj/effect/proc_holder/spell/self/vampire_resistsun,
-		/obj/effect/proc_holder/spell/self/vampire_secondlife, //Leaving off until I can figure out the issue with the resurection
-		/obj/effect/proc_holder/spell/self/vampire_silentbite,)
+		/obj/effect/proc_holder/spell/self/vampire_secondlife,)
 ))
+
+GLOBAL_LIST_INIT(learnable_fledgling_perks, (list(/obj/effect/proc_holder/spell/self/vampire_perklist,
+		/obj/effect/proc_holder/spell/self/vampire_efficientdrinker,
+		/obj/effect/proc_holder/spell/self/vampire_lowmetabolism,
+		/obj/effect/proc_holder/spell/self/vampire_resistholy,
+		/obj/effect/proc_holder/spell/self/vampire_resistsilver,
+		/obj/effect/proc_holder/spell/self/vampire_resistsun,
+		/obj/effect/proc_holder/spell/self/vampire_secondlife, 
+		)
+))
+/*
+			/obj/effect/proc_holder/spell/self/vampire_silentbite, //keeping this off solaris, and it does need some rework, its meant more for PVP servers.
+*/

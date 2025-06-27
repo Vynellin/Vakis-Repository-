@@ -29,10 +29,47 @@ GLOBAL_LIST_INIT(our_forest_sex, typecacheof(list(
 	/area/rogue/indoors/shelter/rtfield
 	)))
 
+//stick town areas here, if any
+GLOBAL_LIST_INIT(townboundries, typecacheof(list(
+	/area/rogue/indoors/town,
+	/area/rogue/indoors/town/cell,
+	/area/rogue/indoors/town/church,
+	/area/rogue/indoors/town/church/basement,
+	/area/rogue/indoors/town/church/chapel,
+	/area/rogue/indoors/town/dwarfin,
+	/area/rogue/indoors/town/fire_chamber,
+	/area/rogue/indoors/town/garrison,
+	/area/rogue/indoors/town/magician,
+	/area/rogue/indoors/town/manor,
+	/area/rogue/indoors/town/physician,
+	/area/rogue/indoors/town/shop,
+	/area/rogue/indoors/town/tavern,
+	/area/rogue/indoors/town/vault,
+	/area/rogue/indoors/town/warehouse,
+	/area/rogue/outdoors/town,
+	/area/rogue/outdoors/town/roofs,
+	/area/rogue/outdoors/town/roofs/keep,
+	/area/rogue/under/town,
+	/area/rogue/under/town/basement,
+	/area/rogue/under/town/basement/keep,
+	/area/rogue/under/town/sewer,
+	)))
+
+//stick holy areas here, if any
+GLOBAL_LIST_INIT(churchboundries, typecacheof(list(
+	//church areas
+	/area/rogue/indoors/town/church,
+	/area/rogue/indoors/town/church/basement,
+	/area/rogue/indoors/town/church/chapel,
+	)))
 
 #define isclient(A) istype(A, /client)
 
 #define isforestsex(A) (is_type_in_typecache(A, GLOB.our_forest_sex))
+
+#define isintown(A) (is_type_in_typecache(A, GLOB.townboundries))
+
+#define isholy(A) (is_type_in_typecache(A, GLOB.churchboundries))
 
 #define isgroundlessturf(A) (is_type_in_typecache(A, GLOB.turfs_without_ground))
 

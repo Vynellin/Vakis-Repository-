@@ -171,11 +171,11 @@
 			var/mob/living/carbon/human/bsdrinker = user
 			var/mob/living/bsvictim = src
 			var/drinktime = 10 SECONDS
-			var/vitaedrain = 500 //a flat 500 for now, If we get a size trait later, I'd like to use that
+			var/vitaedrain = 400 //a flat 500 for now, If we get a size trait later, I'd like to use that
 			var/drinkexp = 10
 			if(HAS_TRAIT(user, TRAIT_EFFICIENT_DRINKER)) //halve the time and 1.5 the volume for the trait, this might never occur depending on balance
 				drinktime = 5 SECONDS
-				vitaedrain = 750
+				vitaedrain = 600
 				drinkexp = 14
 			var/bloodleft = bsvictim.blood_volume
 

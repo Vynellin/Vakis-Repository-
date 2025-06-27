@@ -14,17 +14,33 @@
 //spells should be defined into their own DMs, DO NOT DEFINE THEM HERE!!
 
 GLOBAL_LIST_INIT(learnable_vamp_spells, (list(/obj/effect/proc_holder/spell/self/vampire_spellslist,
-		/obj/effect/proc_holder/spell/self/vampire_fortitude,
-		/obj/effect/proc_holder/spell/self/vampire_strength,
-		/obj/effect/proc_holder/spell/self/vampire_blood_vision,
-		/obj/effect/proc_holder/spell/self/vampire_celerity,
-		/obj/effect/proc_holder/spell/self/vampire_darkvision,
-		/obj/effect/proc_holder/spell/targeted/vampire_subjugate,
+		/obj/effect/proc_holder/spell/invoked/vampire_fortitude,
+		/obj/effect/proc_holder/spell/invoked/vampire_strength,
+		/obj/effect/proc_holder/spell/invoked/vampire_celerity,
+		/obj/effect/proc_holder/spell/invoked/vampire_darkvision,
 		/obj/effect/proc_holder/spell/invoked/projectile/vampire_blood_lightning,
 		/obj/effect/proc_holder/spell/invoked/projectile/vampire_blood_steal,
-		/obj/effect/proc_holder/spell/targeted/recruitthrall,
+		/obj/effect/proc_holder/spell/invoked/recruitthrall,
 		/obj/effect/proc_holder/spell/targeted/shapeshift/vampire_bat,
-		/obj/effect/proc_holder/spell/targeted/shapeshift/vampire_mistform,
-		/obj/effect/proc_holder/spell/self/vampire_float,
-		/obj/effect/proc_holder/spell/self/vampire_regenerate,)
+		/obj/effect/proc_holder/spell/invoked/vampire_float,
+		/obj/effect/proc_holder/spell/invoked/vampire_regenerate,	
+)
 ))
+GLOBAL_LIST_INIT(learnable_fledgling_spells, (list(/obj/effect/proc_holder/spell/self/vampire_spellslist,
+		/obj/effect/proc_holder/spell/invoked/vampire_fortitude,
+		/obj/effect/proc_holder/spell/invoked/vampire_strength,
+		/obj/effect/proc_holder/spell/invoked/vampire_celerity,
+		/obj/effect/proc_holder/spell/invoked/vampire_darkvision,
+		/obj/effect/proc_holder/spell/targeted/shapeshift/vampire_bat,
+		/obj/effect/proc_holder/spell/invoked/vampire_float,
+		/obj/effect/proc_holder/spell/invoked/vampire_regenerate,
+)
+))
+/* Leaving these out for Solaris Ridge, they might be too PVP heavy. leaving the spells in the game so people can add them back in later or by admin request
+				/obj/effect/proc_holder/spell/targeted/shapeshift/vampire_mistform,
+				/obj/effect/proc_holder/spell/invoked/vampire_subjugate,
+				
+				/obj/effect/proc_holder/spell/invoked/vampire_blood_vision,
+
+
+*/

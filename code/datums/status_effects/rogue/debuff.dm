@@ -354,10 +354,21 @@
 	icon_state = "sleepy"
 
 //a few weaknesses that could be applied to vampires or other antags
+/datum/status_effect/debuff/sun_curse
+	id = "sun_curse"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/sun_curse
+	effectedstats = list("strength" = -3,"perception" = -4, "constitution" = -2, "endurance" = -2,"speed" = -2, "fortune" = -2)
+	duration = 1.5 MINUTES
+
+/atom/movable/screen/alert/status_effect/debuff/sun_curse
+	name = "Sun Curse"
+	desc = "I need to get back to the shade"
+	icon_state = "hunger3"
+
 /datum/status_effect/debuff/salt_curse
 	id = "salt_curse"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/salt_curse
-	effectedstats = list("strength" = -2,"perception" = -2,"intelligence" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
+	effectedstats = list("strength" = -2,"perception" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
 	duration = 2.5 MINUTES
 
 /atom/movable/screen/alert/status_effect/debuff/salt_curse
@@ -368,7 +379,7 @@
 /datum/status_effect/debuff/water_curse
 	id = "water_curse"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/water_curse
-	effectedstats = list("strength" = -2,"perception" = -2,"intelligence" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
+	effectedstats = list("strength" = -2,"perception" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
 	duration = 2.5 MINUTES
 
 /atom/movable/screen/alert/status_effect/debuff/water_curse
@@ -379,7 +390,7 @@
 /datum/status_effect/debuff/holy_curse
 	id = "holy_curse"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/holy_curse
-	effectedstats = list("strength" = -2,"perception" = -2,"intelligence" = -2, "constitution" = -2, "endurance" = -2,"speed" = -2)
+	effectedstats = list("strength" = -2,"perception" = -2, "constitution" = -2, "endurance" = -2, "fortune" = -2)
 	duration = 2.5 MINUTES
 
 /atom/movable/screen/alert/status_effect/debuff/holy_curse
@@ -391,7 +402,7 @@
 	id = "indoor_fear"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/indoor_fear
 	effectedstats = list("strength" = -2,"perception" = -2, "endurance" = -2,"speed" = -2)
-	duration = 5 SECONDS
+	duration = 10 SECONDS
 
 /atom/movable/screen/alert/status_effect/debuff/indoor_fear
 	name = "Indoors"
@@ -401,7 +412,7 @@
 /datum/status_effect/debuff/town_fear
 	id = "town_fear"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/town_fear
-	effectedstats = list("strength" = -3,"perception" = -3, "endurance" = -3,"speed" = -3)
+	effectedstats = list("strength" = -1,"perception" = -1, "endurance" = -1,"speed" = -1)
 	duration = 45 SECONDS
 
 /atom/movable/screen/alert/status_effect/debuff/town_fear

@@ -94,7 +94,14 @@
 /datum/crafting_recipe/roguetown/alchemy/bloodwyne
 	name = "Bloodwyne"
 	result = list(/obj/item/reagent_containers/glass/bottle/rogue/bloodwyne = 1)
-	reqs = list(/obj/item/reagent_containers/glass/bottle = 1, /datum/reagent/water = 15, /obj/item/reagent_containers/food/snacks/rogue/meat = 1, /obj/item/alch/viscera = 1)
+	reqs = list(/obj/item/reagent_containers/glass/bottle = 1, /datum/reagent/water = 15, /obj/item/reagent_containers/food/snacks/rogue/meat/steak = 1, /obj/item/alch/viscera = 1)
+	craftdiff = 1
+	verbage_simple = "transmute"
+
+/datum/crafting_recipe/roguetown/alchemy/bloodwyne
+	name = "Bloodwyne"
+	result = list(/obj/item/reagent_containers/glass/bottle/rogue/bloodwyne = 1)
+	reqs = list(/obj/item/reagent_containers/glass/bottle = 1, /datum/reagent/water = 15, /obj/item/reagent_containers/food/snacks/fish = 1, /obj/item/natural/worms/leech = 1)
 	craftdiff = 1
 	verbage_simple = "transmute"
 

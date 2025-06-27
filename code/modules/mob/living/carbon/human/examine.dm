@@ -176,7 +176,7 @@
 					. += span_redtext("[m1] repulsive!")
 		if(HAS_TRAIT(src, TRAIT_VAMPIRISM))
 			if(has_status_effect(/datum/status_effect/buff/veil_down))
-				. += span_redtext("[m1] has long fang, hungry eyes, and an odd color to their skin!")		
+				. += span_redtext("[m1] has long fangs, hungry eyes, and an odd color to their skin!")		
 
 	var/is_stupid = FALSE
 	var/is_smart = FALSE

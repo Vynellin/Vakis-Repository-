@@ -141,6 +141,22 @@
 	if(istype(loc, /turf/open/water/sewer))
 		add_stress(/datum/stressevent/sewertouched)
 
+/mob/living/carbon/human/handle_inwater()
+	. = ..()
+	//handling water weaknesses here
+	if(HAS_TRAIT(src, TRAIT_HYDROPHOBIA))
+		if (!src.has_status_effect(/datum/status_effect/debuff/water_curse))
+			if(istype(loc, /turf/open/water/ocean) || istype(loc, /turf/open/water/river) || istype(loc, /turf/open/water/pond)|| istype(loc, /turf/open/water/cleanshallow)|| istype(loc, /turf/open/water/))
+				to_chat(src, span_warning("The water! it Weakens me! it is too clean!"))
+				src.apply_status_effect(/datum/status_effect/debuff/water_curse)
+	//handling saltwater weaknesses here
+	if(HAS_TRAIT(src, TRAIT_HALOPHOBIA))
+		if (!src.has_status_effect(/datum/status_effect/debuff/salt_curse))		
+			if(istype(loc, /turf/open/water/ocean))
+				to_chat(src, span_warning("The water! it Weakens me! it is too salty!"))
+				src.apply_status_effect(/datum/status_effect/debuff/salt_curse)
+
+
 /mob/living/carbon/proc/get_complex_pain()
 	var/amt = 0
 	for(var/obj/item/bodypart/limb as anything in bodyparts)

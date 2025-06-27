@@ -9,12 +9,18 @@
 	movement_interrupt = FALSE
 	chargedloop = null
 	invocation_type = "shout"
+	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/blood
+	recharge_time = 2 MINUTES
+	glow_color = GLOW_COLOR_VAMPIRIC
+	glow_intensity = GLOW_INTENSITY_MEDIUM
+	charging_slowdown = 3
+	vitaedrain = 100
+	xp_gain = TRUE
 	antimagic_allowed = TRUE
-	//charge_max = 10 SECONDS
-	include_user = 0
+	//include_user = 0
 	spell_tier = 7
-	max_targets = 1
+	//max_targets = 1
 	spell_tier = 1 // What vampire level are we?
 	goodtrait = null //is there a good trait we want to associate? the code name
 	badtrait = null //is there a bad trait we want to associate? the code name
@@ -25,13 +31,15 @@
 /obj/effect/proc_holder/spell/targeted/vampire_transfix/cast(list/targets, mob/user = usr)
 	var/msg = input("Soothe them. Dominate them. Speak and they will succumb.", "Transfix") as text|null
 	if(length(msg) < 10)
-		to_chat(user, span_userdanger("This is not enough!"))
+		to_chat(user, span_userdanger("This is not enough! I must say more"))
 		return FALSE
 	var/bloodskill = user.mind.get_skill_level(/datum/skill/magic/blood)
 	var/bloodroll = roll("[bloodskill]d8")
 	user.say(msg)
 	for(var/mob/living/carbon/human/L in targets)
-		var/datum/antagonist/bloodsucker/BS = L.mind.has_antag_datum(/datum/antagonist/bloodsucker)
+		var/datum/antagonist/bloodsucker/BS = L.mind?.has_antag_datum(/datum/antagonist/bloodsucker)
+		if(HAS_TRAIT(L,TRAIT_VAMPIRISM))
+			return
 		var/willpower = round(L.STAINT / 4)
 		var/willroll = roll("[willpower]d6")
 		if(BS)

@@ -44,7 +44,7 @@
 				user.visible_message(span_warning("[user] drinks from [src]!"),\
 				span_warning("I drink from [src]!"))
 				playsound(user.loc, 'sound/misc/drink_blood.ogg', 100, FALSE, -4)
-				user.vitae += 100
+				user.vitae += 50
 				dead = TRUE
 				playsound(get_turf(user), 'sound/vo/mobs/rat/rat_death.ogg', 100, FALSE, -1)
 				icon_state = "srat1"

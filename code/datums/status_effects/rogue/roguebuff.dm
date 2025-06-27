@@ -759,6 +759,17 @@
 	alert_type = /atom/movable/screen/alert/status_effect/buff/veil_down
 	effectedstats = list("speed" = 1, "strength" = 1, "endurance" = 1)
 
+/datum/status_effect/buff/veil_down/on_apply()
+	. = ..()
+	to_chat(owner, span_warning("I drop my veil and extend my fangs"))
+	ADD_TRAIT(owner, TRAIT_STRONGBITE, MAGIC_TRAIT)
+
+/datum/status_effect/buff/veil_down/on_remove()
+	. = ..()
+	to_chat(owner, span_warning("I pull back my fangs and return to a mortal form"))
+	REMOVE_TRAIT(owner, TRAIT_STRONGBITE, MAGIC_TRAIT)
+	
+
 /atom/movable/screen/alert/status_effect/buff/vampire_fortitude
 	name = "Blood Fortitude"
 	desc = "My blood protects me"
@@ -806,16 +817,15 @@
 	. = ..()
 	to_chat(owner, span_warning("I am hovering off the ground"))
 	owner.movement_type = FLYING
-	//the above will make people float, but I can't get them to bob up and down, maybe need to animate it with the stuff below or something
-	//.animate(src, owner.pixel_y = owner.pixel_y + 2, time = 10, loop = -1)
-	//sleep(10)
-	//.animate(src, owner.pixel_y = owner.pixel_y - 2, time = 10, loop = -1)
+
 
 
 /datum/status_effect/buff/vampire_float/on_remove()
 	. = ..()
 	to_chat(owner, span_warning("I fallback to the ground"))
 	owner.movement_type = GROUND
+
+	
 
 //this applies thermals, which may allow people to look into scenes. May need to restrict for Solaris
 /atom/movable/screen/alert/status_effect/buff/vampire_blood_vision
