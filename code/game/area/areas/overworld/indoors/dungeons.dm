@@ -12,3 +12,10 @@
 	first_time_text = /area/provincial/outdoors/dungeon/riverbrook::first_time_text
 	brief_descriptor = /area/provincial/outdoors/dungeon/riverbrook::brief_descriptor
 	general_location = /area/provincial/outdoors/dungeon/riverbrook::general_location
+
+/area/provincial/underground/dungeon/gargoyles_rest
+	name = "Gargoyle's Rest"
+	icon_state = "under"
+	first_time_text = "GRAGOYLE'S REST"
+	droning_sound = 'sound/music/area/forestnightold.ogg'
+	brief_descriptor = "from where laughter bellows below a bridge."
