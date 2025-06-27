@@ -350,13 +350,6 @@
 	return TRUE
 
 /// goon stuff
-/datum/reagent/fuel/oil /// why the fuck do we have this when welding fuel exists???????
-	name = "Oil"
-	description = "Burns in a small smoky fire, can be used to get Ash."
-	reagent_state = LIQUID
-	color = "#2D2D2D"
-	taste_description = "oil"
-
 /datum/reagent/lye
 	name = "Lye"
 	description = "Also known as sodium hydroxide. As a profession making this is somewhat underwhelming."

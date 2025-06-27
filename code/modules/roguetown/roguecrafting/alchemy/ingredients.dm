@@ -225,7 +225,7 @@
 	major_pot = /datum/alch_cauldron_recipe/big_stamina_potion
 	med_pot = /datum/alch_cauldron_recipe/lck_potion
 	minor_pot = /datum/alch_cauldron_recipe/int_potion
-
+/* unobtainable
 /obj/item/alch/transisdust
 	name = "transis dust"
 	desc = "A long mix of herb that product a special powder."
@@ -234,6 +234,7 @@
 	major_pot = /datum/alch_cauldron_recipe/gender_potion
 	med_pot = /datum/alch_cauldron_recipe/gender_potion
 	minor_pot = /datum/alch_cauldron_recipe/gender_potion
+*/
 
 /obj/item/alch/puresalt
 	name = "purified salts"

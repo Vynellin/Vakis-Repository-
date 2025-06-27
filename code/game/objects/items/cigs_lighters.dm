@@ -578,7 +578,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	heat = 1500
 	resistance_flags = FIRE_PROOF
 	light_color = LIGHT_COLOR_FIRE
-	grind_results = list(/datum/reagent/iron = 1, /datum/reagent/fuel = 5, /datum/reagent/fuel/oil = 5)
+	grind_results = list(/datum/reagent/iron = 1, /datum/reagent/fuel = 10)
 
 /obj/item/lighter/Initialize()
 	. = ..()

@@ -2,11 +2,7 @@
 #define ALCOHOL_RATE 0.005 //The rate at which alcohol affects you
 #define ALCOHOL_EXPONENT 1.6 //The exponent applied to boozepwr to make higher volume alcohol at least a little bit damaging to the liver
 
-////////////// I don't know who made this header before I refactored alcohols but I'm going to fucking strangle them because it was so ugly, holy Christ
-// ALCOHOLS //
-//////////////
-
-/datum/reagent/consumable/ethanol
+/datum/reagent/consumable/ethanol /// base alcohol
 	name = "Ethanol"
 	description = "A well-known alcohol with a variety of applications."
 	color = "#404030" // rgb: 64, 64, 48
@@ -66,6 +62,7 @@ All effects don't start immediately, but rather get worse over time; the rate is
 		M.adjust_fire_stacks(reac_volume / 15)
 
 	return ..()
+
 ///////////////////
 /// ROGUE BOOZE ///
 ///////////////////

@@ -1,12 +1,3 @@
-///////////////////////////////////////////////////////////////////
-					//Food Reagents
-//////////////////////////////////////////////////////////////////
-
-
-// Part of the food code. Also is where all the food
-// 	condiments, additives, and such go.
-
-
 /datum/reagent/consumable
 	name = "Consumable"
 	taste_description = "generic food"
@@ -35,7 +26,7 @@
 				if (DRINK_VERYGOOD)
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_drink", /datum/mood_event/quality_verygood)
 				if (DRINK_FANTASTIC)
-					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_drink", /datum/mood_event/quality_fantastic)
+					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_drink", /datum/mood_event/quality_fantastic) /// this is a really shit way to do it
 				if (FOOD_AMAZING)
 					SEND_SIGNAL(M, COMSIG_ADD_MOOD_EVENT, "quality_food", /datum/mood_event/amazingtaste)
 	return ..()
@@ -125,7 +116,8 @@
 
 /datum/reagent/consumable/sodiumchloride
 	name = "Table Salt"
-	description = "A salt made of sodium chloride. Commonly used to season food."
+	/*description = "A salt made of sodium chloride. Commonly used to season food." mmm medieval sodium chloride*/
+	description = "A white powder dug out from the finest Solarian rock."
 	reagent_state = SOLID
 	color = "#FFFFFF" // rgb: 255,255,255
 	taste_description = "salt"
