@@ -138,8 +138,8 @@
 #define TRAIT_ARCANE_T2 "Arcane Training (Apprentice)"
 #define TRAIT_ARCANE_T3 "Arcane Training (Expert)"
 #define TRAIT_ARCANE_T4 "Arcane Training (Master)"
+#define TRAIT_WILDMAGIC "Wild Magic" //low chance for random stuff to happen when casting
 #define TRAIT_FIENDKISS "Kiss of the Fiend" //after casting some spells, hurl a firebolt at the same location
-#define TRAIT_WILDMAGIC "Wild Magic"
 
 
 GLOBAL_LIST_INIT(roguetraits, list(
@@ -261,8 +261,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_MAGIC_TUTOR = span_info("I know enough magic theory that if I were to reach the rank of master, I could have my own students."),
 	TRAIT_MAGIC_TALENT = span_notice("I am slowly learning about magic, able only to achieve even the smallest of spells."),
 	TRAIT_ARCANE_GATES = span_info("I have stolen a peek through the arcane gates, my mind expanded with knowledge!"),
+	TRAIT_WILDMAGIC = span_info("My magic sometimes has unexpected consequences."),
 	TRAIT_FIENDKISS = span_info("When I cast projectile magic, my patron also hurls a fire bolt at the same location."),
-	TRAIT_WILDMAGIC = span_info("SomethingSomething, Waiting for merge.")
 ))
 
 // trait accessor defines
