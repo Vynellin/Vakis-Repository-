@@ -20,7 +20,7 @@ All code after [commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at
 All code before [commit 333c566b88108de218d882840e61928a9b759d8f on 2014/31/12 at 4:38 PM PST](https://github.com/tgstation/tgstation/commit/333c566b88108de218d882840e61928a9b759d8f) is licensed under [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.html).
 (Including tools unless their readme specifies otherwise.)
 
-*Roguetown code was originally forked of of /tg/station circa 2019; and some AGPL v3 code is included as a result. Thusly; this notice will remain.*
+*Roguetown code was originally forked of of /tg/station code as it was 2019; and some AGPL v3 code is included as a result. Thusly; this notice will remain.*
 
 The TGS DMAPI is licensed as a subproject under the MIT license.
 
