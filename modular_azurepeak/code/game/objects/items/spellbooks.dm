@@ -341,7 +341,7 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 	var/corresponding_patron
 
 /obj/item/book/spellbook/warlock/verdant_court
-	icon_state = "wydbark"
+	icon_state = "wyrdback"
 	name = "wyrdbark codex"
 	desc = "Bound in living wood and leaf-vein vellum, this tome hums softly. Its ink smells faintly of moss, and the runes twist like vines when read aloud."
 	corresponding_patron = "The Verdant Court"
@@ -380,4 +380,3 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 	icon_state = "sovreign_remnant"
 	name = "sovreign's remnant"
 	desc =  "This regal tome's pages are made of ancient looking vellum, adorned with silver thread binding and glyphs. Its pages whisper of ancient thrones and the price of eternity."
-

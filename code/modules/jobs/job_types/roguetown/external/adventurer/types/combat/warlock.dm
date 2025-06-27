@@ -443,11 +443,23 @@
 ///////////////////////////////
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/givebook(patronchoice)
-	var/obj/item/item
-	var/item_type = /obj/item/book/spellbook/warlock
-	item = new item_type
-	item.name = "grimoire of the "+patronchoice
-	return item
+	var/type_map = list(
+		"The Verdant Court" = /obj/item/book/spellbook/warlock/verdant_court,
+		"The Radiant Ember" = /obj/item/book/spellbook/warlock/radiant_ember,
+		"The Drowned Choir" = /obj/item/book/spellbook/warlock/drowned_choir,
+		"The Ashen Pact" = /obj/item/book/spellbook/warlock/ashen_pact,
+		"The Bound Whisper" = /obj/item/book/spellbook/warlock/bound_whisper,
+		"The Hollow Voice" = /obj/item/book/spellbook/warlock/hollow_voice,
+		"The Wakened Blade" = /obj/item/book/spellbook/warlock/wakened_blade,
+		"The Pale Crown" = /obj/item/book/spellbook/warlock/pale_crown
+	)
+
+	var/type = type_map[patronchoice]
+	if (!type)
+		return null // Fallback in case something's wrong
+
+	var/obj/item/book/spellbook/warlock/book = new type
+	return book
 
 /obj/item/book/spellbook/warlock/get_cdr()
 	return 0.3 //The old forgotten tome you got as your side of the contract is slightly better than a gem book.
