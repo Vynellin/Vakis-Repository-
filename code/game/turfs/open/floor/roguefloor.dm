@@ -308,7 +308,8 @@
 /turf/open/floor/rogue/leaves
 	name = "leaves"
 	desc = "Leaves, they look lovely this time of year."
-	icon_state = "leafroof"
+	icon = 'icons/roguetown/misc/tree.dmi'
+	icon_state = "center-leaf1"
 	layer = MID_TURF_LAYER
 	footstep = FOOTSTEP_GRASS
 	barefootstep = FOOTSTEP_SOFT_BAREFOOT
@@ -316,7 +317,7 @@
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
 	slowdown = 0
-	smooth = SMOOTH_TRUE
+	// smooth = SMOOTH_TRUE
 	canSmoothWith = list(
 		/turf/open/floor/rogue/leaves,
 		/turf/closed/wall/mineral/rogue/roofwall/treewall,
