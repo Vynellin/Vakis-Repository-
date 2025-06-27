@@ -245,14 +245,6 @@
 		unbuckle_all_mobs(force=1)
 	return ..()
 
-/obj/structure/spacevine/proc/on_chem_effect(datum/reagent/R)
-	var/override = 0
-	for(var/datum/spacevine_mutation/SM in mutations)
-		override += SM.on_chem(src, R)
-	if(!override && istype(R, /datum/reagent/toxin/plantbgone))
-		if(prob(50))
-			qdel(src)
-
 /obj/structure/spacevine/proc/eat(mob/eater)
 	var/override = 0
 	for(var/datum/spacevine_mutation/SM in mutations)

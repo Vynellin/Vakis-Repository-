@@ -16,22 +16,6 @@
 	name = "dust"
 	desc = ""
 
-/obj/effect/decal/cleanable/greenglow
-	name = "glowing goo"
-	desc = ""
-	icon_state = "greenglow"
-	light_power = 3
-	light_outer_range =  2
-	light_color = LIGHT_COLOR_GREEN
-	beauty = -300
-
-/obj/effect/decal/cleanable/greenglow/ex_act()
-	return
-
-/obj/effect/decal/cleanable/greenglow/filled/Initialize()
-	. = ..()
-	reagents.add_reagent(pick(/datum/reagent/uranium, /datum/reagent/uranium/radium), 5)
-
 /obj/effect/decal/cleanable/dirt/cobweb
 	name = "cobweb"
 	desc = ""

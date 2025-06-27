@@ -25,6 +25,12 @@
 	GLOB.possible_items -= src
 	return ..()
 
+/datum/objective_item/steal/rogue/spices
+	name = "a pepper mill."
+	targetitem = /obj/item/reagent_containers/food/condiment/peppermill
+	difficulty = 1
+	excludefromjob = list("Cook")
+
 /datum/objective_item/steal/rogue/ledger
 	name = "the merchant's catatoma."
 	targetitem = /obj/item/book/rogue/secret/ledger
@@ -36,12 +42,6 @@
 	targetitem = /obj/item/roguekey/lord
 	difficulty = 3
 	excludefromjob = list("Lord", "Knight")
-
-/datum/objective_item/steal/rogue/spices
-	name = "a pepper mill."
-	targetitem = /obj/item/reagent_containers/food/condiment/peppermill
-	difficulty = 1
-	excludefromjob = list("Cook")
 
 /datum/objective_item/steal/rogue/crown
 	name = "the Lord's crown."

@@ -608,28 +608,10 @@
 
 	blur_eyes(10)
 
-	var/turf/T = get_turf(src)
 	if(!blood)
 		if(nutrition > 50)
 			adjust_nutrition(-lost_nutrition)
 			adjust_hydration(-lost_nutrition)
-//adjustToxLoss(-3)
-	if(harm)
-		adjustBruteLoss(3)
-	for(var/i=0 to distance)
-		if(blood)
-			if(T)
-				bleed(5)
-		else if(src.reagents.has_reagent(/datum/reagent/consumable/ethanol/blazaam, needs_metabolizing = TRUE))
-			if(T)
-				T.add_vomit_floor(src, VOMIT_PURPLE)
-		else
-			if(T)
-				T.add_vomit_floor(src, VOMIT_TOXIC)//toxic barf looks different
-		T = get_step(T, dir)
-		if (is_blocked_turf(T))
-			break
-	return TRUE
 
 /mob/living/carbon/proc/spew_organ(power = 5, amt = 1)
 	for(var/i in 1 to amt)
