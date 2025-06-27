@@ -49016,6 +49016,10 @@
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/town/roofs)
+"qyZ" = (
+/mob/living/simple_animal/hostile/rogue/skeleton/bow,
+/turf/open/floor/rogue/dirt,
+/area/provincial/outdoors/dungeon/riverbrook)
 "qzm" = (
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/indoors/town)
@@ -49545,6 +49549,10 @@
 "qHV" = (
 /turf/closed/wall/mineral/rogue/wooddark/end,
 /area/provincial/indoors/town/farm/secondary/basement)
+"qIe" = (
+/mob/living/simple_animal/hostile/rogue/skeleton/bow,
+/turf/open/floor/rogue/cobblerock,
+/area/provincial/outdoors/dungeon/riverbrook)
 "qIq" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 10
@@ -384064,7 +384072,7 @@ mlK
 bLB
 pId
 pUE
-pqk
+qIe
 pqk
 pqk
 pqk
@@ -387680,7 +387688,7 @@ cxN
 dcA
 cZi
 gSI
-avh
+qyZ
 mHh
 pqk
 pqk
