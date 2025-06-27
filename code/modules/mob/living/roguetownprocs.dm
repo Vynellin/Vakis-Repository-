@@ -194,7 +194,7 @@
 
 			if(user.has_status_effect(/datum/status_effect/buff/chargedriposte)) // one-time use attack
 				prob2defend -= 200
-					remove_status_effect(/datum/status_effect/buff/chargedriposte)
+				remove_status_effect(/datum/status_effect/buff/chargedriposte)
 
 			if(HAS_TRAIT(user, TRAIT_GUIDANCE))
 				prob2defend -= 15
