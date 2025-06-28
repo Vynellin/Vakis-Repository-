@@ -1939,7 +1939,6 @@
 #include "code\modules\spells\spell_types\wizard\invoked_single_target\frostbite.dm"
 #include "code\modules\spells\spell_types\wizard\invoked_single_target\gravity.dm"
 #include "code\modules\spells\spell_types\wizard\invoked_single_target\lightning_lure.dm"
-#include "code\modules\spells\spell_types\wizard\invoked_single_target\mind_sliver.dm"
 #include "code\modules\spells\spell_types\wizard\misc\arcane_prison.dm"
 #include "code\modules\spells\spell_types\wizard\misc\blink.dm"
 #include "code\modules\spells\spell_types\wizard\misc\enchant_weapon.dm"
