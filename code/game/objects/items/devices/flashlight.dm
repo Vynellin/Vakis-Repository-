@@ -414,8 +414,9 @@
 /obj/effect/wisp
 	name = "wisp"
 	desc = "These seelie spirits often appear in magical forests.."
-	icon = 'icons/obj/lighting.dmi'
-	icon_state = "orb"
+	icon = 'icons/obj/projectiles.dmi'
+	icon_state = "spark"
+	color = GLOW_COLOR_ICE
 	light_system = MOVABLE_LIGHT
 	light_outer_range = 7
 	pixel_x = 20

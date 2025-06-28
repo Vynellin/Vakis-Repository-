@@ -29,7 +29,7 @@
 		return FALSE
 
 	target.apply_status_effect(/datum/status_effect/debuff/mischievous_whispers)
-	user.visible_message(span_notice("You hear faint, unsettling whispers in your mind."), span_notice("[target] looks distracted as eerie whispers surround SUBJECTPRONOUN."))
+	user.visible_message(span_notice("You hear faint, unsettling whispers in your mind."), span_notice("[target] looks distracted as eerie whispers surround them."))
 	return TRUE
 
 /datum/status_effect/debuff/mischievous_whispers
