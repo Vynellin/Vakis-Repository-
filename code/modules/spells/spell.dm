@@ -38,7 +38,7 @@
 	var/glow_color = null // The color of the glow
 	var/hide_charge_effect = FALSE // If true, will not show the spell's icon when charging 
 	var/obj/effect/mob_charge_effect = null
-  var/ignore_wild_magic = FALSE // IF true, will bypass wild magic checks
+	var/ignore_wild_magic = FALSE // IF true, will bypass wild magic checks
 	var/goodtrait = null//a good trait
 	var/badtrait = null//is there a bad trait that should be associated with this?
 	var/badtraitname = null//a bad trait name
