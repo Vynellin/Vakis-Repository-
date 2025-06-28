@@ -101,8 +101,8 @@
 	var/list/summons_additional_factions = list() //saves any factions added by the "Mark of the Gravebound" spell so future summons get those added too.
 
 	var/capped_arcane_melee = SKILL_LEVEL_CAPPED_ARCANE_CASTER //Numeral, used to cap arcane using melee weapon on some classes. Well on Warlock.
-	var/obj/item/warlock_weapon  // Saves the warlock summoned weapon if any.
-	var/warlock_weapon_type  // Saves the selected weapontype if replacement needed.
+	var/obj/item/warlock_weapons = list() // Saves the warlock summoned weapon if any.
+	var/warlock_weapon_types = list() // Saves the selected weapontype if replacement needed.
 
 /datum/mind/New(key)
 	src.key = key

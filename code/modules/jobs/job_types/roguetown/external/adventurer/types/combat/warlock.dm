@@ -501,8 +501,14 @@
 	item.AddComponent(/datum/component/pact_weapon, human, patronchoice)
 	item.AddComponent(/datum/component/singing_item, human, patronchoice, item)
 
-	human.mind.warlock_weapon = item
-	human.mind.warlock_weapon_type = item_type
+	// Make sure the lists exist
+	if(!islist(human.mind.warlock_weapons))
+		human.mind.warlock_weapons = list()
+	if(!islist(human.mind.warlock_weapon_types))
+		human.mind.warlock_weapon_types = list()
+
+	human.mind.warlock_weapons += item
+	human.mind.warlock_weapon_types += item_type
 
 	return item
 
