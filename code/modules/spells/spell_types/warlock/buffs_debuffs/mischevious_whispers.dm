@@ -18,14 +18,17 @@
 
 	if(!target)
 		to_chat(user, span_notice("No valid target."))
+		revert_cast()
 		return FALSE
 
 	if(!isliving(target))
 		to_chat(user, span_notice("You can only cast this on living targets."))
+		revert_cast()
 		return FALSE
 
 	if(target.has_status_effect(/datum/status_effect/debuff/mischievous_whispers))
 		to_chat(user, span_notice("[target] is already affected."))
+		revert_cast()
 		return FALSE
 
 	target.apply_status_effect(/datum/status_effect/debuff/mischievous_whispers)

@@ -40,9 +40,8 @@
 
 		var/dist = get_dist(user, C)
 		if (dist <= range)
-			C.electrocute_act(1, user) //just shock
-			//var/atom/throw_target = get_step(user, get_dir(user, C))
-			//C.throw_at(throw_target, 100, 2) //from source material but kinda op.
+			C.electrocute_act(1, user)
+			C.visible_message(span_warning("A whip of lightning lashes [C], crackling with unstable energy!"), span_warning("Your body seizes as lightning courses through you!"))
 		else
 			playsound(user, 'sound/items/stunmace_toggle (3).ogg', 100)
 			user.visible_message(span_warning("The lightning lure fizzles out!"), span_warning("[C] is too far away!"))
