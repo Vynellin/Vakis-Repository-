@@ -263,7 +263,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_MAGIC_TALENT = span_notice("I am slowly learning about magic, able only to achieve even the smallest of spells."),
 	TRAIT_ARCANE_GATES = span_info("I have stolen a peek through the arcane gates, my mind expanded with knowledge!"),
 	TRAIT_WILDMAGIC = span_info("My magic sometimes has unexpected consequences."),
-	TRAIT_WILDMAGIC_BENEFIC = span_info("I am inspired when witnessing magic going haywire.")
+	TRAIT_WILDMAGIC_BENEFIC = span_info("I am inspired when witnessing magic going haywire."),
 	TRAIT_FIENDKISS = span_info("When I cast projectile magic, my patron also hurls a fire bolt at the same location."),
 ))
 

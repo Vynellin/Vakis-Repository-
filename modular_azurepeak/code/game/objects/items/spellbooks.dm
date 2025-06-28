@@ -349,7 +349,7 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 /obj/item/book/spellbook/warlock/attack_right(mob/user)
 	if(owner && user != owner)
 		to_chat(user, span_warning("The tome shudders in your hand. It refuses to obey you."))
-		return
+		return FALSE
 	. = ..()
 
 /obj/item/book/spellbook/warlock/get_cdr()
@@ -436,7 +436,9 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 	icon_state = "vessel_concord_0"
 	base_icon_state = "vessel_concord"
 	name = "vessel's concord"
-	desc = "Cork-sealed and whisper-bound, this book flickers with promises. Pages turn themselves, eager to bargain, to bargain, to bargain..."	
+	desc = "Cork-sealed and whisper-bound, this book flickers with promises. Pages turn themselves, eager to bargain, to bargain, to bargain..."
+	pickup_sound = 'sound/items/glass_pick_up.ogg'
+	drop_sound = 'sound/items/glass_drop.ogg'
 
 /obj/item/book/spellbook/warlock/hollow_voice
 	icon_state = "silence_that_0"

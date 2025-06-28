@@ -131,6 +131,7 @@
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mischievous_whispers)
 	
 	ADD_TRAIT(human, TRAIT_WILDMAGIC, TRAIT_GENERIC)
+	ADD_TRAIT(human, TRAIT_WILDMAGIC_BENEFIC, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T3, TRAIT_GENERIC) //Caster Subclass
 	human.mind.adjust_spellpoints(2) //Caster subclass
 
