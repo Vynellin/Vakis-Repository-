@@ -82,10 +82,14 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 /obj/item/book/spellbook/examine(mob/user)
 	. = ..()
 	. += span_notice("Reading it once per day allows you to unbind two spells and refund its spell point.")
-	if(born_of_rock)
-		. += span_notice("This tome was made from a magical stone, instead of a proper gem. Holding it in your hand with it open reduces spell charge time by [ROCK_CHARGE_REDUCTION * 100]%!")
+	if (istype(src, /obj/item/book/spellbook/warlock))
+		. += span_notice("This warlock grimoire hums with eldritch power. Holding it open reduces spell charge time by 30%!")
 	else
-		. += span_notice("This tome was made from a gem. Holding it in your hand with it open reduces spell charge time by [GEM_CHARGE_REDUCTION * 100]%!") 
+		if(born_of_rock)
+			. += span_notice("This tome was made from a magical stone, instead of a proper gem. Holding it in your hand with it open reduces spell charge time by [ROCK_CHARGE_REDUCTION * 100]%!")
+		else
+			. += span_notice("This tome was made from a gem. Holding it in your hand with it open reduces spell charge time by [GEM_CHARGE_REDUCTION * 100]%!")
+
 
 /obj/item/book/spellbook/attack_self(mob/user)
 	if(!open)
@@ -334,49 +338,59 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 	name = "whispering tome"
 	desc = "A dark tome bound in some unknown hide. Its pages whisper softly when opened."
 	breakouttime = 2 MINUTES
+	picked = 1
 	var/active_item
 	var/spell1
 	var/spell2
 	var/spell3
 	var/corresponding_patron
+	var/mob/living/carbon/owner
 
 /obj/item/book/spellbook/warlock/verdant_court
 	icon_state = "wyrdback"
+	base_icon_state = "wyrdback"
 	name = "wyrdbark codex"
 	desc = "Bound in living wood and leaf-vein vellum, this tome hums softly. Its ink smells faintly of moss, and the runes twist like vines when read aloud."
 	corresponding_patron = "The Verdant Court"
 
 /obj/item/book/spellbook/warlock/radiant_ember
 	icon_state = "sunfire"
+	base_icon_state = "sunfire"
 	name = "sunfire lexicon"
 	desc = "A tome gilded with divine warmth, its pages almost too bright to read. Words blaze with radiant clarity, offering guidance and judgment in equal measure."
 
 /obj/item/book/spellbook/warlock/drowned_choir
 	icon_state = "abyssal_psalter"
+	base_icon_state = "abyssal_psalter"
 	name = "abyssal psalter"
 	desc = "Waterlogged and salt-stained, this book sings in whispers only its bearer can truly understand. Each page feels wet to the touch, yet never smears."
 
 /obj/item/book/spellbook/warlock/ashen_pact
 	icon_state = "cindergrasp"
+	base_icon_state = "cindergrasp"
 	name = "cindergrasp testament"
 	desc = "This scorched tome crackles with heatless flame. The margins are seared with forgotten contracts, and the ink burns red when read."
 
 /obj/item/book/spellbook/warlock/bound_whisper
 	icon_state = "vessel_concord"
+	base_icon_state = "vessel_concord"
 	name = "vessel's concord"
 	desc = "Cork-sealed and whisper-bound, this book flickers with promises. Pages turn themselves, eager to bargain, to bargain, to bargain..."	
 
 /obj/item/book/spellbook/warlock/hollow_voice
 	icon_state = "silence_that"
+	base_icon_state = "silence_that"
 	name = "silence that listens"
 	desc = "A hollow book that never fully opens, filled with inkless script that imprints directly onto the mind. Reading it always leaves you with the sensation of being watched."
 
 /obj/item/book/spellbook/warlock/wakened_blade
 	icon_state = "edgebound"
+	base_icon_state = "edgebound"
 	name = "edgebound chronicle"
 	desc =  "Bound in leather stretched over a blade's tang, this tome shimmers faintly. Diagrams shift between warforms and invocations depending on who reads it"
 
 /obj/item/book/spellbook/warlock/pale_crown
 	icon_state = "sovreign_remnant"
+	base_icon_state = "sovreign_remnant"
 	name = "sovreign's remnant"
 	desc =  "This regal tome's pages are made of ancient looking vellum, adorned with silver thread binding and glyphs. Its pages whisper of ancient thrones and the price of eternity."

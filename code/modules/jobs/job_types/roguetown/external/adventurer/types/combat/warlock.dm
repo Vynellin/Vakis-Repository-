@@ -22,6 +22,8 @@
 		ADD_TRAIT(human, TRAIT_MAGEARMOR, TRAIT_GENERIC)
 	backr = /obj/item/storage/backpack/rogue/satchel
 	neck = null
+	human.mind.adjust_spellpoints(2)
+	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 	var/patrons = list(
 		"The Verdant Court",        // Formerly "archfey"
 		"The Radiant Ember",        // Formerly "celestial"
@@ -63,7 +65,6 @@
 		"A name the world must fear",// power
 		"A reason to keep breathing",// purpose / star chain
 		"A wound that must be answered", // revenge / curse
-		"A debt paid in screams" //Player gains a ressource that goes up when damage, can spend on shielding self or other.
 	)
 
 	var/boonchoice = input("What did you trade away a piece of yourself for?", "The Boon") as anything in boons
@@ -71,28 +72,25 @@
 	switch(boonchoice)
 		if("A sharper edge") //Pact of the Blade
 			human.put_in_hands(giveweapon(human,patronchoice), FALSE)
-			human.change_stat("strength", 1)
 			human.set_blindness(0)
 		if("A voice that answers") //Pact of the Chain
-			//human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/findfamiliar) (will readd once find familiar is merged)
+			human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/findfamiliar)
 			human.change_stat("perception", 1)
 			human.set_blindness(0)
 		if("Secrets best left buried") //Pact of the Tome
-			human.put_in_hands(givebook(patronchoice), FALSE)
-			human.change_stat("intelligence", 1)
+			human.put_in_hands(givebook(patronchoice, human), FALSE)
+			human.mind.adjust_spellpoints(1)
 			human.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-			human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/guidance)
 		if("A name the world must fear") //empowered eldritch blast
 			human.mind.RemoveSpell(/obj/effect/proc_holder/spell/invoked/projectile/eldritchblast)
 			human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/eldritchblast/empowered)
 			human.change_stat("intelligence", 1)
-			human.mind.adjust_spellpoints(1)
 		if("A body that won't break") //make healthier
 			givehealing(human, patronchoice)
 			human.change_stat("constitution", 1)
 			human.set_blindness(0)
 			human.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-			human.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+			mind.adjust_skillrank_by_up_to(/datum/skill/combat/swords, 3, SKILL_LEVEL_EXPERT)
 		if("Gold that never feels warm") //Pact of the Talisman
 			human.put_in_hands(giveamulet(patronchoice), FALSE)
 			beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
@@ -100,13 +98,11 @@
 			human.set_blindness(0)
 		if("A reason to keep breathing") //Pact of the Star Chain
 			wrists = /obj/item/rope/chain/constellation
+			human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/guidance)
 			human.set_blindness(0)
 		if("A wound that must be answered") //give curse
 			givecurse(human, patronchoice)
 			human.change_stat("speed", 1)
-			human.set_blindness(0)
-		if("A debt paid in screams")
-			//Insert what it does here. 
 			human.set_blindness(0)
 		
 
@@ -114,7 +110,7 @@
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE)
-	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/mage
@@ -141,9 +137,10 @@
 	human.visible_message(span_info("I brushed against the glimmering court beneath leaf and moon, and it whispered secrets into my soul."))
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/celestialpatron(mob/living/carbon/human/human, patronchoice)
-	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
-	human.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 1, TRUE)
+	human.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/medicine, 2,   TRUE)
+	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
 
 	// armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
@@ -167,7 +164,7 @@
 	human.visible_message(span_info("Something bright found me in the dark. It left a spark that hasn't gone out."))
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/fathomlesspatron(mob/living/carbon/human/human, patronchoice) // a watery creature
-	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
+	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 3, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/sewing, 1, TRUE)
@@ -195,7 +192,7 @@
 
 	//melee stats (must be 5 stat point total)
 	human.change_stat("perception", 1)
-	human.change_stat("strength", 2)
+	human.change_stat("strength", 1)
 	human.change_stat("constitution", 2)
 	human.change_stat("endurance", 1)
 	human.change_stat("speed", -1)
@@ -203,7 +200,6 @@
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/acidsplash)
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/frostbite) // "water" and ice magic, less arcane power because armor and dodge training
 
-	ADD_TRAIT(human, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_WATERBREATHING, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee subclass
@@ -211,10 +207,10 @@
 	human.visible_message(span_info("The sea sang to me once. I haven't been able to stop hearing it since."))
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/fiendpatron(mob/living/carbon/human/human, patronchoice) //hellish fiend
-	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
+	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
-	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/roguehood/red
@@ -272,10 +268,10 @@
 	human.visible_message(span_info("There was a voice in a jar, a bottle, a name. I let it out. Or it let me in."))
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/goopatron(mob/living/carbon/human/human, patronchoice)
-	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
+	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
-	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/roguehood/mage
@@ -326,16 +322,14 @@
 
 	//melee stats (must be 5 stat point total)
 	human.change_stat("perception", 1)
-	human.change_stat("strength", 2)
-	human.change_stat("constitution", 2)
+	human.change_stat("constitution", 1)
 	human.change_stat("endurance", 1)
-	human.change_stat("speed", -1)
+	human.change_stat("speed", 1)
 
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/greenflameblade) // put that new weapon to work! martial focus means less magic
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mending)
 
 	ADD_TRAIT(human, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-	ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee Subclass
 
 	human.visible_message(span_info("The weapon spoke first. I only answered. Now it never leaves."))
@@ -350,7 +344,7 @@
 
 	cloak = /obj/item/clothing/cloak/raincloak/brown
 	gloves = /obj/item/clothing/gloves/roguetown/angle
-	armor = /obj/item/clothing/suit/roguetown/armor/plate/half/iron
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
 	wrists = /obj/item/clothing/wrists/roguetown/vambraces
@@ -372,7 +366,7 @@
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/chilltouch) // decay-themed magic and a skeletal hand to attack people with
 
 	// ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC) // Unnecessary with the heavy armor trait
-	ADD_TRAIT(human, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
+	ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee subclass
 
@@ -442,7 +436,7 @@
 //	Pact Book
 ///////////////////////////////
 
-/datum/outfit/job/roguetown/adventurer/warlock/proc/givebook(patronchoice)
+/datum/outfit/job/roguetown/adventurer/warlock/proc/givebook(patronchoice, mob/living/carbon/user)
 	var/type_map = list(
 		"The Verdant Court" = /obj/item/book/spellbook/warlock/verdant_court,
 		"The Radiant Ember" = /obj/item/book/spellbook/warlock/radiant_ember,
@@ -459,6 +453,7 @@
 		return null // Fallback in case something's wrong
 
 	var/obj/item/book/spellbook/warlock/book = new type
+	book.owner = user
 	return book
 
 /obj/item/book/spellbook/warlock/get_cdr()
@@ -526,7 +521,6 @@
 		"Battleaxe",
 		"Cleaver",
 		"Dagger",
-		"Eagle's Beak",
 		"Flail",
 		"Goden",
 		"Greatsword",
@@ -552,8 +546,6 @@
 			item_type = /obj/item/rogueweapon/huntingknife/cleaver
 		if("Dagger")
 			item_type = /obj/item/rogueweapon/huntingknife/idagger/steel
-		if("Eagle's Beak")
-			item_type = /obj/item/rogueweapon/eaglebeak
 		if("Flail")
 			item_type = /obj/item/rogueweapon/flail/sflail
 		if("Goden")

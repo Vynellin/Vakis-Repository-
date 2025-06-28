@@ -357,6 +357,16 @@
 		return
 	adjust_skillrank(skill, -proper_amt, silent)
 
+/datum/mind/proc/adjust_skillrank_by_up_to(skill, amount, max_rank, silent = FALSE)
+	var/current = get_skill_level(skill)
+	var/target = min(current + amount, max_rank)
+	adjust_skillrank_up_to(skill, target, silent)
+
+/datum/mind/proc/adjust_skillrank_down_by_up_to(skill, amount, min_rank, silent = FALSE)
+	var/current = get_skill_level(skill)
+	var/target = max(current - amount, min_rank)
+	adjust_skillrank_down_to(skill, target, silent)
+
 /datum/mind/proc/adjust_skillrank(skill, amt, silent = FALSE)
 	var/datum/skill/S = GetSkillRef(skill)
 	var/amt2gain = 0
