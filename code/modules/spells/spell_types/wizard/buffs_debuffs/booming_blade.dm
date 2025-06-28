@@ -1,12 +1,10 @@
-/obj/effect/proc_holder/spell/self/boomingblade
+/obj/effect/proc_holder/spell/invoked/boomingblade
 	name = "Booming Blade"
 	overlay_state = "blade_burst"
 	desc = "Strike your target with your weapon, infused with volatile energy. If the target moves after being hit, a thunderous explosion erupts around them, dealing extra damage"
 	releasedrain = 50
 	chargetime = 3
 	recharge_time = 15 SECONDS
-	//chargetime = 10
-	//charge_max = 30 SECONDS
 	range = 6
 	warnie = "spellwarning"
 	movement_interrupt = FALSE
@@ -25,7 +23,7 @@
 	invocation = "Fulminis Ictus!"
 	invocation_type = "shout"
 
-/obj/effect/proc_holder/spell/self/boomingblade/cast(mob/living/user)
+/obj/effect/proc_holder/spell/invoked/boomingblade/cast(mob/living/user)
 	var/obj/item/held_item = user.get_active_held_item()
 	if(!held_item)
 		user.visible_message(span_warning("You need a weapon to cast Booming Blade!"))

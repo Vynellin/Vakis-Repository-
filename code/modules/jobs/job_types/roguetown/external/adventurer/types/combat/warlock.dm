@@ -331,7 +331,7 @@
 	human.change_stat("endurance", 1)
 	human.change_stat("speed", 1)
 
-	human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/greenflameblade) // put that new weapon to work! martial focus means less magic
+	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/greenflameblade) // put that new weapon to work! martial focus means less magic
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mending)
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/warlock/summon_weapon)
 

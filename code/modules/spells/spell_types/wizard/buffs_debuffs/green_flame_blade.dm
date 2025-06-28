@@ -1,4 +1,4 @@
-/obj/effect/proc_holder/spell/self/greenflameblade
+/obj/effect/proc_holder/spell/invoked/greenflameblade
 	name = "Green-Flame Blade"
 	desc = "Imbue your weapon with green flame. Your next strike burns your target and nearby enemies."
 	overlay_state = "null"
@@ -20,7 +20,7 @@
 	invocation = "Gladius flamma viridis!"
 	invocation_type = "shout"
 
-/obj/effect/proc_holder/spell/self/greenflameblade/cast(mob/living/user)
+/obj/effect/proc_holder/spell/invoked/greenflameblade/cast(mob/living/user)
 	var/obj/item/held_item = user.get_active_held_item()
 	if(!held_item)
 		user.visible_message(span_warning("You need a weapon to cast Green-Flame Blade!"))

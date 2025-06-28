@@ -1,6 +1,6 @@
 /obj/effect/proc_holder/spell/invoked/lightninglure
 	name = "Lightning Lure"
-	desc = "Creates a crackling electrical link to a target, shocking them if they get too close and forcing them away."
+	desc = "Creates a crackling electrical link to a target, shocking them if they get too."
 	overlay_state = "null"
 	releasedrain = 50
 	chargetime = 1
