@@ -27,8 +27,9 @@
 
 /obj/effect/proc_holder/spell/invoked/frostbite/cast(list/targets, mob/living/user)
 	if(!isliving(targets[1]))
-		to_chat(user, span_warning("Your spell fizzles with no effect!"))
-		return
+		to_chat(user, span_warning("You need to target a living thing."))
+		revert_cast()
+		return FALSE
 
 	var/mob/living/carbon/target = targets[1]
 
