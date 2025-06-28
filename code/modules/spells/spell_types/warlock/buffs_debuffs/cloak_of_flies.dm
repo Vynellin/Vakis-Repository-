@@ -41,13 +41,22 @@
 	soundloop = /datum/looping_sound/fliesloop/quiet
 
 /datum/component/rot/warlock/process()
-	..()
-	var/mob/living/L = parent
+	. = ..()
+	var/mob/living/living_mob = parent
+	if(!living_mob) return
+
 	if(soundloop && soundloop.stopped)
 		soundloop.start()
-	var/turf/open/T = get_turf(L)
-	if(istype(T))
-		T.add_pollutants(/datum/pollutant/flies, 10)
+
+	for(var/mob/living/mob_target in view(1, living_mob))
+		if(mob_target == living_mob) continue
+		if(istype(mob_target, /mob/living/carbon)) // Optional: skip bots or spirits
+			if(!mob_target.health <= 0) // Skip dead/unconscious
+				mob_target.adjustBruteLoss(2 + rand(0, 2)) // 2–4 brute
+				if(prob(25)) mob_target.visible_message(
+					span_danger("Flies swarm around [mob_target], biting and stinging!"),
+					span_notice("The flies bite and sting at my skin!")
+				)
 
 /datum/looping_sound/fliesloop/quiet
 	mid_sounds = list('sound/misc/fliesloop.ogg')

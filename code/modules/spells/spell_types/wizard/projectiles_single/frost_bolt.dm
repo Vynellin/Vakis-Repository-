@@ -57,6 +57,6 @@
 			return BULLET_ACT_BLOCK
 		if(isliving(target))
 			var/mob/living/L = target
-			L.apply_status_effect(/datum/status_effect/buff/frostbite)
+			L.apply_status_effect(/datum/status_effect/debuff/frostbite)
 			new /obj/effect/temp_visual/snap_freeze(get_turf(L))
 	qdel(src)
