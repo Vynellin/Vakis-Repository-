@@ -28,7 +28,6 @@
 	var/obj/item/new_weapon = new user.mind.warlock_weapon_type(user.loc)
 	new_weapon.AddComponent(/datum/component/pact_weapon, user, user.patronchoice)
 	new_weapon.AddComponent(/datum/component/singing_item, user, user.patronchoice, new_weapon)
-	new_weapon.AddComponent(/datum/component/spirit_holding, null, null)
 
 	user.mind.warlock_weapon = new_weapon
 

@@ -69,6 +69,7 @@
 		say_weapon_line("attack", user, source)
 
 /datum/component/singing_item/proc/say_weapon_line(action, mob/user, obj/item/source)
+	// Suppress speech if a spirit is dwelling in the weapon
 	if(!personality || !GLOB.weapon_personality_dialog[personality])
 		return
 
@@ -83,5 +84,4 @@
 		var/message = pick(dialogue_pool)
 		source.say(message)
 	else if(action == "equipped_other" && !dialogue_pool)
-		// fallback emote if not defined
 		user.emote("- [source.name] glows faintly, resisting your touch.")

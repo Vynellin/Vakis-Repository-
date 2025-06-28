@@ -333,6 +333,7 @@
 
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/greenflameblade) // put that new weapon to work! martial focus means less magic
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mending)
+	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/warlock/summon_weapon)
 
 	ADD_TRAIT(human, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee Subclass
@@ -499,8 +500,7 @@
 	var/obj/item/item = new item_type
 	item.AddComponent(/datum/component/pact_weapon, human, patronchoice)
 	item.AddComponent(/datum/component/singing_item, human, patronchoice, item)
-	item.AddComponent(/datum/component/spirit_holding, null, null)
-	
+
 	human.mind.warlock_weapon = item
 	human.mind.warlock_weapon_type = item_type
 
