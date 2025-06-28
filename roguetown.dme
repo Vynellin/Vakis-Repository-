@@ -1903,6 +1903,7 @@
 #include "code\modules\spells\spell_types\wizard\buffs_debuffs\leap.dm"
 #include "code\modules\spells\spell_types\wizard\buffs_debuffs\longstrider.dm"
 #include "code\modules\spells\spell_types\wizard\buffs_debuffs\nondetection.dm"
+#include "code\modules\spells\spell_types\wizard\buffs_debuffs\overclock_arm.dm"
 #include "code\modules\spells\spell_types\wizard\buffs_debuffs\stoneskin.dm"
 #include "code\modules\spells\spell_types\wizard\conjure\celestial_vigil.dm"
 #include "code\modules\spells\spell_types\wizard\conjure\conjure_armor.dm"
