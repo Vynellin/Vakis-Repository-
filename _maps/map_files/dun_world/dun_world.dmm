@@ -23943,11 +23943,14 @@
 /turf/open/floor/rogue/sand,
 /area/provincial/outdoors/dungeon/riverbrook)
 "hTn" = (
-/obj/structure/roguemachine/teleport_beacon{
-	custom_name = "Emerald Coast Crossroads"
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	arrival_price = 5;
+	departure_price = 10;
+	fringe = 1;
+	custom_name = "Emerald Glade Bridge"
 	},
-/turf/open/floor/rogue/cobblerock,
-/area/provincial/outdoors/beach/forest)
+/turf/open/floor/rogue/dirt,
+/area/provincial/outdoors/forest)
 "hTt" = (
 /obj/structure/stairs{
 	dir = 4
@@ -24865,7 +24868,10 @@
 /area/provincial/indoors/town/province_keep/garrison/armory/secure)
 "ilf" = (
 /obj/structure/roguemachine/teleport_beacon/lava{
-	custom_name = "Abandoned Manor"
+	custom_name = "Abandoned Manor";
+	fringe = 1;
+	arrival_price = 15;
+	departure_price = 30
 	},
 /turf/open/floor/rogue/tile,
 /area/provincial/underground/dungeon/abandoned_manor)
@@ -26764,11 +26770,14 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "iRs" = (
-/obj/structure/roguemachine/teleport_beacon{
-	custom_name = "Solara Vie Crossroads"
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	arrival_price = 5;
+	departure_price = 10;
+	fringe = 1;
+	custom_name = "Abandoned Inn"
 	},
 /turf/open/floor/rogue/grass,
-/area/provincial/outdoors/field)
+/area/provincial/outdoors/forest)
 "iRt" = (
 /obj/structure/bars/passage/steel{
 	redstone_id = "dragonlair"
@@ -29972,8 +29981,9 @@
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/dungeon/licharena)
 "jVL" = (
-/obj/structure/roguemachine/teleport_beacon{
-	custom_name = "Solaris Ridge"
+/obj/structure/roguemachine/teleport_beacon/main{
+	custom_name = "Solaris Ridge";
+	arrival_price = 15
 	},
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
@@ -30217,7 +30227,10 @@
 /area/provincial/indoors/town/province_keep/meeting_room)
 "jZH" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "Goblins' Village"
+	custom_name = "Goblins' Village";
+	arrival_price = 5;
+	departure_price = 10;
+	fringe = 1
 	},
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/forest)
@@ -33524,7 +33537,10 @@
 /area/provincial/underground/dungeon/forsaken_bastille)
 "lfj" = (
 /obj/structure/roguemachine/teleport_beacon/underdark{
-	custom_name = "Lich's Hall"
+	custom_name = "Lich's Hall";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/provincial/underground/dungeon/licharena)
@@ -35697,7 +35713,10 @@
 /area/provincial/outdoors/town)
 "lTA" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "Eternal Flame"
+	custom_name = "Eternal Flame";
+	fringe = 1;
+	arrival_price = 5;
+	departure_price = 10
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/forest)
@@ -36437,7 +36456,10 @@
 /area/provincial/underground/dungeon/old_university)
 "mgP" = (
 /obj/structure/roguemachine/teleport_beacon/lava{
-	custom_name = "Goblin Fortress"
+	custom_name = "Goblin Fortress";
+	fringe = 1;
+	departure_price = 30;
+	arrival_price = 15
 	},
 /turf/open/floor/rogue/concrete,
 /area/provincial/underground/dungeon/goblinfort)
@@ -38350,7 +38372,10 @@
 /area/provincial/underground/dungeon/decrepit_tower)
 "mLM" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "Old Ruins"
+	custom_name = "Old Ruins";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/herringbone,
 /area/provincial/underground/dungeon/old_ruin)
@@ -46818,7 +46843,10 @@
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "pAa" = (
 /obj/structure/roguemachine/teleport_beacon/lava{
-	custom_name = "Lost Smithery"
+	custom_name = "Lost Smithery";
+	fringe = 1;
+	arrival_price = 15;
+	departure_price = 30
 	},
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/underkings_maw)
@@ -50203,7 +50231,10 @@
 /area/provincial/underground/dungeon/vulnafir)
 "qCQ" = (
 /obj/structure/roguemachine/teleport_beacon/underdark{
-	custom_name = "The Underdark"
+	custom_name = "The Underdark";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/underdark)
@@ -52531,7 +52562,10 @@
 /area/provincial/indoors/town/sewer)
 "rtM" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "Vulnafir"
+	custom_name = "Vulnafir";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/vulnafir)
@@ -53024,7 +53058,10 @@
 /area/provincial/indoors/town/house/veteran)
 "rDi" = (
 /obj/structure/roguemachine/teleport_beacon/underdark{
-	custom_name = "Skeletal Crypt"
+	custom_name = "Skeletal Crypt";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/blocks/paving,
 /area/provincial/indoors/town/basement)
@@ -53233,7 +53270,10 @@
 /area/provincial/outdoors/town)
 "rHK" = (
 /obj/structure/roguemachine/teleport_beacon/underdark{
-	custom_name = "Goblin Basement"
+	custom_name = "Goblin Basement";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/basement)
@@ -54806,7 +54846,10 @@
 /area/provincial/underground/dungeon/gargoyles_rest)
 "shr" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "Old University Lockroom"
+	custom_name = "Old University Lockroom";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/old_university)
@@ -56039,7 +56082,10 @@
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
 "sDT" = (
 /obj/structure/roguemachine/teleport_beacon/bandit{
-	custom_name = "Giuseppe's Toybox"
+	custom_name = "Giuseppe's Toybox";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -62035,7 +62081,10 @@
 /area/provincial/outdoors/field)
 "uGm" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "Riverbrook"
+	custom_name = "Riverbrook";
+	arrival_price = 5;
+	departure_price = 10;
+	fringe = 1
 	},
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/outdoors/dungeon/riverbrook)
@@ -62106,7 +62155,10 @@
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "uHy" = (
 /obj/structure/roguemachine/teleport_beacon/wilderness{
-	custom_name = "The Winding Halls"
+	custom_name = "The Winding Halls";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/churchbrick,
 /area/provincial/underground/dungeon/winding_halls)
@@ -62854,7 +62906,10 @@
 /area/provincial/outdoors/beach)
 "uVU" = (
 /obj/structure/roguemachine/teleport_beacon/bandit{
-	custom_name = "Searaiders' Hold"
+	custom_name = "Searaiders' Hold";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
@@ -67803,6 +67858,14 @@
 /obj/structure/flora/newtree,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/dungeon/riverbrook)
+"wHs" = (
+/obj/structure/roguemachine/teleport_beacon/wilderness{
+	arrival_price = 5;
+	departure_price = 10;
+	fringe = 1
+	},
+/turf/open/floor/rogue/dirt/road,
+/area/provincial/outdoors/bog)
 "wHt" = (
 /obj/structure/roguemachine/mail/directional/south{
 	mailtag = "Dwarven Quarter"
@@ -68358,7 +68421,10 @@
 /area/provincial/indoors/town/mages_university/artificer)
 "wQv" = (
 /obj/structure/roguemachine/teleport_beacon/lava{
-	custom_name = "Dragons' Den"
+	custom_name = "Dragons' Den";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
 	},
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/dungeon/dragonden)
@@ -218832,7 +218898,7 @@ kGI
 azB
 azB
 kGI
-kGI
+iRs
 kGI
 kGI
 kGI
@@ -253124,7 +253190,7 @@ mli
 ajw
 ajw
 ajw
-iRs
+ajw
 xFI
 xFI
 xFI
@@ -255499,7 +255565,7 @@ qCA
 azB
 azB
 azB
-azB
+hTn
 azB
 pzC
 pzC
@@ -325444,7 +325510,7 @@ nJz
 jbO
 jbO
 rkt
-mVY
+wHs
 mVY
 rkt
 nJz
@@ -376367,7 +376433,7 @@ kOO
 sQN
 sQN
 sQN
-hTn
+xVD
 fhu
 fhu
 iXi
@@ -376819,7 +376885,7 @@ mxb
 kOO
 sQN
 sQN
-fhu
+iLM
 fhu
 iXi
 iXi
@@ -377271,7 +377337,7 @@ sQN
 mxb
 sQN
 sQN
-xVD
+fhu
 fhu
 iXi
 iXi
@@ -377723,7 +377789,7 @@ sQN
 sQN
 sQN
 sQN
-iLM
+fhu
 iXi
 iXi
 fhu
