@@ -143,6 +143,13 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 		return GEM_CHARGE_REDUCTION
 
 /obj/item/book/spellbook/attack_right(mob/user)
+	// Ownership check for warlock books
+	if(istype(src, /obj/item/book/spellbook/warlock))
+		var/obj/item/book/spellbook/warlock/warlock_book = src
+		if(user != warlock_book.owner)
+			to_chat(user, span_warning("The book squirms in your hand, refusing your touch."))
+			return
+
 	if(!picked)
 		var/list/designlist = list("green", "yellow", "brown")
 		var/mob/living/carbon/human/gamer = user
@@ -158,6 +165,7 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 		update_icon()
 		picked = TRUE
 		return
+
 	if(!open)
 		slot_flags &= ~ITEM_SLOT_HIP
 		open = TRUE
@@ -166,6 +174,7 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 		slot_flags |= ITEM_SLOT_HIP
 		open = FALSE
 		playsound(loc, 'sound/items/book_close.ogg', 100, FALSE, -1)
+
 	curpage = 1
 	update_icon()
 	user.update_inv_hands()

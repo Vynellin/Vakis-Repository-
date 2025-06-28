@@ -11,7 +11,7 @@
 		weapon_owner = L
 		weapon = parent
 		weapon.name += " of the [patronchoice]"
-		weapon.desc += " It is enchanted to use arcane skill rather than its regular skill. Right click with an empty hand to change this weapon's form."
+		weapon.desc += " It is enchanted to use arcane skill rather than its regular skill."
 		weapon.force *= 1.2
 		weapon.throwforce *= 1.2
 		weapon.block_chance *= 1.2

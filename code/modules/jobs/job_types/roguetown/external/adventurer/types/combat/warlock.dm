@@ -110,7 +110,7 @@
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 2, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/medicine, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/craft/alchemy, 1, TRUE)
-	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
+	human.mind.adjust_skillrank_by_up_to(/datum/skill/magic/arcane, 3, SKILL_LEVEL_EXPERT)
 
 	head = /obj/item/clothing/head/roguetown/helmet/heavy/elven_helm
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/mage
@@ -141,7 +141,7 @@
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/athletics, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/medicine, 2,   TRUE)
-	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
+	human.mind.adjust_skillrank_by_up_to(/datum/skill/magic/arcane, 3, SKILL_LEVEL_EXPERT)
 
 	// armor = /obj/item/clothing/suit/roguetown/armor/chainmail
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
@@ -211,7 +211,7 @@
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
-	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
+	human.mind.adjust_skillrank_by_up_to(/datum/skill/magic/arcane, 3, SKILL_LEVEL_EXPERT)
 	human.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/roguehood/red
@@ -272,7 +272,7 @@
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/polearms, 1, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
 	human.mind.adjust_skillrank(/datum/skill/craft/alchemy, 2, TRUE)
-	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 3, TRUE)
+	human.mind.adjust_skillrank_by_up_to(/datum/skill/magic/arcane, 3, SKILL_LEVEL_EXPERT)
 	human.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 
 	head = /obj/item/clothing/head/roguetown/roguehood/mage
@@ -356,17 +356,15 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/sword/iron/short
 	backl = /obj/item/rogueweapon/shield/tower
-	// They're the tank subclass, so I'm keeping their armor in. If it's a problem, it's pretty easy to comment it out and give them hauberks instead
-	//tank stats (must be 5 stat point total)
+
 	human.change_stat("strength", 1)
 	human.change_stat("endurance", 2)
 	human.change_stat("constitution", 2)
 
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/cloakofflies)
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/infestation)
-	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/chilltouch) // decay-themed magic and a skeletal hand to attack people with
+	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/chilltouch)
 
-	// ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC) // Unnecessary with the heavy armor trait
 	ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee subclass
