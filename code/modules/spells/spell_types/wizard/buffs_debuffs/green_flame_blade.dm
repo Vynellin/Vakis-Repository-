@@ -73,7 +73,7 @@
 /atom/movable/screen/alert/status_effect/buff/greenflameblade_weapon
 	name = "Green-Flame Blade"
 	desc = "Your next strike will ignite enemies with green fire."
-	icon_state = "flame" 
+	icon_state = "buff" 
 
 /obj/effect/temp_visual/greenflameblade
 	icon = 'icons/effects/fire.dmi'

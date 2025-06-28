@@ -74,7 +74,7 @@
 			human.put_in_hands(giveweapon(human,patronchoice), FALSE)
 			human.set_blindness(0)
 		if("A voice that answers") //Pact of the Chain
-			human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/findfamiliar)
+			human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/findfamiliar/empowered)
 			human.change_stat("perception", 1)
 			human.set_blindness(0)
 		if("Secrets best left buried") //Pact of the Tome
@@ -216,7 +216,7 @@
 	head = /obj/item/clothing/head/roguetown/roguehood/red
 	mask = /obj/item/clothing/mask/rogue/facemask/goldmask
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/magered
-	back = /obj/item/clothing/cloak/raincloak/red
+	cloak = /obj/item/clothing/cloak/raincloak/red
 	r_hand = /obj/item/rogueweapon/woodstaff
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	belt = /obj/item/storage/belt/rogue/leather/rope
@@ -428,6 +428,8 @@
 			curse.curse = /datum/status_effect/buff/eldritchcurse/hexblade
 		if("The Pale Crown")
 			curse.curse = /datum/status_effect/buff/eldritchcurse/undead
+		if("The Ashen Pact")
+			curse.curse = /datum/status_effect/buff/eldritchcurse/fiend
 	curse.name += patronname
 	curse.patronname = patronname
 	human.mind.AddSpell(curse)

@@ -67,6 +67,9 @@
 /datum/status_effect/buff/eldritchcurse/undead
 	effectedstats = list("constitution" = -4)
 
+/datum/status_effect/buff/eldritchcurse/fiend
+	effectedstats = list("constitution" = -2, "endurance" -2)
+
 /atom/movable/screen/alert/status_effect/buff/eldritchcurse
 	name = "eldritch curse"
 	desc = "I am cursed."

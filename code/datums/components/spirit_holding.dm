@@ -31,11 +31,11 @@
 
 /datum/component/spirit_holding/RegisterWithParent()
 	RegisterSignal(parent, COMSIG_PARENT_EXAMINE, PROC_REF(on_examine))
-	RegisterSignal(parent, COMSIG_MOB_MIDDLECLICKON, PROC_REF(on_attack_self))
+	RegisterSignal(parent, COMSIG_ATOM_MIDDLE_CLICK, PROC_REF(on_attack_self))
 	RegisterSignal(parent, COMSIG_PARENT_QDELETING, PROC_REF(on_destroy))
 
 /datum/component/spirit_holding/UnregisterFromParent()
-	UnregisterSignal(parent, list(COMSIG_PARENT_EXAMINE, COMSIG_MOB_MIDDLECLICKON, COMSIG_PARENT_QDELETING))
+	UnregisterSignal(parent, list(COMSIG_PARENT_EXAMINE, COMSIG_ATOM_MIDDLECLICK, COMSIG_PARENT_QDELETING))
 
 ///signal fired on examining the parent
 /datum/component/spirit_holding/proc/on_examine(datum/source, mob/user, list/examine_list)

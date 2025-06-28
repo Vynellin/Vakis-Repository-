@@ -36,11 +36,10 @@
 	new /obj/effect/temp_visual/trapice(target.loc)
 
 	// Apply effects
-	target.apply_status_effect(/datum/status_effect/buff/frostbite/)
+	target.apply_status_effect(/datum/status_effect/debuff/frostbite/)
 	target.adjustFireLoss(12)
 	target.adjustBruteLoss(12)
 
 	// Messaging
-	to_chat(user, span_magic("You unleash a blast of frost at [target] — ice crackles around them!"))
-	to_chat(target, span_danger("A wave of cold slams into you! Your limbs grow numb..."))
-	target.visible_message(span_notice("[target] is struck by a freezing blast from [user]!"), target)
+	to_chat(user, span_info("You unleash a blast of frost at [target] — ice crackles around them!"))
+	target.visible_message(span_notice("[target] is struck by a freezing blast from [user]!"), span_danger("A wave of cold slams into you! Your limbs grow numb..."))

@@ -451,7 +451,7 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 	desc =  "Bound in leather stretched over a blade's tang, this tome shimmers faintly. Diagrams shift between warforms and invocations depending on who reads it"
 
 /obj/item/book/spellbook/warlock/pale_crown
-	icon_state = "sovreign_remnant_0"
-	base_icon_state = "sovreign_remnant"
+	icon_state = "sovereign_remnant_0"
+	base_icon_state = "sovereign_remnant"
 	name = "sovreign's remnant"
 	desc =  "This regal tome's pages are made of ancient looking vellum, adorned with silver thread binding and glyphs. Its pages whisper of ancient thrones and the price of eternity."

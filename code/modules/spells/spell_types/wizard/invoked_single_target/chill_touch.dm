@@ -40,7 +40,7 @@
 		hand.bodypart = bodypart
 		hand.forceMove(target)
 		bodypart.add_embedded_object(hand, silent = TRUE, crit_message = FALSE)
-		target.visible_message(span_warning("A skeletal hand grips [target]'s [bodypart]!"), span_danger("A skeletal hand grips me [bodypart]!"))
+		target.visible_message(span_warning("A skeletal hand grips [target]'s [bodypart.name]!"), span_danger("A skeletal hand grips my [bodypart.name]!"))
 	return FALSE
 
 /obj/item/chilltouch
@@ -73,7 +73,7 @@
 	START_PROCESSING(SSobj, src)
 
 /obj/item/chilltouch/on_embed(obj/item/bodypart/bodypart)
-	to_chat(bodypart.owner, "<span class='warning'>hand attached to [bodypart.owner]'s [bodypart]!</span>")
+	to_chat(bodypart.owner, "<span class='warning'>hand attached to [bodypart.owner]'s [bodypart.name]!</span>")
 	if(bodypart.owner)
 		host = bodypart.owner
 		START_PROCESSING(SSobj, src)

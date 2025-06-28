@@ -33,7 +33,7 @@
 		var/message = stripped_input(user, "What thought do you wish to weave into [carbon_target]'s mind?")
 		if(!message)
 			return
-		to_chat(carbon_target, "Your mind thinks to itself: </span><font color=#7246ff>\"[message]\"</font>")
+		to_chat(carbon_target, "You think to yourself: </span><font color=#7246ff>\"[message]\"</font>")
 		to_chat(user, "I pluck the strings of [carbon_target]'s mind")
 		log_game("[key_name(user)] sent a thought to [key_name(carbon_target)] with contents [message]")
 		return TRUE
