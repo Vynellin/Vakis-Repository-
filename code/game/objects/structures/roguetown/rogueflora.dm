@@ -286,16 +286,21 @@
 			if(!looty.len && (world.time > res_replenish))
 				loot_replenish()
 #endif
-			if(prob(50) && looty.len)
+			if(looty.len)
 				if(looty.len == 1)
 					res_replenish = world.time + 8 MINUTES
-				var/obj/item/B = pick_n_take(looty)
-				if(B)
-					B = new B(user.loc)
+				var/obj/item/loot = pick_n_take(looty)
+				if(loot)
+					var/obj/item/B = new loot.type(user.loc)
 					user.put_in_hands(B)
-					user.visible_message(span_notice("[user] finds [B] in [src]."))
+					if(HAS_TRAIT(user, TRAIT_WOODWALKER))
+						var/obj/item/C = new loot.type(user.loc)
+						user.put_in_hands(C)
+					user.visible_message(span_notice("[user] finds [HAS_TRAIT(user, TRAIT_WOODWALKER) ? "two " : ""][loot.name] in [src]."))
 					return
 			user.visible_message(span_warning("[user] searches through [src]."))
+			if((looty.len) && do_after(user, CLICK_CD_MELEE))
+				attack_hand(user)
 #ifdef MATURESERVER
 			if(!looty.len)
 				to_chat(user, span_warning("Picked clean."))
@@ -305,6 +310,15 @@
 #endif
 /obj/structure/flora/roguegrass/bush/update_icon()
 	icon_state = "bush[rand(1, 4)]"
+
+/obj/structure/flora/roguegrass/bush/CanAStarPass(ID, travel_dir, caller)
+	if(ismovableatom(caller))
+		var/atom/movable/mover = caller
+		if(mover.pass_flags & PASSGRILLE)
+			return TRUE
+	if(travel_dir == dir)
+		return FALSE // just don't even try, not even if you can climb it
+	return ..()
 
 /obj/structure/flora/roguegrass/bush/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
@@ -351,6 +365,13 @@
 
 /obj/structure/flora/roguegrass/bush/wall/update_icon()
 	return
+
+/obj/structure/flora/roguegrass/bush/wall/CanAStarPass(ID, travel_dir, caller)
+	if(ismovableatom(caller))
+		var/atom/movable/mover = caller
+		if(mover.pass_flags & PASSGRILLE)
+			return TRUE
+	return climbable || !density
 
 /obj/structure/flora/roguegrass/bush/wall/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
@@ -439,6 +460,15 @@
 	if(get_dir(loc, target) == dir)
 		return 0
 	return 1
+
+/obj/structure/flora/rogueshroom/CanAStarPass(ID, travel_dir, caller)
+	if(ismovableatom(caller))
+		var/atom/movable/mover = caller
+		if(mover.pass_flags & PASSGRILLE)
+			return TRUE
+	if(travel_dir == dir)
+		return FALSE // just don't even try, not even if you can climb it
+	return ..()
 
 /obj/structure/flora/rogueshroom/CheckExit(atom/movable/mover as mob|obj, turf/target)
 	if(istype(mover) && (mover.pass_flags & PASSGRILLE))

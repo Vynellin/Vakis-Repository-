@@ -138,6 +138,7 @@
 #define TRAIT_ARCANE_T2 "Arcane Training (Apprentice)"
 #define TRAIT_ARCANE_T3 "Arcane Training (Expert)"
 #define TRAIT_ARCANE_T4 "Arcane Training (Master)"
+#define TRAIT_WILDMAGIC "Wild Magic" //low chance for random stuff to happen when casting
 #define TRAIT_SUN_RESIST "Sun Resistance"
 #define TRAIT_SILVER_RESIST "Silver Resistance"
 #define TRAIT_HOLY_RESIST "Holy Resistance"
@@ -163,7 +164,6 @@
 #define TRAIT_VAMP_ANCIENT "Ancient Vampire"
 #define TRAIT_KOINONIPHOBIA "Koinoniphobia"
 #define TRAIT_MEGALOPHOBIA "Megalophobia"
-
 
 GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_LEPROSY = span_necrosis("I'm a disgusting leper..."),
@@ -284,6 +284,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_MAGIC_TUTOR = span_info("I know enough magic theory that if I were to reach the rank of master, I could have my own students."),
 	TRAIT_MAGIC_TALENT = span_notice("I am slowly learning about magic, able only to achieve even the smallest of spells."),
 	TRAIT_ARCANE_GATES = span_info("I have stolen a peek through the arcane gates, my mind expanded with knowledge!"),
+  TRAIT_WILDMAGIC = span_info("My magic sometimes has unexpected consequences."),
 	TRAIT_SUN_RESIST = span_notice("I can resist the sun without a viel"),
 	TRAIT_SILVER_RESIST = span_notice("I can resist Silver"),
 	TRAIT_HOLY_RESIST = span_notice("I can resist Holy spells and areas"),

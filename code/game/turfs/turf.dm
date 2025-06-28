@@ -178,7 +178,7 @@
 	var/area/A = get_area(src)
 	if(can)
 		if(!A.outdoors)
-			var/area2new = /area/rogue/outdoors
+			var/area2new = /area/provincial/outdoors
 			if(A.converted_type)
 				area2new = A.converted_type
 			var/area/nuarea
@@ -195,7 +195,7 @@
 				change_area(A, nuarea)
 	else
 		if(A.outdoors)
-			var/area2new = /area/rogue/indoors/shelter
+			var/area2new = /area/provincial/indoors/custom_shelter
 			if(A.converted_type)
 				area2new = A.converted_type
 			var/area/nuarea
@@ -502,20 +502,47 @@
 	return TRUE
 
 //////////////////////////////
-//Distance procs
+//A* Distance procs
 //////////////////////////////
 
 //Distance associates with all directions movement
-/turf/proc/Distance(turf/T)
+/turf/proc/Distance(turf/T, mob/traverser)
 	return get_dist(src,T)
 
 //  This Distance proc assumes that only cardinal movement is
 //  possible. It results in more efficient (CPU-wise) pathing
 //  for bots and anything else that only moves in cardinal dirs.
-/turf/proc/Distance_cardinal(turf/T)
+/turf/proc/Distance_cardinal(turf/T, mob/traverser)
 	if(!src || !T)
 		return FALSE
 	return abs(x - T.x) + abs(y - T.y)
+
+/// Returns the number of node moves. Used for AStar node-length checking.
+/turf/proc/Distance_cardinal_3d(turf/T, mob/traverser)
+	if(!src || !T)
+		return FALSE
+	return abs(x - T.x) + abs(y - T.y) + abs(z - T.z)
+
+/// Returns an additional distance factor based on slowdown and other factors.
+/turf/proc/get_heuristic_slowdown(mob/traverser, travel_dir)
+	. = get_slowdown(traverser)
+	// add cost from climbable obstacles
+	for(var/obj/structure/some_object in src)
+		if(some_object.density && some_object.climbable)
+			. += 1 // extra tile penalty
+			break
+	var/obj/structure/mineral_door/door = locate() in src
+	if(door && door.density && !door.locked && door.anchored) // door will have to be opened
+		. += 2 // try to avoid closed doors where possible
+
+// Like Distance_cardinal, but includes additional weighting to make A* prefer turfs that are easier to pass through.
+/turf/proc/Heuristic_cardinal(turf/T, mob/traverser)
+	var/travel_dir = get_dir(src, T)
+	. = Distance_cardinal(T, traverser) + get_heuristic_slowdown(traverser, travel_dir)
+
+/// A 3d-aware version of Heuristic_cardinal that just... adds the Z-axis distance with a multiplier.
+/turf/proc/Heuristic_cardinal_3d(turf/T, mob/traverser)
+	return Heuristic_cardinal(T, traverser) + abs(z - T.z) * 5 // Weight z-level differences higher so that we try to change Z-level sooner
 
 ////////////////////////////////////////////////////
 
