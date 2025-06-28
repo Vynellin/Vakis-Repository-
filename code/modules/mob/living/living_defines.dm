@@ -83,6 +83,8 @@
 	var/list/guaranteed_butcher_results = null //these will always be yielded from butchering
 	var/butcher_difficulty = 0 //effectiveness prob. is modified negatively by this amount; positive numbers make it more difficult, negative ones make it easier
 
+	var/is_jumping = 0 //to differentiate between jumping and thrown mobs
+
 	var/hellbound = 0 //People who've signed infernal contracts are unrevivable.
 
 	var/list/weather_immunities = list()
@@ -176,5 +178,9 @@
 	var/rogue_sneaking_light_threshhold = 0.15
 
 	var/voice_pitch = 1
+	/// Var used to regulate the body size.
+	var/body_size = 100
+	/// Var used to compare and check if we have to transform or not their size.
+	var/base_body_size = 100
 
 	var/domhand = 0

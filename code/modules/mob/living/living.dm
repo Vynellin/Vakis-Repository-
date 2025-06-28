@@ -292,6 +292,10 @@
 			return FALSE
 		if(!lying_attack_check(L))
 			return FALSE
+		// snowflake check for blocking mouthgrabs on biting deadites
+		if(L.zone_selected == BODY_ZONE_PRECISE_MOUTH && istype(mouth, /obj/item/grabbing/bite))
+			to_chat(L, span_warning("You can't grab [src]'s mouth while [p_theyre()] biting something!"))
+			return FALSE
 	return TRUE
 
 /mob/living/carbon/proc/kick_attack_check(mob/living/L)
@@ -1798,6 +1802,14 @@
 		for(var/obj/O in view(7,src))
 			if(istype(O, /obj/item/restraints/legcuffs/beartrap))
 				var/obj/item/restraints/legcuffs/beartrap/M = O
+				if(isturf(M.loc) && M.armed)
+					found_ping(get_turf(M), client, "trap")
+			if(istype(O, /obj/structure/trap,))
+				var/obj/structure/trap/M = O
+				if(isturf(M.loc) && M.armed)
+					found_ping(get_turf(M), client, "trap")
+			if(istype(O, /obj/structure/closet/crate/chest/trapped,))
+				var/obj/structure/trap/M = O
 				if(isturf(M.loc) && M.armed)
 					found_ping(get_turf(M), client, "trap")
 			if(istype(O, /obj/structure/flora/roguegrass/maneater/real))

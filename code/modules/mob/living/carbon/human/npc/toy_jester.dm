@@ -2,12 +2,11 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 
 /mob/living/carbon/human/species/construct/metal/toyjester
 	aggressive=1
-	mode = AI_IDLE
+	mode = NPC_AI_IDLE
 	faction = list("toybox")
 	ambushable = FALSE
 	dodgetime = 30
 	flee_in_pain = TRUE
-	stand_attempts = 6
 	possible_rmb_intents = list(/datum/rmb_intent/feint, /datum/rmb_intent/aimed, /datum/rmb_intent/strong, /datum/rmb_intent/weak)
 	var/is_silent = FALSE /// Determines whether or not we will scream our funny lines at people.
 
@@ -108,7 +107,7 @@ GLOBAL_LIST_INIT(toyjester_aggro, world.file2list("strings/rt/toyjesteraggroline
 		face_atom(get_step(src,pick(GLOB.cardinals)))
 
 /mob/living/carbon/human/species/construct/metal/toyjester/handle_combat()
-	if(mode == AI_HUNT)
+	if(mode == NPC_AI_HUNT)
 		if(prob(5))
 			emote("laugh")
 		if(prob(5))

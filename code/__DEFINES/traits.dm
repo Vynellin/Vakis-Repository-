@@ -138,6 +138,7 @@
 #define TRAIT_ARCANE_T2 "Arcane Training (Apprentice)"
 #define TRAIT_ARCANE_T3 "Arcane Training (Expert)"
 #define TRAIT_ARCANE_T4 "Arcane Training (Master)"
+#define TRAIT_WILDMAGIC "Wild Magic" //low chance for random stuff to happen when casting
 #define TRAIT_SUN_RESIST "Sun Resistance"
 #define TRAIT_SILVER_RESIST "Silver Resistance"
 #define TRAIT_HOLY_RESIST "Holy Resistance"
@@ -163,7 +164,6 @@
 #define TRAIT_VAMP_ANCIENT "Ancient Vampire"
 #define TRAIT_KOINONIPHOBIA "Koinoniphobia"
 #define TRAIT_MEGALOPHOBIA "Megalophobia"
-
 
 GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_LEPROSY = span_necrosis("I'm a disgusting leper..."),
@@ -284,6 +284,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_MAGIC_TUTOR = span_info("I know enough magic theory that if I were to reach the rank of master, I could have my own students."),
 	TRAIT_MAGIC_TALENT = span_notice("I am slowly learning about magic, able only to achieve even the smallest of spells."),
 	TRAIT_ARCANE_GATES = span_info("I have stolen a peek through the arcane gates, my mind expanded with knowledge!"),
+	TRAIT_WILDMAGIC = span_info("My magic sometimes has unexpected consequences."),
 	TRAIT_SUN_RESIST = span_notice("I can resist the sun without my veil."),
 	TRAIT_SILVER_RESIST = span_notice("I can resist silver."),
 	TRAIT_HOLY_RESIST = span_notice("I can resist holy spells and areas."),
@@ -308,7 +309,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_VAMP_HEAL_LIMIT = span_notice("I've learned an ability to helps me heal my body and I can't learn more."),
 	TRAIT_VAMP_ANCIENT = span_notice("I am older than most vampires."),
 	TRAIT_KOINONIPHOBIA = span_notice("I must stay outdoors."),
-	TRAIT_MEGALOPHOBIA = span_notice("I hate big buildings, I should stay out of town."),))
+	TRAIT_MEGALOPHOBIA = span_notice("I hate big buildings, I should stay out of town."),
+	))
 
 // trait accessor defines
 #define ADD_TRAIT(target, trait, source) \

@@ -38,10 +38,12 @@
 	var/glow_color = null // The color of the glow
 	var/hide_charge_effect = FALSE // If true, will not show the spell's icon when charging 
 	var/obj/effect/mob_charge_effect = null
+  var/ignore_wild_magic = FALSE // IF true, will bypass wild magic checks
 	var/goodtrait = null//a good trait
 	var/badtrait = null//is there a bad trait that should be associated with this?
 	var/badtraitname = null//a bad trait name
 	var/badtraitdesc = null//describe the bad trait and tradeoff
+
 
 
 /obj/effect/proc_holder/Initialize()
@@ -449,6 +451,12 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 								return
 
 	before_cast(targets, user = user)
+	if(user && HAS_TRAIT(user, TRAIT_WILDMAGIC) && !src.ignore_wild_magic)
+		if(prob(10) && src)
+			var/tpath = src.type
+			trigger_wild_magic(targets, user, tpath)
+			revert_cast()
+			return FALSE
 	if(user && user.ckey)
 		user.log_message(span_danger("cast the spell [name]."), LOG_ATTACK)
 	if(recharge)
