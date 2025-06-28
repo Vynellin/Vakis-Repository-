@@ -65,7 +65,7 @@
 		if(user.real_name in beacon_choice.granted_list)
 			permitted_beacons += beacon_choice
 
-	var/obj/structure/roguemachine/teleport_beacon/teleport_choice = input(user, "Which imprinted beacon would you travel to?", "Teleport Beacon Choice") as null|anything in permitted_beacons
+	var/obj/structure/roguemachine/teleport_beacon/teleport_choice = input(user, "Which imprinted beacon would you like to travel to?", "Teleport Beacon Choice") as null|anything in permitted_beacons
 
 	if(!teleport_choice || teleport_choice == src)
 		return
