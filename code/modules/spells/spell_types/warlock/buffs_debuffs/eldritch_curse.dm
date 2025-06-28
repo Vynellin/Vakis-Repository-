@@ -9,7 +9,7 @@
 	warnie = "sydwarning"
 	movement_interrupt = FALSE
 	chargedloop = null
-	sound = 'sound/magic/heal.ogg'
+	sound = 'sound/misc/bellold.ogg'
 	invocation = "Ceilt an dhorchadais ort."
 	invocation_type = "whisper"
 	associated_skill = /datum/skill/magic/arcane
@@ -20,13 +20,25 @@
 	var/datum/status_effect/buff/eldritchcurse/curse
 
 /obj/effect/proc_holder/spell/invoked/eldritchcurse/cast(list/targets, mob/living/user)
-	if(isliving(targets[1]))
-		var/mob/living/carbon/target = targets[1]
+	. = .. ()
+	if(!isliving(targets[1]))
+		to_chat(user, span_warning("Your curse fades before it can take hold..."))
+		return
 
-		if(target.has_status_effect(curse))
-			target.remove_status_effect(curse)
-		else
-			target.apply_status_effect(curse) //apply debuff
+	var/mob/living/carbon/target = targets[1]
+
+	// Toggle curse
+	if(target.has_status_effect(curse))
+		to_chat(user, span_notice("You lift the curse from [target]."))
+		to_chat(target, span_good("The oppressive energy surrounding you dissipates."))
+		target.visible_message(span_notice("[target] exhales sharply as their curse is lifted."), target)
+		target.remove_status_effect(curse)
+	else
+		to_chat(user, span_danger("You invoke the curse of [patronname] upon [target]!"))
+		to_chat(target, span_danger("A dreadful chill settles over you... you have been cursed!"))
+		target.visible_message(span_warning("[target] flinches as a dark curse wraps around them."), target)
+		target.apply_status_effect(curse)
+
 
 /datum/status_effect/buff/eldritchcurse
 	id = "eldritchcurse"

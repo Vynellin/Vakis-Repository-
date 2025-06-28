@@ -140,8 +140,8 @@
 	name = "iron couter"
 	desc = "Protection mainly focused around the elbows."
 	body_parts_covered = ARMS
-	icon_state = "vambraces"
-	item_state = "vambraces"
+	icon_state = "vambrace"
+	item_state = "vambrace"
 	armor = list("blunt" = 65, "slash" = 85, "stab" = 55, "piercing" = 45, "fire" = 0, "acid" = 0)
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB, BCLASS_CHOP, BCLASS_BLUNT, BCLASS_TWIST)
 	blocksound = PLATEHIT
