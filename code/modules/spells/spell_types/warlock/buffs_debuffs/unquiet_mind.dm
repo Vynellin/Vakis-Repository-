@@ -34,7 +34,7 @@
 
 /datum/status_effect/buff/unquiet_mind/tick(mob/living/user)
 	for(var/mob/living/carbon/carbon_targets in GLOB.player_list)
-		if(prob(40) && get_dist(usr, carbon_targets) < 4 && !(usr == carbon_targets))
+		if(prob(40) && get_dist(usr, carbon_targets) < 5 && !(usr == carbon_targets))
 			to_chat(carbon_targets, span_warning("A wave of mental static washes over your thoughts."))
 			carbon_targets.apply_status_effect(/datum/status_effect/debuff/psionic_scramble, 4 SECONDS)
 
