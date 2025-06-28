@@ -3,7 +3,6 @@
 	desc = "A five meter tall spire with a glowing, floating prism in the middle, rotating clock-wise in irregular, slow intervals. <br>\
 	Their existence and origins are speculated upon; yet, the followers of Kasmidian are evident to be capable of procuring more of them."
 	icon = 'icons/obj/machines/teleport_beacon.dmi'
-	icon_state = "aetheryte_town"
 	anchored = TRUE
 	density = TRUE
 	pixel_x = -19
@@ -19,8 +18,8 @@
 	var/departure_price = 0
 	///The amount of coins it take to teleport to this beacon.
 	var/arrival_price = 0
-	///Boolean to identify outlaw-permitted beacons - the rest won't be.
-	var/fringe = FALSE
+	///Boolean to identify outlaw-permitted beacons. FALSE disallows outlaw use.
+	var/fringe = TRUE
 	///List of lines to spout when an outlaw's spotted.
 	var/criminal_lines = list(
 	"Criminal! Criminal!",
@@ -117,6 +116,8 @@
 	return ..()
 
 /obj/structure/roguemachine/teleport_beacon/main //'Main' town beacon, needed to synch every towner role to one.
+	icon_state = "aetheryte_town"
+	fringe = FALSE
 
 /obj/structure/roguemachine/teleport_beacon/wilderness
 	icon_state = "aetheryte_outside"
