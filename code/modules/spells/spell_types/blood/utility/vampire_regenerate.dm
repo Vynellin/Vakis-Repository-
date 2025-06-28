@@ -57,49 +57,21 @@
 		BSDrinker.vitae -= vitaedrain
 		to_chat(BSDrinker, span_greentext("! REGENERATE !"))
 		BSDrinker.playsound_local(get_turf(BSDrinker), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
-/*
+/* we can apply a buff and a glow if we want to telegraph this
 #define VAMPIRIC_FILTER "vampiric_glow"
 
 
-/datum/status_effect/buff/vampire_celerity/on_apply()
+/datum/status_effect/buff/vampire_regenerate/on_apply()
 	. = ..()
 	var/filter = owner.get_filter(VAMPIRIC_FILTER)
 	if (!filter)
 		owner.add_filter(VAMPIRIC_FILTER, 2, list("type" = "outline", "color" = "#8B0000", "alpha" = 100, "size" = 1))
 
-/datum/status_effect/buff/vampire_celerity/on_remove()
+/datum/status_effect/buff/vampire_regenerate/on_remove()
 	. = ..()
 	to_chat(owner, span_warning("My fortitude leaves me"))
 	owner.remove_filter(VAMPIRIC_FILTER)
 
 #undef VAMPIRIC_FILTER
 
-/obj/effect/proc_holder/spell/self/vampire_regenerate/cast(list/targets, mob/living/user = usr)
-	var/silver_curse_status = FALSE
-	var/mob/living/carbon/human/H = usr
-	var/temp_vitae = H.vitae
-
-	silver_curse_status = H.has_status_effect(/datum/status_effect/debuff/silver_curse)
-	if(silver_curse_status)
-		to_chat(H, span_warning("My BANE is not letting me heal!."))
-		return
-
-	if(!HAS_TRAIT(H,TRAIT_VAMPIRISM))
-		to_chat(H, span_warning("I'm not a vampire, what am I doing?"))
-		return
-	if(H.has_status_effect(/datum/status_effect/debuff/veil_up))
-		to_chat(H, span_warning("My curse is hidden."))
-		return
-	if(H.vitae < 600)
-		to_chat(H, span_warning("Not enough vitae."))
-		return
-	to_chat(H, span_greentext("! REGENERATE !"))
-	H.playsound_local(get_turf(H), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
-	
-	if(H.vitae > 600)
-		H.vitae -= temp_vitae/2
-	else
-		H.vitae -= 300
-	H.fully_heal()
-	H.regenerate_limbs()
 */

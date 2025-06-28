@@ -947,7 +947,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	if (H.stat != DEAD)
 		if(world.time % 5)
 			if (HAS_TRAIT(H, TRAIT_VAMPIRISM))//are they a vampire?
-				//if(GLOB.tod == "dawn")
+				//if(GLOB.tod == "dawn") //I would like to give a warning, but this got spammy, maybe someone else has an idea how to get this to notify users?
 				//	if(T.can_see_sky())
 				//		to_chat(H, "<span class='warning'>Day approaches! I need to raise my veil or get to cover!</span>")
 				if(H.has_status_effect(/datum/status_effect/buff/veil_down))//is their veil down
@@ -967,7 +967,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 											H.freak_out()
 											H.vitae -= 10
 			if(HAS_TRAIT(H,TRAIT_HOLY_WEAKNESS)) //check if someone has Holy weakness
-				if(isholy(T.loc))
+				if(isholyarea(T.loc))
 					if(!H.has_status_effect(/datum/status_effect/debuff/holy_curse))
 						H.apply_status_effect(/datum/status_effect/debuff/holy_curse)
 						if (HAS_TRAIT(H, TRAIT_VAMPIRISM)&& H.has_status_effect(/datum/status_effect/debuff/veil_up))

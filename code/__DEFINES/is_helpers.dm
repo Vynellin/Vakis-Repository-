@@ -69,7 +69,7 @@ GLOBAL_LIST_INIT(churchboundries, typecacheof(list(
 
 #define isintown(A) (is_type_in_typecache(A, GLOB.townboundries))
 
-#define isholy(A) (is_type_in_typecache(A, GLOB.churchboundries))
+#define isholyarea(A) (is_type_in_typecache(A, GLOB.churchboundries))
 
 #define isgroundlessturf(A) (is_type_in_typecache(A, GLOB.turfs_without_ground))
 

@@ -412,24 +412,24 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 /datum/game_mode/chaosmode/proc/pick_bloodsucker()
 	//restricted jobs, we should change this to the types
 	restricted_jobs = list(
+	//keep roles
 	/datum/job/roguetown/lord::title,
-	"Grand Duke",
-	"Consort",
-	"Dungeoneer",
-	"Inquisitor",
-	"Confessor",
-	"Watchman",
-	"Man at Arms",
-	"Priest",
-	"Acolyte",
-	"Cleric",
-	"Knight Captain",
-	"Court Magician",
-	"Templar",
-	"Bog Guard",
-	"Bog Master",
-	"Knight",
-	"Martyr",
+	/datum/job/roguetown/hand::title,
+	/datum/job/roguetown/captain::title,
+	/datum/job/roguetown/marshal::title,
+	/datum/job/roguetown/steward::title,
+	/datum/job/roguetown/knight::title,
+	//garrison roles
+	/datum/job/roguetown/guardsman::title,
+	/datum/job/roguetown/bogguardsman::title,
+	/datum/job/roguetown/sergeant::title,
+	/datum/job/roguetown/manorguard::title,
+	/datum/job/roguetown/squire::title,
+	//Church roles
+	/datum/job/roguetown/priest::title,
+	/datum/job/roguetown/acolyte::title,
+	/datum/job/roguetown/templar::title,
+	/datum/job/roguetown/churchling::title
 	)
 	var/suckersremaining = rand(1,3)
 	antag_candidates = get_players_for_role(ROLE_BLOODSUCKER)

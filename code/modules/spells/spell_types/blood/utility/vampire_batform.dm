@@ -28,30 +28,7 @@
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
 	vitaedrain = 100
-/*
-/obj/effect/proc_holder/spell/invoked/vampire_bat/cast(list/targets, mob/living/user = usr)
-	if(isliving(targets[1]))
-		var/mob/living/carbon/human/BSDrinker = targets[1]
-		if(!user)
-			return
-		if(!HAS_TRAIT(BSDrinker,TRAIT_VAMPIRISM))
-			to_chat(BSDrinker, span_warning("I'm not a vampire, what am I doing?"))
-			return
-		if(BSDrinker.has_status_effect(/datum/status_effect/debuff/veil_up))
-			to_chat(BSDrinker, span_warning("My curse is hidden."))
-			return
-		if(BSDrinker.vitae < vitaedrain)
-			to_chat(BSDrinker, span_warning("Not enough vitae."))
-			return
-		if(BSDrinker.has_status_effect(/datum/status_effect/buff/vampire_bat))
-			to_chat(BSDrinker, span_warning("Already active."))
-			return
-		BSDrinker.vitae -= vitaedrain
-		BSDrinker.apply_status_effect(/datum/status_effect/buff/vampire_bat)
-		to_chat(BSDrinker, span_greentext("! FORM OF BAT !"))
-		BSDrinker.playsound_local(get_turf(BSDrinker), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
-*/
-	
+
 
 /obj/effect/proc_holder/spell/targeted/shapeshift/vampire_bat/cast(list/targets, mob/living/user = usr)
 	var/mob/living/carbon/human/H = usr

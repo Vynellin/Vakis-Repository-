@@ -314,7 +314,7 @@
 //vampire related debuffs
 /atom/movable/screen/alert/status_effect/debuff/veil_up
 	name = "Vampires Veil"
-	desc = "raise my veil so others don't know"
+	desc = "raise my veil to protect me from the sun and to hide my true nature."
 	icon_state = "veil_up"
 
 /datum/status_effect/debuff/veil_up
@@ -327,16 +327,19 @@
 			var/mob/living/carbon/human/H = owner
 			var/vampskill = H.mind.get_skill_level(/datum/skill/magic/vampirism)
 			//less of a debutff them higher your vampirism level is
-			if(vampskill == 1) 
-				effectedstats = list("speed" = -2, "strength" = -2, "endurance" = -2)
-			if(vampskill == 2) 
-				effectedstats = list("speed" = -1, "strength" = -2, "endurance" = -1)
-			if(vampskill == 3) 
-				effectedstats = list("speed" = -1, "strength" = -1, "endurance" = -1)
-			if(vampskill == 5)
-				effectedstats = list("strength" = -1, "endurance" = -1)
-			if(vampskill == 6)
-				effectedstats = list("endurance" = -1)
+			switch(vampskill)
+				if(1) 
+					effectedstats = list("speed" = -2, "strength" = -2, "endurance" = -2)
+				if(2) 
+					effectedstats = list("speed" = -1, "strength" = -2, "endurance" = -2)
+				if(3) 
+					effectedstats = list("speed" = -1, "strength" = -1, "endurance" = -2)
+				if(4) 
+					effectedstats = list("speed" = -1, "strength" = -1, "endurance" = -1)
+				if(5)
+					effectedstats = list("strength" = -1, "endurance" = -1)
+				if(6)
+					effectedstats = list("endurance" = -1)
 			if(HAS_TRAIT(owner,TRAIT_WEAK_VEIL)) //if someone has a weak veil their vampirism level is just ignored
 				effectedstats = list("speed" = -3, "strength" = -3, "endurance" = -3)
 	return ..()
@@ -354,6 +357,7 @@
 	icon_state = "sleepy"
 
 //a few weaknesses that could be applied to vampires or other antags
+//makes you weak in the sun, applies to vampires with their veil down
 /datum/status_effect/debuff/sun_curse
 	id = "sun_curse"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/sun_curse
@@ -362,9 +366,10 @@
 
 /atom/movable/screen/alert/status_effect/debuff/sun_curse
 	name = "Sun Curse"
-	desc = "I need to get back to the shade"
+	desc = "The sun weakens me, I need to get back to the shade"
 	icon_state = "hunger3"
 
+//makes you weak being in salt water or having it thrown at you
 /datum/status_effect/debuff/salt_curse
 	id = "salt_curse"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/salt_curse
@@ -373,9 +378,10 @@
 
 /atom/movable/screen/alert/status_effect/debuff/salt_curse
 	name = "Salt Curse"
-	desc = "My BANE!"
+	desc = "My BANE! The salt weakens me!"
 	icon_state = "hunger3"
 
+//makes you weak for touching clean water or salt water, but not sewer or sludge water
 /datum/status_effect/debuff/water_curse
 	id = "water_curse"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/water_curse
@@ -384,9 +390,10 @@
 
 /atom/movable/screen/alert/status_effect/debuff/water_curse
 	name = "Water Curse"
-	desc = "My BANE!"
+	desc = "My BANE! Clean water weakens me!"
 	icon_state = "hunger3"
 
+//weakens those going into holy areas. 
 /datum/status_effect/debuff/holy_curse
 	id = "holy_curse"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/holy_curse
@@ -395,9 +402,10 @@
 
 /atom/movable/screen/alert/status_effect/debuff/holy_curse
 	name = "Holy Curse"
-	desc = "My BANE!"
+	desc = "My BANE! Holy areas weaken me!"
 	icon_state = "hunger3"
 
+//weakens creatures that want to see the sky
 /datum/status_effect/debuff/indoor_fear
 	id = "indoor_fear"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/indoor_fear
@@ -406,9 +414,10 @@
 
 /atom/movable/screen/alert/status_effect/debuff/indoor_fear
 	name = "Indoors"
-	desc = "Ugh, TOO CRAMPED!"
+	desc = "Ugh, TOO CRAMPED! I need to see the sky!"
 	icon_state = "hunger3"
 
+//weakens certain monsters and people for being in town
 /datum/status_effect/debuff/town_fear
 	id = "town_fear"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/town_fear

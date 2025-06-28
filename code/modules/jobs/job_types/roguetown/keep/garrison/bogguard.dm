@@ -17,7 +17,7 @@
 	min_pq = 0
 	max_pq = null
 	round_contrib_points = 2
-
+	virtue_restrictions = list(/datum/virtue/sucker/lesser_bloodsucker)
 	cmode_music = 'sound/music/combat_bog.ogg'
 
 /*Design philosophy: "Jack of all tades, master of.. few" - Peasent, so bow, axe, and polearm skill. Knows most combat skills, but other than those not great with them.

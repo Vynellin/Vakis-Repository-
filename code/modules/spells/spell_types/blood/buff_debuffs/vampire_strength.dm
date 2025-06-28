@@ -65,36 +65,4 @@
 	owner.remove_filter(VAMPIRIC_FILTER)
 
 #undef VAMPIRIC_FILTER
-/*
-/obj/effect/proc_holder/spell/self/vampire_strength/cast(list/targets, mob/living/user = usr)
-	var/mob/living/carbon/human/H = usr
 
-	if(!HAS_TRAIT(H,TRAIT_VAMPIRISM))
-		to_chat(H, span_warning("I'm not a vampire, what am I doing?"))
-		return
-	if(H.has_status_effect(/datum/status_effect/debuff/veil_up))
-		to_chat(H, span_warning("My curse is hidden."))
-		return
-	if(H.vitae < 100)
-		to_chat(H, span_warning("Not enough vitae."))
-		return
-	if(H.has_status_effect(/datum/status_effect/buff/vampire_strength))
-		to_chat(H, span_warning("Already active."))
-		return
-	H.vitae -= 100
-	H.apply_status_effect(/datum/status_effect/buff/vampire_strength)
-	to_chat(H, span_greentext("! NIGHT MUSCLES !"))
-	H.playsound_local(get_turf(H), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
-*/
-/* Here's the old spell
-/datum/status_effect/buff/blood_strength
-	id = "blood_strength"
-	alert_type = /atom/movable/screen/alert/status_effect/buff/blood_strength
-	effectedstats = list("strength" = 5)
-	duration = 1 MINUTES
-
-/atom/movable/screen/alert/status_effect/buff/blood_strength
-	name = "Night Muscles"
-	desc = ""
-	icon_state = "bleed1"
-*/

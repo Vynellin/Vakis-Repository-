@@ -6,7 +6,7 @@
 	job_rank = ROLE_BLOODSUCKER
 	antag_hud_type = ANTAG_HUD_TRAITOR
 	antag_hud_name = "vampire"
-//starting traits 
+	//starting traits 
 	var/list/inherent_traits = list(TRAIT_NOHUNGER, 
 									TRAIT_NOBREATH, 
 									TRAIT_TOXIMMUNE, 
@@ -16,17 +16,9 @@
 									TRAIT_VAMPMANSION, 
 									TRAIT_VAMP_DREAMS,
 									TRAIT_VAMPIRISM,)
-	//confession lines if caught, taken out since Solaris doesn't do interogations.
-	/*confess_lines = list(
-		"I WANT TO YOUR DRINK BLOOD!",
-		"BLOOD I MUST HAVE BLOOD!",
-		"LET ME DRINK OF YOUR BLOOD!",
-	)*/
 	rogue_enabled = TRUE
 	//starting disguised
 	var/disguised = TRUE
-	//starting vitae, moved this to 
-	//var/vitae = 1000 
 	var/last_transform
 	var/is_lesser = FALSE
 	//caching a players looks, this has not worked before
@@ -78,7 +70,7 @@
 	owner.current.cmode_music = 'sound/music/combat_vamp2.ogg'
 	owner.adjust_skillrank(/datum/skill/magic/vampirism, 1, TRUE)
 	owner.adjust_skillrank(/datum/skill/magic/blood, 1, TRUE)
-	if(!sired)
+	if(!new_bloodsucker)
 		owner.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 		owner.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 	owner.current.AddSpell(new /obj/effect/proc_holder/spell/targeted/vampire_transfix)
@@ -107,7 +99,7 @@
 		ancient_greet()
 	if ((!new_bloodsucker)&&(!ancient_bloodsucker))
 		//starting vampire points, raise or lower
-		owner.adjust_vamppoints(2)
+		owner.adjust_vamppoints(20)
 		forge_bloodsucker_objectives()
 		finalize_bloodsucker()
 		greet()
@@ -117,7 +109,6 @@
 	eyes.Remove(H)
 	H.cache_eyes = eyes.eye_color
 	eyes.Insert(H, TRUE, FALSE)
-	//H.cache_eyes = H.dna.features["eye_color"]
 	H.cache_hair = H.hair_color 
 	H.bloodsucker_disguise(H)
 
@@ -225,11 +216,6 @@
 						   TRAIT_EFFICIENT_DRINKER,
 						   TRAIT_NOVEGAN,
 						   TRAIT_PERMADUST,)
-	/*confess_lines = list(
-		"THE CRIMSON CALLS!",
-		"MY MASTER COMMANDS",
-		"THE SUN IS ENEMY!",
-	)*/
 	new_bloodsucker = TRUE
 
 
@@ -327,14 +313,6 @@
 	. = ..()
 	GLOB.vlord_starts += loc
 
-/* this is only for testing.
-/mob/living/carbon/human/verb/become_bloodsucker()
-	//set category = "DEBUGTEST"
-	set name = "BLOODSUCKER"
-	if(mind)
-		var/datum/antagonist/bloodsucker/new_antag = new /datum/antagonist/bloodsucker()
-		mind.add_antag_datum(new_antag)
-*/
 //skin and hair color customizations		
 /datum/antagonist/bloodsucker/proc/choose_skin_popup(mob/user)
 	if(QDELETED(src))
@@ -399,3 +377,12 @@
 	BSDrinker.antag_headshot_link = new_headshot_link
 	to_chat(user, "<span class='notice'>Successfully updated Antag headshot picture</span>")
 	log_game("[user] has set their Antag Headshot image to '[BSDrinker.antag_headshot_link]'.")
+
+/* this is only for testing.
+/mob/living/carbon/human/verb/become_bloodsucker()
+	//set category = "DEBUGTEST"
+	set name = "BLOODSUCKER"
+	if(mind)
+		var/datum/antagonist/bloodsucker/new_antag = new /datum/antagonist/bloodsucker()
+		mind.add_antag_datum(new_antag)
+*/

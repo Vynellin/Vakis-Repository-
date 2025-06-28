@@ -66,32 +66,3 @@
 
 #undef VAMPIRIC_FILTER
 
-/*
-/obj/effect/proc_holder/spell/self/vampire_celerity/cast(list/targets, mob/living/user = usr)
-	var/mob/living/carbon/human/H = usr
-	//var/temp_vitae = H.vitae //use this to store vitae if we need a dynamic cost
-
-	/*Left here if we want to nerf a skill with a silver curse
-	silver_curse_status = H.has_status_effect(/datum/status_effect/debuff/silver_curse)
-	if(silver_curse_status)
-		to_chat(H, span_warning("My BANE is not letting me use this ability!."))
-		return */
-
-	if(!HAS_TRAIT(H,TRAIT_VAMPIRISM))
-		to_chat(H, span_warning("I'm not a vampire, what am I doing?"))
-		return
-	if(H.has_status_effect(/datum/status_effect/debuff/veil_up))
-		to_chat(H, span_warning("My curse is hidden."))
-		return
-	if(H.vitae < 100)
-		to_chat(H, span_warning("Not enough vitae."))
-		return
-	if(H.has_status_effect(/datum/status_effect/buff/vampire_celerity))
-		to_chat(H, span_warning("Already active."))
-		return
-	H.vitae -= 100
-	H.rogstam_add(2000)
-	H.apply_status_effect(/datum/status_effect/buff/vampire_celerity)
-	to_chat(H, span_greentext("! SPEED OF DARKNESS !"))
-	H.playsound_local(get_turf(H), 'sound/misc/vampirespell.ogg', 100, FALSE, pressure_affected = FALSE)
-*/

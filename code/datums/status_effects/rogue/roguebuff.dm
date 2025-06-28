@@ -751,7 +751,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/veil_down
 	name = "Vampires Veil Down"
-	desc = "I have no veil, I feel stronger"
+	desc = "I have no veil, I feel stronger but I'm weak under the sun"
 	icon_state = "veil_down"
 
 /datum/status_effect/buff/veil_down
@@ -772,40 +772,40 @@
 
 /atom/movable/screen/alert/status_effect/buff/vampire_fortitude
 	name = "Blood Fortitude"
-	desc = "My blood protects me"
+	desc = "My blood protects me!"
 	icon_state = "vampire_fortitude"
 
 /datum/status_effect/buff/vampire_fortitude
 	id = "vampire_fortitude"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/vampire_fortitude
-	effectedstats = list("constitution" = 5)
+	effectedstats = list("constitution" = 4)
 	duration = 60 SECONDS
 
 /atom/movable/screen/alert/status_effect/buff/vampire_strength
 	name = "Blood Strength"
-	desc = "My blood gives me power"
+	desc = "My blood gives me power!"
 	icon_state = "vampire_strength"
 
 /datum/status_effect/buff/vampire_strength
 	id = "vampire_strength"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/vampire_strength
-	effectedstats = list("strength" = 5)
+	effectedstats = list("strength" = 4)
 	duration = 60 SECONDS
 
 /atom/movable/screen/alert/status_effect/buff/vampire_celerity
 	name = "Blood Celerity"
-	desc = "My blood gives me speed"
+	desc = "My blood gives me speed!"
 	icon_state = "vampire_celerity"
 
 /datum/status_effect/buff/vampire_celerity
 	id = "vampire_celerity"
 	alert_type = /atom/movable/screen/alert/status_effect/buff/vampire_celerity
-	effectedstats = list("speed" = 5)
+	effectedstats = list("speed" = 4)
 	duration = 60 SECONDS
 
 /atom/movable/screen/alert/status_effect/buff/vampire_float
 	name = "Float"
-	desc = "My body is floating off the ground"
+	desc = "My body is floating off the ground."
 	icon_state = "vampire_float"
 
 /datum/status_effect/buff/vampire_float
@@ -815,14 +815,14 @@
 
 /datum/status_effect/buff/vampire_float/on_apply()
 	. = ..()
-	to_chat(owner, span_warning("I am hovering off the ground"))
+	to_chat(owner, span_warning("I am hovering off the ground."))
 	owner.movement_type = FLYING
 
 
 
 /datum/status_effect/buff/vampire_float/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("I fallback to the ground"))
+	to_chat(owner, span_warning("I fall back to the ground."))
 	owner.movement_type = GROUND
 
 	
@@ -830,7 +830,7 @@
 //this applies thermals, which may allow people to look into scenes. May need to restrict for Solaris
 /atom/movable/screen/alert/status_effect/buff/vampire_blood_vision
 	name = "Blood Vision"
-	desc = "I can sense them, their heartbats"
+	desc = "I can sense them, their heartbeats."
 	icon_state = "buff"
 
 /datum/status_effect/buff/vampire_blood_vision
@@ -840,17 +840,17 @@
 
 /datum/status_effect/buff/vampire_blood_vision/on_apply()
 	. = ..()
-	to_chat(owner, span_warning("I can sense them around me"))
+	to_chat(owner, span_warning("I can sense them around me."))
 	ADD_TRAIT(owner, TRAIT_THERMAL_VISION, MAGIC_TRAIT)
 
 /datum/status_effect/buff/vampire_blood_vision/on_remove()
 	. = ..()
-	to_chat(owner, span_warning("I no longer sense them"))
+	to_chat(owner, span_warning("I no longer sense them."))
 	REMOVE_TRAIT(owner, TRAIT_THERMAL_VISION, MAGIC_TRAIT)
 
 /atom/movable/screen/alert/status_effect/buff/vampire_bat
 	name = "batform"
-	desc = "I've transformed into a bat"
+	desc = "I've transformed into a bat!"
 	icon_state = "vampire_bat"
 
 /datum/status_effect/buff/vampire_bat
@@ -860,7 +860,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/vampire_mistform
 	name = "mistform"
-	desc = "I've transformed into mist"
+	desc = "I've transformed into mist!"
 	icon_state = "vampire_mistform"
 
 /datum/status_effect/buff/vampire_mistform
