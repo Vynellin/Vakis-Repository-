@@ -19,8 +19,6 @@
 	var/departure_price = 0
 	///The amount of coins it take to teleport to this beacon.
 	var/arrival_price = 0
-	///Boolean to identify the main beacon; automatically synchronises to every towner.
-	var/main = FALSE
 	///Boolean to identify outlaw-permitted beacons - the rest won't be.
 	var/fringe = FALSE
 	///List of lines to spout when an outlaw's spotted.
@@ -37,11 +35,11 @@
 	name = custom_name ? "[custom_name] Kasmidian beacon" : "[get_area(get_turf(src))] Kasmidian beacon"
 	SSroguemachine.teleport_beacons += src
 
-/obj/structure/handcart/examine(mob/user)
+/obj/structure/roguemachine/teleport_beacon/examine(mob/user)
 	. = ..()
 	if(fringe)
 		. += span_notice("This beacon is old and ailing - perhaps some <b>unsavory elements</b> would have an easier time of getting through it.")
-	. += span_notice("It costs <b>[departure_price]</b> to depart from, and <b>[arrival_price]</b> to arrive to this beacon.")
+	. += span_notice("It costs <b>[departure_price]</b> marks to depart from, and <b>[arrival_price]</b> marks to arrive to this beacon.")
 
 /obj/structure/roguemachine/teleport_beacon/attack_hand(mob/living/user)
 	. = ..()
@@ -118,8 +116,7 @@
 	SSroguemachine.teleport_beacons -= src
 	return ..()
 
-/obj/structure/roguemachine/teleport_beacon/main
-	main = TRUE
+/obj/structure/roguemachine/teleport_beacon/main //'Main' town beacon, needed to synch every towner role to one.
 
 /obj/structure/roguemachine/teleport_beacon/wilderness
 	icon_state = "aetheryte_outside"

@@ -20,6 +20,13 @@
 
 	cmode_music = 'sound/music/combat_bog.ogg'
 
+/datum/job/roguetown/bogguardsman/after_spawn(mob/living/L, mob/M, latejoin = TRUE)
+	..()
+	for(var/obj/structure/roguemachine/teleport_beacon/main/town_beacon in SSroguemachine.teleport_beacons)
+		var/mob/living/carbon/human/H = L
+		if(!(H.real_name in town_beacon.granted_list))
+			town_beacon.granted_list += H.real_name
+
 /*Design philosophy: "Jack of all tades, master of.. few" - Peasent, so bow, axe, and polearm skill. Knows most combat skills, but other than those not great with them.
 Also given some non-combat skills that a peasent would have, just to support themselves, but not anything to replace soilsons with.*/
 /datum/outfit/job/roguetown/bogguardsman/pre_equip(mob/living/carbon/human/H)
