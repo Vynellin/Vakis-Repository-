@@ -346,51 +346,112 @@ decreases charge time if held opened in hand, for pure mage build + aesthetics.
 	var/corresponding_patron
 	var/mob/living/carbon/owner
 
+/obj/item/book/spellbook/warlock/attack_right(mob/user)
+	if(owner && user != owner)
+		to_chat(user, span_warning("The tome shudders in your hand. It refuses to obey you."))
+		return
+	. = ..()
+
+/obj/item/book/spellbook/warlock/get_cdr()
+	return 0.3 //The old forgotten tome you got as your side of the contract is slightly better than a gem book.
+
+/obj/item/book/spellbook/warlock/Initialize()
+	. = ..()
+
+	var/list/tier_1_spells = list()
+	var/list/tier_2_spells = list()
+	var/list/tier_3_spells = list()
+
+	for (var/spell_path in GLOB.learnable_spells)
+		if (!ispath(spell_path, /obj/effect/proc_holder/spell)) continue
+		var/obj/effect/proc_holder/spell/S = spell_path
+		var/tier = initial(S.spell_tier)
+		switch (tier)
+			if (1)
+				tier_1_spells += spell_path
+			if (2)
+				tier_2_spells += spell_path
+			if (3)
+				tier_3_spells += spell_path
+
+	if (length(tier_1_spells))
+		spell1 = pick(tier_1_spells)
+	if (length(tier_2_spells))
+		spell2 = pick(tier_2_spells)
+	if (length(tier_3_spells))
+		spell3 = pick(tier_3_spells)
+
+/obj/item/book/spellbook/warlock/equipped(mob/living/user)
+	. = ..()
+	if(owner != user)
+		to_chat(user, span_warning("The tome stays inert in your hands. Its secrets are not meant for you."))
+		return
+	if(active_item)
+		return
+	active_item = TRUE
+	to_chat(user, span_notice("Your mind swells with knowledge"))
+	user.change_stat("intelligence", 1)
+	user.mind.AddSpell(new spell1)
+	user.mind.AddSpell(new spell2)
+	user.mind.AddSpell(new spell3)
+
+/obj/item/book/spellbook/warlock/dropped(mob/living/user)
+	. = ..()
+	if(owner != user)
+		return
+	if(active_item)
+		to_chat(user, span_notice("Your intellect shrinks away"))
+		user.change_stat("intelligence", -1)
+		user.mind.RemoveSpell(spell1)
+		user.mind.RemoveSpell(spell2)
+		user.mind.RemoveSpell(spell3)
+		active_item = FALSE
+
 /obj/item/book/spellbook/warlock/verdant_court
-	icon_state = "wyrdback"
-	base_icon_state = "wyrdback"
+	icon_state = "wyrdbark_0"
+	base_icon_state = "wyrdbark"
 	name = "wyrdbark codex"
 	desc = "Bound in living wood and leaf-vein vellum, this tome hums softly. Its ink smells faintly of moss, and the runes twist like vines when read aloud."
 	corresponding_patron = "The Verdant Court"
 
 /obj/item/book/spellbook/warlock/radiant_ember
-	icon_state = "sunfire"
+	icon_state = "sunfire_0"
 	base_icon_state = "sunfire"
 	name = "sunfire lexicon"
 	desc = "A tome gilded with divine warmth, its pages almost too bright to read. Words blaze with radiant clarity, offering guidance and judgment in equal measure."
 
 /obj/item/book/spellbook/warlock/drowned_choir
-	icon_state = "abyssal_psalter"
+	icon_state = "abyssal_psalter_0"
 	base_icon_state = "abyssal_psalter"
 	name = "abyssal psalter"
 	desc = "Waterlogged and salt-stained, this book sings in whispers only its bearer can truly understand. Each page feels wet to the touch, yet never smears."
 
 /obj/item/book/spellbook/warlock/ashen_pact
-	icon_state = "cindergrasp"
+	icon_state = "cindergrasp_0"
 	base_icon_state = "cindergrasp"
 	name = "cindergrasp testament"
 	desc = "This scorched tome crackles with heatless flame. The margins are seared with forgotten contracts, and the ink burns red when read."
 
 /obj/item/book/spellbook/warlock/bound_whisper
-	icon_state = "vessel_concord"
+	icon_state = "vessel_concord_0"
 	base_icon_state = "vessel_concord"
 	name = "vessel's concord"
 	desc = "Cork-sealed and whisper-bound, this book flickers with promises. Pages turn themselves, eager to bargain, to bargain, to bargain..."	
 
 /obj/item/book/spellbook/warlock/hollow_voice
-	icon_state = "silence_that"
+	icon_state = "silence_that_0"
 	base_icon_state = "silence_that"
 	name = "silence that listens"
 	desc = "A hollow book that never fully opens, filled with inkless script that imprints directly onto the mind. Reading it always leaves you with the sensation of being watched."
 
 /obj/item/book/spellbook/warlock/wakened_blade
-	icon_state = "edgebound"
+	icon_state = "edgebound_0"
 	base_icon_state = "edgebound"
 	name = "edgebound chronicle"
 	desc =  "Bound in leather stretched over a blade's tang, this tome shimmers faintly. Diagrams shift between warforms and invocations depending on who reads it"
 
 /obj/item/book/spellbook/warlock/pale_crown
-	icon_state = "sovreign_remnant"
+	icon_state = "sovreign_remnant_0"
 	base_icon_state = "sovreign_remnant"
 	name = "sovreign's remnant"
 	desc =  "This regal tome's pages are made of ancient looking vellum, adorned with silver thread binding and glyphs. Its pages whisper of ancient thrones and the price of eternity."

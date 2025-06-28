@@ -75,7 +75,7 @@
 	// Apply the booming blade debuff to the target
 	target.apply_status_effect(/datum/status_effect/buff/boomingblade)
 	// Optionally notify the user
-	user.visible_message(span_info("[target] is crackling with booming energy!"))
+	user.visible_message(span_info("[target] is crackling with thunderous energy!"))
 	// Remove this buff since it’s used up
 	owner.remove_status_effect(src)
 

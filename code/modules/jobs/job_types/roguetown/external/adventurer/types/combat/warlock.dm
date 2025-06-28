@@ -90,7 +90,7 @@
 			human.change_stat("constitution", 1)
 			human.set_blindness(0)
 			human.mind.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
-			mind.adjust_skillrank_by_up_to(/datum/skill/combat/swords, 3, SKILL_LEVEL_EXPERT)
+			human.mind.adjust_skillrank_by_up_to(/datum/skill/combat/swords, 3, SKILL_LEVEL_EXPERT)
 		if("Gold that never feels warm") //Pact of the Talisman
 			human.put_in_hands(giveamulet(patronchoice), FALSE)
 			beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
@@ -455,59 +455,6 @@
 	var/obj/item/book/spellbook/warlock/book = new type
 	book.owner = user
 	return book
-
-/obj/item/book/spellbook/warlock/get_cdr()
-	return 0.3 //The old forgotten tome you got as your side of the contract is slightly better than a gem book.
-
-/obj/item/book/spellbook/warlock/Initialize()
-	. = ..()
-
-	var/list/tier_1_spells = list()
-	var/list/tier_2_spells = list()
-	var/list/tier_3_spells = list()
-
-	for (var/spell_path in GLOB.learnable_spells)
-		if (!ispath(spell_path, /obj/effect/proc_holder/spell)) continue
-		var/obj/effect/proc_holder/spell/S = spell_path
-		var/tier = initial(S.spell_tier)
-		switch (tier)
-			if (1)
-				tier_1_spells += spell_path
-			if (2)
-				tier_2_spells += spell_path
-			if (3)
-				tier_3_spells += spell_path
-
-	if (length(tier_1_spells))
-		spell1 = pick(tier_1_spells)
-	if (length(tier_2_spells))
-		spell2 = pick(tier_2_spells)
-	if (length(tier_3_spells))
-		spell3 = pick(tier_3_spells)
-
-/obj/item/book/spellbook/warlock/equipped(mob/living/user)
-	. = ..()
-	if(active_item)
-		return
-	else
-		active_item = TRUE
-		to_chat(user, span_notice("Your mind swells with knowledge"))
-		user.change_stat("intelligence", 1)
-		user.mind.AddSpell(new spell1)
-		user.mind.AddSpell(new spell2)
-		user.mind.AddSpell(new spell3)
-		return
-
-/obj/item/book/spellbook/warlock/dropped(mob/living/user)
-	. = ..()
-	if(active_item)
-		to_chat(user, span_notice("Your intellect shrinks away"))
-		user.change_stat("intelligence", -1)
-		user.mind.RemoveSpell(spell1)
-		user.mind.RemoveSpell(spell2)
-		user.mind.RemoveSpell(spell3)
-		active_item = FALSE
-		return
 
 ///////////////////////////////
 //	Weapon of X

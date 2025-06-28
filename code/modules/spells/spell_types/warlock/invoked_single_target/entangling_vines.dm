@@ -13,7 +13,7 @@
 /obj/effect/proc_holder/spell/invoked/entangling_vines/cast(list/targets, mob/living/user)
 	var/mob/living/target = targets[1]
 
-	if(!target || !isliving(target))
+	if(!target || (!isliving(target) && !istype(target, /turf/open)))
 		to_chat(user, span_notice("Invalid target for entangling vines."))
 		return FALSE
 
