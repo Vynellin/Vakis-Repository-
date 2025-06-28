@@ -11,13 +11,12 @@
 	var/mob/living/weapon_owner
 	var/personality = "zealous"
 
-/datum/component/singing_item/Initialize(mob/living/carbon/human, patronchoice, item)
+/datum/component/singing_item/Initialize(mob/living/carbon/human/human_owner, patronchoice, item)
 	if(!isitem(item))
 		return COMPONENT_INCOMPATIBLE
 
-	if(ismob(human))
-		weapon_owner = human
-		personality = get_patron_personality(patronchoice)
+	weapon_owner = human_owner.real_name
+	personality = get_patron_personality(patronchoice)
 
 	return ..()
 
@@ -75,7 +74,7 @@
 
 	var/list/dialogue_pool
 
-	if(user == weapon_owner || !weapon_owner)
+	if(user.real_name == weapon_owner.real_name)
 		dialogue_pool = GLOB.weapon_personality_dialog[personality][action]
 	else
 		dialogue_pool = GLOB.weapon_personality_dialog[personality]["[action]_other"]
