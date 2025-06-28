@@ -29,6 +29,8 @@
 	xp_gain = TRUE
 	miracle = FALSE
 
+	ignore_fiendkiss = FALSE
+
 /obj/effect/proc_holder/spell/self/frostbolt/cast(mob/user = usr)
 	var/mob/living/target = user
 	target.visible_message(span_warning("[target] hurls a frosty beam!"), span_notice("You hurl a frosty beam!"))
