@@ -100,6 +100,10 @@
 	var/list/summons_list = list() //List of summons, used to quickly update their factions in case of a faction change.
 	var/list/summons_additional_factions = list() //saves any factions added by the "Mark of the Gravebound" spell so future summons get those added too.
 
+	var/capped_arcane_melee = SKILL_LEVEL_CAPPED_ARCANE_CASTER //Numeral, used to cap arcane using melee weapon on some classes. Well on Warlock.
+	var/obj/item/warlock_weapon  // Saves the warlock summoned weapon if any.
+	var/warlock_weapon_type  // Saves the selected weapontype if replacement needed.
+
 /datum/mind/New(key)
 	src.key = key
 	soulOwner = src
@@ -434,6 +438,19 @@
 /datum/mind/proc/get_skill_level(skill)
 	var/datum/skill/S = GetSkillRef(skill)
 	return known_skills[S] || SKILL_LEVEL_NONE
+
+///Helper proc that lets us manually cap skill level taken into account for weapon checks.
+/datum/mind/proc/get_skill_level_capped(skill)
+	var/datum/skill/checked_skill = GetSkillRef(skill)
+	if(!checked_skill)
+		return SKILL_LEVEL_NONE
+
+	var/level = known_skills[checked_skill] || SKILL_LEVEL_NONE
+
+	if(istype(checked_skill, /datum/skill/magic/arcane) && isnum(src.capped_arcane_melee))
+		return min(level, capped_arcane_melee)
+
+	return level
 
 /datum/mind/proc/print_levels(user)
 	var/list/shown_skills = list()

@@ -1901,6 +1901,7 @@
 #include "code\modules\spells\spell_types\warlock\invoked_single_target\eldritch_healing.dm"
 #include "code\modules\spells\spell_types\warlock\invoked_single_target\entangling_vines.dm"
 #include "code\modules\spells\spell_types\warlock\invoked_single_target\infestation.dm"
+#include "code\modules\spells\spell_types\warlock\misc\summon_pact_weapon.dm"
 #include "code\modules\spells\spell_types\warlock\projectiles_single\eldritch_blast.dm"
 #include "code\modules\spells\spell_types\wizard\learnspell.dm"
 #include "code\modules\spells\spell_types\wizard\spell_list.dm"

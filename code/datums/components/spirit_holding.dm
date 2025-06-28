@@ -13,7 +13,16 @@
 	/// Allows exorcism
 	var/allow_exorcism
 	///mob contained in the item.
-	var/mob/living/simple_animal/hostile/rogue/haunt/bound_spirit
+	var/mob/living/spirit/bound_spirit
+
+/mob/living/spirit
+	name = "a spirit"
+	desc = "you should probably not see this."
+	base_intents = list(INTENT_HELP)
+	var/atom/movable/host_item
+
+/mob/living/spirit/Move(atom/newloc, direct, glide_size_override)
+	return FALSE
 
 /datum/component/spirit_holding/Initialize(datum/mind/soul_to_bind, mob/awakener, allow_renaming = TRUE, allow_channeling = TRUE, allow_exorcism = FALSE)
 	if(!ismovable(parent)) //you may apply this to mobs, i take no responsibility for how that works out
@@ -41,7 +50,7 @@
 /datum/component/spirit_holding/proc/on_examine(datum/source, mob/user, list/examine_list)
 	SIGNAL_HANDLER
 	if(!bound_spirit)
-		examine_list += span_notice("[parent] sleeps.[allow_channeling ? " Use [parent] in your hands to attempt to awaken it." : ""]")
+		examine_list += span_notice("[parent] sleeps.[allow_channeling ? " Use MMB on [parent] in your hands to attempt to awaken it." : ""]")
 		return
 	examine_list += span_notice("[parent] is alive.")
 
@@ -53,6 +62,9 @@
 /datum/component/spirit_holding/proc/get_ghost(mob/user)
 	if(attempting_awakening)
 		to_chat(user, span_notice("already channeling!"))
+		return
+	if(bound_spirit)
+		to_chat(user, span_notice("The weapon already has a spirit within."))
 		return
 	if(!allow_channeling && bound_spirit)
 		to_chat(user, span_warning("Try as you might, the spirit within slumbers."))
@@ -68,7 +80,11 @@
 		attempting_awakening = FALSE
 
 /// On conclusion of the ghost poll
-/datum/component/spirit_holding/proc/affix_spirit(mob/awakener, mob/ghost)
+/datum/component/spirit_holding/proc/affix_spirit(mob/awakener, mob/dead/new_player/ghost)
+	if(bound_spirit)
+		to_chat(ghost, span_notice("Another spirit already inhabits this vessel."))
+		return
+
 	if(!ghost || isnull(ghost))
 		to_chat(awakener, span_notice("The weapon is silent..."))
 		attempting_awakening = FALSE
@@ -80,6 +96,7 @@
 		to_chat(ghost, span_userdanger("The new vessel for your spirit has been destroyed! You remain an unbound ghost."))
 		return
 
+	ghost.close_spawn_windows()
 	bind_the_soule(ghost.mind, awakener)
 
 	attempting_awakening = FALSE
@@ -96,6 +113,7 @@
 	chosen_spirit.transfer_to(bound_spirit)
 	bound_spirit.fully_replace_character_name(null, "The spirit of [name_override ? name_override : parent]")
 	bound_spirit.grant_all_languages(omnitongue=TRUE)
+	bound_spirit.host_item = parent
 
 /**
  * custom_name : Simply sends a tgui input text box to the blade asking what name they want to be called, and retries it if the input is invalid.
@@ -117,3 +135,13 @@
 	SIGNAL_HANDLER
 	to_chat(bound_spirit, span_userdanger("You were destroyed!"))
 	QDEL_NULL(bound_spirit)
+
+/mob/living/spirit/say(message, ignore_muting = FALSE)
+	if(!host_item || !ismovable(host_item))
+		return ..() // fallback to normal say if no host item
+
+	host_item.visible_message("[message]")
+
+	log_say("[src.key]/[src.real_name] (spirit in [host_item]): [message]")
+	return TRUE
+

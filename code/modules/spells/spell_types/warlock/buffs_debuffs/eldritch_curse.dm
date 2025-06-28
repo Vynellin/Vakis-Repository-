@@ -44,7 +44,7 @@
 	id = "eldritchcurse"
 	effectedstats = list("fortune" = -4) // This default case will be overridden for warlocks. Low luck is the closest to a "generic" curse, randomly failing a bit at everything.
 	alert_type = /atom/movable/screen/alert/status_effect/buff/eldritchcurse
-	duration = -1
+	duration = 10 MINUTES
 
 /datum/status_effect/buff/eldritchcurse/archfey
 	effectedstats = list("intelligence" = -2, "fortune" = -2)
@@ -62,7 +62,7 @@
 	effectedstats = list("intelligence" = -2, "constitution" = -2)
 
 /datum/status_effect/buff/eldritchcurse/hexblade
-	effectedstats = list("speed" = -2,"strength" = -2)
+	effectedstats = list("speed" = -1,"strength" = -1)
 
 /datum/status_effect/buff/eldritchcurse/undead
 	effectedstats = list("constitution" = -4)

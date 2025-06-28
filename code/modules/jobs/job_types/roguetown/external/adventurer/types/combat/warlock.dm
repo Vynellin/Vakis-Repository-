@@ -24,6 +24,8 @@
 	neck = null
 	human.mind.adjust_spellpoints(2)
 	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
+	human.mind.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 1, TRUE)
+	human.mind.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 1, TRUE)
 	var/patrons = list(
 		"The Verdant Court",        // Formerly "archfey"
 		"The Radiant Ember",        // Formerly "celestial"
@@ -204,6 +206,7 @@
 	ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_WATERBREATHING, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee subclass
+	human.mind.capped_arcane_melee = SKILL_LEVEL_CAPPED_ARCANE_MELEE
 
 	human.visible_message(span_info("The sea sang to me once. I haven't been able to stop hearing it since."))
 
@@ -264,6 +267,7 @@
 
 	ADD_TRAIT(human, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee Subclass
+	human.mind.capped_arcane_melee = SKILL_LEVEL_CAPPED_ARCANE_MELEE
 
 
 	human.visible_message(span_info("There was a voice in a jar, a bottle, a name. I let it out. Or it let me in."))
@@ -332,6 +336,7 @@
 
 	ADD_TRAIT(human, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee Subclass
+	human.mind.capped_arcane_melee = SKILL_LEVEL_CAPPED_ARCANE_MELEE
 
 	human.visible_message(span_info("The weapon spoke first. I only answered. Now it never leaves."))
 
@@ -368,6 +373,7 @@
 	ADD_TRAIT(human, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_NOSTINK, TRAIT_GENERIC)
 	ADD_TRAIT(human, TRAIT_ARCANE_T2, TRAIT_GENERIC) //Melee subclass
+	human.mind.capped_arcane_melee = SKILL_LEVEL_CAPPED_ARCANE_MELEE
 
 	human.visible_message(span_info("I stepped into a place no longer remembered, and something followed me out."))
 
@@ -463,65 +469,41 @@
 
 /datum/outfit/job/roguetown/adventurer/warlock/proc/giveweapon(mob/living/carbon/human/human, patronchoice)
 	human.mind.adjust_skillrank_up_to(/datum/skill/magic/arcane, 3, TRUE)
-	
+
 	var/weapons_choice = list(
-		"Axe",
-		"Battleaxe",
-		"Cleaver",
-		"Dagger",
-		"Flail",
-		"Goden",
-		"Greatsword",
-		"Halberd",
-		"Longsword",
-		"Mace",
-		"Peasant war flail",
-		"Rapier",
-		"Scythe",
-		"Spear",
-		"Whip",
+		"Axe", "Battleaxe", "Cleaver", "Dagger", "Flail", "Goden",
+		"Greatsword", "Halberd", "Longsword", "Mace", "Peasant war flail",
+		"Rapier", "Scythe", "Spear", "Whip"
 	)
 
 	var/weapon_chosen = input("Choose your sentient weapon", "Available weapons") as anything in weapons_choice
 	var/item_type
 
 	switch(weapon_chosen)
-		if("Axe")
-			item_type = /obj/item/rogueweapon/stoneaxe/woodcut/steel
-		if("Battleaxe")
-			item_type = /obj/item/rogueweapon/stoneaxe/battle
-		if("Cleaver")
-			item_type = /obj/item/rogueweapon/huntingknife/cleaver
-		if("Dagger")
-			item_type = /obj/item/rogueweapon/huntingknife/idagger/steel
-		if("Flail")
-			item_type = /obj/item/rogueweapon/flail/sflail
-		if("Goden")
-			item_type = /obj/item/rogueweapon/mace/goden/steel
-		if("Greatsword")
-			item_type = /obj/item/rogueweapon/greatsword
-		if("Halberd")
-			item_type = /obj/item/rogueweapon/halberd
-		if("Longsword")
-			item_type = /obj/item/rogueweapon/sword/long
-		if("Mace")
-			item_type = /obj/item/rogueweapon/mace/steel
-		if("Peasant war flail")
-			item_type = /obj/item/rogueweapon/flail/peasantwarflail
-		if("Rapier")
-			item_type = /obj/item/rogueweapon/sword/rapier
-		if("Scythe")
-			item_type = /obj/item/rogueweapon/sickle/scythe
-		if("Spear")
-			item_type = /obj/item/rogueweapon/spear
-		if("Whip")
-			item_type = /obj/item/rogueweapon/whip
+		if("Axe") item_type = /obj/item/rogueweapon/stoneaxe/woodcut/steel
+		if("Battleaxe") item_type = /obj/item/rogueweapon/stoneaxe/battle
+		if("Cleaver") item_type = /obj/item/rogueweapon/huntingknife/cleaver
+		if("Dagger") item_type = /obj/item/rogueweapon/huntingknife/idagger/steel
+		if("Flail") item_type = /obj/item/rogueweapon/flail/sflail
+		if("Goden") item_type = /obj/item/rogueweapon/mace/goden/steel
+		if("Greatsword") item_type = /obj/item/rogueweapon/greatsword
+		if("Halberd") item_type = /obj/item/rogueweapon/halberd
+		if("Longsword") item_type = /obj/item/rogueweapon/sword/long
+		if("Mace") item_type = /obj/item/rogueweapon/mace/steel
+		if("Peasant war flail") item_type = /obj/item/rogueweapon/flail/peasantwarflail
+		if("Rapier") item_type = /obj/item/rogueweapon/sword/rapier
+		if("Scythe") item_type = /obj/item/rogueweapon/sickle/scythe
+		if("Spear") item_type = /obj/item/rogueweapon/spear
+		if("Whip") item_type = /obj/item/rogueweapon/whip
 
-	var/obj/item/item
-	item = new item_type
+	var/obj/item/item = new item_type
 	item.AddComponent(/datum/component/pact_weapon, human, patronchoice)
 	item.AddComponent(/datum/component/singing_item, human, patronchoice, item)
 	item.AddComponent(/datum/component/spirit_holding, null, null)
+	
+	human.mind.warlock_weapon = item
+	human.mind.warlock_weapon_type = item_type
+
 	return item
 
 ///////////////////////////////
