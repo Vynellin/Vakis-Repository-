@@ -29,7 +29,6 @@
 	aggro_vision_range = 8
 	limb_destroyer = 0 // seems strong
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES
-	obj_damage = 1
 	retreat_distance = 0
 	minimum_distance = 0
 	milkies = FALSE
