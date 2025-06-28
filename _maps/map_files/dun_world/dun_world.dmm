@@ -8113,7 +8113,8 @@
 "cOA" = (
 /obj/structure/lever{
 	name = "The End Of Merryment";
-	redstone_id = "toyboxjumpscare"
+	redstone_id = "toyboxjumpscare";
+	desc = "You get the express feeling pulling this one would be a bad idea."
 	},
 /turf/open/floor/rogue/tile/brick,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -8379,10 +8380,6 @@
 "cTq" = (
 /obj/structure/fluff/walldeco/bigpainting/lake,
 /obj/structure/fluff/clockwork/clockgolem_remains,
-/obj/structure/mirror{
-	pixel_x = -28;
-	pixel_y = 0
-	},
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "cTy" = (
@@ -13303,6 +13300,9 @@
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/tile/masonic/spiral,
 /area/provincial/underground/dungeon/vulnafir)
+"eAc" = (
+/turf/open/floor/rogue/rooftop/green,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "eAe" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
 /obj/structure/roguemachine/scomm/directional/north,
@@ -21582,6 +21582,14 @@
 /obj/item/reagent_containers/food/snacks/smallrat,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/farm)
+"hhH" = (
+/obj/structure/fluff/railing/fence{
+	dir = 4
+	},
+/turf/open/floor/rogue/rooftop{
+	dir = 1
+	},
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "hij" = (
 /obj/structure/rack/rogue,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
@@ -23815,6 +23823,15 @@
 "hRF" = (
 /turf/closed/mineral/random/rogue/med,
 /area/provincial/outdoors/forest)
+"hRG" = (
+/obj/structure/roguemachine/teleport_beacon/bandit{
+	custom_name = "Giuseppe's Toybox";
+	arrival_price = 15;
+	departure_price = 30;
+	fringe = 1
+	},
+/turf/open/floor/rogue/cobble/mossy,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "hRM" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/bow,
 /turf/open/floor/rogue/dirt/road,
@@ -26377,6 +26394,10 @@
 	pixel_x = 7;
 	pixel_y = 7
 	},
+/obj/structure/mirror{
+	pixel_x = -28;
+	pixel_y = 0
+	},
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "iKG" = (
@@ -28515,6 +28536,10 @@
 	icon_state = "weird1"
 	},
 /area/provincial/indoors/town/province_keep/quarters/guest)
+"jsF" = (
+/mob/living/carbon/human/species/construct/metal/toyjester,
+/turf/open/floor/rogue/church,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "jsH" = (
 /obj/structure/flora/ausbushes/lavendergrass,
 /turf/open/floor/rogue/grass,
@@ -32186,6 +32211,9 @@
 	},
 /turf/open/floor/rogue/hexstone,
 /area/provincial/underground/dungeon/fogotten_church)
+"kFz" = (
+/turf/open/floor/carpet/inn,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "kFO" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -32324,8 +32352,6 @@
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/dusk_quarter)
 "kIa" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/carpet/inn,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -34716,8 +34742,6 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/gethsmane)
 "lBt" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -39572,11 +39596,10 @@
 /turf/closed/wall/mineral/rogue/decostone,
 /area/provincial/underground/dungeon/old_university)
 "ngm" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/floor/rogue/rooftop{
-	icon_state = "roofg"
+/obj/structure/fluff/walldeco/rpainting/forest{
+	pixel_x = -32
 	},
+/turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "ngy" = (
 /turf/closed/wall/mineral/rogue/decowood,
@@ -50783,6 +50806,9 @@
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/sewer)
+"qMe" = (
+/turf/open/floor/rogue/church,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "qMf" = (
 /obj/structure/stairs{
 	dir = 1
@@ -56081,13 +56107,12 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
 "sDT" = (
-/obj/structure/roguemachine/teleport_beacon/bandit{
-	custom_name = "Giuseppe's Toybox";
-	arrival_price = 15;
-	departure_price = 30;
-	fringe = 1
+/obj/structure/fluff/railing/fence{
+	dir = 1
 	},
-/turf/open/floor/rogue/grassyel,
+/turf/open/floor/rogue/rooftop{
+	dir = 4
+	},
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "sEg" = (
 /obj/structure/bars/passage/steel{
@@ -68294,6 +68319,9 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "wPc" = (
+/obj/structure/bars/passage/shutter/open{
+	redstone_id = "toyboxjumpscare"
+	},
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
 	},
@@ -69216,6 +69244,12 @@
 /obj/machinery/light/rogue/torchholder/directional/north,
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/beach)
+"xeM" = (
+/mob/living/carbon/human/species/construct/metal/toyjester,
+/turf/open/floor/rogue/rooftop{
+	dir = 1
+	},
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "xeP" = (
 /obj/structure/flora/roguegrass,
 /obj/structure/flora/ausbushes/lavendergrass,
@@ -70934,11 +70968,11 @@
 /turf/open/floor/rogue/church,
 /area/provincial/underground)
 "xIS" = (
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/turf/open/floor/rogue/rooftop{
-	icon_state = "roofg"
-	},
+/obj/structure/closet/crate/chest/neu_fancy,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/spells,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money/rich,
+/obj/effect/spawner/lootdrop/roguetown/gems,
+/turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "xIT" = (
 /obj/machinery/light/rogue/torchholder/directional/east,
@@ -394332,7 +394366,7 @@ oyL
 gln
 gln
 gln
-gln
+paX
 oyL
 oyL
 oyL
@@ -394779,8 +394813,8 @@ lCS
 lCS
 vHP
 tkj
-fBB
-fBB
+tkj
+tkj
 tkj
 vHP
 diM
@@ -395232,10 +395266,10 @@ tkj
 vPk
 cTq
 iKB
-hlH
+ngm
 aaE
 mwS
-ngm
+aVO
 gln
 oyL
 oyL
@@ -395687,7 +395721,7 @@ etd
 brz
 fEo
 fBB
-ngm
+aVO
 gln
 oyL
 oyL
@@ -396591,9 +396625,9 @@ dzD
 hlH
 cRr
 mwS
-oyL
-oyL
-oyL
+rkD
+eAc
+xXk
 oyL
 oyL
 oyL
@@ -397047,7 +397081,7 @@ wEH
 vHP
 kYv
 kYv
-kYv
+xeM
 kYv
 kYv
 kYv
@@ -398383,9 +398417,9 @@ oyL
 uBn
 gln
 gln
+gln
+gln
 lTN
-kYv
-kYv
 kYv
 kYv
 xXk
@@ -398835,9 +398869,9 @@ oyL
 uBn
 gln
 gln
-kgY
-oyL
-oyL
+lTN
+kYv
+knA
 oyL
 oyL
 kgY
@@ -399737,8 +399771,8 @@ sQi
 sQi
 sQi
 vHP
-sQi
-sQi
+tkj
+tkj
 vHP
 oyL
 oyL
@@ -404257,8 +404291,8 @@ sQi
 sQi
 sQi
 vHP
-sQi
-sQi
+tkj
+tkj
 vHP
 oyL
 oyL
@@ -404284,7 +404318,7 @@ dWq
 rtQ
 yma
 khg
-aVO
+gln
 uBn
 oyL
 oyL
@@ -404736,7 +404770,7 @@ rtQ
 rrE
 lgS
 fBB
-xIS
+aVO
 uBn
 oyL
 oyL
@@ -408777,8 +408811,8 @@ oyL
 oyL
 oyL
 qdq
-kYv
-kYv
+hhH
+hhH
 qdq
 oyL
 oyL
@@ -512297,10 +512331,10 @@ oyL
 kgY
 gln
 mwS
-lgS
 lBt
 lgS
-lBt
+yma
+lgS
 mwS
 gln
 jeV
@@ -512749,7 +512783,7 @@ oyL
 kgY
 gln
 xUZ
-lBt
+yma
 kHq
 kIa
 lgS
@@ -513202,9 +513236,9 @@ kgY
 paX
 xUZ
 lgS
-kIa
+kFz
 lMw
-lBt
+lgS
 xUZ
 gln
 gln
@@ -513655,8 +513689,8 @@ gln
 mwS
 lBt
 lgS
-lBt
 lgS
+lBt
 mwS
 gln
 gln
@@ -514551,9 +514585,9 @@ oyL
 oyL
 oyL
 oyL
-oyL
-oyL
-oyL
+nJR
+nJR
+nJR
 kgY
 gln
 gln
@@ -515003,9 +515037,9 @@ kYv
 phw
 oyL
 oyL
-oyL
-oyL
-oyL
+nJR
+jsF
+qMe
 kgY
 gln
 tlm
@@ -515015,7 +515049,7 @@ gln
 gln
 gln
 gln
-gln
+paX
 gln
 gln
 gln
@@ -515457,15 +515491,15 @@ kYv
 kYv
 kYv
 phw
-oyL
+qMe
 vHP
-fde
-fde
-fde
+tkj
+tkj
+tkj
 vHP
-fde
-fde
-fde
+tkj
+tkj
+tkj
 vHP
 gln
 gln
@@ -515897,7 +515931,7 @@ oyL
 oyL
 oyL
 oyL
-kgY
+vHP
 gln
 tlm
 gln
@@ -515909,8 +515943,8 @@ gln
 gln
 gln
 uBn
-oyL
-xUZ
+qMe
+mwS
 rkD
 rkD
 rkD
@@ -515918,7 +515952,7 @@ rkD
 rkD
 rkD
 rkD
-xUZ
+mwS
 gln
 gln
 gln
@@ -516349,7 +516383,7 @@ oyL
 oyL
 oyL
 oyL
-kgY
+sDT
 gln
 gln
 gln
@@ -516369,11 +516403,11 @@ rkD
 rkD
 rkD
 vHP
-sQi
+tkj
 vHP
 gZF
 tkj
-sQi
+tkj
 tkj
 gZF
 vHP
@@ -516801,7 +516835,7 @@ oyL
 oyL
 oyL
 oyL
-kgY
+sDT
 gln
 gln
 gln
@@ -516814,7 +516848,7 @@ gln
 gln
 uBn
 gln
-xUZ
+mwS
 rkD
 rkD
 rkD
@@ -517253,7 +517287,7 @@ oyL
 oyL
 oyL
 oyL
-kgY
+sDT
 gln
 gln
 gln
@@ -517266,13 +517300,13 @@ gln
 gln
 uBn
 gln
-xUZ
+mwS
 rkD
 rkD
 rkD
 vuM
 rkD
-xUZ
+mwS
 bUV
 iwA
 icz
@@ -517294,7 +517328,7 @@ dny
 dny
 oEP
 dny
-dny
+hRG
 dny
 oEP
 aVS
@@ -517303,11 +517337,11 @@ sAb
 fPM
 yfx
 vHP
-sDT
+eTy
 kza
 gUy
-eTy
-cRP
+xXR
+xIS
 vHP
 oyL
 oyL
@@ -517705,7 +517739,7 @@ oyL
 oyL
 oyL
 oyL
-kgY
+sDT
 gln
 gln
 gln
@@ -517718,7 +517752,7 @@ gln
 gln
 uBn
 gln
-xUZ
+mwS
 rkD
 rkD
 rkD
@@ -518157,7 +518191,7 @@ oyL
 oyL
 oyL
 oyL
-kgY
+sDT
 gln
 gln
 gln
@@ -518177,11 +518211,11 @@ rkD
 rkD
 rkD
 vHP
-sQi
+tkj
 vHP
 gZF
 tkj
-sQi
+tkj
 tkj
 gZF
 vHP
@@ -518609,7 +518643,7 @@ oyL
 oyL
 oyL
 oyL
-kgY
+vHP
 gln
 tlm
 gln
@@ -518621,8 +518655,8 @@ gln
 gln
 gln
 uBn
-oyL
-xUZ
+qMe
+mwS
 rkD
 rkD
 rkD
@@ -518630,7 +518664,7 @@ rkD
 rkD
 rkD
 rkD
-xUZ
+mwS
 gln
 gln
 gln
@@ -519073,15 +519107,15 @@ lCS
 lCS
 lCS
 bYp
-oyL
+qMe
 vHP
-fde
-fde
-fde
+tkj
+tkj
+tkj
 vHP
-fde
-fde
-fde
+tkj
+tkj
+tkj
 vHP
 gln
 gln
@@ -519523,9 +519557,9 @@ lCS
 bYp
 oyL
 oyL
-oyL
-oyL
-oyL
+nJR
+jsF
+qMe
 kgY
 gln
 gln
@@ -519535,7 +519569,7 @@ gln
 gln
 gln
 gln
-gln
+paX
 gln
 gln
 gln
@@ -521335,7 +521369,7 @@ kgY
 gln
 gln
 gln
-gln
+paX
 gln
 gln
 gln
