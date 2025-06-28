@@ -46,7 +46,7 @@
 /datum/component/singing_item/RegisterWithParent()
 	if(istype(parent, /obj/item/rogueweapon))
 		RegisterSignal(parent, COMSIG_ITEM_EQUIPPED, PROC_REF(equipped))
-		RegisterSignal(parent, COMSIG_ITEM_DROPPED, PROC_REF(dropped))
+		RegisterSignal(parent, COMSIG_ITEM_DROPPED_TURF, PROC_REF(dropped))
 		RegisterSignal(parent, COMSIG_ITEM_PRE_ATTACK, PROC_REF(onattack))
 
 /datum/component/singing_item/proc/equipped(obj/item/source, mob/user, slot)

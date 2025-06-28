@@ -80,6 +80,7 @@
 	icon_state = "1"
 	name = "Green-flame"
 	desc = "Magical fire. Interesting."
+	color = COLOR_GREEN
 	randomdir = FALSE
 	duration = 1 SECONDS
 	layer = ABOVE_ALL_MOB_LAYER
