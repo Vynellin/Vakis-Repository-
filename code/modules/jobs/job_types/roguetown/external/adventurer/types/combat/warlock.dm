@@ -26,7 +26,7 @@
 	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 1, TRUE)
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 1, TRUE)
-	backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/rogueweapon/huntingknife = 1, /obj/item/roguekey/adventurers_guild = 1)
+	backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/roguekey/adventurers_guild = 1)
 	var/patrons = list(
 		"The Verdant Court",        // Formerly "archfey"
 		"The Radiant Ember",        // Formerly "celestial"
