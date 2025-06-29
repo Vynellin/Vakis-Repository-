@@ -1,6 +1,6 @@
 /area/provincial/underground/dungeon/hordes_hoard
-	name = "Hoard's Horde"
-	first_time_text = "HOARD'S HOARD"
+	name = "Horde's Horde"
+	first_time_text = "HORDE'S HOARD"
 	droning_sound = 'sound/music/area/dungeon2.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
