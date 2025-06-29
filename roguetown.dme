@@ -1955,6 +1955,7 @@
 #include "code\modules\spells\spell_types\wizard\projectiles_single\blood_lightning.dm"
 #include "code\modules\spells\spell_types\wizard\projectiles_single\blood_steal.dm"
 #include "code\modules\spells\spell_types\wizard\projectiles_single\fetch.dm"
+#include "code\modules\spells\spell_types\wizard\projectiles_single\firebolt.dm"
 #include "code\modules\spells\spell_types\wizard\projectiles_single\frost_bolt.dm"
 #include "code\modules\spells\spell_types\wizard\projectiles_single\guided_bolt.dm"
 #include "code\modules\spells\spell_types\wizard\projectiles_single\lightning_bolt.dm"

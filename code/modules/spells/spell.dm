@@ -523,7 +523,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 		if(length(targets))
 			var/atom/target = targets[1]
 			var/mob/living/caster = user
-			var/obj/projectile/magic/aoe/fireball/rogue2/projectile = new /obj/projectile/magic/aoe/fireball/rogue2(caster.loc)
+			var/obj/projectile/magic/firebolt/projectile = new /obj/projectile/magic/firebolt(caster.loc)
 			projectile.firer = caster
 			projectile.preparePixelProjectile(target, caster)
 			projectile.fire()
