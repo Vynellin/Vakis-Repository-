@@ -1421,6 +1421,12 @@
 	},
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/town/province_keep/garrison)
+"fb" = (
+/turf/closed/wall/mineral/rogue/pipe{
+	dir = 8;
+	icon_state = "iron_corner"
+	},
+/area/provincial/indoors/town/province_keep/deacon)
 "fc" = (
 /turf/closed/wall/mineral/rogue/decostone/end{
 	dir = 4
@@ -1822,6 +1828,13 @@
 	},
 /turf/open/floor/rogue/carpet/lord/right,
 /area/provincial/indoors/town/province_keep)
+"gq" = (
+/obj/structure/fermenting_barrel/beer,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/turf/open/floor/rogue/blocks/newstone,
+/area/provincial/indoors/town/sewer)
 "gr" = (
 /obj/structure/flora/roguegrass/bush/wall/tall,
 /turf/open/floor/rogue/dirt,
@@ -4901,6 +4914,16 @@
 /obj/effect/mapping_helpers/autoname,
 /turf/open/floor/rogue/churchbrick,
 /area/provincial/indoors/town/province_keep/magician)
+"rt" = (
+/obj/structure/closet/crate/chest/neu,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
+/obj/effect/spawner/lootdrop/roguetown/sewers,
+/obj/structure/fluff/walldeco/church/line{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/church/line,
+/turf/open/floor/rogue/blocks/newstone,
+/area/provincial/indoors/town/sewer)
 "ru" = (
 /obj/effect/decal/cobbleedge{
 	dir = 10;
@@ -5254,6 +5277,7 @@
 	dir = 8;
 	icon_state = "longtable"
 	},
+/obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/town/province_keep/deacon)
 "sH" = (
@@ -36790,9 +36814,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-hA
+GX
+Ge
+GX
 hA
 rI
 rI
@@ -37046,10 +37070,10 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
 mY
+Cp
+yr
+Jj
 CU
 CU
 GX
@@ -37303,9 +37327,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+LC
+yr
 Dj
 dF
 dF
@@ -37560,9 +37584,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+LC
+KF
 GX
 uR
 dF
@@ -37817,9 +37841,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+KI
+yr
 Dj
 dF
 dF
@@ -38074,9 +38098,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+LC
+yr
 Dj
 dF
 pw
@@ -38331,9 +38355,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+MX
+Ge
 Dj
 dF
 dF
@@ -38587,10 +38611,10 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
-eF
+mY
+Cp
+dD
+KF
 Dj
 KI
 dD
@@ -38844,10 +38868,10 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
-eF
+Dj
+dD
+dD
+KF
 GX
 Kq
 dD
@@ -39101,10 +39125,10 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
-eF
+Dj
+dD
+KF
+KF
 Dj
 jA
 WZ
@@ -39358,9 +39382,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+dD
+KF
 wU
 aj
 zB
@@ -39615,9 +39639,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+dD
+KF
 fG
 tM
 yg
@@ -39872,9 +39896,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+dD
+KF
 fG
 Vb
 Vb
@@ -40129,9 +40153,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+dD
+KF
 kp
 Tf
 Vb
@@ -40386,9 +40410,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+dD
+KF
 fG
 Zb
 ft
@@ -40643,9 +40667,9 @@ eF
 eF
 eF
 eF
-eF
-eF
-eF
+Dj
+dD
+KF
 fG
 XF
 UA
@@ -40900,10 +40924,10 @@ eF
 GX
 CU
 CU
-CU
-CU
-CU
-zB
+Cp
+dD
+KF
+fb
 zB
 kp
 ZE
@@ -41923,8 +41947,8 @@ eF
 eF
 eF
 eF
-eF
-eF
+GX
+CU
 GX
 dD
 KF
@@ -42180,9 +42204,9 @@ eF
 eF
 eF
 eF
-eF
-eF
 Dj
+gq
+rt
 dD
 KF
 GX
@@ -42438,8 +42462,8 @@ CU
 CU
 CU
 GX
-CU
-ua
+dD
+dD
 dD
 KF
 Ur
@@ -42955,7 +42979,7 @@ MX
 dD
 dD
 KF
-dD
+KF
 Ur
 Sn
 oU
@@ -43467,7 +43491,7 @@ dF
 dF
 dF
 Dj
-dD
+KI
 KF
 Dj
 hA
