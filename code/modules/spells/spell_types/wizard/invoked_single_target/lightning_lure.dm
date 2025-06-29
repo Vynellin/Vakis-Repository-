@@ -13,8 +13,8 @@
 	sound = 'sound/magic/whiteflame.ogg'
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/arcane
-	cost = 2 // might even deserve a cost of 3
-	spell_tier = 1
+	cost = 1
+	spell_tier = 2
 
 	xp_gain = TRUE
 	miracle = FALSE
