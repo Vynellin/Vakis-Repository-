@@ -7,7 +7,7 @@
 	total_positions = 5
 	spawn_positions = 5
 	allowed_races = RACES_ALL_KINDS
-	tutorial = "Somewhere in your life, you fell to the wrong side of civilization. Hounded by the consequences of your actions, you now threaten the peace of those who still heed the authority that condemned you."
+	tutorial = "You live on the fringes of society. By concequence, coincidence or damnation you live with a bounty on your head and wanted by the town."
 	outfit = null
 	outfit_female = null
 	display_order = JDO_WRETCH
@@ -367,6 +367,73 @@
 	H.change_stat("intelligence", -3)
 	H.change_stat("perception", -1)
 	H.change_stat("speed", 1)
+	GLOB.outlawed_players += H.real_name
+	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
+	if (!my_crime)
+		my_crime = "crimes against the Crown"
+	var/bounty_total
+	bounty_total = rand(151, 250)
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Rasura")
+
+/datum/advclass/wretch/charlatan
+	name = "Charlatan"
+	tutorial = "Once court jester or wandering bard now you are nothing but a prancing dancing wretch. It takes a truly horrible deed to damn a jester.."
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_ALL_KINDS
+	outfit = /datum/outfit/job/roguetown/wretch/outlaw
+	category_tags = list(CTAG_WRETCH)
+	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_OUTLANDER, TRAIT_MEDIUMARMOR, TRAIT_DODGEEXPERT, TRAIT_OUTLAW)
+
+
+/datum/outfit/job/roguetown/wretch/outlaw/pre_equip(mob/living/carbon/human/H)
+	head = /obj/item/clothing/head/roguetown/helmet/kettle
+	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
+	cloak = /obj/item/clothing/cloak/raincloak/mortus
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+	backl = /obj/item/storage/backpack/rogue/satchel
+	belt = /obj/item/storage/belt/rogue/leather
+	gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	neck = /obj/item/clothing/neck/roguetown/gorget
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
+	mask = /obj/item/clothing/mask/rogue/ragmask/black
+	beltr = /obj/item/quiver/bolts
+	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/lockpickring/mundane = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
+	H.mind.adjust_skillrank(/datum/skill/misc/tracking, 5, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 5, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/traps, 5, TRUE)
+	H.cmode_music = 'sound/music/combat_vaquero.ogg'
+	var/weapons = list("Rapier","Dagger", "Whip")
+	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	H.set_blindness(0)
+	switch(weapon_choice)
+		if("Rapier")
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+			beltl = /obj/item/rogueweapon/sword/rapier
+		if("Dagger")
+			H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
+			beltl = /obj/item/rogueweapon/huntingknife/idagger/silver/elvish
+		if ("Whip")
+			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
+			beltl = /obj/item/rogueweapon/whip
+	H.change_stat("strength", -1)
+	H.change_stat("constitution", 1)
+	H.change_stat("endurance", 2)
+	H.change_stat("speed", 3)
 	GLOB.outlawed_players += H.real_name
 	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
 	if (!my_crime)
