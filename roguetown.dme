@@ -1906,6 +1906,7 @@
 #include "code\modules\spells\spell_types\wizard\buffs_debuffs\stoneskin.dm"
 #include "code\modules\spells\spell_types\wizard\conjure\celestial_vigil.dm"
 #include "code\modules\spells\spell_types\wizard\conjure\conjure_armor.dm"
+#include "code\modules\spells\spell_types\wizard\conjure\conjure_tool.dm"
 #include "code\modules\spells\spell_types\wizard\conjure\conjure_weapon.dm"
 #include "code\modules\spells\spell_types\wizard\conjure\find_familiar.dm"
 #include "code\modules\spells\spell_types\wizard\conjure\void_vigil.dm"
