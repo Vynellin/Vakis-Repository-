@@ -57,5 +57,6 @@ GLOBAL_LIST_INIT(learnable_spells, (list(/obj/effect/proc_holder/spell/invoked/p
 		/obj/effect/proc_holder/spell/invoked/boomingblade,
 		/obj/effect/proc_holder/spell/self/bladeward,
 		/obj/effect/proc_holder/spell/invoked/greenflameblade,
+		/obj/effect/proc_holder/spell/invoked/mending,
 		)
 ))
