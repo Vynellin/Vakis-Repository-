@@ -192,6 +192,10 @@
 			if(HAS_TRAIT(src, TRAIT_GUIDANCE))
 				prob2defend += 15
 
+			if(user.has_status_effect(/datum/status_effect/buff/chargedriposte)) // one-time use attack
+				prob2defend -= 200
+				remove_status_effect(/datum/status_effect/buff/chargedriposte)
+
 			if(HAS_TRAIT(user, TRAIT_GUIDANCE))
 				prob2defend -= 15
 
@@ -209,6 +213,22 @@
 			if(HAS_TRAIT(user, TRAIT_HARDSHELL) && H.client)	//Dwarf-merc specific limitation w/ their armor on in pvp
 				prob2defend = clamp(prob2defend, 5, 70)
 
+			if(src.dodgecharges > 0 && has_status_effect(/datum/status_effect/buff/carthusgrace)) //fullblock hits until you run out of charges, with flourish
+				prob2defend = 100
+				src.dodgecharges--
+				src.visible_message(span_info("[src] moves with unnatural grace, effortlessly fending off [user]'s attack"))
+
+			if(src.dodgecharges > 0 && !has_status_effect(/datum/status_effect/buff/carthusgrace)) //fullblock hits until you run out of charges
+				prob2defend = 100
+				src.dodgecharges--
+				src.visible_message(span_info("[src]'s arm snaps out, fending off [user] at the last second"))
+
+			if(src.dodgecharges == 0 && has_status_effect(/datum/status_effect/buff/carthusinstinct)) //if you have the buff and use all your charges, gain a riposte
+				src.remove_status_effect(/datum/status_effect/buff/carthusinstinct)
+				src.remove_status_effect(/datum/status_effect/buff/carthusgrace)
+				src.visible_message(span_info("[src]'s arms glow with the vestiges of their divine boon, while the rest of them slows down"))
+				src.apply_status_effect(/datum/status_effect/buff/chargedriposte)
+				
 			//Dual Wielding
 			var/attacker_dualw
 			var/defender_dualw
@@ -236,8 +256,8 @@
 					else//If we're defending against or as a dual wielder, we roll disadv. But if we're both dual wielding it cancels out.
 						text += " Twice! Disadvantage! ([(prob2defend / 100) * (prob2defend / 100) * 100]%)"
 				to_chat(src, span_info("[text]"))
-			
-			var/attacker_feedback 
+
+			var/attacker_feedback
 			if(user.client?.prefs.showrolls && (attacker_dualw || defender_dualw))
 				attacker_feedback = "Attacking with advantage. ([100 - ((prob2defend / 100) * (prob2defend / 100) * 100)]%)"
 
@@ -542,6 +562,10 @@
 		if(HAS_TRAIT(U, TRAIT_GUIDANCE))
 			prob2defend -= 15
 
+		if(U.has_status_effect(/datum/status_effect/buff/chargedriposte)) // one-time use attack
+			prob2defend -= 200
+			U.remove_status_effect(/datum/status_effect/buff/chargedriposte)
+
 		// dodging while knocked down sucks ass
 		if(!(L.mobility_flags & MOBILITY_STAND))
 			prob2defend *= 0.25
@@ -552,6 +576,22 @@
 
 		prob2defend = clamp(prob2defend, 5, 90)
 
+		if(L.dodgecharges > 0 && L.has_status_effect(/datum/status_effect/buff/carthusgrace)) //fullblock hits until you run out of charges, with flourish
+			prob2defend = 100
+			L.dodgecharges--
+			L.visible_message(span_info("[L] moves with unnatural grace, effortlessly dancing around [U]'s attack"))
+
+		if(L.dodgecharges > 0 && !L.has_status_effect(/datum/status_effect/buff/carthusgrace)) //fullblock hits until you run out of charges
+			prob2defend = 100
+			L.dodgecharges--
+			L.visible_message(span_info("[L]'s suddenly sidesteps, dodging [U]'s blow"))
+
+		if(L.dodgecharges == 0 && L.has_status_effect(/datum/status_effect/buff/carthusinstinct)) //if you have the buff and use all your charges, gain a riposte
+			L.remove_status_effect(/datum/status_effect/buff/carthusinstinct)
+			L.remove_status_effect(/datum/status_effect/buff/carthusgrace)
+			L.visible_message(span_info("[L]'s arms glow with the vestiges of their divine boon, while the rest of them slows down"))
+			L.apply_status_effect(/datum/status_effect/buff/chargedriposte)
+			
 		//------------Dual Wielding Checks------------
 		var/attacker_dualw
 		var/defender_dualw
@@ -575,7 +615,7 @@
 				attacker_dualw = TRUE
 		//----------Dual Wielding check end---------
 
-		var/attacker_feedback 
+		var/attacker_feedback
 		if(user.client?.prefs.showrolls && (attacker_dualw || defender_dualw))
 			attacker_feedback = "Attacking with advantage. ([100 - ((prob2defend / 100) * (prob2defend / 100) * 100)]%)"
 
