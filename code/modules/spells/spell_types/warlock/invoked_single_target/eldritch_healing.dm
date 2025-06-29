@@ -24,6 +24,7 @@
 /obj/effect/proc_holder/spell/invoked/eldritchhealing/cast(list/targets, mob/living/user)
 	. = ..()
 	if (!isliving(targets[1]))
+		revert_cast()
 		return FALSE
 
 	var/mob/living/target = targets[1]
@@ -51,5 +52,4 @@
 	else
 		// fallback for non-human living mobs
 		target.apply_status_effect(/datum/status_effect/buff/healing, healing)
-
 	return TRUE
