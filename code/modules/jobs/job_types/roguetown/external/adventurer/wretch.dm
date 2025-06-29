@@ -545,6 +545,7 @@
 			beltr = /obj/item/rogueweapon/flail/sflail
 		if("I deserve no weapon")
 			r_hand = /obj/item/reagent_containers/glass/bottle/waterskin
+	H.cmode_music = 'sound/music/combat_leper.ogg'
 	H.change_stat("strength", 2)
 	H.change_stat("constitution", -1)
 	H.change_stat("endurance", -1)
