@@ -63,6 +63,11 @@
 	. = ..()
 	owner.special_role = name
 
+	if(owner.special_role == "vampire")
+		new_bloodsucker = FALSE
+	if(owner.special_role == "ancient vampire")
+		ancient_bloodsucker = TRUE
+
 	for(var/inherited_trait in inherent_traits)
 		//ADD_TRAIT(owner.current, inherited_trait, "[type]") commenting out, need to find out where to set a "type"
 		ADD_TRAIT(owner.current, inherited_trait, TRAIT_GENERIC)
@@ -121,12 +126,82 @@
 
 //setup a process if someone cured of vampirism
 /datum/antagonist/bloodsucker/on_removal()
+	var/mob/living/carbon/human/M = owner.current
 	if(!silent && owner.current)
 		to_chat(owner.current,span_danger("I am no longer a [job_rank]!"))
 	owner.special_role = null
 	if(!isnull(batform))
 		owner.current.RemoveSpell(batform)
 		QDEL_NULL(batform)
+
+	
+
+	M.mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
+	M.skin_tone = M.cache_skin
+	M.hair_color = M.cache_hair
+	M.facial_hair_color = M.cache_hair 
+	M.eye_color = M.cache_eyes
+	M.update_body()
+	M.update_hair()
+	M.update_body_parts(redraw = TRUE)
+	M.mind.special_role = null
+	//removing the starting traits
+	REMOVE_TRAIT(M,TRAIT_STRONGBITE, MAGIC_TRAIT)
+	REMOVE_TRAIT(M,TRAIT_NOHUNGER, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_NOBREATH, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_TOXIMMUNE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_STEELHEARTED, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_NOSLEEP, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_VAMPMANSION, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_VAMP_DREAMS, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_VAMPIRISM,TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_GRAVEROBBER,TRAIT_GENERIC)
+	//time to remove any perks and weaknesses they got
+	REMOVE_TRAIT(M,TRAIT_VAMPIRISM, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_SUN_RESIST, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_SILVER_RESIST, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_HOLY_RESIST, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_SECONDLIFE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_BLOOD_REGEN, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_LOW_METABOLISM, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_EFFICIENT_DRINKER, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_NOPAIN, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_SILENTBITE, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_WEAK_VEIL, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_NO_VEIL, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_HYDROPHOBIA, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_HIGH_METABOLISM, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_NOVEGAN, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_SUN_WEAKNESS, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_SILVER_WEAKNESS, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_HOLY_WEAKNESS, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_HALOPHOBIA, TRAIT_GENERIC)
+	REMOVE_TRAIT(M,TRAIT_PERMADUST, TRAIT_GENERIC)
+	//removing vampire ranks
+	M.mind.adjust_skillrank(/datum/skill/magic/vampirism, -6, TRUE)
+	M.mind.adjust_skillrank(/datum/skill/magic/blood, -6, TRUE)
+	//setting their wrestling and unarmed down, they are a weak mortal now
+	M.mind.adjust_skillrank(/datum/skill/combat/wrestling, -1, TRUE)
+	M.mind.adjust_skillrank(/datum/skill/combat/unarmed, -1, TRUE)
+	//time to remove any spells they got
+	M.mind?.vamp_points = 0
+	M.mind?.used_vamp_points = 0
+	M.mind?.adjust_vamppoints(1)
+	M.mind?.adjust_vamppoints(-1)
+	M.RemoveSpell(/obj/effect/proc_holder/spell/targeted/vampire_transfix)
+	M.RemoveSpell(/obj/effect/proc_holder/spell/self/blood_veil)
+	M.RemoveSpell(/obj/effect/proc_holder/spell/self/learnvampspell)
+	
+	M.RemoveSpell(/obj/effect/proc_holder/spell/)
+	M.remove_status_effect(/datum/status_effect/debuff/veil_up)
+	M.remove_status_effect(/datum/status_effect/buff/veil_down)
+
+	var/list/vamp_choices = list()
+	vamp_choices  += GLOB.learnable_vamp_spells
+
+	for(var/vamp_choice in vamp_choices)
+		M.RemoveSpell(vamp_choice)
 	return ..()
 
 //populate their objectives

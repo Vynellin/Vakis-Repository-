@@ -171,19 +171,14 @@
 		REMOVE_TRAIT(M,TRAIT_HOLY_WEAKNESS, TRAIT_GENERIC)
 		REMOVE_TRAIT(M,TRAIT_HALOPHOBIA, TRAIT_GENERIC)
 		REMOVE_TRAIT(M,TRAIT_PERMADUST, TRAIT_GENERIC)
-		//removing vampire ranks
-		M.mind.adjust_skillrank(/datum/skill/magic/vampirism, 0, TRUE)
-		M.mind.adjust_skillrank(/datum/skill/magic/blood, 0, TRUE)
-		//setting their wrestling and unarmed down, they are a weak mortal now
-		M.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-		M.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
-		//removing any verbs given
-		M.verbs -= /mob/living/carbon/human/proc/disguise_button
-		M.verbs -= /mob/living/carbon/human/proc/vampire_telepathy
-		M.verbs -= /mob/living/carbon/human/proc/vamp_regenerate
 		//time to remove any spells they got
-		M.RemoveSpell(/obj/effect/proc_holder/spell/targeted/transfix)
-		M.mind?.adjust_vamppoints(-50)
+		M.mind?.vamp_points = 0
+		M.mind?.used_vamp_points = 0
+		M.mind?.adjust_vamppoints(1)
+		M.mind?.adjust_vamppoints(-1)
+		M.RemoveSpell(/obj/effect/proc_holder/spell/targeted/vampire_transfix)
+		M.RemoveSpell(/obj/effect/proc_holder/spell/self/blood_veil)
+		M.RemoveSpell(/obj/effect/proc_holder/spell/self/learnvampspell)
 		M.remove_status_effect(/datum/status_effect/debuff/veil_up)
 		M.remove_status_effect(/datum/status_effect/buff/veil_down)
 
@@ -247,15 +242,18 @@
 		//removing vampire ranks
 		M.mind.adjust_skillrank(/datum/skill/magic/vampirism, -6, TRUE)
 		M.mind.adjust_skillrank(/datum/skill/magic/blood, -6, TRUE)
-		//setting their wrestling and unarmed down, they are a weak mortal now
-		M.mind.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
-		M.mind.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 		//removing any verbs given
 		M.verbs -= /mob/living/carbon/human/proc/disguise_button
 		M.verbs -= /mob/living/carbon/human/proc/vampire_telepathy
 		M.verbs -= /mob/living/carbon/human/proc/vamp_regenerate
 		//time to remove any spells they got
-		M.RemoveSpell(/obj/effect/proc_holder/spell/targeted/transfix)
+		M.mind?.vamp_points = 0
+		M.mind?.used_vamp_points = 0
+		M.mind?.adjust_vamppoints(1)
+		M.mind?.adjust_vamppoints(-1)
+		M.RemoveSpell(/obj/effect/proc_holder/spell/targeted/vampire_transfix)
+		M.RemoveSpell(/obj/effect/proc_holder/spell/self/blood_veil)
+		M.RemoveSpell(/obj/effect/proc_holder/spell/self/learnvampspell)
 		M.remove_status_effect(/datum/status_effect/debuff/veil_up)
 		M.remove_status_effect(/datum/status_effect/buff/veil_down)
 

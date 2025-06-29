@@ -387,6 +387,9 @@
 			if(role == ROLE_NBEAST)
 				if(prob(1))
 					candidates += player.mind
+			if(role == ROLE_BLOODSUCKER)
+				if(prob(1))
+					candidates += player.mind
 
 	if(restricted_jobs)
 		for(var/datum/mind/player in candidates)

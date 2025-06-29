@@ -1,5 +1,5 @@
 // This mode will become the main basis for the typical roguetown round. Based off of chaos mode.
-var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "Extended", "Aspirants", "Bandits", "Maniac", "Lich", "Bloodsucker", "CANCEL") // This is mainly used for forcemgamemodes
+var/global/list/roguegamemodes = list("Rebellion", "Bloodsucker and Werewolves", "Extended", "Aspirants", "Bandits", "Maniac", "Lich", "Bloodsucker", "CANCEL") // This is mainly used for forcemgamemodes
 
 /datum/game_mode/chaosmode
 	name = "roguemode"
@@ -126,13 +126,21 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 				if("Rebellion")
 					pick_rebels()
 					log_game("Major Antagonist: Rebellion")
-				if("Vampires and Werewolves")
+				/*if("Vampires and Werewolves")
 					pick_vampires()
+					pick_werewolves()
+					log_game("Major Antagonist: Vampires and Werewolves")*/
+				if("Bloodsuckers and Werewolves")
+					pick_bloodsucker()
 					pick_werewolves()
 					log_game("Major Antagonist: Vampires and Werewolves")
 				if("Bandits")
 					pick_bandits()
 					log_game("Minor Antagonist: Bandit")
+				if("Bandits & Bloodsuckers")
+					pick_bandits()
+					pick_bloodsucker()
+					log_game("Minor Antagonist: Bandit & Bloodsuckers")
 				if("Aspirants")
 					pick_aspirants()
 					log_game("Minor Antagonist: Aspirant")
@@ -173,7 +181,10 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 			if(1 to 50)
 				pick_bandits()
 				log_game("Antagonists: Bandits")
-			if(51 to 100)
+			if(51 to 75)
+				pick_bloodsucker()
+				log_game("Antagonists: Bloodsuckers")
+			if(76 to 100)
 				log_game("Major Antagonist: Extended") //gotta put something here.
 
 		/* removing the "minor antagonist" system as we currently need them as major antagonist gamemodes while waiting for our own custom antags
@@ -447,7 +458,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 		allantags -= bloodsucker
 		pre_bloodsuckers += bloodsucker
 		bloodsucker.special_role = "vampire"
-		//bloodsucker.assigned_role = "vampire" // This is a tricky way to prevent double-spawning for the spawn as multiple jobs. taking this out, to see if it lets us spawn in?
+		bloodsucker.assigned_role = "vampire" // This is a tricky way to prevent double-spawning for the spawn as multiple jobs. taking this out, to see if it lets us spawn in?
 		bloodsucker.restricted_roles = restricted_jobs.Copy()
 		testing("[key_name(bloodsucker)] has been selected as a VAMPIRE")
 		log_game("[key_name(bloodsucker)] has been selected as a [bloodsucker.special_role]")
@@ -460,19 +471,19 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 /datum/game_mode/chaosmode/proc/pick_werewolves()
 	// Ideally we want adventurers/pilgrims/towners to roll it
 	restricted_jobs = list(
-	/datum/job/roguetown/lord::title,
-	"Inquisitor",
-	"Confessor",
-	"Watchman",
-	"Man at Arms",
-	"Priest",
-	"Acolyte",
-	"Cleric",
-	"Knight Captain",
-	"Court Magician",
-	"Templar",
-	"Martyr",
-	"Knight"
+		/datum/job/roguetown/lord::title,
+		/datum/job/roguetown/magician::title,
+		/datum/job/roguetown/guardsman::title,
+		/datum/job/roguetown/sergeant::title,
+		/datum/job/roguetown/manorguard::title,
+		/datum/job/roguetown/veteran::title,
+		/datum/job/roguetown/captain::title,
+		/datum/job/roguetown/marshal::title,
+		/datum/job/roguetown/knight::title,
+		/datum/job/roguetown/head_mage::title,
+		/datum/job/roguetown/priest::title,
+		/datum/job/roguetown/acolyte::title,
+		/datum/job/roguetown/templar::title,
 	)
 
 	var/num_werewolves = rand(1,2)
@@ -598,6 +609,30 @@ var/global/list/roguegamemodes = list("Rebellion", "Vampires and Werewolves", "E
 						wwoelf++
 						continue
 					D = player.mind.has_antag_datum(/datum/antagonist/vampire)
+					if(D && D.increase_votepwr)
+						vampyr++
+						continue
+	if(vampyr)
+		if(!wwoelf)
+			return "vampire"
+	if(wwoelf)
+		if(!vampyr)
+			return "werewolf"
+
+/datum/game_mode/chaosmode/proc/bloodsucker_werewolf()
+	var/vampyr = 0
+	var/wwoelf = 0
+	for(var/mob/living/carbon/human/player in GLOB.human_list)
+		if(player.mind)
+			if(player.stat != DEAD)
+				if(isbrain(player)) //also technically dead
+					continue
+				if(is_in_roguetown(player))
+					var/datum/antagonist/D = player.mind.has_antag_datum(/datum/antagonist/werewolf)
+					if(D && D.increase_votepwr)
+						wwoelf++
+						continue
+					D = player.mind.has_antag_datum(/datum/antagonist/bloodsucker)
 					if(D && D.increase_votepwr)
 						vampyr++
 						continue

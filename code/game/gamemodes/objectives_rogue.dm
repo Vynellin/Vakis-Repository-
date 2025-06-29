@@ -40,3 +40,16 @@
 	if(istype(C))
 		if(C.vampire_werewolf() == "vampire")
 			return TRUE
+
+//if we choose to bring back vampires verse werewolves
+/datum/objective/bloodsucker
+	name = "conquer"
+	explanation_text = "Put an end to the werewolf menace in Sunmarch, or unite with them against the forces of the Nine."
+	team_explanation_text = "The feud between werewolves and vampires reaches back to the dawn of time. Will the two factions destroy each other, or find a way to coexist and face the mortals of Sunmarch together?"
+	triumph_count = 5
+
+/datum/objective/bloodsucker/check_completion()
+	var/datum/game_mode/chaosmode/C = SSticker.mode
+	if(istype(C))
+		if(C.bloodsucker_werewolf() == "vampire")
+			return TRUE
