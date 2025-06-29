@@ -136,7 +136,6 @@
 		H.mind.adjust_skillrank(/datum/skill/misc/tracking, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/labor/farming, 1, TRUE)
-		H.change_stat("strength", 1)
 		H.change_stat("perception", 2)
 		H.change_stat("constitution", 1)
 		H.change_stat("endurance", 1)
