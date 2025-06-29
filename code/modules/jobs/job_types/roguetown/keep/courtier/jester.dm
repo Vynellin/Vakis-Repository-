@@ -40,7 +40,6 @@
 	beltl = /obj/item/storage/belt/rogue/pouch
 	head = /obj/item/clothing/head/roguetown/jester
 	neck = /obj/item/clothing/neck/roguetown/coif
-
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
@@ -66,30 +65,23 @@
 	else
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Joker >:(
 
-	var/intruments = list("Flute", "Hurdy Gurdy", "Accordian", "Harp", "Viola", "Guitar", "Vocals", "Drum")
-	var/instruments_choice = input("What will we play today?", "Make your choice!") as anything in instruments
+	var/weapons = list("Flute", "Hurdy Gurdy", "Accordian", "Harp", "Viola", "Guitar", "Vocals", "Drum")
+	var/weapon_choice = input("What will we play today?", "Make your choice!") as anything in weapons
 	H.set_blindness(0)
-	switch(instruments_choice)
-		if("Flute")
+	switch(weapon_choice)
+		if ("Flute")
 			r_hand = /obj/item/rogue/instrument/flute
-	switch(instruments_choice)
-		if("Hurdy Gurdy")
+		if ("Hurdy Gurdy")
 			r_hand = /obj/item/rogue/instrument/hurdygurdy
-	switch(instruments_choice)
-		if("Accordian")
+		if ("Accordian")
 			r_hand = /obj/item/rogue/instrument/accord
-	switch(instruments_choice)
-		if("Harp")
+		if ("Harp")
 			r_hand = /obj/item/rogue/instrument/harp
-	switch(instruments_choice)
-		if("Viola")
+		if ("Viola")
 			r_hand = /obj/item/rogue/instrument/viola
-	switch(instruments_choice)
-		if("Guitar")
+		if ("Guitar")
 			r_hand = /obj/item/rogue/instrument/guitar
-	switch(instruments_choice)
-		if("Vocals")
+		if ("Vocals")
 			r_hand = /obj/item/rogue/instrument/vocals
-	switch(instruments_choice)
-		if("Drum")
+		if ("Drum")
 			r_hand = /obj/item/rogue/instrument/drum

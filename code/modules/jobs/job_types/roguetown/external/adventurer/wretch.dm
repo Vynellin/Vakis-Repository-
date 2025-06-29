@@ -382,64 +382,56 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/charlatan
 	category_tags = list(CTAG_WRETCH)
-	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_OUTLAW, TRAIT_ZJUMP, TRAIT_ZLEAPER, TRAIT_NUTCRACKER)
+	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_OUTLAW, TRAIT_ZJUMP, TRAIT_LEAPER, TRAIT_NUTCRACKER)
 
 
-	/datum/outfit/job/roguetown/wretch/charlatan/pre_equip(mob/living/carbon/human/H)
-	..()
+/datum/outfit/job/roguetown/wretch/charlatan/pre_equip(mob/living/carbon/human/H)
 	shoes = /obj/item/clothing/shoes/roguetown/jester
 	pants = /obj/item/clothing/under/roguetown/tights
 	shirt = /obj/item/clothing/suit/roguetown/shirt/rags
-	beltr = /item/rogueweapon/huntingknife/throwingknife
+	beltr = /obj/item/rogueweapon/huntingknife/throwingknife
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltl = /obj/item/storage/belt/rogue/pouch
 	head = /obj/item/clothing/head/roguetown/jester
 	neck = /obj/item/clothing/neck/roguetown/coif
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 1, TRUE)
-		H.cmode_music = 'sound/music/combat_jester.ogg'
-	H.change_stat("intelligence", 1)
-	H.change_stat("speed", 2)
-	H.STALUC = rand(4, 16)
+	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/stealing, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
+	H.cmode_music = 'sound/music/combat_jester.ogg'
 	H.verbs |= /mob/living/carbon/human/proc/ventriloquate
 	H.verbs |= /mob/living/carbon/human/proc/ear_trick
 	if(!istype(H.getorganslot(ORGAN_SLOT_TONGUE), /obj/item/organ/tongue/wild_tongue))
 		H.internal_organs_slot[ORGAN_SLOT_TONGUE] = new /obj/item/organ/tongue/wild_tongue
-	var/intruments = list("Flute", "Hurdy Gurdy", "Accordian", "Harp", "Viola", "Guitar", "Vocals", "Drum")
-	var/instruments_choice = input("What will we play today?", "Make your choice!") as anything in instruments
+	var/weapons = list("Flute", "Hurdy Gurdy", "Accordian", "Harp", "Viola", "Guitar", "Vocals", "Drum")
+	var/weapon_choice = input("What will we play today?", "Make your choice!") as anything in weapons
 	H.set_blindness(0)
-	switch(instruments_choice)
-		if("Flute")
+	switch(weapon_choice)
+		if ("Flute")
 			r_hand = /obj/item/rogue/instrument/flute
-	switch(instruments_choice)
-		if("Hurdy Gurdy")
+		if ("Hurdy Gurdy")
 			r_hand = /obj/item/rogue/instrument/hurdygurdy
-	switch(instruments_choice)
-		if("Accordian")
+		if ("Accordian")
 			r_hand = /obj/item/rogue/instrument/accord
-	switch(instruments_choice)
-		if("Harp")
+		if ("Harp")
 			r_hand = /obj/item/rogue/instrument/harp
-	switch(instruments_choice)
-		if("Viola")
+		if ("Viola")
 			r_hand = /obj/item/rogue/instrument/viola
-	switch(instruments_choice)
-		if("Guitar")
+		if ("Guitar")
 			r_hand = /obj/item/rogue/instrument/guitar
-	switch(instruments_choice)
-		if("Vocals")
+		if ("Vocals")
 			r_hand = /obj/item/rogue/instrument/vocals
-	switch(instruments_choice)
-		if("Drum")
+		if ("Drum")
 			r_hand = /obj/item/rogue/instrument/drum
+	H.change_stat("intelligence", 1)
+	H.change_stat("speed", 2)
+	H.STALUC = rand(4, 16)
 
 	GLOB.outlawed_players += H.real_name
 	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
@@ -460,8 +452,8 @@
 
 	// A wretch version of an old townie doc. They have good medical and alchemical stats making them a tempting offer if they wish to help the town, or dangerous if they hinder.
 
-	/datum/outfit/job/roguetown/wretch/charnaldok/pre_equip(mob/living/carbon/human/H)
-	..()
+/datum/outfit/job/roguetown/wretch/charnaldok/pre_equip(mob/living/carbon/human/H)
+
 	head = /obj/item/clothing/cloak/raincloak
 	mask = /obj/item/clothing/mask/rogue/deacon
 	neck = 	/obj/item/storage/belt/rogue/pouch/coins/poor
@@ -477,17 +469,15 @@
 	backl = /obj/item/storage/backpack/rogue/satchel/black
 	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1,	/obj/item/natural/worms/leech/cheele = 1,
 	/obj/item/reagent_containers/glass/bottle/waterskin = 1, /obj/item/storage/belt/rogue/pouch/coins/mid = 1)
-	if(H.mind)
-		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
-		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 5, TRUE)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
-
+	H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 5, TRUE)
+	H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
 	H.cmode_music = 'sound/music/combat_physician.ogg'
 	H.change_stat("strength", -1)
 	H.change_stat("constitution", -1)
@@ -511,11 +501,11 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/leper
 	category_tags = list(CTAG_WRETCH)
-	traits_applied = list(TRAIT_LEPROSY, TRAIT_LEECHIMMUNE, TRAIT_MISSING_NOSE)
+	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_MEDIUMARMOR, TRAIT_LEPROSY, TRAIT_LEECHIMMUNE, TRAIT_MISSING_NOSE)
 
 	//Chose to give no outlaw for this one, leper is already in the game so we can use it.
 
-	/datum/outfit/job/roguetown/wretch/leper/pre_equip(mob/living/carbon/human/H)
+/datum/outfit/job/roguetown/wretch/leper/pre_equip(mob/living/carbon/human/H)
 	head = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan
 	mask = /obj/item/clothing/mask/rogue/facemask/goldmask
 	cloak = /obj/item/clothing/head/roguetown/roguehood/shalal/heavyhood
@@ -527,7 +517,7 @@
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
 	belt = /obj/item/storage/belt/rogue/leather
 	backl = /obj/item/storage/backpack/rogue/satchel
-		backpack_contents = list(/obj/item/rogueweapon/huntingknife = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
 	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
@@ -535,7 +525,7 @@
 	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
@@ -554,12 +544,12 @@
 			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
 			beltr = /obj/item/rogueweapon/flail/sflail
 		if("I deserve no weapon")
+			r_hand = /obj/item/reagent_containers/glass/bottle/waterskin
 	H.change_stat("strength", 2)
 	H.change_stat("constitution", -1)
 	H.change_stat("endurance", -1)
 	H.change_stat("speed", -2)
-
-		switch(H.patron?.type)
+	switch(H.patron?.type)
 		if(/datum/patron/lording_three/aeternus)
 			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
 		if(/datum/patron/lording_three/zira)
