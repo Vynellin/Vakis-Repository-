@@ -28,6 +28,10 @@
 
 /obj/effect/proc_holder/spell/invoked/lightninglure/cast(list/targets, mob/user = usr)
 	.=..()
+	if(!istype(targets[1], /mob/living/carbon))
+		to_chat(user, span_notice("It seems this target cannot be electrified."))
+		revert_cast()
+		return FALSE
 	for(var/mob/living/carbon/C in targets)
 		user.visible_message(span_warning("[C] is connected to [user] with a lightning lure!"), span_warning("You create a static link with [C]."))
 		playsound(user, 'sound/items/stunmace_gen (2).ogg', 100)
