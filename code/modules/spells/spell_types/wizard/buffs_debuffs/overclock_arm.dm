@@ -9,15 +9,11 @@
 	movement_interrupt = FALSE
 	no_early_release = FALSE
 	chargedloop = null
-	sound = 'sound/magic/trickarm_eject.ogg'
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/craft/engineering //can be arcane, druidic, blood, holy
 	cost = 1
 	miracle = FALSE
 	xp_gain = FALSE
-
-	invocation = "Mutuatus Virtute!" //"Borrowed Valor" in latin. Thanks for the +1 nunos!
-	invocation_type = "shout" //can be none, whisper, emote and shout
 
 var/ison = FALSE
 var/akimbo = FALSE
