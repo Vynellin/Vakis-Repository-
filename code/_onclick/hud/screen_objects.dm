@@ -1792,7 +1792,7 @@
 	screen_loc = rogueui_fat
 
 /atom/movable/screen/energy
-	name = "fatigue"
+	name = "energy"
 	icon_state = "energy100"
 	icon = 'icons/mob/rogueheat.dmi'
 	screen_loc = rogueui_fat
