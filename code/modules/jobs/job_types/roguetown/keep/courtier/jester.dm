@@ -66,3 +66,30 @@
 	else
 		ADD_TRAIT(H, TRAIT_STEELHEARTED, TRAIT_GENERIC) // Joker >:(
 
+	var/intruments = list("Flute", "Hurdy Gurdy", "Accordian", "Harp", "Viola", "Guitar", "Vocals", "Drum")
+	var/instruments_choice = input("What will we play today?", "Make your choice!") as anything in instruments
+	H.set_blindness(0)
+	switch(instruments_choice)
+		if("Flute")
+			r_hand = /obj/item/rogue/instrument/flute
+	switch(instruments_choice)
+		if("Hurdy Gurdy")
+			r_hand = /obj/item/rogue/instrument/hurdygurdy
+	switch(instruments_choice)
+		if("Accordian")
+			r_hand = /obj/item/rogue/instrument/accord
+	switch(instruments_choice)
+		if("Harp")
+			r_hand = /obj/item/rogue/instrument/harp
+	switch(instruments_choice)
+		if("Viola")
+			r_hand = /obj/item/rogue/instrument/viola
+	switch(instruments_choice)
+		if("Guitar")
+			r_hand = /obj/item/rogue/instrument/guitar
+	switch(instruments_choice)
+		if("Vocals")
+			r_hand = /obj/item/rogue/instrument/vocals
+	switch(instruments_choice)
+		if("Drum")
+			r_hand = /obj/item/rogue/instrument/drum

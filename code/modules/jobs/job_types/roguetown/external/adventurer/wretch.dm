@@ -380,64 +380,212 @@
 	tutorial = "Once court jester or wandering bard now you are nothing but a prancing dancing wretch. It takes a truly horrible deed to damn a jester.."
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = RACES_ALL_KINDS
-	outfit = /datum/outfit/job/roguetown/wretch/outlaw
+	outfit = /datum/outfit/job/roguetown/wretch/charlatan
 	category_tags = list(CTAG_WRETCH)
-	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_OUTLANDER, TRAIT_MEDIUMARMOR, TRAIT_DODGEEXPERT, TRAIT_OUTLAW)
+	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_OUTLAW, TRAIT_ZJUMP, TRAIT_ZLEAPER, TRAIT_NUTCRACKER)
 
 
-/datum/outfit/job/roguetown/wretch/outlaw/pre_equip(mob/living/carbon/human/H)
-	head = /obj/item/clothing/head/roguetown/helmet/kettle
-	pants = /obj/item/clothing/under/roguetown/heavy_leather_pants
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
-	cloak = /obj/item/clothing/cloak/raincloak/mortus
-	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
-	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
-	backl = /obj/item/storage/backpack/rogue/satchel
-	belt = /obj/item/storage/belt/rogue/leather
-	gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
-	shoes = /obj/item/clothing/shoes/roguetown/boots
-	neck = /obj/item/clothing/neck/roguetown/gorget
-	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/heavy
-	mask = /obj/item/clothing/mask/rogue/ragmask/black
-	beltr = /obj/item/quiver/bolts
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1, /obj/item/lockpickring/mundane = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
-	H.mind.adjust_skillrank(/datum/skill/misc/tracking, 5, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 6, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 5, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/stealing, 5, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 5, TRUE)
-	H.mind.adjust_skillrank(/datum/skill/craft/traps, 5, TRUE)
-	H.cmode_music = 'sound/music/combat_vaquero.ogg'
-	var/weapons = list("Rapier","Dagger", "Whip")
-	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	/datum/outfit/job/roguetown/wretch/charlatan/pre_equip(mob/living/carbon/human/H)
+	..()
+	shoes = /obj/item/clothing/shoes/roguetown/jester
+	pants = /obj/item/clothing/under/roguetown/tights
+	shirt = /obj/item/clothing/suit/roguetown/shirt/rags
+	beltr = /item/rogueweapon/huntingknife/throwingknife
+	belt = /obj/item/storage/belt/rogue/leather/rope
+	beltl = /obj/item/storage/belt/rogue/pouch
+	head = /obj/item/clothing/head/roguetown/jester
+	neck = /obj/item/clothing/neck/roguetown/coif
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/reading, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/stealing, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/music, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 1, TRUE)
+		H.cmode_music = 'sound/music/combat_jester.ogg'
+	H.change_stat("intelligence", 1)
+	H.change_stat("speed", 2)
+	H.STALUC = rand(4, 16)
+	H.verbs |= /mob/living/carbon/human/proc/ventriloquate
+	H.verbs |= /mob/living/carbon/human/proc/ear_trick
+	if(!istype(H.getorganslot(ORGAN_SLOT_TONGUE), /obj/item/organ/tongue/wild_tongue))
+		H.internal_organs_slot[ORGAN_SLOT_TONGUE] = new /obj/item/organ/tongue/wild_tongue
+	var/intruments = list("Flute", "Hurdy Gurdy", "Accordian", "Harp", "Viola", "Guitar", "Vocals", "Drum")
+	var/instruments_choice = input("What will we play today?", "Make your choice!") as anything in instruments
 	H.set_blindness(0)
-	switch(weapon_choice)
-		if("Rapier")
-			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
-			beltl = /obj/item/rogueweapon/sword/rapier
-		if("Dagger")
-			H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
-			beltl = /obj/item/rogueweapon/huntingknife/idagger/silver/elvish
-		if ("Whip")
-			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
-			beltl = /obj/item/rogueweapon/whip
+	switch(instruments_choice)
+		if("Flute")
+			r_hand = /obj/item/rogue/instrument/flute
+	switch(instruments_choice)
+		if("Hurdy Gurdy")
+			r_hand = /obj/item/rogue/instrument/hurdygurdy
+	switch(instruments_choice)
+		if("Accordian")
+			r_hand = /obj/item/rogue/instrument/accord
+	switch(instruments_choice)
+		if("Harp")
+			r_hand = /obj/item/rogue/instrument/harp
+	switch(instruments_choice)
+		if("Viola")
+			r_hand = /obj/item/rogue/instrument/viola
+	switch(instruments_choice)
+		if("Guitar")
+			r_hand = /obj/item/rogue/instrument/guitar
+	switch(instruments_choice)
+		if("Vocals")
+			r_hand = /obj/item/rogue/instrument/vocals
+	switch(instruments_choice)
+		if("Drum")
+			r_hand = /obj/item/rogue/instrument/drum
+
+	GLOB.outlawed_players += H.real_name
+	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
+	if (!my_crime)
+		my_crime = "crimes against the Crown"
+	var/bounty_total
+	bounty_total = rand(1, 250)
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Rasura")
+
+/datum/advclass/wretch/charnaldok
+	name = "Charnal Doktor"
+	tutorial = "The peasants are weary of surgeons for good reason. The skills that can give life can just as easily take it. After years of dedication and hard work why wouldn't you want something for yourself? It's a shame you lost your reputation for it..."
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_ALL_KINDS
+	outfit = /datum/outfit/job/roguetown/wretch/charnaldok
+	category_tags = list(CTAG_WRETCH)
+	traits_applied = list(TRAIT_EMPATH, TRAIT_NOSTINK, TRAIT_OUTLAW)
+
+	// A wretch version of an old townie doc. They have good medical and alchemical stats making them a tempting offer if they wish to help the town, or dangerous if they hinder.
+
+	/datum/outfit/job/roguetown/wretch/charnaldok/pre_equip(mob/living/carbon/human/H)
+	..()
+	head = /obj/item/clothing/cloak/raincloak
+	mask = /obj/item/clothing/mask/rogue/deacon
+	neck = 	/obj/item/storage/belt/rogue/pouch/coins/poor
+	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/black
+	gloves = /obj/item/clothing/gloves/roguetown/leather
+	pants = /obj/item/clothing/under/roguetown/trou/leather/mourning
+	shoes = /obj/item/clothing/shoes/roguetown/boots/leather
+	belt = /obj/item/storage/belt/rogue/leather/black
+	beltl = /obj/item/storage/belt/rogue/surgery_bag/full/deacon
+	beltr = /obj/item/rogueweapon/huntingknife/idagger/silver
+	id = /obj/item/scomstone/bad
+	r_hand = /obj/item/rogueweapon/woodstaff
+	backl = /obj/item/storage/backpack/rogue/satchel/black
+	backpack_contents = list(/obj/item/reagent_containers/glass/bottle/rogue/healthpot = 1,	/obj/item/natural/worms/leech/cheele = 1,
+	/obj/item/reagent_containers/glass/bottle/waterskin = 1, /obj/item/storage/belt/rogue/pouch/coins/mid = 1)
+	if(H.mind)
+		H.mind.adjust_skillrank(/datum/skill/misc/reading, 4, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/alchemy, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/sewing, 3, TRUE)
+		H.mind.adjust_skillrank(/datum/skill/misc/medicine, 5, TRUE)
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/diagnose/secular)
+
+	H.cmode_music = 'sound/music/combat_physician.ogg'
 	H.change_stat("strength", -1)
-	H.change_stat("constitution", 1)
-	H.change_stat("endurance", 2)
-	H.change_stat("speed", 3)
+	H.change_stat("constitution", -1)
+	H.change_stat("intelligence", 2)
+	H.change_stat("fortune", 1)
+
 	GLOB.outlawed_players += H.real_name
 	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
 	if (!my_crime)
 		my_crime = "crimes against the Crown"
 	var/bounty_total
 	bounty_total = rand(151, 250)
-	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Rasura")
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Mage's University")
+
+
+
+/datum/advclass/wretch/leper
+	name = "Leper"
+	tutorial = "Your terrible affliction cost your rank and your family. The last man to see your face screamed in terror. Now you hide what you are and only through devotion will you be saved."
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_ALL_KINDS
+	outfit = /datum/outfit/job/roguetown/wretch/leper
+	category_tags = list(CTAG_WRETCH)
+	traits_applied = list(TRAIT_LEPROSY, TRAIT_LEECHIMMUNE, TRAIT_MISSING_NOSE)
+
+	//Chose to give no outlaw for this one, leper is already in the game so we can use it.
+
+	/datum/outfit/job/roguetown/wretch/leper/pre_equip(mob/living/carbon/human/H)
+	head = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan
+	mask = /obj/item/clothing/mask/rogue/facemask/goldmask
+	cloak = /obj/item/clothing/head/roguetown/roguehood/shalal/heavyhood
+	gloves = /obj/item/clothing/gloves/roguetown/chain
+	pants = /obj/item/clothing/under/roguetown/chainlegs
+	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
+	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/coatplates
+	wrists = /obj/item/clothing/wrists/roguetown/bracers
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
+	belt = /obj/item/storage/belt/rogue/leather
+	backl = /obj/item/storage/backpack/rogue/satchel
+		backpack_contents = list(/obj/item/rogueweapon/huntingknife = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1)
+	H.mind.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/axes, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/medicine, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	var/weapons = list("Heavy is the Blade","A Bloodletter's Flail","I deserve no weapon.")
+	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
+	H.set_blindness(0)
+	switch(weapon_choice)
+		if("Heavy is the Blade")
+			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)
+			r_hand = /obj/item/rogueweapon/greatsword/grenz
+			backr = /obj/item/gwstrap
+		if("A Bloodletter's Flail")
+			H.mind.adjust_skillrank(/datum/skill/combat/whipsflails, 1, TRUE)
+			beltr = /obj/item/rogueweapon/flail/sflail
+		if("I deserve no weapon")
+	H.change_stat("strength", 2)
+	H.change_stat("constitution", -1)
+	H.change_stat("endurance", -1)
+	H.change_stat("speed", -2)
+
+		switch(H.patron?.type)
+		if(/datum/patron/lording_three/aeternus)
+			neck = /obj/item/clothing/neck/roguetown/psicross/aeternus
+		if(/datum/patron/lording_three/zira)
+			neck = /obj/item/clothing/neck/roguetown/psicross/zira
+		if(/datum/patron/peoples_pantheon/cinella)
+			neck = /obj/item/clothing/neck/roguetown/psicross/cinella
+		if(/datum/patron/three_sisters/tamari)
+			neck = /obj/item/clothing/neck/roguetown/psicross/tamari
+		if(/datum/patron/lording_three/tsoridys)
+			neck = /obj/item/clothing/neck/roguetown/psicross/tsoridys
+		if(/datum/patron/peoples_pantheon/carthus)
+			neck = /obj/item/clothing/neck/roguetown/psicross/carthus
+		if(/datum/patron/three_sisters/nunos)
+			neck = /obj/item/clothing/neck/roguetown/psicross/nunos
+		if(/datum/patron/peoples_pantheon/varielle)
+			neck = /obj/item/clothing/neck/roguetown/psicross/varielle
+		if(/datum/patron/three_sisters/kasmidian)
+			var/list/psicross_options = list(
+			/obj/item/clothing/neck/roguetown/psicross,
+			/obj/item/clothing/neck/roguetown/psicross/aeternus,
+			/obj/item/clothing/neck/roguetown/psicross/zira,
+			/obj/item/clothing/neck/roguetown/psicross/cinella,
+			/obj/item/clothing/neck/roguetown/psicross/tamari,
+			/obj/item/clothing/neck/roguetown/psicross/tsoridys,
+			/obj/item/clothing/neck/roguetown/psicross/carthus,
+			/obj/item/clothing/neck/roguetown/psicross/nunos,
+			/obj/item/clothing/neck/roguetown/psicross/varielle
+			)
+			neck = pick(psicross_options)
