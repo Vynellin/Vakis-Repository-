@@ -26,7 +26,11 @@
 	human.mind.adjust_skillrank(/datum/skill/magic/arcane, 1, TRUE)
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/wrestling, 1, TRUE)
 	human.mind.adjust_skillrank_up_to(/datum/skill/combat/unarmed, 1, TRUE)
-	backpack_contents = list(/obj/item/flashlight/flare/torch = 1, /obj/item/roguekey/adventurers_guild = 1)
+	backpack_contents += list(
+		/obj/item/flashlight/flare/torch = 1,
+		/obj/item/roguekey/adventurers_guild = 1,
+		/obj/item/rogueweapon/huntingknife = 1
+	)
 	var/patrons = list(
 		"The Verdant Court",        // Formerly "archfey"
 		"The Radiant Ember",        // Formerly "celestial"
@@ -58,6 +62,12 @@
 			hexbladepatron(human, patronchoice)
 		if("The Pale Crown")
 			undeadpatron(human, patronchoice)
+
+	switch(patronchoice)
+		if("The Verdant Court", "The Radiant Ember", "The Drowned Choir", "The Ashen Pact", "The Hollow Voice", "The Wakened Blade", "The Pale Crown")
+			backpack_contents += list(/obj/item/storage/belt/rogue/pouch/coins/poor = 1)
+		if("The Bound Whisper")
+			backpack_contents += list(/obj/item/storage/belt/rogue/pouch/coins/rich = 1)
 
 	var/boons = list( //what did you trade away a piece of yourself for?
 		"A sharper edge",        // strength / blade pact
@@ -96,7 +106,7 @@
 			human.mind.adjust_skillrank_by_up_to(/datum/skill/combat/swords, 3, SKILL_LEVEL_EXPERT)
 		if("Gold that never feels warm") //Pact of the Talisman
 			human.put_in_hands(giveamulet(patronchoice), FALSE)
-			beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
+			backpack_contents += list(/obj/item/storage/belt/rogue/pouch/coins/rich = 1)
 			ADD_TRAIT(human,TRAIT_SEEPRICES, TRAIT_GENERIC)
 			human.set_blindness(0)
 		if("A reason to keep breathing") //Pact of the Star Chain
@@ -119,9 +129,7 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/mage
 	shoes = /obj/item/clothing/shoes/roguetown/sandals
 	r_hand = /obj/item/rogueweapon/woodstaff
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltl = /obj/item/rogueweapon/huntingknife
 
 	//caster stats (must be 5 stat point total)
 	human.change_stat("intelligence", 2)
@@ -151,10 +159,8 @@
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
 	pants = /obj/item/clothing/under/roguetown/tights/random
 	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	belt = /obj/item/storage/belt/rogue/leather
 	r_hand = /obj/item/rogueweapon/spear
-	backpack_contents = list(/obj/item/rogueweapon/huntingknife)
 
 	//caster stats (must be 5 stat point total)
 	human.change_stat("intelligence", 2)
@@ -186,13 +192,11 @@
 	cloak = /obj/item/clothing/cloak/raincloak/yellow
 	wrists = /obj/item/rope
 	r_hand = /obj/item/rogueweapon/pitchfork
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	belt =/obj/item/storage/belt/rogue/leather
-	beltl = /obj/item/rogueweapon/huntingknife
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 
-	backpack_contents = list(/obj/item/rope)
+	backpack_contents += list(/obj/item/rope)
 
 	//melee stats (must be 5 stat point total)
 	human.change_stat("perception", 1)
@@ -223,9 +227,7 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/magered
 	cloak = /obj/item/clothing/cloak/raincloak/red
 	r_hand = /obj/item/rogueweapon/woodstaff
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltl = /obj/item/rogueweapon/huntingknife
 	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
 
 	//caster stats (must be 5 stat point total)
@@ -256,7 +258,6 @@
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shoes = /obj/item/clothing/shoes/roguetown/shalal
 	id = /obj/item/clothing/ring/gold/signet
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/rich)
 
 	//lucky stats (must be 5 stat point total)
 	human.change_stat("endurance", 1) //
@@ -287,9 +288,7 @@
 	armor = /obj/item/clothing/suit/roguetown/shirt/robe/tsoridys
 	beltr = /obj/item/reagent_containers/glass/bottle/rogue/manapot
 	belt = /obj/item/storage/belt/rogue/leather/rope
-	beltl = /obj/item/rogueweapon/huntingknife
 	r_hand = /obj/item/rogueweapon/woodstaff
-	backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor)
 
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/gravity)
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/ensnare)
@@ -321,8 +320,6 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/random
 	armor = /obj/item/clothing/suit/roguetown/armor/gambeson
-	beltl = /obj/item/rogueweapon/huntingknife
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 
 	human.put_in_hands(giveweapon(human,patronchoice), FALSE)
 
@@ -359,7 +356,6 @@
 	neck = /obj/item/clothing/neck/roguetown/gorget
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor/iron
 	head = /obj/item/clothing/head/roguetown/helmet/skullcap
-	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	belt = /obj/item/storage/belt/rogue/leather
 	beltl = /obj/item/rogueweapon/sword/iron/short
 	backl = /obj/item/rogueweapon/shield/tower
