@@ -7,7 +7,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/forest)
 "aae" = (
-/obj/structure/fluff/walldeco/mona,
+/obj/structure/fluff/walldeco/mona/directional/north,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "aah" = (
@@ -23,9 +23,7 @@
 /turf/open/floor/rogue/dirt/ambush,
 /area/provincial/underground/dungeon/vulnafir)
 "aav" = (
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/north,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "aaz" = (
@@ -315,7 +313,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/meat/steak,
 /obj/item/reagent_containers/powder/salt,
 /obj/item/reagent_containers/powder/salt,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/bfloorz,
@@ -512,9 +510,7 @@
 	},
 /area/provincial/indoors/town/province_keep/quarters/squire)
 "ajo" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /obj/machinery/light/rogue/lanternpost{
 	dir = 1
 	},
@@ -699,9 +695,7 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "amr" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/cloth,
 /turf/open/floor/rogue/ruinedwood{
@@ -808,10 +802,10 @@
 	},
 /area/provincial/outdoors/beach)
 "aoF" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/structure/chair/wood/rogue/chair3{
@@ -842,9 +836,7 @@
 /turf/open/water/swamp,
 /area/provincial/underground/dungeon/hordes_hoard)
 "apg" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/tile/masonic{
 	dir = 4
 	},
@@ -1079,9 +1071,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/basement)
 "asB" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/dungeon/riverbrook)
 "asF" = (
@@ -1136,9 +1126,7 @@
 /obj/effect/landmark/start/squire{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -1205,9 +1193,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/basement)
 "auV" = (
-/obj/structure/fluff/walldeco/serpflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/serpflag/directional/south,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "avd" = (
@@ -1620,7 +1606,7 @@
 /turf/open/floor/rogue/grasscold,
 /area/provincial/outdoors/beach/forest)
 "aBf" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /obj/structure/table/wood{
@@ -1667,13 +1653,11 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "aBP" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/closed/wall/mineral/rogue/decostone/long,
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
+/turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/old_university)
 "aBW" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/tile/masonic/single,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "aCa" = (
@@ -2511,7 +2495,7 @@
 /area/provincial/indoors/town/mages_university/alchemy_lab)
 "aQw" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassyel,
@@ -2529,10 +2513,10 @@
 /area/provincial/underground/underdark/sunkencity)
 "aQP" = (
 /obj/structure/flora/roguegrass/bush/wall,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grass,
@@ -2747,8 +2731,8 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep)
 "aUC" = (
-/obj/structure/fluff/walldeco/rpainting/forest,
-/turf/closed/wall/mineral/rogue/stonebrick,
+/obj/structure/fluff/walldeco/rpainting/directional/east,
+/turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/abandoned_manor)
 "aUD" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/wolf,
@@ -3006,9 +2990,7 @@
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
-/obj/structure/fluff/walldeco/innsign{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/innsign/directional/north,
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/dungeon/lost_homestead)
 "aYW" = (
@@ -3048,9 +3030,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/province_keep/garrison/stables)
 "aZQ" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /obj/effect/decal/cobbleedge{
 	dir = 9
 	},
@@ -3377,9 +3357,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "bgW" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /obj/effect/decal/cobble/mossy{
 	dir = 1
 	},
@@ -3467,9 +3445,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/underkings_maw)
 "biU" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/blocks/green{
 	dir = 8
 	},
@@ -3798,9 +3774,7 @@
 	},
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "bps" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/town/roofs)
 "bpu" = (
@@ -4081,6 +4055,7 @@
 "bup" = (
 /obj/structure/table/wood,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/materials,
+/obj/structure/fluff/walldeco/serpflag/directional/west,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/underground/dungeon/old_university_garden)
 "bur" = (
@@ -4126,7 +4101,7 @@
 /mob/living/simple_animal/pet/cat/rogue/black{
 	name = "Morticia"
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/cobble,
@@ -4982,10 +4957,10 @@
 /area/provincial/indoors/town/province_keep/garrison/quarters)
 "bJp" = (
 /obj/structure/flora/roguegrass/bush/winter,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassred,
@@ -5007,9 +4982,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/bog)
 "bJQ" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/province_keep/garrison)
 "bJX" = (
@@ -5205,7 +5178,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/underground)
 "bNG" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/churchmarble,
@@ -5503,9 +5476,7 @@
 /obj/item/candle/yellow/lit{
 	pixel_y = 5
 	},
-/obj/structure/fluff/walldeco/painting/queen{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/painting/queen/directional/east,
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/town/tavern/innkeeper)
 "bST" = (
@@ -5668,7 +5639,7 @@
 /turf/open/transparent/openspace,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "bUY" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/structure/roguemachine/scomm/directional/south,
@@ -5688,9 +5659,7 @@
 /turf/closed/mineral/random/rogue/med,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "bVz" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
@@ -5988,7 +5957,7 @@
 /area/provincial/underground/underdark/sunkencity)
 "caF" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/grass,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "caH" = (
@@ -6187,9 +6156,7 @@
 /turf/open/water/bath,
 /area/provincial/indoors/town/province_keep/baths)
 "cdr" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town/keep)
 "cdy" = (
@@ -6198,7 +6165,7 @@
 /area/provincial/outdoors/forest)
 "cdA" = (
 /obj/structure/flora/roguegrass/bush,
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/grass,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "cdG" = (
@@ -6259,9 +6226,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/sewer)
 "ceq" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/farm/secondary/stall)
 "ces" = (
@@ -6499,7 +6464,7 @@
 /area/provincial/indoors/town/mages_university)
 "chK" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grass,
@@ -6594,7 +6559,7 @@
 /obj/effect/decal/cobbleedge{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/dungeon/lost_homestead)
 "ckf" = (
@@ -6918,9 +6883,7 @@
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/sewer)
 "cqi" = (
-/obj/structure/fluff/walldeco/psybanner{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/psybanner/directional/north,
 /obj/structure/flora/roguegrass/herb/random,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town)
@@ -7028,9 +6991,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/dungeon/riverbrook)
 "csc" = (
@@ -7733,8 +7694,8 @@
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/underground/dungeon/decrepit_tower)
 "cGz" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -7817,10 +7778,8 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/dungeon/riverbrook)
 "cIf" = (
-/obj/structure/fluff/walldeco/wantedposter/r,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/wantedposter/directional/east,
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /obj/machinery/light/rogue/lanternpost{
 	dir = 1
 	},
@@ -8550,9 +8509,7 @@
 	},
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "cVC" = (
-/obj/structure/fluff/walldeco/med3{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/three/directional/east,
 /turf/open/floor/rogue/blocks/green{
 	dir = 8
 	},
@@ -8624,10 +8581,10 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground/underdark/sunkencity)
 "cWA" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -8637,9 +8594,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/dungeon/lost_homestead)
 "cWG" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -9202,7 +9157,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "dfu" = (
-/obj/structure/fluff/walldeco/wantedposter/l,
+/obj/structure/fluff/walldeco/wantedposter/directional/west,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "dfw" = (
@@ -9281,10 +9236,10 @@
 "dhm" = (
 /obj/structure/bed/rogue/inn/hay,
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/south,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/churchbrick,
@@ -9335,9 +9290,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
 "dhZ" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/tailor)
 "die" = (
@@ -9358,7 +9311,7 @@
 /turf/open/water/sewer,
 /area/provincial/underground/dungeon/gethsmane/inner)
 "dij" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "dik" = (
@@ -9585,7 +9538,7 @@
 /area/provincial/indoors/town/farm/chicken_coop)
 "dlU" = (
 /obj/structure/fluff/statue/aeternus/gold,
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/blocks/newstone,
 /area/provincial/indoors/town/church/basement/crypt)
 "dlV" = (
@@ -9761,6 +9714,11 @@
 	},
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university_garden)
+"dpe" = (
+/obj/structure/chair/wood/rogue/throne,
+/obj/structure/fluff/walldeco/painting/seraphina/directional/north,
+/turf/open/floor/rogue/wood,
+/area/provincial/indoors/town/province_keep/throneroom)
 "dph" = (
 /obj/effect/decal/cobbleedge{
 	dir = 4
@@ -9917,17 +9875,18 @@
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/provincial/outdoors/town/keep)
 "dsR" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/town/roofs)
 "dta" = (
-/obj/structure/fluff/walldeco/stone{
-	icon_state = "walldec6"
+/obj/structure/chair/wood/rogue/fancy{
+	dir = 1
 	},
-/turf/closed/wall/mineral/rogue/pipe,
-/area/provincial/underground/underkings_maw)
+/obj/structure/fluff/walldeco/painting/directional/south,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "dtb" = (
 /obj/structure/table/church/m,
 /obj/item/reagent_containers/glass/cup/silver,
@@ -10111,6 +10070,10 @@
 /obj/item/reagent_containers/glass/cup/wooden,
 /turf/open/floor/rogue/twig,
 /area/provincial/underground/dungeon/hordes_hoard)
+"dvu" = (
+/obj/structure/fluff/walldeco/stone/directional/north,
+/turf/open/lava,
+/area/provincial/underground/underkings_maw)
 "dvA" = (
 /obj/structure/toilet,
 /turf/open/floor/rogue/cobble,
@@ -10179,7 +10142,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/church/basement/crypt)
 "dxg" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/dungeon/riverbrook)
 "dxh" = (
@@ -10240,7 +10203,7 @@
 /area/provincial/indoors/town/tavern)
 "dyB" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/cobble,
@@ -10842,9 +10805,7 @@
 	},
 /area/provincial/outdoors/town/roofs/keep)
 "dIc" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "dIi" = (
@@ -11146,8 +11107,8 @@
 /area/provincial/underground/dungeon/goblinfort)
 "dNU" = (
 /obj/machinery/light/rogue/wallfire,
-/turf/closed/wall/mineral/rogue/pipe,
-/area/provincial/underground/underkings_maw)
+/turf/open/floor/rogue/blocks,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "dNW" = (
 /obj/effect/decal/cobbleedge{
 	icon_state = "borderfall";
@@ -11170,9 +11131,7 @@
 /turf/open/water/swamp/deep,
 /area/provincial/underground/underdark/sunkencity)
 "dOh" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
@@ -11262,9 +11221,7 @@
 	icon_state = "longtable";
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/med{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/directional/north,
 /obj/effect/spawner/lootdrop/roguetown/sewers,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/sewer)
@@ -11273,9 +11230,9 @@
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/underdark/sunkencity)
 "dPO" = (
-/obj/structure/fluff/walldeco/painting,
-/turf/closed/wall/mineral/rogue/decowood,
-/area/provincial/indoors/dungeon/giuseppes_toybox)
+/obj/structure/fluff/walldeco/painting/queen/directional/north,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
+/area/provincial/underground/dungeon/licharena)
 "dPT" = (
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/provincial/indoors/town/province_keep/quarters/hand)
@@ -11315,7 +11272,7 @@
 /obj/structure/chair/bench{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/church,
@@ -11704,7 +11661,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/tile/masonic/spiral,
@@ -11953,9 +11910,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "ebA" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/blocks{
 	dir = 8
 	},
@@ -12015,16 +11970,14 @@
 /area/provincial/underground/underkings_maw)
 "ecK" = (
 /obj/structure/fluff/railing/border,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/provincial/underground/dungeon/vulnafir)
 "ecP" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
@@ -12340,7 +12293,7 @@
 /turf/closed/wall/mineral/rogue/roofwall/outercorner,
 /area/provincial/indoors/town/shop)
 "ein" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -12357,9 +12310,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "eiE" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town/keep)
 "eiH" = (
@@ -12470,6 +12421,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 5
 	},
+/obj/structure/fluff/walldeco/sparrowflag/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "ekY" = (
@@ -12914,9 +12866,11 @@
 	},
 /area/provincial/outdoors/town/roofs/keep)
 "etl" = (
-/obj/structure/fluff/walldeco/psybanner/red,
-/turf/closed/wall/mineral/rogue/stone,
-/area/provincial/underground/dungeon/decrepit_tower)
+/obj/structure/closet/crate/roguecloset/dark,
+/obj/item/storage/belt/rogue/pouch/coins/mid,
+/obj/structure/fluff/walldeco/rpainting/directional/north,
+/turf/open/floor/rogue/blocks/stonered/tiny,
+/area/provincial/underground/dungeon/old_university)
 "etn" = (
 /obj/effect/spawner/lootdrop/roguetown/dungeon,
 /turf/open/water/sewer,
@@ -12957,9 +12911,7 @@
 /turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/licharena)
 "euj" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/abandoned_manor)
 "eut" = (
@@ -13037,16 +12989,13 @@
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/mages_university)
 "evR" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks/newstone,
 /area/provincial/indoors/town/church/treatment_center)
 "evX" = (
-/obj/structure/fluff/walldeco/alarm{
-	pixel_x = 32;
-	pixel_y = 0
-	},
+/obj/structure/fluff/walldeco/alarm/directional/east,
 /obj/structure/mineral_door/bars,
 /obj/effect/mapping_helpers/access/garrison/armory,
 /obj/effect/mapping_helpers/lock_door,
@@ -13156,9 +13105,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/steward)
 "ewW" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town/roofs)
 "ewX" = (
@@ -13257,9 +13204,10 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "eyy" = (
-/obj/structure/fluff/walldeco/painting/queen,
-/turf/closed/wall/mineral/rogue/decostone,
-/area/provincial/indoors/town/province_keep/throneroom)
+/obj/machinery/light/rogue/firebowl/standing/blue,
+/obj/structure/fluff/walldeco/serpflag/directional/south,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/provincial/underground/dungeon/old_university_garden)
 "eyC" = (
 /obj/structure/stairs,
 /turf/open/floor/rogue/wood,
@@ -13352,7 +13300,7 @@
 /obj/structure/chair/bench{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
@@ -13393,11 +13341,11 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/stables/rented)
 "eBb" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -13848,7 +13796,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep)
 "eIJ" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/cobble,
@@ -13998,9 +13946,7 @@
 	},
 /area/provincial/outdoors/town)
 "eKF" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/province_keep/garrison/gate/south)
 "eKO" = (
@@ -14217,9 +14163,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/sewer)
 "eOh" = (
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/west,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "eOi" = (
@@ -14307,9 +14251,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/mountains)
 "ePM" = (
-/obj/structure/fluff/walldeco/innsign{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/innsign/directional/north,
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/dungeon/riverbrook)
 "ePO" = (
@@ -14434,11 +14376,9 @@
 /turf/open/floor/rogue/grassred,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "eRE" = (
-/obj/structure/fluff/walldeco/painting/queen,
-/turf/closed/wall/mineral/rogue/decostone/long{
-	dir = 1
-	},
-/area/provincial/underground/dungeon/licharena)
+/obj/structure/fluff/walldeco/med/three,
+/turf/open/floor/rogue/hexstone,
+/area/provincial/indoors/town/province_keep/deacon/alchemylab)
 "eRF" = (
 /obj/structure/roguerock,
 /turf/open/floor/rogue/dirt,
@@ -14710,7 +14650,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "eVF" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/structure/spider/stickyweb,
@@ -14847,9 +14787,7 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/indoors/town/sewer)
 "eYB" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/floor/rogue/blocks{
 	dir = 8
 	},
@@ -15141,9 +15079,8 @@
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "fdj" = (
 /obj/structure/fluff/clockwork/alloy_shards/medium,
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 16;
-	pixel_y = 32
+/obj/machinery/light/rogue/wallfire/directional/north{
+	pixel_x = 16
 	},
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -15300,9 +15237,7 @@
 /turf/closed/mineral/rogue/bedrock,
 /area/provincial/underground/underdark/undersea/undergrove)
 "fgL" = (
-/obj/structure/fluff/walldeco/painting/queen{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/painting/queen/directional/north,
 /turf/open/floor/rogue/tile{
 	icon_state = "glyph4"
 	},
@@ -15398,7 +15333,7 @@
 /area/provincial/indoors/town/tailor)
 "fif" = (
 /obj/structure/chair/bench/ultimacouch,
-/obj/structure/fluff/walldeco/maidensigil/r,
+/obj/structure/fluff/walldeco/maidensigil/directional/east,
 /turf/open/floor/rogue/tile,
 /area/provincial/underground/dungeon/winding_halls)
 "fij" = (
@@ -15428,10 +15363,10 @@
 /turf/open/water/cleanshallow,
 /area/provincial/indoors/town/sewer)
 "fiT" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/dungeon/riverbrook)
 "fiV" = (
@@ -15453,9 +15388,7 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "fjt" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/underground/dungeon/fogotten_church)
 "fjw" = (
@@ -15582,9 +15515,7 @@
 /area/provincial/underground/dungeon/forsaken_bastille)
 "flH" = (
 /obj/item/reagent_containers/glass/bucket,
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "flJ" = (
@@ -15764,9 +15695,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/house/janitor)
 "foZ" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/provincial/indoors/town/province_keep/garrison/quarters/marshal)
 "fpb" = (
@@ -15824,9 +15753,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/abandoned_manor)
 "fqc" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/transparent/openspace,
 /area/provincial/indoors/town/province_keep/garrison)
 "fqd" = (
@@ -15887,9 +15814,8 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "frs" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 16;
-	pixel_y = 32
+/obj/machinery/light/rogue/wallfire/directional/north{
+	pixel_x = 16
 	},
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -15902,7 +15828,7 @@
 /area/provincial/underground/underdark/undersea/undergrove)
 "frD" = (
 /obj/structure/fluff/railing/border,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/tile/masonic/spiral,
@@ -16052,7 +15978,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/churchbrick,
@@ -16077,9 +16003,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/north)
 "fuz" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/steward)
 "fuB" = (
@@ -16095,7 +16019,7 @@
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town/roofs/keep)
 "fuQ" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/cobble,
@@ -16536,9 +16460,7 @@
 	},
 /area/provincial/underground/dungeon/winding_halls)
 "fAI" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/structure/table/wood{
 	dir = 1;
 	icon_state = "tablewood1"
@@ -16620,7 +16542,7 @@
 	},
 /area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "fBW" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/hexstone,
@@ -16660,9 +16582,9 @@
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/dungeon/lost_homestead)
 "fCz" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/closed/wall/mineral/rogue/decowood,
-/area/provincial/underground/dungeon/old_university)
+/obj/structure/fluff/walldeco/painting/seraphina/directional/east,
+/turf/open/floor/rogue/woodturned,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "fCC" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 8
@@ -16771,14 +16693,14 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "fEs" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -16925,10 +16847,7 @@
 	redstone_id = "bastilletop";
 	name = "Tsoridys' Mercy"
 	},
-/obj/structure/fluff/walldeco/med5{
-	pixel_x = 4;
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/five/directional/north,
 /turf/open/floor/rogue/blocks/green{
 	dir = 8
 	},
@@ -17014,7 +16933,7 @@
 	},
 /area/provincial/underground/dungeon/decrepit_tower)
 "fIi" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/churchbrick,
@@ -17075,9 +16994,7 @@
 /area/provincial/outdoors/dungeon/riverbrook)
 "fJh" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/spear,
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "fJi" = (
@@ -17165,10 +17082,10 @@
 	},
 /area/provincial/outdoors/field)
 "fKx" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -17195,9 +17112,10 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/underground/underdark/sunkencity)
 "fKP" = (
-/obj/structure/fluff/walldeco/stone,
-/turf/closed/wall/mineral/rogue/craftstone,
-/area/provincial/underground/dungeon/winding_halls)
+/mob/living/carbon/human/species/skeleton/npc,
+/obj/structure/fluff/walldeco/rpainting/forest/directional/west,
+/turf/open/floor/rogue/blocks,
+/area/provincial/underground/dungeon/abandoned_manor)
 "fKU" = (
 /turf/open/floor/rogue/churchbrick,
 /area/provincial/indoors/town/church)
@@ -17364,9 +17282,7 @@
 /turf/open/floor/rogue/dirt/ambush,
 /area/provincial/underground)
 "fNZ" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town/keep)
 "fOc" = (
@@ -17429,9 +17345,7 @@
 	dir = 10;
 	icon_state = "cobbleedge-n"
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/indoors/town/province_keep/garrison/gate/keep)
 "fPc" = (
@@ -17526,6 +17440,11 @@
 /obj/item/storage/belt/rogue/pouch/coins/rich,
 /turf/open/floor/carpet/royalblack,
 /area/provincial/underground/underdark/sunkencity)
+"fRa" = (
+/obj/structure/chair/wood/rogue/throne,
+/obj/structure/fluff/walldeco/painting/queen/directional/north,
+/turf/open/floor/rogue/wood,
+/area/provincial/indoors/town/province_keep/throneroom)
 "fRd" = (
 /obj/structure/bars,
 /turf/open/floor/rogue/hexstone,
@@ -17631,7 +17550,7 @@
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/town)
 "fTd" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/south,
@@ -17682,13 +17601,11 @@
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/province_keep/vault)
 "fUp" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/outdoors/town/keep)
 "fUx" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/structure/bookcase,
@@ -17718,7 +17635,7 @@
 /obj/structure/chair/bench{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/church,
@@ -17729,9 +17646,7 @@
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "fVr" = (
 /obj/structure/closet/crate/drawer,
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
 /turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "fVs" = (
@@ -17773,14 +17688,12 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/beach/forest)
 "fVU" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/mages_university)
 "fWf" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -17847,9 +17760,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town)
 "fWQ" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town)
 "fWR" = (
@@ -18198,7 +18109,7 @@
 /area/provincial/indoors/town)
 "gdl" = (
 /obj/structure/mineral_door/bars,
-/obj/structure/fluff/walldeco/alarm,
+/obj/structure/fluff/walldeco/alarm/directional/north,
 /obj/effect/mapping_helpers/access/noble/vault,
 /obj/effect/mapping_helpers/lock_door,
 /obj/effect/mapping_helpers/autoname,
@@ -18211,7 +18122,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground)
 "gdn" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/effect/decal/cobbleedge{
@@ -18363,9 +18274,7 @@
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town/roofs)
 "gfz" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town/roofs)
 "gfA" = (
@@ -18450,9 +18359,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
 "ggT" = (
-/obj/structure/fluff/walldeco/painting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/painting/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/abandoned_manor)
 "ggW" = (
@@ -18486,9 +18393,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "ghw" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
@@ -18501,9 +18406,7 @@
 	},
 /area/provincial/indoors/town/farm/barn)
 "ghJ" = (
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/north,
 /obj/structure/bookcase,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
@@ -19191,7 +19094,7 @@
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/town/tavern/innkeeper)
 "gtU" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/west,
@@ -19368,6 +19271,7 @@
 /obj/effect/decal/cobbleedge{
 	dir = 4
 	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground/dungeon/winding_halls)
 "gwo" = (
@@ -19561,9 +19465,7 @@
 	},
 /area/provincial/indoors/town/province_keep/deacon/quarters)
 "gzO" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/stone/directional/south,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "gzU" = (
@@ -19682,10 +19584,10 @@
 /area/provincial/indoors/town/tavern)
 "gBY" = (
 /obj/structure/flora/roguegrass/bush/wall/red,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grassyel,
@@ -19869,9 +19771,7 @@
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university_garden)
 "gFg" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobble/mossy{
 	dir = 10
 	},
@@ -20004,9 +19904,7 @@
 /turf/open/water/cleanshallow,
 /area/provincial/outdoors/forest)
 "gGJ" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/carpet,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "gHa" = (
@@ -20175,11 +20073,10 @@
 /turf/open/floor/rogue/dirt/ambush,
 /area/provincial/underground/underdark)
 "gKO" = (
-/obj/structure/fluff/walldeco/stone{
-	icon_state = "walldec6"
-	},
-/turf/closed/wall/mineral/rogue/stone,
-/area/provincial/underground/underkings_maw)
+/obj/structure/bookcase/random,
+/obj/structure/fluff/walldeco/serpflag/directional/north,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/provincial/underground/dungeon/old_university)
 "gKW" = (
 /obj/structure/bars/pipe{
 	dir = 8
@@ -20251,13 +20148,13 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors)
 "gMt" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/outdoors/town/roofs)
 "gMC" = (
@@ -20307,7 +20204,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/sewer/rogues_den)
 "gNl" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -20373,9 +20270,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "gOk" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
@@ -20570,7 +20465,7 @@
 /turf/open/floor/rogue/metal,
 /area/provincial/underground/underdark/sunkencity)
 "gQN" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /obj/structure/chair/wood/rogue/chair3{
@@ -20824,7 +20719,7 @@
 /area/provincial/underground/underkings_maw)
 "gTC" = (
 /obj/structure/flora/roguegrass/bush/wall/winter,
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/grassred,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "gTO" = (
@@ -20965,10 +20860,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "gWT" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_x = -31;
-	pixel_y = 0
-	},
+/obj/structure/fluff/walldeco/stone/directional/south,
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "gXc" = (
@@ -21233,9 +21125,7 @@
 /area/provincial/outdoors/town)
 "hbg" = (
 /mob/living/simple_animal/hostile/rogue/skeleton/axe,
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/north,
 /obj/effect/decal/cobble/mossy{
 	dir = 10
 	},
@@ -21257,16 +21147,12 @@
 /area/provincial/underground/underkings_maw)
 "hbs" = (
 /obj/structure/roguemachine/scomm/directional/west,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /obj/machinery/light/rogue/torchholder/directional/west,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "hby" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/shop)
 "hbA" = (
@@ -21287,7 +21173,7 @@
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/underground/dungeon/cursed_labyrinth)
 "hbR" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/structure/spider/stickyweb,
@@ -21305,9 +21191,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/mountains)
 "hcs" = (
@@ -21452,9 +21336,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/steward)
 "hez" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/floor/rogue/blocks/green{
 	dir = 8
 	},
@@ -21948,10 +21830,10 @@
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "hnz" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -22220,9 +22102,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/mages_university)
 "hrH" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "hrS" = (
@@ -22291,9 +22171,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "htj" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/province_keep/garrison/gate/west)
 "htn" = (
@@ -22360,9 +22238,7 @@
 	pixel_y = 7
 	},
 /obj/structure/table/wood,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/magician/alchemylab)
 "htT" = (
@@ -22540,7 +22416,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/indoors)
 "hxi" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /obj/structure/bars/cemetery,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/town/roofs)
@@ -22595,9 +22471,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/dungeon/riverbrook)
 "hyd" = (
@@ -22883,9 +22757,7 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/beach/forest)
 "hDR" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/old_university)
 "hDS" = (
@@ -23387,8 +23259,8 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/underground/dungeon/old_university)
 "hKv" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -23511,7 +23383,7 @@
 /area/provincial/underground/dungeon/forsaken_bastille)
 "hLX" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grass,
@@ -23624,9 +23496,7 @@
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/mountains)
 "hNW" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
@@ -23646,11 +23516,9 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors)
 "hOb" = (
-/obj/structure/fluff/walldeco/rpainting,
-/turf/closed/wall/mineral/rogue/decostone/long{
-	dir = 1
-	},
-/area/provincial/underground/dungeon/licharena)
+/obj/structure/fluff/walldeco/rpainting/forest/directional/south,
+/turf/open/floor/rogue/wood,
+/area/provincial/underground/dungeon/old_university)
 "hOg" = (
 /turf/open/floor/rogue/greenstone,
 /area/provincial/outdoors/mountains/underkings_maw)
@@ -23769,7 +23637,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "hQs" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -23869,9 +23737,7 @@
 	},
 /area/provincial/indoors/town/farm/barn)
 "hRC" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "hRD" = (
@@ -23979,9 +23845,13 @@
 /turf/open/floor/rogue/metal,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "hSC" = (
-/obj/structure/fluff/walldeco/sparrowflag,
-/turf/closed/wall/mineral/rogue/stonebrick,
-/area/provincial/indoors/town/adventurers_guild/handlers_office/bedroom)
+/obj/effect/decal/cobble/mossy{
+	dir = 10
+	},
+/obj/structure/flora/roguegrass,
+/obj/structure/fluff/walldeco/serpflag/directional/north,
+/turf/open/floor/rogue/grassred,
+/area/provincial/underground/dungeon/old_university_garden)
 "hSK" = (
 /obj/structure/fluff/railing/border,
 /obj/structure/fluff/wallclock/directional/north,
@@ -24063,10 +23933,8 @@
 	dir = 6
 	},
 /obj/machinery/light/rogue/lanternpost,
-/obj/structure/fluff/walldeco/wantedposter/l,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/wantedposter/directional/west,
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town)
 "hTZ" = (
@@ -24137,9 +24005,7 @@
 	},
 /area/provincial/outdoors/town)
 "hUZ" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/rogue/dirt/ambush,
 /area/provincial/underground/dungeon/vulnafir)
@@ -24214,9 +24080,7 @@
 /area/provincial/underground/dungeon/abandoned_manor)
 "hWT" = (
 /obj/structure/fluff/clockwork/clockgolem_remains,
-/obj/structure/fluff/walldeco/med6{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/med/six/directional/west,
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "hXc" = (
@@ -24321,9 +24185,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town)
 "hZD" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/carpet/purple,
 /area/provincial/indoors/town/tavern/room/luxury/five)
 "hZG" = (
@@ -24336,9 +24198,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/tailor)
 "hZJ" = (
-/obj/structure/fluff/walldeco/serpflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/serpflag/directional/west,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "hZK" = (
@@ -24571,9 +24431,7 @@
 /area/provincial/indoors)
 "ieU" = (
 /obj/machinery/light/rogue/lanternpost,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
 "ieX" = (
@@ -24738,8 +24596,9 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "ihM" = (
-/obj/structure/fluff/walldeco/rpainting/forest,
-/turf/closed/wall/mineral/rogue/decostone/mossy/long,
+/obj/structure/chair/bench/couch/r,
+/obj/structure/fluff/walldeco/rpainting/directional/north,
+/turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/old_university)
 "iia" = (
 /obj/structure/roguerock,
@@ -24752,7 +24611,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/underdark/sunkencity)
 "iig" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /obj/structure/fluff/railing/border,
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/indoors/town/church)
@@ -24844,9 +24703,7 @@
 "ijW" = (
 /obj/structure/closet/crate/drawer/random,
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -24864,9 +24721,7 @@
 /turf/closed/wall/mineral/rogue/wooddark/window,
 /area/provincial/indoors/town)
 "ikn" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobbleedge{
 	dir = 6
 	},
@@ -25016,9 +24871,7 @@
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town)
 "ilX" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
 	},
@@ -25034,6 +24887,20 @@
 /obj/structure/roguewindow,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/mages_university/archivist)
+"imp" = (
+/obj/effect/decal/wood/herringbone{
+	dir = 4
+	},
+/obj/effect/decal/wood/herringbone{
+	dir = 8
+	},
+/obj/effect/decal/wood/herringbone{
+	dir = 1
+	},
+/obj/structure/flora/roguegrass,
+/obj/structure/fluff/walldeco/serpflag/directional/west,
+/turf/open/floor/rogue/grassred,
+/area/provincial/underground/dungeon/old_university_garden)
 "imr" = (
 /obj/structure/flora/roguegrass,
 /turf/open/floor/rogue/grass,
@@ -25197,7 +25064,7 @@
 /area/provincial/indoors/town)
 "ipe" = (
 /obj/structure/flora/roguegrass/bush,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grass,
@@ -25452,9 +25319,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/stall/stall_two)
 "iuT" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/province_keep/quarters/guest)
 "iuV" = (
@@ -25495,9 +25360,7 @@
 /obj/effect/decal/cobbleedge{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/serpflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/serpflag/directional/west,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "ivM" = (
@@ -25582,9 +25445,7 @@
 /area/provincial/outdoors/mountains)
 "iwK" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/stone/directional/south,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -25770,15 +25631,11 @@
 	dir = 4;
 	icon_state = "longtable"
 	},
-/obj/structure/fluff/walldeco/med3{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/three/directional/east,
 /turf/open/floor/rogue/metal,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "iAH" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -26016,10 +25873,10 @@
 /turf/open/floor/rogue/herringbone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "iEo" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -26294,10 +26151,11 @@
 "iHN" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
+/obj/structure/fluff/walldeco/rpainting/directional/west,
 /turf/open/floor/rogue/church,
 /area/provincial/underground/dungeon/old_university)
 "iHW" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /mob/living/carbon/human/species/construct/metal/toyjester,
@@ -26359,7 +26217,7 @@
 /turf/open/floor/carpet/red,
 /area/provincial/underground/dungeon/goblinfort)
 "iIZ" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/woodturned,
@@ -26421,9 +26279,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground/underkings_maw)
 "iJC" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "iJH" = (
@@ -26619,7 +26475,7 @@
 /area/provincial/indoors/town/sewer)
 "iNy" = (
 /obj/structure/flora/roguegrass/bush/red,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grassyel,
@@ -26675,9 +26531,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/mages_university/established_mage_hall)
 "iOg" = (
-/obj/structure/fluff/walldeco/sparrowflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/sparrowflag/directional/west,
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/adventurers_guild/handlers_office)
 "iOn" = (
@@ -26775,9 +26629,8 @@
 	},
 /area/provincial/underground/dungeon/vulnafir)
 "iQv" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 16;
-	pixel_y = 32
+/obj/machinery/light/rogue/wallfire/directional/north{
+	pixel_x = 16
 	},
 /obj/structure/chair/bench/couch,
 /turf/open/floor/carpet/royalblack,
@@ -26957,9 +26810,7 @@
 /area/provincial/outdoors/mountains/underkings_maw)
 "iTf" = (
 /mob/living/simple_animal/hostile/retaliate/rogue/bigrat,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/floor/rogue/blocks{
 	dir = 8
 	},
@@ -27158,7 +27009,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "iWL" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/structure/fluff/railing/border{
@@ -27241,9 +27092,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/field)
 "iXU" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "iXY" = (
@@ -27494,11 +27343,9 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
 "jcS" = (
-/obj/structure/fluff/walldeco/rpainting,
-/turf/closed/wall/mineral/rogue/decostone/mossy/long{
-	dir = 1
-	},
-/area/provincial/underground/dungeon/old_university)
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
+/turf/closed/mineral/rogue/bedrock,
+/area/provincial/underground)
 "jdo" = (
 /obj/structure/chair/bench/couch{
 	icon_state = "redcouch2"
@@ -27560,7 +27407,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/underdark/sunkencity)
 "jes" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -27636,9 +27483,7 @@
 /turf/open/floor/rogue/herringbone,
 /area/provincial/underground/dungeon/old_ruin)
 "jfy" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 33
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "jfB" = (
@@ -28197,7 +28042,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "jnl" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/structure/rack/rogue/shelf/biggest,
@@ -28238,9 +28083,7 @@
 	},
 /area/provincial/indoors/town/province_keep/quarters/marquis)
 "jnG" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/tavern/room/luxury/four)
 "jnH" = (
@@ -28294,10 +28137,7 @@
 /turf/closed/wall/mineral/rogue/decostone,
 /area/provincial/indoors/town/mages_university/library)
 "jnZ" = (
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_x = 32;
-	pixel_y = 0
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/east,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "jor" = (
@@ -28387,9 +28227,7 @@
 /turf/closed/mineral/random/rogue,
 /area/provincial/underground/underdark/undersea/undergrove)
 "jpw" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /obj/structure/spider/stickyweb,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
@@ -28790,9 +28628,7 @@
 /obj/machinery/light/rogue/lanternpost{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/outdoors/town)
 "jxe" = (
@@ -28812,7 +28648,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
 "jxo" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/effect/spawner/lootdrop/roguetown/dungeon/materials,
@@ -29018,7 +28854,7 @@
 /turf/open/floor/carpet/stellar,
 /area/provincial/indoors/town/mages_university)
 "jBh" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/structure/fluff/clock,
@@ -29052,9 +28888,9 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/underground/dungeon/fogotten_church)
 "jBP" = (
-/obj/structure/fluff/walldeco/rpainting,
-/turf/closed/wall/mineral/rogue/decostone/mossy/long,
-/area/provincial/underground/dungeon/old_university)
+/obj/structure/fluff/walldeco/sparrowflag/directional/north,
+/turf/open/floor/rogue/cobblerock,
+/area/provincial/outdoors/town)
 "jBR" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
@@ -29089,9 +28925,7 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "jCL" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/outdoors/town/garrison/ramparts)
 "jCQ" = (
@@ -29104,7 +28938,7 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/forest)
 "jDf" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/structure/chair/stool/rogue,
@@ -29144,9 +28978,7 @@
 	},
 /area/provincial/indoors/town/church/storage)
 "jDX" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/blocks{
 	dir = 8
@@ -29422,12 +29254,9 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/warden_watchtower)
 "jJb" = (
-/obj/structure/fluff/statue/psybloody{
-	name = "fool";
-	desc = "An inscription reads: upon what is your precious unity built?"
-	},
+/obj/structure/fluff/walldeco/painting/queen/directional/east,
 /turf/open/floor/rogue/blocks,
-/area/provincial/underground/dungeon/winding_halls)
+/area/provincial/underground/dungeon/abandoned_manor)
 "jJi" = (
 /obj/structure/chair/bench,
 /turf/open/floor/rogue/dirt/road,
@@ -29809,8 +29638,8 @@
 /area/provincial/outdoors/town)
 "jQe" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks/newstone,
@@ -30014,7 +29843,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/tavern/arena)
 "jUm" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /mob/living/carbon/human/species/construct/metal/toyjester,
@@ -30408,7 +30237,7 @@
 /area/provincial/outdoors/field)
 "kbf" = (
 /obj/structure/fluff/railing/border,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/churchbrick,
@@ -31473,7 +31302,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
@@ -31902,11 +31731,9 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/vulnafir)
 "kzf" = (
-/obj/structure/fluff/walldeco/rpainting/crown,
-/turf/closed/wall/mineral/rogue/decostone/long{
-	dir = 1
-	},
-/area/provincial/underground/dungeon/licharena)
+/obj/structure/fluff/walldeco/rpainting/directional/east,
+/turf/open/floor/rogue/wood,
+/area/provincial/underground/dungeon/old_university)
 "kzn" = (
 /obj/effect/oneway/lich{
 	dir = 1;
@@ -32150,11 +31977,9 @@
 /turf/closed/wall/mineral/rogue/decowood,
 /area/provincial/outdoors/mountains)
 "kDy" = (
-/obj/structure/fluff/walldeco/painting/seraphina,
-/turf/closed/wall/mineral/rogue/decostone/long{
-	dir = 1
-	},
-/area/provincial/underground/dungeon/licharena)
+/obj/structure/fluff/walldeco/rpainting/directional/west,
+/turf/open/floor/rogue/blocks,
+/area/provincial/underground/dungeon/abandoned_manor)
 "kDA" = (
 /obj/structure/bars/pipe{
 	dir = 4
@@ -32542,9 +32367,7 @@
 	icon_state = "tablewood1"
 	},
 /obj/item/candle/skull/lit,
-/obj/structure/fluff/walldeco/med3{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/three/directional/north,
 /turf/open/floor/rogue/twig,
 /area/provincial/indoors/town)
 "kJO" = (
@@ -32614,7 +32437,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/underground/dungeon/old_university)
 "kKu" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/churchbrick,
 /area/provincial/indoors/town/church/treatment_center)
 "kKv" = (
@@ -32633,7 +32456,7 @@
 /turf/open/water/cleanshallow,
 /area/provincial/outdoors/forest)
 "kKB" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/tile/masonic/inverted,
@@ -32645,9 +32468,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "kKV" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/twig,
 /area/provincial/indoors/town)
 "kLh" = (
@@ -32826,10 +32647,7 @@
 /obj/structure/fluff/littlebanners{
 	pixel_y = -5
 	},
-/obj/structure/fluff/walldeco/alarm{
-	pixel_x = 32;
-	pixel_y = 0
-	},
+/obj/structure/fluff/walldeco/alarm/directional/east,
 /obj/effect/mapping_helpers/access/mages_university/artificer,
 /obj/effect/mapping_helpers/lock_door,
 /turf/open/floor/rogue/metal/barograte,
@@ -32875,9 +32693,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town)
 "kPS" = (
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/west,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "kQa" = (
@@ -32917,7 +32733,7 @@
 /turf/open/floor/rogue/twig,
 /area/provincial/outdoors/bog)
 "kQE" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/churchmarble,
@@ -32943,9 +32759,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town)
 "kRb" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/closed/mineral/rogue/bedrock,
 /area/provincial/underground/dungeon/vulnafir)
 "kRu" = (
@@ -32955,10 +32769,10 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/bog)
 "kRv" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /obj/structure/flora/ausbushes/ppflowers,
@@ -33033,7 +32847,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/field)
 "kST" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/machinery/light/rogue/firebowl/church,
@@ -33290,9 +33104,7 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "kXw" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/machinery/light/rogue/firebowl,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/basement)
@@ -33591,10 +33403,10 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/house/village_elder)
 "ldv" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -33759,11 +33571,11 @@
 /turf/open/floor/rogue/herringbone,
 /area/provincial/underground/dungeon/winding_halls)
 "lgQ" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -33799,7 +33611,7 @@
 /obj/structure/roguemachine/mail/directional/east{
 	mailtag = "Church"
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/churchmarble,
@@ -34026,8 +33838,8 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/outdoors/beach)
 "lmg" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -34131,11 +33943,9 @@
 /turf/closed/wall/mineral/rogue/stonebrick,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "lnS" = (
-/obj/structure/fluff/walldeco/psybanner/red,
-/turf/closed/wall/mineral/rogue/stone{
-	max_integrity = 50000
-	},
-/area/provincial/underground/dungeon/winding_halls)
+/obj/structure/fluff/walldeco/rpainting/directional/south,
+/turf/open/floor/rogue/wood,
+/area/provincial/underground/dungeon/old_university)
 "lnU" = (
 /obj/structure/chair/wood/rogue{
 	dir = 1
@@ -34236,7 +34046,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/abandoned_manor)
 "lpx" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/dirt/road,
@@ -34338,10 +34148,10 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/concrete,
 /area/provincial/indoors/town/province_keep/deacon)
 "lry" = (
@@ -34386,11 +34196,9 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/riverbrook)
 "lsd" = (
-/obj/structure/fluff/walldeco/rpainting/forest,
-/turf/closed/wall/mineral/rogue/decostone/mossy/long{
-	dir = 1
-	},
-/area/provincial/underground/dungeon/old_university)
+/obj/structure/fluff/walldeco/serpflag,
+/turf/open/floor/rogue/cobble,
+/area/provincial/outdoors/town)
 "lsh" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 4
@@ -34405,7 +34213,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/quarters/guest)
 "lsl" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassred,
@@ -34437,6 +34245,10 @@
 /obj/machinery/light/rogue/cauldron,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
+"ltj" = (
+/obj/machinery/light/rogue/wallfire/directional/north,
+/turf/open/floor/rogue/tile,
+/area/provincial/underground/dungeon/winding_halls)
 "lts" = (
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/town/farm)
@@ -34555,9 +34367,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/mountains/underkings_maw)
 "luU" = (
-/obj/structure/fluff/walldeco/painting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/painting/directional/north,
 /obj/effect/decal/cobble/mossy,
 /turf/open/floor/rogue/blocks{
 	dir = 8
@@ -34762,8 +34572,8 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground)
 "lyO" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -34956,8 +34766,8 @@
 /area/provincial/underground/dungeon/old_university)
 "lDL" = (
 /obj/structure/flora/roguegrass/bush/wall,
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grass,
@@ -34987,16 +34797,14 @@
 "lEi" = (
 /obj/structure/fluff/railing/border,
 /mob/living/simple_animal/hostile/rogue/skeleton/axe,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "lEk" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -35105,9 +34913,7 @@
 "lGh" = (
 /obj/structure/chair/wood/rogue/throne,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/vulnafir)
 "lGm" = (
@@ -35169,8 +34975,8 @@
 /area/provincial/indoors/town/province_keep/basement)
 "lHi" = (
 /obj/structure/flora/roguegrass/bush/wall,
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grass,
@@ -35204,9 +35010,9 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/underground/dungeon/fogotten_church)
 "lIc" = (
-/obj/structure/fluff/walldeco/rpainting/crown,
-/turf/closed/wall/mineral/rogue/stonebrick,
-/area/provincial/underground/dungeon/abandoned_manor)
+/obj/structure/fluff/walldeco/serpflag/directional/east,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/provincial/underground/dungeon/old_university)
 "lIf" = (
 /obj/structure/chair/wood/rogue{
 	dir = 4
@@ -35333,7 +35139,7 @@
 /turf/open/floor/rogue/concrete,
 /area/provincial/outdoors/field)
 "lJS" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /mob/living/carbon/human/species/construct/metal/toyjester,
@@ -35354,9 +35160,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/dungeon/riverbrook)
 "lKr" = (
-/obj/structure/fluff/walldeco/painting/queen{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/painting/queen/directional/north,
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/town/church)
 "lKs" = (
@@ -35416,6 +35220,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
+/obj/structure/fluff/walldeco/sparrowflag/directional/west,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/adventurers_guild)
 "lLj" = (
@@ -35516,9 +35321,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/old_university)
 "lNw" = (
@@ -35683,7 +35486,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/beach)
 "lPF" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/structure/fluff/railing/border{
@@ -35829,9 +35632,7 @@
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university_garden)
 "lSY" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobbleedge{
 	dir = 5
 	},
@@ -35843,6 +35644,7 @@
 /area/provincial/outdoors/town)
 "lTd" = (
 /obj/item/storage/belt/rogue/pouch/coins/mid,
+/obj/structure/fluff/walldeco/rpainting/directional/south,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/old_university)
 "lTf" = (
@@ -35940,7 +35742,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep/baths/marquis)
 "lUV" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassyel,
@@ -35981,12 +35783,9 @@
 /turf/open/floor/rogue/carpet/lord/left,
 /area/provincial/underground/dungeon/licharena)
 "lVR" = (
-/obj/structure/fluff/walldeco/painting/queen,
-/turf/closed/wall/mineral/rogue/pipe{
-	dir = 4;
-	icon_state = "iron_line"
-	},
-/area/provincial/indoors/dungeon/giuseppes_toybox)
+/obj/structure/fluff/walldeco/med,
+/turf/open/floor/rogue/cobble,
+/area/provincial/outdoors/town)
 "lVS" = (
 /obj/structure/flora/roguetree/stump/log,
 /turf/open/floor/rogue/dirt/road,
@@ -36007,7 +35806,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/underground/dungeon/old_university)
 "lWo" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/transparent/openspace,
@@ -36030,25 +35829,23 @@
 /turf/open/water/swamp,
 /area/provincial/outdoors/mountains)
 "lWH" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/dungeon/riverbrook)
 "lWT" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/mages_university)
 "lWV" = (
-/obj/structure/fluff/walldeco/med6{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/med/six/directional/west,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/deacon)
 "lWY" = (
@@ -36140,9 +35937,7 @@
 	pixel_y = 3
 	},
 /obj/item/paper,
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "lYR" = (
@@ -36165,9 +35960,7 @@
 	pixel_y = 14
 	},
 /obj/structure/table/wood,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/item/natural/cloth{
 	pixel_x = -12;
 	pixel_y = 5
@@ -36186,7 +35979,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/field)
 "lZl" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/hexstone,
@@ -36316,9 +36109,9 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/basement)
 "mbi" = (
-/obj/structure/fluff/walldeco/sparrowflag,
-/turf/closed/wall/mineral/rogue/stonebrick,
-/area/provincial/indoors/town/adventurers_guild)
+/obj/structure/fluff/walldeco/rpainting/directional/north,
+/turf/open/floor/rogue/churchmarble,
+/area/provincial/underground/dungeon/licharena)
 "mbk" = (
 /turf/open/floor/rogue/metal/barograte/open,
 /area/provincial/underground/dungeon/gethsmane/inner)
@@ -36525,9 +36318,7 @@
 /obj/structure/stairs{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "mfe" = (
@@ -36569,7 +36360,7 @@
 /turf/open/floor/rogue/metal/barograte/open,
 /area/provincial/underground/underdark/sunkencity)
 "mgb" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/masonic/inverted,
@@ -36621,9 +36412,7 @@
 	icon_state = "tablewood1"
 	},
 /obj/item/rogue/instrument/drum,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/town/keep)
 "mhf" = (
@@ -36771,7 +36560,7 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/underground/underdark/sunkencity)
 "mjb" = (
-/obj/structure/fluff/walldeco/wantedposter,
+/obj/structure/fluff/walldeco/wantedposter/directional/north,
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/sewer)
 "mjh" = (
@@ -36932,9 +36721,7 @@
 /obj/structure/closet/crate/drawer/random{
 	pixel_y = 0
 	},
-/obj/structure/fluff/walldeco/painting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/painting/directional/north,
 /obj/item/scomstone/garrison,
 /obj/item/scomstone/garrison,
 /turf/open/floor/rogue/ruinedwood{
@@ -36942,7 +36729,7 @@
 	},
 /area/provincial/indoors/town/province_keep/quarters/marquis)
 "mlq" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -36984,9 +36771,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/outdoors/dungeon/riverbrook)
 "mlL" = (
-/obj/structure/fluff/walldeco/med{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/directional/east,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/deacon)
 "mlW" = (
@@ -36996,7 +36781,7 @@
 /area/provincial/outdoors/dungeon/riverbrook)
 "mlX" = (
 /obj/structure/flora/roguegrass/bush,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grass,
@@ -37028,7 +36813,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/underground/dungeon/old_university)
 "mmm" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/structure/roguemachine/scomm/directional/north,
@@ -37126,9 +36911,7 @@
 /turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/provincial/underground/dungeon/old_university)
 "mnu" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /obj/effect/decal/cleanable/blood/splatter,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/underground/dungeon/fogotten_church)
@@ -37240,9 +37023,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/decrepit_tower)
 "moN" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/town/tavern/innkeeper)
 "moS" = (
@@ -37617,9 +37398,7 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/underground/underdark)
 "mvp" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /obj/effect/decal/cobbleedge{
 	dir = 5;
 	pixel_x = -6
@@ -37905,9 +37684,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/steward)
 "mAf" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/mountains)
 "mAl" = (
@@ -37922,6 +37699,7 @@
 	icon_state = "longtable"
 	},
 /obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
+/obj/structure/fluff/walldeco/serpflag/directional/north,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/underground/dungeon/old_university)
 "mAs" = (
@@ -37945,9 +37723,7 @@
 /turf/open/floor/rogue/wood/herringbone,
 /area/provincial/underground/dungeon/gargoyles_rest)
 "mAG" = (
-/obj/structure/fluff/walldeco/med2{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/med/two/directional/south,
 /obj/structure/stairs{
 	dir = 8
 	},
@@ -38553,9 +38329,7 @@
 /turf/open/floor/rogue/tile/tilerg,
 /area/provincial/indoors/town/mages_university)
 "mMr" = (
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/west,
 /turf/open/floor/rogue/blocks{
 	dir = 8
 	},
@@ -38690,9 +38464,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/dungeon/riverbrook)
 "mPc" = (
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "mPg" = (
@@ -38922,7 +38694,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
 "mSk" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/blocks/green,
@@ -39053,7 +38825,7 @@
 /area/provincial/underground/dungeon/gargoyles_rest)
 "mUH" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "mUM" = (
@@ -39288,13 +39060,13 @@
 	},
 /area/provincial/indoors/town/province_keep)
 "mYP" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -39345,9 +39117,7 @@
 	},
 /area/provincial/underground/underdark/sunkencity)
 "mZs" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -39478,14 +39248,14 @@
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/indoors/town/church)
 "nbJ" = (
 /mob/living/carbon/human/species/skeleton/npc/ambush,
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/dungeon/lost_homestead)
 "nbM" = (
@@ -39594,8 +39364,8 @@
 /area/provincial/underground/dungeon/old_ruin)
 "ndT" = (
 /obj/structure/flora/roguegrass/bush/red,
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassyel,
@@ -39674,9 +39444,7 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/outdoors/town)
 "nfh" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/carpet/lord/left,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "nfp" = (
@@ -39731,9 +39499,7 @@
 /turf/closed/wall/mineral/rogue/decostone,
 /area/provincial/underground/dungeon/old_university)
 "ngm" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/west,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "ngy" = (
@@ -39762,9 +39528,7 @@
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/underground/dungeon/decrepit_tower)
 "ngM" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/mages_university/artificer)
 "ngO" = (
@@ -40080,9 +39844,7 @@
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "nkY" = (
 /obj/machinery/light/rogue/firebowl/stump,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/blocks{
 	dir = 8
 	},
@@ -40295,9 +40057,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/indoors)
 "npc" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/farm)
 "nph" = (
@@ -40333,9 +40093,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/armory/toilets)
 "npN" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "npO" = (
@@ -40448,9 +40206,7 @@
 /turf/closed/wall/mineral/rogue/wooddark/window,
 /area/provincial/underground/underdark/sunkencity)
 "nrp" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -40720,22 +40476,20 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/town/church/quarters/priest)
 "nvT" = (
-/obj/structure/fluff/walldeco/innsign{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/innsign/directional/west,
 /turf/open/floor/rogue/dirt,
 /area/provincial/indoors/dungeon/lost_homestead)
 "nvX" = (
 /turf/closed/wall/mineral/rogue/wooddark/horizontal,
 /area/provincial/underground)
 "nwd" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -40757,10 +40511,10 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/underground/dungeon/old_university)
 "nwr" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -40859,7 +40613,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/mountains)
 "nxJ" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/church,
@@ -40909,9 +40663,7 @@
 /area/provincial/indoors/town/province_keep/garrison)
 "nyO" = (
 /obj/item/reagent_containers/glass/mortar,
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/north,
 /obj/item/alch/ozium,
 /obj/effect/decal/cobble/mossy{
 	dir = 6
@@ -41012,9 +40764,7 @@
 /turf/open/floor/rogue/churchmarble,
 /area/provincial/indoors/town/church)
 "nAd" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/mages_university/artificer)
 "nAm" = (
@@ -41051,9 +40801,7 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/varielle,
 /obj/item/clothing/head/roguetown/variellemask,
 /obj/item/clothing/head/roguetown/variellemask,
-/obj/structure/fluff/walldeco/psybanner{
-	pixel_y = 29
-	},
+/obj/structure/fluff/walldeco/psybanner/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -41080,9 +40828,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern/room/luxury)
 "nBd" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 33
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "nBh" = (
@@ -41150,9 +40896,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/farm)
 "nCe" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -41248,9 +40992,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/forest)
 "nDY" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/province_keep/garrison)
 "nEe" = (
@@ -41318,7 +41060,7 @@
 /turf/open/floor/rogue/tile/masonic,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "nFq" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/mages_university)
 "nFt" = (
@@ -41410,9 +41152,7 @@
 /obj/structure/fluff/railing/fence{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/town/ramparts)
 "nIi" = (
@@ -41542,9 +41282,7 @@
 /area/provincial/underground/dungeon/vulnafir)
 "nJZ" = (
 /obj/structure/table/vtable/v2,
-/obj/structure/fluff/walldeco/med{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/directional/north,
 /obj/item/pestle{
 	pixel_x = -10;
 	pixel_y = 1
@@ -41725,11 +41463,9 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/outdoors/town)
 "nMT" = (
-/obj/structure/fluff/walldeco/stone{
-	icon_state = "walldec6"
-	},
-/turf/closed/wall/mineral/rogue/stone/window,
-/area/provincial/underground/underkings_maw)
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
+/turf/open/floor/rogue/churchmarble,
+/area/provincial/underground/dungeon/licharena)
 "nMV" = (
 /obj/structure/fluff/railing/border{
 	dir = 9
@@ -41783,7 +41519,7 @@
 /turf/closed/wall/mineral/rogue/stone,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "nNI" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/cobble,
@@ -41903,9 +41639,7 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
 "nPA" = (
-/obj/structure/fluff/walldeco/med6{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/med/six/directional/west,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "nPF" = (
@@ -41957,7 +41691,7 @@
 /area/provincial/underground/dungeon/old_ruin)
 "nQO" = (
 /obj/structure/flora/roguegrass/bush/wall/winter,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grassred,
@@ -42072,7 +41806,7 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/underground/underdark/sunkencity)
 "nSF" = (
-/obj/structure/fluff/walldeco/maidendrape,
+/obj/structure/fluff/walldeco/maidendrape/directional/north,
 /obj/structure/mineral_door/wood/red,
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
@@ -42144,10 +41878,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town)
 "nUK" = (
-/obj/structure/fluff/walldeco/med{
-	pixel_x = -30;
-	pixel_y = 0
-	},
+/obj/structure/fluff/walldeco/med/directional/west,
 /obj/structure/table/wood{
 	dir = 5;
 	icon_state = "largetable"
@@ -42586,15 +42317,11 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/sewer)
 "obp" = (
-/obj/structure/fluff/walldeco/med5{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/five/directional/east,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "obt" = (
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/north,
 /obj/structure/closet/crate/roguecloset/dark,
 /turf/open/floor/rogue/tile/masonic/inverted,
 /area/provincial/indoors/town/province_keep/quarters/councillor)
@@ -42625,7 +42352,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /obj/structure/fluff/railing/border{
 	dir = 6
 	},
@@ -42863,9 +42590,7 @@
 /area/provincial/outdoors/town/keep)
 "ofP" = (
 /obj/structure/rack/rogue,
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -43119,10 +42844,10 @@
 /turf/open/floor/rogue/tile/masonic,
 /area/provincial/underground/dungeon/vulnafir)
 "oiM" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /obj/structure/flora/ausbushes/fullgrass,
@@ -43253,9 +42978,9 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/dungeon/lost_homestead)
 "olb" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/closed/wall/mineral/rogue/decowood,
-/area/provincial/underground/dungeon/old_university_garden)
+/obj/structure/fluff/walldeco/painting/queen/directional/north,
+/turf/open/floor/rogue/tile/masonic/single,
+/area/provincial/indoors/dungeon/giuseppes_toybox)
 "old" = (
 /obj/machinery/light/rogue/wallfire/candle/weak/directional/east,
 /obj/effect/decal/cobbleedge{
@@ -43529,7 +43254,7 @@
 /area/provincial/underground/dungeon/forsaken_bastille)
 "ook" = (
 /obj/structure/fluff/railing/border,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/masonic/spiral,
@@ -43568,8 +43293,8 @@
 /area/provincial/outdoors/field)
 "ooU" = (
 /obj/structure/flora/roguegrass/bush/winter,
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grassred,
@@ -43608,7 +43333,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "opo" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/structure/fluff/clodpile,
@@ -43619,7 +43344,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/church/basement/crypt)
 "opu" = (
-/obj/structure/fluff/walldeco/maidensigil,
+/obj/structure/fluff/walldeco/maidensigil/directional/north,
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "opB" = (
@@ -43667,7 +43392,7 @@
 /obj/structure/chair/bench/church/r{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/effect/landmark/start/templar{
@@ -44030,9 +43755,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/gate/north)
 "oxh" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "oxk" = (
@@ -44137,16 +43860,16 @@
 /turf/open/transparent/openspace,
 /area/provincial/indoors/town/farm/barn)
 "ozi" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/dungeon/riverbrook)
 "ozp" = (
@@ -44272,9 +43995,11 @@
 /turf/open/lava/acid,
 /area/provincial/underground/underdark/sunkencity)
 "oBk" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/closed/wall/mineral/rogue/wooddark,
-/area/provincial/underground/dungeon/old_university_garden)
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
+/turf/open/floor/rogue/ruinedwood{
+	icon_state = "weird1"
+	},
+/area/provincial/indoors/town/farm)
 "oBn" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
 /turf/open/floor/rogue/ruinedwood,
@@ -44286,9 +44011,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/outdoors/beach)
 "oBC" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /obj/machinery/light/rogue/torchholder/directional/east,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town)
@@ -44309,9 +44032,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "oBX" = (
-/obj/structure/fluff/walldeco/psybanner{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/psybanner/directional/north,
 /obj/structure/flora/ausbushes/brflowers,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town)
@@ -44448,9 +44169,7 @@
 /area/provincial/indoors)
 "oEL" = (
 /obj/structure/bed/rogue/shit,
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/outdoors/beach)
 "oEN" = (
@@ -44940,9 +44659,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/underdark)
 "oOz" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/tavern/room/luxury/three)
 "oOS" = (
@@ -45148,7 +44865,7 @@
 /area/provincial/indoors/town/province_keep/garrison/ramparts)
 "oRP" = (
 /obj/structure/closet/dirthole/grave,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/dirt/road,
@@ -45160,8 +44877,8 @@
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/outdoors/town/keep)
 "oSa" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -45213,9 +44930,7 @@
 	dir = 4
 	},
 /obj/effect/spawner/lootdrop/roguetown/sewers,
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/west,
 /turf/open/floor/rogue/blocks{
 	dir = 8
 	},
@@ -45245,7 +44960,7 @@
 /area/provincial/underground/dungeon/vulnafir)
 "oTg" = (
 /obj/machinery/light/rogue/torchholder/directional/west,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/woodturned,
@@ -45311,9 +45026,7 @@
 	},
 /area/provincial/indoors/town/church)
 "oUx" = (
-/obj/structure/fluff/walldeco/painting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/painting/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "oUF" = (
@@ -45321,9 +45034,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/beach)
 "oUQ" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/province_keep/garrison/gate/north)
 "oUR" = (
@@ -45356,9 +45067,9 @@
 /turf/closed/wall/mineral/rogue/stone/moss,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "oVN" = (
-/obj/structure/fluff/walldeco/rpainting,
-/turf/closed/wall/mineral/rogue/stonebrick,
-/area/provincial/underground/dungeon/abandoned_manor)
+/obj/structure/fluff/walldeco/stone/directional/north,
+/turf/open/floor/rogue/cobblerock,
+/area/provincial/underground/underkings_maw)
 "oVS" = (
 /obj/structure/chair/stool/rogue,
 /turf/open/floor/rogue/ruinedwood{
@@ -45508,7 +45219,7 @@
 /area/provincial/indoors/town/province_keep/garrison/gate/west)
 "oYI" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grassyel,
@@ -45623,9 +45334,7 @@
 /turf/open/floor/rogue/metal/barograte/open,
 /area/provincial/underground/underdark/sunkencity)
 "pbA" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/underkings_maw)
 "pbB" = (
@@ -45689,9 +45398,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/riverbrook)
 "pcO" = (
-/obj/structure/fluff/walldeco/med5{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/five/directional/east,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "pdf" = (
@@ -45708,11 +45415,11 @@
 	},
 /area/provincial/indoors/town/province_keep/quarters/nobleman)
 "pds" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -46040,9 +45747,7 @@
 "pjk" = (
 /obj/structure/chair/wood/rogue/throne,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/vulnafir)
 "pjm" = (
@@ -46160,9 +45865,7 @@
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/town/house/janitor)
 "pla" = (
-/obj/structure/fluff/walldeco/med4{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/four/directional/north,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/province_keep/deacon)
 "plc" = (
@@ -46248,6 +45951,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 9
 	},
+/obj/structure/fluff/walldeco/sparrowflag/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "pmg" = (
@@ -46316,7 +46020,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/shop)
 "pmU" = (
-/obj/structure/fluff/walldeco/wantedposter/r,
+/obj/structure/fluff/walldeco/wantedposter/directional/east,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "pnc" = (
@@ -46416,10 +46120,10 @@
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "ppM" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -46448,9 +46152,7 @@
 "pqe" = (
 /obj/structure/closet/crate/roguecloset/dark,
 /obj/item/quiver/sling,
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/west,
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "pqf" = (
@@ -46486,7 +46188,7 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "pqE" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/hexstone,
@@ -46649,11 +46351,15 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/steward)
 "pto" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/bfloorz,
 /area/provincial/indoors/town/mages_university/kitchen)
+"ptq" = (
+/obj/structure/fluff/walldeco/painting/seraphina/directional/north,
+/turf/open/floor/rogue/carpet/lord/center/no_teleport,
+/area/provincial/underground/dungeon/licharena)
 "pts" = (
 /obj/structure/stairs/stone{
 	dir = 1
@@ -46686,17 +46392,15 @@
 /turf/open/floor/rogue/tile/masonic/spiral,
 /area/provincial/indoors/town/church)
 "ptS" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/grassred,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "ptU" = (
-/obj/structure/fluff/walldeco/wantedposter,
+/obj/structure/fluff/walldeco/wantedposter/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "pud" = (
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/west,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/mages_university/library)
 "pui" = (
@@ -46979,9 +46683,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
 "pzu" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/field)
 "pzz" = (
@@ -47339,11 +47041,9 @@
 /turf/open/floor/rogue/grassyel,
 /area/provincial/outdoors/town/church)
 "pED" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/closed/wall/mineral/rogue/decostone/long{
-	dir = 1
-	},
-/area/provincial/underground/dungeon/old_university)
+/obj/structure/fluff/walldeco/psybanner/red/directional/north,
+/turf/open/floor/rogue/blocks,
+/area/provincial/underground/dungeon/winding_halls)
 "pEK" = (
 /obj/structure/chair/wood/rogue{
 	dir = 8
@@ -47424,9 +47124,7 @@
 /turf/open/floor/rogue/metal/barograte,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "pGm" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -47774,8 +47472,8 @@
 /area/provincial/indoors)
 "pLC" = (
 /obj/structure/flora/roguegrass/bush/winter,
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassred,
@@ -47833,9 +47531,7 @@
 	},
 /obj/item/rogueweapon/whip,
 /obj/item/rogueweapon/huntingknife,
-/obj/structure/fluff/walldeco/med2{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/two/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/sewer)
 "pMo" = (
@@ -47995,9 +47691,7 @@
 /area/provincial/indoors/town/tavern/room/seven)
 "pOA" = (
 /obj/structure/bookcase/random,
-/obj/structure/fluff/walldeco/med4{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/four/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "pOK" = (
@@ -48092,7 +47786,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/church,
@@ -48221,10 +47915,10 @@
 /area/provincial/underground/dungeon/gargoyles_rest)
 "pTi" = (
 /obj/structure/flora/roguegrass/bush/wall,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grass,
@@ -48416,9 +48110,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/garrison/armory/secure)
 "pWJ" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/floor/rogue/blocks{
 	dir = 8
 	},
@@ -48987,11 +48679,9 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/beach/forest)
 "qhO" = (
-/obj/structure/fluff/walldeco/painting/seraphina,
-/turf/closed/wall/mineral/rogue/pipe{
-	icon_state = "iron_line"
-	},
-/area/provincial/indoors/dungeon/giuseppes_toybox)
+/obj/structure/fluff/walldeco/stone/directional/north,
+/turf/open/floor/rogue/blocks,
+/area/provincial/underground/underkings_maw)
 "qhS" = (
 /obj/structure/table/wood{
 	icon_state = "longtable"
@@ -49025,7 +48715,7 @@
 /area/provincial/outdoors/town)
 "qiN" = (
 /obj/structure/fluff/railing/border,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/masonic/inverted,
@@ -49284,12 +48974,10 @@
 /turf/open/floor/rogue/rooftop/green,
 /area/provincial/outdoors/town/roofs)
 "qma" = (
-/obj/structure/fluff/walldeco/sparrowflag{
-	pixel_y = 32
-	},
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
+/obj/structure/fluff/walldeco/sparrowflag/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/adventurers_guild)
 "qmb" = (
@@ -49333,9 +49021,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/dungeon/riverbrook)
 "qmD" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town)
 "qmG" = (
@@ -49488,7 +49174,7 @@
 /turf/closed/mineral/random/rogue,
 /area/provincial/outdoors/mountains)
 "qpe" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/south,
@@ -49548,9 +49234,10 @@
 /turf/open/water/swamp,
 /area/provincial/underground/underkings_maw)
 "qpO" = (
-/obj/structure/fluff/walldeco/painting/queen,
-/turf/closed/wall/mineral/rogue/stonebrick,
-/area/provincial/underground/dungeon/abandoned_manor)
+/obj/structure/closet/crate/chest/lootbox,
+/obj/structure/fluff/walldeco/psybanner/red/directional/west,
+/turf/open/floor/rogue/cobble,
+/area/provincial/underground/dungeon/decrepit_tower)
 "qpQ" = (
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/deacon/alchemylab)
@@ -49669,9 +49356,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
 "qrA" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/structure/fluff/clock,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/councillor)
@@ -49760,9 +49445,7 @@
 /area/provincial/underground/dungeon/old_ruin)
 "qtf" = (
 /obj/structure/closet/crate/drawer,
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/north,
 /turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "qtj" = (
@@ -49908,9 +49591,7 @@
 	},
 /area/provincial/indoors/town/blacksmith)
 "qvt" = (
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/north,
 /obj/structure/closet/crate/drawer,
 /turf/open/floor/rogue/carpet/lord/center/no_teleport,
 /area/provincial/indoors/town/province_keep/quarters/knight)
@@ -49988,7 +49669,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/church,
@@ -50313,9 +49994,7 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
 "qBy" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/money,
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -50564,9 +50243,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep)
 "qFD" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /obj/item/chair/rogue,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/underground/dungeon/old_university)
@@ -50788,9 +50465,7 @@
 	},
 /area/provincial/underground/underdark/sunkencity)
 "qJt" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town)
 "qJB" = (
@@ -50987,8 +50662,8 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
 "qMq" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/concrete,
@@ -51114,9 +50789,7 @@
 /turf/open/floor/rogue/carpet/lord/left,
 /area/provincial/underground/dungeon/vulnafir)
 "qOC" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /obj/effect/decal/cleanable/dirt/cobweb/cobweb2,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
@@ -51201,9 +50874,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "qQj" = (
-/obj/structure/fluff/walldeco/serpflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/serpflag/directional/west,
 /obj/structure/chair/bench/couch,
 /turf/open/floor/carpet/red,
 /area/provincial/indoors/town/mages_university)
@@ -51261,9 +50932,7 @@
 /turf/open/floor/rogue/tile/brick,
 /area/provincial/outdoors/town/roofs)
 "qRT" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/town/roofs/keep)
 "qRX" = (
@@ -51551,9 +51220,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/throneroom)
 "qXt" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobbleedge,
 /obj/effect/decal/cobbleedge{
 	dir = 1;
@@ -51598,7 +51265,7 @@
 "qYm" = (
 /obj/machinery/light/rogue/wallfire,
 /turf/closed/wall/mineral/rogue/stone,
-/area/provincial/underground/dungeon/winding_halls)
+/area/provincial/indoors/town/sewer)
 "qYn" = (
 /obj/effect/decal/cobbleedge,
 /turf/open/floor/rogue/hexstone,
@@ -51684,7 +51351,7 @@
 /obj/structure/chair/bench/church/r{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/effect/landmark/start/acolyte{
@@ -51795,9 +51462,6 @@
 /area/provincial/indoors/town/mages_university/archivist/quarters)
 "rcg" = (
 /obj/structure/table/church,
-/obj/item/rogueweapon/shield/tower{
-	name = "fool's peace"
-	},
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/winding_halls)
 "rck" = (
@@ -51886,7 +51550,7 @@
 /obj/structure/chair/bench{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
@@ -52099,8 +51763,9 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "riu" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/closed/wall/mineral/rogue/wooddark,
+/obj/structure/chair/wood/rogue,
+/obj/structure/fluff/walldeco/serpflag/directional/north,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/underground/dungeon/old_university)
 "riC" = (
 /turf/open/floor/rogue/carpet,
@@ -52264,9 +51929,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/underkings_maw)
 "rkJ" = (
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/west,
 /obj/structure/stairs,
 /obj/structure/fluff/railing/border{
 	dir = 5
@@ -52656,7 +52319,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/spider_cave)
 "rsh" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/blocks/newstone,
 /area/provincial/indoors/town/church/basement/crypt)
 "rsz" = (
@@ -52668,9 +52331,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town)
 "rsB" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /obj/structure/bed/rogue/inn/wool,
 /obj/item/bedsheet/rogue/fabric,
 /turf/open/floor/carpet/purple,
@@ -52682,7 +52343,7 @@
 /turf/open/floor/rogue/blocks/stonered,
 /area/provincial/underground/dungeon/gargoyles_rest)
 "rsI" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grassred,
@@ -52782,7 +52443,7 @@
 	},
 /area/provincial/underground/dungeon/forsaken_bastille)
 "rue" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -52900,7 +52561,7 @@
 /turf/open/floor/carpet/red,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "rwd" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/town/roofs)
 "rwe" = (
@@ -52954,6 +52615,11 @@
 /obj/machinery/light/rogue/oven/south,
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors)
+"rxj" = (
+/obj/machinery/light/rogue/firebowl/standing/blue,
+/obj/structure/fluff/walldeco/serpflag/directional/east,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/provincial/underground/dungeon/old_university_garden)
 "rxn" = (
 /obj/structure/mineral_door/wood/violet,
 /turf/open/floor/rogue/herringbone,
@@ -52985,7 +52651,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/masonic/spiral,
@@ -53084,7 +52750,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/winding_halls)
 "rAG" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/blocks/newstone,
@@ -53294,9 +52960,9 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/house/village_elder)
 "rEf" = (
-/obj/structure/fluff/walldeco/painting/seraphina,
-/turf/closed/wall/mineral/rogue/decostone,
-/area/provincial/indoors/town/province_keep/throneroom)
+/obj/structure/fluff/walldeco/serpflag/directional/north,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/provincial/underground/dungeon/old_university_garden)
 "rEs" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/ruinedwood,
@@ -53374,7 +53040,7 @@
 /turf/open/floor/rogue/wood/herringbone,
 /area/provincial/indoors/dungeon/riverbrook)
 "rGA" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /obj/structure/flora/ausbushes/brflowers,
@@ -53728,9 +53394,7 @@
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/indoors/town/dusk_quarter)
 "rMp" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/north,
 /obj/structure/closet/crate/chest,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
@@ -53822,7 +53486,7 @@
 /obj/structure/chair/bench/church{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/effect/landmark/start/acolyte{
@@ -53838,9 +53502,7 @@
 /obj/effect/decal/mossy{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
 "rNB" = (
@@ -53921,9 +53583,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "rPm" = (
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/west,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -54018,9 +53678,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground)
 "rQF" = (
-/obj/structure/fluff/walldeco/med3{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/three/directional/east,
 /turf/open/water/cleanshallow,
 /area/provincial/indoors/town/province_keep/deacon)
 "rQH" = (
@@ -54168,7 +53826,7 @@
 	},
 /area/provincial/indoors/town/sewer)
 "rTm" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/dungeon/lost_homestead)
 "rTq" = (
@@ -54182,9 +53840,7 @@
 /obj/structure/bed/rogue/inn,
 /obj/item/bedsheet/rogue/fabric,
 /obj/effect/landmark/start/councillor,
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/north,
 /turf/open/floor/carpet/inn,
 /area/provincial/indoors/town/province_keep/quarters/councillor)
 "rTw" = (
@@ -54370,9 +54026,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/stall/stall_three)
 "rWB" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /obj/machinery/light/rogue/lanternpost,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
@@ -54413,9 +54067,7 @@
 /area/provincial/indoors/town/province_keep/quarters/marquis)
 "rXk" = (
 /obj/structure/bookcase,
-/obj/structure/fluff/walldeco/med2{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/two/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "rXq" = (
@@ -54569,9 +54221,7 @@
 	},
 /area/provincial/indoors/town/shop)
 "sak" = (
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/west,
 /turf/open/floor/rogue/blocks{
 	dir = 1
 	},
@@ -54598,10 +54248,10 @@
 /turf/open/floor/rogue/grassred,
 /area/provincial/outdoors/mountains)
 "saA" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -54708,9 +54358,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/mountains)
 "sbI" = (
@@ -54799,7 +54447,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/dungeon/hordes_hoard)
 "sdv" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grassred,
@@ -55010,10 +54658,10 @@
 /turf/open/transparent/openspace,
 /area/provincial/indoors/town/province_keep/garrison/gate/south)
 "shg" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/outdoors/town/roofs)
 "shh" = (
@@ -55093,9 +54741,7 @@
 /area/provincial/indoors/town/tavern/kitchen)
 "sio" = (
 /obj/effect/decal/cleanable/dirt/cobweb,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /obj/item/roguebin,
 /turf/open/floor/rogue/blocks{
 	dir = 8
@@ -55114,7 +54760,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/blacksmith)
 "siy" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/effect/decal/cobbleedge,
@@ -55162,6 +54808,10 @@
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/indoors/dungeon/riverbrook)
+"sju" = (
+/obj/structure/fluff/walldeco/rpainting/forest/directional/east,
+/turf/open/floor/rogue/wood,
+/area/provincial/underground/dungeon/old_university)
 "sjA" = (
 /obj/structure/roguemachine/withdraw/directional/west,
 /turf/open/floor/rogue/ruinedwood{
@@ -55283,7 +54933,7 @@
 /obj/structure/chair/bench/church{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/effect/landmark/start/templar{
@@ -55518,9 +55168,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/underground/dungeon/decrepit_tower)
 "spV" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town)
 "spZ" = (
@@ -55715,9 +55363,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/province_keep/meeting_room)
 "stR" = (
-/obj/structure/fluff/walldeco/moon{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/moon/directional/north,
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/town/church)
 "stU" = (
@@ -55871,9 +55517,7 @@
 /area/provincial/indoors/town/tavern/arena/spectator)
 "swo" = (
 /obj/structure/chair/wood/rogue,
-/obj/structure/fluff/walldeco/med6{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/six/directional/north,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "swx" = (
@@ -56118,11 +55762,11 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/province_keep/baths/marquis)
 "sAK" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -56327,9 +55971,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/beach/forest)
 "sEs" = (
-/obj/structure/fluff/walldeco/painting{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/painting/directional/north,
 /turf/open/floor/rogue/tile{
 	icon_state = "glyph6"
 	},
@@ -56546,9 +56188,7 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "sHK" = (
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/north,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/mountains/underkings_maw)
 "sIf" = (
@@ -56607,9 +56247,7 @@
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/tavern)
 "sJt" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/east,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/indoors/dungeon/riverbrook)
 "sJQ" = (
@@ -56903,9 +56541,7 @@
 /area/provincial/outdoors/beach)
 "sPX" = (
 /obj/effect/decal/remains/human,
-/obj/structure/fluff/walldeco/innsign{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/innsign/directional/east,
 /turf/open/floor/rogue/churchrough,
 /area/provincial/indoors/dungeon/lost_homestead)
 "sPY" = (
@@ -57068,6 +56704,7 @@
 /area/provincial/indoors/town/church/treatment_center)
 "sSH" = (
 /obj/structure/fluff/clockwork/alloy_shards,
+/obj/structure/fluff/walldeco/rpainting/directional/west,
 /turf/open/floor/rogue/blocks/stonered,
 /area/provincial/underground/dungeon/old_university)
 "sSJ" = (
@@ -57166,9 +56803,7 @@
 /obj/item/clothing/suit/roguetown/shirt/robe/zira,
 /obj/item/clothing/head/roguetown/zirahood,
 /obj/item/clothing/head/roguetown/zirahood,
-/obj/structure/fluff/walldeco/psybanner{
-	pixel_y = 29
-	},
+/obj/structure/fluff/walldeco/psybanner/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -57609,9 +57244,7 @@
 	icon_state = "chains2"
 	},
 /obj/machinery/light/rogue/firebowl/church,
-/obj/structure/fluff/walldeco/med5{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/five/directional/east,
 /turf/open/floor/rogue/metal{
 	icon_state = "plating2"
 	},
@@ -57621,8 +57254,11 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors)
 "tcH" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/closed/wall/mineral/rogue/wooddark/vertical,
+/obj/structure/chair/wood/rogue{
+	dir = 4
+	},
+/obj/structure/fluff/walldeco/serpflag/directional/west,
+/turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/underground/dungeon/old_university)
 "tcN" = (
 /obj/machinery/light/rogue/torchholder/directional/north,
@@ -57807,9 +57443,7 @@
 /turf/open/floor/rogue/church,
 /area/provincial/indoors/town/church)
 "tfV" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/outdoors/town/ramparts)
 "tfY" = (
@@ -57868,9 +57502,7 @@
 /area/provincial/underground)
 "thk" = (
 /obj/structure/fluff/railing/border,
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/west,
 /obj/structure/closet/crate/roguecloset,
 /obj/item/clothing/under/roguetown/tights/black,
 /obj/item/clothing/under/roguetown/tights/stockings/silk/black,
@@ -58080,7 +57712,7 @@
 /area/provincial/indoors/town/province_keep/garrison/armory)
 "tkA" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grass,
@@ -58212,9 +57844,7 @@
 	},
 /area/provincial/indoors/town/mages_university/library)
 "tmT" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /obj/effect/decal/cleanable/dirt/cobweb,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/fogotten_church)
@@ -58294,9 +57924,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/dusk_quarter)
 "toi" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/indoors/town/sewer/rogues_den)
 "tot" = (
@@ -58324,9 +57952,7 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/tile/bfloorz,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "toP" = (
@@ -58362,10 +57988,10 @@
 /turf/open/floor/rogue/metal,
 /area/provincial/underground/underdark/sunkencity)
 "tpd" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -58415,7 +58041,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/steward)
 "tqd" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/churchmarble,
@@ -58546,7 +58172,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/mages_university/library)
 "tsq" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/churchbrick,
@@ -58591,7 +58217,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/outdoors/forest)
 "ttf" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -58718,9 +58344,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/town/basement)
 "tvO" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/item/roguebin/water/gross,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors/town/province_keep/garrison/stables)
@@ -59026,7 +58650,7 @@
 /obj/structure/chair/bench/church/r{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /obj/effect/landmark/start/churchling{
@@ -59110,9 +58734,7 @@
 	},
 /area/provincial/outdoors/town/roofs)
 "tDo" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/closed/mineral/random/rogue,
 /area/provincial/underground/dungeon/fogotten_church)
 "tDp" = (
@@ -59578,9 +59200,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/winding_halls)
 "tMG" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -59622,9 +59242,8 @@
 /area/provincial/indoors/town/province_keep/wine_cellar)
 "tNo" = (
 /obj/structure/chair/bench/couch,
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = 16;
-	pixel_y = 32
+/obj/machinery/light/rogue/wallfire/directional/north{
+	pixel_x = 16
 	},
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -59895,9 +59514,7 @@
 /turf/open/floor/rogue/grassyel,
 /area/provincial/outdoors/beach/forest)
 "tSc" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town/roofs/keep)
 "tSi" = (
@@ -59935,9 +59552,7 @@
 /obj/structure/closet/crate/chest/neu,
 /obj/item/rogueweapon/hoe,
 /obj/item/rogueweapon/thresher,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/town/province_keep/magician/alchemylab)
 "tST" = (
@@ -60035,9 +59650,7 @@
 	},
 /area/provincial/outdoors/town)
 "tUo" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "tUt" = (
@@ -60067,13 +59680,13 @@
 /turf/closed/wall/mineral/rogue/wooddark,
 /area/provincial/indoors/town/tavern/room/luxury/two)
 "tUN" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -60240,6 +59853,7 @@
 	},
 /obj/effect/decal/wood/herringbone,
 /obj/structure/flora/roguegrass,
+/obj/structure/fluff/walldeco/serpflag/directional/east,
 /turf/open/floor/rogue/grassred,
 /area/provincial/underground/dungeon/old_university_garden)
 "tXS" = (
@@ -60338,9 +59952,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/underground/dungeon/hordes_hoard)
 "tZL" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/underkings_maw)
 "tZN" = (
@@ -60601,9 +60213,7 @@
 /obj/effect/decal/cobbleedge{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/open/floor/rogue/grassyel,
 /area/provincial/outdoors/town/church)
 "uei" = (
@@ -60753,10 +60363,15 @@
 	},
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/stall/stall_three)
-"ugi" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
+"ugf" = (
+/obj/structure/chair/wood/rogue{
+	dir = 8
 	},
+/obj/structure/fluff/walldeco/serpflag/directional/east,
+/turf/open/floor/rogue/ruinedwood/spiral,
+/area/provincial/underground/dungeon/old_university)
+"ugi" = (
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/town)
 "ugo" = (
@@ -60906,7 +60521,7 @@
 /area/provincial/indoors/town/province_keep/garrison/gate/keep)
 "uhZ" = (
 /obj/structure/flora/roguegrass,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grassyel,
@@ -60915,7 +60530,7 @@
 /obj/structure/chair/bench/church{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/effect/landmark/start/churchling{
@@ -61000,10 +60615,10 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/farm/secondary/stall)
 "ukb" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -61046,9 +60661,7 @@
 /obj/structure/fluff/railing/fence{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/effect/decal/cobbleedge{
 	dir = 10
 	},
@@ -61331,7 +60944,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "urb" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile/brick,
@@ -61512,7 +61125,7 @@
 	},
 /area/provincial/indoors/town/blacksmith)
 "uuS" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/churchrough,
@@ -61533,9 +61146,7 @@
 	},
 /obj/item/storage/roguebag,
 /obj/item/storage/roguebag,
-/obj/structure/fluff/walldeco/med5{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/med/five/directional/east,
 /obj/effect/decal/herringbone{
 	dir = 8
 	},
@@ -61687,7 +61298,7 @@
 /area/provincial/outdoors/mountains)
 "uxx" = (
 /obj/structure/flora/roguegrass/bush/wall/winter,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/grassred,
@@ -61707,9 +61318,7 @@
 	},
 /area/provincial/underground/dungeon/vulnafir)
 "uxJ" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /obj/structure/fluff/railing/wood{
 	dir = 1;
 	pixel_y = -1
@@ -61962,10 +61571,10 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/outdoors/town)
 "uBd" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /obj/item/roguebin/water,
@@ -62122,9 +61731,7 @@
 	},
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "uDW" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_x = -32
-	},
+/obj/machinery/light/rogue/wallfire/directional/west,
 /turf/open/floor/carpet/red,
 /area/provincial/underground/dungeon/old_university)
 "uDX" = (
@@ -62162,9 +61769,7 @@
 /area/provincial/indoors/town/farm)
 "uEF" = (
 /obj/structure/fluff/railing/border,
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "uEP" = (
@@ -62351,9 +61956,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
 "uHo" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/rooftop/green{
 	dir = 1
 	},
@@ -62630,9 +62233,7 @@
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/old_ruin)
 "uMy" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/structure/fluff/railing/wood{
 	dir = 4
 	},
@@ -62737,9 +62338,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/abandoned_manor)
 "uOG" = (
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/west,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/beach/forest)
 "uOK" = (
@@ -63099,7 +62698,7 @@
 /area/provincial/indoors/town/farm/barn)
 "uVJ" = (
 /obj/structure/flora/roguegrass/bush,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grass,
@@ -63488,9 +63087,6 @@
 /obj/structure/table/church{
 	icon_state = "churchtable_end"
 	},
-/obj/item/rogueweapon/spear{
-	name = "fool's conquest"
-	},
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/winding_halls)
 "vcW" = (
@@ -63584,9 +63180,7 @@
 /obj/item/rope/chain,
 /obj/item/rope/chain,
 /obj/item/rope/chain,
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/tile/bfloorz,
 /area/provincial/indoors/town/province_keep/quarters/knight)
 "veC" = (
@@ -63629,9 +63223,7 @@
 /turf/open/floor/rogue/churchrough,
 /area/provincial/indoors/town/church)
 "vfg" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/tile/masonic{
 	dir = 8
 	},
@@ -63738,9 +63330,7 @@
 /turf/open/floor/rogue/ruinedwood/chevron,
 /area/provincial/indoors/town/mages_university/established_mage_hall)
 "vhi" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/carpet/royalblack,
 /area/provincial/indoors/town/farm/secondary)
 "vhw" = (
@@ -64024,9 +63614,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/hordes_hoard)
 "vnd" = (
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "vnj" = (
@@ -64094,9 +63682,7 @@
 /turf/open/floor/rogue/naturalstone,
 /area/provincial/outdoors/beach)
 "vnO" = (
-/obj/machinery/light/rogue/wallfire{
-	pixel_y = 32
-	},
+/obj/machinery/light/rogue/wallfire/directional/north,
 /turf/open/floor/rogue/metal,
 /area/provincial/underground/underkings_maw)
 "vnT" = (
@@ -64137,10 +63723,10 @@
 /area/provincial/indoors/town/province_keep/garrison/gate/south)
 "vos" = (
 /obj/structure/flora/roguegrass/bush/winter,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grassred,
@@ -64275,9 +63861,7 @@
 /turf/open/water/cleanshallow,
 /area/provincial/underground/underdark)
 "vqM" = (
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
 /obj/structure/chair/bench/ultimacouch,
 /obj/effect/landmark/start/woodsman,
 /turf/open/floor/rogue/woodturned,
@@ -64352,7 +63936,7 @@
 /turf/closed/wall/mineral/rogue/tent,
 /area/provincial/outdoors/beach)
 "vrV" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -64441,8 +64025,8 @@
 /area/provincial/indoors/town/province_keep/garrison/quarters/knight_captain)
 "vsO" = (
 /obj/structure/flora/roguegrass/bush/red,
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/grassyel,
@@ -64759,9 +64343,7 @@
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "vze" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /obj/effect/decal/cobbleedge{
 	dir = 9
 	},
@@ -65007,9 +64589,7 @@
 	},
 /obj/item/rogueweapon/whip,
 /obj/item/rogueweapon/huntingknife,
-/obj/structure/fluff/walldeco/med2{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/two/directional/north,
 /turf/open/floor/rogue/blocks,
 /area/provincial/indoors/town/province_keep/garrison/dungeon)
 "vDO" = (
@@ -65087,7 +64667,7 @@
 /area/provincial/outdoors/bog)
 "vEU" = (
 /obj/machinery/light/rogue/wallfire/candle/blue/directional/north,
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/blocks/newstone,
 /area/provincial/indoors/town/church/basement/crypt)
 "vEV" = (
@@ -65134,7 +64714,7 @@
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/dusk_quarter)
 "vFN" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/cobble,
@@ -65340,7 +64920,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/dungeon/riverbrook)
 "vIJ" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /obj/machinery/light/rogue/firebowl/church,
@@ -65374,9 +64954,7 @@
 	icon_state = "tablewood1"
 	},
 /obj/item/storage/belt/rogue/surgery_bag/full,
-/obj/structure/fluff/walldeco/med6{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/med/six/directional/west,
 /obj/effect/decal/herringbone{
 	dir = 4
 	},
@@ -65423,11 +65001,11 @@
 /turf/open/floor/rogue/woodturned,
 /area/provincial/indoors/dungeon/riverbrook)
 "vJT" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -65449,7 +65027,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "vKc" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/ruinedwood/turned,
 /area/provincial/outdoors/town/roofs)
 "vKf" = (
@@ -65529,10 +65107,10 @@
 /turf/closed/wall/mineral/rogue/decostone,
 /area/provincial/indoors/town)
 "vKX" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -65613,9 +65191,7 @@
 /turf/open/floor/rogue/tile/checkeralt,
 /area/provincial/underground/dungeon/old_university)
 "vMU" = (
-/obj/structure/fluff/walldeco/med6{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/med/six/directional/west,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "vNb" = (
@@ -65678,10 +65254,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/underground/dungeon/old_university_garden)
 "vOJ" = (
-/obj/structure/fluff/walldeco/alarm{
-	pixel_y = 0;
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/alarm/directional/east,
 /obj/structure/mineral_door/wood/donjon{
 	dir = 1
 	},
@@ -65928,7 +65501,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town)
 "vTl" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/church,
@@ -66412,9 +65985,7 @@
 /turf/open/floor/rogue/hexstone,
 /area/provincial/indoors/dungeon/lost_homestead)
 "wcn" = (
-/obj/structure/fluff/walldeco/sparrowflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/sparrowflag/directional/north,
 /turf/open/floor/rogue/tile,
 /area/provincial/indoors/town/adventurers_guild)
 "wcp" = (
@@ -66540,9 +66111,7 @@
 /obj/structure/bed/rogue/inn,
 /obj/item/bedsheet/rogue/fabric,
 /obj/effect/landmark/start/councillor,
-/obj/structure/fluff/walldeco/rpainting/crown{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
 /turf/open/floor/carpet/inn,
 /area/provincial/indoors/town/province_keep/quarters/councillor)
 "wdP" = (
@@ -66697,7 +66266,7 @@
 /area/provincial/indoors/town/church/basement)
 "whl" = (
 /obj/structure/flora/roguegrass/bush/wall/winter,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassred,
@@ -66739,9 +66308,7 @@
 /turf/open/floor/rogue/grassred,
 /area/provincial/outdoors/mountains)
 "whI" = (
-/obj/structure/fluff/walldeco/rpainting{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/directional/west,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -66928,7 +66495,7 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "wlc" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/town/church/basement/crypt)
 "wli" = (
@@ -67069,7 +66636,7 @@
 	},
 /area/provincial/indoors/town/blacksmith)
 "wnK" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood/turned,
@@ -67247,6 +66814,18 @@
 "wqU" = (
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/town)
+"wrb" = (
+/obj/effect/decal/wood/herringbone{
+	dir = 8
+	},
+/obj/effect/decal/wood/herringbone{
+	dir = 1
+	},
+/obj/effect/decal/wood/herringbone,
+/obj/structure/flora/roguegrass,
+/obj/structure/fluff/walldeco/serpflag/directional/west,
+/turf/open/floor/rogue/grassred,
+/area/provincial/underground/dungeon/old_university)
 "wrd" = (
 /mob/living/carbon/human/species/construct/metal/toyjester,
 /turf/open/floor/carpet/red,
@@ -67406,6 +66985,7 @@
 "wue" = (
 /obj/structure/rack/rogue/shelf/biggest,
 /obj/effect/spawner/lootdrop/roguetown/dungeon/medical,
+/obj/structure/fluff/walldeco/serpflag/directional/west,
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/underground/dungeon/old_university_garden)
 "wuj" = (
@@ -67430,10 +67010,10 @@
 /area/provincial/underground/dungeon/fogotten_church)
 "wuE" = (
 /obj/structure/flora/roguegrass/bush/wall/red,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/grassyel,
@@ -67831,9 +67411,7 @@
 /turf/open/floor/rogue/dirt,
 /area/provincial/underground/dungeon/gethsmane)
 "wCb" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/west,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/mountains)
 "wCh" = (
@@ -67989,11 +67567,11 @@
 /turf/open/floor/rogue/dirt/road,
 /area/provincial/indoors)
 "wFA" = (
-/obj/structure/fluff/walldeco/church/line,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line,
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/ruinedwood,
@@ -68529,7 +68107,7 @@
 /obj/structure/table/wood{
 	icon_state = "longtable"
 	},
-/obj/structure/fluff/walldeco/wantedposter,
+/obj/structure/fluff/walldeco/wantedposter/directional/north,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -68911,9 +68489,9 @@
 /turf/closed/wall/mineral/rogue/decowood,
 /area/provincial/underground/dungeon/vulnafir)
 "wVc" = (
-/obj/structure/fluff/walldeco/rpainting/forest,
-/turf/closed/wall/mineral/rogue/decowood/vert,
-/area/provincial/indoors/town/farm)
+/obj/structure/fluff/walldeco/serpflag/directional/south,
+/turf/open/floor/rogue/ruinedwood/herringbone,
+/area/provincial/underground/dungeon/old_university)
 "wVz" = (
 /obj/item/grown/log/tree/stick,
 /turf/open/floor/rogue/dirt/road,
@@ -69479,6 +69057,7 @@
 /obj/structure/chair/wood/rogue/throne{
 	anchored = 1
 	},
+/obj/structure/fluff/walldeco/rpainting/crown/directional/north,
 /turf/open/floor/carpet/red,
 /area/provincial/underground/dungeon/abandoned_manor)
 "xfy" = (
@@ -69737,9 +69316,7 @@
 /obj/structure/fluff/railing/border{
 	dir = 10
 	},
-/obj/structure/fluff/walldeco/stone{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "xkv" = (
@@ -69848,7 +69425,7 @@
 /turf/open/floor/rogue/cobblerock,
 /area/provincial/outdoors/town/keep)
 "xlV" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /mob/living/carbon/human/species/construct/metal/toyjester,
 /turf/open/floor/rogue/grassred,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
@@ -69900,9 +69477,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/provincial/outdoors/mountains)
 "xmC" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = -32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/south,
 /turf/open/floor/rogue/grass,
 /area/provincial/outdoors/town)
 "xmF" = (
@@ -70334,7 +69909,7 @@
 /turf/open/floor/rogue/ruinedwood/herringbone,
 /area/provincial/indoors/town/mages_university/alchemy_lab)
 "xtM" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/churchmarble,
@@ -70609,9 +70184,7 @@
 /area/provincial/outdoors/town)
 "xzc" = (
 /obj/item/roguebin/water,
-/obj/structure/fluff/walldeco/med2{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/med/two/directional/north,
 /turf/open/floor/rogue/herringbone,
 /area/provincial/outdoors/mountains/underkings_maw/deeper_within)
 "xzi" = (
@@ -70766,9 +70339,7 @@
 /turf/open/lava/acid,
 /area/provincial/underground/dungeon/gethsmane)
 "xBM" = (
-/obj/structure/fluff/walldeco/wallshield{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/wallshield/directional/north,
 /turf/open/floor/rogue/cobble/mossy,
 /area/provincial/outdoors/mountains/underkings_maw)
 "xBT" = (
@@ -70852,15 +70423,11 @@
 /turf/open/floor/rogue/ruinedwood/spiral,
 /area/provincial/indoors/town/tavern)
 "xDN" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/town/province_keep/councillor)
 "xDR" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /obj/structure/fluff/railing/fence{
 	dir = 1
 	},
@@ -71026,6 +70593,14 @@
 /obj/item/rogueore/coal,
 /turf/open/floor/rogue/blocks/stonered/tiny,
 /area/provincial/indoors/town/dusk_quarter)
+"xGR" = (
+/obj/structure/closet/crate/chest/crate,
+/obj/item/clothing/cloak/templar/nunos,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/clothing,
+/obj/effect/spawner/lootdrop/roguetown/dungeon/weapons,
+/obj/structure/fluff/walldeco/rpainting/directional/south,
+/turf/open/floor/rogue/wood,
+/area/provincial/underground/dungeon/old_university)
 "xGV" = (
 /obj/structure/fluff/railing/border{
 	dir = 1
@@ -71798,9 +71373,7 @@
 /turf/open/floor/rogue/twig,
 /area/provincial/indoors/town)
 "xTE" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /turf/open/floor/rogue/blocks/green,
 /area/provincial/underground/dungeon/forsaken_bastille)
 "xTF" = (
@@ -71946,7 +71519,7 @@
 /turf/open/transparent/openspace,
 /area/provincial/indoors/town)
 "xWC" = (
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/cobble,
 /area/provincial/indoors/dungeon/lost_homestead)
 "xWG" = (
@@ -72066,15 +71639,13 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors/dungeon/lost_homestead)
 "xXJ" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/outdoors/dungeon/riverbrook)
 "xXM" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/transparent/openspace,
 /area/provincial/outdoors/mountains)
 "xXR" = (
@@ -72182,6 +71753,7 @@
 /turf/open/floor/rogue/ruinedwood,
 /area/provincial/indoors)
 "xZR" = (
+/obj/structure/fluff/walldeco/stone/directional/north,
 /turf/open/floor/rogue/cobble,
 /area/provincial/underground/dungeon/winding_halls)
 "xZU" = (
@@ -72191,9 +71763,7 @@
 /turf/open/floor/rogue/grass,
 /area/provincial/underground)
 "xZV" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_x = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/east,
 /turf/open/floor/rogue/rooftop{
 	icon_state = "roofg"
 	},
@@ -72499,9 +72069,7 @@
 /turf/open/floor/rogue/metal,
 /area/provincial/indoors/dungeon/giuseppes_toybox)
 "yfA" = (
-/obj/structure/fluff/walldeco/rpainting/forest{
-	pixel_x = -32
-	},
+/obj/structure/fluff/walldeco/rpainting/forest/directional/west,
 /turf/open/floor/rogue/ruinedwood{
 	icon_state = "weird1"
 	},
@@ -72681,9 +72249,7 @@
 	},
 /area/provincial/outdoors/dungeon/riverbrook)
 "yjA" = (
-/obj/structure/fluff/walldeco/customflag{
-	pixel_y = 32
-	},
+/obj/structure/fluff/walldeco/customflag/directional/north,
 /obj/structure/fluff/railing/wood{
 	dir = 8;
 	pixel_y = -1
@@ -92424,8 +91990,8 @@ bgl
 bgl
 bgl
 bgl
-kDy
-nXP
+iMR
+ptq
 nXP
 nXP
 tyX
@@ -98752,8 +98318,8 @@ bgl
 bgl
 bgl
 bgl
-eRE
-nXP
+iMR
+dPO
 iBb
 npq
 nXP
@@ -133964,7 +133530,7 @@ vCf
 vCf
 vCf
 vCf
-fKP
+fKX
 xZR
 ngk
 oCk
@@ -134877,8 +134443,8 @@ oCk
 wuW
 jHV
 iMH
-lnS
-oCk
+lIY
+pED
 oCk
 mZv
 vCf
@@ -135775,7 +135341,7 @@ oCk
 oCk
 oCk
 oCk
-jJb
+oCk
 wKw
 fyF
 jHV
@@ -136685,8 +136251,8 @@ jHV
 fyF
 mTJ
 fyF
-lnS
-oCk
+lIY
+pED
 oCk
 oCk
 lIY
@@ -137580,7 +137146,7 @@ fKX
 fKX
 jQs
 oCk
-fKP
+fKX
 gwl
 ngk
 oCk
@@ -146165,8 +145731,8 @@ pUX
 pUX
 pUX
 mZv
-qYm
-qgc
+mZv
+ltj
 qgc
 mZv
 mZv
@@ -161616,7 +161182,7 @@ mRT
 wSb
 wSb
 wSb
-wSb
+qYm
 wSb
 wSb
 wSb
@@ -191085,8 +190651,8 @@ rjY
 wDy
 nXw
 wDy
-jKL
-jcS
+xGR
+hKX
 bjI
 bjI
 bjI
@@ -191975,8 +191541,8 @@ mJD
 gIs
 hFG
 hFG
-jcS
-sda
+hKX
+etl
 xXX
 xXX
 ssC
@@ -192815,8 +192381,8 @@ vCf
 vCf
 vCf
 vCf
-hOb
-mmG
+iMR
+mbi
 yaA
 mmG
 mmG
@@ -193338,7 +192904,7 @@ iXD
 hKX
 fhH
 wDy
-wDy
+kzf
 jTK
 wDy
 mNc
@@ -193790,7 +193356,7 @@ oqn
 hKX
 shW
 vcq
-jBP
+vcq
 vcq
 gQp
 vcq
@@ -196935,7 +196501,7 @@ shW
 vcq
 shW
 lPy
-jBP
+vcq
 shW
 gFV
 dhA
@@ -196979,7 +196545,7 @@ vcq
 vcq
 shW
 vcq
-jBP
+vcq
 vcq
 shW
 mpP
@@ -199218,8 +198784,8 @@ rZK
 hKX
 laC
 dhA
-wDy
-lsd
+hOb
+hKX
 sWh
 uAl
 uAl
@@ -200136,8 +199702,8 @@ xXX
 hKX
 wDy
 dhA
-wDy
-jcS
+lnS
+hKX
 bjI
 bjI
 bjI
@@ -201008,8 +200574,8 @@ fvg
 xXX
 pQx
 sZw
-jcS
-gFV
+hKX
+ihM
 dhA
 kJT
 opK
@@ -201040,8 +200606,8 @@ vFE
 hKX
 mwh
 dhA
-wDy
-lsd
+hOb
+hKX
 bjI
 bjI
 bjI
@@ -201927,7 +201493,7 @@ qLt
 wDy
 wDy
 lTd
-jcS
+hKX
 wDy
 dhA
 wDy
@@ -202807,8 +202373,8 @@ bjI
 bjI
 bjI
 bjI
-lsd
-kJT
+hKX
+aBP
 dhA
 jxR
 vhW
@@ -203663,8 +203229,8 @@ vCf
 vCf
 vCf
 vCf
-kzf
-mmG
+iMR
+nMT
 mmG
 mmG
 mmG
@@ -207816,7 +207382,7 @@ hKX
 tKx
 fhH
 wDy
-wDy
+sju
 wDy
 hFG
 qLt
@@ -208180,7 +207746,7 @@ vCf
 vCf
 vCf
 vCf
-vCf
+jcS
 vCf
 vCf
 bIp
@@ -208268,7 +207834,7 @@ ggz
 vcq
 vcq
 vcq
-ihM
+vcq
 vcq
 vcq
 shW
@@ -210942,8 +210508,8 @@ bjI
 bjI
 rLM
 vIL
-pED
-lYs
+rLM
+gKO
 iTj
 xpV
 sle
@@ -214111,8 +213677,8 @@ wrr
 uRQ
 uRQ
 tgt
-sle
-riu
+wVc
+mfq
 lNw
 wSi
 qib
@@ -215901,7 +215467,7 @@ vCf
 vCf
 bjI
 bjI
-pED
+rLM
 mAp
 nNX
 nNX
@@ -216366,7 +215932,7 @@ nNX
 sle
 hLK
 mfq
-fCz
+nVo
 nVo
 nGd
 nVo
@@ -216818,7 +216384,7 @@ nNX
 sle
 sle
 sle
-fNB
+wrb
 sle
 sle
 jeP
@@ -216826,8 +216392,8 @@ sle
 lzx
 oZx
 lYs
-tcH
-dUX
+sPN
+hSC
 qXQ
 qXQ
 qXQ
@@ -217262,7 +216828,7 @@ pYI
 pYI
 fmw
 pYI
-aBP
+pYI
 pYI
 hLK
 sle
@@ -217714,7 +217280,7 @@ uRQ
 wrr
 phX
 phX
-phX
+tcH
 wrr
 fmw
 sle
@@ -217725,7 +217291,7 @@ ihn
 sle
 ymb
 sbY
-sle
+lIc
 sle
 sle
 sle
@@ -218177,7 +217743,7 @@ mfq
 nGd
 nVo
 mfq
-fCz
+nVo
 mfq
 qhy
 mfq
@@ -218657,9 +218223,9 @@ qXQ
 qXQ
 qXQ
 xoG
-oBk
+xoG
 wpj
-oBk
+xoG
 xoG
 qXQ
 qXQ
@@ -219065,8 +218631,8 @@ vCf
 vCf
 bjI
 bjI
-pED
-mGF
+rLM
+riu
 jcv
 vMQ
 vMQ
@@ -219969,8 +219535,8 @@ vCf
 vCf
 bjI
 bjI
-pED
-mGF
+rLM
+riu
 yeh
 vMQ
 vMQ
@@ -220010,15 +219576,15 @@ aZZ
 dwP
 kjN
 gwV
-oBk
-aZZ
+xoG
+rEf
 mKX
 dHv
 dHv
 dHv
 gPb
-kAf
-oBk
+eyy
+xoG
 voU
 qXQ
 qXQ
@@ -220439,7 +220005,7 @@ soW
 nVo
 bkB
 ucw
-sle
+lIc
 sle
 sle
 sPN
@@ -220450,7 +220016,7 @@ eJw
 eJw
 xoG
 eJw
-olb
+eJw
 eJw
 eJw
 xoG
@@ -220891,7 +220457,7 @@ nVo
 mfq
 nVo
 aSJ
-fCz
+nVo
 aSJ
 nVo
 mfq
@@ -220902,7 +220468,7 @@ lqF
 uTM
 aZZ
 aZZ
-gkn
+imp
 lSX
 wSz
 eJw
@@ -220914,15 +220480,15 @@ nqJ
 aZZ
 aZZ
 aZZ
-oBk
-aZZ
+xoG
+rEf
 mKX
 dHv
 dHv
 dHv
 gPb
-kAf
-oBk
+eyy
+xoG
 wSi
 qib
 qXQ
@@ -221330,7 +220896,7 @@ uRQ
 wrr
 xnH
 xnH
-xnH
+ugf
 wrr
 fmw
 sle
@@ -221782,7 +221348,7 @@ pYI
 pYI
 fmw
 pYI
-aBP
+pYI
 pYI
 hLK
 wyN
@@ -221821,9 +221387,9 @@ qxk
 qxk
 xoG
 eJw
-kAf
+rxj
 aZZ
-kAf
+rxj
 eJw
 xoG
 eNR
@@ -222273,9 +221839,9 @@ dHv
 dHv
 qxk
 xoG
-oBk
+xoG
 kPj
-oBk
+xoG
 xoG
 nCr
 wSi
@@ -224979,7 +224545,7 @@ mqu
 xoG
 eJw
 kPj
-oBk
+xoG
 kPj
 eJw
 xoG
@@ -259712,8 +259278,8 @@ wmK
 wmK
 rVu
 rVu
-mbi
-ifQ
+rVu
+jBP
 tZh
 tZh
 ifQ
@@ -261972,7 +261538,7 @@ jRS
 jRS
 jRS
 rVu
-mbi
+rVu
 ekX
 qFT
 tZh
@@ -263351,7 +262917,7 @@ dHI
 tZh
 smy
 qFT
-tZh
+lsd
 tZh
 tZh
 rHg
@@ -263780,7 +263346,7 @@ rVu
 rVu
 rVu
 rVu
-mbi
+rVu
 pme
 tZh
 tZh
@@ -282796,7 +282362,7 @@ pXX
 pXX
 gcA
 abk
-tZh
+lVR
 tZh
 mLT
 mLT
@@ -285955,7 +285521,7 @@ pJw
 fCK
 wjT
 nhr
-dCa
+eRE
 dCa
 dCa
 qpQ
@@ -286357,8 +285923,8 @@ rRu
 vYU
 vhf
 nRw
-rEf
-qwO
+qcf
+dpe
 mLc
 xHu
 fSs
@@ -287913,7 +287479,7 @@ bZN
 bZN
 bZN
 bMF
-jjv
+dNU
 jUm
 hfQ
 jLS
@@ -288165,8 +287731,8 @@ dbp
 vYU
 vhf
 nRw
-eyy
-qwO
+qcf
+fRa
 mLc
 jlO
 uOO
@@ -296612,7 +296178,7 @@ ifl
 ifl
 vCf
 bPi
-etl
+bPi
 bPi
 nwi
 nwi
@@ -297064,7 +296630,7 @@ ifl
 ifl
 vCf
 bPi
-aRo
+qpO
 dYG
 oiC
 bvm
@@ -332325,8 +331891,8 @@ cYt
 czg
 mmS
 iFU
-gKO
-iFU
+aGV
+qhO
 rMV
 iFU
 qqU
@@ -332334,8 +331900,8 @@ iFU
 xWK
 wHE
 iFU
-nMT
-iFU
+jOh
+qhO
 iFU
 iFU
 iFU
@@ -332769,8 +332335,8 @@ mYA
 jZi
 jZi
 mYA
-nMT
-iFU
+jOh
+qhO
 iFU
 iFU
 iFU
@@ -332792,8 +332358,8 @@ iFU
 iFU
 hiQ
 jZi
-dta
-jZi
+tGs
+dvu
 hkF
 eap
 eap
@@ -333229,8 +332795,8 @@ bXw
 kNe
 dxG
 iFU
-gKO
-iFU
+aGV
+qhO
 xLH
 iFU
 wEj
@@ -333238,8 +332804,8 @@ rMV
 gOQ
 iFU
 iFU
-nMT
-iFU
+jOh
+qhO
 hyH
 iFU
 iFU
@@ -334577,8 +334143,8 @@ iEV
 mYA
 mYA
 mYA
-nMT
-iFU
+jOh
+qhO
 cYt
 cYt
 iFU
@@ -336393,8 +335959,8 @@ iFU
 rMV
 pnu
 iFU
-gKO
-cYt
+aGV
+oVN
 iFU
 rMV
 wdP
@@ -337305,7 +336871,7 @@ wdP
 tGs
 cYt
 jZi
-jZi
+dvu
 jZi
 jZi
 jZi
@@ -339557,8 +339123,8 @@ iFU
 iFU
 pnu
 iFU
-gKO
-iFU
+aGV
+qhO
 cYt
 iFU
 iFU
@@ -341356,8 +340922,8 @@ ujv
 ujv
 ujv
 jZi
-dNU
-oIx
+tGs
+vnO
 aGi
 iFU
 nOX
@@ -341808,8 +341374,8 @@ ujv
 mYA
 jZi
 jZi
-dNU
-oIx
+tGs
+vnO
 gHJ
 iFU
 biQ
@@ -342260,8 +341826,8 @@ mYA
 jZi
 jZi
 jZi
-nMT
-iFU
+jOh
+qhO
 jmv
 fxk
 eAz
@@ -342712,8 +342278,8 @@ jZi
 jZi
 jZi
 jZi
-dNU
-oIx
+tGs
+vnO
 far
 hgx
 jZi
@@ -343164,8 +342730,8 @@ jZi
 jZi
 jZi
 jZi
-dNU
-oIx
+tGs
+vnO
 iFU
 hgx
 jZi
@@ -343616,8 +343182,8 @@ jZi
 jZi
 jZi
 jZi
-nMT
-iFU
+jOh
+qhO
 jmv
 tzo
 bdL
@@ -344068,8 +343634,8 @@ mYA
 jZi
 jZi
 jZi
-dNU
-oIx
+tGs
+vnO
 nOX
 iFU
 jmv
@@ -344520,8 +344086,8 @@ uZB
 mYA
 jZi
 jZi
-dNU
-oIx
+tGs
+vnO
 aGi
 iFU
 gHJ
@@ -351762,8 +351328,8 @@ eap
 vVL
 aGV
 tGs
-gKO
-cYt
+aGV
+oVN
 eap
 eap
 eap
@@ -370032,8 +369598,8 @@ lNy
 lNy
 fsh
 oyL
-wVc
-kGh
+due
+oBk
 wdM
 qUR
 biM
@@ -374968,7 +374534,7 @@ sOe
 mPg
 pqp
 pqp
-hSC
+pqp
 pqp
 guj
 vMC
@@ -400012,8 +399578,8 @@ mwS
 aaE
 lgS
 hlH
-lVR
-ibk
+mwS
+olb
 vqD
 fVE
 vqD
@@ -400470,8 +400036,8 @@ bRT
 kki
 ecX
 kqm
-rJS
-dPO
+dta
+wEH
 ngV
 oCo
 etp
@@ -401824,7 +401390,7 @@ wEH
 uQs
 gFi
 gFi
-gFi
+fCz
 gFi
 uQs
 mwS
@@ -402276,7 +401842,7 @@ nvE
 tkj
 ygX
 tkj
-qhO
+tkj
 tkj
 vHP
 wEH
@@ -467483,11 +467049,11 @@ xXb
 xXb
 xXb
 xXb
-aUC
 xXb
 xXb
 xXb
-oVN
+xXb
+xXb
 xXb
 xXb
 xXb
@@ -467935,11 +467501,11 @@ hhD
 hhD
 hhD
 swA
-riU
+fKP
 hhD
 iBt
 hhD
-hhD
+kDy
 hoe
 xXb
 euj
@@ -471097,7 +470663,7 @@ qtq
 qtq
 qtq
 hhD
-lIc
+xXb
 xfs
 qtq
 qtq
@@ -474263,11 +473829,11 @@ hhD
 hhD
 riU
 kjW
-hhD
+aUC
 hhD
 gAh
 hhD
-hhD
+jJb
 hoe
 xXb
 hKP
@@ -474715,11 +474281,11 @@ xXb
 xXb
 xXb
 xXb
-oVN
 xXb
 xXb
 xXb
-qpO
+xXb
+xXb
 xXb
 xXb
 xXb

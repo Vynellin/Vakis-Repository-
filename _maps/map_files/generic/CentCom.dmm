@@ -1677,7 +1677,7 @@
 /area/rasurian_heartland/indoors)
 "Ew" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/west,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/tile,
@@ -1687,10 +1687,10 @@
 /area/rasurian_heartland/indoors/prison)
 "Gq" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/north,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/tile,
@@ -1787,7 +1787,7 @@
 /area/rasurian_heartland/indoors)
 "JM" = (
 /obj/machinery/light/rogue/wallfire/candle/directional/east,
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/tile,
@@ -1815,13 +1815,13 @@
 /turf/open/floor/rogue/cobble,
 /area/rasurian_heartland/indoors)
 "LL" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
-/obj/structure/fluff/walldeco/church/line,
+/obj/effect/decal/church_line,
 /turf/open/floor/rogue/tile,
 /area/rasurian_heartland/indoors/artificacy_launchbay)
 "LU" = (
@@ -1854,10 +1854,10 @@
 /turf/open/floor/rogue/tile/bfloorz,
 /area/rasurian_heartland/indoors/artificacy_launchbay/bay_four)
 "Qo" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 8
 	},
 /turf/open/floor/rogue/tile,
@@ -1957,22 +1957,22 @@
 /turf/closed/wall/mineral/rogue/craftstone,
 /area/provincial/indoors)
 "WF" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 4
 	},
 /turf/open/floor/rogue/tile,
 /area/rasurian_heartland/indoors/artificacy_launchbay)
 "XL" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /turf/open/floor/rogue/tile,
 /area/rasurian_heartland/indoors/artificacy_launchbay)
 "XY" = (
-/obj/structure/fluff/walldeco/church/line{
+/obj/effect/decal/church_line{
 	dir = 1
 	},
 /obj/structure/fluff/customsign{
