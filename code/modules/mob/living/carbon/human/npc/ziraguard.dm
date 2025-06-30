@@ -109,7 +109,7 @@ GLOBAL_LIST_INIT(ziraguard_aggro, world.file2list("strings/rt/drowaggrolines.txt
 /mob/living/carbon/human/species/elf/dark/ziraguard/handle_combat()
 	if(mode == NPC_AI_HUNT)
 		if(prob(5))
-			emote("laugh")
+			emote("warcry")
 	. = ..()
 
 /datum/outfit/job/roguetown/human/species/elf/dark/ziraguard/pre_equip(mob/living/carbon/human/H)
