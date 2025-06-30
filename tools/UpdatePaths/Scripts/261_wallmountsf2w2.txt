@@ -1,0 +1,14 @@
+/obj/structure/fluff/walldeco/@SUBTYPES{pixel_y=32} : @OLD/directional/north
+/obj/structure/fluff/walldeco/@SUBTYPES{pixel_y=-32} : @OLD/directional/south
+/obj/structure/fluff/walldeco/@SUBTYPES{pixel_x=32} : @OLD/directional/east
+/obj/structure/fluff/walldeco/@SUBTYPES{pixel_x=-32} : @OLD/directional/west
+
+/obj/structure/fluff/wallfire/@SUBTYPES{pixel_y=32} : @OLD/directional/north
+/obj/structure/fluff/wallfire/@SUBTYPES{pixel_y=-32} : @OLD/directional/south
+/obj/structure/fluff/wallfire/@SUBTYPES{pixel_x=32} : @OLD/directional/east
+/obj/structure/fluff/wallfire/@SUBTYPES{pixel_x=-32} : @OLD/directional/west
+
+/obj/structure/fluff/walldeco/church/line{pixel_y=32} : /obj/effect/decal/church_line/directional/north
+/obj/structure/fluff/walldeco/church/line{pixel_y=-32} : /obj/effect/decal/church_line/directional/south
+/obj/structure/fluff/walldeco/church/line{pixel_x=32} : /obj/effect/decal/church_line/directional/east
+/obj/structure/fluff/walldeco/church/line{pixel_x=-32} : /obj/effect/decal/church_line/directional/west
