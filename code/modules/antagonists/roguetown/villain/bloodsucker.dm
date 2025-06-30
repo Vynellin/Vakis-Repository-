@@ -63,9 +63,9 @@
 	. = ..()
 	owner.special_role = name
 
-	if(owner.special_role == "vampire")
+	if(owner.special_role == "bloodsucker")
 		new_bloodsucker = FALSE
-	if(owner.special_role == "ancient vampire")
+	if(owner.special_role == "ancient bloodsucker")
 		ancient_bloodsucker = TRUE
 
 	for(var/inherited_trait in inherent_traits)
@@ -92,11 +92,12 @@
 		owner.current.AddSpell(new /obj/effect/proc_holder/spell/targeted/shapeshift/vampire_mistform)
 
 	if (new_bloodsucker)
-		//we give fewer points to new spawn
+		//we give fewer points to new spawn or those with a virtue
 		owner.adjust_vamppoints(-4)
 		forge_bloodsucker_objectives()
 		finalize_bloodsucker_lesser()
-		lesser_greet()
+		if (H.bs_spawn == 1)
+			lesser_greet()
 	if (ancient_bloodsucker)
 		owner.adjust_vamppoints(6)
 		forge_bloodsucker_objectives()
@@ -104,7 +105,7 @@
 		ancient_greet()
 	if ((!new_bloodsucker)&&(!ancient_bloodsucker))
 		//starting vampire points, raise or lower
-		owner.adjust_vamppoints(20)
+		owner.adjust_vamppoints(2)
 		forge_bloodsucker_objectives()
 		finalize_bloodsucker()
 		greet()
@@ -236,9 +237,11 @@
 	owner.current.playsound_local(get_turf(owner.current), 'sound/music/vampintro.ogg', 80, FALSE, pressure_affected = FALSE)
 
 /datum/antagonist/bloodsucker/proc/finalize_bloodsucker_lesser()
+	var/mob/living/carbon/human/spawn_check =owner.current
 	if(!sired)
 		owner.current.forceMove(pick(GLOB.vspawn_starts))
-	owner.current.playsound_local(get_turf(owner.current), 'sound/music/vampintro.ogg', 80, FALSE, pressure_affected = FALSE)
+	if(spawn_check.bs_spawn == 1) //we do this to avoid spamming music to virtue thralls
+		owner.current.playsound_local(get_turf(owner.current), 'sound/music/vampintro.ogg', 80, FALSE, pressure_affected = FALSE)
 
 /datum/antagonist/bloodsucker/proc/finalize_bloodsucker_ancient()
 	if(!sired)
@@ -247,7 +250,7 @@
 
 // SPAWN
 /datum/antagonist/bloodsucker/lesser
-	name = "Vampire Spawn"
+	name = "Fledgling Bloodsucker"
 	antag_hud_name = "Vspawn"
 	inherent_traits = list(TRAIT_NOHUNGER, 
 						   TRAIT_NOBREATH, 
@@ -269,7 +272,7 @@
 // Ancient
 /datum/antagonist/bloodsucker/ancient
 	//a strong set of skills for an ancient vampire, but with a fatal few weaknesses and they can be dusted.
-	name = "Ancient Vampire"
+	name = "Ancient Bloodsucker"
 	antag_hud_name = "Vancient"
 	inherent_traits = list(TRAIT_STRONGBITE, 
 						   TRAIT_NOHUNGER, 
@@ -291,7 +294,7 @@
 						   TRAIT_EFFICIENT_DRINKER,
 						   TRAIT_NOVEGAN,
 						   TRAIT_PERMADUST,)
-	new_bloodsucker = TRUE
+	new_bloodsucker = FALSE
 
 
 

@@ -380,7 +380,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Bloodsucker and Werewolves",
 	restricted_jobs = list()
 
 /datum/game_mode/chaosmode/proc/pick_vampires()
-	var/vampsremaining = 3
+	var/vampsremaining = 0
 	restricted_jobs = list(
 	/datum/job/roguetown/lord::title,
 	"Watchman",
@@ -399,8 +399,10 @@ var/global/list/roguegamemodes = list("Rebellion", "Bloodsucker and Werewolves",
 	for(var/datum/mind/vampire in antag_candidates)
 		if(!vampsremaining)
 			break
+		vampsremaining -= 1
+	/*
 		var/blockme = FALSE
-		if(!(vampire in allantags))
+		if(!(vampire in allantags)) //Disabling any vampires from being selected
 			blockme = TRUE
 		if(vampire.assigned_role in GLOB.noble_positions)
 			continue
@@ -414,10 +416,10 @@ var/global/list/roguegamemodes = list("Rebellion", "Bloodsucker and Werewolves",
 		testing("[key_name(vampire)] has been selected as a VAMPIRE")
 		log_game("[key_name(vampire)] has been selected as a [vampire.special_role]")
 		antag_candidates.Remove(vampire)
-		vampsremaining -= 1
 	for(var/antag in pre_vampires)
 		GLOB.pre_setup_antags |= antag
 	restricted_jobs = list()
+	*/
 
 //doing our custom selection for bloodsuckers
 /datum/game_mode/chaosmode/proc/pick_bloodsucker()
@@ -457,8 +459,8 @@ var/global/list/roguegamemodes = list("Rebellion", "Bloodsucker and Werewolves",
 			continue
 		allantags -= bloodsucker
 		pre_bloodsuckers += bloodsucker
-		bloodsucker.special_role = "vampire"
-		bloodsucker.assigned_role = "vampire" // This is a tricky way to prevent double-spawning for the spawn as multiple jobs. taking this out, to see if it lets us spawn in?
+		bloodsucker.special_role = "bloodsucker"
+		//bloodsucker.assigned_role = "bloodsucker" // This is a tricky way to prevent double-spawning for the spawn as multiple jobs. taking this out, to see if it lets us spawn in?
 		bloodsucker.restricted_roles = restricted_jobs.Copy()
 		testing("[key_name(bloodsucker)] has been selected as a VAMPIRE")
 		log_game("[key_name(bloodsucker)] has been selected as a [bloodsucker.special_role]")
@@ -537,9 +539,24 @@ var/global/list/roguegamemodes = list("Rebellion", "Bloodsucker and Werewolves",
 		GLOB.pre_setup_antags -= werewolf
 		werewolves += werewolf
 
+///////////////// BLOODSUCKERS
+	for(var/datum/mind/bloodsucker in pre_bloodsuckers)
+		var/datum/antagonist/virtue_check = bloodsucker.has_antag_datum(/datum/antagonist/bloodsucker/lesser)
+		var/datum/antagonist/new_antag = new /datum/antagonist/bloodsucker/()
+		//addtimer(CALLBACK(bloodsucker, TYPE_PROC_REF(/datum/mind, add_antag_datum), new_antag), rand(10,100))
+		if (virtue_check) //if they have the virtue and are called, we remove their lesser vampirism and give them more points
+			virtue_check.on_removal()
+			bloodsucker.adjust_vamppoints(3)
+
+		bloodsucker.add_antag_datum(new_antag)
+		GLOB.pre_setup_antags -= bloodsucker
+		bloodsuckers += bloodsucker
+
 ///////////////// VAMPIRES
 	pre_vampires = shuffle(pre_vampires)
+	/*
 	var/vamplordpicked = FALSE
+	disableling any sort of natural vampire selection
 	for(var/datum/mind/vampire in pre_vampires)
 		if(!vamplordpicked)
 			var/datum/antagonist/new_antag = new /datum/antagonist/vampirelord()
@@ -552,6 +569,7 @@ var/global/list/roguegamemodes = list("Rebellion", "Bloodsucker and Werewolves",
 			addtimer(CALLBACK(vampire, TYPE_PROC_REF(/datum/mind, add_antag_datum), new_antag), rand(10,100))
 			GLOB.pre_setup_antags -= vampire
 			vampires += vampire
+	*/
 ///////////////// BANDIT
 	for(var/datum/mind/bandito in pre_bandits)
 		GLOB.pre_setup_antags -= bandito

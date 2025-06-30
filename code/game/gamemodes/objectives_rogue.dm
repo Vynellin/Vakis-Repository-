@@ -43,13 +43,13 @@
 
 //if we choose to bring back vampires verse werewolves
 /datum/objective/bloodsucker
-	name = "conquer"
-	explanation_text = "Put an end to the werewolf menace in Sunmarch, or unite with them against the forces of the Nine."
-	team_explanation_text = "The feud between werewolves and vampires reaches back to the dawn of time. Will the two factions destroy each other, or find a way to coexist and face the mortals of Sunmarch together?"
+	name = "survive"
+	explanation_text = "I may live forever, but only if I survive this era"
+	team_explanation_text = "Will vampires return to prominance this era by learning to live along side mortals in Sunmarch? Or will there be another schism that leads to war?"
 	triumph_count = 5
 
 /datum/objective/bloodsucker/check_completion()
 	var/datum/game_mode/chaosmode/C = SSticker.mode
 	if(istype(C))
-		if(C.bloodsucker_werewolf() == "vampire")
+		if(C.bloodsucker_werewolf() == "bloodsucker")
 			return TRUE

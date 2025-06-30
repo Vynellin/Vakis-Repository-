@@ -16,7 +16,7 @@
 	charging_slowdown = 2
 	chargedloop = /datum/looping_sound/invokegen
 	associated_skill = /datum/skill/magic/blood
-	recharge_time = 2 MINUTES
+	recharge_time = 10 SECONDS
 	glow_color = GLOW_COLOR_VAMPIRIC
 	glow_intensity = GLOW_INTENSITY_MEDIUM
 	vitaedrain = 0

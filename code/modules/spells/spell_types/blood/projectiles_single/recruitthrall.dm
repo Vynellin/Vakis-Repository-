@@ -64,7 +64,7 @@
 			to_chat(caster,span_blue("[guy] makes a dark choice."))
 			ADD_TRAIT(guy, TRAIT_BLOOD_THRALL, GENERIC)
 
-			//we need to add the thrall trait "TRAIT_BLOOD_THRALL" here
+			//we need to add the thrall trait "TRAIT_BLOOD_THRALL" here, also give a tag to the caster for getting a thrall and to the victim for being turned in this round
 			caster.bs_thrall += 1
 			guy.bs_spawn = 1
 			//we remove the spell here for normal blood suckers and greater ones get more
