@@ -388,7 +388,7 @@
 /datum/outfit/job/roguetown/wretch/charlatan/pre_equip(mob/living/carbon/human/H)
 	shoes = /obj/item/clothing/shoes/roguetown/jester
 	pants = /obj/item/clothing/under/roguetown/tights
-	shirt = /obj/item/clothing/suit/roguetown/shirt/rags
+	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/bog
 	beltr = /obj/item/rogueweapon/huntingknife/throwingknife
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltl = /obj/item/storage/belt/rogue/pouch
@@ -454,7 +454,8 @@
 
 /datum/outfit/job/roguetown/wretch/charnaldok/pre_equip(mob/living/carbon/human/H)
 
-	head = /obj/item/clothing/cloak/raincloak
+	head = /obj/item/clothing/head/roguetown/roguehood/shalal/heavyhood
+	cloak = /obj/item/clothing/cloak/raincloak/mortus
 	mask = /obj/item/clothing/mask/rogue/deacon
 	neck = 	/obj/item/storage/belt/rogue/pouch/coins/poor
 	shirt = /obj/item/clothing/suit/roguetown/shirt/tunic/black
@@ -501,17 +502,16 @@
 	allowed_races = RACES_ALL_KINDS
 	outfit = /datum/outfit/job/roguetown/wretch/leper
 	category_tags = list(CTAG_WRETCH)
-	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_MEDIUMARMOR, TRAIT_LEPROSY, TRAIT_LEECHIMMUNE, TRAIT_MISSING_NOSE)
+	traits_applied = list(TRAIT_STEELHEARTED, TRAIT_MEDIUMARMOR, TRAIT_LEPROSY, TRAIT_LEECHIMMUNE, TRAIT_MISSING_NOSE, TRAIT_UNSEEMLY, TRAIT_OUTLAW)
 
-	//Chose to give no outlaw for this one, leper is already in the game so we can use it.
 
 /datum/outfit/job/roguetown/wretch/leper/pre_equip(mob/living/carbon/human/H)
 	head = /obj/item/clothing/head/roguetown/helmet/bascinet/etruscan
-	mask = /obj/item/clothing/mask/rogue/facemask/goldmask
-	cloak = /obj/item/clothing/head/roguetown/roguehood/shalal/heavyhood
+	mask = /obj/item/clothing/mask/rogue/ragmask
+	cloak = /obj/item/clothing/cloak/raincloak/mortus
 	gloves = /obj/item/clothing/gloves/roguetown/chain
 	pants = /obj/item/clothing/under/roguetown/chainlegs
-	shirt = /obj/item/clothing/suit/roguetown/armor/chainmail
+	shirt = /datum/supply_pack/rogue/armor/gambeson
 	armor = /obj/item/clothing/suit/roguetown/armor/brigandine/coatplates
 	wrists = /obj/item/clothing/wrists/roguetown/bracers
 	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
@@ -532,6 +532,7 @@
 	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
+	H.cmode_music = 'sound/music/combat_leper.ogg'
 	var/weapons = list("Heavy is the Blade","A Bloodletter's Flail","I deserve no weapon.")
 	var/weapon_choice = input("Choose your weapon.", "TAKE UP ARMS") as anything in weapons
 	H.set_blindness(0)
@@ -545,7 +546,6 @@
 			beltr = /obj/item/rogueweapon/flail/sflail
 		if("I deserve no weapon")
 			r_hand = /obj/item/reagent_containers/glass/bottle/waterskin
-	H.cmode_music = 'sound/music/combat_leper.ogg'
 	H.change_stat("strength", 2)
 	H.change_stat("constitution", -1)
 	H.change_stat("endurance", -1)
@@ -580,3 +580,107 @@
 			/obj/item/clothing/neck/roguetown/psicross/varielle
 			)
 			neck = pick(psicross_options)
+	GLOB.outlawed_players += H.real_name
+	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
+	if (!my_crime)
+		my_crime = "spreading foul disease"
+	var/bounty_total
+	bounty_total = rand(151, 250)
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Chapel Of Lights")
+
+/datum/advclass/wretch/swashbuckler
+	name = "Swashbuckler"
+	tutorial = "You've known for a long time that the seas are full of plunder. Coastal towns like this are rich for the pickings, full of fatcats and merchants an unscrupulous sea traveller like yourself can certainly take advantage of..."
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_ALL_KINDS
+	outfit = /datum/outfit/job/roguetown/wretch/swashbuckler
+	category_tags = list(CTAG_WRETCH)
+	traits_applied = list(TRAIT_DODGEEXPERT, TRAIT_CINELLA_SWIM, TRAIT_OUTLAW)
+
+/datum/outfit/job/roguetown/wretch/swashbuckler/pre_equip(mob/living/carbon/human/H)
+	..()
+	backr = /obj/item/storage/backpack/rogue/satchel
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/storage/belt/rogue/pouch/coins/poor = 1)
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/mace/cudgel
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/sailor
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather
+	gloves = /obj/item/clothing/gloves/roguetown/fingerless_leather
+	r_hand = /obj/item/rogueweapon/sword/falx
+	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/carpentry, 1, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 4, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/labor/butchering, 1, TRUE)
+	H.change_stat("speed", 1)
+	H.change_stat("fortune", 1)
+	H.change_stat("perception", 1)
+	H.cmode_music = 'sound/music/combat_buccaneer.ogg'
+
+	GLOB.outlawed_players += H.real_name
+	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
+	if (!my_crime)
+		my_crime = "crimes against the Crown"
+	var/bounty_total
+	bounty_total = rand(151, 250)
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Port Authority")
+
+
+/datum/advclass/wretch/smuggler
+	name = "Smuggler"
+	tutorial = "Smuggling is a trade like any other. Supply creates demand. You know how to get things, sometimes through less than legal means, and while you are no sellsword you are more than capable of defending yourself for your work."
+	allowed_sexes = list(MALE, FEMALE)
+	allowed_races = RACES_ALL_KINDS
+	outfit = /datum/outfit/job/roguetown/wretch/smuggler
+	category_tags = list(CTAG_WRETCH)
+	traits_applied = list(TRAIT_SEEPRICES_SHITTY, TRAIT_OUTLAW)
+
+// effectively an outlaw merchant
+/datum/outfit/job/roguetown/wretch/smuggler/pre_equip(mob/living/carbon/human/H)
+	..()
+	backr = /obj/item/storage/backpack/rogue/satchel
+	backpack_contents = list(/obj/item/rogueweapon/huntingknife/idagger/steel = 1, /obj/item/flashlight/flare/torch/lantern/prelit = 1, /obj/item/lockpickring/mundane = 1,)
+	neck = /obj/item/storage/belt/rogue/pouch/coins/mid
+	cloak = /obj/item/clothing/cloak/raincloak
+	belt = /obj/item/storage/belt/rogue/leather
+	beltl = /obj/item/rogueweapon/mace/cudgel
+	beltr = /obj/item/quiver/bolts
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson
+	shoes = /obj/item/clothing/shoes/roguetown/boots
+	r_hand = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
+	H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/unarmed, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/combat/maces, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/sneaking, 3, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/craft/traps, 2, TRUE)
+	H.mind.adjust_skillrank(/datum/skill/misc/stealing, 3, TRUE)
+	H.change_stat("intelligence", 1)
+	H.change_stat("perception", 2)
+	H.change_stat("fortune", 1)
+	H.change_stat("speed", 1)
+
+	H.cmode_music = 'sound/music/combat_buccaneer.ogg'
+		GLOB.outlawed_players += H.real_name
+	var/my_crime = input(H, "What is your crime?", "Crime") as text|null
+	if (!my_crime)
+		my_crime = "crimes against the Crown"
+	var/bounty_total
+	bounty_total = rand(151, 250)
+	add_bounty(H.real_name, bounty_total, FALSE, my_crime, "The Justiciary of Rasura")
