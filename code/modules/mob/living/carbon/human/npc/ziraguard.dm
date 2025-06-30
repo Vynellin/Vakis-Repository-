@@ -41,7 +41,7 @@ GLOBAL_LIST_INIT(ziraguard_aggro, world.file2list("strings/rt/drowaggrolines.txt
 	job = "Guardian of Secrets"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
-	ADD_TRAIT(src, TRAIT_INFINITE_STAMINA, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_NOROGSTAM, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	equipOutfit(new /datum/outfit/job/roguetown/human/species/elf/dark/ziraguard)
 	gender = pick(MALE, FEMALE)

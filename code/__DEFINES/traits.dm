@@ -22,8 +22,7 @@
 #define TRAIT_CRITICAL_RESISTANCE "Critical Resistance"
 #define TRAIT_CRITICAL_WEAKNESS "Critical Weakness"
 #define TRAIT_MANIAC_AWOKEN "Awoken"
-#define TRAIT_INFINITE_STAMINA "Indefatigable" // for ai
-#define TRAIT_INFINITE_ENERGY "Boundless Energy" // infinite energy (blue bar) but not infinite stamina
+#define TRAIT_NOROGSTAM "Indefatigable" //for ai
 #define TRAIT_NUDIST "Nudist" //you can't wear most clothes
 #define TRAIT_CYCLOPS_LEFT "Cyclops (Left)" //poked left eye
 #define TRAIT_CYCLOPS_RIGHT "Cyclops (Right)" //poked right eye
@@ -165,6 +164,9 @@
 #define TRAIT_VAMP_ANCIENT "Ancient Vampire"
 #define TRAIT_KOINONIPHOBIA "Koinoniphobia"
 #define TRAIT_MEGALOPHOBIA "Megalophobia"
+#define TRAIT_WILDMAGIC_BENEFIC "Beneficial Wild Magic"
+#define TRAIT_FIENDKISS "Kiss of the Fiend" //after casting some spells, hurl a firebolt at the same location
+
 
 GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_LEPROSY = span_necrosis("I'm a disgusting leper..."),
@@ -199,8 +201,7 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_CRITICAL_RESISTANCE = "I am resistant to wounds that would be life threatening to others.",
 	TRAIT_CRITICAL_WEAKNESS = span_danger("I am weak to wounds that others could survive."),
 	TRAIT_MANIAC_AWOKEN = span_danger("I am <b>WAKING UP</b> and the sheeple know this. They will resist."),
-	TRAIT_INFINITE_STAMINA = span_notice("I have boundless energy, I will never tire."),
-	TRAIT_INFINITE_ENERGY = span_notice ("I don't need rest; I won't ever feel fatigue."),
+	TRAIT_NOROGSTAM = "I have boundless energy, I will never tire.",
 	TRAIT_NUDIST = "I <b>refuse</b> to wear clothes. They are a hindrance to my freedom.",
 	TRAIT_CYCLOPS_LEFT = span_warning("My left eye has been poked out..."),
 	TRAIT_CYCLOPS_RIGHT = span_warning("My right eye has been poked out..."),
@@ -312,6 +313,8 @@ GLOBAL_LIST_INIT(roguetraits, list(
 	TRAIT_VAMP_ANCIENT = span_notice("I am older than most vampires."),
 	TRAIT_KOINONIPHOBIA = span_notice("I must stay outdoors."),
 	TRAIT_MEGALOPHOBIA = span_notice("I hate big buildings, I should stay out of town."),
+	TRAIT_WILDMAGIC_BENEFIC = span_info("I am inspired when witnessing magic going haywire."),
+	TRAIT_FIENDKISS = span_info("When I cast projectile magic, my patron also hurls a fire bolt at the same location."),
 	))
 
 // trait accessor defines

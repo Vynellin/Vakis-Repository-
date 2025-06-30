@@ -146,3 +146,4 @@
 	var/bs_spawn = 0
 	//An alternative headshot link that can be used when users want to use it for a special role like while a vampire, werewolf, bandit, etc.
 	var/antag_headshot_link
+	var/patronchoice = null //Saves the Warlock's patron if any.
