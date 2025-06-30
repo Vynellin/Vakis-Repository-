@@ -34021,10 +34021,6 @@
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/rogue/wood,
 /area/provincial/indoors/dungeon/riverbrook)
-"lsd" = (
-/obj/structure/fluff/walldeco/serpflag,
-/turf/open/floor/rogue/cobble,
-/area/provincial/outdoors/town)
 "lsh" = (
 /obj/effect/decal/cobble/mossy{
 	dir = 4
@@ -262515,7 +262511,7 @@ dHI
 tZh
 smy
 qFT
-lsd
+tZh
 tZh
 tZh
 rHg
