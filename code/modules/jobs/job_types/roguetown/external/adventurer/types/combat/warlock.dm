@@ -198,7 +198,7 @@
 	human.change_stat("perception", 1)
 	human.change_stat("strength", 1)
 	human.change_stat("constitution", 2)
-	human.change_stat("endurance", 1)
+	human.change_stat("endurance", 2)
 	human.change_stat("speed", -1)
 
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/projectile/acidsplash)
@@ -260,7 +260,7 @@
 
 	//lucky stats (must be 5 stat point total)
 	human.change_stat("endurance", 1) //
-	human.change_stat("speed", 2)
+	human.change_stat("speed", 1)
 	human.change_stat("fortune", 2)
 
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/haste)
@@ -366,7 +366,7 @@
 
 	human.change_stat("strength", 1)
 	human.change_stat("endurance", 2)
-	human.change_stat("constitution", 2)
+	human.change_stat("constitution", 1)
 
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/self/cloakofflies)
 	human.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/infestation)
