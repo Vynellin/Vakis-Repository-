@@ -1,5 +1,5 @@
 /datum/controller/configuration/proc/LoadWeaponDialog()
-	var/file_path = "data/singing_weapon_replies.json"
+	var/file_path = "strings/singing_weapon_replies.json"
 	if(fexists(file_path))
 		var/json_text = file2text(file_path)
 		GLOB.weapon_personality_dialog = json_decode(json_text)

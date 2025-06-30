@@ -227,6 +227,3 @@ tools/MapAtmosFixer/MapAtmosFixer/bin/*
 !/config/title_music/sounds/title1.ogg
 /config/title_screens/images/*
 !/config/title_screens/images/exclude
-
-# Don't Ignore Singing_Weapon data file.
-!/data/singing_weapon_replies.json
