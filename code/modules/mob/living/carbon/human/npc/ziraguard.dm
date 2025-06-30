@@ -132,8 +132,8 @@ GLOBAL_LIST_INIT(ziraguard_aggro, world.file2list("strings/rt/drowaggrolines.txt
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	H.STASTR = rand(14,16)
-	H.STASPD = rand(14,16)
-	H.STACON = rand(12,14)
+	H.STASPD = rand(12,14)
+	H.STACON = rand(14,16)
 	H.STAEND = rand(12,14)
 	H.STAPER = rand(12,14)
 	H.STAINT = rand(12,14)
