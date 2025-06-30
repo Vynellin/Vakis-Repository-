@@ -871,6 +871,7 @@
 /turf/open/floor/rogue/churchrough/Initialize()
 	. = ..()
 	dir = pick(GLOB.cardinals)
+
 //
 /turf/open/floor/rogue/herringbone
 	icon_state = "herringbone"
@@ -1225,7 +1226,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/effect/decal/church_line, 0)
 
 /turf/open/floor/rogue/shroud/Entered(atom/movable/AM, atom/oldLoc)
 	..()
-	if(isliving(AM))
+	if(isliving(AM)&&(!AM.movement_type == FLYING))
 		if(istype(oldLoc, type))
 			playsound(AM, "plantcross", 100, TRUE)
 
